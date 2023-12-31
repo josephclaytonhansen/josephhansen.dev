@@ -3,7 +3,7 @@ import './style.css'
 import App from './App.vue'
 import Blueprint from './components/main/blocks/blueprint/Blueprint.vue'
 import Main from './components/main/Main.vue'
-import {createRouter, createWebHashHistory, createMemoryHistory} from 'vue-router'
+import {createRouter, createWebHashHistory, createWebHistory} from 'vue-router'
 
 const routes = [
     { path: '/blueprint', component: Blueprint },
@@ -11,7 +11,7 @@ const routes = [
 ]
 
 const router = createRouter({
-    history: createWebHashHistory(),
+    history: createWebHistory(),
     routes
     })
 
