@@ -1,5 +1,6 @@
 <script setup>
     import Header from './blocks/header/Header.vue'
+    import Hero from './blocks/hero/Hero.vue'
     import { ref, computed, onMounted } from 'vue'
     
     const brightness = ref(3)
@@ -36,6 +37,10 @@
       <Header @update:brightness="handleBrightnessUpdate"/>
       <div class = "flex justify-center w-full px-10">
         <div class = "w-10/12 rounded p-3" :class="{'bg-slate-200': brightness==5, 'bg-slate-300': brightness==4, 'bg-slate-600':brightness==3,'bg-slate-800':brightness==2, 'bg-slate-900':brightness==1}">
+
+
+            <Hero :brightness="brightness"/>
+
         </div>
     </div>
     </main>
