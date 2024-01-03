@@ -4,11 +4,12 @@
     })
     import { ref, computed, onMounted, onBeforeUpdate, watch, onUnmounted } from 'vue'
     import { TabGroup, TabList, Tab, TabPanels, TabPanel } from '@headlessui/vue'
-    import { ShieldCheck, GaugeCircle, ShowerHead, PencilRuler } from 'lucide-vue-next'
+    import { ShieldCheck, GaugeCircle, ShowerHead, PencilRuler, Frame } from 'lucide-vue-next'
     import PanelDesign from './PanelDesign.vue'
     import PanelDevelopment from './PanelDevelopment.vue'
     import PanelSpeed from './PanelSpeed.vue'
     import PanelSecurity from './PanelSecurity.vue'
+    import PanelDesignOverhaul from './PanelDesignOverhaul.vue'
 
 
     const tabs = ref([
@@ -30,7 +31,11 @@
         id: 3,
         title: 'Web Development',
         icon: 'PencilRuler'
-    }
+    },
+    {
+        id: 4,
+        title: 'Web Design',
+        icon: 'Frame'}
     ])
 
     let hoveredTab = ref(0)
@@ -114,23 +119,28 @@
 
                     <PencilRuler size = "3rem" v-if="tab.id==3" style = "transition: all 0.2s;" :class="iconClass(brightness, selected)"/>
 
+                    <Frame size = "3rem" v-if="tab.id==4" style = "transition: all 0.2s;" :class="iconClass(brightness, selected)"/>
+
                     <p class = "font-semibold cursor-pointer" style = "transition: all 0.2s;" :class="iconClass(brightness, selected)">{{ tab.title }}</p>
 
                 </div>
             </Tab>
         </TabList>
-        <TabPanels class = "flex justify-center gap-5">
-            <TabPanel class = "flex justify-center gap-5">
+        <TabPanels class = "flex justify-center gap-5 w-full">
+            <TabPanel class = "flex justify-center gap-5 w-full">
                 <PanelSecurity :brightness="brightness"/>
             </TabPanel>
-            <TabPanel class = "flex justify-center gap-5">
+            <TabPanel class = "flex justify-center gap-5 w-full">
                 <PanelSpeed :brightness="brightness"/>
             </TabPanel>
-            <TabPanel class = "flex justify-center gap-5">
-                <PanelDesign :brightness="brightness"/>
+            <TabPanel class = "flex justify-center gap-5 w-full">
+                <PanelDesignOverhaul :brightness="brightness"/>
             </TabPanel>
-            <TabPanel class = "flex justify-center gap-5">
+            <TabPanel class = "flex justify-center gap-5 w-full">
                 <PanelDevelopment :brightness="brightness"/>
+            </TabPanel>
+            <TabPanel class = "flex justify-center gap-5 w-full">
+                <PanelDesign :brightness="brightness"/>
             </TabPanel>
         </TabPanels>
     </TabGroup>

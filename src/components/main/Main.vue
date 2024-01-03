@@ -35,7 +35,7 @@
 </script>
 
 <template>
-    <main :class="['h-dvh', 'w-dvw', 'p-7', brightnessClass]" >
+    <main :class="['w-dvw', 'p-7', brightnessClass]" style = "min-height:100vh;overflow-x:hidden;">
 
       <Header @update:brightness="handleBrightnessUpdate"/>
 
