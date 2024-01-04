@@ -13,15 +13,16 @@
 
 
     const tabs = ref([
-        {id: 0,
-        title: 'Security Overhaul',
-        icon: 'ShieldCheck'
-    },
     {
         id: 1,
         title: 'Speed Optimization',
         icon: 'GaugeCircle'
     },
+        {id: 0,
+        title: 'Security Overhaul',
+        icon: 'ShieldCheck'
+    },
+    
     {
         id: 2,
         title: 'Design Overhaul',
@@ -128,10 +129,10 @@
         </TabList>
         <TabPanels class = "flex justify-center gap-5 w-full">
             <TabPanel class = "flex justify-center gap-5 w-full">
-                <PanelSecurity :brightness="brightness"/>
+                <PanelSpeed :brightness="brightness"/>
             </TabPanel>
             <TabPanel class = "flex justify-center gap-5 w-full">
-                <PanelSpeed :brightness="brightness"/>
+                <PanelSecurity :brightness="brightness"/>
             </TabPanel>
             <TabPanel class = "flex justify-center gap-5 w-full">
                 <PanelDesignOverhaul :brightness="brightness"/>

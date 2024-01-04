@@ -84,6 +84,7 @@
                     {{ attacks  }}+</h3>
                     <h3 class = "text-xl" :class = "pClass(brightness)">attacks blocked on <a :class = "iconClass(brightness)" href = "https://bazaar.blendernation.com">BlenderNation Bazaar</a>
                     </h3>
+                    <p class = "italic opacity-50 text-sm" :class="pClass(brightness)" >(about 1850 a month!)</p>
                     <p class = "italic opacity-50 text-sm" :class="pClass(brightness)" ><a href = "" :class = "iconClass(brightness)">Read more</a> about the Bazaar project</p> 
                 </div>
     
