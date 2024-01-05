@@ -2,6 +2,8 @@
     import { ref, computed, onMounted } from 'vue'
     import bazaarLogo from '@/assets/main/bazaar-600px.webp'
     import { ShieldCheck, Send } from 'lucide-vue-next'
+    import ctaForm from '../ctaForm/ctaForm.vue'
+    
     const props = defineProps({
         brightness: Number
     })
@@ -94,18 +96,7 @@
         <hr class = "opacity-50" :class="pClass(brightness)">
         <div class = "h-3"></div>
 
-        <div class = "rounded p-8 flex" :class="{'bg-slate-100': brightness==5, 'bg-slate-400': brightness==4, 'bg-slate-500':brightness==3,'bg-slate-700':brightness==2, 'bg-slate-800':brightness==1}">
-            <div class = "prose text-center">
-                <h4 class = "text-2xl mt-6" :class = "pClass(brightness)">Piqued your interest? Hit me up:</h4>
-                    <form>
-                        <input type="text" placeholder="Name" class = "rounded p-2 w-full" :class="{'bg-slate-200': brightness==5, 'bg-slate-300': brightness==4, 'bg-slate-600':brightness==3,'bg-slate-800':brightness==2, 'bg-slate-900':brightness==1}">
-                        <input type="email" placeholder="Email" class = "rounded p-2 w-full mt-3" :class="{'bg-slate-200': brightness==5, 'bg-slate-300': brightness==4, 'bg-slate-600':brightness==3,'bg-slate-800':brightness==2, 'bg-slate-900':brightness==1}">
-                        <textarea placeholder="Message" class = "rounded p-2 w-full mt-3" :class="{'bg-slate-200': brightness==5, 'bg-slate-300': brightness==4, 'bg-slate-600':brightness==3,'bg-slate-800':brightness==2, 'bg-slate-900':brightness==1}"></textarea>
-                        <button type="submit" class="rounded px-5 py-2 text-white font-semibold w-full mt-2" :class="{'bg-emerald-600': brightness>= 4, 'bg-slate-500': brightness == 3, 'bg-orange-600': brightness==2, 'bg-orange-500': brightness==1}">Contact Me</button>
-                    </form>
-            </div>
-
-        </div>
+        <ctaForm :brightness = "brightness"/>
         
         
     </div>

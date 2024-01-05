@@ -2,6 +2,7 @@
     import { ref, computed, onMounted, watch } from 'vue'
     import { Turtle, Rabbit } from 'lucide-vue-next'
     import chroma from 'chroma-js'
+    import ctaForm from '../ctaForm/ctaForm.vue'
 
     const props = defineProps({
         brightness: Number
@@ -168,6 +169,11 @@
             </tbody>
         </table>
         </div>
+        
+        <div class = "h-6"></div>
+
+        <ctaForm :brightness = "brightness"/>
+
     </div>
     </div>
 </template>
