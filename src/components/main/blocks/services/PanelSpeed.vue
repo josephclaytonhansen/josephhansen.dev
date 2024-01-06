@@ -136,7 +136,7 @@
         <div class = "prose md:w-10/12 sm:w-12/12 mt-8" style = "max-width:84ch!important;" :class="pClass(brightness)">
         <h2 class = "text-2xl m-0" :class="pClass(brightness)">I can make your website</h2><h2 class ="text-5xl" :class="pClass(brightness)"> faster, smaller, and lighter.</h2>
         <p>Page speed and network use are hugely important to your users. If your numbers are bad, your users are gone.</p>
-        <p>I can help get those numbers up where they should be- making websites faster is a passion of mine. For example, this website you're on is using all of a whopping <b>256 KB</b>. That's a third of the classic SNES game <em>The Legend of Zelda: A Link to The Past</em>, or 3% of the bandwidth it takes just to open Instagram.</p><p>You want fast? Let's make it happen.</p>
+        <p>I can help get those numbers up where they should be- making websites faster is a passion of mine. For example, this website you're on is using all of a whopping <b>315 KB</b>. That's half of the classic SNES game <em>The Legend of Zelda: A Link to The Past</em>, or 4% of the bandwidth it takes just to open Instagram.</p><p>You want fast? Let's make it happen.</p>
         <h3 :class="pClass(brightness)">How I help</h3>
         <table id = "speedTable">
             <colgroup>
