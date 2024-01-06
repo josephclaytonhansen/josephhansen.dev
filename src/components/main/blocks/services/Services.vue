@@ -4,13 +4,13 @@
     })
     import { ref, computed, onMounted, onBeforeUpdate, watch, onUnmounted } from 'vue'
     import { TabGroup, TabList, Tab, TabPanels, TabPanel } from '@headlessui/vue'
-    import { ShieldCheck, GaugeCircle, ShowerHead, PencilRuler, Frame } from 'lucide-vue-next'
+    import { ShieldCheck, GaugeCircle, ShowerHead, PencilRuler, Frame, EyeOff } from 'lucide-vue-next'
     import PanelDesign from './PanelDesign.vue'
     import PanelDevelopment from './PanelDevelopment.vue'
     import PanelSpeed from './PanelSpeed.vue'
     import PanelSecurity from './PanelSecurity.vue'
     import PanelDesignOverhaul from './PanelDesignOverhaul.vue'
-
+    import PanelAccessibility from './PanelAccessibility.vue'
 
     const tabs = ref([
     {
@@ -36,8 +36,13 @@
     {
         id: 4,
         title: 'Web Design',
-        icon: 'Frame'}
-    ])
+        icon: 'Frame'},
+    {
+        id: 5,
+        title: 'Accessibility',
+        icon: 'EyeOff'}
+    ],
+    )
 
     let hoveredTab = ref(0)
 
@@ -122,6 +127,8 @@
 
                     <Frame size = "3rem" v-if="tab.id==4" style = "transition: all 0.2s;" :class="iconClass(brightness, selected)"/>
 
+                    <EyeOff size = "3rem" v-if="tab.id==5" style = "transition: all 0.2s;" :class="iconClass(brightness, selected)"/>
+
                     <p class = "font-semibold cursor-pointer" style = "transition: all 0.2s;" :class="iconClass(brightness, selected)">{{ tab.title }}</p>
 
                 </div>
@@ -142,6 +149,9 @@
             </TabPanel>
             <TabPanel class = "flex justify-center gap-5 w-full">
                 <PanelDesign :brightness="brightness"/>
+            </TabPanel>
+            <TabPanel class = "flex justify-center gap-5 w-full">
+                <PanelAccessibility :brightness="brightness"/>
             </TabPanel>
         </TabPanels>
     </TabGroup>
