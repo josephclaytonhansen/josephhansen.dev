@@ -54,8 +54,8 @@
 </script>
 
 <template>
-    <div class = "flex w-full gap-4 p-8 items-center justify-center">
-        <div class = "w-6/12">
+    <div class = "flex w-full gap-4 md:p-8 sm:p-4 items-center justify-center flex-wrap">
+        <div class = "lg:w-6/12 sm:w-12/12">
             
             <h2 class = "text-left text-5xl" :class="pClass(brightness)">I can secure your website.</h2>
             <p class = "text-left text-sm italic opacity-50 mt-3" :class="pClass(brightness)">Website already secure? <b><a href = "" :class = "iconClass(brightness)">How sure</a> are you?</b></p>
@@ -65,7 +65,7 @@
 
                 <p>My web security specialities include (but aren't limited to):</p>
                 <div class = "rounded p-2 flex items-center flex-col" :class="{'bg-slate-100': brightness==5, 'bg-slate-400': brightness==4, 'bg-slate-500':brightness==3,'bg-slate-700':brightness==2, 'bg-slate-800':brightness==1}">
-                    <div class = "flex items-center w-full" ><ShieldCheck size = "2rem" :class="iconClass(brightness)"/><h4 class = "font-bold m-0" :class="pClass(brightness)">WordPress Protection</h4>
+                    <div class = "flex items-center w-full" ><ShieldCheck class = "mr-2" size = "2rem" :class="iconClass(brightness)"/><h4 class = "font-bold m-0" :class="pClass(brightness)">WordPress Protection</h4>
                     </div>
  
                         <p>I have close to a decade of practice securing WordPress sites against attacks. Plugging all the potential holes (and there's a lot!) in a WordPress site takes a <em>very</em> long time. Save yourself a headache and let someone else (me, perhaps?) deal with that hassle.</p>
@@ -75,7 +75,7 @@
                 <div class = "h-3"></div>
 
                 <div class = "rounded p-2 flex items-center flex-col" :class="{'bg-slate-100': brightness==5, 'bg-slate-400': brightness==4, 'bg-slate-500':brightness==3,'bg-slate-700':brightness==2, 'bg-slate-800':brightness==1}">
-                    <div class = "flex items-center w-full" ><ShieldCheck size = "2rem" :class="iconClass(brightness)"/><h4 class = "font-bold m-0" :class="pClass(brightness)">DDoS/Malicious Bots Shielding</h4>
+                    <div class = "flex items-center w-full" ><ShieldCheck size = "2rem" class = "mr-2" :class="iconClass(brightness)"/><h4 class = "font-bold m-0" :class="pClass(brightness)">DDoS/Malicious Bots Shielding</h4>
                     </div>
                         <p>The bots are out there... and they're coming for your site. When? Why? Who is behind them? Who knows? What I <em>do</em> know is how to keep you safe. I can help you make sure your site stays up and your data stays safe, no matter what kind of nefarious botnets find it.</p>
 
@@ -84,7 +84,7 @@
                 <div class = "h-3"></div>
 
                 <div class = "rounded p-2 flex items-center flex-col" :class="{'bg-slate-100': brightness==5, 'bg-slate-400': brightness==4, 'bg-slate-500':brightness==3,'bg-slate-700':brightness==2, 'bg-slate-800':brightness==1}">
-                    <div class = "flex items-center w-full" ><ShieldCheck size = "2rem" :class="iconClass(brightness)"/><h4 class = "font-bold m-0" :class="pClass(brightness)">JavaScript/PHP Vulnerabilities</h4>
+                    <div class = "flex items-center w-full" ><ShieldCheck class = "mr-2" size = "2rem" :class="iconClass(brightness)"/><h4 class = "font-bold m-0" :class="pClass(brightness)">JavaScript/PHP Vulnerabilities</h4>
                     </div>
                         <p>If your site has any PHP or JavaScript running (it does), there's a good chance coding errors, outdated libraries, or other problems are imperiling your site. Trust me, I've seen it all- from passwords saved in plain text files to packages decades out of date with 384 critical-risk vulnerabilities... so, whatever nastiness is lurking beneath the surface, I can fix it.</p>
 
@@ -94,7 +94,7 @@
 
         </div>
     
-    <div class = "flex flex-col gap-4 w-4/12">
+    <div class = "flex flex-col gap-4 lg:w-4/12 md:w-12/12">
 
         <div class = "rounded p-8 flex" :class="{'bg-slate-100': brightness==5, 'bg-slate-400': brightness==4, 'bg-slate-500':brightness==3,'bg-slate-700':brightness==2, 'bg-slate-800':brightness==1}">
 

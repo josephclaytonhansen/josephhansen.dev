@@ -105,7 +105,7 @@
 
 <template>
     <TabGroup>
-        <TabList class = "flex justify-center gap-5 py-5">
+        <TabList class = "flex justify-center md:gap-5 sm:gap-1 py-5 flex-wrap">
             <Tab v-slot="{ selected }" v-for = "tab in tabs" :key = "tab.id" class = "flex gap-2 p-2 rounded focus:outline-none active:outline-none outline-none" style = "transition: all 0.2s;">
                 <div class="flex flex-col justify-center gap-1 align-middle items-center rounded focus:outline-none active:outline-none outline-none p-3" style = "transition: all 0.2s;"
                      :class="getTabClass(brightness, selected, hoveredTab, tab.id)"
