@@ -1,5 +1,6 @@
 <script setup>
     import { ref, computed, onMounted, watch } from 'vue'
+    import chroma from 'chroma-js'
     const props = defineProps({
         brightness: Number
     })

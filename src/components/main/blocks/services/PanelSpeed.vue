@@ -139,7 +139,12 @@
         <p>I can help get those numbers up where they should be- making websites faster is a passion of mine. For example, this website you're on is using all of a whopping <b>256 KB</b>. That's a third of the classic SNES game <em>The Legend of Zelda: A Link to The Past</em>, or 3% of the bandwidth it takes just to open Instagram.</p><p>You want fast? Let's make it happen.</p>
         <h3 :class="pClass(brightness)">How I help</h3>
         <table class="">
+            <colgroup>
+                    <col style="width: 30%;">
+                    <col style="width: 70%;">
+                </colgroup>
             <thead>
+
                 <tr>
                     <th><div class = "flex" ><h4 :class="pClass(brightness)" class="text-lg m-0">Problem <Turtle size = "3rem" :class = "iconClass(brightness)" class="inline mb-1"></Turtle></h4></div></th>
                     <th><div class = "flex" ><h4 :class="pClass(brightness)" class="text-lg m-0">What I can do <Rabbit size = "3rem" :class = "iconClass(brightness)" class="inline mb-1"></Rabbit></h4></div></th>

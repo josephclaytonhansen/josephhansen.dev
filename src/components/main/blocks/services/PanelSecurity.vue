@@ -8,6 +8,23 @@
         brightness: Number
     })
     const attacks = ref(9274)
+    const AttacksPerMonth = ref(4709)
+    const startDate = ref(new Date('2023-10-01'))
+    const currentDate = ref(new Date())
+
+    const attacksTotalSinceStart = computed(() => {
+        let monthsBetweenStartAndCurrent = (currentDate.value.getFullYear() - startDate.value.getFullYear()) * 12 + (currentDate.value.getMonth() - startDate.value.getMonth())
+        return monthsBetweenStartAndCurrent * AttacksPerMonth.value
+    })
+
+    const roundToMillions = (number) => {
+    if (number > 1000000){
+        let numberString = Math.round(number / 1000000).toString();
+        return numberString + 'm';
+    } else {
+        return number;
+    }
+}
 
     const iconClass = (brightness) => {
                 if (brightness >= 4){
@@ -83,10 +100,10 @@
 
                 <div class = "prose text-center">
                     <h3 class = "text-5xl font-monospace mt-6" :class = "iconClass(brightness)">
-                    {{ attacks  }}+</h3>
+                    {{ roundToMillions(attacksTotalSinceStart)  }}+</h3>
                     <h3 class = "text-xl" :class = "pClass(brightness)">attacks blocked on <a :class = "iconClass(brightness)" href = "https://bazaar.blendernation.com">BlenderNation Bazaar</a>
                     </h3>
-                    <p class = "italic opacity-50 text-sm" :class="pClass(brightness)" >(about 1850 a month!)</p>
+                    <p class = "italic opacity-50 text-sm" :class="pClass(brightness)" >(Over 4500 a month!)</p>
                     <p class = "italic opacity-50 text-sm" :class="pClass(brightness)" ><a href = "" :class = "iconClass(brightness)">Read more</a> about the Bazaar project</p> 
                 </div>
     
