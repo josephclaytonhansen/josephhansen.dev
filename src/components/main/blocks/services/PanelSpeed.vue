@@ -147,24 +147,20 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>Row 1, Column 1</td>
-                    <td>Row 1, Column 2</td>
+                    <td>Huge, resource-heavy images</td>
+                    <td>Optimize your images. <b>A lot. </b>Using cutting-edge techniques and algorithms, I average between 60-200% size reduction total on most projects.</td>
                 </tr>
                 <tr>
-                    <td>Row 2, Column 1</td>
-                    <td>Row 2, Column 2</td>
+                    <td>Unused code, plugins, and assets</td>
+                    <td>Clean up your website significantly without impacting functionality at all. Every website has a ton of garbage- let me take your garbage out!</td>
                 </tr>
                 <tr>
-                    <td>Row 3, Column 1</td>
-                    <td>Row 3, Column 2</td>
+                    <td>Inefficient, resource-heavy platforms</td>
+                    <td>I can help you migrate to a better platform, such as Vue, and get orders of magnitude smaller pages. 10-100x or more, usually.</td>
                 </tr>
                 <tr>
-                    <td>Row 4, Column 1</td>
-                    <td>Row 4, Column 2</td>
-                </tr>
-                <tr>
-                    <td>Row 5, Column 1</td>
-                    <td>Row 5, Column 2</td>
+                    <td>Uncached resources</td>
+                    <td>Inefficient or non-existent caching can massively increase page load times, especially the Time to First Paint metric, which has a huge impact on your SEO. I can set up caching that will have an immediate impact on your search engine rankings.</td>
                 </tr>
             </tbody>
         </table>
