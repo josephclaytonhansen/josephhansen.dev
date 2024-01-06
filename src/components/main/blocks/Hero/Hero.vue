@@ -82,8 +82,8 @@ const currentHeadline = computed(() => headlines.value[index.value])
         websites.</h1>
         <p class="text-center text-slate-500 font-sans pt-5" :class="{'text-slate-800':brightness==5,'text-slate-700':brightness==4, 'text-slate-400':brightness==3,'text-slate-300':brightness==2,'text-slate-500':brightness==1}" >Hi, I'm Joseph. I'm a full-stack web developer. What can I do for you?</p>
         <div class = "flex py-5 justify-center gap-3 w-full">
-            <button class="rounded px-5 py-2 text-white font-semibold" :class="{'bg-emerald-600': brightness>= 4, 'bg-slate-500': brightness == 3, 'bg-orange-600': brightness==2, 'bg-orange-500': brightness==1}">Contact Me</button>
-            <button class="rounded px-5 py-2 text-white font-semibold" :class="{'bg-slate-700': brightness>= 4, 'bg-slate-500': brightness == 3, 'bg-slate-400': brightness<=2}">Portfolio</button>
+            <button class="rounded px-5 py-2 text-white font-semibold" :class="{'bg-emerald-600': brightness>= 4, 'bg-slate-500': brightness == 3, 'bg-orange-600': brightness==2, 'bg-orange-500': brightness==1}">Reach Out</button>
+            <button class="rounded px-5 py-2 text-white font-semibold" :class="{'bg-slate-700': brightness>= 4, 'bg-slate-500': brightness == 3, 'bg-slate-400': brightness<=2}">Book My Services</button>
         </div>
     </div>
 </template>
