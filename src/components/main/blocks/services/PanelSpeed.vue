@@ -133,7 +133,7 @@
         </div>
         <p class = "text-sm italic opacity-50 mt-3" :class="pClass(brightness)">Desktop performance score (using Google Page Speed) for the <a href = "" :class = "iconClass(brightness)">OKC South Stake Project</a></p>
 
-        <div class = "prose w-10/12 mt-8" :class="pClass(brightness)">
+        <div class = "prose w-10/12 mt-8" style = "max-width:84ch!important;" :class="pClass(brightness)">
         <h2 class = "text-2xl m-0" :class="pClass(brightness)">I can make your website</h2><h2 class ="text-5xl" :class="pClass(brightness)"> faster, smaller, and lighter.</h2>
         <p>Page speed and network use are hugely important to your users. If your numbers are bad, your users are gone.</p>
         <p>I can help get those numbers up where they should be- making websites faster is a passion of mine. For example, this website you're on is using all of a whopping <b>256 KB</b>. That's a third of the classic SNES game <em>The Legend of Zelda: A Link to The Past</em>, or 3% of the bandwidth it takes just to open Instagram.</p><p>You want fast? Let's make it happen.</p>
