@@ -95,7 +95,7 @@
 
 <template>
     <div class = "flex w-full gap-4 md:p-8 sm:p-4 items-center justify-center flex-col">
-        <div class = "prose md:w-10/12 sm:w-12/12 mt-8" >
+        <div class = "prose md:w-10/12 sm:w-12/12 mt-8"  style = "max-width:84ch!important;" >
             <h2 class = "text-5xl" :class = "pClass(brightness)">
                 98% of websites don’t comply with the Web Content Accessibility Guidelines.
             </h2>

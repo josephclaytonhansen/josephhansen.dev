@@ -2,6 +2,7 @@
     import Header from './blocks/header/Header.vue'
     import Hero from './blocks/hero/Hero.vue'
     import Services from './blocks/services/Services.vue'
+    import messageBanner from './blocks/messageBanner/messageBanner.vue'
 
     import { ref, computed, onMounted } from 'vue'
     
@@ -56,4 +57,5 @@
     </div>
 
     </main>
+    <messageBanner :brightness="brightness"/>
 </template>
