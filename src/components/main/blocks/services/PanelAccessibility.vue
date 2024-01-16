@@ -5,10 +5,6 @@
     })
     import ctaForm from '../ctaForm/ctaForm.vue'
     import chroma from 'chroma-js'
-    import {MoveRight} from 'lucide-vue-next'
-
-    import bazaarFigma from '@/assets/main/bazaarFigma.webp'
-    import bazaarHero from '@/assets/main/bazaarHero.webp'
 
 
     const iconClass = (brightness) => {
