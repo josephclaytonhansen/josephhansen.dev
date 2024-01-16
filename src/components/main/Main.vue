@@ -7,6 +7,10 @@
     import { ref, computed, onMounted } from 'vue'
     
     const brightness = ref(3)
+
+    const props = defineProps({
+        component: String
+    })
     
     const handleBrightnessUpdate = (value) => {
         brightness.value = Number(value)
@@ -41,7 +45,7 @@
       <Header @update:brightness="handleBrightnessUpdate"/>
 
       <div class = "flex justify-center w-full md:px-10 sm:px-5 mt-5">
-        <div class = "md:w-10/12 sm:w-12/12 rounded p-3" :class="{'bg-slate-200': brightness==5, 'bg-slate-300': brightness==4, 'bg-slate-600':brightness==3,'bg-slate-800':brightness==2, 'bg-slate-900':brightness==1}">
+        <div class = "md:w-10/12 sm:w-12/12 rounded p-3" :class="{'bg-slate-200': brightness==5, 'bg-slate-300': brightness==4, 'bg-slate-600':brightness==3,'bg-slate-800':brightness==2, 'bg-slate-900':brightness==1}"  v-if="component=='home'">
 
             <Hero :brightness="brightness"/>
 
@@ -49,7 +53,7 @@
     </div>
 
     <div class = "flex justify-center w-full md:px-10 sm:px-5 pt-10">
-        <div class = "md:w-10/12 sm:w-12/12 rounded p-3" :class="{'bg-slate-200': brightness==5, 'bg-slate-300': brightness==4, 'bg-slate-600':brightness==3,'bg-slate-800':brightness==2, 'bg-slate-900':brightness==1}">
+        <div class = "md:w-10/12 sm:w-12/12 rounded p-3" :class="{'bg-slate-200': brightness==5, 'bg-slate-300': brightness==4, 'bg-slate-600':brightness==3,'bg-slate-800':brightness==2, 'bg-slate-900':brightness==1}"  v-if="component=='home'">
 
             <Services :brightness="brightness"/>
 
