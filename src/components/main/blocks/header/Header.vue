@@ -8,6 +8,8 @@
 
     const emit = defineEmits(['update:brightness'])
 
+    
+
     const updateBrightness = (event) => {
     brightness.value = event.target.value
     emit('update:brightness', brightness.value)
