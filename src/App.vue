@@ -3,7 +3,6 @@
 
 <template>
   <router-view />
-  <Loading v-if="$loading"/>
 </template>
 
 <style scoped>
