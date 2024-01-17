@@ -9,6 +9,10 @@ const isRevealed = ref(false);
 onMounted(() => {
   const checkScroll = () => {
     isRevealed.value = window.scrollY > 200;
+    let url = window.location.href
+    if (url.includes("pricing")) {
+      isRevealed.value = false;
+    }
   };
 
   window.addEventListener("scroll", checkScroll);
@@ -49,7 +53,7 @@ const pClass = (brightness) => {
       Get a free site speed audit with recommendations for optimizing. My gift
       to you.
     </p>
-    <button
+    <a href = "/pricing"><button
       class="rounded px-5 py-2 text-white font-semibold"
       :class="{
         'bg-emerald-600': brightness >= 4,
@@ -59,6 +63,6 @@ const pClass = (brightness) => {
       }"
     >
       Get a Free Audit
-    </button>
+    </button></a>
   </div>
 </template>

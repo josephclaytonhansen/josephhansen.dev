@@ -63,7 +63,7 @@ const pricing = ref({
   speed: {
     audit: {
       price: 0,
-      title: "Perform a detailed speed audit",
+      title: "Detailed speed audit (100% free)",
       enabled: true,
     },
     optimize: {
@@ -405,7 +405,7 @@ const selectedServicesList = computed(() => {
 
 <template>
   <div class="flex-col">
-    <div class="prose py-5 flex-col">
+    <div class="prose py-5 flex-col w-full">
       <h2
         class="text-5xl text-center text-semibold"
         :class="pClass(props.brightness)"
@@ -485,7 +485,8 @@ const selectedServicesList = computed(() => {
               :class="iconClass(brightness)"
             />
             <p class="" :class="pClass(props.brightness)">
-              {{ service.title }}
+              <b v-if = "service.title == 'Detailed speed audit (100% free)'"><em>{{ service.title }}</em></b>
+                <span v-else>{{ service.title }}</span>
             </p>
           </div>
           <div class="">
@@ -560,7 +561,7 @@ const selectedServicesList = computed(() => {
       </div>
       <button
         type="submit"
-        class="rounded px-5 py-2 text-white font-semibold mt-4"
+        class="rounded px-5 py-2 text-white font-semibold mt-4 w-full"
         :class="{
           'bg-emerald-600': brightness >= 4,
           'bg-orange-700': brightness == 3,
@@ -572,8 +573,15 @@ const selectedServicesList = computed(() => {
       </button>
     </form>
     <p class="text-center mt-4" :class="pClass(props.brightness)">
-      I'll get back to you within 48 hours. Please note that no work can be done
-      until we've both signed a contract.
+      I'll get back to you within 48 hours. This form is not a contract, please note that work can't begin until we've connected and signed a contract.<br/><br/>These are one-time services; for ongoing maintenance, please <a href = "/contact" class = "font-bold" :class = "iconClass(brightness)">shoot me a message and we can get that figured out</a>.<br/><br/>I look forward to working with you!
     </p>
   </div>
 </template>
+
+<style scoped>
+.prose{
+    max-width:100%!important;
+    padding-left:2rem;
+    padding-right:2rem;
+}
+</style>
