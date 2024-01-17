@@ -132,7 +132,7 @@ const currentHeadline = computed(() => headlines.value[index.value]);
       >
         Portfolio
       </button>
-      <button
+      <a href = "/pricing"><button
         class="rounded px-5 py-2 text-white font-semibold"
         :class="{
           'bg-slate-700': brightness >= 4,
@@ -141,7 +141,7 @@ const currentHeadline = computed(() => headlines.value[index.value]);
         }"
       >
         Get a Quote
-      </button>
+      </button></a>
     </div>
   </div>
 </template>
