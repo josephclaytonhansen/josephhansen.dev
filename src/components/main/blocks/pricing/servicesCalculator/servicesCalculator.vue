@@ -73,7 +73,7 @@ const pricing = ref({
     },
     caching: {
       price: 300,
-      title: "Setup efficient caching and always online",
+      title: "Efficient caching and always online",
       enabled: true,
     },
     images: {
