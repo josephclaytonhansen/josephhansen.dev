@@ -36,6 +36,6 @@
     "vite": "^5.0.8"
   },
   "lint-staged": {
-    "*.{js,css,md}": "prettier --write src/ --no-semi"
+    "*.{js,css,md}": "prettier --write src/ --no-semi --bracket-same-line --vue-indent-script-and-style"
   }
 }
