@@ -1,38 +1,38 @@
 <script setup>
-import { ref, computed, onMounted, onUnmounted } from "vue"
-const props = defineProps({
-  brightness: Number,
-})
+  import { ref, computed, onMounted, onUnmounted } from "vue"
+  const props = defineProps({
+    brightness: Number,
+  })
 
-const isRevealed = ref(false)
+  const isRevealed = ref(false)
 
-onMounted(() => {
-  const checkScroll = () => {
-    isRevealed.value = window.scrollY > 200
-    let url = window.location.href
-    if (url.includes("pricing")) {
-      isRevealed.value = false
+  onMounted(() => {
+    const checkScroll = () => {
+      isRevealed.value = window.scrollY > 200
+      let url = window.location.href
+      if (url.includes("pricing")) {
+        isRevealed.value = false
+      }
+    }
+
+    window.addEventListener("scroll", checkScroll)
+
+    onUnmounted(() => {
+      window.removeEventListener("scroll", checkScroll)
+    })
+  })
+
+  const pClass = (brightness) => {
+    if (brightness >= 4) {
+      return "text-slate-800"
+    } else if (brightness == 3) {
+      return "text-slate-200"
+    } else if (brightness == 2) {
+      return "text-slate-300"
+    } else if (brightness == 1) {
+      return "text-slate-300"
     }
   }
-
-  window.addEventListener("scroll", checkScroll)
-
-  onUnmounted(() => {
-    window.removeEventListener("scroll", checkScroll)
-  })
-})
-
-const pClass = (brightness) => {
-  if (brightness >= 4) {
-    return "text-slate-800"
-  } else if (brightness == 3) {
-    return "text-slate-200"
-  } else if (brightness == 2) {
-    return "text-slate-300"
-  } else if (brightness == 1) {
-    return "text-slate-300"
-  }
-}
 </script>
 
 <template>
@@ -47,8 +47,7 @@ const pClass = (brightness) => {
       'bg-slate-800': brightness == 1,
       'opacity-0': !isRevealed,
       'opacity-100': isRevealed,
-    }"
-  >
+    }">
     <p class="text-center" :class="pClass(brightness)">
       Get a free site speed audit with recommendations for optimizing. My gift
       to you.
@@ -61,8 +60,7 @@ const pClass = (brightness) => {
           'bg-orange-700': brightness == 3,
           'bg-orange-600': brightness == 2,
           'bg-orange-500': brightness == 1,
-        }"
-      >
+        }">
         Get a Free Audit
       </button></a
     >

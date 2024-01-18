@@ -1,70 +1,68 @@
 <script setup>
-import { ref, computed, onMounted } from "vue"
-import bazaarLogo from "@/assets/main/bazaar-600px.webp"
-import { ShieldCheck, Send } from "lucide-vue-next"
-import ctaForm from "../ctaForm/ctaForm.vue"
+  import { ref, computed, onMounted } from "vue"
+  import bazaarLogo from "@/assets/main/bazaar-600px.webp"
+  import { ShieldCheck, Send } from "lucide-vue-next"
+  import ctaForm from "../ctaForm/ctaForm.vue"
 
-const props = defineProps({
-  brightness: Number,
-})
-const attacks = ref(9274)
-const AttacksPerMonth = ref(4709)
-const startDate = ref(new Date("2023-10-01"))
-const currentDate = ref(new Date())
+  const props = defineProps({
+    brightness: Number,
+  })
+  const attacks = ref(9274)
+  const AttacksPerMonth = ref(4709)
+  const startDate = ref(new Date("2023-10-01"))
+  const currentDate = ref(new Date())
 
-const attacksTotalSinceStart = computed(() => {
-  let monthsBetweenStartAndCurrent =
-    (currentDate.value.getFullYear() - startDate.value.getFullYear()) * 12 +
-    (currentDate.value.getMonth() - startDate.value.getMonth())
-  return monthsBetweenStartAndCurrent * AttacksPerMonth.value
-})
+  const attacksTotalSinceStart = computed(() => {
+    let monthsBetweenStartAndCurrent =
+      (currentDate.value.getFullYear() - startDate.value.getFullYear()) * 12 +
+      (currentDate.value.getMonth() - startDate.value.getMonth())
+    return monthsBetweenStartAndCurrent * AttacksPerMonth.value
+  })
 
-const roundToMillions = (number) => {
-  if (number > 1000000) {
-    let numberString = Math.round(number / 1000000).toString()
-    return numberString + "m"
-  } else {
-    return number
+  const roundToMillions = (number) => {
+    if (number > 1000000) {
+      let numberString = Math.round(number / 1000000).toString()
+      return numberString + "m"
+    } else {
+      return number
+    }
   }
-}
 
-const iconClass = (brightness) => {
-  if (brightness >= 4) {
-    return "text-emerald-500"
-  } else if (brightness == 3) {
-    return "text-orange-200"
-  } else if (brightness == 2) {
-    return "text-orange-500"
-  } else if (brightness == 1) {
-    return "text-orange-400"
+  const iconClass = (brightness) => {
+    if (brightness >= 4) {
+      return "text-emerald-500"
+    } else if (brightness == 3) {
+      return "text-orange-200"
+    } else if (brightness == 2) {
+      return "text-orange-500"
+    } else if (brightness == 1) {
+      return "text-orange-400"
+    }
   }
-}
 
-const pClass = (brightness) => {
-  if (brightness >= 4) {
-    return "text-slate-800"
-  } else if (brightness == 3) {
-    return "text-slate-200"
-  } else if (brightness == 2) {
-    return "text-slate-300"
-  } else if (brightness == 1) {
-    return "text-slate-300"
+  const pClass = (brightness) => {
+    if (brightness >= 4) {
+      return "text-slate-800"
+    } else if (brightness == 3) {
+      return "text-slate-200"
+    } else if (brightness == 2) {
+      return "text-slate-300"
+    } else if (brightness == 1) {
+      return "text-slate-300"
+    }
   }
-}
 </script>
 
 <template>
   <div
-    class="flex w-full gap-4 md:p-8 sm:p-4 items-center justify-center flex-wrap"
-  >
+    class="flex w-full gap-4 md:p-8 sm:p-4 items-center justify-center flex-wrap">
     <div class="lg:w-6/12 sm:w-12/12">
       <h2 class="text-left text-5xl" :class="pClass(brightness)">
         I can secure your website.
       </h2>
       <p
         class="text-left text-sm italic opacity-50 mt-3"
-        :class="pClass(brightness)"
-      >
+        :class="pClass(brightness)">
         Website already secure?
         <b><a href="" :class="iconClass(brightness)">How sure</a> are you?</b>
       </p>
@@ -87,14 +85,12 @@ const pClass = (brightness) => {
             'bg-slate-500': brightness == 3,
             'bg-slate-700': brightness == 2,
             'bg-slate-800': brightness == 1,
-          }"
-        >
+          }">
           <div class="flex items-center w-full">
             <ShieldCheck
               class="mr-2"
               size="2rem"
-              :class="iconClass(brightness)"
-            />
+              :class="iconClass(brightness)" />
             <h4 class="font-bold m-0" :class="pClass(brightness)">
               WordPress Protection
             </h4>
@@ -118,14 +114,12 @@ const pClass = (brightness) => {
             'bg-slate-500': brightness == 3,
             'bg-slate-700': brightness == 2,
             'bg-slate-800': brightness == 1,
-          }"
-        >
+          }">
           <div class="flex items-center w-full">
             <ShieldCheck
               size="2rem"
               class="mr-2"
-              :class="iconClass(brightness)"
-            />
+              :class="iconClass(brightness)" />
             <h4 class="font-bold m-0" :class="pClass(brightness)">
               DDoS/Malicious Bots Shielding
             </h4>
@@ -149,14 +143,12 @@ const pClass = (brightness) => {
             'bg-slate-500': brightness == 3,
             'bg-slate-700': brightness == 2,
             'bg-slate-800': brightness == 1,
-          }"
-        >
+          }">
           <div class="flex items-center w-full">
             <ShieldCheck
               class="mr-2"
               size="2rem"
-              :class="iconClass(brightness)"
-            />
+              :class="iconClass(brightness)" />
             <h4 class="font-bold m-0" :class="pClass(brightness)">
               JavaScript/PHP Vulnerabilities
             </h4>
@@ -182,13 +174,11 @@ const pClass = (brightness) => {
           'bg-slate-500': brightness == 3,
           'bg-slate-700': brightness == 2,
           'bg-slate-800': brightness == 1,
-        }"
-      >
+        }">
         <div class="prose text-center">
           <h3
             class="text-5xl font-monospace mt-6"
-            :class="iconClass(brightness)"
-          >
+            :class="iconClass(brightness)">
             {{ roundToMillions(attacksTotalSinceStart) }}+
           </h3>
           <h3 class="text-xl" :class="pClass(brightness)">

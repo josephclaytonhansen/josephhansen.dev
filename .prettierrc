@@ -1,1 +1,6 @@
-{}
+{
+    "singleAttributePerLine": false,
+    "vueIndentScriptAndStyle": true,
+    "bracketSameLine": true,
+    "semi": false,
+}

@@ -1,39 +1,39 @@
 <script setup>
-import { Popover, PopoverButton, PopoverPanel } from "@headlessui/vue"
-import {
-  GalleryThumbnails,
-  ChevronDown,
-  ChevronUp,
-  Library,
-  Search,
-  Sun,
-  Moon,
-  CloudDrizzle,
-  Terminal,
-  CloudSun,
-  MoonStar,
-} from "lucide-vue-next"
-import { ref, onMounted } from "vue"
+  import { Popover, PopoverButton, PopoverPanel } from "@headlessui/vue"
+  import {
+    GalleryThumbnails,
+    ChevronDown,
+    ChevronUp,
+    Library,
+    Search,
+    Sun,
+    Moon,
+    CloudDrizzle,
+    Terminal,
+    CloudSun,
+    MoonStar,
+  } from "lucide-vue-next"
+  import { ref, onMounted } from "vue"
 
-const brightness = ref(5)
+  const brightness = ref(5)
 
-const emit = defineEmits(["update:brightness"])
+  const emit = defineEmits(["update:brightness"])
 
-const updateBrightness = (event) => {
-  brightness.value = event.target.value
-  emit("update:brightness", brightness.value)
-}
-
-onMounted(() => {
-  let localStorage = window.localStorage
-  if (localStorage.getItem("brightness")) {
-    brightness.value = Number(localStorage.getItem("brightness"))
+  const updateBrightness = (event) => {
+    brightness.value = event.target.value
+    emit("update:brightness", brightness.value)
   }
-})
 
-const goHome = () => {
-  window.location.href = "/"
-}
+  onMounted(() => {
+    let localStorage = window.localStorage
+    if (localStorage.getItem("brightness")) {
+      brightness.value = Number(localStorage.getItem("brightness"))
+    }
+  })
+
+  const goHome = () => {
+    window.location.href = "/"
+  }
 </script>
 
 <template>
@@ -48,8 +48,7 @@ const goHome = () => {
         'bg-slate-600': brightness == 3,
         'bg-slate-800': brightness == 2,
         'bg-slate-900': brightness == 1,
-      }"
-    >
+      }">
       <div class="flex justify-between gap-2 w-full content-center">
         <div class="flex gap-1 p-2">
           <Terminal
@@ -59,8 +58,7 @@ const goHome = () => {
               'text-orange-500': brightness == 2,
               'text-orange-400': brightness == 1,
             }"
-            stroke-width="3"
-          />
+            stroke-width="3" />
 
           <p
             :class="{
@@ -71,8 +69,7 @@ const goHome = () => {
             }"
             class="font-monospace font-bold cursor-pointer"
             @click="goHome"
-            id="logoText"
-          >
+            id="logoText">
             josephhansen.dev
           </p>
         </div>
@@ -86,8 +83,7 @@ const goHome = () => {
               'text-slate-300': brightness == 3,
               'text-slate-200': brightness == 2,
               'text-slate-400': brightness == 1,
-            }"
-          >
+            }">
             Web Portfolio
           </h6>
 
@@ -99,8 +95,7 @@ const goHome = () => {
               'text-slate-300': brightness == 3,
               'text-slate-200': brightness == 2,
               'text-slate-400': brightness == 1,
-            }"
-          >
+            }">
             Web Services
           </h6>
 
@@ -113,8 +108,7 @@ const goHome = () => {
                 'text-slate-300': brightness == 3,
                 'text-slate-200': brightness == 2,
                 'text-slate-400': brightness == 1,
-              }"
-            >
+              }">
               Creative Projects<ChevronDown />
             </PopoverButton>
             <PopoverPanel
@@ -125,14 +119,12 @@ const goHome = () => {
                 'bg-slate-500': brightness == 3,
                 'bg-slate-700': brightness == 2,
                 'bg-slate-800': brightness == 1,
-              }"
-            >
+              }">
               <div
                 class="py-1"
                 role="menu"
                 aria-orientation="vertical"
-                aria-labelledby="options-menu"
-              >
+                aria-labelledby="options-menu">
                 <a
                   href="#"
                   class="block px-4 py-2"
@@ -197,8 +189,7 @@ const goHome = () => {
               'text-slate-300': brightness == 3,
               'text-slate-200': brightness == 2,
               'text-slate-400': brightness == 1,
-            }"
-          >
+            }">
             About Me
           </h6>
         </div>
@@ -211,8 +202,7 @@ const goHome = () => {
               'bg-orange-600': brightness == 2,
               'bg-orange-500': brightness == 1,
             }"
-            class="py-2 px-3 rounded text-white"
-          >
+            class="py-2 px-3 rounded text-white">
             Contact
           </button>
 
@@ -225,8 +215,7 @@ const goHome = () => {
               'text-slate-200': brightness == 2,
               'text-slate-400': brightness == 1,
             }"
-            stroke-width="2"
-          />
+            stroke-width="2" />
         </div>
       </div>
     </div>
@@ -240,8 +229,7 @@ const goHome = () => {
         'bg-slate-600': brightness == 3,
         'bg-slate-800': brightness == 2,
         'bg-slate-900': brightness == 1,
-      }"
-    >
+      }">
       <Popover>
         <PopoverButton
           class="rounded mt-2 px-2"
@@ -251,8 +239,7 @@ const goHome = () => {
             'bg-slate-600': brightness == 3,
             'bg-slate-800': brightness == 2,
             'bg-slate-900': brightness == 1,
-          }"
-        >
+          }">
           <Sun v-if="brightness == 5" class="text-slate-900" />
           <CloudSun v-else-if="brightness == 4" class="text-slate-800" />
           <CloudDrizzle v-else-if="brightness == 3" class="text-slate-300" />
@@ -269,8 +256,7 @@ const goHome = () => {
                 v-model="brightness"
                 @input="updateBrightness"
                 class="slider w-20 mx-auto"
-                id="myRange"
-              />
+                id="myRange" />
             </div>
           </div>
         </PopoverPanel>
@@ -281,7 +267,7 @@ const goHome = () => {
 </template>
 
 <style scoped>
-#logoText {
-  transition: all 0.2s ease-in-out;
-}
+  #logoText {
+    transition: all 0.2s ease-in-out;
+  }
 </style>
