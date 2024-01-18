@@ -101,7 +101,7 @@ const pClass = (brightness) => {
           </div>
 
           <p>
-            I have close to a decade of practice securing WordPress sites
+            I have nearly a decade of practice securing WordPress sites
             against attacks. Plugging all the potential holes (and there's a
             lot!) in a WordPress site takes a <em>very</em> long time. Save
             yourself a headache and let someone else (me, perhaps?) deal with
@@ -133,7 +133,7 @@ const pClass = (brightness) => {
           </div>
           <p>
             The bots are out there... and they're coming for your site. When?
-            Why? Who is behind them? Who knows? What I <em>do</em> know is how
+            Why? Who is behind them? Who knows! What I <em>do</em> know is how
             to keep you safe. I can help you make sure your site stays up and
             your data stays safe, no matter what kind of nefarious botnets find
             it.

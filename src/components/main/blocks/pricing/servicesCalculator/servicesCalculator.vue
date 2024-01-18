@@ -414,7 +414,8 @@ const selectedServicesList = computed(() => {
       </h2>
       <p class="text-center" :class="pClass(props.brightness)">
         Faster, simpler, and cheaper than an agency. No need to spend hours on
-        the phone haggling. Pick what you want, I make it happen. That's it!
+        the phone haggling. Pick what you want, I make it happen. That's it!<br/><br/>
+        These services are for your existing website- if you're looking for a new site, <a href = "/contact" class = "font-bold" :class = "iconClass(brightness)">contact me </a> for a custom quote.
       </p>
     </div>
 
@@ -573,7 +574,7 @@ const selectedServicesList = computed(() => {
       </button>
     </form>
     <p class="text-center mt-4" :class="pClass(props.brightness)">
-      I'll get back to you within 48 hours. This form is not a contract, please note that work can't begin until we've connected and signed a contract.<br/><br/>These are one-time services; for ongoing maintenance, please <a href = "/contact" class = "font-bold" :class = "iconClass(brightness)">shoot me a message and we can get that figured out</a>.<br/><br/>I look forward to working with you!
+      I'll get back to you within 48 hours. This form is not a contract, please note that work can't begin until we've connected and signed a contract.<br/><br/>These are one-time services; for ongoing maintenance, please <a href = "/contact" class = "font-bold" :class = "iconClass(brightness)">shoot me a message</a> and we can get that figured out.<br/><br/>I look forward to working with you!
     </p>
   </div>
 </template>

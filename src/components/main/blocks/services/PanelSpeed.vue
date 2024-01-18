@@ -168,12 +168,12 @@ watch(
         </h2>
         <p>
           Page speed and network use are hugely important to your users. If your
-          numbers are bad, your users are gone.
+          speed is bad, your users are gone.
         </p>
         <p>
           I can help get those numbers up where they should be- making websites
           faster is a passion of mine. For example, this website you're on is
-          using all of a whopping <b>315 KB</b>. That's half of the classic SNES
+          using a whopping <b>315 KB</b>. That's half of the classic SNES
           game <em>The Legend of Zelda: A Link to The Past</em>, or 4% of the
           bandwidth it takes just to open Instagram.
         </p>
@@ -218,14 +218,14 @@ watch(
               <td>
                 Optimize your images. <b>A lot. </b>Using cutting-edge
                 techniques and algorithms, I average between 60-200% size
-                reduction total on most projects.
+                reduction on most projects.
               </td>
             </tr>
             <tr>
               <td>Unused code, plugins, and assets</td>
               <td>
-                Clean up your website significantly without impacting
-                functionality at all. Every website has a ton of garbage- let me
+                Clean up your website significantly without impacting any 
+                functionality. Every website has a ton of garbage- let me
                 take your garbage out!
               </td>
             </tr>
@@ -233,7 +233,7 @@ watch(
               <td>Inefficient, resource-heavy platforms</td>
               <td>
                 I can help you migrate to a better platform, such as Vue, and
-                get orders of magnitude smaller pages. 10-100x or more, usually.
+                get considerably smaller pages. 10-100x or more, usually.
               </td>
             </tr>
             <tr>
@@ -242,7 +242,7 @@ watch(
                 Inefficient or non-existent caching can massively increase page
                 load times, especially the Time to First Paint metric, which has
                 a huge impact on your SEO. I can set up caching that will have
-                an immediate impact on your search engine rankings.
+                an immediate impact on your search engine rankings and loading speeds. 
               </td>
             </tr>
           </tbody>

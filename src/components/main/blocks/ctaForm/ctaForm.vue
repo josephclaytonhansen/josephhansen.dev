@@ -46,7 +46,7 @@ const pClass = (brightness) => {
         </button></a
       >
       <h4 class="text-2xl mt-8" :class="pClass(brightness)">
-        Looking for a new site or a custom quote? Hit me up:
+        Looking for a new site or a custom quote? Hit me up
       </h4>
       <form>
         <input

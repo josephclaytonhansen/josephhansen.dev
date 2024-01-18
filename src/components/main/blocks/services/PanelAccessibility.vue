@@ -103,6 +103,13 @@ watch(
         Guidelines.
       </h2>
       <h3 class="text-2xl" :class="pClass(brightness)">Does yours?</h3>
+      <h4 :class="pClass(brightness)">
+        What are the <a class = "font-bold" :class = "iconClass(brightness)" href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Content Accessibility Guidelines?</a>
+      </h4>
+      <p :class="pClass(brightness)">
+        The Web Content Accessibility Guidelines (WCAG) are a set of standards
+        for making web content accessible to everyone.
+      </p>
       <p :class="pClass(brightness)">
         I've made a special focus of my web development studies accessibility. I
         believe everyone should be able to not only use, but enjoy, the content
