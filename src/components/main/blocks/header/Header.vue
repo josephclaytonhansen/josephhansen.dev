@@ -1,5 +1,5 @@
 <script setup>
-import { Popover, PopoverButton, PopoverPanel } from "@headlessui/vue";
+import { Popover, PopoverButton, PopoverPanel } from "@headlessui/vue"
 import {
   GalleryThumbnails,
   ChevronDown,
@@ -12,28 +12,28 @@ import {
   Terminal,
   CloudSun,
   MoonStar,
-} from "lucide-vue-next";
-import { ref, onMounted } from "vue";
+} from "lucide-vue-next"
+import { ref, onMounted } from "vue"
 
-const brightness = ref(5);
+const brightness = ref(5)
 
-const emit = defineEmits(["update:brightness"]);
+const emit = defineEmits(["update:brightness"])
 
 const updateBrightness = (event) => {
-  brightness.value = event.target.value;
-  emit("update:brightness", brightness.value);
-};
+  brightness.value = event.target.value
+  emit("update:brightness", brightness.value)
+}
 
 onMounted(() => {
-  let localStorage = window.localStorage;
+  let localStorage = window.localStorage
   if (localStorage.getItem("brightness")) {
-    brightness.value = Number(localStorage.getItem("brightness"));
+    brightness.value = Number(localStorage.getItem("brightness"))
   }
-});
+})
 
 const goHome = () => {
-  window.location.href = "/";
-};
+  window.location.href = "/"
+}
 </script>
 
 <template>

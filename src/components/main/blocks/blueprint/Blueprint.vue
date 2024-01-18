@@ -1,6 +1,6 @@
 <script setup>
-import alignImage from "@/assets/main/align_these.png";
-import "./script.js";
+import alignImage from "@/assets/main/align_these.png"
+import "./script.js"
 </script>
 
 <template>

@@ -1,7 +1,7 @@
 <script setup>
 const props = defineProps({
   brightness: Number,
-});
+})
 import {
   ref,
   computed,
@@ -9,8 +9,8 @@ import {
   onBeforeUpdate,
   watch,
   onUnmounted,
-} from "vue";
-import { TabGroup, TabList, Tab, TabPanels, TabPanel } from "@headlessui/vue";
+} from "vue"
+import { TabGroup, TabList, Tab, TabPanels, TabPanel } from "@headlessui/vue"
 import {
   ShieldCheck,
   GaugeCircle,
@@ -18,13 +18,13 @@ import {
   PencilRuler,
   Frame,
   EyeOff,
-} from "lucide-vue-next";
-import PanelDesign from "./PanelDesign.vue";
-import PanelDevelopment from "./PanelDevelopment.vue";
-import PanelSpeed from "./PanelSpeed.vue";
-import PanelSecurity from "./PanelSecurity.vue";
-import PanelDesignOverhaul from "./PanelDesignOverhaul.vue";
-import PanelAccessibility from "./PanelAccessibility.vue";
+} from "lucide-vue-next"
+import PanelDesign from "./PanelDesign.vue"
+import PanelDevelopment from "./PanelDevelopment.vue"
+import PanelSpeed from "./PanelSpeed.vue"
+import PanelSecurity from "./PanelSecurity.vue"
+import PanelDesignOverhaul from "./PanelDesignOverhaul.vue"
+import PanelAccessibility from "./PanelAccessibility.vue"
 
 const tabs = ref([
   {
@@ -54,67 +54,67 @@ const tabs = ref([
     title: "Accessibility",
     icon: "EyeOff",
   },
-]);
+])
 
-let hoveredTab = ref(0);
+let hoveredTab = ref(0)
 
 const getTabClass = (brightness, selected, hoveredTab, tabId) => {
   if (selected) {
     if (brightness == 5) {
-      return hoveredTab === tabId ? "bg-emerald-600" : "bg-emerald-500";
+      return hoveredTab === tabId ? "bg-emerald-600" : "bg-emerald-500"
     } else if (brightness == 4) {
-      return hoveredTab === tabId ? "bg-emerald-600" : "bg-emerald-500";
+      return hoveredTab === tabId ? "bg-emerald-600" : "bg-emerald-500"
     } else if (brightness == 3 || brightness == 1) {
-      return hoveredTab === tabId ? "bg-orange-500" : "bg-orange-400";
+      return hoveredTab === tabId ? "bg-orange-500" : "bg-orange-400"
     } else if (brightness == 2) {
-      return hoveredTab === tabId ? "bg-orange-600" : "bg-orange-600";
+      return hoveredTab === tabId ? "bg-orange-600" : "bg-orange-600"
     }
   } else if (hoveredTab === tabId) {
     if (brightness == 5) {
-      return "bg-slate-300";
+      return "bg-slate-300"
     } else if (brightness == 4) {
-      return "bg-slate-400";
+      return "bg-slate-400"
     } else if (brightness == 3) {
-      return "bg-slate-700";
+      return "bg-slate-700"
     } else if (brightness == 2) {
-      return "bg-slate-900";
+      return "bg-slate-900"
     } else if (brightness == 1) {
-      return "bg-black";
+      return "bg-black"
     }
   } else {
     if (brightness == 5) {
-      return "bg-slate-200";
+      return "bg-slate-200"
     } else if (brightness == 4) {
-      return "bg-slate-300";
+      return "bg-slate-300"
     } else if (brightness == 3) {
-      return "bg-slate-600";
+      return "bg-slate-600"
     } else if (brightness == 2) {
-      return "bg-slate-800";
+      return "bg-slate-800"
     } else if (brightness == 1) {
-      return "bg-slate-900";
+      return "bg-slate-900"
     }
   }
-};
+}
 
 const iconClass = (brightness, selected) => {
   if (selected) {
     if (brightness >= 3) {
-      return "text-slate-200";
+      return "text-slate-200"
     } else {
-      return "text-slate-800";
+      return "text-slate-800"
     }
   } else {
     if (brightness >= 4) {
-      return "text-emerald-500";
+      return "text-emerald-500"
     } else if (brightness == 3) {
-      return "text-orange-200";
+      return "text-orange-200"
     } else if (brightness == 2) {
-      return "text-orange-500";
+      return "text-orange-500"
     } else if (brightness == 1) {
-      return "text-orange-400";
+      return "text-orange-400"
     }
   }
-};
+}
 </script>
 
 <template>

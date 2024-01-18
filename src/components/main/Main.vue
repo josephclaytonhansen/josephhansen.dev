@@ -1,49 +1,49 @@
 <script setup>
-import Header from "./blocks/header/Header.vue";
-import Hero from "./blocks/hero/Hero.vue";
-import Services from "./blocks/services/Services.vue";
-import messageBanner from "./blocks/messageBanner/messageBanner.vue";
-import Pricing from "./pages/Pricing.vue";
+import Header from "./blocks/header/Header.vue"
+import Hero from "./blocks/hero/Hero.vue"
+import Services from "./blocks/services/Services.vue"
+import messageBanner from "./blocks/messageBanner/messageBanner.vue"
+import Pricing from "./pages/Pricing.vue"
 
-import { ref, computed, onMounted } from "vue";
+import { ref, computed, onMounted } from "vue"
 
-const brightness = ref(3);
+const brightness = ref(3)
 
 const props = defineProps({
   component: String,
-});
+})
 
 const handleBrightnessUpdate = (value) => {
-  brightness.value = Number(value);
-  let localStorage = window.localStorage;
-  localStorage.setItem("brightness", brightness.value);
-};
+  brightness.value = Number(value)
+  let localStorage = window.localStorage
+  localStorage.setItem("brightness", brightness.value)
+}
 
 const brightnessClass = computed(() => {
   switch (brightness.value) {
     case 5:
-      return "bg-gradient-to-br from-sky-300 to-sky-500";
+      return "bg-gradient-to-br from-sky-300 to-sky-500"
     case 4:
-      return "bg-gradient-to-br from-sky-400 to-sky-600";
+      return "bg-gradient-to-br from-sky-400 to-sky-600"
     case 3:
-      return "bg-gradient-to-br from-slate-400 to-slate-600";
+      return "bg-gradient-to-br from-slate-400 to-slate-600"
     case 2:
-      return "bg-gradient-to-br from-sky-800 to-slate-800";
+      return "bg-gradient-to-br from-sky-800 to-slate-800"
     case 1:
-      return "bg-gradient-to-br from-slate-700 to-slate-900";
+      return "bg-gradient-to-br from-slate-700 to-slate-900"
     default:
-      return "";
+      return ""
   }
-});
+})
 
 onMounted(() => {
-  let localStorage = window.localStorage;
+  let localStorage = window.localStorage
   if (localStorage.getItem("brightness")) {
-    brightness.value = Number(localStorage.getItem("brightness"));
+    brightness.value = Number(localStorage.getItem("brightness"))
   } else {
-    localStorage.setItem("brightness", brightness.value);
+    localStorage.setItem("brightness", brightness.value)
   }
-});
+})
 </script>
 
 <template>

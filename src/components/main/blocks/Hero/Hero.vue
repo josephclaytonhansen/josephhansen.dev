@@ -6,11 +6,11 @@ import {
   onBeforeUpdate,
   watch,
   onUnmounted,
-} from "vue";
+} from "vue"
 
 const props = defineProps({
   brightness: Number,
-});
+})
 
 const headlines = ref([
   "super fast",
@@ -39,42 +39,42 @@ const headlines = ref([
   "your perfect",
   "your ideal",
   "your projects'",
-]);
+])
 
-let index = ref(0);
-let isAnimating = ref(false);
+let index = ref(0)
+let isAnimating = ref(false)
 
 onMounted(() => {
-  headlines.value = headlines.value.sort(() => Math.random() - 0.5);
+  headlines.value = headlines.value.sort(() => Math.random() - 0.5)
   setInterval(() => {
     if (!isAnimating.value) {
-      isAnimating.value = true;
-      index.value = (index.value + 1) % headlines.value.length;
+      isAnimating.value = true
+      index.value = (index.value + 1) % headlines.value.length
     }
-  }, 4000);
+  }, 4000)
 
   const handleMouseDown = () => {
-    isAnimating.value = false;
-  };
+    isAnimating.value = false
+  }
 
   const handleMouseUp = () => {
-    isAnimating.value = true;
-  };
+    isAnimating.value = true
+  }
 
-  window.addEventListener("mousedown", handleMouseDown);
-  window.addEventListener("mouseup", handleMouseUp);
+  window.addEventListener("mousedown", handleMouseDown)
+  window.addEventListener("mouseup", handleMouseUp)
 
   onUnmounted(() => {
-    window.removeEventListener("mousedown", handleMouseDown);
-    window.removeEventListener("mouseup", handleMouseUp);
-  });
-});
+    window.removeEventListener("mousedown", handleMouseDown)
+    window.removeEventListener("mouseup", handleMouseUp)
+  })
+})
 
 onBeforeUpdate(() => {
-  isAnimating.value = false;
-});
+  isAnimating.value = false
+})
 
-const currentHeadline = computed(() => headlines.value[index.value]);
+const currentHeadline = computed(() => headlines.value[index.value])
 </script>
 
 <template>
@@ -132,16 +132,18 @@ const currentHeadline = computed(() => headlines.value[index.value]);
       >
         Portfolio
       </button>
-      <a href = "/pricing"><button
-        class="rounded px-5 py-2 text-white font-semibold"
-        :class="{
-          'bg-slate-700': brightness >= 4,
-          'bg-slate-500': brightness == 3,
-          'bg-slate-400': brightness <= 2,
-        }"
+      <a href="/pricing"
+        ><button
+          class="rounded px-5 py-2 text-white font-semibold"
+          :class="{
+            'bg-slate-700': brightness >= 4,
+            'bg-slate-500': brightness == 3,
+            'bg-slate-400': brightness <= 2,
+          }"
+        >
+          Get a Quote
+        </button></a
       >
-        Get a Quote
-      </button></a>
     </div>
   </div>
 </template>
@@ -152,17 +154,17 @@ export default {
     typewriter: {
       beforeUpdate(el, binding) {
         if (binding.oldValue !== binding.value) {
-          let text = binding.value;
-          let delay = Math.random() * 100 + 25;
-          el.textContent = "";
+          let text = binding.value
+          let delay = Math.random() * 100 + 25
+          el.textContent = ""
           text.split("").forEach((char, i) => {
             setTimeout(() => {
-              el.textContent += char;
-            }, delay * i);
-          });
+              el.textContent += char
+            }, delay * i)
+          })
         }
       },
     },
   },
-};
+}
 </script>

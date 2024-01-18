@@ -1,56 +1,56 @@
 <script setup>
-import { ref, computed, onMounted } from "vue";
-import bazaarLogo from "@/assets/main/bazaar-600px.webp";
-import { ShieldCheck, Send } from "lucide-vue-next";
-import ctaForm from "../ctaForm/ctaForm.vue";
+import { ref, computed, onMounted } from "vue"
+import bazaarLogo from "@/assets/main/bazaar-600px.webp"
+import { ShieldCheck, Send } from "lucide-vue-next"
+import ctaForm from "../ctaForm/ctaForm.vue"
 
 const props = defineProps({
   brightness: Number,
-});
-const attacks = ref(9274);
-const AttacksPerMonth = ref(4709);
-const startDate = ref(new Date("2023-10-01"));
-const currentDate = ref(new Date());
+})
+const attacks = ref(9274)
+const AttacksPerMonth = ref(4709)
+const startDate = ref(new Date("2023-10-01"))
+const currentDate = ref(new Date())
 
 const attacksTotalSinceStart = computed(() => {
   let monthsBetweenStartAndCurrent =
     (currentDate.value.getFullYear() - startDate.value.getFullYear()) * 12 +
-    (currentDate.value.getMonth() - startDate.value.getMonth());
-  return monthsBetweenStartAndCurrent * AttacksPerMonth.value;
-});
+    (currentDate.value.getMonth() - startDate.value.getMonth())
+  return monthsBetweenStartAndCurrent * AttacksPerMonth.value
+})
 
 const roundToMillions = (number) => {
   if (number > 1000000) {
-    let numberString = Math.round(number / 1000000).toString();
-    return numberString + "m";
+    let numberString = Math.round(number / 1000000).toString()
+    return numberString + "m"
   } else {
-    return number;
+    return number
   }
-};
+}
 
 const iconClass = (brightness) => {
   if (brightness >= 4) {
-    return "text-emerald-500";
+    return "text-emerald-500"
   } else if (brightness == 3) {
-    return "text-orange-200";
+    return "text-orange-200"
   } else if (brightness == 2) {
-    return "text-orange-500";
+    return "text-orange-500"
   } else if (brightness == 1) {
-    return "text-orange-400";
+    return "text-orange-400"
   }
-};
+}
 
 const pClass = (brightness) => {
   if (brightness >= 4) {
-    return "text-slate-800";
+    return "text-slate-800"
   } else if (brightness == 3) {
-    return "text-slate-200";
+    return "text-slate-200"
   } else if (brightness == 2) {
-    return "text-slate-300";
+    return "text-slate-300"
   } else if (brightness == 1) {
-    return "text-slate-300";
+    return "text-slate-300"
   }
-};
+}
 </script>
 
 <template>
@@ -101,11 +101,10 @@ const pClass = (brightness) => {
           </div>
 
           <p>
-            I have nearly a decade of practice securing WordPress sites
-            against attacks. Plugging all the potential holes (and there's a
-            lot!) in a WordPress site takes a <em>very</em> long time. Save
-            yourself a headache and let someone else (me, perhaps?) deal with
-            that hassle.
+            I have nearly a decade of practice securing WordPress sites against
+            attacks. Plugging all the potential holes (and there's a lot!) in a
+            WordPress site takes a <em>very</em> long time. Save yourself a
+            headache and let someone else (me, perhaps?) deal with that hassle.
           </p>
         </div>
 

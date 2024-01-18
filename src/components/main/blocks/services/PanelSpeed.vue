@@ -1,112 +1,112 @@
 <script setup>
-import { ref, computed, onMounted, watch } from "vue";
-import { Turtle, Rabbit } from "lucide-vue-next";
-import chroma from "chroma-js";
-import ctaForm from "../ctaForm/ctaForm.vue";
+import { ref, computed, onMounted, watch } from "vue"
+import { Turtle, Rabbit } from "lucide-vue-next"
+import chroma from "chroma-js"
+import ctaForm from "../ctaForm/ctaForm.vue"
 
 const props = defineProps({
   brightness: Number,
-});
+})
 
 const iconClass = (brightness) => {
   if (brightness >= 4) {
-    return "text-emerald-500";
+    return "text-emerald-500"
   } else if (brightness == 3) {
-    return "text-orange-200";
+    return "text-orange-200"
   } else if (brightness == 2) {
-    return "text-orange-500";
+    return "text-orange-500"
   } else if (brightness == 1) {
-    return "text-orange-400";
+    return "text-orange-400"
   }
-};
+}
 
 const chartClass = (brightness) => {
   if (brightness >= 4) {
-    return "text-emerald-500 bg-emerald-950";
+    return "text-emerald-500 bg-emerald-950"
   } else if (brightness == 3) {
-    return "text-orange-200 bg-orange-950";
+    return "text-orange-200 bg-orange-950"
   } else if (brightness == 2) {
-    return "text-orange-500 bg-orange-950";
+    return "text-orange-500 bg-orange-950"
   } else if (brightness == 1) {
-    return "text-orange-400 bg-orange-950";
+    return "text-orange-400 bg-orange-950"
   }
-};
+}
 
 const ringClass = (brightness) => {
   if (brightness >= 4) {
-    return "border-emerald-500";
+    return "border-emerald-500"
   } else if (brightness == 3) {
-    return "border-orange-200";
+    return "border-orange-200"
   } else if (brightness == 2) {
-    return "border-orange-500";
+    return "border-orange-500"
   } else if (brightness == 1) {
-    return "border-orange-400";
+    return "border-orange-400"
   }
-};
+}
 
 const pClass = (brightness) => {
   if (brightness >= 4) {
-    return "text-slate-800";
+    return "text-slate-800"
   } else if (brightness == 3) {
-    return "text-slate-200";
+    return "text-slate-200"
   } else if (brightness == 2) {
-    return "text-slate-300";
+    return "text-slate-300"
   } else if (brightness == 1) {
-    return "text-slate-300";
+    return "text-slate-300"
   }
-};
+}
 
 const strokeColor = computed(() => {
   switch (props.brightness) {
     case 5:
-      return "#10B981";
+      return "#10B981"
     case 4:
-      return "#10B981";
+      return "#10B981"
     case 3:
-      return "#F59E0B";
+      return "#F59E0B"
     case 2:
-      return "#F59E0B";
+      return "#F59E0B"
     case 1:
-      return "#F59E0B";
+      return "#F59E0B"
     default:
-      return "";
+      return ""
   }
-});
+})
 
 const alternateTableRowColors = (brightness) => {
-  let rows = document.querySelectorAll("tr");
+  let rows = document.querySelectorAll("tr")
 
-  let currentBackground;
+  let currentBackground
   if (brightness == 5) {
-    currentBackground = chroma("#e2e8f0");
+    currentBackground = chroma("#e2e8f0")
   } else if (brightness == 4) {
-    currentBackground = chroma("#cbd5e1");
+    currentBackground = chroma("#cbd5e1")
   } else if (brightness == 3) {
-    currentBackground = chroma("#475569");
+    currentBackground = chroma("#475569")
   } else if (brightness == 2) {
-    currentBackground = chroma("#1e293b");
+    currentBackground = chroma("#1e293b")
   } else if (brightness == 1) {
-    currentBackground = chroma("#0f172a");
+    currentBackground = chroma("#0f172a")
   }
   for (let i = 1; i < rows.length; i++) {
     if (i % 2 == 0) {
-      rows[i].style.backgroundColor = currentBackground.brighten(0.0);
+      rows[i].style.backgroundColor = currentBackground.brighten(0.0)
     } else {
-      rows[i].style.backgroundColor = currentBackground.brighten(0.2);
+      rows[i].style.backgroundColor = currentBackground.brighten(0.2)
     }
   }
-};
+}
 
 onMounted(() => {
-  alternateTableRowColors(props.brightness);
-});
+  alternateTableRowColors(props.brightness)
+})
 
 watch(
   () => props.brightness,
   (newValue, oldValue) => {
-    alternateTableRowColors(newValue);
+    alternateTableRowColors(newValue)
   },
-);
+)
 </script>
 
 <template>
@@ -173,8 +173,8 @@ watch(
         <p>
           I can help get those numbers up where they should be- making websites
           faster is a passion of mine. For example, this website you're on is
-          using a whopping <b>315 KB</b>. That's half of the classic SNES
-          game <em>The Legend of Zelda: A Link to The Past</em>, or 4% of the
+          using a whopping <b>315 KB</b>. That's half of the classic SNES game
+          <em>The Legend of Zelda: A Link to The Past</em>, or 4% of the
           bandwidth it takes just to open Instagram.
         </p>
         <p>You want fast? Let's make it happen.</p>
@@ -224,9 +224,9 @@ watch(
             <tr>
               <td>Unused code, plugins, and assets</td>
               <td>
-                Clean up your website significantly without impacting any 
-                functionality. Every website has a ton of garbage- let me
-                take your garbage out!
+                Clean up your website significantly without impacting any
+                functionality. Every website has a ton of garbage- let me take
+                your garbage out!
               </td>
             </tr>
             <tr>
@@ -242,7 +242,8 @@ watch(
                 Inefficient or non-existent caching can massively increase page
                 load times, especially the Time to First Paint metric, which has
                 a huge impact on your SEO. I can set up caching that will have
-                an immediate impact on your search engine rankings and loading speeds. 
+                an immediate impact on your search engine rankings and loading
+                speeds.
               </td>
             </tr>
           </tbody>
@@ -264,15 +265,15 @@ export default {
       radius: 16,
       circumference: 2 * Math.PI * 16,
       percentage: 97,
-    };
+    }
   },
   computed: {
     dashoffset() {
-      let percent = this.percentage / 100;
-      return this.circumference * (1 - percent);
+      let percent = this.percentage / 100
+      return this.circumference * (1 - percent)
     },
   },
-};
+}
 </script>
 
 <style scoped>

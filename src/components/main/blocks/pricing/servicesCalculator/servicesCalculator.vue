@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed, onMounted } from "vue";
+import { ref, computed, onMounted } from "vue"
 import {
   ShieldCheck,
   GaugeCircle,
@@ -7,57 +7,57 @@ import {
   PencilRuler,
   Frame,
   EyeOff,
-} from "lucide-vue-next";
+} from "lucide-vue-next"
 const props = defineProps({
   brightness: Number,
-});
+})
 const iconClass = (brightness) => {
   if (brightness >= 4) {
-    return "text-emerald-500";
+    return "text-emerald-500"
   } else if (brightness == 3) {
-    return "text-orange-200";
+    return "text-orange-200"
   } else if (brightness == 2) {
-    return "text-orange-500";
+    return "text-orange-500"
   } else if (brightness == 1) {
-    return "text-orange-400";
+    return "text-orange-400"
   }
-};
+}
 
 const chartClass = (brightness) => {
   if (brightness >= 4) {
-    return "text-emerald-500 bg-emerald-950";
+    return "text-emerald-500 bg-emerald-950"
   } else if (brightness == 3) {
-    return "text-orange-200 bg-orange-950";
+    return "text-orange-200 bg-orange-950"
   } else if (brightness == 2) {
-    return "text-orange-500 bg-orange-950";
+    return "text-orange-500 bg-orange-950"
   } else if (brightness == 1) {
-    return "text-orange-400 bg-orange-950";
+    return "text-orange-400 bg-orange-950"
   }
-};
+}
 
 const ringClass = (brightness) => {
   if (brightness >= 4) {
-    return "border-emerald-500";
+    return "border-emerald-500"
   } else if (brightness == 3) {
-    return "border-orange-200";
+    return "border-orange-200"
   } else if (brightness == 2) {
-    return "border-orange-500";
+    return "border-orange-500"
   } else if (brightness == 1) {
-    return "border-orange-400";
+    return "border-orange-400"
   }
-};
+}
 
 const pClass = (brightness) => {
   if (brightness >= 4) {
-    return "text-slate-800";
+    return "text-slate-800"
   } else if (brightness == 3) {
-    return "text-slate-200";
+    return "text-slate-200"
   } else if (brightness == 2) {
-    return "text-slate-300";
+    return "text-slate-300"
   } else if (brightness == 1) {
-    return "text-slate-300";
+    return "text-slate-300"
   }
-};
+}
 
 const pricing = ref({
   speed: {
@@ -123,7 +123,7 @@ const pricing = ref({
       enabled: false,
     },
   },
-});
+})
 
 const speedDiscount = computed(() => {
   if (
@@ -132,11 +132,11 @@ const speedDiscount = computed(() => {
     pricing.value.speed.caching.enabled &&
     pricing.value.speed.images.enabled
   ) {
-    return 2 / 3;
+    return 2 / 3
   } else {
-    return 3 / 3;
+    return 3 / 3
   }
-});
+})
 
 const securityDiscount = computed(() => {
   if (
@@ -144,11 +144,11 @@ const securityDiscount = computed(() => {
     pricing.value.security.ddosprotection.enabled &&
     pricing.value.security.protection.enabled
   ) {
-    return 5 / 7;
+    return 5 / 7
   } else {
-    return 3 / 3;
+    return 3 / 3
   }
-});
+})
 
 const accessibilityDiscount = computed(() => {
   if (
@@ -156,15 +156,15 @@ const accessibilityDiscount = computed(() => {
     pricing.value.accessibility.levelA.enabled &&
     pricing.value.accessibility.levelAA.enabled
   ) {
-    return 3 / 4;
+    return 3 / 4
   } else {
-    return 3 / 3;
+    return 3 / 3
   }
-});
+})
 
 const designOverhaulDiscount = computed(() => {
-  return 3 / 3;
-});
+  return 3 / 3
+})
 
 const speedPrice = computed(() => {
   return (
@@ -172,8 +172,8 @@ const speedPrice = computed(() => {
       (total, service) => total + (service.enabled ? service.price : 0),
       0,
     ) * speedDiscount.value
-  );
-});
+  )
+})
 
 const securityPrice = computed(() => {
   return (
@@ -181,8 +181,8 @@ const securityPrice = computed(() => {
       (total, service) => total + (service.enabled ? service.price : 0),
       0,
     ) * securityDiscount.value
-  );
-});
+  )
+})
 
 const accessibilityPrice = computed(() => {
   return (
@@ -190,8 +190,8 @@ const accessibilityPrice = computed(() => {
       (total, service) => total + (service.enabled ? service.price : 0),
       0,
     ) * accessibilityDiscount.value
-  );
-});
+  )
+})
 
 const designOverhaulPrice = computed(() => {
   return (
@@ -199,48 +199,48 @@ const designOverhaulPrice = computed(() => {
       (total, service) => total + (service.enabled ? service.price : 0),
       0,
     ) * designOverhaulDiscount.value
-  );
-});
+  )
+})
 
 const fullSpeedPrice = computed(() => {
-  let price = 0;
+  let price = 0
   for (const [key, value] of Object.entries(pricing.value.speed)) {
     if (value.enabled) {
-      price += value.price;
+      price += value.price
     }
   }
-  return price;
-});
+  return price
+})
 
 const fullSecurityPrice = computed(() => {
-  let price = 0;
+  let price = 0
   for (const [key, value] of Object.entries(pricing.value.security)) {
     if (value.enabled) {
-      price += value.price;
+      price += value.price
     }
   }
-  return price;
-});
+  return price
+})
 
 const fullAccessibilityPrice = computed(() => {
-  let price = 0;
+  let price = 0
   for (const [key, value] of Object.entries(pricing.value.accessibility)) {
     if (value.enabled) {
-      price += value.price;
+      price += value.price
     }
   }
-  return price;
-});
+  return price
+})
 
 const fullDesignOverhaulPrice = computed(() => {
-  let price = 0;
+  let price = 0
   for (const [key, value] of Object.entries(pricing.value.designOverhaul)) {
     if (value.enabled) {
-      price += value.price;
+      price += value.price
     }
   }
-  return price;
-});
+  return price
+})
 
 const toggleAllSpeed = () => {
   if (
@@ -249,17 +249,17 @@ const toggleAllSpeed = () => {
     pricing.value.speed.caching.enabled &&
     pricing.value.speed.images.enabled
   ) {
-    pricing.value.speed.audit.enabled = false;
-    pricing.value.speed.optimize.enabled = false;
-    pricing.value.speed.caching.enabled = false;
-    pricing.value.speed.images.enabled = false;
+    pricing.value.speed.audit.enabled = false
+    pricing.value.speed.optimize.enabled = false
+    pricing.value.speed.caching.enabled = false
+    pricing.value.speed.images.enabled = false
   } else {
-    pricing.value.speed.audit.enabled = true;
-    pricing.value.speed.optimize.enabled = true;
-    pricing.value.speed.caching.enabled = true;
-    pricing.value.speed.images.enabled = true;
+    pricing.value.speed.audit.enabled = true
+    pricing.value.speed.optimize.enabled = true
+    pricing.value.speed.caching.enabled = true
+    pricing.value.speed.images.enabled = true
   }
-};
+}
 
 const toggleAllSecurity = () => {
   if (
@@ -267,15 +267,15 @@ const toggleAllSecurity = () => {
     pricing.value.security.ddosprotection.enabled &&
     pricing.value.security.protection.enabled
   ) {
-    pricing.value.security.audit.enabled = false;
-    pricing.value.security.ddosprotection.enabled = false;
-    pricing.value.security.protection.enabled = false;
+    pricing.value.security.audit.enabled = false
+    pricing.value.security.ddosprotection.enabled = false
+    pricing.value.security.protection.enabled = false
   } else {
-    pricing.value.security.audit.enabled = true;
-    pricing.value.security.ddosprotection.enabled = true;
-    pricing.value.security.protection.enabled = true;
+    pricing.value.security.audit.enabled = true
+    pricing.value.security.ddosprotection.enabled = true
+    pricing.value.security.protection.enabled = true
   }
-};
+}
 
 const toggleAllAccessibility = () => {
   if (
@@ -283,39 +283,39 @@ const toggleAllAccessibility = () => {
     pricing.value.accessibility.levelA.enabled &&
     pricing.value.accessibility.levelAA.enabled
   ) {
-    pricing.value.accessibility.audit.enabled = false;
-    pricing.value.accessibility.levelA.enabled = false;
-    pricing.value.accessibility.levelAA.enabled = false;
+    pricing.value.accessibility.audit.enabled = false
+    pricing.value.accessibility.levelA.enabled = false
+    pricing.value.accessibility.levelAA.enabled = false
   } else {
-    pricing.value.accessibility.audit.enabled = true;
-    pricing.value.accessibility.levelA.enabled = true;
-    pricing.value.accessibility.levelAA.enabled = true;
+    pricing.value.accessibility.audit.enabled = true
+    pricing.value.accessibility.levelA.enabled = true
+    pricing.value.accessibility.levelAA.enabled = true
   }
-};
+}
 
 const toggleAllDesignOverhaul = () => {
   if (pricing.value.designOverhaul.designOverhaul.enabled) {
-    pricing.value.designOverhaul.designOverhaul.enabled = false;
+    pricing.value.designOverhaul.designOverhaul.enabled = false
   } else {
-    pricing.value.designOverhaul.designOverhaul.enabled = true;
+    pricing.value.designOverhaul.designOverhaul.enabled = true
   }
-};
+}
 
 const toggleAll = (block) => {
   if (block.title == "Speed") {
-    toggleAllSpeed();
+    toggleAllSpeed()
   } else if (block.title == "Security") {
-    toggleAllSecurity();
+    toggleAllSecurity()
   } else if (block.title == "Accessibility") {
-    toggleAllAccessibility();
+    toggleAllAccessibility()
   } else if (block.title == "Design Overhaul") {
-    toggleAllDesignOverhaul();
+    toggleAllDesignOverhaul()
   }
-};
+}
 
 const blockEnabled = (block) => {
-  return Object.values(block.services).some((service) => service.enabled);
-};
+  return Object.values(block.services).some((service) => service.enabled)
+}
 
 const blocks = ref([
   {
@@ -342,31 +342,31 @@ const blocks = ref([
     enabled: false,
     discount: designOverhaulDiscount.value,
   },
-]);
+])
 
 const getBlockPrice = (block) => {
   if (block.title === "Speed") {
-    return speedPrice.value;
+    return speedPrice.value
   } else if (block.title === "Security") {
-    return securityPrice.value;
+    return securityPrice.value
   } else if (block.title === "Accessibility") {
-    return accessibilityPrice.value;
+    return accessibilityPrice.value
   } else if (block.title === "Design Overhaul") {
-    return designOverhaulPrice.value;
+    return designOverhaulPrice.value
   }
-};
+}
 
 const getBlockFullPrice = (block) => {
   if (block.title === "Speed") {
-    return fullSpeedPrice.value;
+    return fullSpeedPrice.value
   } else if (block.title === "Security") {
-    return fullSecurityPrice.value;
+    return fullSecurityPrice.value
   } else if (block.title === "Accessibility") {
-    return fullAccessibilityPrice.value;
+    return fullAccessibilityPrice.value
   } else if (block.title === "Design Overhaul") {
-    return fullDesignOverhaulPrice.value;
+    return fullDesignOverhaulPrice.value
   }
-};
+}
 
 const total = computed(() => {
   return (
@@ -374,33 +374,33 @@ const total = computed(() => {
     getBlockPrice(blocks.value[1]) +
     getBlockPrice(blocks.value[2]) +
     getBlockPrice(blocks.value[3])
-  );
-});
+  )
+})
 
 const selectedServicesList = computed(() => {
-  let list = [];
+  let list = []
   for (const [key, value] of Object.entries(pricing.value.speed)) {
     if (value.enabled) {
-      list.push(value.title);
+      list.push(value.title)
     }
   }
   for (const [key, value] of Object.entries(pricing.value.security)) {
     if (value.enabled) {
-      list.push(value.title);
+      list.push(value.title)
     }
   }
   for (const [key, value] of Object.entries(pricing.value.accessibility)) {
     if (value.enabled) {
-      list.push(value.title);
+      list.push(value.title)
     }
   }
   for (const [key, value] of Object.entries(pricing.value.designOverhaul)) {
     if (value.enabled) {
-      list.push(value.title);
+      list.push(value.title)
     }
   }
-  return list;
-});
+  return list
+})
 </script>
 
 <template>
@@ -414,8 +414,13 @@ const selectedServicesList = computed(() => {
       </h2>
       <p class="text-center" :class="pClass(props.brightness)">
         Faster, simpler, and cheaper than an agency. No need to spend hours on
-        the phone haggling. Pick what you want, I make it happen. That's it!<br/><br/>
-        These services are for your existing website- if you're looking for a new site, <a href = "/contact" class = "font-bold" :class = "iconClass(brightness)">contact me </a> for a custom quote.
+        the phone haggling. Pick what you want, I make it happen. That's it!<br /><br />
+        These services are for your existing website- if you're looking for a
+        new site,
+        <a href="/contact" class="font-bold" :class="iconClass(brightness)"
+          >contact me
+        </a>
+        for a custom quote.
       </p>
     </div>
 
@@ -424,14 +429,14 @@ const selectedServicesList = computed(() => {
       :key="index"
       class="md:wd-8/12 sm:wd-11/12 rounded bg-slate-100 p-5 border-4 flex-col mb-4"
       :class="
-        {
+        ({
           'bg-slate-100': brightness == 5,
           'bg-slate-400': brightness == 4,
           'bg-slate-500': brightness == 3,
           'bg-slate-700': brightness == 2,
           'bg-slate-800': brightness == 1,
         },
-        ringClass(brightness)
+        ringClass(brightness))
       "
     >
       <div class="flex">
@@ -486,8 +491,10 @@ const selectedServicesList = computed(() => {
               :class="iconClass(brightness)"
             />
             <p class="" :class="pClass(props.brightness)">
-              <b v-if = "service.title == 'Detailed speed audit (100% free)'"><em>{{ service.title }}</em></b>
-                <span v-else>{{ service.title }}</span>
+              <b v-if="service.title == 'Detailed speed audit (100% free)'"
+                ><em>{{ service.title }}</em></b
+              >
+              <span v-else>{{ service.title }}</span>
             </p>
           </div>
           <div class="">
@@ -574,15 +581,22 @@ const selectedServicesList = computed(() => {
       </button>
     </form>
     <p class="text-center mt-4" :class="pClass(props.brightness)">
-      I'll get back to you within 48 hours. This form is not a contract, please note that work can't begin until we've connected and signed a contract.<br/><br/>These are one-time services; for ongoing maintenance, please <a href = "/contact" class = "font-bold" :class = "iconClass(brightness)">shoot me a message</a> and we can get that figured out.<br/><br/>I look forward to working with you!
+      I'll get back to you within 48 hours. This form is not a contract, please
+      note that work can't begin until we've connected and signed a contract.<br /><br />These
+      are one-time services; for ongoing maintenance, please
+      <a href="/contact" class="font-bold" :class="iconClass(brightness)"
+        >shoot me a message</a
+      >
+      and we can get that figured out.<br /><br />I look forward to working with
+      you!
     </p>
   </div>
 </template>
 
 <style scoped>
-.prose{
-    max-width:100%!important;
-    padding-left:2rem;
-    padding-right:2rem;
+.prose {
+  max-width: 100% !important;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 </style>

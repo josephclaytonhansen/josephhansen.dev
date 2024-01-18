@@ -1,38 +1,38 @@
 <script setup>
-import { ref, computed, onMounted, onUnmounted } from "vue";
+import { ref, computed, onMounted, onUnmounted } from "vue"
 const props = defineProps({
   brightness: Number,
-});
+})
 
-const isRevealed = ref(false);
+const isRevealed = ref(false)
 
 onMounted(() => {
   const checkScroll = () => {
-    isRevealed.value = window.scrollY > 200;
+    isRevealed.value = window.scrollY > 200
     let url = window.location.href
     if (url.includes("pricing")) {
-      isRevealed.value = false;
+      isRevealed.value = false
     }
-  };
+  }
 
-  window.addEventListener("scroll", checkScroll);
+  window.addEventListener("scroll", checkScroll)
 
   onUnmounted(() => {
-    window.removeEventListener("scroll", checkScroll);
-  });
-});
+    window.removeEventListener("scroll", checkScroll)
+  })
+})
 
 const pClass = (brightness) => {
   if (brightness >= 4) {
-    return "text-slate-800";
+    return "text-slate-800"
   } else if (brightness == 3) {
-    return "text-slate-200";
+    return "text-slate-200"
   } else if (brightness == 2) {
-    return "text-slate-300";
+    return "text-slate-300"
   } else if (brightness == 1) {
-    return "text-slate-300";
+    return "text-slate-300"
   }
-};
+}
 </script>
 
 <template>
@@ -53,16 +53,18 @@ const pClass = (brightness) => {
       Get a free site speed audit with recommendations for optimizing. My gift
       to you.
     </p>
-    <a href = "/pricing"><button
-      class="rounded px-5 py-2 text-white font-semibold"
-      :class="{
-        'bg-emerald-600': brightness >= 4,
-        'bg-orange-700': brightness == 3,
-        'bg-orange-600': brightness == 2,
-        'bg-orange-500': brightness == 1,
-      }"
+    <a href="/pricing"
+      ><button
+        class="rounded px-5 py-2 text-white font-semibold"
+        :class="{
+          'bg-emerald-600': brightness >= 4,
+          'bg-orange-700': brightness == 3,
+          'bg-orange-600': brightness == 2,
+          'bg-orange-500': brightness == 1,
+        }"
+      >
+        Get a Free Audit
+      </button></a
     >
-      Get a Free Audit
-    </button></a>
   </div>
 </template>
