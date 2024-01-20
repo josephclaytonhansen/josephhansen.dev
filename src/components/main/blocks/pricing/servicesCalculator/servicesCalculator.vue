@@ -523,7 +523,7 @@
         </h3>
       </div>
     </div>
-    <form class="gap-4 mt-4">
+    <form class="gap-4 mt-4" name="pricing">
       <input type="hidden" name="services" :value="selectedServicesList" />
       <input type="hidden" name="total" :value="total" />
       <div class="flex gap-4">
