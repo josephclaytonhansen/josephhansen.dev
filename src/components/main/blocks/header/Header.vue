@@ -1,10 +1,8 @@
 <script setup>
   import { Popover, PopoverButton, PopoverPanel } from "@headlessui/vue"
   import {
-    GalleryThumbnails,
+    Menu,
     ChevronDown,
-    ChevronUp,
-    Library,
     Search,
     Sun,
     Moon,
@@ -12,6 +10,7 @@
     Terminal,
     CloudSun,
     MoonStar,
+    X
   } from "lucide-vue-next"
   import { ref, onMounted } from "vue"
 
@@ -34,6 +33,15 @@
   const goHome = () => {
     window.location.href = "/"
   }
+
+  const toggleMobileMenu = () => {
+    let mobileMenu = document.getElementById("mobileMenu")
+    if (mobileMenu.classList.contains("hidden")) {
+      mobileMenu.classList.remove("hidden")
+    } else {
+      mobileMenu.classList.add("hidden")
+    }
+  }
 </script>
 
 <template>
@@ -41,7 +49,7 @@
     <div class="w-1/12"></div>
 
     <div
-      class="grow rounded flex justify-between p-3"
+      class="grow rounded lg:flex justify-between p-3 hidden"
       :class="{
         'bg-slate-200': brightness == 5,
         'bg-slate-300': brightness == 4,
@@ -222,7 +230,7 @@
 
     <div
       id="headerRightColumn"
-      class="rounded relative px-3 pt-3"
+      class="rounded relative lg:px-3 lg:pt-3 flex items-center"
       :class="{
         'bg-slate-200': brightness == 5,
         'bg-slate-300': brightness == 4,
@@ -230,6 +238,42 @@
         'bg-slate-800': brightness == 2,
         'bg-slate-900': brightness == 1,
       }">
+      <div class = 'lg:hidden flex'>
+        <div class="flex gap-1 p-2">
+          <Terminal
+            :class="{
+              'text-emerald-500': brightness >= 4,
+              'text-orange-200': brightness == 3,
+              'text-orange-500': brightness == 2,
+              'text-orange-400': brightness == 1,
+            }"
+            stroke-width="3" />
+
+          <p
+            :class="{
+              'text-emerald-500 hover:text-emerald-400': brightness >= 4,
+              'text-orange-200 hover:text-orange-100': brightness == 3,
+              'text-orange-500 hover:text-orange-400': brightness == 2,
+              'text-orange-400 hover:text-orange-300': brightness == 1,
+            }"
+            class="font-monospace font-bold cursor-pointer"
+            @click="goHome"
+            id="logoText">
+            josephhansen.dev
+          </p>
+        </div>
+      </div>
+
+        <Menu class = "block lg:hidden"
+          :class="{
+            'text-slate-900': brightness == 5,
+            'text-slate-800': brightness == 4,
+            'text-slate-300': brightness == 3,
+            'text-slate-200': brightness == 2,
+            'text-slate-400': brightness == 1,
+          }"
+          stroke-width="2" @click="toggleMobileMenu()" />
+
       <Popover>
         <PopoverButton
           class="rounded mt-2 px-2"
@@ -264,6 +308,68 @@
     </div>
     <div class="w-1/12"></div>
   </div>
+
+  <div id = "mobileMenu" class = "w-full fixed h-full p-4 top-0 z-50 overflow-hidden hidden" :class="{
+            'bg-slate-200': brightness == 5,
+            'bg-slate-300': brightness == 4,
+            'bg-slate-600': brightness == 3,
+            'bg-slate-800': brightness == 2,
+            'bg-slate-900': brightness == 1,
+          }">
+      <div class = "flex justify-between items-center">
+        <div class="flex gap-1 p-2">
+          <Terminal
+            :class="{
+              'text-emerald-500': brightness >= 4,
+              'text-orange-200': brightness == 3,
+              'text-orange-500': brightness == 2,
+              'text-orange-400': brightness == 1,
+            }"
+            stroke-width="3" />
+
+          <p
+            :class="{
+              'text-emerald-500 hover:text-emerald-400': brightness >= 4,
+              'text-orange-200 hover:text-orange-100': brightness == 3,
+              'text-orange-500 hover:text-orange-400': brightness == 2,
+              'text-orange-400 hover:text-orange-300': brightness == 1,
+            }"
+            class="font-monospace font-bold cursor-pointer"
+            @click="goHome"
+            id="logoText">
+            josephhansen.dev
+          </p>
+        </div>
+        <X :class="{
+              'text-emerald-500 hover:text-emerald-400': brightness >= 4,
+              'text-orange-200 hover:text-orange-100': brightness == 3,
+              'text-orange-500 hover:text-orange-400': brightness == 2,
+              'text-orange-400 hover:text-orange-300': brightness == 1,
+            }" @click="toggleMobileMenu()" />
+      </div>
+          <ul class = "mt-4" :class="{
+              'text-slate-900': brightness == 5,
+              'text-slate-800': brightness == 4,
+              'text-slate-300': brightness == 3,
+              'text-slate-200': brightness == 2,
+              'text-slate-400': brightness == 1,
+            }">
+            <li class="py-2 px-3 rounded ">Contact</li>
+            <li class="py-2 px-3 rounded ">Web Portfolio</li>
+            <li class="py-2 px-3 rounded ">Web Services</li>
+            <li class="py-2 px-3 rounded ">Creative Projects</li>
+              <ul class = "ml-3">
+                <li class="py-2 px-3 rounded ">Art and Animation</li>
+                <li class="py-2 px-3 rounded ">Blog / Non-Fiction Writings</li>
+                <li class="py-2 px-3 rounded ">Custom Software</li>
+                <li class="py-2 px-3 rounded ">Cooking and Recipes</li>
+              </ul>
+
+            <li class="py-2 px-3 rounded ">About Me</li>
+
+          </ul>
+  </div>
+
 </template>
 
 <style scoped>
