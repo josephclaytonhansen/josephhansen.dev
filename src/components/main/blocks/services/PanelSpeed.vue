@@ -1,5 +1,5 @@
 <script setup>
-  import { ref, computed, onMounted, watch } from "vue"
+  import { computed, onMounted, watch } from "vue"
   import { Turtle, Rabbit } from "lucide-vue-next"
   import chroma from "chroma-js"
   import ctaForm from "../ctaForm/ctaForm.vue"

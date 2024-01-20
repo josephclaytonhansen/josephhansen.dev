@@ -4,11 +4,6 @@
   })
   import {
     ref,
-    computed,
-    onMounted,
-    onBeforeUpdate,
-    watch,
-    onUnmounted,
   } from "vue"
   import { TabGroup, TabList, Tab, TabPanels, TabPanel } from "@headlessui/vue"
   import {

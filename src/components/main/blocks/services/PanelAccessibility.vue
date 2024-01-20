@@ -5,7 +5,7 @@
   })
   import ctaForm from "../ctaForm/ctaForm.vue"
   import chroma from "chroma-js"
-  import { EyeOff, EarOff, Accessibility, Eye, Check, X } from "lucide-vue-next"
+  import { EyeOff, Eye, Check, X } from "lucide-vue-next"
 
   const iconClass = (brightness) => {
     if (brightness >= 4) {

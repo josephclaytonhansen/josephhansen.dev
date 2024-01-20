@@ -1,7 +1,6 @@
 <script setup>
-  import { ref, computed, onMounted } from "vue"
-  import bazaarLogo from "@/assets/main/bazaar-600px.webp"
-  import { ShieldCheck, Send } from "lucide-vue-next"
+  import { ref, computed } from "vue"
+  import { ShieldCheck } from "lucide-vue-next"
   import ctaForm from "../ctaForm/ctaForm.vue"
 
   const props = defineProps({
