@@ -2,9 +2,7 @@
   const props = defineProps({
     brightness: Number,
   })
-  import {
-    ref,
-  } from "vue"
+  import { ref } from "vue"
   import { TabGroup, TabList, Tab, TabPanels, TabPanel } from "@headlessui/vue"
   import {
     ShieldCheck,

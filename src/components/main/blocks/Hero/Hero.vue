@@ -1,11 +1,5 @@
 <script setup>
-  import {
-    ref,
-    computed,
-    onMounted,
-    onBeforeUpdate,
-    onUnmounted,
-  } from "vue"
+  import { ref, computed, onMounted, onBeforeUpdate, onUnmounted } from "vue"
 
   const props = defineProps({
     brightness: Number,
@@ -79,7 +73,7 @@
 <template>
   <div class="flex justify-center py-5 flex-col">
     <h1
-      class="text-4xl font-semibold font-serif relative align-top text-center py-5"
+      class="text-4xl font-semibold font-sans relative align-top text-center py-5"
       :class="{
         'text-slate-900': brightness == 5,
         'text-slate-800': brightness == 4,

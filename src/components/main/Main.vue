@@ -46,88 +46,94 @@
 
     if (props.component == "pricing") {
       meta.title = "josephhansen.dev | | web developer/designer | pricing"
-      meta.meta[1].content = "josephhansen.dev | | web developer/designer | pricing"
-      meta.meta[6].content = "josephhansen.dev | | web developer/designer | pricing"
+      meta.meta[1].content =
+        "josephhansen.dev | | web developer/designer | pricing"
+      meta.meta[6].content =
+        "josephhansen.dev | | web developer/designer | pricing"
       meta.meta[4].content = "https://josephhansen.dev/pricing"
       meta.meta[9].content = "https://josephhansen.dev/pricing"
     }
   })
 
-
   const meta = reactive({
-    title: 'josephhansen.dev | web developer/designer',
+    title: "josephhansen.dev | web developer/designer",
     meta: [
-        {
-            name: 'description',
-            content: 'Better, cheaper, and faster than an agency. Let me help you make your website incredible. | Expert in WordPress, Shopify, Vue, React, and more | Website speedups, optimizations, web security, web accessibility, design, custom web development'
-        },
-        {
-            property: 'og:title',
-            content: 'josephhansen.dev | web developer/designer'
-        },
-        {
-            property: 'og:description',
-            content: 'Better, cheaper, and faster than an agency. Let me help you make your website incredible. | Expert in WordPress, Shopify, Vue, React, and more | Website speedups, optimizations, web security, web accessibility, design, custom web development'
-        },
-        {
-            property: 'og:image',
-            content: ''
-        },
-        {
-            property: 'og:url',
-            content: 'https://josephhansen.dev'
-        },
-        {
-            property: 'og:type',
-            content: 'website'
-        },
-        {
-            property: 'twitter:title',
-            content: 'josephhansen.dev | web developer/designer'
-        },
-        {
-            property: 'twitter:description',
-            content: 'Better, cheaper, and faster than an agency. Let me help you make your website incredible. | Expert in WordPress, Shopify, Vue, React, and more | Website speedups, optimizations, web security, web accessibility, design, custom web development'
-        },
-        {
-            property: 'twitter:image',
-            content: ''
-        },
-        {
-            property: 'twitter:url',
-            content: 'https://josephhansen.dev'
-        },
-        {
-            property: 'twitter:card',
-            content: 'summary_large_image'
-        },
-        {
-            name: 'keywords',
-            content: 'web development, custom website, website creation, website design, website creation oklahoma, web development oklahoma, web development oklahoma city, web design oklahoma, vue developer, react developer, wordpress developer, shopify developer, web security, web security audit, site security audity, seo optimization, seo optimization oklahoma, web speed audit'
-        }
-    ]
-
-})
-
-watchEffect(() => {
-  document.title = meta.title
-  meta.meta.forEach(m => {
-    let metaEl = document.querySelector(`meta[name="${m.name}"], meta[property="${m.property}"]`)
-    if (metaEl) {
-      metaEl.setAttribute('content', m.content)
-    } else {
-      metaEl = document.createElement('meta')
-      if (m.name) {
-        metaEl.setAttribute('name', m.name)
-      }
-      if (m.property) {
-        metaEl.setAttribute('property', m.property)
-      }
-      metaEl.setAttribute('content', m.content)
-      document.getElementsByTagName('head')[0].appendChild(metaEl)
-    }
+      {
+        name: "description",
+        content:
+          "Better, cheaper, and faster than an agency. Let me help you make your website incredible. | Expert in WordPress, Shopify, Vue, React, and more | Website speedups, optimizations, web security, web accessibility, design, custom web development",
+      },
+      {
+        property: "og:title",
+        content: "josephhansen.dev | web developer/designer",
+      },
+      {
+        property: "og:description",
+        content:
+          "Better, cheaper, and faster than an agency. Let me help you make your website incredible. | Expert in WordPress, Shopify, Vue, React, and more | Website speedups, optimizations, web security, web accessibility, design, custom web development",
+      },
+      {
+        property: "og:image",
+        content: "",
+      },
+      {
+        property: "og:url",
+        content: "https://josephhansen.dev",
+      },
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "twitter:title",
+        content: "josephhansen.dev | web developer/designer",
+      },
+      {
+        property: "twitter:description",
+        content:
+          "Better, cheaper, and faster than an agency. Let me help you make your website incredible. | Expert in WordPress, Shopify, Vue, React, and more | Website speedups, optimizations, web security, web accessibility, design, custom web development",
+      },
+      {
+        property: "twitter:image",
+        content: "",
+      },
+      {
+        property: "twitter:url",
+        content: "https://josephhansen.dev",
+      },
+      {
+        property: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "keywords",
+        content:
+          "web development, custom website, website creation, website design, website creation oklahoma, web development oklahoma, web development oklahoma city, web design oklahoma, vue developer, react developer, wordpress developer, shopify developer, web security, web security audit, site security audity, seo optimization, seo optimization oklahoma, web speed audit",
+      },
+    ],
   })
-})
+
+  watchEffect(() => {
+    document.title = meta.title
+    meta.meta.forEach((m) => {
+      let metaEl = document.querySelector(
+        `meta[name="${m.name}"], meta[property="${m.property}"]`,
+      )
+      if (metaEl) {
+        metaEl.setAttribute("content", m.content)
+      } else {
+        metaEl = document.createElement("meta")
+        if (m.name) {
+          metaEl.setAttribute("name", m.name)
+        }
+        if (m.property) {
+          metaEl.setAttribute("property", m.property)
+        }
+        metaEl.setAttribute("content", m.content)
+        document.getElementsByTagName("head")[0].appendChild(metaEl)
+      }
+    })
+  })
 </script>
 
 <template>
