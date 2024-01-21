@@ -71,6 +71,18 @@
     }
   }
 
+  const inputClass = (brightness) => {
+    if (brightness >= 4) {
+      return "text-emerald-500"
+    } else if (brightness == 3) {
+      return "text-slate-800"
+    } else if (brightness == 2) {
+      return "text-orange-500"
+    } else if (brightness == 1) {
+      return "text-orange-400"
+    }
+  }
+
   const chartClass = (brightness) => {
     if (brightness >= 4) {
       return "text-emerald-500 bg-emerald-950"
@@ -581,13 +593,13 @@
           required
           placeholder="Email"
           class="rounded p-5 w-full bg-gray-200 border-transparent focus:border-transparent focus:bg-gray-200 size-5 focus:ring-1 focus:ring-offset-2 focus:ring-gray-500 mb-4"
-          :class="iconClass(brightness)" />
+          :class="inputClass(brightness)" />
         <input
           type="text"
           name="name"
           placeholder="Name"
           class="rounded p-5 w-full bg-gray-200 border-transparent focus:border-transparent focus:bg-gray-200 size-5 focus:ring-1 focus:ring-offset-2 focus:ring-gray-500 mb-4"
-          :class="iconClass(brightness)" />
+          :class="inputClass(brightness)" />
       </div>
       <div class="flex gap-4" id = "rightInputs">
         <input
@@ -596,12 +608,12 @@
           required
           placeholder="Website"
           class="rounded p-5 w-full bg-gray-200 border-transparent focus:border-transparent focus:bg-gray-200 size-5 focus:ring-1 focus:ring-offset-2 focus:ring-gray-500 mb-4"
-          :class="iconClass(brightness)" />
+          :class="inputClass(brightness)" />
         <textarea
           name="notes"
           placeholder="Notes"
           class="rounded p-5 w-full h-24 bg-gray-200 border-transparent focus:border-transparent focus:bg-gray-200 size-5 focus:ring-1 focus:ring-offset-2 focus:ring-gray-500 mb-4"
-          :class="iconClass(brightness)" />
+          :class="inputClass(brightness)" />
       </div>
       <button
         id = "submitButton"
