@@ -13,7 +13,7 @@
     let total = document.getElementsByName("total")[0].value
 
     let xhr = new XMLHttpRequest()
-    xhr.open("POST", 'localhost:3000/api/forms/submit', true)
+    xhr.open("POST", 'https://localhost:3000/api/forms/submit', true)
     xhr.setRequestHeader("Content-Type", "application/json")
     xhr.send(
       JSON.stringify({
@@ -28,6 +28,7 @@
     )
 
     xhr.onloadend = function () {
+      console.log(`Status: ${xhr.status}, Response: ${xhr.responseText}`);
       if (xhr.status == 200) {
 
         let formObj = document.getElementsByName(form)[0]
