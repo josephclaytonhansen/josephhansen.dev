@@ -5,10 +5,12 @@
   const submitForm = async (e) => {
     e.preventDefault()
     const form = "pricing"
-    const name = form.name.value
-    const email = form.email.value
-    const website = form.website.value
-    const notes = form.notes.value
+    let name = document.getElementsByName("name")[0].value
+    let email = document.getElementsByName("email")[0].value
+    let website = document.getElementsByName("website")[0].value
+    let notes = document.getElementsByName("notes")[0].value
+    let services = document.getElementsByName("services")[0].value
+    let total = document.getElementsByName("total")[0].value
 
     let xhr = new XMLHttpRequest()
     xhr.open("POST", 'localhost:3000/api/forms/submit', true)
@@ -19,7 +21,9 @@
         name,
         email,
         website,
-        notes
+        notes,
+        services,
+        total
       }),
     )
 
