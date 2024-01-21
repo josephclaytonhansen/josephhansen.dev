@@ -602,6 +602,7 @@
         id = "submitButton"
         type="submit"
         class="rounded px-5 py-2 text-white font-semibold mt-4 w-full"
+        @click="submitForm"
         :class="{
           'bg-emerald-600': brightness >= 4,
           'bg-orange-700': brightness == 3,
