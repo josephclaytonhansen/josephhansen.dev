@@ -13,7 +13,7 @@
     let total = document.getElementsByName("total")[0].value
 
     let xhr = new XMLHttpRequest()
-    xhr.open("POST", 'https://localhost:3000/api/forms/submit', true)
+    xhr.open("POST", 'https://images.josephhansen.dev/api/forms/submit', true)
     xhr.setRequestHeader("Content-Type", "application/json")
     xhr.send(
       JSON.stringify({
