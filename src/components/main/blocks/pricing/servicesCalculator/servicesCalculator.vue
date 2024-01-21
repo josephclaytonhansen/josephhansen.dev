@@ -33,7 +33,7 @@
 
         let formObj = document.getElementsByName(form)[0]
         let success = document.createElement("div")
-        success.addClass("text-center flex justify-center items-center w-100")
+        success.classList.add("text-center flex justify-center items-center w-100")
         success.innerHTML = "Thanks for your interest! Your submission has been processed."
         formObj.appendChild(success)
 

@@ -278,7 +278,7 @@
 
       <Popover>
         <PopoverButton
-          class="rounded mt-2 px-2"
+          class="rounded mt-2 lg:mt-0 px-2"
           :class="{
             'bg-slate-200': brightness == 5,
             'bg-slate-300': brightness == 4,
