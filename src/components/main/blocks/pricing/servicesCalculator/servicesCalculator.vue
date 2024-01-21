@@ -1,13 +1,56 @@
 <script setup>
   import { ref, computed, onMounted } from "vue"
-  import {
-    ShieldCheck,
-    GaugeCircle,
-    ShowerHead,
-    PencilRuler,
-    Frame,
-    EyeOff,
-  } from "lucide-vue-next"
+ 
+
+  const submitForm = async (e) => {
+    e.preventDefault()
+    const form = "pricing"
+    const name = form.name.value
+    const email = form.email.value
+    const website = form.website.value
+    const notes = form.notes.value
+
+    let xhr = new XMLHttpRequest()
+    xhr.open("POST", 'localhost:3000/api/forms/submit', true)
+    xhr.setRequestHeader("Content-Type", "application/json")
+    xhr.send(
+      JSON.stringify({
+        form,
+        name,
+        email,
+        website,
+        notes
+      }),
+    )
+
+    xhr.onloadend = function () {
+      if (xhr.status == 200) {
+
+        let formObj = document.getElementsByName(form)[0]
+        let success = document.createElement("div")
+        success.addClass("text-center flex justify-center items-center w-100")
+        success.innerHTML = "Thanks for your interest! Your submission has been processed."
+        formObj.appendChild(success)
+
+        let leftInputs = document.getElementById("leftInputs")
+        let rightInputs = document.getElementById("rightInputs")
+
+        leftInputs.style.display = "none"
+        rightInputs.style.display = "none"
+
+        let button = document.getElementById("submitButton")
+        button.disabled = true
+
+
+      } else {
+        alert("Something went wrong. Please try again.")
+      }
+    }
+
+
+
+  }
+
   const props = defineProps({
     brightness: Number,
   })
@@ -526,7 +569,7 @@
     <form class="gap-4 mt-4" name="pricing">
       <input type="hidden" name="services" :value="selectedServicesList" />
       <input type="hidden" name="total" :value="total" />
-      <div class="flex gap-4">
+      <div class="flex gap-4" id = "leftInputs">
         <input
           type="email"
           name="email"
@@ -541,7 +584,7 @@
           class="rounded p-5 w-full bg-gray-200 border-transparent focus:border-transparent focus:bg-gray-200 size-5 focus:ring-1 focus:ring-offset-2 focus:ring-gray-500 mb-4"
           :class="iconClass(brightness)" />
       </div>
-      <div class="flex gap-4">
+      <div class="flex gap-4" id = "rightInputs">
         <input
           type="text"
           name="website"
@@ -556,6 +599,7 @@
           :class="iconClass(brightness)" />
       </div>
       <button
+        id = "submitButton"
         type="submit"
         class="rounded px-5 py-2 text-white font-semibold mt-4 w-full"
         :class="{
