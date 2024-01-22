@@ -1889,11 +1889,10 @@ a {
   padding-right: 2rem;
 }
 @media (max-width: 768px) {
-  .w-dvw[data-v-2638699d] {
-    margin: auto;
-    width: 96vw;
-  }
-  main[data-v-2638699d] {
+  main[data-v-055a5bd6] {
     padding-bottom: 15vh;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    width: 94vw;
   }
 }

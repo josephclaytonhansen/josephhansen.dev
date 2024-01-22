@@ -11869,7 +11869,7 @@ const Xe = Op(Ip),
       )
     },
   },
-  ii = Tr(Sm, [["__scopeId", "data-v-2638699d"]])
+  ii = Tr(Sm, [["__scopeId", "data-v-055a5bd6"]])
 /*!
  * vue-router v4.2.5
  * (c) 2023 Eduardo San Martin Morote
