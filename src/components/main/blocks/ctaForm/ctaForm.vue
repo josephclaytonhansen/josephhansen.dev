@@ -109,16 +109,19 @@
       <form id = "cta">
         <input
           type="text"
+          name="name"
           placeholder="Name"
           class="rounded p-2 w-full"
           :class="inputClass" />
         <input
           type="email"
+          name="email"
           placeholder="Email"
           class="rounded p-2 w-full mt-3"
           :class="inputClass" />
         <textarea
           placeholder="Message"
+          name="message"
           class="rounded p-2 w-full mt-3"
           :class="inputClass"></textarea>
         <button
