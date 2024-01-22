@@ -109,6 +109,7 @@
 
           <Popover class="relative inline-block text-left">
             <PopoverButton
+              aria-label="Creative projects dropdown menu"
               class="font-semibold flex hover:outline-none focus:outline-none"
               :class="{
                 'text-slate-900': brightness == 5,
@@ -278,6 +279,7 @@
 
       <Popover>
         <PopoverButton
+          aria-label="Toggle brightness dropdown menu"
           class="rounded mt-2 lg:mt-0 px-2"
           :class="{
             'bg-slate-200': brightness == 5,
@@ -352,7 +354,8 @@
           'text-orange-500 hover:text-orange-400': brightness == 2,
           'text-orange-400 hover:text-orange-300': brightness == 1,
         }"
-        @click="toggleMobileMenu()" />
+        @click="toggleMobileMenu()"
+        aria-label="Close mobile menu" />
     </div>
     <ul
       class="mt-4"

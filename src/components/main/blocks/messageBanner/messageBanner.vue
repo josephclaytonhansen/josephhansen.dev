@@ -54,6 +54,7 @@
     </p>
     <a href="/pricing"
       ><button
+        aria-label="Get a free site speed audit with recommendations for optimizing"
         class="rounded px-5 py-2 text-white font-semibold"
         :class="{
           'bg-emerald-600': brightness >= 4,

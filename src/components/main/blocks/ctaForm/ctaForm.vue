@@ -99,6 +99,8 @@
       </h4>
       <a href="/pricing"
         ><button
+        aria-label="View service pricing for an existing website"
+        aria-
           class="rounded px-5 py-2 text-white font-semibold mt-4"
           :class="{
             'bg-emerald-600': brightness >= 4,
@@ -133,6 +135,7 @@
         <button
           id="submitButton"
           type="submit"
+          aria-label="Submit a contact form"
           @click="submitForm"
           class="rounded px-5 py-2 text-white font-semibold w-full mt-2"
           :class="{

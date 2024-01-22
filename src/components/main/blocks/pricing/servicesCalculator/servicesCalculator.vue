@@ -490,14 +490,14 @@
       :key="index"
       class="md:wd-8/12 sm:wd-11/12 rounded bg-slate-100 p-5 border-4 flex-col mb-4"
       :class="
-        {
+        ({
           'bg-slate-100': brightness == 5,
           'bg-slate-400': brightness == 4,
           'bg-slate-500': brightness == 3,
           'bg-slate-700': brightness == 2,
           'bg-slate-800': brightness == 1,
         },
-        ringClass(brightness)
+        ringClass(brightness))
       ">
       <div class="flex">
         <div class="w-6/12">
@@ -618,6 +618,7 @@
           :class="inputClass(brightness)" />
       </div>
       <button
+        aria-label="Submit a contact form"
         id="submitButton"
         type="submit"
         class="rounded px-5 py-2 text-white font-semibold mt-4 w-full"

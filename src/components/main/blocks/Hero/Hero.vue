@@ -112,6 +112,7 @@
     </p>
     <div class="flex py-5 justify-center gap-3 w-full">
       <button
+        aria-label="View my portfolio"
         class="rounded px-5 py-2 text-white font-semibold"
         :class="{
           'bg-emerald-600': brightness >= 4,
@@ -123,6 +124,7 @@
       </button>
       <a href="/pricing"
         ><button
+          aria-label="View service pricing for an existing website"
           class="rounded px-5 py-2 text-white font-semibold"
           :class="{
             'bg-slate-700': brightness >= 4,
