@@ -7,7 +7,7 @@
 
   import { ref, computed, onMounted, watchEffect, reactive } from "vue"
 
-  const brightness = ref(2)
+  const brightness = ref(3)
 
   const props = defineProps({
     component: String,
