@@ -5414,7 +5414,7 @@ let al = Symbol("TabsSSRContext"),
     ["path", { d: "M18 6 6 18", key: "1bl5f8" }],
     ["path", { d: "m6 6 12 12", key: "d8bk6v" }],
   ]),
-  ll = (e) => (Xa("data-v-4d2e762f"), (e = e()), Za(), e),
+  ll = (e) => (Xa("data-v-00c1949b"), (e = e()), Za(), e),
   rp = { class: "flex justify-center p-5 gap-5 content-center" },
   sp = ll(() => b("div", { class: "w-1/12" }, null, -1)),
   ap = { class: "flex justify-between gap-2 w-full content-center" },
@@ -5437,7 +5437,7 @@ let al = Symbol("TabsSSRContext"),
   bp = { class: "flex justify-between items-center" },
   mp = { class: "flex gap-1 p-2" },
   yp = kv(
-    '<li class="py-2 px-3 rounded" data-v-4d2e762f>Contact</li><li class="py-2 px-3 rounded" data-v-4d2e762f>Web Portfolio</li><li class="py-2 px-3 rounded" data-v-4d2e762f>Web Services</li><li class="py-2 px-3 rounded opacity-75" data-v-4d2e762f>Creative Projects</li><ul class="ml-5" data-v-4d2e762f><li class="py-2 px-3 rounded" data-v-4d2e762f>Art and Animation</li><li class="py-2 px-3 rounded" data-v-4d2e762f>Blog / Non-Fiction Writings</li><li class="py-2 px-3 rounded" data-v-4d2e762f>Custom Software</li><li class="py-2 px-3 rounded" data-v-4d2e762f>Cooking and Recipes</li></ul><li class="py-2 px-3 rounded" data-v-4d2e762f>About Me</li>',
+    '<li class="py-2 px-3 rounded" data-v-00c1949b>Contact</li><li class="py-2 px-3 rounded" data-v-00c1949b>Web Portfolio</li><li class="py-2 px-3 rounded" data-v-00c1949b>Web Services</li><li class="py-2 px-3 rounded opacity-75" data-v-00c1949b>Creative Projects</li><ul class="ml-5" data-v-00c1949b><li class="py-2 px-3 rounded" data-v-00c1949b>Art and Animation</li><li class="py-2 px-3 rounded" data-v-00c1949b>Blog / Non-Fiction Writings</li><li class="py-2 px-3 rounded" data-v-00c1949b>Custom Software</li><li class="py-2 px-3 rounded" data-v-00c1949b>Cooking and Recipes</li></ul><li class="py-2 px-3 rounded" data-v-00c1949b>About Me</li>',
     6,
   ),
   xp = [yp],
@@ -5569,6 +5569,7 @@ let al = Symbol("TabsSSRContext"),
                             le(
                               ue(li),
                               {
+                                "aria-label": "Creative projects dropdown menu",
                                 class: M([
                                   "font-semibold flex hover:outline-none focus:outline-none",
                                   {
@@ -5835,6 +5836,7 @@ let al = Symbol("TabsSSRContext"),
                       le(
                         ue(li),
                         {
+                          "aria-label": "Toggle brightness dropdown menu",
                           class: M([
                             "rounded mt-2 lg:mt-0 px-2",
                             {
@@ -5988,6 +5990,7 @@ let al = Symbol("TabsSSRContext"),
                         "text-orange-400 hover:text-orange-300": n.value == 1,
                       }),
                       onClick: f[2] || (f[2] = (d) => i()),
+                      "aria-label": "Close mobile menu",
                     },
                     null,
                     8,
@@ -6020,7 +6023,7 @@ let al = Symbol("TabsSSRContext"),
       )
     },
   },
-  _p = Tr(wp, [["__scopeId", "data-v-4d2e762f"]]),
+  _p = Tr(wp, [["__scopeId", "data-v-00c1949b"]]),
   kp = { class: "flex justify-center py-5 flex-col" },
   $p = { class: "inline-block relative" },
   Ep = { class: "font-semibold text-center px-1" },
@@ -6168,6 +6171,7 @@ let al = Symbol("TabsSSRContext"),
               b(
                 "button",
                 {
+                  "aria-label": "View my portfolio",
                   class: M([
                     "rounded px-5 py-2 text-white font-semibold",
                     {
@@ -6185,6 +6189,8 @@ let al = Symbol("TabsSSRContext"),
                 b(
                   "button",
                   {
+                    "aria-label":
+                      "View service pricing for an existing website",
                     class: M([
                       "rounded px-5 py-2 text-white font-semibold",
                       {
@@ -9560,6 +9566,9 @@ const Xe = Op(Ip),
                 b(
                   "button",
                   {
+                    "aria-label":
+                      "View service pricing for an existing website",
+                    "aria-": "",
                     class: M([
                       "rounded px-5 py-2 text-white font-semibold mt-4",
                       {
@@ -9603,6 +9612,7 @@ const Xe = Op(Ip),
                   {
                     id: "submitButton",
                     type: "submit",
+                    "aria-label": "Submit a contact form",
                     onClick: r,
                     class: M([
                       "rounded px-5 py-2 text-white font-semibold w-full mt-2",
@@ -10920,6 +10930,8 @@ const Xe = Op(Ip),
               b(
                 "button",
                 {
+                  "aria-label":
+                    "Get a free site speed audit with recommendations for optimizing",
                   class: M([
                     "rounded px-5 py-2 text-white font-semibold",
                     {
@@ -10940,7 +10952,7 @@ const Xe = Op(Ip),
       )
     },
   },
-  hr = (e) => (Xa("data-v-59a95949"), (e = e()), Za(), e),
+  hr = (e) => (Xa("data-v-40c1a883"), (e = e()), Za(), e),
   Gb = { class: "flex-col" },
   Kb = { class: "prose py-5 flex-col w-full" },
   Yb = hr(() => b("br", null, null, -1)),
@@ -11357,14 +11369,12 @@ const Xe = Op(Ip),
                     key: $e,
                     class: M([
                       "md:wd-8/12 sm:wd-11/12 rounded bg-slate-100 p-5 border-4 flex-col mb-4",
-                      {
-                        "bg-slate-100": e.brightness == 5,
-                        "bg-slate-400": e.brightness == 4,
-                        "bg-slate-500": e.brightness == 3,
-                        "bg-slate-700": e.brightness == 2,
-                        "bg-slate-800": e.brightness == 1,
-                      },
-                      a(e.brightness),
+                      (e.brightness == 5,
+                      e.brightness == 4,
+                      e.brightness == 3,
+                      e.brightness == 2,
+                      e.brightness == 1,
+                      a(e.brightness)),
                     ]),
                   },
                   [
@@ -11611,6 +11621,7 @@ const Xe = Op(Ip),
             b(
               "button",
               {
+                "aria-label": "Submit a contact form",
                 id: "submitButton",
                 type: "submit",
                 class: M([
@@ -11657,7 +11668,7 @@ const Xe = Op(Ip),
       )
     },
   },
-  _m = Tr(wm, [["__scopeId", "data-v-59a95949"]]),
+  _m = Tr(wm, [["__scopeId", "data-v-40c1a883"]]),
   km = {
     __name: "Pricing",
     props: { brightness: Number },
