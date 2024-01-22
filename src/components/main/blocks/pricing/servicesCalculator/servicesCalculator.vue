@@ -1,6 +1,5 @@
 <script setup>
   import { ref, computed, onMounted } from "vue"
- 
 
   const submitForm = async (e) => {
     e.preventDefault()
@@ -13,7 +12,7 @@
     let total = document.getElementsByName("total")[0].value
 
     let xhr = new XMLHttpRequest()
-    xhr.open("POST", 'https://images.josephhansen.dev/api/forms/submit', true)
+    xhr.open("POST", "https://images.josephhansen.dev/api/forms/submit", true)
     xhr.setRequestHeader("Content-Type", "application/json")
     xhr.send(
       JSON.stringify({
@@ -23,18 +22,24 @@
         website,
         notes,
         services,
-        total
+        total,
       }),
     )
 
     xhr.onloadend = function () {
-      console.log(`Status: ${xhr.status}, Response: ${xhr.responseText}`);
+      console.log(`Status: ${xhr.status}, Response: ${xhr.responseText}`)
       if (xhr.status == 200) {
-
         let formObj = document.getElementsByName(form)[0]
         let success = document.createElement("div")
-        success.classList.add("text-center", "flex", "justify-center", "items-center", "w-100")
-        success.innerHTML = "Thanks for your interest! Your submission has been processed."
+        success.classList.add(
+          "text-center",
+          "flex",
+          "justify-center",
+          "items-center",
+          "w-100",
+        )
+        success.innerHTML =
+          "Thanks for your interest! Your submission has been processed."
         formObj.appendChild(success)
 
         let leftInputs = document.getElementById("leftInputs")
@@ -45,15 +50,10 @@
 
         let button = document.getElementById("submitButton")
         button.disabled = true
-
-
       } else {
         alert("Something went wrong. Please try again.")
       }
     }
-
-
-
   }
 
   const props = defineProps({
@@ -586,7 +586,7 @@
     <form class="gap-4 mt-4" name="pricing">
       <input type="hidden" name="services" :value="selectedServicesList" />
       <input type="hidden" name="total" :value="total" />
-      <div class="flex gap-4" id = "leftInputs">
+      <div class="flex gap-4" id="leftInputs">
         <input
           type="email"
           name="email"
@@ -601,7 +601,7 @@
           class="rounded p-5 w-full bg-gray-200 border-transparent focus:border-transparent focus:bg-gray-200 size-5 focus:ring-1 focus:ring-offset-2 focus:ring-gray-500 mb-4"
           :class="inputClass(brightness)" />
       </div>
-      <div class="flex gap-4" id = "rightInputs">
+      <div class="flex gap-4" id="rightInputs">
         <input
           type="text"
           name="website"
@@ -616,7 +616,7 @@
           :class="inputClass(brightness)" />
       </div>
       <button
-        id = "submitButton"
+        id="submitButton"
         type="submit"
         class="rounded px-5 py-2 text-white font-semibold mt-4 w-full"
         @click="submitForm"
