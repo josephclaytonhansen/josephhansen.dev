@@ -366,8 +366,8 @@
       <li class="py-2 px-3 rounded">Contact</li>
       <li class="py-2 px-3 rounded">Web Portfolio</li>
       <li class="py-2 px-3 rounded">Web Services</li>
-      <li class="py-2 px-3 rounded">Creative Projects</li>
-      <ul class="ml-3">
+      <li class="py-2 px-3 rounded opacity-75">Creative Projects</li>
+      <ul class="ml-5">
         <li class="py-2 px-3 rounded">Art and Animation</li>
         <li class="py-2 px-3 rounded">Blog / Non-Fiction Writings</li>
         <li class="py-2 px-3 rounded">Custom Software</li>
