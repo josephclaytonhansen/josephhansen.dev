@@ -188,3 +188,15 @@
   </main>
   <messageBanner :brightness="brightness" />
 </template>
+
+<style scoped>
+  @media (min-width: 768px) {
+    .w-dvw {
+      width: 92vw;
+      margin: auto;
+    }
+    main {
+      padding-bottom:15vh;
+    }
+  }
+</style>
