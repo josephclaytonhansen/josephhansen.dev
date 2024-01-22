@@ -15,6 +15,18 @@
     }
   }
 
+  const inputClass = (brightness) => {
+    if (brightness >= 4) {
+      return "text-emerald-500"
+    } else if (brightness == 3) {
+      return "text-slate-800"
+    } else if (brightness == 2) {
+      return "text-orange-500"
+    } else if (brightness == 1) {
+      return "text-orange-400"
+    }
+  }
+
   const submitForm = async (e) => {
     e.preventDefault()
     const form = "contact"
@@ -99,34 +111,16 @@
           type="text"
           placeholder="Name"
           class="rounded p-2 w-full"
-          :class="{
-            'bg-slate-200': brightness == 5,
-            'bg-slate-300': brightness == 4,
-            'bg-slate-600': brightness == 3,
-            'bg-slate-800': brightness == 2,
-            'bg-slate-900': brightness == 1,
-          }" />
+          :class="inputClass" />
         <input
           type="email"
           placeholder="Email"
           class="rounded p-2 w-full mt-3"
-          :class="{
-            'bg-slate-200': brightness == 5,
-            'bg-slate-300': brightness == 4,
-            'bg-slate-600': brightness == 3,
-            'bg-slate-800': brightness == 2,
-            'bg-slate-900': brightness == 1,
-          }" />
+          :class="inputClass" />
         <textarea
           placeholder="Message"
           class="rounded p-2 w-full mt-3"
-          :class="{
-            'bg-slate-200': brightness == 5,
-            'bg-slate-300': brightness == 4,
-            'bg-slate-600': brightness == 3,
-            'bg-slate-800': brightness == 2,
-            'bg-slate-900': brightness == 1,
-          }"></textarea>
+          :class="inputClass"></textarea>
         <button
         id = "submitButton"
           type="submit"
