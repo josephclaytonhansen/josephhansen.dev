@@ -70,6 +70,9 @@
           inputs[i].style.display = "none"
         }
 
+        let textarea = formObj.getElementsByTagName("textarea")[0]
+        textarea.style.display = "none"
+
         let button = document.getElementById("submitButton")
         button.disabled = true
       } else {
