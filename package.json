@@ -8,7 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "prepare": "husky install",
-    "precommit": "cp -r dist/* ../built-josephhansen-dev/built-josephhansen-dev"
+    "precommit": "cp -r dist/* ../built-josephhansen-dev/built-josephhansen-dev && node sitemap.js"
   },
   "dependencies": {
     "@headlessui/tailwindcss": "^0.2.0",
@@ -21,6 +21,7 @@
     "date-fns": "^3.0.6",
     "lucide-vue-next": "^0.303.0",
     "pdfvuer": "^2.0.1",
+    "sitemap": "^7.1.1",
     "swiper": "^11.0.5",
     "vue": "^3.3.11",
     "vue-matomo": "^4.2.0",
