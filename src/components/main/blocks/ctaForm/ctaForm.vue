@@ -14,6 +14,54 @@
       return "text-slate-300"
     }
   }
+
+  const submitForm = async (e) => {
+    e.preventDefault()
+    const form = "contact"
+    let name = document.getElementsByName("name")[0].value
+    let email = document.getElementsByName("email")[0].value
+    let message = document.getElementsByName("message")[0].value
+
+    let xhr = new XMLHttpRequest()
+    xhr.open("POST", 'https://images.josephhansen.dev/api/forms/submit', true)
+    xhr.setRequestHeader("Content-Type", "application/json")
+    xhr.send(
+      JSON.stringify({
+        form,
+        name,
+        email,
+        message
+      }),
+    )
+
+    xhr.onloadend = function () {
+      console.log(`Status: ${xhr.status}, Response: ${xhr.responseText}`);
+      if (xhr.status == 200) {
+
+        let formObj = document.getElementById("cta")
+        let success = document.createElement("div")
+        success.classList.add("text-center", "flex", "justify-center", "items-center", "w-100")
+        success.innerHTML = "Thanks for your interest! Your submission has been processed."
+        formObj.appendChild(success)
+
+        let inputs = formObj.getElementsByTagName("input")
+
+        for (let i = 0; i < inputs.length; i++) {
+          inputs[i].disabled = true
+        }
+
+        let button = document.getElementById("submitButton")
+        button.disabled = true
+
+
+      } else {
+        alert("Something went wrong. Please try again.")
+      }
+    }
+
+
+
+  }
 </script>
 
 <template>
@@ -46,7 +94,7 @@
       <h4 class="text-2xl mt-8" :class="pClass(brightness)">
         Looking for a new site or a custom quote? Hit me up
       </h4>
-      <form>
+      <form id = "cta">
         <input
           type="text"
           placeholder="Name"
@@ -80,6 +128,7 @@
             'bg-slate-900': brightness == 1,
           }"></textarea>
         <button
+        id = "submitButton"
           type="submit"
           class="rounded px-5 py-2 text-white font-semibold w-full mt-2"
           :class="{
