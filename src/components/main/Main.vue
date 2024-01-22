@@ -193,7 +193,6 @@
   @media (max-width: 768px) {
     main {
       padding-bottom: 15vh;
-      width: 94vw;
       padding-left: 3vw;
       padding-right: 3vw;
     }
