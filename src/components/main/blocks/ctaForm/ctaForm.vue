@@ -124,6 +124,7 @@
         <button
         id = "submitButton"
           type="submit"
+          @click="submitForm"
           class="rounded px-5 py-2 text-white font-semibold w-full mt-2"
           :class="{
             'bg-emerald-600': brightness >= 4,
