@@ -67,7 +67,7 @@
         let inputs = formObj.getElementsByTagName("input")
 
         for (let i = 0; i < inputs.length; i++) {
-          inputs[i].disabled = true
+          inputs[i].style.display = "none"
         }
 
         let button = document.getElementById("submitButton")
