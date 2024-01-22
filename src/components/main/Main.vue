@@ -196,7 +196,7 @@
       margin: auto;
     }
     main {
-      padding-bottom:15vh;
+      padding-bottom: 15vh;
     }
   }
 </style>
