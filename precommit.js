@@ -6,9 +6,6 @@ const execPromise = promisify(exec)
 
 async function run() {
   try {
-    await fs.rmdir("../built-josephhansen-dev/built-josephhansen-dev", {
-      recursive: true,
-    })
     await fs.copyFile(
       "dist",
       "../built-josephhansen-dev/built-josephhansen-dev",
