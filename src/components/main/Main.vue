@@ -190,9 +190,9 @@
 </template>
 
 <style scoped>
-  @media (min-width: 768px) {
+  @media (max-width: 768px) {
     .w-dvw {
-      width: 92vw;
+      width: 96vw;
       margin: auto;
     }
     main {
