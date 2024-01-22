@@ -100,7 +100,7 @@
       websites.
     </h1>
     <p
-      class="text-center text-slate-500 font-sans pt-5"
+      class="text-center  font-sans pt-5"
       :class="{
         'text-slate-800': brightness == 5,
         'text-slate-700': brightness == 4,
