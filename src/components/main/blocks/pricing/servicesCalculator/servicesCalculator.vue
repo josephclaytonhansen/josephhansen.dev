@@ -10,6 +10,7 @@
     let notes = document.getElementsByName("notes")[0].value
     let services = document.getElementsByName("services")[0].value
     let total = document.getElementsByName("total")[0].value
+    let referrer = window.location.href
 
     let xhr = new XMLHttpRequest()
     xhr.open("POST", "https://images.josephhansen.dev/api/forms/submit", true)
@@ -23,6 +24,7 @@
         notes,
         services,
         total,
+        referrer,
       }),
     )
 

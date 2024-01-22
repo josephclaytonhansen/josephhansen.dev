@@ -33,6 +33,7 @@
     let name = document.getElementsByName("name")[0].value
     let email = document.getElementsByName("email")[0].value
     let message = document.getElementsByName("message")[0].value
+    let referrer = window.location.href
 
     let xhr = new XMLHttpRequest()
     xhr.open("POST", "https://images.josephhansen.dev/api/forms/submit", true)
@@ -43,6 +44,7 @@
         name,
         email,
         message,
+        referrer,
       }),
     )
 
