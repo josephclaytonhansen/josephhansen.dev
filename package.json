@@ -8,7 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "prepare": "husky install",
-    "precommit": "rm -rf ../built-josephhansen-dev/built-josephhansen-dev/* && cp -r dist/* ../built-josephhansen-dev/built-josephhansen-dev"
+    "precommit": "node precommit.js"
   },
   "dependencies": {
     "@headlessui/tailwindcss": "^0.2.0",
