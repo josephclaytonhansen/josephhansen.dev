@@ -55,8 +55,7 @@
         "josephhansen.dev | | web developer/designer | pricing"
       meta.meta[4].content = "https://josephhansen.dev/pricing"
       meta.meta[9].content = "https://josephhansen.dev/pricing"
-    }
-    else if (props.component == "about-me") {
+    } else if (props.component == "about-me") {
       meta.title = "josephhansen.dev | | web developer/designer | about me"
       meta.meta[1].content =
         "josephhansen.dev | | web developer/designer | about me"
@@ -64,8 +63,7 @@
         "josephhansen.dev | | web developer/designer | about me"
       meta.meta[4].content = "https://josephhansen.dev/about-me"
       meta.meta[9].content = "https://josephhansen.dev/about-me"
-    }
-    else if (props.component == "contact") {
+    } else if (props.component == "contact") {
       meta.title = "josephhansen.dev | | web developer/designer | contact"
       meta.meta[1].content =
         "josephhansen.dev | | web developer/designer | contact"
@@ -73,8 +71,7 @@
         "josephhansen.dev | | web developer/designer | contact"
       meta.meta[4].content = "https://josephhansen.dev/contact"
       meta.meta[9].content = "https://josephhansen.dev/contact"
-    }
-    else if (props.component == "portfolio"){
+    } else if (props.component == "portfolio") {
       meta.title = "josephhansen.dev | | web developer/designer | portfolio"
       meta.meta[1].content =
         "josephhansen.dev | | web developer/designer | portfolio"
@@ -242,7 +239,7 @@
       </div>
     </div>
 
-    <div class="flex justify-center w-full md:px-10 sm:px-5 pt-10">
+
       <div
         class="md:w-10/12 sm:w-12/12 rounded p-3"
         :class="{
@@ -255,7 +252,7 @@
         v-if="component == 'home'">
         <Services :brightness="brightness" />
       </div>
-    </div>
+
   </main>
   <messageBanner :brightness="brightness" />
 </template>
