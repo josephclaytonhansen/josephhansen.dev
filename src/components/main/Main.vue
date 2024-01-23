@@ -4,6 +4,7 @@
   import Services from "./blocks/services/Services.vue"
   import messageBanner from "./blocks/messageBanner/messageBanner.vue"
   import Pricing from "./pages/Pricing.vue"
+  import Contact from "./pages/Contact.vue"
 
   import { ref, computed, onMounted, watchEffect, reactive } from "vue"
 
@@ -155,6 +156,19 @@
         }"
         v-if="component == 'pricing'">
         <Pricing :brightness="brightness" />
+      </div>
+
+      <div
+        class="md:w-10/12 sm:w-12/12 rounded p-3 flex justify-center"
+        :class="{
+          'bg-slate-200': brightness == 5,
+          'bg-slate-300': brightness == 4,
+          'bg-slate-600': brightness == 3,
+          'bg-slate-800': brightness == 2,
+          'bg-slate-900': brightness == 1,
+        }"
+        v-if="component == 'contact'">
+        <Contact :brightness="brightness" />
       </div>
 
       <div
