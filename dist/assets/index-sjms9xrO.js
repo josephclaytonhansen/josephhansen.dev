@@ -11751,7 +11751,7 @@ const Ye = Rg(Tg),
     },
   },
   _m = { class: "flex justify-center w-full md:px-10 sm:px-5 mt-5" },
-  km = { class: "flex justify-center w-full md:px-10 sm:px-5 mt-5" },
+  km = { class: "flex justify-center w-full md:px-10 sm:px-5 pt-10" },
   $m = {
     __name: "Main",
     props: { component: String },
@@ -11792,24 +11792,24 @@ const Ye = Rg(Tg),
                 "josephhansen.dev | | web developer/designer | pricing"),
               (a.meta[4].content = "https://josephhansen.dev/pricing"),
               (a.meta[9].content = "https://josephhansen.dev/pricing"))
-            : n.component == "about-me"
+            : n.component == "contact"
               ? ((a.title =
-                  "josephhansen.dev | | web developer/designer | about me"),
+                  "josephhansen.dev | | web developer/designer | contact"),
                 (a.meta[1].content =
-                  "josephhansen.dev | | web developer/designer | about me"),
+                  "josephhansen.dev | | web developer/designer | contact"),
                 (a.meta[6].content =
-                  "josephhansen.dev | | web developer/designer | about me"),
-                (a.meta[4].content = "https://josephhansen.dev/about-me"),
-                (a.meta[9].content = "https://josephhansen.dev/about-me"))
-              : n.component == "contact"
+                  "josephhansen.dev | | web developer/designer | contact"),
+                (a.meta[4].content = "https://josephhansen.dev/contact"),
+                (a.meta[9].content = "https://josephhansen.dev/contact"))
+              : n.component == "about"
                 ? ((a.title =
-                    "josephhansen.dev | | web developer/designer | contact"),
+                    "josephhansen.dev | | web developer/designer | about"),
                   (a.meta[1].content =
-                    "josephhansen.dev | | web developer/designer | contact"),
+                    "josephhansen.dev | | web developer/designer | about"),
                   (a.meta[6].content =
-                    "josephhansen.dev | | web developer/designer | contact"),
-                  (a.meta[4].content = "https://josephhansen.dev/contact"),
-                  (a.meta[9].content = "https://josephhansen.dev/contact"))
+                    "josephhansen.dev | | web developer/designer | about"),
+                  (a.meta[4].content = "https://josephhansen.dev/about"),
+                  (a.meta[9].content = "https://josephhansen.dev/about"))
                 : n.component == "portfolio" &&
                   ((a.title =
                     "josephhansen.dev | | web developer/designer | portfolio"),
@@ -11882,7 +11882,7 @@ const Ye = Rg(Tg),
             null,
             [
               m(
-                "div",
+                "main",
                 {
                   class: M([["w-dvw", s.value], "md:p-7 sm:p-5"]),
                   style: { "min-height": "100vh", "overflow-x": "hidden" },
@@ -11915,37 +11915,12 @@ const Ye = Rg(Tg),
                           2,
                         ))
                       : et("", !0),
-                    e.component == "about-me"
-                      ? (he(),
-                        Fe(
-                          "div",
-                          {
-                            key: 1,
-                            class: M([
-                              "md:w-10/12 sm:w-12/12 rounded p-3 flex justify-center",
-                              {
-                                "bg-slate-200": t.value == 5,
-                                "bg-slate-300": t.value == 4,
-                                "bg-slate-600": t.value == 3,
-                                "bg-slate-800": t.value == 2,
-                                "bg-slate-900": t.value == 1,
-                              },
-                            ]),
-                          },
-                          [
-                            le(wm, { brightness: t.value }, null, 8, [
-                              "brightness",
-                            ]),
-                          ],
-                          2,
-                        ))
-                      : et("", !0),
                     e.component == "contact"
                       ? (he(),
                         Fe(
                           "div",
                           {
-                            key: 2,
+                            key: 1,
                             class: M([
                               "md:w-10/12 sm:w-12/12 rounded p-3 flex justify-center",
                               {
@@ -11970,7 +11945,7 @@ const Ye = Rg(Tg),
                         Fe(
                           "div",
                           {
-                            key: 3,
+                            key: 2,
                             class: M([
                               "md:w-10/12 sm:w-12/12 rounded p-3 flex justify-center",
                               {
@@ -11990,58 +11965,83 @@ const Ye = Rg(Tg),
                           2,
                         ))
                       : et("", !0),
-                    m("div", km, [
-                      e.component == "home"
-                        ? (he(),
-                          Fe(
-                            "div",
-                            {
-                              key: 0,
-                              class: M([
-                                "md:w-10/12 sm:w-12/12 rounded p-3",
-                                {
-                                  "bg-slate-200": t.value == 5,
-                                  "bg-slate-300": t.value == 4,
-                                  "bg-slate-600": t.value == 3,
-                                  "bg-slate-800": t.value == 2,
-                                  "bg-slate-900": t.value == 1,
-                                },
-                              ]),
-                            },
-                            [
-                              le(Og, { brightness: t.value }, null, 8, [
-                                "brightness",
-                              ]),
-                            ],
-                            2,
-                          ))
-                        : et("", !0),
-                      e.component == "home"
-                        ? (he(),
-                          Fe(
-                            "div",
-                            {
-                              key: 1,
-                              class: M([
-                                "md:w-10/12 sm:w-12/12 rounded p-3",
-                                {
-                                  "bg-slate-200": t.value == 5,
-                                  "bg-slate-300": t.value == 4,
-                                  "bg-slate-600": t.value == 3,
-                                  "bg-slate-800": t.value == 2,
-                                  "bg-slate-900": t.value == 1,
-                                },
-                              ]),
-                            },
-                            [
-                              le(jb, { brightness: t.value }, null, 8, [
-                                "brightness",
-                              ]),
-                            ],
-                            2,
-                          ))
-                        : et("", !0),
-                    ]),
+                    e.component == "about-me"
+                      ? (he(),
+                        Fe(
+                          "div",
+                          {
+                            key: 3,
+                            class: M([
+                              "md:w-10/12 sm:w-12/12 rounded p-3 flex justify-center",
+                              {
+                                "bg-slate-200": t.value == 5,
+                                "bg-slate-300": t.value == 4,
+                                "bg-slate-600": t.value == 3,
+                                "bg-slate-800": t.value == 2,
+                                "bg-slate-900": t.value == 1,
+                              },
+                            ]),
+                          },
+                          [
+                            le(wm, { brightness: t.value }, null, 8, [
+                              "brightness",
+                            ]),
+                          ],
+                          2,
+                        ))
+                      : et("", !0),
+                    e.component == "home"
+                      ? (he(),
+                        Fe(
+                          "div",
+                          {
+                            key: 4,
+                            class: M([
+                              "md:w-10/12 sm:w-12/12 rounded p-3",
+                              {
+                                "bg-slate-200": t.value == 5,
+                                "bg-slate-300": t.value == 4,
+                                "bg-slate-600": t.value == 3,
+                                "bg-slate-800": t.value == 2,
+                                "bg-slate-900": t.value == 1,
+                              },
+                            ]),
+                          },
+                          [
+                            le(Og, { brightness: t.value }, null, 8, [
+                              "brightness",
+                            ]),
+                          ],
+                          2,
+                        ))
+                      : et("", !0),
+                  ]),
+                  m("div", km, [
+                    e.component == "home"
+                      ? (he(),
+                        Fe(
+                          "div",
+                          {
+                            key: 0,
+                            class: M([
+                              "md:w-10/12 sm:w-12/12 rounded p-3",
+                              {
+                                "bg-slate-200": t.value == 5,
+                                "bg-slate-300": t.value == 4,
+                                "bg-slate-600": t.value == 3,
+                                "bg-slate-800": t.value == 2,
+                                "bg-slate-900": t.value == 1,
+                              },
+                            ]),
+                          },
+                          [
+                            le(jb, { brightness: t.value }, null, 8, [
+                              "brightness",
+                            ]),
+                          ],
+                          2,
+                        ))
+                      : et("", !0),
                   ]),
                 ],
                 2,
@@ -12054,7 +12054,7 @@ const Ye = Rg(Tg),
       )
     },
   },
-  Em = Tr($m, [["__scopeId", "data-v-efa41e86"]])
+  Em = Tr($m, [["__scopeId", "data-v-2729bdc0"]])
 /*!
  * vue-router v4.2.5
  * (c) 2023 Eduardo San Martin Morote

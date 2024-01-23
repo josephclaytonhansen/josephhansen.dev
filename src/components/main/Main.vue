@@ -55,14 +55,6 @@
         "josephhansen.dev | | web developer/designer | pricing"
       meta.meta[4].content = "https://josephhansen.dev/pricing"
       meta.meta[9].content = "https://josephhansen.dev/pricing"
-    } else if (props.component == "about-me") {
-      meta.title = "josephhansen.dev | | web developer/designer | about me"
-      meta.meta[1].content =
-        "josephhansen.dev | | web developer/designer | about me"
-      meta.meta[6].content =
-        "josephhansen.dev | | web developer/designer | about me"
-      meta.meta[4].content = "https://josephhansen.dev/about-me"
-      meta.meta[9].content = "https://josephhansen.dev/about-me"
     } else if (props.component == "contact") {
       meta.title = "josephhansen.dev | | web developer/designer | contact"
       meta.meta[1].content =
@@ -71,6 +63,14 @@
         "josephhansen.dev | | web developer/designer | contact"
       meta.meta[4].content = "https://josephhansen.dev/contact"
       meta.meta[9].content = "https://josephhansen.dev/contact"
+    } else if (props.component == "about") {
+      meta.title = "josephhansen.dev | | web developer/designer | about"
+      meta.meta[1].content =
+        "josephhansen.dev | | web developer/designer | about"
+      meta.meta[6].content =
+        "josephhansen.dev | | web developer/designer | about"
+      meta.meta[4].content = "https://josephhansen.dev/about"
+      meta.meta[9].content = "https://josephhansen.dev/about"
     } else if (props.component == "portfolio") {
       meta.title = "josephhansen.dev | | web developer/designer | portfolio"
       meta.meta[1].content =
@@ -164,12 +164,10 @@
 </script>
 
 <template>
-  <div
+  <main
     :class="['w-dvw', brightnessClass]"
     class="md:p-7 sm:p-5"
     style="min-height: 100vh; overflow-x: hidden">
-
-    
     <Header @update:brightness="handleBrightnessUpdate" />
 
     <div class="flex justify-center w-full md:px-10 sm:px-5 mt-5">
@@ -184,19 +182,6 @@
         }"
         v-if="component == 'pricing'">
         <Pricing :brightness="brightness" />
-      </div>
-
-      <div
-        class="md:w-10/12 sm:w-12/12 rounded p-3 flex justify-center"
-        :class="{
-          'bg-slate-200': brightness == 5,
-          'bg-slate-300': brightness == 4,
-          'bg-slate-600': brightness == 3,
-          'bg-slate-800': brightness == 2,
-          'bg-slate-900': brightness == 1,
-        }"
-        v-if="component == 'about-me'">
-        <AboutMe :brightness="brightness" />
       </div>
 
       <div
@@ -225,7 +210,19 @@
         <Portfolio :brightness="brightness" />
       </div>
 
-      <div class="flex justify-center w-full md:px-10 sm:px-5 mt-5">
+      <div
+        class="md:w-10/12 sm:w-12/12 rounded p-3 flex justify-center"
+        :class="{
+          'bg-slate-200': brightness == 5,
+          'bg-slate-300': brightness == 4,
+          'bg-slate-600': brightness == 3,
+          'bg-slate-800': brightness == 2,
+          'bg-slate-900': brightness == 1,
+        }"
+        v-if="component == 'about-me'">
+        <AboutMe :brightness="brightness" />
+      </div>
+
       <div
         class="md:w-10/12 sm:w-12/12 rounded p-3"
         :class="{
@@ -238,7 +235,9 @@
         v-if="component == 'home'">
         <Hero :brightness="brightness" />
       </div>
+    </div>
 
+    <div class="flex justify-center w-full md:px-10 sm:px-5 pt-10">
       <div
         class="md:w-10/12 sm:w-12/12 rounded p-3"
         :class="{
@@ -251,10 +250,8 @@
         v-if="component == 'home'">
         <Services :brightness="brightness" />
       </div>
-      </div>
     </div>
-  </div>
-
+  </main>
   <messageBanner :brightness="brightness" />
 </template>
 
