@@ -505,7 +505,7 @@
       v-for="(block, index) in blocks"
       :key="index"
       class="md:wd-8/12 sm:wd-11/12 rounded bg-slate-100 p-5 border-4 flex-col mb-4"
-      :class="blockClass(brightness)">
+      :class="blockClass(props.brightness)">
       <div class="flex">
         <div class="w-6/12">
           <div
