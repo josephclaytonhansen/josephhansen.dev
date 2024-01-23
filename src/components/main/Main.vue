@@ -169,10 +169,10 @@
     class="md:p-7 sm:p-5"
     style="min-height: 100vh; overflow-x: hidden">
 
-    <div class="flex justify-center w-full md:px-10 sm:px-5 mt-5">
+    
     <Header @update:brightness="handleBrightnessUpdate" />
 
-
+    <div class="flex justify-center w-full md:px-10 sm:px-5 mt-5">
       <div
         class="md:w-10/12 sm:w-12/12 rounded p-3 flex justify-center"
         :class="{
@@ -225,6 +225,7 @@
         <Portfolio :brightness="brightness" />
       </div>
 
+      <div class="flex justify-center w-full md:px-10 sm:px-5 mt-5">
       <div
         class="md:w-10/12 sm:w-12/12 rounded p-3"
         :class="{
@@ -249,6 +250,7 @@
         }"
         v-if="component == 'home'">
         <Services :brightness="brightness" />
+      </div>
       </div>
     </div>
   </div>
