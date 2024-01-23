@@ -1516,6 +1516,9 @@ select {
 .pr-2 {
   padding-right: 0.5rem;
 }
+.pt-10 {
+  padding-top: 2.5rem;
+}
 .pt-4 {
   padding-top: 1rem;
 }
@@ -1880,7 +1883,7 @@ a {
   padding-right: 2rem;
 }
 @media (max-width: 768px) {
-  main[data-v-81e0db65] {
+  main[data-v-fb214153] {
     padding-bottom: 15vh;
     padding-left: 3vw;
     padding-right: 3vw;

@@ -183,6 +183,7 @@
         v-if="component == 'pricing'">
         <Pricing :brightness="brightness" />
       </div>
+      </div>
 
       <div class="flex justify-center w-full md:px-10 sm:px-5 mt-5">
         <div
@@ -224,7 +225,7 @@
         v-if="component == 'portfolio'">
         <Contact :brightness="brightness" />
       </div>
-
+      <div class="flex justify-center w-full md:px-10 sm:px-5 pt-10">
       <div
         class="md:w-10/12 sm:w-12/12 rounded p-3"
         :class="{
@@ -239,7 +240,7 @@
       </div>
     </div>
 
-
+    <div class="flex justify-center w-full md:px-10 sm:px-5 pt-10">
       <div
         class="md:w-10/12 sm:w-12/12 rounded p-3"
         :class="{
@@ -252,7 +253,7 @@
         v-if="component == 'home'">
         <Services :brightness="brightness" />
       </div>
-
+    </div>
   </main>
   <messageBanner :brightness="brightness" />
 </template>
