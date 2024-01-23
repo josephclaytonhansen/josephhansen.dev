@@ -5405,7 +5405,7 @@ let al = Symbol("TabsSSRContext"),
     ["path", { d: "M18 6 6 18", key: "1bl5f8" }],
     ["path", { d: "m6 6 12 12", key: "d8bk6v" }],
   ]),
-  ll = (e) => (Xa("data-v-b2f52ab3"), (e = e()), Za(), e),
+  ll = (e) => (Xa("data-v-3fc1e435"), (e = e()), Za(), e),
   ng = { class: "flex justify-center p-5 gap-5 content-center" },
   rg = ll(() => m("div", { class: "w-1/12" }, null, -1)),
   sg = { class: "flex justify-between gap-2 w-full content-center" },
@@ -5431,7 +5431,7 @@ let al = Symbol("TabsSSRContext"),
   yg = { class: "flex justify-between items-center" },
   wg = { class: "flex gap-1 p-2" },
   xg = kv(
-    '<a href="/contact" data-v-b2f52ab3><li class="py-2 px-3 rounded" data-v-b2f52ab3>Contact</li></a><a href="/portfolio" data-v-b2f52ab3><li class="py-2 px-3 rounded" data-v-b2f52ab3>Web Portfolio</li></a><a href="/" data-v-b2f52ab3><li class="py-2 px-3 rounded" data-v-b2f52ab3>Web Services</li></a><li class="py-2 px-3 rounded opacity-75" data-v-b2f52ab3>Creative Projects</li><ul class="ml-5" data-v-b2f52ab3><li class="py-2 px-3 rounded" data-v-b2f52ab3>Art and Animation</li><li class="py-2 px-3 rounded" data-v-b2f52ab3>Blog / Non-Fiction Writings</li><li class="py-2 px-3 rounded" data-v-b2f52ab3>Custom Software</li><li class="py-2 px-3 rounded" data-v-b2f52ab3>Cooking and Recipes</li></ul><a href="/about-me" data-v-b2f52ab3><li class="py-2 px-3 rounded" data-v-b2f52ab3>About Me</li></a>',
+    '<a href="/contact" data-v-3fc1e435><li class="py-2 px-3 rounded" data-v-3fc1e435>Contact</li></a><a href="/portfolio" data-v-3fc1e435><li class="py-2 px-3 rounded" data-v-3fc1e435>Web Portfolio</li></a><a href="/" data-v-3fc1e435><li class="py-2 px-3 rounded" data-v-3fc1e435>Web Services</li></a><li class="py-2 px-3 rounded opacity-75" data-v-3fc1e435>Creative Projects</li><ul class="ml-5" data-v-3fc1e435><li class="py-2 px-3 rounded" data-v-3fc1e435>Art and Animation</li><li class="py-2 px-3 rounded" data-v-3fc1e435>Blog / Non-Fiction Writings</li><li class="py-2 px-3 rounded" data-v-3fc1e435>Custom Software</li><li class="py-2 px-3 rounded" data-v-3fc1e435>Cooking and Recipes</li></ul><a href="/about-me" data-v-3fc1e435><li class="py-2 px-3 rounded" data-v-3fc1e435>About Me</li></a>',
     6,
   ),
   _g = [xg],
@@ -6004,7 +6004,7 @@ let al = Symbol("TabsSSRContext"),
       )
     },
   },
-  $g = Tr(kg, [["__scopeId", "data-v-b2f52ab3"]]),
+  $g = Tr(kg, [["__scopeId", "data-v-3fc1e435"]]),
   Eg = { class: "flex justify-center py-5 flex-col" },
   Sg = { class: "inline-block relative" },
   Cg = { class: "font-semibold text-center px-1" },
@@ -11887,8 +11887,8 @@ const Ye = Rg(Tg),
                   style: { "min-height": "100vh", "overflow-x": "hidden" },
                 },
                 [
-                  le($g, { "onUpdate:brightness": r }),
                   m("div", _m, [
+                    le($g, { "onUpdate:brightness": r }),
                     e.component == "pricing"
                       ? (he(),
                         Fe(
@@ -12051,7 +12051,7 @@ const Ye = Rg(Tg),
       )
     },
   },
-  $m = Tr(km, [["__scopeId", "data-v-bf28247f"]])
+  $m = Tr(km, [["__scopeId", "data-v-544243cf"]])
 /*!
  * vue-router v4.2.5
  * (c) 2023 Eduardo San Martin Morote

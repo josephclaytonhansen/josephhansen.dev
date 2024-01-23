@@ -207,16 +207,18 @@
         </div>
 
         <div class="flex gap-5 content-center">
-          <a href = "/contact"><button
-            :class="{
-              'bg-emerald-600': brightness >= 4,
-              'bg-slate-500': brightness == 3,
-              'bg-orange-600': brightness == 2,
-              'bg-orange-500': brightness == 1,
-            }"
-            class="py-2 px-3 rounded text-white">
-            Contact
-          </button></a>
+          <a href="/contact"
+            ><button
+              :class="{
+                'bg-emerald-600': brightness >= 4,
+                'bg-slate-500': brightness == 3,
+                'bg-orange-600': brightness == 2,
+                'bg-orange-500': brightness == 1,
+              }"
+              class="py-2 px-3 rounded text-white">
+              Contact
+            </button></a
+          >
         </div>
       </div>
     </div>

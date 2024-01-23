@@ -168,9 +168,11 @@
     :class="['w-dvw', brightnessClass]"
     class="md:p-7 sm:p-5"
     style="min-height: 100vh; overflow-x: hidden">
-    <Header @update:brightness="handleBrightnessUpdate" />
 
     <div class="flex justify-center w-full md:px-10 sm:px-5 mt-5">
+    <Header @update:brightness="handleBrightnessUpdate" />
+
+
       <div
         class="md:w-10/12 sm:w-12/12 rounded p-3 flex justify-center"
         :class="{
