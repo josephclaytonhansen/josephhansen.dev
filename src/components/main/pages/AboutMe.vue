@@ -14,8 +14,6 @@
       return "text-slate-300"
     }
   }
+</script>
 
-  </script>
-
-<template>
-</template>
+<template></template>

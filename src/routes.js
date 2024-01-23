@@ -5,7 +5,7 @@ const routes = [
   { path: "/contact-me", component: null, props: { component: "contact" } },
   { path: "/about", component: null, props: { component: "about-me" } },
   { path: "/about-me", component: null, props: { component: "about-me" } },
-  { path: "portfolio", component: null, props: { component: "portfolio" } },
+  { path: "/portfolio", component: null, props: { component: "portfolio" } },
 ]
 
 const routePaths = routes.map((route) => route.path)

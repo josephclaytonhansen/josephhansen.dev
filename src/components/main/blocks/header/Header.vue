@@ -82,29 +82,33 @@
         </div>
 
         <div class="flex gap-5 p-2 relative">
-          <a href = "/portfolio"><h6
-            class="font-semibold"
-            :class="{
-              'text-slate-900': brightness == 5,
-              'text-slate-800': brightness == 4,
-              'text-slate-300': brightness == 3,
-              'text-slate-200': brightness == 2,
-              'text-slate-400': brightness == 1,
-            }">
-            Web Portfolio
-          </h6></a>
+          <a href="/portfolio"
+            ><h6
+              class="font-semibold"
+              :class="{
+                'text-slate-900': brightness == 5,
+                'text-slate-800': brightness == 4,
+                'text-slate-300': brightness == 3,
+                'text-slate-200': brightness == 2,
+                'text-slate-400': brightness == 1,
+              }">
+              Web Portfolio
+            </h6></a
+          >
 
-          <a href = "/"><h6
-            class="font-semibold"
-            :class="{
-              'text-slate-900': brightness == 5,
-              'text-slate-800': brightness == 4,
-              'text-slate-300': brightness == 3,
-              'text-slate-200': brightness == 2,
-              'text-slate-400': brightness == 1,
-            }">
-            Web Services
-          </h6></a>
+          <a href="/"
+            ><h6
+              class="font-semibold"
+              :class="{
+                'text-slate-900': brightness == 5,
+                'text-slate-800': brightness == 4,
+                'text-slate-300': brightness == 3,
+                'text-slate-200': brightness == 2,
+                'text-slate-400': brightness == 1,
+              }">
+              Web Services
+            </h6></a
+          >
 
           <Popover class="relative inline-block text-left">
             <PopoverButton
@@ -213,7 +217,6 @@
             class="py-2 px-3 rounded text-white">
             Contact
           </button>
-
         </div>
       </div>
     </div>
@@ -355,9 +358,9 @@
         'text-slate-200': brightness == 2,
         'text-slate-400': brightness == 1,
       }">
-      <a href = "/contact"><li class="py-2 px-3 rounded">Contact</li></a>
-      <a href = "/portfolio"><li class="py-2 px-3 rounded">Web Portfolio</li></a>
-      <a href = "/"><li class="py-2 px-3 rounded">Web Services</li></a>
+      <a href="/contact"><li class="py-2 px-3 rounded">Contact</li></a>
+      <a href="/portfolio"><li class="py-2 px-3 rounded">Web Portfolio</li></a>
+      <a href="/"><li class="py-2 px-3 rounded">Web Services</li></a>
       <li class="py-2 px-3 rounded opacity-75">Creative Projects</li>
       <ul class="ml-5">
         <li class="py-2 px-3 rounded">Art and Animation</li>
@@ -366,7 +369,7 @@
         <li class="py-2 px-3 rounded">Cooking and Recipes</li>
       </ul>
 
-      <a href = "/about-me"><li class="py-2 px-3 rounded">About Me</li></a>
+      <a href="/about-me"><li class="py-2 px-3 rounded">About Me</li></a>
     </ul>
   </div>
 </template>
