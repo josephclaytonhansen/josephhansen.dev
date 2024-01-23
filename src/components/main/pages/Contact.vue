@@ -1,5 +1,4 @@
 <script setup>
-
   const props = defineProps({
     brightness: Number,
   })
@@ -69,12 +68,11 @@
       }
     }
   }
-
 </script>
 
 <template>
-    <div class="flex-col">
-    <div class="prose py-5 flex-col w-full">
+  <div class="flex-col">
+    <div class="py-5 flex-col w-full">
       <h2
         class="text-5xl text-center text-semibold"
         :class="pClass(props.brightness)">
@@ -83,38 +81,37 @@
     </div>
 
     <form id="cta">
-        <input
-          type="text"
-          name="name"
-          placeholder="Name"
-          class="rounded p-2 w-full"
-          :class="inputClass" />
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          class="rounded p-2 w-full mt-3"
-          :class="inputClass" />
-        <textarea
-          placeholder="Message"
-          name="message"
-          class="rounded p-2 w-full mt-3"
-          :class="inputClass"></textarea>
-        <button
-          id="submitButton"
-          type="submit"
-          aria-label="Submit a contact form"
-          @click="submitForm"
-          class="rounded px-5 py-2 text-white font-semibold w-full mt-2"
-          :class="{
-            'bg-emerald-600': brightness >= 4,
-            'bg-slate-400': brightness == 3,
-            'bg-orange-600': brightness == 2,
-            'bg-orange-500': brightness == 1,
-          }">
-          Contact Me
-        </button>
-      </form>
-
-    </div>
+      <input
+        type="text"
+        name="name"
+        placeholder="Name"
+        class="rounded p-2 w-full"
+        :class="inputClass" />
+      <input
+        type="email"
+        name="email"
+        placeholder="Email"
+        class="rounded p-2 w-full mt-3"
+        :class="inputClass" />
+      <textarea
+        placeholder="Message"
+        name="message"
+        class="rounded p-2 w-full mt-3"
+        :class="inputClass"></textarea>
+      <button
+        id="submitButton"
+        type="submit"
+        aria-label="Submit a contact form"
+        @click="submitForm"
+        class="rounded px-5 py-2 text-white font-semibold w-full mt-2"
+        :class="{
+          'bg-emerald-600': brightness >= 4,
+          'bg-slate-400': brightness == 3,
+          'bg-orange-600': brightness == 2,
+          'bg-orange-500': brightness == 1,
+        }">
+        Contact Me
+      </button>
+    </form>
+  </div>
 </template>
