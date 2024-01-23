@@ -478,6 +478,7 @@
     } else if (brightness == 1) {
       classes += " bg-slate-800"
     }
+    return classes
   }
 </script>
 
