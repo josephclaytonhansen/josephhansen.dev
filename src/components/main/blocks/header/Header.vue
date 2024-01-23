@@ -193,7 +193,7 @@
             </PopoverPanel>
           </Popover>
 
-          <h6
+         <a href ="/about-me"> <h6
             class="font-semibold flex"
             :class="{
               'text-slate-900': brightness == 5,
@@ -203,7 +203,7 @@
               'text-slate-400': brightness == 1,
             }">
             About Me
-          </h6>
+          </h6></a>
         </div>
 
         <div class="flex gap-5 content-center">
