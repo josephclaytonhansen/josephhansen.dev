@@ -6,8 +6,6 @@
 
   import chroma from "chroma-js"
 
-  import bazaarFigma from "@/assets/main/bazaarFigma.webp"
-  import bazaarHero from "@/assets/main/bazaarHero.webp"
 
   const iconClass = (brightness) => {
     if (brightness >= 4) {
@@ -70,33 +68,5 @@
 </script>
 
 <template>
-  <div class="flex flex-col w-full">
-    <div
-      class="flex w-full gap-4 p-8 items-center justify-center"
-      id="panelSpeed">
-      <h2 class="text-left text-5xl" :class="pClass(brightness)">
-        Looking for a beautiful design?
-      </h2>
-    </div>
 
-    <div class="flex w-full">
-      <div class="w-auto">
-        <img
-          :src="bazaarFigma"
-          class="rounded"
-          style="height: 500px; width: auto" />
-      </div>
-
-      <div class="w-auto p-3 items-center flex">
-        <moveRight size="5rem" :class="iconClass(brightness)" />
-      </div>
-
-      <div class="w-auto">
-        <img
-          :src="bazaarHero"
-          class="rounded"
-          style="height: 500px; width: auto" />
-      </div>
-    </div>
-  </div>
 </template>

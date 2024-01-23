@@ -1243,9 +1243,6 @@ select {
 .w-6\/12 {
   width: 50%;
 }
-.w-auto {
-  width: auto;
-}
 .w-dvw {
   width: 100dvw;
 }
@@ -1883,7 +1880,7 @@ a {
     display: none;
   }
 }
-.prose[data-v-40c1a883] {
+.prose[data-v-23527c5f] {
   max-width: 100% !important;
   padding-left: 2rem;
   padding-right: 2rem;
