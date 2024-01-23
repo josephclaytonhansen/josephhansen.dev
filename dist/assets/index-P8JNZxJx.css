@@ -1516,9 +1516,6 @@ select {
 .pr-2 {
   padding-right: 0.5rem;
 }
-.pt-10 {
-  padding-top: 2.5rem;
-}
 .pt-4 {
   padding-top: 1rem;
 }
@@ -1848,7 +1845,7 @@ a {
     padding-top: 0.75rem;
   }
 }
-#logoText[data-v-d583f98d] {
+#logoText[data-v-b2f52ab3] {
   transition: all 0.2s ease-in-out;
 }
 #perfChart[data-v-8a92440e] {
@@ -1883,7 +1880,7 @@ a {
   padding-right: 2rem;
 }
 @media (max-width: 768px) {
-  main[data-v-8920e147] {
+  main[data-v-bf28247f] {
     padding-bottom: 15vh;
     padding-left: 3vw;
     padding-right: 3vw;

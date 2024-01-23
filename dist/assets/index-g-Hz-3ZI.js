@@ -568,10 +568,10 @@ function Xr(e, t, n) {
       !t && St(a, "iterate", f ? ma : In),
       {
         next() {
-          const { value: m, done: k } = d.next()
+          const { value: b, done: k } = d.next()
           return k
-            ? { value: m, done: k }
-            : { value: u ? [h(m[0]), h(m[1])] : h(m), done: k }
+            ? { value: b, done: k }
+            : { value: u ? [h(b[0]), h(b[1])] : h(b), done: k }
         },
         [Symbol.iterator]() {
           return this
@@ -975,8 +975,8 @@ function T0(e, t, ...n) {
     i = a && t.slice(7)
   if (i && i in r) {
     const h = `${i === "modelValue" ? "model" : i}Modifiers`,
-      { number: m, trim: k } = r[h] || He
-    k && (s = n.map((P) => (tt(P) ? P.trim() : P))), m && (s = n.map(va))
+      { number: b, trim: k } = r[h] || He
+    k && (s = n.map((P) => (tt(P) ? P.trim() : P))), b && (s = n.map(va))
   }
   let u,
     f = r[(u = ta(t))] || r[(u = ta(Yt(t)))]
@@ -1055,7 +1055,7 @@ function ra(e) {
     attrs: f,
     emit: d,
     render: h,
-    renderCache: m,
+    renderCache: b,
     data: k,
     setupState: P,
     ctx: F,
@@ -1067,7 +1067,7 @@ function ra(e) {
     if (n.shapeFlag & 4) {
       const X = s || r,
         B = X
-      ;(C = Vt(h.call(B, X, m, a, P, k, F))), (R = f)
+      ;(C = Vt(h.call(B, X, b, a, P, k, F))), (R = f)
     } else {
       const X = t
       ;(C = Vt(
@@ -1113,8 +1113,8 @@ function F0(e, t, n) {
     if (f & 16) return r ? To(r, i, d) : !!i
     if (f & 8) {
       const h = t.dynamicProps
-      for (let m = 0; m < h.length; m++) {
-        const k = h[m]
+      for (let b = 0; b < h.length; b++) {
+        const k = h[b]
         if (i[k] !== r[k] && !ms(d, k)) return !0
       }
     }
@@ -1203,16 +1203,16 @@ function Ja(
   }
   const d = a0() === ((f = ct) == null ? void 0 : f.scope) ? ct : null
   let h,
-    m = !1,
+    b = !1,
     k = !1
   if (
     (pt(e)
-      ? ((h = () => e.value), (m = os(e)))
+      ? ((h = () => e.value), (b = os(e)))
       : nr(e)
         ? ((h = () => e), (r = !0))
         : ge(e)
           ? ((k = !0),
-            (m = e.some((B) => nr(B) || os(B))),
+            (b = e.some((B) => nr(B) || os(B))),
             (h = () =>
               e.map((B) => {
                 if (pt(B)) return B.value
@@ -1252,7 +1252,7 @@ function Ja(
     if (!(!W.active || !W.dirty))
       if (t) {
         const B = W.run()
-        ;(r || m || (k ? B.some((D, de) => _n(D, C[de])) : _n(B, C))) &&
+        ;(r || b || (k ? B.some((D, de) => _n(D, C[de])) : _n(B, C))) &&
           (P && P(),
           Ht(t, d, 3, [B, C === Zr ? void 0 : k && C[0] === Zr ? [] : C, F]),
           (C = B))
@@ -1484,9 +1484,9 @@ const _a = (e) => (e ? (xu(e) ? $s(e) || e.proxy : _a(e.parent)) : null),
         }
       }
       const h = _r[t]
-      let m, k
+      let b, k
       if (h) return t === "$attrs" && St(e, "get", t), h(e)
-      if ((m = u.__cssModules) && (m = m[t])) return m
+      if ((b = u.__cssModules) && (b = b[t])) return b
       if (n !== He && Pe(n, t)) return (i[t] = 4), n[t]
       if (((k = f.config.globalProperties), Pe(k, t))) return k[t]
     },
@@ -1550,7 +1550,7 @@ function rv(e) {
     provide: f,
     inject: d,
     created: h,
-    beforeMount: m,
+    beforeMount: b,
     mounted: k,
     beforeUpdate: P,
     updated: F,
@@ -1605,7 +1605,7 @@ function rv(e) {
     ge(J) ? J.forEach((mt) => ne(mt.bind(n))) : J && ne(J.bind(n))
   }
   if (
-    (q(Y0, m),
+    (q(Y0, b),
     q(gt, k),
     q(uu, P),
     q(X0, F),
@@ -1828,13 +1828,13 @@ function uv(e, t) {
       directive(d, h) {
         return h ? ((a.directives[d] = h), f) : a.directives[d]
       },
-      mount(d, h, m) {
+      mount(d, h, b) {
         if (!u) {
           const k = le(r, s)
           return (
             (k.appContext = a),
-            m === !0 ? (m = "svg") : m === !1 && (m = void 0),
-            h && t ? t(k, d) : e(k, d, m),
+            b === !0 ? (b = "svg") : b === !1 && (b = void 0),
+            h && t ? t(k, d) : e(k, d, b),
             (u = !0),
             (f._container = d),
             (d.__vue_app__ = f),
@@ -1900,8 +1900,8 @@ function fv(e, t, n, r) {
   if ((r || i > 0) && !(i & 16)) {
     if (i & 8) {
       const h = e.vnode.dynamicProps
-      for (let m = 0; m < h.length; m++) {
-        let k = h[m]
+      for (let b = 0; b < h.length; b++) {
+        let k = h[b]
         if (ms(e.emitsOptions, k)) continue
         const P = t[k]
         if (f)
@@ -1916,14 +1916,14 @@ function fv(e, t, n, r) {
   } else {
     du(e, t, s, a) && (d = !0)
     let h
-    for (const m in u)
-      (!t || (!Pe(t, m) && ((h = fr(m)) === m || !Pe(t, h)))) &&
+    for (const b in u)
+      (!t || (!Pe(t, b) && ((h = fr(b)) === b || !Pe(t, h)))) &&
         (f
           ? n &&
-            (n[m] !== void 0 || n[h] !== void 0) &&
-            (s[m] = Ea(f, u, m, void 0, e, !0))
-          : delete s[m])
-    if (a !== u) for (const m in a) (!t || !Pe(t, m)) && (delete a[m], (d = !0))
+            (n[b] !== void 0 || n[h] !== void 0) &&
+            (s[b] = Ea(f, u, b, void 0, e, !0))
+          : delete s[b])
+    if (a !== u) for (const b in a) (!t || !Pe(t, b)) && (delete a[b], (d = !0))
   }
   d && nn(e, "set", "$attrs")
 }
@@ -1947,8 +1947,8 @@ function du(e, t, n, r) {
     const f = Ie(n),
       d = u || He
     for (let h = 0; h < a.length; h++) {
-      const m = a[h]
-      n[m] = Ea(s, f, m, d[m], e, !Pe(d, m))
+      const b = a[h]
+      n[b] = Ea(s, f, b, d[b], e, !Pe(d, b))
     }
   }
   return i
@@ -1977,9 +1977,9 @@ function hu(e, t, n = !1) {
     u = []
   let f = !1
   if (!be(e)) {
-    const h = (m) => {
+    const h = (b) => {
       f = !0
-      const [k, P] = hu(m, t, !0)
+      const [k, P] = hu(b, t, !0)
       dt(i, k), P && u.push(...P)
     }
     !n && t.mixins.length && t.mixins.forEach(h),
@@ -1989,21 +1989,21 @@ function hu(e, t, n = !1) {
   if (!a && !f) return ze(e) && r.set(e, er), er
   if (ge(a))
     for (let h = 0; h < a.length; h++) {
-      const m = Yt(a[h])
-      Do(m) && (i[m] = He)
+      const b = Yt(a[h])
+      Do(b) && (i[b] = He)
     }
   else if (a)
     for (const h in a) {
-      const m = Yt(h)
-      if (Do(m)) {
+      const b = Yt(h)
+      if (Do(b)) {
         const k = a[h],
-          P = (i[m] = ge(k) || be(k) ? { type: k } : dt({}, k))
+          P = (i[b] = ge(k) || be(k) ? { type: k } : dt({}, k))
         if (P) {
           const F = qo(Boolean, P.type),
             _ = qo(String, P.type)
           ;(P[0] = F > -1),
             (P[1] = _ < 0 || F < _),
-            (F > -1 || Pe(P, "default")) && u.push(m)
+            (F > -1 || Pe(P, "default")) && u.push(b)
         }
       }
     }
@@ -2079,12 +2079,12 @@ function Sa(e, t, n, r, s = !1) {
     { i: u, r: f } = e,
     d = t && t.r,
     h = u.refs === He ? (u.refs = {}) : u.refs,
-    m = u.setupState
+    b = u.setupState
   if (
     (d != null &&
       d !== f &&
       (tt(d)
-        ? ((h[d] = null), Pe(m, d) && (m[d] = null))
+        ? ((h[d] = null), Pe(b, d) && (b[d] = null))
         : pt(d) && (d.value = null)),
     be(f))
   )
@@ -2095,17 +2095,17 @@ function Sa(e, t, n, r, s = !1) {
     if (k || P) {
       const F = () => {
         if (e.f) {
-          const _ = k ? (Pe(m, f) ? m[f] : h[f]) : f.value
+          const _ = k ? (Pe(b, f) ? b[f] : h[f]) : f.value
           s
             ? ge(_) && La(_, a)
             : ge(_)
               ? _.includes(a) || _.push(a)
               : k
-                ? ((h[f] = [a]), Pe(m, f) && (m[f] = h[f]))
+                ? ((h[f] = [a]), Pe(b, f) && (b[f] = h[f]))
                 : ((f.value = [a]), e.k && (h[e.k] = f.value))
         } else
           k
-            ? ((h[f] = i), Pe(m, f) && (m[f] = i))
+            ? ((h[f] = i), Pe(b, f) && (b[f] = i))
             : P && ((f.value = i), e.k && (h[e.k] = i))
       }
       i ? ((F.id = -1), Et(F, n)) : F()
@@ -2128,7 +2128,7 @@ function gv(e, t) {
       createComment: f,
       setText: d,
       setElementText: h,
-      parentNode: m,
+      parentNode: b,
       nextSibling: k,
       setScopeId: P = Tt,
       insertStaticContent: F,
@@ -2286,7 +2286,7 @@ function gv(e, t) {
           L = y[U],
           ee =
             K.el && (K.type === Qe || !yr(K, L) || K.shapeFlag & 70)
-              ? m(K.el)
+              ? b(K.el)
               : E
         _(K, L, ee, null, A, T, j, Y, !0)
       }
@@ -2368,7 +2368,7 @@ function gv(e, t) {
             const Ue = ra(p),
               kt = p.subTree
             ;(p.subTree = Ue),
-              _(kt, Ue, m(kt.el), I(kt), p, T, j),
+              _(kt, Ue, b(kt.el), I(kt), p, T, j),
               (ee.el = Ue.el),
               Ae === null && L0(p, Ue.el),
               oe && Et(oe, T),
@@ -2765,7 +2765,7 @@ function yu(e) {
   )
 }
 function Fe(e, t, n, r, s, a) {
-  return yu(b(e, t, n, r, s, a, !0))
+  return yu(m(e, t, n, r, s, a, !0))
 }
 function Ke(e, t, n, r, s) {
   return yu(le(e, t, n, r, s, !0))
@@ -2786,7 +2786,7 @@ const _s = "__vInternal",
         : e
       : null
   )
-function b(
+function m(
   e,
   t = null,
   n = null,
@@ -2858,7 +2858,7 @@ function xv(e, t = null, n = null, r = 0, s = null, a = !1) {
       ze(f) && (Ui(f) && !ge(f) && (f = dt({}, f)), (t.style = Da(f)))
   }
   const i = tt(e) ? 1 : q0(e) ? 128 : yv(e) ? 64 : ze(e) ? 4 : be(e) ? 2 : 0
-  return b(e, t, n, r, s, i, a, !0)
+  return m(e, t, n, r, s, i, a, !0)
 }
 function _v(e) {
   return e ? (Ui(e) || _s in e ? dt({}, e) : e) : null
@@ -3609,19 +3609,19 @@ function ua({ props: e, attrs: t, slots: n, slot: r, name: s }) {
     d = (a = n.default) == null ? void 0 : a.call(n, r),
     h = {}
   if (r) {
-    let m = !1,
+    let b = !1,
       k = []
     for (let [P, F] of Object.entries(r))
-      typeof F == "boolean" && (m = !0), F === !0 && k.push(P)
-    m && (h["data-headlessui-state"] = k.join(" "))
+      typeof F == "boolean" && (b = !0), F === !0 && k.push(P)
+    b && (h["data-headlessui-state"] = k.join(" "))
   }
   if (u === "template") {
     if (
       ((d = ku(d ?? [])),
       Object.keys(f).length > 0 || Object.keys(t).length > 0)
     ) {
-      let [m, ...k] = d ?? []
-      if (!vp(m) || k.length > 0)
+      let [b, ...k] = d ?? []
+      if (!vp(b) || k.length > 0)
         throw new Error(
           [
             'Passing props on "template"!',
@@ -3645,8 +3645,8 @@ function ua({ props: e, attrs: t, slots: n, slot: r, name: s }) {
           ].join(`
 `),
         )
-      let P = $u((i = m.props) != null ? i : {}, f),
-        F = jn(m, P)
+      let P = $u((i = b.props) != null ? i : {}, f),
+        F = jn(b, P)
       for (let _ in P)
         _.startsWith("on") && (F.props || (F.props = {}), (F.props[_] = P[_]))
       return F
@@ -3950,18 +3950,18 @@ function Pt(
       )
     })(),
     h = t & 32 ? { preventScroll: !0 } : {},
-    m = 0,
+    b = 0,
     k = u.length,
     P
   do {
-    if (m >= k || m + k <= 0) return 0
-    let F = d + m
+    if (b >= k || b + k <= 0) return 0
+    let F = d + b
     if (t & 16) F = (F + k) % k
     else {
       if (F < 0) return 3
       if (F >= k) return 1
     }
-    ;(P = u[F]), P == null || P.focus(h), (m += f)
+    ;(P = u[F]), P == null || P.focus(h), (b += f)
   } while (P !== i.activeElement)
   return t & 6 && Ep(P) && P.select(), 2
 }
@@ -4223,7 +4223,7 @@ let Oa = At({
         f = _e(null),
         d = _e(null),
         h = _e(null),
-        m = ie(() => dr(a)),
+        b = ie(() => dr(a)),
         k = ie(() => {
           var B, D
           if (!se(u) || !se(h)) return !1
@@ -4291,18 +4291,18 @@ let Oa = At({
         var B, D, de, pe
         return (pe = _ == null ? void 0 : _.isFocusWithinPopoverGroup()) != null
           ? pe
-          : ((B = m.value) == null ? void 0 : B.activeElement) &&
+          : ((B = b.value) == null ? void 0 : B.activeElement) &&
               (((D = se(u)) == null
                 ? void 0
-                : D.contains(m.value.activeElement)) ||
+                : D.contains(b.value.activeElement)) ||
                 ((de = se(h)) == null
                   ? void 0
-                  : de.contains(m.value.activeElement)))
+                  : de.contains(b.value.activeElement)))
       }
       return (
         sn(() => (C == null ? void 0 : C(F))),
         Pp(
-          (s = m.value) == null ? void 0 : s.defaultView,
+          (s = b.value) == null ? void 0 : s.defaultView,
           "focus",
           (B) => {
             var D, de
@@ -4373,7 +4373,7 @@ let Oa = At({
         f = Rp(),
         d = ie(() => (f === null ? !1 : f.value === s.panelId.value)),
         h = _e(null),
-        m = `headlessui-focus-sentinel-${Tn()}`
+        b = `headlessui-focus-sentinel-${Tn()}`
       d.value ||
         sn(() => {
           s.button.value = h.value
@@ -4490,7 +4490,7 @@ let Oa = At({
             !d.value &&
             s.isPortalled.value &&
             lt(or, {
-              id: m,
+              id: b,
               features: lr.Focusable,
               "data-headlessui-focus-guard": !0,
               as: "button",
@@ -4538,7 +4538,7 @@ let Oa = At({
             ? (d.value & Or.Open) === Or.Open
             : a.popoverState.value === 0,
         )
-      function m(C) {
+      function b(C) {
         var R, V
         switch (C.key) {
           case at.Escape:
@@ -4632,7 +4632,7 @@ let Oa = At({
           X = {
             ref: a.panel,
             id: R,
-            onKeydown: m,
+            onKeydown: b,
             onFocusout: s && a.popoverState.value === 0 ? k : void 0,
             tabIndex: -1,
           }
@@ -4752,8 +4752,8 @@ let al = Symbol("TabsSSRContext"),
         d = ie(() => (f.value ? e.selectedIndex : a.value))
       function h(_) {
         var C
-        let R = Jn(m.tabs.value, se),
-          V = Jn(m.panels.value, se),
+        let R = Jn(b.tabs.value, se),
+          V = Jn(b.panels.value, se),
           W = R.filter((X) => {
             var B
             return !((B = se(X)) != null && B.hasAttribute("disabled"))
@@ -4769,19 +4769,19 @@ let al = Symbol("TabsSSRContext"),
               0: () => R.indexOf(W[0]),
               1: () => R.indexOf(W[W.length - 1]),
             })
-          B !== -1 && (a.value = B), (m.tabs.value = R), (m.panels.value = V)
+          B !== -1 && (a.value = B), (b.tabs.value = R), (b.panels.value = V)
         } else {
           let X = R.slice(0, _),
             B = [...R.slice(_), ...X].find((de) => W.includes(de))
           if (!B) return
-          let D = (C = R.indexOf(B)) != null ? C : m.selectedIndex.value
-          D === -1 && (D = m.selectedIndex.value),
+          let D = (C = R.indexOf(B)) != null ? C : b.selectedIndex.value
+          D === -1 && (D = b.selectedIndex.value),
             (a.value = D),
-            (m.tabs.value = R),
-            (m.panels.value = V)
+            (b.tabs.value = R),
+            (b.panels.value = V)
         }
       }
-      let m = {
+      let b = {
         selectedIndex: ie(() => {
           var _, C
           return (C = (_ = a.value) != null ? _ : e.defaultIndex) != null
@@ -4815,7 +4815,7 @@ let al = Symbol("TabsSSRContext"),
           C !== -1 && u.value.splice(C, 1)
         },
       }
-      Kt(Tu, m)
+      Kt(Tu, b)
       let k = _e({ tabs: [], panels: [] }),
         P = _e(!1)
       gt(() => {
@@ -4838,11 +4838,11 @@ let al = Symbol("TabsSSRContext"),
           )
         }),
         sn(() => {
-          if (!f.value || d.value == null || m.tabs.value.length <= 0) return
-          let _ = Jn(m.tabs.value, se)
-          _.some((C, R) => se(m.tabs.value[R]) !== se(C)) &&
-            m.setSelectedIndex(
-              _.findIndex((C) => se(C) === se(m.tabs.value[d.value])),
+          if (!f.value || d.value == null || b.tabs.value.length <= 0) return
+          let _ = Jn(b.tabs.value, se)
+          _.some((C, R) => se(b.tabs.value[R]) !== se(C)) &&
+            b.setSelectedIndex(
+              _.findIndex((C) => se(C) === se(b.tabs.value[d.value])),
             )
         }),
         () => {
@@ -4936,7 +4936,7 @@ let al = Symbol("TabsSSRContext"),
         }
         return V
       }
-      function m(C) {
+      function b(C) {
         let R = s.tabs.value.map((V) => se(V)).filter(Boolean)
         if (C.key === at.Space || C.key === at.Enter) {
           C.preventDefault(), C.stopPropagation(), s.setSelectedIndex(f.value)
@@ -5001,7 +5001,7 @@ let al = Symbol("TabsSSRContext"),
           { id: V, ...W } = e,
           X = {
             ref: a,
-            onKeydown: m,
+            onKeydown: b,
             onMousedown: F,
             onClick: P,
             id: V,
@@ -5072,7 +5072,7 @@ let al = Symbol("TabsSSRContext"),
         d = ie(() => f.value === s.selectedIndex.value)
       return () => {
         var h
-        let m = { selected: d.value },
+        let b = { selected: d.value },
           { id: k, tabIndex: P, ...F } = e,
           _ = {
             ref: a,
@@ -5087,7 +5087,7 @@ let al = Symbol("TabsSSRContext"),
           : ln({
               ourProps: _,
               theirProps: F,
-              slot: m,
+              slot: b,
               attrs: t,
               slots: n,
               features: Ar.Static | Ar.RenderStrategy,
@@ -5405,9 +5405,9 @@ let al = Symbol("TabsSSRContext"),
     ["path", { d: "M18 6 6 18", key: "1bl5f8" }],
     ["path", { d: "m6 6 12 12", key: "d8bk6v" }],
   ]),
-  ll = (e) => (Xa("data-v-d583f98d"), (e = e()), Za(), e),
+  ll = (e) => (Xa("data-v-b2f52ab3"), (e = e()), Za(), e),
   ng = { class: "flex justify-center p-5 gap-5 content-center" },
-  rg = ll(() => b("div", { class: "w-1/12" }, null, -1)),
+  rg = ll(() => m("div", { class: "w-1/12" }, null, -1)),
   sg = { class: "flex justify-between gap-2 w-full content-center" },
   ag = { class: "flex gap-1 p-2" },
   lg = { class: "flex gap-5 p-2 relative" },
@@ -5419,22 +5419,23 @@ let al = Symbol("TabsSSRContext"),
     "aria-orientation": "vertical",
     "aria-labelledby": "options-menu",
   },
-  cg = ll(() => b("b", null, "Art and Animation", -1)),
+  cg = ll(() => m("b", null, "Art and Animation", -1)),
   fg = [cg],
   dg = { class: "flex gap-5 content-center" },
-  hg = { class: "lg:hidden flex" },
-  vg = { class: "flex gap-1 p-2" },
-  pg = { class: "flex flex-col gap-2 p-2" },
-  gg = { class: "flex justify-between" },
-  bg = ll(() => b("div", { class: "w-1/12" }, null, -1)),
-  mg = { class: "flex justify-between items-center" },
-  yg = { class: "flex gap-1 p-2" },
-  wg = kv(
-    '<a href="/contact" data-v-d583f98d><li class="py-2 px-3 rounded" data-v-d583f98d>Contact</li></a><a href="/portfolio" data-v-d583f98d><li class="py-2 px-3 rounded" data-v-d583f98d>Web Portfolio</li></a><a href="/" data-v-d583f98d><li class="py-2 px-3 rounded" data-v-d583f98d>Web Services</li></a><li class="py-2 px-3 rounded opacity-75" data-v-d583f98d>Creative Projects</li><ul class="ml-5" data-v-d583f98d><li class="py-2 px-3 rounded" data-v-d583f98d>Art and Animation</li><li class="py-2 px-3 rounded" data-v-d583f98d>Blog / Non-Fiction Writings</li><li class="py-2 px-3 rounded" data-v-d583f98d>Custom Software</li><li class="py-2 px-3 rounded" data-v-d583f98d>Cooking and Recipes</li></ul><a href="/about-me" data-v-d583f98d><li class="py-2 px-3 rounded" data-v-d583f98d>About Me</li></a>',
+  hg = { href: "/contact" },
+  vg = { class: "lg:hidden flex" },
+  pg = { class: "flex gap-1 p-2" },
+  gg = { class: "flex flex-col gap-2 p-2" },
+  bg = { class: "flex justify-between" },
+  mg = ll(() => m("div", { class: "w-1/12" }, null, -1)),
+  yg = { class: "flex justify-between items-center" },
+  wg = { class: "flex gap-1 p-2" },
+  xg = kv(
+    '<a href="/contact" data-v-b2f52ab3><li class="py-2 px-3 rounded" data-v-b2f52ab3>Contact</li></a><a href="/portfolio" data-v-b2f52ab3><li class="py-2 px-3 rounded" data-v-b2f52ab3>Web Portfolio</li></a><a href="/" data-v-b2f52ab3><li class="py-2 px-3 rounded" data-v-b2f52ab3>Web Services</li></a><li class="py-2 px-3 rounded opacity-75" data-v-b2f52ab3>Creative Projects</li><ul class="ml-5" data-v-b2f52ab3><li class="py-2 px-3 rounded" data-v-b2f52ab3>Art and Animation</li><li class="py-2 px-3 rounded" data-v-b2f52ab3>Blog / Non-Fiction Writings</li><li class="py-2 px-3 rounded" data-v-b2f52ab3>Custom Software</li><li class="py-2 px-3 rounded" data-v-b2f52ab3>Cooking and Recipes</li></ul><a href="/about-me" data-v-b2f52ab3><li class="py-2 px-3 rounded" data-v-b2f52ab3>About Me</li></a>',
     6,
   ),
-  xg = [wg],
-  _g = {
+  _g = [xg],
+  kg = {
     __name: "Header",
     emits: ["update:brightness"],
     setup(e, { emit: t }) {
@@ -5462,9 +5463,9 @@ let al = Symbol("TabsSSRContext"),
           Qe,
           null,
           [
-            b("div", ng, [
+            m("div", ng, [
               rg,
-              b(
+              m(
                 "div",
                 {
                   class: M([
@@ -5479,8 +5480,8 @@ let al = Symbol("TabsSSRContext"),
                   ]),
                 },
                 [
-                  b("div", sg, [
-                    b("div", ag, [
+                  m("div", sg, [
+                    m("div", ag, [
                       le(
                         fe(ca),
                         {
@@ -5496,7 +5497,7 @@ let al = Symbol("TabsSSRContext"),
                         8,
                         ["class"],
                       ),
-                      b(
+                      m(
                         "p",
                         {
                           class: M([
@@ -5519,9 +5520,9 @@ let al = Symbol("TabsSSRContext"),
                         2,
                       ),
                     ]),
-                    b("div", lg, [
-                      b("a", og, [
-                        b(
+                    m("div", lg, [
+                      m("a", og, [
+                        m(
                           "h6",
                           {
                             class: M([
@@ -5539,8 +5540,8 @@ let al = Symbol("TabsSSRContext"),
                           2,
                         ),
                       ]),
-                      b("a", ig, [
-                        b(
+                      m("a", ig, [
+                        m(
                           "h6",
                           {
                             class: M([
@@ -5604,8 +5605,8 @@ let al = Symbol("TabsSSRContext"),
                               },
                               {
                                 default: ut(() => [
-                                  b("div", ug, [
-                                    b(
+                                  m("div", ug, [
+                                    m(
                                       "a",
                                       {
                                         href: "#",
@@ -5624,7 +5625,7 @@ let al = Symbol("TabsSSRContext"),
                                       fg,
                                       2,
                                     ),
-                                    b(
+                                    m(
                                       "a",
                                       {
                                         href: "#",
@@ -5643,7 +5644,7 @@ let al = Symbol("TabsSSRContext"),
                                       "Blog / Non-Fiction Writings",
                                       2,
                                     ),
-                                    b(
+                                    m(
                                       "a",
                                       {
                                         href: "#",
@@ -5662,7 +5663,7 @@ let al = Symbol("TabsSSRContext"),
                                       "Custom Software",
                                       2,
                                     ),
-                                    b(
+                                    m(
                                       "a",
                                       {
                                         href: "#",
@@ -5692,7 +5693,7 @@ let al = Symbol("TabsSSRContext"),
                           _: 1,
                         },
                       ),
-                      b(
+                      m(
                         "h6",
                         {
                           class: M([
@@ -5710,29 +5711,31 @@ let al = Symbol("TabsSSRContext"),
                         2,
                       ),
                     ]),
-                    b("div", dg, [
-                      b(
-                        "button",
-                        {
-                          class: M([
-                            {
-                              "bg-emerald-600": n.value >= 4,
-                              "bg-slate-500": n.value == 3,
-                              "bg-orange-600": n.value == 2,
-                              "bg-orange-500": n.value == 1,
-                            },
-                            "py-2 px-3 rounded text-white",
-                          ]),
-                        },
-                        " Contact ",
-                        2,
-                      ),
+                    m("div", dg, [
+                      m("a", hg, [
+                        m(
+                          "button",
+                          {
+                            class: M([
+                              {
+                                "bg-emerald-600": n.value >= 4,
+                                "bg-slate-500": n.value == 3,
+                                "bg-orange-600": n.value == 2,
+                                "bg-orange-500": n.value == 1,
+                              },
+                              "py-2 px-3 rounded text-white",
+                            ]),
+                          },
+                          " Contact ",
+                          2,
+                        ),
+                      ]),
                     ]),
                   ]),
                 ],
                 2,
               ),
-              b(
+              m(
                 "div",
                 {
                   id: "headerRightColumn",
@@ -5748,8 +5751,8 @@ let al = Symbol("TabsSSRContext"),
                   ]),
                 },
                 [
-                  b("div", hg, [
-                    b("div", vg, [
+                  m("div", vg, [
+                    m("div", pg, [
                       le(
                         fe(ca),
                         {
@@ -5765,7 +5768,7 @@ let al = Symbol("TabsSSRContext"),
                         8,
                         ["class"],
                       ),
-                      b(
+                      m(
                         "p",
                         {
                           class: M([
@@ -5868,10 +5871,10 @@ let al = Symbol("TabsSSRContext"),
                         },
                         {
                           default: ut(() => [
-                            b("div", pg, [
-                              b("div", gg, [
+                            m("div", gg, [
+                              m("div", bg, [
                                 lu(
-                                  b(
+                                  m(
                                     "input",
                                     {
                                       type: "range",
@@ -5900,9 +5903,9 @@ let al = Symbol("TabsSSRContext"),
                 ],
                 2,
               ),
-              bg,
+              mg,
             ]),
-            b(
+            m(
               "div",
               {
                 id: "mobileMenu",
@@ -5918,8 +5921,8 @@ let al = Symbol("TabsSSRContext"),
                 ]),
               },
               [
-                b("div", mg, [
-                  b("div", yg, [
+                m("div", yg, [
+                  m("div", wg, [
                     le(
                       fe(ca),
                       {
@@ -5935,7 +5938,7 @@ let al = Symbol("TabsSSRContext"),
                       8,
                       ["class"],
                     ),
-                    b(
+                    m(
                       "p",
                       {
                         class: M([
@@ -5975,7 +5978,7 @@ let al = Symbol("TabsSSRContext"),
                     ["class"],
                   ),
                 ]),
-                b(
+                m(
                   "ul",
                   {
                     class: M([
@@ -5989,7 +5992,7 @@ let al = Symbol("TabsSSRContext"),
                       },
                     ]),
                   },
-                  xg,
+                  _g,
                   2,
                 ),
               ],
@@ -6001,13 +6004,13 @@ let al = Symbol("TabsSSRContext"),
       )
     },
   },
-  kg = Tr(_g, [["__scopeId", "data-v-d583f98d"]]),
-  $g = { class: "flex justify-center py-5 flex-col" },
-  Eg = { class: "inline-block relative" },
-  Sg = { class: "font-semibold text-center px-1" },
-  Cg = { class: "flex py-5 justify-center gap-3 w-full" },
-  Pg = { href: "/pricing" },
-  Mg = {
+  $g = Tr(kg, [["__scopeId", "data-v-b2f52ab3"]]),
+  Eg = { class: "flex justify-center py-5 flex-col" },
+  Sg = { class: "inline-block relative" },
+  Cg = { class: "font-semibold text-center px-1" },
+  Pg = { class: "flex py-5 justify-center gap-3 w-full" },
+  Mg = { href: "/pricing" },
+  Ag = {
     directives: {
       typewriter: {
         beforeUpdate(e, t) {
@@ -6025,7 +6028,7 @@ let al = Symbol("TabsSSRContext"),
       },
     },
   },
-  Ag = Object.assign(Mg, {
+  Og = Object.assign(Ag, {
     __name: "Hero",
     props: { brightness: Number },
     setup(e) {
@@ -6086,8 +6089,8 @@ let al = Symbol("TabsSSRContext"),
         const u = z0("typewriter")
         return (
           he(),
-          Fe("div", $g, [
-            b(
+          Fe("div", Eg, [
+            m(
               "h1",
               {
                 class: M([
@@ -6103,11 +6106,11 @@ let al = Symbol("TabsSSRContext"),
               },
               [
                 xe(" I make "),
-                b("div", Eg, [
-                  lu((he(), Fe("span", Sg, [xe(Rt(s.value), 1)])), [
+                m("div", Sg, [
+                  lu((he(), Fe("span", Cg, [xe(Rt(s.value), 1)])), [
                     [u, s.value],
                   ]),
-                  b(
+                  m(
                     "div",
                     {
                       class: M([
@@ -6128,7 +6131,7 @@ let al = Symbol("TabsSSRContext"),
               ],
               2,
             ),
-            b(
+            m(
               "p",
               {
                 class: M([
@@ -6145,8 +6148,8 @@ let al = Symbol("TabsSSRContext"),
               " Hi, I'm Joseph. I'm a full-stack web developer. What can I do for you? ",
               2,
             ),
-            b("div", Cg, [
-              b(
+            m("div", Pg, [
+              m(
                 "button",
                 {
                   "aria-label": "View my portfolio",
@@ -6163,8 +6166,8 @@ let al = Symbol("TabsSSRContext"),
                 " Portfolio ",
                 2,
               ),
-              b("a", Pg, [
-                b(
+              m("a", Mg, [
+                m(
                   "button",
                   {
                     "aria-label":
@@ -6188,7 +6191,7 @@ let al = Symbol("TabsSSRContext"),
       }
     },
   })
-var Og =
+var Ig =
   typeof globalThis < "u"
     ? globalThis
     : typeof window < "u"
@@ -6198,7 +6201,7 @@ var Og =
         : typeof self < "u"
           ? self
           : {}
-function Ig(e) {
+function Rg(e) {
   return e && e.__esModule && Object.prototype.hasOwnProperty.call(e, "default")
     ? e.default
     : e
@@ -6262,7 +6265,7 @@ var ju = { exports: {} }
  */ ;(function (e, t) {
   ;(function (n, r) {
     e.exports = r()
-  })(Og, function () {
+  })(Ig, function () {
     for (
       var n = function (l, o, c) {
           return (
@@ -6304,7 +6307,7 @@ var ju = { exports: {} }
         return a[Object.prototype.toString.call(l)] || "object"
       },
       h = d,
-      m = function (l, o) {
+      b = function (l, o) {
         return (
           o === void 0 && (o = null),
           l.length >= 3
@@ -6332,7 +6335,7 @@ var ju = { exports: {} }
         clip_rgb: s,
         limit: n,
         type: d,
-        unpack: m,
+        unpack: b,
         last: P,
         PI: F,
         TWOPI: F * 2,
@@ -9323,9 +9326,9 @@ var ju = { exports: {} }
     return Uh
   })
 })(ju)
-var Rg = ju.exports
-const Ye = Ig(Rg),
-  Tg = {
+var Tg = ju.exports
+const Ye = Rg(Tg),
+  Ng = {
     __name: "PanelDesign",
     props: { brightness: Number },
     setup(e) {
@@ -9361,17 +9364,17 @@ const Ye = Ig(Rg),
       )
     },
   },
-  Ng = {
+  jg = {
     __name: "PanelDevelopment",
     props: { brightness: Number },
     setup(e) {
       return (t, n) => null
     },
   },
-  jg = { class: "prose text-center" },
-  Fg = b("br", null, null, -1),
-  Lg = { href: "/pricing" },
-  Bg = { id: "cta" },
+  Fg = { class: "prose text-center" },
+  Lg = m("br", null, null, -1),
+  Bg = { href: "/pricing" },
+  Dg = { id: "cta" },
   ol = {
     __name: "ctaForm",
     props: { brightness: Number },
@@ -9418,7 +9421,7 @@ const Ye = Ig(Rg),
                 ),
                 h.status == 200)
               ) {
-                let m = document.getElementById("cta"),
+                let b = document.getElementById("cta"),
                   k = document.createElement("div")
                 k.classList.add(
                   "text-center",
@@ -9429,10 +9432,10 @@ const Ye = Ig(Rg),
                 ),
                   (k.innerHTML =
                     "Thanks for your interest! Your submission has been processed."),
-                  m.appendChild(k)
-                let P = m.getElementsByTagName("input")
+                  b.appendChild(k)
+                let P = b.getElementsByTagName("input")
                 for (let C = 0; C < P.length; C++) P[C].style.display = "none"
-                let F = m.getElementsByTagName("textarea")[0]
+                let F = b.getElementsByTagName("textarea")[0]
                 F.style.display = "none"
                 let _ = document.getElementById("submitButton")
                 _.disabled = !0
@@ -9456,19 +9459,19 @@ const Ye = Ig(Rg),
             ]),
           },
           [
-            b("div", jg, [
-              b(
+            m("div", Fg, [
+              m(
                 "h4",
                 { class: M(["text-2xl", t(e.brightness)]) },
                 [
                   xe(" Piqued your interest?"),
-                  Fg,
+                  Lg,
                   xe(" Check out the (incredibly simple) service pricing: "),
                 ],
                 2,
               ),
-              b("a", Lg, [
-                b(
+              m("a", Bg, [
+                m(
                   "button",
                   {
                     "aria-label":
@@ -9488,31 +9491,31 @@ const Ye = Ig(Rg),
                   2,
                 ),
               ]),
-              b(
+              m(
                 "h4",
                 { class: M(["text-2xl mt-8", t(e.brightness)]) },
                 " Looking for a new site or a custom quote? Hit me up ",
                 2,
               ),
-              b("form", Bg, [
-                b("input", {
+              m("form", Dg, [
+                m("input", {
                   type: "text",
                   name: "name",
                   placeholder: "Name",
                   class: M(["rounded p-2 w-full", n]),
                 }),
-                b("input", {
+                m("input", {
                   type: "email",
                   name: "email",
                   placeholder: "Email",
                   class: M(["rounded p-2 w-full mt-3", n]),
                 }),
-                b("textarea", {
+                m("textarea", {
                   placeholder: "Message",
                   name: "message",
                   class: M(["rounded p-2 w-full mt-3", n]),
                 }),
-                b(
+                m(
                   "button",
                   {
                     id: "submitButton",
@@ -9541,14 +9544,14 @@ const Ye = Ig(Rg),
     },
   },
   Bn = (e) => (Xa("data-v-8a92440e"), (e = e()), Za(), e),
-  Dg = {
+  Hg = {
     class: "flex w-full gap-4 md:p-8 sm:p-4 items-center justify-center",
     id: "panelSpeed",
   },
-  Hg = { class: "flex flex-col items-center justify-center w-full" },
-  zg = { viewBox: "0 0 36 36", class: "chart" },
-  qg = Bn(() =>
-    b(
+  zg = { class: "flex flex-col items-center justify-center w-full" },
+  qg = { viewBox: "0 0 36 36", class: "chart" },
+  Wg = Bn(() =>
+    m(
       "path",
       {
         class: "circle-bg",
@@ -9564,80 +9567,80 @@ const Ye = Ig(Rg),
       -1,
     ),
   ),
-  Wg = ["stroke", "stroke-dasharray", "stroke-dashoffset"],
-  Ug = Bn(() =>
-    b(
+  Ug = ["stroke", "stroke-dasharray", "stroke-dashoffset"],
+  Vg = Bn(() =>
+    m(
       "p",
       null,
       " Page speed and network use are hugely important to your users. If your speed is bad, your users are gone. ",
       -1,
     ),
   ),
-  Vg = Bn(() =>
-    b(
+  Gg = Bn(() =>
+    m(
       "p",
       null,
       [
         xe(
           " I can help get those numbers up where they should be- making websites faster is a passion of mine. For example, this website you're on is using a whopping ",
         ),
-        b("b", null, "315 KB"),
+        m("b", null, "315 KB"),
         xe(". That's half of the classic SNES game "),
-        b("em", null, "The Legend of Zelda: A Link to The Past"),
+        m("em", null, "The Legend of Zelda: A Link to The Past"),
         xe(", or 4% of the bandwidth it takes just to open Instagram. "),
       ],
       -1,
     ),
   ),
-  Gg = Bn(() => b("p", null, "You want fast? Let's make it happen.", -1)),
-  Kg = { id: "speedTable" },
-  Yg = Bn(() =>
-    b(
+  Kg = Bn(() => m("p", null, "You want fast? Let's make it happen.", -1)),
+  Yg = { id: "speedTable" },
+  Xg = Bn(() =>
+    m(
       "colgroup",
       null,
       [
-        b("col", { style: { width: "30%" } }),
-        b("col", { style: { width: "70%" } }),
+        m("col", { style: { width: "30%" } }),
+        m("col", { style: { width: "70%" } }),
       ],
       -1,
     ),
   ),
-  Xg = { class: "flex" },
   Zg = { class: "flex" },
-  Jg = Bn(() =>
-    b(
+  Jg = { class: "flex" },
+  Qg = Bn(() =>
+    m(
       "tbody",
       null,
       [
-        b("tr", null, [
-          b("td", null, "Huge, resource-heavy images"),
-          b("td", null, [
+        m("tr", null, [
+          m("td", null, "Huge, resource-heavy images"),
+          m("td", null, [
             xe(" Optimize your images. "),
-            b("b", null, "A lot. "),
+            m("b", null, "A lot. "),
             xe(
               "Using cutting-edge techniques and algorithms, I average between 60-200% size reduction on most projects. ",
             ),
           ]),
         ]),
-        b("tr", null, [
-          b("td", null, "Unused code, plugins, and assets"),
-          b(
+        m("tr", null, [
+          m("td", null, "Unused code, plugins, and assets"),
+          m(
             "td",
             null,
             " Clean up your website significantly without impacting any functionality. Every website has a ton of garbage- let me take your garbage out! ",
           ),
         ]),
-        b("tr", null, [
-          b("td", null, "Inefficient, resource-heavy platforms"),
-          b(
+        m("tr", null, [
+          m("td", null, "Inefficient, resource-heavy platforms"),
+          m(
             "td",
             null,
             " I can help you migrate to a better platform, such as Vue, and get considerably smaller pages. 10-100x or more, usually. ",
           ),
         ]),
-        b("tr", null, [
-          b("td", null, "Uncached resources"),
-          b(
+        m("tr", null, [
+          m("td", null, "Uncached resources"),
+          m(
             "td",
             null,
             " Inefficient or non-existent caching can massively increase page load times, especially the Time to First Paint metric, which has a huge impact on your SEO. I can set up caching that will have an immediate impact on your search engine rankings and loading speeds. ",
@@ -9647,8 +9650,8 @@ const Ye = Ig(Rg),
       -1,
     ),
   ),
-  Qg = Bn(() => b("div", { class: "h-6" }, null, -1)),
-  eb = {
+  eb = Bn(() => m("div", { class: "h-6" }, null, -1)),
+  tb = {
     data() {
       return { radius: 16, circumference: 2 * Math.PI * 16, percentage: 97 }
     },
@@ -9659,7 +9662,7 @@ const Ye = Ig(Rg),
       },
     },
   },
-  tb = Object.assign(eb, {
+  nb = Object.assign(tb, {
     __name: "PanelSpeed",
     props: { brightness: Number },
     setup(e) {
@@ -9716,10 +9719,10 @@ const Ye = Ig(Rg),
                 : f == 2
                   ? (h = Ye("#1e293b"))
                   : f == 1 && (h = Ye("#0f172a"))
-          for (let m = 1; m < d.length; m++)
-            m % 2 == 0
-              ? (d[m].style.backgroundColor = h.brighten(0))
-              : (d[m].style.backgroundColor = h.brighten(0.2))
+          for (let b = 1; b < d.length; b++)
+            b % 2 == 0
+              ? (d[b].style.backgroundColor = h.brighten(0))
+              : (d[b].style.backgroundColor = h.brighten(0.2))
         }
       return (
         gt(() => {
@@ -9733,16 +9736,16 @@ const Ye = Ig(Rg),
         ),
         (f, d) => (
           he(),
-          Fe("div", Dg, [
-            b("div", Hg, [
-              b(
+          Fe("div", Hg, [
+            m("div", zg, [
+              m(
                 "div",
                 { id: "perfChart", class: M(r(e.brightness)) },
                 [
                   (he(),
-                  Fe("svg", zg, [
-                    qg,
-                    b(
+                  Fe("svg", qg, [
+                    Wg,
+                    m(
                       "path",
                       {
                         class: M(["circle", s(e.brightness)]),
@@ -9759,10 +9762,10 @@ const Ye = Ig(Rg),
                       },
                       null,
                       10,
-                      Wg,
+                      Ug,
                     ),
                   ])),
-                  b(
+                  m(
                     "div",
                     {
                       id: "chartInner",
@@ -9774,7 +9777,7 @@ const Ye = Ig(Rg),
                 ],
                 2,
               ),
-              b(
+              m(
                 "p",
                 {
                   class: M(["text-sm italic opacity-50 mt-3", a(e.brightness)]),
@@ -9783,7 +9786,7 @@ const Ye = Ig(Rg),
                   xe(
                     " Desktop performance score (using Google Page Speed) for the ",
                   ),
-                  b(
+                  m(
                     "a",
                     { href: "", class: M(n(e.brightness)) },
                     "OKC South Stake Project",
@@ -9792,7 +9795,7 @@ const Ye = Ig(Rg),
                 ],
                 2,
               ),
-              b(
+              m(
                 "div",
                 {
                   class: M([
@@ -9802,29 +9805,29 @@ const Ye = Ig(Rg),
                   style: { "max-width": "84ch !important" },
                 },
                 [
-                  b(
+                  m(
                     "h2",
                     { class: M(["text-2xl m-0", a(e.brightness)]) },
                     " I can make your website ",
                     2,
                   ),
-                  b(
+                  m(
                     "h2",
                     { class: M(["text-5xl", a(e.brightness)]) },
                     " faster, smaller, and lighter. ",
                     2,
                   ),
-                  Ug,
                   Vg,
                   Gg,
-                  b("h3", { class: M(a(e.brightness)) }, "How I help", 2),
-                  b("table", Kg, [
-                    Yg,
-                    b("thead", null, [
-                      b("tr", null, [
-                        b("th", null, [
-                          b("div", Xg, [
-                            b(
+                  Kg,
+                  m("h3", { class: M(a(e.brightness)) }, "How I help", 2),
+                  m("table", Yg, [
+                    Xg,
+                    m("thead", null, [
+                      m("tr", null, [
+                        m("th", null, [
+                          m("div", Zg, [
+                            m(
                               "h4",
                               { class: M([a(e.brightness), "text-lg m-0"]) },
                               [
@@ -9844,9 +9847,9 @@ const Ye = Ig(Rg),
                             ),
                           ]),
                         ]),
-                        b("th", null, [
-                          b("div", Zg, [
-                            b(
+                        m("th", null, [
+                          m("div", Jg, [
+                            m(
                               "h4",
                               { class: M([a(e.brightness), "text-lg m-0"]) },
                               [
@@ -9868,12 +9871,12 @@ const Ye = Ig(Rg),
                         ]),
                       ]),
                     ]),
-                    Jg,
+                    Qg,
                   ]),
                 ],
                 2,
               ),
-              Qg,
+              eb,
               le(ol, { brightness: e.brightness }, null, 8, ["brightness"]),
             ]),
           ])
@@ -9881,69 +9884,69 @@ const Ye = Ig(Rg),
       )
     },
   }),
-  nb = Tr(tb, [["__scopeId", "data-v-8a92440e"]]),
-  rb = {
+  rb = Tr(nb, [["__scopeId", "data-v-8a92440e"]]),
+  sb = {
     class:
       "flex w-full gap-4 md:p-8 sm:p-4 items-center justify-center flex-wrap",
   },
-  sb = { class: "lg:w-6/12 sm:w-12/12" },
-  ab = b(
+  ab = { class: "lg:w-6/12 sm:w-12/12" },
+  lb = m(
     "p",
     null,
     " The Internet is a (potentially) dangerous place- not just for users, but for websites as well. Botnets, DDoS attacks, ransomware, and other problems are common enough at this point that every site is vulnerable. ",
     -1,
   ),
-  lb = b("p", null, [b("b", null, " Don't worry, I can help!")], -1),
-  ob = b(
+  ob = m("p", null, [m("b", null, " Don't worry, I can help!")], -1),
+  ib = m(
     "p",
     null,
     "My web security specialities include (but aren't limited to):",
     -1,
   ),
-  ib = { class: "flex items-center w-full" },
-  ub = b(
+  ub = { class: "flex items-center w-full" },
+  cb = m(
     "p",
     null,
     [
       xe(
         " I have nearly a decade of practice securing WordPress sites against attacks. Plugging all the potential holes (and there's a lot!) in a WordPress site takes a ",
       ),
-      b("em", null, "very"),
+      m("em", null, "very"),
       xe(
         " long time. Save yourself a headache and let someone else (me, perhaps?) deal with that hassle. ",
       ),
     ],
     -1,
   ),
-  cb = b("div", { class: "h-3" }, null, -1),
-  fb = { class: "flex items-center w-full" },
-  db = b(
+  fb = m("div", { class: "h-3" }, null, -1),
+  db = { class: "flex items-center w-full" },
+  hb = m(
     "p",
     null,
     [
       xe(
         " The bots are out there... and they're coming for your site. When? Why? Who is behind them? Who knows! What I ",
       ),
-      b("em", null, "do"),
+      m("em", null, "do"),
       xe(
         " know is how to keep you safe. I can help you make sure your site stays up and your data stays safe, no matter what kind of nefarious botnets find it. ",
       ),
     ],
     -1,
   ),
-  hb = b("div", { class: "h-3" }, null, -1),
-  vb = { class: "flex items-center w-full" },
-  pb = b(
+  vb = m("div", { class: "h-3" }, null, -1),
+  pb = { class: "flex items-center w-full" },
+  gb = m(
     "p",
     null,
     " If your site has any PHP or JavaScript running (it does), there's a good chance coding errors, outdated libraries, or other problems are imperiling your site. Trust me, I've seen it all- from passwords saved in plain text files to packages decades out of date with 384 critical-risk vulnerabilities... so, whatever nastiness is lurking beneath the surface, I can fix it. ",
     -1,
   ),
-  gb = { class: "flex flex-col gap-4 lg:w-4/12 md:w-12/12" },
-  bb = { class: "prose text-center" },
-  mb = b("div", { class: "h-3" }, null, -1),
-  yb = b("div", { class: "h-3" }, null, -1),
-  wb = {
+  bb = { class: "flex flex-col gap-4 lg:w-4/12 md:w-12/12" },
+  mb = { class: "prose text-center" },
+  yb = m("div", { class: "h-3" }, null, -1),
+  wb = m("div", { class: "h-3" }, null, -1),
+  xb = {
     __name: "PanelSecurity",
     props: { brightness: Number },
     setup(e) {
@@ -9972,15 +9975,15 @@ const Ye = Ig(Rg),
         }
       return (f, d) => (
         he(),
-        Fe("div", rb, [
-          b("div", sb, [
-            b(
+        Fe("div", sb, [
+          m("div", ab, [
+            m(
               "h2",
               { class: M(["text-left text-5xl", u(e.brightness)]) },
               " I can secure your website. ",
               2,
             ),
-            b(
+            m(
               "p",
               {
                 class: M([
@@ -9990,8 +9993,8 @@ const Ye = Ig(Rg),
               },
               [
                 xe(" Website already secure? "),
-                b("b", null, [
-                  b(
+                m("b", null, [
+                  m(
                     "a",
                     { href: "", class: M(i(e.brightness)) },
                     "How sure",
@@ -10002,20 +10005,20 @@ const Ye = Ig(Rg),
               ],
               2,
             ),
-            b(
+            m(
               "hr",
               { class: M(["mb-5 mt-1 w-6/12 opacity-25", u(e.brightness)]) },
               null,
               2,
             ),
-            b(
+            m(
               "div",
               { class: M(["prose", u(e.brightness)]) },
               [
-                ab,
                 lb,
                 ob,
-                b(
+                ib,
+                m(
                   "div",
                   {
                     class: M([
@@ -10030,7 +10033,7 @@ const Ye = Ig(Rg),
                     ]),
                   },
                   [
-                    b("div", ib, [
+                    m("div", ub, [
                       le(
                         fe(as),
                         { class: M(["mr-2", i(e.brightness)]), size: "2rem" },
@@ -10038,19 +10041,19 @@ const Ye = Ig(Rg),
                         8,
                         ["class"],
                       ),
-                      b(
+                      m(
                         "h4",
                         { class: M(["font-bold m-0", u(e.brightness)]) },
                         " WordPress Protection ",
                         2,
                       ),
                     ]),
-                    ub,
+                    cb,
                   ],
                   2,
                 ),
-                cb,
-                b(
+                fb,
+                m(
                   "div",
                   {
                     class: M([
@@ -10065,7 +10068,7 @@ const Ye = Ig(Rg),
                     ]),
                   },
                   [
-                    b("div", fb, [
+                    m("div", db, [
                       le(
                         fe(as),
                         { size: "2rem", class: M(["mr-2", i(e.brightness)]) },
@@ -10073,19 +10076,19 @@ const Ye = Ig(Rg),
                         8,
                         ["class"],
                       ),
-                      b(
+                      m(
                         "h4",
                         { class: M(["font-bold m-0", u(e.brightness)]) },
                         " DDoS/Malicious Bots Shielding ",
                         2,
                       ),
                     ]),
-                    db,
+                    hb,
                   ],
                   2,
                 ),
-                hb,
-                b(
+                vb,
+                m(
                   "div",
                   {
                     class: M([
@@ -10100,7 +10103,7 @@ const Ye = Ig(Rg),
                     ]),
                   },
                   [
-                    b("div", vb, [
+                    m("div", pb, [
                       le(
                         fe(as),
                         { class: M(["mr-2", i(e.brightness)]), size: "2rem" },
@@ -10108,14 +10111,14 @@ const Ye = Ig(Rg),
                         8,
                         ["class"],
                       ),
-                      b(
+                      m(
                         "h4",
                         { class: M(["font-bold m-0", u(e.brightness)]) },
                         " JavaScript/PHP Vulnerabilities ",
                         2,
                       ),
                     ]),
-                    pb,
+                    gb,
                   ],
                   2,
                 ),
@@ -10123,8 +10126,8 @@ const Ye = Ig(Rg),
               2,
             ),
           ]),
-          b("div", gb, [
-            b(
+          m("div", bb, [
+            m(
               "div",
               {
                 class: M([
@@ -10139,8 +10142,8 @@ const Ye = Ig(Rg),
                 ]),
               },
               [
-                b("div", bb, [
-                  b(
+                m("div", mb, [
+                  m(
                     "h3",
                     {
                       class: M([
@@ -10151,12 +10154,12 @@ const Ye = Ig(Rg),
                     Rt(a(s.value)) + "+ ",
                     3,
                   ),
-                  b(
+                  m(
                     "h3",
                     { class: M(["text-xl", u(e.brightness)]) },
                     [
                       xe(" attacks blocked on "),
-                      b(
+                      m(
                         "a",
                         {
                           class: M(i(e.brightness)),
@@ -10168,7 +10171,7 @@ const Ye = Ig(Rg),
                     ],
                     2,
                   ),
-                  b(
+                  m(
                     "p",
                     {
                       class: M(["italic opacity-50 text-sm", u(e.brightness)]),
@@ -10176,13 +10179,13 @@ const Ye = Ig(Rg),
                     " (Over 4500 a month!) ",
                     2,
                   ),
-                  b(
+                  m(
                     "p",
                     {
                       class: M(["italic opacity-50 text-sm", u(e.brightness)]),
                     },
                     [
-                      b(
+                      m(
                         "a",
                         { href: "", class: M(i(e.brightness)) },
                         "Read more",
@@ -10196,16 +10199,16 @@ const Ye = Ig(Rg),
               ],
               2,
             ),
-            mb,
-            b("hr", { class: M(["opacity-50", u(e.brightness)]) }, null, 2),
             yb,
+            m("hr", { class: M(["opacity-50", u(e.brightness)]) }, null, 2),
+            wb,
             le(ol, { brightness: e.brightness }, null, 8, ["brightness"]),
           ]),
         ])
       )
     },
   },
-  xb = {
+  _b = {
     __name: "PanelDesignOverhaul",
     props: { brightness: Number },
     setup(e) {
@@ -10241,24 +10244,24 @@ const Ye = Ig(Rg),
       )
     },
   },
-  _b = {
+  kb = {
     class:
       "flex w-full gap-4 md:p-8 sm:p-4 items-center justify-center flex-col",
   },
-  kb = {
+  $b = {
     class: "prose md:w-10/12 sm:w-12/12 mt-8",
     style: { "max-width": "84ch !important" },
   },
-  $b = { class: "flex w-full" },
-  Eb = { class: "flex w-full pt-4 gap-2" },
-  Sb = { class: "w-6/12" },
+  Eb = { class: "flex w-full" },
+  Sb = { class: "flex w-full pt-4 gap-2" },
   Cb = { class: "w-6/12" },
-  Pb = { class: "w-full flex" },
-  Mb = { class: "w-6/12" },
-  Ab = { class: "w-6/12 pb-3" },
-  Ob = b("em", null, "huge", -1),
-  Ib = b("div", { class: "h-6" }, null, -1),
-  Rb = {
+  Pb = { class: "w-6/12" },
+  Mb = { class: "w-full flex" },
+  Ab = { class: "w-6/12" },
+  Ob = { class: "w-6/12 pb-3" },
+  Ib = m("em", null, "huge", -1),
+  Rb = m("div", { class: "h-6" }, null, -1),
+  Tb = {
     __name: "PanelAccessibility",
     props: { brightness: Number },
     setup(e) {
@@ -10288,20 +10291,20 @@ const Ye = Ig(Rg),
         },
         u = (d) => {
           let h = document.querySelectorAll("tr"),
-            m
+            b
           d == 5
-            ? (m = Ye("#e2e8f0"))
+            ? (b = Ye("#e2e8f0"))
             : d == 4
-              ? (m = Ye("#cbd5e1"))
+              ? (b = Ye("#cbd5e1"))
               : d == 3
-                ? (m = Ye("#475569"))
+                ? (b = Ye("#475569"))
                 : d == 2
-                  ? (m = Ye("#1e293b"))
-                  : d == 1 && (m = Ye("#0f172a"))
+                  ? (b = Ye("#1e293b"))
+                  : d == 1 && (b = Ye("#0f172a"))
           for (let k = 1; k < h.length; k++)
             k % 2 == 0
-              ? (h[k].style.backgroundColor = m.brighten(0))
-              : (h[k].style.backgroundColor = m.brighten(0.2))
+              ? (h[k].style.backgroundColor = b.brighten(0))
+              : (h[k].style.backgroundColor = b.brighten(0.2))
         },
         f = () => {
           ;(r.value = !r.value), r.value
@@ -10318,26 +10321,26 @@ const Ye = Ig(Rg),
         ),
         (d, h) => (
           he(),
-          Fe("div", _b, [
-            b("div", kb, [
-              b(
+          Fe("div", kb, [
+            m("div", $b, [
+              m(
                 "h2",
                 { class: M(["text-5xl", i(e.brightness)]) },
                 " 98% of websites don’t comply with the Web Content Accessibility Guidelines. ",
                 2,
               ),
-              b(
+              m(
                 "h3",
                 { class: M(["text-2xl", i(e.brightness)]) },
                 "Does yours?",
                 2,
               ),
-              b(
+              m(
                 "h4",
                 { class: M(i(e.brightness)) },
                 [
                   xe(" What are the "),
-                  b(
+                  m(
                     "a",
                     {
                       class: M(["font-bold", n(e.brightness)]),
@@ -10349,38 +10352,38 @@ const Ye = Ig(Rg),
                 ],
                 2,
               ),
-              b(
+              m(
                 "p",
                 { class: M(i(e.brightness)) },
                 " The Web Content Accessibility Guidelines (WCAG) are a set of standards for making web content accessible to everyone. ",
                 2,
               ),
-              b(
+              m(
                 "p",
                 { class: M(i(e.brightness)) },
                 " I've made a special focus of my web development studies accessibility. I believe everyone should be able to not only use, but enjoy, the content on the Internet. Let me help you make your website accessible to everyone. ",
                 2,
               ),
-              b(
+              m(
                 "h4",
                 { class: M(i(e.brightness)) },
                 ` Here's a real world example from a site I've seen. Which button is the "Submit" button? `,
                 2,
               ),
-              b(
+              m(
                 "p",
                 { class: M(i(e.brightness)) },
                 " These buttons only use icons, with no alt text- so for users using a screen reader, they have no idea what the buttons do. ",
                 2,
               ),
-              b(
+              m(
                 "p",
                 { class: M(i(e.brightness)) },
                 " It doesn't stop there, though- for users with color blindness, the green and red buttons are indistinguishable. ",
                 2,
               ),
-              b("div", $b, [
-                b(
+              m("div", Eb, [
+                m(
                   "button",
                   {
                     class: M([
@@ -10402,17 +10405,17 @@ const Ye = Ig(Rg),
                   2,
                 ),
               ]),
-              b("div", Eb, [
-                b("div", Sb, [
-                  b(
+              m("div", Sb, [
+                m("div", Cb, [
+                  m(
                     "button",
                     { class: M(["rounded px-5 py-2 w-full", s.value]) },
                     [r.value ? (he(), Ke(fe(ii), { key: 0 })) : et("", !0)],
                     2,
                   ),
                 ]),
-                b("div", Cb, [
-                  b(
+                m("div", Pb, [
+                  m(
                     "button",
                     { class: M(["rounded px-5 py-2 w-full", a.value]) },
                     [r.value ? (he(), Ke(fe(Ia), { key: 0 })) : et("", !0)],
@@ -10420,15 +10423,15 @@ const Ye = Ig(Rg),
                   ),
                 ]),
               ]),
-              b(
+              m(
                 "h4",
                 { class: M(["text-2xl", i(e.brightness)]) },
                 " Here's a better version. ",
                 2,
               ),
-              b("div", Pb, [
-                b("div", Mb, [
-                  b(
+              m("div", Mb, [
+                m("div", Ab, [
+                  m(
                     "button",
                     {
                       class: M([
@@ -10446,8 +10449,8 @@ const Ye = Ig(Rg),
                     2,
                   ),
                 ]),
-                b("div", Ab, [
-                  b(
+                m("div", Ob, [
+                  m(
                     "button",
                     {
                       class: M([
@@ -10466,18 +10469,18 @@ const Ye = Ig(Rg),
                   ),
                 ]),
               ]),
-              b(
+              m(
                 "p",
                 { class: M(i(e.brightness)) },
                 " These buttons have screen reader labels and don't rely on color to indicate which is which. ",
                 2,
               ),
-              b(
+              m(
                 "p",
                 { class: M(i(e.brightness)) },
                 [
                   xe(" Changes like these may seem small, but they make a "),
-                  Ob,
+                  Ib,
                   xe(
                     " difference for the usability of your site. Let me help you be in the 2%. ",
                   ),
@@ -10485,15 +10488,15 @@ const Ye = Ig(Rg),
                 2,
               ),
             ]),
-            Ib,
+            Rb,
             le(ol, { brightness: e.brightness }, null, 8, ["brightness"]),
           ])
         )
       )
     },
   },
-  Tb = ["onMouseover"],
-  Nb = {
+  Nb = ["onMouseover"],
+  jb = {
     __name: "Services",
     props: { brightness: Number },
     setup(e) {
@@ -10561,7 +10564,7 @@ const Ye = Ig(Rg),
                           },
                           {
                             default: ut(({ selected: f }) => [
-                              b(
+                              m(
                                 "div",
                                 {
                                   class: M([
@@ -10667,7 +10670,7 @@ const Ye = Ig(Rg),
                                         ["class"],
                                       ))
                                     : et("", !0),
-                                  b(
+                                  m(
                                     "p",
                                     {
                                       class: M([
@@ -10681,7 +10684,7 @@ const Ye = Ig(Rg),
                                   ),
                                 ],
                                 42,
-                                Tb,
+                                Nb,
                               ),
                             ]),
                             _: 2,
@@ -10706,19 +10709,7 @@ const Ye = Ig(Rg),
                     { class: "flex justify-center gap-5 w-full" },
                     {
                       default: ut(() => [
-                        le(nb, { brightness: e.brightness }, null, 8, [
-                          "brightness",
-                        ]),
-                      ]),
-                      _: 1,
-                    },
-                  ),
-                  le(
-                    fe(Xn),
-                    { class: "flex justify-center gap-5 w-full" },
-                    {
-                      default: ut(() => [
-                        le(wb, { brightness: e.brightness }, null, 8, [
+                        le(rb, { brightness: e.brightness }, null, 8, [
                           "brightness",
                         ]),
                       ]),
@@ -10742,6 +10733,30 @@ const Ye = Ig(Rg),
                     { class: "flex justify-center gap-5 w-full" },
                     {
                       default: ut(() => [
+                        le(_b, { brightness: e.brightness }, null, 8, [
+                          "brightness",
+                        ]),
+                      ]),
+                      _: 1,
+                    },
+                  ),
+                  le(
+                    fe(Xn),
+                    { class: "flex justify-center gap-5 w-full" },
+                    {
+                      default: ut(() => [
+                        le(jg, { brightness: e.brightness }, null, 8, [
+                          "brightness",
+                        ]),
+                      ]),
+                      _: 1,
+                    },
+                  ),
+                  le(
+                    fe(Xn),
+                    { class: "flex justify-center gap-5 w-full" },
+                    {
+                      default: ut(() => [
                         le(Ng, { brightness: e.brightness }, null, 8, [
                           "brightness",
                         ]),
@@ -10754,19 +10769,7 @@ const Ye = Ig(Rg),
                     { class: "flex justify-center gap-5 w-full" },
                     {
                       default: ut(() => [
-                        le(Tg, { brightness: e.brightness }, null, 8, [
-                          "brightness",
-                        ]),
-                      ]),
-                      _: 1,
-                    },
-                  ),
-                  le(
-                    fe(Xn),
-                    { class: "flex justify-center gap-5 w-full" },
-                    {
-                      default: ut(() => [
-                        le(Rb, { brightness: e.brightness }, null, 8, [
+                        le(Tb, { brightness: e.brightness }, null, 8, [
                           "brightness",
                         ]),
                       ]),
@@ -10783,8 +10786,8 @@ const Ye = Ig(Rg),
       )
     },
   },
-  jb = { href: "/pricing" },
-  Fb = {
+  Fb = { href: "/pricing" },
+  Lb = {
     __name: "messageBanner",
     props: { brightness: Number },
     setup(e) {
@@ -10825,14 +10828,14 @@ const Ye = Ig(Rg),
             ]),
           },
           [
-            b(
+            m(
               "p",
               { class: M(["text-center", n(e.brightness)]) },
               " Get a free site speed audit with recommendations for optimizing. My gift to you. ",
               2,
             ),
-            b("a", jb, [
-              b(
+            m("a", Fb, [
+              m(
                 "button",
                 {
                   "aria-label":
@@ -10858,35 +10861,35 @@ const Ye = Ig(Rg),
     },
   },
   hr = (e) => (Xa("data-v-e20b9d11"), (e = e()), Za(), e),
-  Lb = { class: "flex-col" },
-  Bb = { class: "prose py-5 flex-col w-full" },
-  Db = hr(() => b("br", null, null, -1)),
-  Hb = hr(() => b("br", null, null, -1)),
-  zb = { class: "flex" },
-  qb = { class: "w-6/12" },
-  Wb = ["name", "checked", "onClick"],
-  Ub = { class: "w-6/12" },
-  Vb = { key: 0, class: "text-slate-50 opacity-25 line-through pr-2" },
-  Gb = { class: "flex-col gap-4" },
-  Kb = { class: "flex items-center" },
-  Yb = ["name", "checked", "onClick"],
-  Xb = { key: 0 },
-  Zb = { key: 1 },
-  Jb = { class: "" },
-  Qb = { key: 0, class: "text-slate-50 opacity-25 line-through pr-2" },
-  em = { class: "flex-col" },
-  tm = { class: "flex justify-between" },
-  nm = { key: 0, class: "text-slate-50 opacity-25 line-through pr-2" },
-  rm = { class: "gap-4 mt-4", name: "pricing" },
-  sm = ["value"],
+  Bb = { class: "flex-col" },
+  Db = { class: "prose py-5 flex-col w-full" },
+  Hb = hr(() => m("br", null, null, -1)),
+  zb = hr(() => m("br", null, null, -1)),
+  qb = { class: "flex" },
+  Wb = { class: "w-6/12" },
+  Ub = ["name", "checked", "onClick"],
+  Vb = { class: "w-6/12" },
+  Gb = { key: 0, class: "text-slate-50 opacity-25 line-through pr-2" },
+  Kb = { class: "flex-col gap-4" },
+  Yb = { class: "flex items-center" },
+  Xb = ["name", "checked", "onClick"],
+  Zb = { key: 0 },
+  Jb = { key: 1 },
+  Qb = { class: "" },
+  em = { key: 0, class: "text-slate-50 opacity-25 line-through pr-2" },
+  tm = { class: "flex-col" },
+  nm = { class: "flex justify-between" },
+  rm = { key: 0, class: "text-slate-50 opacity-25 line-through pr-2" },
+  sm = { class: "gap-4 mt-4", name: "pricing" },
   am = ["value"],
-  lm = { class: "flex gap-4", id: "leftInputs" },
-  om = { class: "flex gap-4", id: "rightInputs" },
-  im = hr(() => b("br", null, null, -1)),
-  um = hr(() => b("br", null, null, -1)),
-  cm = hr(() => b("br", null, null, -1)),
-  fm = hr(() => b("br", null, null, -1)),
-  dm = {
+  lm = ["value"],
+  om = { class: "flex gap-4", id: "leftInputs" },
+  im = { class: "flex gap-4", id: "rightInputs" },
+  um = hr(() => m("br", null, null, -1)),
+  cm = hr(() => m("br", null, null, -1)),
+  fm = hr(() => m("br", null, null, -1)),
+  dm = hr(() => m("br", null, null, -1)),
+  hm = {
     __name: "servicesCalculator",
     props: { brightness: Number },
     setup(e) {
@@ -11058,7 +11061,7 @@ const Ye = Ig(Rg),
             ? 3 / 4
             : 3 / 3,
         ),
-        m = ie(() => 3 / 3),
+        b = ie(() => 3 / 3),
         k = ie(
           () =>
             Object.values(u.value.speed).reduce(
@@ -11085,7 +11088,7 @@ const Ye = Ig(Rg),
             Object.values(u.value.designOverhaul).reduce(
               (q, ne) => q + (ne.enabled ? ne.price : 0),
               0,
-            ) * m.value,
+            ) * b.value,
         ),
         C = ie(() => {
           let q = 0
@@ -11185,7 +11188,7 @@ const Ye = Ig(Rg),
             title: "Design Overhaul",
             services: u.value.designOverhaul,
             enabled: !1,
-            discount: m.value,
+            discount: b.value,
           },
         ]),
         Xe = (q) => {
@@ -11237,9 +11240,9 @@ const Ye = Ig(Rg),
         }
       return (q, ne) => (
         he(),
-        Fe("div", Lb, [
-          b("div", Bb, [
-            b(
+        Fe("div", Bb, [
+          m("div", Db, [
+            m(
               "h2",
               {
                 class: M([
@@ -11250,19 +11253,19 @@ const Ye = Ig(Rg),
               " Services Pricing ",
               2,
             ),
-            b(
+            m(
               "p",
               { class: M(["text-center", i(n.brightness)]) },
               [
                 xe(
                   " Faster, simpler, and cheaper than an agency. No need to spend hours on the phone haggling. Pick what you want, I make it happen. That's it!",
                 ),
-                Db,
                 Hb,
+                zb,
                 xe(
                   " These services are for your existing website- if you're looking for a new site, ",
                 ),
-                b(
+                m(
                   "a",
                   {
                     href: "/contact",
@@ -11294,9 +11297,9 @@ const Ye = Ig(Rg),
                     ]),
                   },
                   [
-                    b("div", zb, [
-                      b("div", qb, [
-                        b(
+                    m("div", qb, [
+                      m("div", Wb, [
+                        m(
                           "div",
                           {
                             class: M([
@@ -11305,7 +11308,7 @@ const Ye = Ig(Rg),
                             ]),
                           },
                           [
-                            b(
+                            m(
                               "input",
                               {
                                 type: "checkbox",
@@ -11319,15 +11322,15 @@ const Ye = Ig(Rg),
                               },
                               null,
                               10,
-                              Wb,
+                              Ub,
                             ),
-                            b("h3", null, Rt(J.title), 1),
+                            m("h3", null, Rt(J.title), 1),
                           ],
                           2,
                         ),
                       ]),
-                      b("div", Ub, [
-                        b(
+                      m("div", Vb, [
+                        m(
                           "h3",
                           {
                             class: M([
@@ -11337,7 +11340,7 @@ const Ye = Ig(Rg),
                           },
                           [
                             xt(J) != Math.floor(Xe(J))
-                              ? (he(), Fe("span", Vb, "$" + Rt(xt(J)), 1))
+                              ? (he(), Fe("span", Gb, "$" + Rt(xt(J)), 1))
                               : et("", !0),
                             xe("$" + Rt(Xe(J)), 1),
                           ],
@@ -11345,13 +11348,13 @@ const Ye = Ig(Rg),
                         ),
                       ]),
                     ]),
-                    b(
+                    m(
                       "hr",
                       { class: M(["my-4 w-full", r(n.brightness)]) },
                       null,
                       2,
                     ),
-                    b("div", Gb, [
+                    m("div", Kb, [
                       (he(!0),
                       Fe(
                         Qe,
@@ -11368,8 +11371,8 @@ const Ye = Ig(Rg),
                                   "flex w-full items-center justify-between pb-4",
                               },
                               [
-                                b("div", Kb, [
-                                  b(
+                                m("div", Yb, [
+                                  m(
                                     "input",
                                     {
                                       type: "checkbox",
@@ -11384,26 +11387,26 @@ const Ye = Ig(Rg),
                                     },
                                     null,
                                     10,
-                                    Yb,
+                                    Xb,
                                   ),
-                                  b(
+                                  m(
                                     "p",
                                     { class: M(["", i(n.brightness)]) },
                                     [
                                       De.title ==
                                       "Detailed speed audit (100% free)"
                                         ? (he(),
-                                          Fe("b", Xb, [
-                                            b("em", null, Rt(De.title), 1),
+                                          Fe("b", Zb, [
+                                            m("em", null, Rt(De.title), 1),
                                           ]))
                                         : (he(),
-                                          Fe("span", Zb, Rt(De.title), 1)),
+                                          Fe("span", Jb, Rt(De.title), 1)),
                                     ],
                                     2,
                                   ),
                                 ]),
-                                b("div", Jb, [
-                                  b(
+                                m("div", Qb, [
+                                  m(
                                     "h3",
                                     {
                                       class: M([
@@ -11415,7 +11418,7 @@ const Ye = Ig(Rg),
                                       De.price !=
                                       Math.floor(De.price * J.discount)
                                         ? (he(),
-                                          Fe("span", Qb, "$" + Rt(De.price), 1))
+                                          Fe("span", em, "$" + Rt(De.price), 1))
                                         : et("", !0),
                                       xe("$" + Rt(De.price * J.discount), 1),
                                     ],
@@ -11436,21 +11439,21 @@ const Ye = Ig(Rg),
             ),
             128,
           )),
-          b("hr", { class: M(["my-4 w-full", r(n.brightness)]) }, null, 2),
-          b("div", em, [
-            b("div", tm, [
-              b(
+          m("hr", { class: M(["my-4 w-full", r(n.brightness)]) }, null, 2),
+          m("div", tm, [
+            m("div", nm, [
+              m(
                 "h3",
                 { class: M(["text-4xl text-bold", r(n.brightness)]) },
                 " Total ",
                 2,
               ),
-              b(
+              m(
                 "h3",
                 { class: M(["text-4xl text-bold", r(n.brightness)]) },
                 [
                   qe.value != Math.floor(qe.value)
-                    ? (he(), Fe("span", nm, "$" + Rt(qe.value), 1))
+                    ? (he(), Fe("span", rm, "$" + Rt(qe.value), 1))
                     : et("", !0),
                   xe("$" + Rt(qe.value), 1),
                 ],
@@ -11458,23 +11461,23 @@ const Ye = Ig(Rg),
               ),
             ]),
           ]),
-          b("form", rm, [
-            b(
+          m("form", sm, [
+            m(
               "input",
               { type: "hidden", name: "services", value: Xt.value },
               null,
               8,
-              sm,
+              am,
             ),
-            b(
+            m(
               "input",
               { type: "hidden", name: "total", value: qe.value },
               null,
               8,
-              am,
+              lm,
             ),
-            b("div", lm, [
-              b(
+            m("div", om, [
+              m(
                 "input",
                 {
                   type: "email",
@@ -11489,7 +11492,7 @@ const Ye = Ig(Rg),
                 null,
                 2,
               ),
-              b(
+              m(
                 "input",
                 {
                   type: "text",
@@ -11504,8 +11507,8 @@ const Ye = Ig(Rg),
                 2,
               ),
             ]),
-            b("div", om, [
-              b(
+            m("div", im, [
+              m(
                 "input",
                 {
                   type: "text",
@@ -11520,7 +11523,7 @@ const Ye = Ig(Rg),
                 null,
                 2,
               ),
-              b(
+              m(
                 "textarea",
                 {
                   name: "notes",
@@ -11534,7 +11537,7 @@ const Ye = Ig(Rg),
                 2,
               ),
             ]),
-            b(
+            m(
               "button",
               {
                 "aria-label": "Submit a contact form",
@@ -11555,27 +11558,27 @@ const Ye = Ig(Rg),
               2,
             ),
           ]),
-          b(
+          m(
             "p",
             { class: M(["text-center mt-4", i(n.brightness)]) },
             [
               xe(
                 " I'll get back to you within 48 hours. This form is not a contract, please note that work can't begin until we've connected and signed a contract.",
               ),
-              im,
               um,
+              cm,
               xe(
                 "These are one-time services; for ongoing maintenance, please ",
               ),
-              b(
+              m(
                 "a",
                 { href: "/contact", class: M(["font-bold", r(e.brightness)]) },
                 "shoot me a message",
                 2,
               ),
               xe(" and we can get that figured out."),
-              cm,
               fm,
+              dm,
               xe("I look forward to working with you! "),
             ],
             2,
@@ -11584,20 +11587,20 @@ const Ye = Ig(Rg),
       )
     },
   },
-  hm = Tr(dm, [["__scopeId", "data-v-e20b9d11"]]),
-  vm = {
+  vm = Tr(hm, [["__scopeId", "data-v-e20b9d11"]]),
+  pm = {
     __name: "Pricing",
     props: { brightness: Number },
     setup(e) {
       return (t, n) => (
-        he(), Ke(hm, { brightness: e.brightness }, null, 8, ["brightness"])
+        he(), Ke(vm, { brightness: e.brightness }, null, 8, ["brightness"])
       )
     },
   },
-  pm = { class: "flex-col" },
-  gm = { class: "py-5 flex-col w-full" },
-  bm = { id: "cta" },
-  mm = {
+  gm = { class: "flex-col" },
+  bm = { class: "py-5 flex-col w-full" },
+  mm = { id: "cta" },
+  ym = {
     __name: "Contact",
     props: { brightness: Number },
     setup(e) {
@@ -11638,7 +11641,7 @@ const Ye = Ig(Rg),
                 ),
                 h.status == 200)
               ) {
-                let m = document.getElementById("cta"),
+                let b = document.getElementById("cta"),
                   k = document.createElement("div")
                 k.classList.add(
                   "text-center",
@@ -11649,10 +11652,10 @@ const Ye = Ig(Rg),
                 ),
                   (k.innerHTML =
                     "Thanks for your interest! Your submission has been processed."),
-                  m.appendChild(k)
-                let P = m.getElementsByTagName("input")
+                  b.appendChild(k)
+                let P = b.getElementsByTagName("input")
                 for (let C = 0; C < P.length; C++) P[C].style.display = "none"
-                let F = m.getElementsByTagName("textarea")[0]
+                let F = b.getElementsByTagName("textarea")[0]
                 F.style.display = "none"
                 let _ = document.getElementById("submitButton")
                 _.disabled = !0
@@ -11661,9 +11664,9 @@ const Ye = Ig(Rg),
         }
       return (s, a) => (
         he(),
-        Fe("div", pm, [
-          b("div", gm, [
-            b(
+        Fe("div", gm, [
+          m("div", bm, [
+            m(
               "h2",
               {
                 class: M([
@@ -11675,8 +11678,8 @@ const Ye = Ig(Rg),
               2,
             ),
           ]),
-          b("form", bm, [
-            b(
+          m("form", mm, [
+            m(
               "input",
               {
                 type: "text",
@@ -11687,7 +11690,7 @@ const Ye = Ig(Rg),
               null,
               2,
             ),
-            b(
+            m(
               "input",
               {
                 type: "email",
@@ -11698,7 +11701,7 @@ const Ye = Ig(Rg),
               null,
               2,
             ),
-            b(
+            m(
               "textarea",
               {
                 placeholder: "Message",
@@ -11708,7 +11711,7 @@ const Ye = Ig(Rg),
               null,
               2,
             ),
-            b(
+            m(
               "button",
               {
                 id: "submitButton",
@@ -11733,27 +11736,22 @@ const Ye = Ig(Rg),
       )
     },
   },
-  ym = {
+  wm = {
     __name: "AboutMe",
     props: { brightness: Number },
     setup(e) {
       return (t, n) => null
     },
   },
-  wm = {
+  xm = {
     __name: "Portfolio",
     props: { brightness: Number },
     setup(e) {
       return (t, n) => null
     },
   },
-  xm = { class: "flex justify-center w-full md:px-10 sm:px-5 mt-5" },
   _m = { class: "flex justify-center w-full md:px-10 sm:px-5 mt-5" },
-  km = { class: "flex justify-center w-full md:px-10 sm:px-5 mt-5" },
-  $m = { class: "flex justify-center w-full md:px-10 sm:px-5 mt-5" },
-  Em = { class: "flex justify-center w-full md:px-10 sm:px-5 pt-10" },
-  Sm = { class: "flex justify-center w-full md:px-10 sm:px-5 pt-10" },
-  Cm = {
+  km = {
     __name: "Main",
     props: { component: String },
     setup(e) {
@@ -11882,15 +11880,15 @@ const Ye = Ig(Rg),
             Qe,
             null,
             [
-              b(
+              m(
                 "div",
                 {
                   class: M([["w-dvw", s.value], "md:p-7 sm:p-5"]),
                   style: { "min-height": "100vh", "overflow-x": "hidden" },
                 },
                 [
-                  le(kg, { "onUpdate:brightness": r }),
-                  b("div", xm, [
+                  le($g, { "onUpdate:brightness": r }),
+                  m("div", _m, [
                     e.component == "pricing"
                       ? (he(),
                         Fe(
@@ -11909,75 +11907,19 @@ const Ye = Ig(Rg),
                             ]),
                           },
                           [
-                            le(vm, { brightness: t.value }, null, 8, [
+                            le(pm, { brightness: t.value }, null, 8, [
                               "brightness",
                             ]),
                           ],
                           2,
                         ))
                       : et("", !0),
-                  ]),
-                  b("div", _m, [
                     e.component == "about-me"
                       ? (he(),
                         Fe(
                           "div",
                           {
-                            key: 0,
-                            class: M([
-                              "md:w-10/12 sm:w-12/12 rounded p-3 flex justify-center",
-                              {
-                                "bg-slate-200": t.value == 5,
-                                "bg-slate-300": t.value == 4,
-                                "bg-slate-600": t.value == 3,
-                                "bg-slate-800": t.value == 2,
-                                "bg-slate-900": t.value == 1,
-                              },
-                            ]),
-                          },
-                          [
-                            le(ym, { brightness: t.value }, null, 8, [
-                              "brightness",
-                            ]),
-                          ],
-                          2,
-                        ))
-                      : et("", !0),
-                  ]),
-                  b("div", km, [
-                    e.component == "contact"
-                      ? (he(),
-                        Fe(
-                          "div",
-                          {
-                            key: 0,
-                            class: M([
-                              "md:w-10/12 sm:w-12/12 rounded p-3 flex justify-center",
-                              {
-                                "bg-slate-200": t.value == 5,
-                                "bg-slate-300": t.value == 4,
-                                "bg-slate-600": t.value == 3,
-                                "bg-slate-800": t.value == 2,
-                                "bg-slate-900": t.value == 1,
-                              },
-                            ]),
-                          },
-                          [
-                            le(mm, { brightness: t.value }, null, 8, [
-                              "brightness",
-                            ]),
-                          ],
-                          2,
-                        ))
-                      : et("", !0),
-                  ]),
-                  b("div", $m, [
-                    e.component == "portfolio"
-                      ? (he(),
-                        Fe(
-                          "div",
-                          {
-                            key: 0,
+                            key: 1,
                             class: M([
                               "md:w-10/12 sm:w-12/12 rounded p-3 flex justify-center",
                               {
@@ -11997,16 +11939,14 @@ const Ye = Ig(Rg),
                           2,
                         ))
                       : et("", !0),
-                  ]),
-                  b("div", Em, [
-                    e.component == "home"
+                    e.component == "contact"
                       ? (he(),
                         Fe(
                           "div",
                           {
-                            key: 0,
+                            key: 2,
                             class: M([
-                              "md:w-10/12 sm:w-12/12 rounded p-3",
+                              "md:w-10/12 sm:w-12/12 rounded p-3 flex justify-center",
                               {
                                 "bg-slate-200": t.value == 5,
                                 "bg-slate-300": t.value == 4,
@@ -12017,21 +11957,44 @@ const Ye = Ig(Rg),
                             ]),
                           },
                           [
-                            le(Ag, { brightness: t.value }, null, 8, [
+                            le(ym, { brightness: t.value }, null, 8, [
                               "brightness",
                             ]),
                           ],
                           2,
                         ))
                       : et("", !0),
-                  ]),
-                  b("div", Sm, [
+                    e.component == "portfolio"
+                      ? (he(),
+                        Fe(
+                          "div",
+                          {
+                            key: 3,
+                            class: M([
+                              "md:w-10/12 sm:w-12/12 rounded p-3 flex justify-center",
+                              {
+                                "bg-slate-200": t.value == 5,
+                                "bg-slate-300": t.value == 4,
+                                "bg-slate-600": t.value == 3,
+                                "bg-slate-800": t.value == 2,
+                                "bg-slate-900": t.value == 1,
+                              },
+                            ]),
+                          },
+                          [
+                            le(xm, { brightness: t.value }, null, 8, [
+                              "brightness",
+                            ]),
+                          ],
+                          2,
+                        ))
+                      : et("", !0),
                     e.component == "home"
                       ? (he(),
                         Fe(
                           "div",
                           {
-                            key: 0,
+                            key: 4,
                             class: M([
                               "md:w-10/12 sm:w-12/12 rounded p-3",
                               {
@@ -12044,7 +12007,32 @@ const Ye = Ig(Rg),
                             ]),
                           },
                           [
-                            le(Nb, { brightness: t.value }, null, 8, [
+                            le(Og, { brightness: t.value }, null, 8, [
+                              "brightness",
+                            ]),
+                          ],
+                          2,
+                        ))
+                      : et("", !0),
+                    e.component == "home"
+                      ? (he(),
+                        Fe(
+                          "div",
+                          {
+                            key: 5,
+                            class: M([
+                              "md:w-10/12 sm:w-12/12 rounded p-3",
+                              {
+                                "bg-slate-200": t.value == 5,
+                                "bg-slate-300": t.value == 4,
+                                "bg-slate-600": t.value == 3,
+                                "bg-slate-800": t.value == 2,
+                                "bg-slate-900": t.value == 1,
+                              },
+                            ]),
+                          },
+                          [
+                            le(jb, { brightness: t.value }, null, 8, [
                               "brightness",
                             ]),
                           ],
@@ -12055,7 +12043,7 @@ const Ye = Ig(Rg),
                 ],
                 2,
               ),
-              le(Fb, { brightness: t.value }, null, 8, ["brightness"]),
+              le(Lb, { brightness: t.value }, null, 8, ["brightness"]),
             ],
             64,
           )
@@ -12063,13 +12051,13 @@ const Ye = Ig(Rg),
       )
     },
   },
-  Pm = Tr(Cm, [["__scopeId", "data-v-8920e147"]])
+  $m = Tr(km, [["__scopeId", "data-v-bf28247f"]])
 /*!
  * vue-router v4.2.5
  * (c) 2023 Eduardo San Martin Morote
  * @license MIT
  */ const Qn = typeof window < "u"
-function Mm(e) {
+function Em(e) {
   return e.__esModule || e[Symbol.toStringTag] === "Module"
 }
 const je = Object.assign
@@ -12083,8 +12071,8 @@ function fa(e, t) {
 }
 const $r = () => {},
   zt = Array.isArray,
-  Am = /\/$/,
-  Om = (e) => e.replace(Am, "")
+  Sm = /\/$/,
+  Cm = (e) => e.replace(Sm, "")
 function da(e, t, n = "/") {
   let r,
     s = {},
@@ -12099,11 +12087,11 @@ function da(e, t, n = "/") {
       (a = t.slice(f + 1, u > -1 ? u : t.length)),
       (s = e(a))),
     u > -1 && ((r = r || t.slice(0, u)), (i = t.slice(u, t.length))),
-    (r = Nm(r ?? t, n)),
+    (r = Om(r ?? t, n)),
     { fullPath: r + (a && "?") + a + i, path: r, query: s, hash: i }
   )
 }
-function Im(e, t) {
+function Pm(e, t) {
   const n = t.query ? e(t.query) : ""
   return t.path + (n && "?") + n + (t.hash || "")
 }
@@ -12112,7 +12100,7 @@ function ui(e, t) {
     ? e
     : e.slice(t.length) || "/"
 }
-function Rm(e, t, n) {
+function Mm(e, t, n) {
   const r = t.matched.length - 1,
     s = n.matched.length - 1
   return (
@@ -12129,10 +12117,10 @@ function ir(e, t) {
 }
 function Fu(e, t) {
   if (Object.keys(e).length !== Object.keys(t).length) return !1
-  for (const n in e) if (!Tm(e[n], t[n])) return !1
+  for (const n in e) if (!Am(e[n], t[n])) return !1
   return !0
 }
-function Tm(e, t) {
+function Am(e, t) {
   return zt(e) ? ci(e, t) : zt(t) ? ci(t, e) : e === t
 }
 function ci(e, t) {
@@ -12140,7 +12128,7 @@ function ci(e, t) {
     ? e.length === t.length && e.every((n, r) => n === t[r])
     : e.length === 1 && e[0] === t
 }
-function Nm(e, t) {
+function Om(e, t) {
   if (e.startsWith("/")) return e
   if (!e) return t
   const n = t.split("/"),
@@ -12168,20 +12156,20 @@ var Er
 ;(function (e) {
   ;(e.back = "back"), (e.forward = "forward"), (e.unknown = "")
 })(Er || (Er = {}))
-function jm(e) {
+function Im(e) {
   if (!e)
     if (Qn) {
       const t = document.querySelector("base")
       ;(e = (t && t.getAttribute("href")) || "/"),
         (e = e.replace(/^\w+:\/\/[^\/]+/, ""))
     } else e = "/"
-  return e[0] !== "/" && e[0] !== "#" && (e = "/" + e), Om(e)
+  return e[0] !== "/" && e[0] !== "#" && (e = "/" + e), Cm(e)
 }
-const Fm = /^[^#]+#/
-function Lm(e, t) {
-  return e.replace(Fm, "#") + t
+const Rm = /^[^#]+#/
+function Tm(e, t) {
+  return e.replace(Rm, "#") + t
 }
-function Bm(e, t) {
+function Nm(e, t) {
   const n = document.documentElement.getBoundingClientRect(),
     r = e.getBoundingClientRect()
   return {
@@ -12191,7 +12179,7 @@ function Bm(e, t) {
   }
 }
 const Cs = () => ({ left: window.pageXOffset, top: window.pageYOffset })
-function Dm(e) {
+function jm(e) {
   let t
   if ("el" in e) {
     const n = e.el,
@@ -12203,7 +12191,7 @@ function Dm(e) {
             : document.querySelector(n)
           : n
     if (!s) return
-    t = Bm(s, e)
+    t = Nm(s, e)
   } else t = e
   "scrollBehavior" in document.documentElement.style
     ? window.scrollTo(t)
@@ -12216,14 +12204,14 @@ function fi(e, t) {
   return (history.state ? history.state.position - t : -1) + e
 }
 const Ra = new Map()
-function Hm(e, t) {
+function Fm(e, t) {
   Ra.set(e, t)
 }
-function zm(e) {
+function Lm(e) {
   const t = Ra.get(e)
   return Ra.delete(e), t
 }
-let qm = () => location.protocol + "//" + location.host
+let Bm = () => location.protocol + "//" + location.host
 function Lu(e, t) {
   const { pathname: n, search: r, hash: s } = t,
     a = e.indexOf("#")
@@ -12234,7 +12222,7 @@ function Lu(e, t) {
   }
   return ui(n, e) + r + s
 }
-function Wm(e, t, n, r) {
+function Dm(e, t, n, r) {
   let s = [],
     a = [],
     i = null
@@ -12273,7 +12261,7 @@ function Wm(e, t, n, r) {
     const { history: k } = window
     k.state && k.replaceState(je({}, k.state, { scroll: Cs() }), "")
   }
-  function m() {
+  function b() {
     for (const k of a) k()
     ;(a = []),
       window.removeEventListener("popstate", u),
@@ -12282,7 +12270,7 @@ function Wm(e, t, n, r) {
   return (
     window.addEventListener("popstate", u),
     window.addEventListener("beforeunload", h, { passive: !0 }),
-    { pauseListeners: f, listen: d, destroy: m }
+    { pauseListeners: f, listen: d, destroy: b }
   )
 }
 function di(e, t, n, r = !1, s = !1) {
@@ -12295,7 +12283,7 @@ function di(e, t, n, r = !1, s = !1) {
     scroll: s ? Cs() : null,
   }
 }
-function Um(e) {
+function Hm(e) {
   const { history: t, location: n } = window,
     r = { value: Lu(e, n) },
     s = { value: t.state }
@@ -12313,11 +12301,11 @@ function Um(e) {
       !0,
     )
   function a(f, d, h) {
-    const m = e.indexOf("#"),
+    const b = e.indexOf("#"),
       k =
-        m > -1
-          ? (n.host && document.querySelector("base") ? e : e.slice(m)) + f
-          : qm() + e + f
+        b > -1
+          ? (n.host && document.querySelector("base") ? e : e.slice(b)) + f
+          : Bm() + e + f
     try {
       t[h ? "replaceState" : "pushState"](d, "", k), (s.value = d)
     } catch (P) {
@@ -12333,20 +12321,20 @@ function Um(e) {
   function u(f, d) {
     const h = je({}, s.value, t.state, { forward: f, scroll: Cs() })
     a(h.current, h, !0)
-    const m = je({}, di(r.value, f, null), { position: h.position + 1 }, d)
-    a(f, m, !1), (r.value = f)
+    const b = je({}, di(r.value, f, null), { position: h.position + 1 }, d)
+    a(f, b, !1), (r.value = f)
   }
   return { location: r, state: s, push: u, replace: i }
 }
-function Vm(e) {
-  e = jm(e)
-  const t = Um(e),
-    n = Wm(e, t.state, t.location, t.replace)
+function zm(e) {
+  e = Im(e)
+  const t = Hm(e),
+    n = Dm(e, t.state, t.location, t.replace)
   function r(a, i = !0) {
     i || n.pauseListeners(), history.go(a)
   }
   const s = je(
-    { location: "", base: e, go: r, createHref: Lm.bind(null, e) },
+    { location: "", base: e, go: r, createHref: Tm.bind(null, e) },
     t,
     n,
   )
@@ -12362,7 +12350,7 @@ function Vm(e) {
     s
   )
 }
-function Gm(e) {
+function qm(e) {
   return typeof e == "string" || (e && typeof e == "object")
 }
 function Bu(e) {
@@ -12393,21 +12381,21 @@ function Qt(e, t) {
   return e instanceof Error && Du in e && (t == null || !!(e.type & t))
 }
 const vi = "[^/]+?",
-  Km = { sensitive: !1, strict: !1, start: !0, end: !0 },
-  Ym = /[.+*?^${}()[\]/\\]/g
-function Xm(e, t) {
-  const n = je({}, Km, t),
+  Wm = { sensitive: !1, strict: !1, start: !0, end: !0 },
+  Um = /[.+*?^${}()[\]/\\]/g
+function Vm(e, t) {
+  const n = je({}, Wm, t),
     r = []
   let s = n.start ? "^" : ""
   const a = []
   for (const d of e) {
     const h = d.length ? [] : [90]
     n.strict && !d.length && (s += "/")
-    for (let m = 0; m < d.length; m++) {
-      const k = d[m]
+    for (let b = 0; b < d.length; b++) {
+      const k = d[b]
       let P = 40 + (n.sensitive ? 0.25 : 0)
       if (k.type === 0)
-        m || (s += "/"), (s += k.value.replace(Ym, "\\$&")), (P += 40)
+        b || (s += "/"), (s += k.value.replace(Um, "\\$&")), (P += 40)
       else if (k.type === 1) {
         const { value: F, repeatable: _, optional: C, regexp: R } = k
         a.push({ name: F, repeatable: _, optional: C })
@@ -12423,7 +12411,7 @@ function Xm(e, t) {
           }
         }
         let W = _ ? `((?:${V})(?:/(?:${V}))*)` : `(${V})`
-        m || (W = C && d.length < 2 ? `(?:/${W})` : "/" + W),
+        b || (W = C && d.length < 2 ? `(?:/${W})` : "/" + W),
           C && (W += "?"),
           (s += W),
           (P += 20),
@@ -12443,20 +12431,20 @@ function Xm(e, t) {
   const i = new RegExp(s, n.sensitive ? "" : "i")
   function u(d) {
     const h = d.match(i),
-      m = {}
+      b = {}
     if (!h) return null
     for (let k = 1; k < h.length; k++) {
       const P = h[k] || "",
         F = a[k - 1]
-      m[F.name] = P && F.repeatable ? P.split("/") : P
+      b[F.name] = P && F.repeatable ? P.split("/") : P
     }
-    return m
+    return b
   }
   function f(d) {
     let h = "",
-      m = !1
+      b = !1
     for (const k of e) {
-      ;(!m || !h.endsWith("/")) && (h += "/"), (m = !1)
+      ;(!b || !h.endsWith("/")) && (h += "/"), (b = !1)
       for (const P of k)
         if (P.type === 0) h += P.value
         else if (P.type === 1) {
@@ -12470,7 +12458,7 @@ function Xm(e, t) {
           if (!V)
             if (C)
               k.length < 2 &&
-                (h.endsWith("/") ? (h = h.slice(0, -1)) : (m = !0))
+                (h.endsWith("/") ? (h = h.slice(0, -1)) : (b = !0))
             else throw new Error(`Missing required param "${F}"`)
           h += V
         }
@@ -12479,7 +12467,7 @@ function Xm(e, t) {
   }
   return { re: i, score: r, keys: a, parse: u, stringify: f }
 }
-function Zm(e, t) {
+function Gm(e, t) {
   let n = 0
   for (; n < e.length && n < t.length; ) {
     const r = t[n] - e[n]
@@ -12496,12 +12484,12 @@ function Zm(e, t) {
         : -1
       : 0
 }
-function Jm(e, t) {
+function Km(e, t) {
   let n = 0
   const r = e.score,
     s = t.score
   for (; n < r.length && n < s.length; ) {
-    const a = Zm(r[n], s[n])
+    const a = Gm(r[n], s[n])
     if (a) return a
     n++
   }
@@ -12515,11 +12503,11 @@ function pi(e) {
   const t = e[e.length - 1]
   return e.length > 0 && t[t.length - 1] < 0
 }
-const Qm = { type: 0, value: "" },
-  e1 = /[a-zA-Z0-9_]/
-function t1(e) {
+const Ym = { type: 0, value: "" },
+  Xm = /[a-zA-Z0-9_]/
+function Zm(e) {
   if (!e) return [[]]
-  if (e === "/") return [[Qm]]
+  if (e === "/") return [[Ym]]
   if (!e.startsWith("/")) throw new Error(`Invalid path "${e}"`)
   function t(P) {
     throw new Error(`ERR (${n})/"${d}": ${P}`)
@@ -12535,7 +12523,7 @@ function t1(e) {
     f,
     d = "",
     h = ""
-  function m() {
+  function b() {
     d &&
       (n === 0
         ? a.push({ type: 0, value: d })
@@ -12565,7 +12553,7 @@ function t1(e) {
     }
     switch (n) {
       case 0:
-        f === "/" ? (d && m(), i()) : f === ":" ? (m(), (n = 1)) : k()
+        f === "/" ? (d && b(), i()) : f === ":" ? (b(), (n = 1)) : k()
         break
       case 4:
         k(), (n = r)
@@ -12573,9 +12561,9 @@ function t1(e) {
       case 1:
         f === "("
           ? (n = 2)
-          : e1.test(f)
+          : Xm.test(f)
             ? k()
-            : (m(), (n = 0), f !== "*" && f !== "?" && f !== "+" && u--)
+            : (b(), (n = 0), f !== "*" && f !== "?" && f !== "+" && u--)
         break
       case 2:
         f === ")"
@@ -12585,30 +12573,30 @@ function t1(e) {
           : (h += f)
         break
       case 3:
-        m(), (n = 0), f !== "*" && f !== "?" && f !== "+" && u--, (h = "")
+        b(), (n = 0), f !== "*" && f !== "?" && f !== "+" && u--, (h = "")
         break
       default:
         t("Unknown state")
         break
     }
   }
-  return n === 2 && t(`Unfinished custom RegExp for param "${d}"`), m(), i(), s
+  return n === 2 && t(`Unfinished custom RegExp for param "${d}"`), b(), i(), s
 }
-function n1(e, t, n) {
-  const r = Xm(t1(e.path), n),
+function Jm(e, t, n) {
+  const r = Vm(Zm(e.path), n),
     s = je(r, { record: e, parent: t, children: [], alias: [] })
   return t && !s.record.aliasOf == !t.record.aliasOf && t.children.push(s), s
 }
-function r1(e, t) {
+function Qm(e, t) {
   const n = [],
     r = new Map()
   t = mi({ strict: !1, end: !0, sensitive: !1 }, t)
   function s(h) {
     return r.get(h)
   }
-  function a(h, m, k) {
+  function a(h, b, k) {
     const P = !k,
-      F = s1(h)
+      F = e1(h)
     F.aliasOf = k && k.record
     const _ = mi(t, h),
       C = [F]
@@ -12626,13 +12614,13 @@ function r1(e, t) {
     let R, V
     for (const W of C) {
       const { path: X } = W
-      if (m && X[0] !== "/") {
-        const B = m.record.path,
+      if (b && X[0] !== "/") {
+        const B = b.record.path,
           D = B[B.length - 1] === "/" ? "" : "/"
-        W.path = m.record.path + (X && D + X)
+        W.path = b.record.path + (X && D + X)
       }
       if (
-        ((R = n1(W, m, _)),
+        ((R = Jm(W, b, _)),
         k
           ? k.alias.push(R)
           : ((V = V || R),
@@ -12657,16 +12645,16 @@ function r1(e, t) {
   }
   function i(h) {
     if (Bu(h)) {
-      const m = r.get(h)
-      m &&
+      const b = r.get(h)
+      b &&
         (r.delete(h),
-        n.splice(n.indexOf(m), 1),
-        m.children.forEach(i),
-        m.alias.forEach(i))
+        n.splice(n.indexOf(b), 1),
+        b.children.forEach(i),
+        b.alias.forEach(i))
     } else {
-      const m = n.indexOf(h)
-      m > -1 &&
-        (n.splice(m, 1),
+      const b = n.indexOf(h)
+      b > -1 &&
+        (n.splice(b, 1),
         h.record.name && r.delete(h.record.name),
         h.children.forEach(i),
         h.alias.forEach(i))
@@ -12676,18 +12664,18 @@ function r1(e, t) {
     return n
   }
   function f(h) {
-    let m = 0
+    let b = 0
     for (
       ;
-      m < n.length &&
-      Jm(h, n[m]) >= 0 &&
-      (h.record.path !== n[m].record.path || !Hu(h, n[m]));
+      b < n.length &&
+      Km(h, n[b]) >= 0 &&
+      (h.record.path !== n[b].record.path || !Hu(h, n[b]));
 
     )
-      m++
-    n.splice(m, 0, h), h.record.name && !bi(h) && r.set(h.record.name, h)
+      b++
+    n.splice(b, 0, h), h.record.name && !bi(h) && r.set(h.record.name, h)
   }
-  function d(h, m) {
+  function d(h, b) {
     let k,
       P = {},
       F,
@@ -12697,7 +12685,7 @@ function r1(e, t) {
       ;(_ = k.record.name),
         (P = je(
           gi(
-            m.params,
+            b.params,
             k.keys.filter((V) => !V.optional).map((V) => V.name),
           ),
           h.params &&
@@ -12712,16 +12700,16 @@ function r1(e, t) {
         (k = n.find((V) => V.re.test(F))),
         k && ((P = k.parse(F)), (_ = k.record.name))
     else {
-      if (((k = m.name ? r.get(m.name) : n.find((V) => V.re.test(m.path))), !k))
-        throw ur(1, { location: h, currentLocation: m })
+      if (((k = b.name ? r.get(b.name) : n.find((V) => V.re.test(b.path))), !k))
+        throw ur(1, { location: h, currentLocation: b })
       ;(_ = k.record.name),
-        (P = je({}, m.params, h.params)),
+        (P = je({}, b.params, h.params)),
         (F = k.stringify(P))
     }
     const C = []
     let R = k
     for (; R; ) C.unshift(R.record), (R = R.parent)
-    return { name: _, path: F, params: P, matched: C, meta: l1(C) }
+    return { name: _, path: F, params: P, matched: C, meta: n1(C) }
   }
   return (
     e.forEach((h) => a(h)),
@@ -12739,7 +12727,7 @@ function gi(e, t) {
   for (const r of t) r in e && (n[r] = e[r])
   return n
 }
-function s1(e) {
+function e1(e) {
   return {
     path: e.path,
     redirect: e.redirect,
@@ -12747,7 +12735,7 @@ function s1(e) {
     meta: e.meta || {},
     aliasOf: void 0,
     beforeEnter: e.beforeEnter,
-    props: a1(e),
+    props: t1(e),
     children: e.children || [],
     instances: {},
     leaveGuards: new Set(),
@@ -12759,7 +12747,7 @@ function s1(e) {
         : e.component && { default: e.component },
   }
 }
-function a1(e) {
+function t1(e) {
   const t = {},
     n = e.props || !1
   if ("component" in e) t.default = n
@@ -12773,7 +12761,7 @@ function bi(e) {
   }
   return !1
 }
-function l1(e) {
+function n1(e) {
   return e.reduce((t, n) => je(t, n.meta), {})
 }
 function mi(e, t) {
@@ -12785,47 +12773,47 @@ function Hu(e, t) {
   return t.children.some((n) => n === e || Hu(e, n))
 }
 const zu = /#/g,
-  o1 = /&/g,
-  i1 = /\//g,
-  u1 = /=/g,
-  c1 = /\?/g,
+  r1 = /&/g,
+  s1 = /\//g,
+  a1 = /=/g,
+  l1 = /\?/g,
   qu = /\+/g,
-  f1 = /%5B/g,
-  d1 = /%5D/g,
+  o1 = /%5B/g,
+  i1 = /%5D/g,
   Wu = /%5E/g,
-  h1 = /%60/g,
+  u1 = /%60/g,
   Uu = /%7B/g,
-  v1 = /%7C/g,
+  c1 = /%7C/g,
   Vu = /%7D/g,
-  p1 = /%20/g
+  f1 = /%20/g
 function il(e) {
   return encodeURI("" + e)
-    .replace(v1, "|")
-    .replace(f1, "[")
-    .replace(d1, "]")
+    .replace(c1, "|")
+    .replace(o1, "[")
+    .replace(i1, "]")
 }
-function g1(e) {
+function d1(e) {
   return il(e).replace(Uu, "{").replace(Vu, "}").replace(Wu, "^")
 }
 function Ta(e) {
   return il(e)
     .replace(qu, "%2B")
-    .replace(p1, "+")
+    .replace(f1, "+")
     .replace(zu, "%23")
-    .replace(o1, "%26")
-    .replace(h1, "`")
+    .replace(r1, "%26")
+    .replace(u1, "`")
     .replace(Uu, "{")
     .replace(Vu, "}")
     .replace(Wu, "^")
 }
-function b1(e) {
-  return Ta(e).replace(u1, "%3D")
+function h1(e) {
+  return Ta(e).replace(a1, "%3D")
 }
-function m1(e) {
-  return il(e).replace(zu, "%23").replace(c1, "%3F")
+function v1(e) {
+  return il(e).replace(zu, "%23").replace(l1, "%3F")
 }
-function y1(e) {
-  return e == null ? "" : m1(e).replace(i1, "%2F")
+function p1(e) {
+  return e == null ? "" : v1(e).replace(s1, "%2F")
 }
 function fs(e) {
   try {
@@ -12833,7 +12821,7 @@ function fs(e) {
   } catch {}
   return "" + e
 }
-function w1(e) {
+function g1(e) {
   const t = {}
   if (e === "" || e === "?") return t
   const r = (e[0] === "?" ? e.slice(1) : e).split("&")
@@ -12853,7 +12841,7 @@ function yi(e) {
   let t = ""
   for (let n in e) {
     const r = e[n]
-    if (((n = b1(n)), r == null)) {
+    if (((n = h1(n)), r == null)) {
       r !== void 0 && (t += (t.length ? "&" : "") + n)
       continue
     }
@@ -12864,7 +12852,7 @@ function yi(e) {
   }
   return t
 }
-function x1(e) {
+function b1(e) {
   const t = {}
   for (const n in e) {
     const r = e[n]
@@ -12877,7 +12865,7 @@ function x1(e) {
   }
   return t
 }
-const _1 = Symbol(""),
+const m1 = Symbol(""),
   wi = Symbol(""),
   ul = Symbol(""),
   Gu = Symbol(""),
@@ -12902,22 +12890,22 @@ function mn(e, t, n, r, s) {
   const a = r && (r.enterCallbacks[s] = r.enterCallbacks[s] || [])
   return () =>
     new Promise((i, u) => {
-      const f = (m) => {
-          m === !1
+      const f = (b) => {
+          b === !1
             ? u(ur(4, { from: n, to: t }))
-            : m instanceof Error
-              ? u(m)
-              : Gm(m)
-                ? u(ur(2, { from: t, to: m }))
+            : b instanceof Error
+              ? u(b)
+              : qm(b)
+                ? u(ur(2, { from: t, to: b }))
                 : (a &&
                     r.enterCallbacks[s] === a &&
-                    typeof m == "function" &&
-                    a.push(m),
+                    typeof b == "function" &&
+                    a.push(b),
                   i())
         },
         d = e.call(r && r.instances[s], t, n, f)
       let h = Promise.resolve(d)
-      e.length < 3 && (h = h.then(f)), h.catch((m) => u(m))
+      e.length < 3 && (h = h.then(f)), h.catch((b) => u(b))
     })
 }
 function ha(e, t, n, r) {
@@ -12926,7 +12914,7 @@ function ha(e, t, n, r) {
     for (const i in a.components) {
       let u = a.components[i]
       if (!(t !== "beforeRouteEnter" && !a.instances[i]))
-        if (k1(u)) {
+        if (y1(u)) {
           const d = (u.__vccOpts || u)[t]
           d && s.push(mn(d, n, r, a, i))
         } else {
@@ -12937,7 +12925,7 @@ function ha(e, t, n, r) {
                 return Promise.reject(
                   new Error(`Couldn't resolve component "${i}" at "${a.path}"`),
                 )
-              const h = Mm(d) ? d.default : d
+              const h = Em(d) ? d.default : d
               a.components[i] = h
               const k = (h.__vccOpts || h)[t]
               return k && mn(k, n, r, a, i)()
@@ -12947,7 +12935,7 @@ function ha(e, t, n, r) {
     }
   return s
 }
-function k1(e) {
+function y1(e) {
   return (
     typeof e == "object" ||
     "displayName" in e ||
@@ -12963,16 +12951,16 @@ function xi(e) {
       const { matched: f } = r.value,
         { length: d } = f,
         h = f[d - 1],
-        m = n.matched
-      if (!h || !m.length) return -1
-      const k = m.findIndex(ir.bind(null, h))
+        b = n.matched
+      if (!h || !b.length) return -1
+      const k = b.findIndex(ir.bind(null, h))
       if (k > -1) return k
       const P = _i(f[d - 2])
-      return d > 1 && _i(h) === P && m[m.length - 1].path !== P
-        ? m.findIndex(ir.bind(null, f[d - 2]))
+      return d > 1 && _i(h) === P && b[b.length - 1].path !== P
+        ? b.findIndex(ir.bind(null, f[d - 2]))
         : k
     }),
-    a = ie(() => s.value > -1 && C1(n.params, r.value.params)),
+    a = ie(() => s.value > -1 && k1(n.params, r.value.params)),
     i = ie(
       () =>
         s.value > -1 &&
@@ -12980,7 +12968,7 @@ function xi(e) {
         Fu(n.params, r.value.params),
     )
   function u(f = {}) {
-    return S1(f)
+    return _1(f)
       ? t[fe(e.replace) ? "replace" : "push"](fe(e.to)).catch($r)
       : Promise.resolve()
   }
@@ -12992,7 +12980,7 @@ function xi(e) {
     navigate: u,
   }
 }
-const $1 = At({
+const w1 = At({
     name: "RouterLink",
     compatConfig: { MODE: 3 },
     props: {
@@ -13033,8 +13021,8 @@ const $1 = At({
       }
     },
   }),
-  E1 = $1
-function S1(e) {
+  x1 = w1
+function _1(e) {
   if (
     !(e.metaKey || e.altKey || e.ctrlKey || e.shiftKey) &&
     !e.defaultPrevented &&
@@ -13047,7 +13035,7 @@ function S1(e) {
     return e.preventDefault && e.preventDefault(), !0
   }
 }
-function C1(e, t) {
+function k1(e, t) {
   for (const n in t) {
     const r = t[n],
       s = e[n]
@@ -13062,7 +13050,7 @@ function _i(e) {
   return e ? (e.aliasOf ? e.aliasOf.path : e.path) : ""
 }
 const ki = (e, t, n) => e ?? t ?? n,
-  P1 = At({
+  $1 = At({
     name: "RouterView",
     inheritAttrs: !1,
     props: { name: { type: String, default: "default" }, route: Object },
@@ -13074,8 +13062,8 @@ const ki = (e, t, n) => e ?? t ?? n,
         i = ie(() => {
           let d = fe(a)
           const { matched: h } = s.value
-          let m
-          for (; (m = h[d]) && !m.components; ) d++
+          let b
+          for (; (b = h[d]) && !b.components; ) d++
           return d
         }),
         u = ie(() => s.value.matched[i.value])
@@ -13083,15 +13071,15 @@ const ki = (e, t, n) => e ?? t ?? n,
         wi,
         ie(() => i.value + 1),
       ),
-        Kt(_1, u),
+        Kt(m1, u),
         Kt(Na, s)
       const f = _e()
       return (
         rn(
           () => [f.value, u.value, e.name],
-          ([d, h, m], [k, P, F]) => {
+          ([d, h, b], [k, P, F]) => {
             h &&
-              ((h.instances[m] = d),
+              ((h.instances[b] = d),
               P &&
                 P !== h &&
                 d &&
@@ -13101,17 +13089,17 @@ const ki = (e, t, n) => e ?? t ?? n,
               d &&
                 h &&
                 (!P || !ir(h, P) || !k) &&
-                (h.enterCallbacks[m] || []).forEach((_) => _(d))
+                (h.enterCallbacks[b] || []).forEach((_) => _(d))
           },
           { flush: "post" },
         ),
         () => {
           const d = s.value,
             h = e.name,
-            m = u.value,
-            k = m && m.components[h]
+            b = u.value,
+            k = b && b.components[h]
           if (!k) return $i(n.default, { Component: k, route: d })
-          const P = m.props[h],
+          const P = b.props[h],
             F = P
               ? P === !0
                 ? d.params
@@ -13123,7 +13111,7 @@ const ki = (e, t, n) => e ?? t ?? n,
               k,
               je({}, F, t, {
                 onVnodeUnmounted: (R) => {
-                  R.component.isUnmounted && (m.instances[h] = null)
+                  R.component.isUnmounted && (b.instances[h] = null)
                 },
                 ref: f,
               }),
@@ -13138,10 +13126,10 @@ function $i(e, t) {
   const n = e(t)
   return n.length === 1 ? n[0] : n
 }
-const M1 = P1
-function A1(e) {
-  const t = r1(e.routes, e),
-    n = e.parseQuery || w1,
+const E1 = $1
+function S1(e) {
+  const t = Qm(e.routes, e),
+    n = e.parseQuery || g1,
     r = e.stringifyQuery || yi,
     s = e.history,
     a = wr(),
@@ -13154,7 +13142,7 @@ function A1(e) {
     "scrollRestoration" in history &&
     (history.scrollRestoration = "manual")
   const h = fa.bind(null, (I) => "" + I),
-    m = fa.bind(null, y1),
+    b = fa.bind(null, p1),
     k = fa.bind(null, fs)
   function P(I, Q) {
     let G, ae
@@ -13190,15 +13178,15 @@ function A1(e) {
     else {
       const E = je({}, I.params)
       for (const A in E) E[A] == null && delete E[A]
-      ;(G = je({}, I, { params: m(E) })), (Q.params = m(Q.params))
+      ;(G = je({}, I, { params: b(E) })), (Q.params = b(Q.params))
     }
     const ae = t.resolve(G, Q),
       Me = I.hash || ""
     ae.params = h(k(ae.params))
-    const p = Im(r, je({}, I, { hash: g1(Me), path: ae.path })),
+    const p = Pm(r, je({}, I, { hash: d1(Me), path: ae.path })),
       y = s.createHref(p)
     return je(
-      { fullPath: p, hash: Me, query: r === yi ? x1(I.query) : I.query || {} },
+      { fullPath: p, hash: Me, query: r === yi ? b1(I.query) : I.query || {} },
       ae,
       { redirectedFrom: void 0, href: y },
     )
@@ -13257,7 +13245,7 @@ function A1(e) {
     let T
     return (
       !p &&
-        Rm(r, ae, G) &&
+        Mm(r, ae, G) &&
         ((T = ur(16, { to: A, from: ae })), ht(ae, ae, !0, !1)),
       (T ? Promise.resolve(T) : We(A, ae))
         .catch((j) => (Qt(j) ? (Qt(j, 2) ? j : De(j)) : J(j, A, ae)))
@@ -13288,7 +13276,7 @@ function A1(e) {
   }
   function We(I, Q) {
     let G
-    const [ae, Me, p] = O1(I, Q)
+    const [ae, Me, p] = C1(I, Q)
     G = ha(ae.reverse(), "beforeRouteLeave", I, Q)
     for (const E of ae)
       E.leaveGuards.forEach((A) => {
@@ -13365,7 +13353,7 @@ function A1(e) {
         }
         d = ae
         const p = f.value
-        Qn && Hm(fi(p.fullPath, G.delta), Cs()),
+        Qn && Fm(fi(p.fullPath, G.delta), Cs()),
           We(ae, p)
             .catch((y) =>
               Qt(y, 12)
@@ -13425,12 +13413,12 @@ function A1(e) {
     const { scrollBehavior: Me } = e
     if (!Qn || !Me) return Promise.resolve()
     const p =
-      (!G && zm(fi(I.fullPath, 0))) ||
+      (!G && Lm(fi(I.fullPath, 0))) ||
       ((ae || !G) && history.state && history.state.scroll) ||
       null
     return Ji()
       .then(() => Me(I, Q, p))
-      .then((y) => y && Dm(y))
+      .then((y) => y && jm(y))
       .catch((y) => J(y, I, Q))
   }
   const Ze = (I) => s.go(I)
@@ -13457,8 +13445,8 @@ function A1(e) {
       isReady: mt,
       install(I) {
         const Q = this
-        I.component("RouterLink", E1),
-          I.component("RouterView", M1),
+        I.component("RouterLink", x1),
+          I.component("RouterView", E1),
           (I.config.globalProperties.$router = Q),
           Object.defineProperty(I.config.globalProperties, "$route", {
             enumerable: !0,
@@ -13495,7 +13483,7 @@ function A1(e) {
   }
   return _t
 }
-function O1(e, t) {
+function C1(e, t) {
   const n = [],
     r = [],
     s = [],
@@ -13519,9 +13507,9 @@ const cl = [
 ]
 cl.map((e) => e.path)
 cl.forEach((e) => {
-  e.component = Pm
+  e.component = $m
 })
-const I1 = A1({ history: Vm(), routes: cl }),
+const P1 = S1({ history: zm(), routes: cl }),
   Ku = op(dp)
-Ku.use(I1)
+Ku.use(P1)
 Ku.mount("#app")

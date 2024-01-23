@@ -183,9 +183,7 @@
         v-if="component == 'pricing'">
         <Pricing :brightness="brightness" />
       </div>
-    </div>
 
-    <div class="flex justify-center w-full md:px-10 sm:px-5 mt-5">
       <div
         class="md:w-10/12 sm:w-12/12 rounded p-3 flex justify-center"
         :class="{
@@ -198,39 +196,33 @@
         v-if="component == 'about-me'">
         <AboutMe :brightness="brightness" />
       </div>
-    </div>
 
-    <div class="flex justify-center w-full md:px-10 sm:px-5 mt-5">
-    <div
-      class="md:w-10/12 sm:w-12/12 rounded p-3 flex justify-center"
-      :class="{
-        'bg-slate-200': brightness == 5,
-        'bg-slate-300': brightness == 4,
-        'bg-slate-600': brightness == 3,
-        'bg-slate-800': brightness == 2,
-        'bg-slate-900': brightness == 1,
-      }"
-      v-if="component == 'contact'">
-      <Contact :brightness="brightness" />
-    </div>
-  </div>
+      <div
+        class="md:w-10/12 sm:w-12/12 rounded p-3 flex justify-center"
+        :class="{
+          'bg-slate-200': brightness == 5,
+          'bg-slate-300': brightness == 4,
+          'bg-slate-600': brightness == 3,
+          'bg-slate-800': brightness == 2,
+          'bg-slate-900': brightness == 1,
+        }"
+        v-if="component == 'contact'">
+        <Contact :brightness="brightness" />
+      </div>
 
-  <div class="flex justify-center w-full md:px-10 sm:px-5 mt-5">
-    <div
-      class="md:w-10/12 sm:w-12/12 rounded p-3 flex justify-center"
-      :class="{
-        'bg-slate-200': brightness == 5,
-        'bg-slate-300': brightness == 4,
-        'bg-slate-600': brightness == 3,
-        'bg-slate-800': brightness == 2,
-        'bg-slate-900': brightness == 1,
-      }"
-      v-if="component == 'portfolio'">
-      <Portfolio :brightness="brightness" />
-    </div>
-  </div>
+      <div
+        class="md:w-10/12 sm:w-12/12 rounded p-3 flex justify-center"
+        :class="{
+          'bg-slate-200': brightness == 5,
+          'bg-slate-300': brightness == 4,
+          'bg-slate-600': brightness == 3,
+          'bg-slate-800': brightness == 2,
+          'bg-slate-900': brightness == 1,
+        }"
+        v-if="component == 'portfolio'">
+        <Portfolio :brightness="brightness" />
+      </div>
 
-    <div class="flex justify-center w-full md:px-10 sm:px-5 pt-10">
       <div
         class="md:w-10/12 sm:w-12/12 rounded p-3"
         :class="{
@@ -243,9 +235,7 @@
         v-if="component == 'home'">
         <Hero :brightness="brightness" />
       </div>
-    </div>
 
-    <div class="flex justify-center w-full md:px-10 sm:px-5 pt-10">
       <div
         class="md:w-10/12 sm:w-12/12 rounded p-3"
         :class="{
@@ -260,7 +250,7 @@
       </div>
     </div>
   </div>
-  
+
   <messageBanner :brightness="brightness" />
 </template>
 

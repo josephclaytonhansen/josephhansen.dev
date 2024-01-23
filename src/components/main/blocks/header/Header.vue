@@ -207,7 +207,7 @@
         </div>
 
         <div class="flex gap-5 content-center">
-          <button
+          <a href = "/contact"><button
             :class="{
               'bg-emerald-600': brightness >= 4,
               'bg-slate-500': brightness == 3,
@@ -216,7 +216,7 @@
             }"
             class="py-2 px-3 rounded text-white">
             Contact
-          </button>
+          </button></a>
         </div>
       </div>
     </div>
