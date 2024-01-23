@@ -467,15 +467,15 @@
   const blockClass = (brightness) => {
     let classes = ""
     classes += ringClass(brightness)
-    if (brightness == 5){
+    if (brightness == 5) {
       classes += " bg-slate-100"
-    } else if (brightness == 4){
+    } else if (brightness == 4) {
       classes += " bg-slate-400"
-    } else if (brightness == 3){
+    } else if (brightness == 3) {
       classes += " bg-slate-500"
-    } else if (brightness == 2){
+    } else if (brightness == 2) {
       classes += " bg-slate-700"
-    } else if (brightness == 1){
+    } else if (brightness == 1) {
       classes += " bg-slate-800"
     }
   }
@@ -505,8 +505,7 @@
       v-for="(block, index) in blocks"
       :key="index"
       class="md:wd-8/12 sm:wd-11/12 rounded bg-slate-100 p-5 border-4 flex-col mb-4"
-      :class="blockClass(brightness)
-      ">
+      :class="blockClass(brightness)">
       <div class="flex">
         <div class="w-6/12">
           <div

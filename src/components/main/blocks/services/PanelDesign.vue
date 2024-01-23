@@ -6,7 +6,6 @@
 
   import chroma from "chroma-js"
 
-
   const iconClass = (brightness) => {
     if (brightness >= 4) {
       return "text-emerald-500"
@@ -67,6 +66,4 @@
   )
 </script>
 
-<template>
-
-</template>
+<template></template>
