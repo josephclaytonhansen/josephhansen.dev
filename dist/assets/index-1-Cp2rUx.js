@@ -12353,7 +12353,7 @@ const Je = Kg(Yg),
     __name: "Main",
     props: { component: String },
     setup(e) {
-      const t = be(3),
+      const t = be(1),
         n = e,
         r = (i) => {
           ;(t.value = Number(i)),
@@ -12651,7 +12651,7 @@ const Je = Kg(Yg),
       )
     },
   },
-  ob = gr(ab, [["__scopeId", "data-v-2729bdc0"]])
+  ob = gr(ab, [["__scopeId", "data-v-dfc61dd8"]])
 /*!
  * vue-router v4.2.5
  * (c) 2023 Eduardo San Martin Morote
