@@ -43,7 +43,7 @@
       title: "OKC South Stake",
       image:
         "https://images.josephhansen.dev/uploads/fileIMG_3533.png-1705724032543.webp",
-      excerpt: "",
+      excerpt: "Excerpt",
       link: "",
     },
   ])
@@ -107,15 +107,9 @@
 
     <div class="grid lg:grid-cols-2 md:grid-cols-none gap-4 w-full">
       <div
-        class="flex-col rounded-xl"
+        class="flex flex-col justify-end rounded-xl"
         v-for="cards in fullWidthcards"
-        :class="{
-          'bg-slate-100': brightness == 5,
-          'bg-slate-400': brightness == 4,
-          'bg-slate-500': brightness == 3,
-          'bg-slate-700': brightness == 2,
-          'bg-slate-800': brightness == 1,
-        }">
+       >
         <div>
           <img
             :src="cards.image"
