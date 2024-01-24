@@ -11979,7 +11979,7 @@ const Je = Kg(Yg),
         },
         r = (u) => {
           if (u >= 4) return "text-emerald-500"
-          if (u == 3) return "text-orange-200"
+          if (u == 3) return "text-orange-600"
           if (u == 2) return "text-orange-500"
           if (u == 1) return "text-orange-400"
         },
@@ -12346,7 +12346,7 @@ const Je = Kg(Yg),
       )
     },
   },
-  rb = gr(nb, [["__scopeId", "data-v-f01495fb"]]),
+  rb = gr(nb, [["__scopeId", "data-v-385c64c7"]]),
   sb = { class: "flex justify-center w-full md:px-10 sm:px-5 mt-5" },
   lb = { class: "flex justify-center w-full md:px-10 sm:px-5 pt-10" },
   ab = {

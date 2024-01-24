@@ -19,7 +19,7 @@
     if (brightness >= 4) {
       return "text-emerald-500"
     } else if (brightness == 3) {
-      return "text-orange-200"
+      return "text-orange-600"
     } else if (brightness == 2) {
       return "text-orange-500"
     } else if (brightness == 1) {
@@ -75,39 +75,43 @@
     {
       icons: [siWordpress, siPhp, siCss3],
       title: "Stuart Pipe and Hose",
-      image: "https://images.josephhansen.dev/uploads/fileIMG_3533.png-1705724032543.webp",
+      image:
+        "https://images.josephhansen.dev/uploads/fileIMG_3533.png-1705724032543.webp",
       excerpt: "",
       link: "",
     },
     {
       icons: [siWordpress, siBootstrap, siCss3],
       title: "Atlanta Floor One",
-      image: "https://images.josephhansen.dev/uploads/fileIMG_3533.png-1705724032543.webp",
+      image:
+        "https://images.josephhansen.dev/uploads/fileIMG_3533.png-1705724032543.webp",
       excerpt: "",
       link: "",
     },
     {
       icons: [siWordpress, siBootstrap, siCss3],
       title: "Swim State Pool",
-      image: "https://images.josephhansen.dev/uploads/fileIMG_3533.png-1705724032543.webp",
+      image:
+        "https://images.josephhansen.dev/uploads/fileIMG_3533.png-1705724032543.webp",
       excerpt: "",
       link: "",
     },
     {
-      title: 'josephhansen.dev',
+      title: "josephhansen.dev",
       icons: [siVuedotjs, siTailwindcss, siNginx],
-      image: "https://images.josephhansen.dev/uploads/fileIMG_3533.png-1705724032543.webp",
+      image:
+        "https://images.josephhansen.dev/uploads/fileIMG_3533.png-1705724032543.webp",
       excerpt: "",
       link: "",
-      
     },
     {
-      title: 'Nonsense Free Recipes',
+      title: "Nonsense Free Recipes",
       icons: [siReact, siBootstrap, siNginx],
-      image: "https://images.josephhansen.dev/uploads/fileIMG_3533.png-1705724032543.webp",
+      image:
+        "https://images.josephhansen.dev/uploads/fileIMG_3533.png-1705724032543.webp",
       excerpt: "",
       link: "",
-    }
+    },
   ])
 
   const hoveredCard = ref(null)
@@ -132,13 +136,18 @@
         </h3>
       </span>
     </div>
-    
+
     <div class="grid lg:grid-cols-2 md:grid-cols-none gap-4 w-full">
       <div
         class="flex flex-col justify-end rounded-xl portfolioCard"
-        v-for="cards in fullWidthcards" :key="cards.title" @mouseover="hoveredCard = cards.title"
-      @mouseleave="hoveredCard = null"
-      :style="{ opacity: hoveredCard === cards.title || hoveredCard === null ? 1 : 0.5 }">
+        v-for="cards in fullWidthcards"
+        :key="cards.title"
+        @mouseover="hoveredCard = cards.title"
+        @mouseleave="hoveredCard = null"
+        :style="{
+          opacity:
+            hoveredCard === cards.title || hoveredCard === null ? 1 : 0.5,
+        }">
         <div>
           <img
             :src="cards.image"
@@ -187,18 +196,22 @@
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>
     </div>
 
-    <div class ="grid lg:grid-cols-3 md:grids-col-1 gap-4 w-full mt-4">
+    <div class="grid lg:grid-cols-3 md:grids-col-1 gap-4 w-full mt-4">
       <div
-        class="flex flex-col justify-end rounded-xl portfolioCard" @mouseover="hoveredCard = cards.title"
-      @mouseleave="hoveredCard = null"
-      :style="{ opacity: hoveredCard === cards.title || hoveredCard === null ? 1 : 0.5 }"
-        v-for="cards in thirdCards" :key="cards.title">
+        class="flex flex-col justify-end rounded-xl portfolioCard"
+        @mouseover="hoveredCard = cards.title"
+        @mouseleave="hoveredCard = null"
+        :style="{
+          opacity:
+            hoveredCard === cards.title || hoveredCard === null ? 1 : 0.5,
+        }"
+        v-for="cards in thirdCards"
+        :key="cards.title">
         <div>
           <img
             :src="cards.image"
@@ -247,7 +260,6 @@
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>
@@ -259,5 +271,4 @@
   .portfolioCard {
     transition: all 0.2s ease-in-out;
   }
-
 </style>
