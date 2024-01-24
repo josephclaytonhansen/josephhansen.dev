@@ -20,7 +20,7 @@
     siWordpress,
     siVuedotjs,
     siPhp,
-    siHtml5,
+    siFigma,
     siCss3,
     siJavascript,
     siNginx,
@@ -29,7 +29,7 @@
 
   const fullWidthcards = ref([
     {
-      icons: [siWordpress, siPhp],
+      icons: [siWordpress, siPhp, siFigma],
       title: "BlenderNation Bazaar",
       image:
         "https://images.josephhansen.dev/uploads/fileIMG_3533.png-1705724032543.webp",
