@@ -111,17 +111,19 @@
       Hi, I'm Joseph. I'm a full-stack web developer. What can I do for you?
     </p>
     <div class="flex py-5 justify-center gap-3 w-full">
-      <a href = "/portfolio"><button
-        aria-label="View my portfolio"
-        class="rounded px-5 py-2 text-white font-semibold"
-        :class="{
-          'bg-emerald-600': brightness >= 4,
-          'bg-slate-500': brightness == 3,
-          'bg-orange-600': brightness == 2,
-          'bg-orange-500': brightness == 1,
-        }">
-        Portfolio
-      </button></a>
+      <a href="/portfolio"
+        ><button
+          aria-label="View my portfolio"
+          class="rounded px-5 py-2 text-white font-semibold"
+          :class="{
+            'bg-emerald-600': brightness >= 4,
+            'bg-slate-500': brightness == 3,
+            'bg-orange-600': brightness == 2,
+            'bg-orange-500': brightness == 1,
+          }">
+          Portfolio
+        </button></a
+      >
       <a href="/pricing"
         ><button
           aria-label="View service pricing for an existing website"
