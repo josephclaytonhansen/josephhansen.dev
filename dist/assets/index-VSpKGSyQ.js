@@ -28,11 +28,7 @@
     fetch(s.href, l)
   }
 })()
-/**
- * @vue/shared v3.4.15
- * (c) 2018-present Yuxi (Evan) You and Vue contributors
- * @license MIT
- **/ function ql(e, t) {
+function ql(e, t) {
   const n = new Set(e.split(","))
   return t ? (r) => n.has(r.toLowerCase()) : (r) => n.has(r)
 }
@@ -178,11 +174,7 @@ const St = (e) =>
     var n
     return dr(e) ? `Symbol(${(n = e.description) != null ? n : t})` : e
   }
-/**
- * @vue/reactivity v3.4.15
- * (c) 2018-present Yuxi (Evan) You and Vue contributors
- * @license MIT
- **/ let Dt
+let Dt
 class ch {
   constructor(t = !1) {
     ;(this.detached = t),
@@ -844,11 +836,7 @@ const Nh = {
 function ru(e) {
   return lr(e) ? e : new Proxy(e, Nh)
 }
-/**
- * @vue/runtime-core v3.4.15
- * (c) 2018-present Yuxi (Evan) You and Vue contributors
- * @license MIT
- **/ function _n(e, t, n, r) {
+function _n(e, t, n, r) {
   let s
   try {
     s = r ? e(...r) : e()
@@ -1358,7 +1346,7 @@ function Pn(e, t, n, r) {
     f && (Ln(), zt(f, n, 8, [e.el, u, e, t]), Fn())
   }
 }
-/*! #__NO_SIDE_EFFECTS__ */ function Tt(e, t) {
+function Tt(e, t) {
   return be(e) ? dt({ name: e.name }, t, { setup: e }) : e
 }
 const us = (e) => !!e.type.__asyncLoader,
@@ -3228,11 +3216,7 @@ function ot(e, t, n) {
       ae(e, t, n))
 }
 const qp = "3.4.15"
-/**
- * @vue/runtime-dom v3.4.15
- * (c) 2018-present Yuxi (Evan) You and Vue contributors
- * @license MIT
- **/ const Wp = "http://www.w3.org/2000/svg",
+const Wp = "http://www.w3.org/2000/svg",
   Vp = "http://www.w3.org/1998/Math/MathML",
   mn = typeof document < "u" ? document : null,
   Qo = mn && mn.createElement("template"),
@@ -5152,12 +5136,7 @@ let fa = Symbol("TabsSSRContext"),
       }
     },
   })
-/**
- * @license lucide-vue-next v0.303.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */ var ls = {
+var ls = {
   xmlns: "http://www.w3.org/2000/svg",
   width: 24,
   height: 24,
@@ -5168,12 +5147,7 @@ let fa = Symbol("TabsSSRContext"),
   "stroke-linecap": "round",
   "stroke-linejoin": "round",
 }
-/**
- * @license lucide-vue-next v0.303.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */ const Jg = (e) => e.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase(),
+const Jg = (e) => e.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase(),
   rt =
     (e, t) =>
     (
@@ -5201,28 +5175,11 @@ let fa = Symbol("TabsSSRContext"),
         },
         [...t.map((d) => ot(...d)), ...(h.default ? [h.default()] : [])],
       )
-/**
- * @license lucide-vue-next v0.303.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */ const pi = rt("CheckIcon", [
-  ["path", { d: "M20 6 9 17l-5-5", key: "1gmf2c" }],
-])
-/**
- * @license lucide-vue-next v0.303.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */ const Zg = rt("ChevronDownIcon", [
+const pi = rt("CheckIcon", [["path", { d: "M20 6 9 17l-5-5", key: "1gmf2c" }]])
+const Zg = rt("ChevronDownIcon", [
   ["path", { d: "m6 9 6 6 6-6", key: "qrunsl" }],
 ])
-/**
- * @license lucide-vue-next v0.303.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */ const Qg = rt("CloudDrizzleIcon", [
+const Qg = rt("CloudDrizzleIcon", [
   [
     "path",
     {
@@ -5237,12 +5194,7 @@ let fa = Symbol("TabsSSRContext"),
   ["path", { d: "M12 21v1", key: "q8vafk" }],
   ["path", { d: "M12 16v1", key: "1mx6rx" }],
 ])
-/**
- * @license lucide-vue-next v0.303.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */ const ev = rt("CloudSunIcon", [
+const ev = rt("CloudSunIcon", [
   ["path", { d: "M12 2v2", key: "tus03m" }],
   ["path", { d: "m4.93 4.93 1.41 1.41", key: "149t6j" }],
   ["path", { d: "M20 12h2", key: "1q8mjw" }],
@@ -5250,12 +5202,7 @@ let fa = Symbol("TabsSSRContext"),
   ["path", { d: "M15.947 12.65a4 4 0 0 0-5.925-4.128", key: "dpwdj0" }],
   ["path", { d: "M13 22H7a5 5 0 1 1 4.9-6H13a3 3 0 0 1 0 6Z", key: "s09mg5" }],
 ])
-/**
- * @license lucide-vue-next v0.303.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */ const zu = rt("EyeOffIcon", [
+const zu = rt("EyeOffIcon", [
   ["path", { d: "M9.88 9.88a3 3 0 1 0 4.24 4.24", key: "1jxqfv" }],
   [
     "path",
@@ -5273,73 +5220,38 @@ let fa = Symbol("TabsSSRContext"),
   ],
   ["line", { x1: "2", x2: "22", y1: "2", y2: "22", key: "a6p6uj" }],
 ])
-/**
- * @license lucide-vue-next v0.303.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */ const tv = rt("EyeIcon", [
+const tv = rt("EyeIcon", [
   [
     "path",
     { d: "M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z", key: "rwhkz3" },
   ],
   ["circle", { cx: "12", cy: "12", r: "3", key: "1v7zrd" }],
 ])
-/**
- * @license lucide-vue-next v0.303.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */ const nv = rt("FrameIcon", [
+const nv = rt("FrameIcon", [
   ["line", { x1: "22", x2: "2", y1: "6", y2: "6", key: "15w7dq" }],
   ["line", { x1: "22", x2: "2", y1: "18", y2: "18", key: "1ip48p" }],
   ["line", { x1: "6", x2: "6", y1: "2", y2: "22", key: "a2lnyx" }],
   ["line", { x1: "18", x2: "18", y1: "2", y2: "22", key: "8vb6jd" }],
 ])
-/**
- * @license lucide-vue-next v0.303.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */ const rv = rt("GaugeCircleIcon", [
+const rv = rt("GaugeCircleIcon", [
   ["path", { d: "M15.6 2.7a10 10 0 1 0 5.7 5.7", key: "1e0p6d" }],
   ["circle", { cx: "12", cy: "12", r: "2", key: "1c9p78" }],
   ["path", { d: "M13.4 10.6 19 5", key: "1kr7tw" }],
 ])
-/**
- * @license lucide-vue-next v0.303.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */ const sv = rt("MenuIcon", [
+const sv = rt("MenuIcon", [
   ["line", { x1: "4", x2: "20", y1: "12", y2: "12", key: "1e0a9i" }],
   ["line", { x1: "4", x2: "20", y1: "6", y2: "6", key: "1owob3" }],
   ["line", { x1: "4", x2: "20", y1: "18", y2: "18", key: "yk5zj1" }],
 ])
-/**
- * @license lucide-vue-next v0.303.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */ const lv = rt("MoonStarIcon", [
+const lv = rt("MoonStarIcon", [
   ["path", { d: "M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z", key: "a7tn18" }],
   ["path", { d: "M19 3v4", key: "vgv24u" }],
   ["path", { d: "M21 5h-4", key: "1wcg1f" }],
 ])
-/**
- * @license lucide-vue-next v0.303.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */ const av = rt("MoonIcon", [
+const av = rt("MoonIcon", [
   ["path", { d: "M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z", key: "a7tn18" }],
 ])
-/**
- * @license lucide-vue-next v0.303.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */ const ov = rt("PencilRulerIcon", [
+const ov = rt("PencilRulerIcon", [
   ["path", { d: "m15 5 4 4", key: "1mk7zo" }],
   [
     "path",
@@ -5365,12 +5277,7 @@ let fa = Symbol("TabsSSRContext"),
     },
   ],
 ])
-/**
- * @license lucide-vue-next v0.303.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */ const iv = rt("RabbitIcon", [
+const iv = rt("RabbitIcon", [
   ["path", { d: "M13 16a3 3 0 0 1 2.24 5", key: "1epib5" }],
   ["path", { d: "M18 12h.01", key: "yjnet6" }],
   [
@@ -5383,21 +5290,11 @@ let fa = Symbol("TabsSSRContext"),
   ["path", { d: "M20 8.54V4a2 2 0 1 0-4 0v3", key: "49iql8" }],
   ["path", { d: "M7.612 12.524a3 3 0 1 0-1.6 4.3", key: "1e33i0" }],
 ])
-/**
- * @license lucide-vue-next v0.303.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */ const ds = rt("ShieldCheckIcon", [
+const ds = rt("ShieldCheckIcon", [
   ["path", { d: "M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10", key: "1irkt0" }],
   ["path", { d: "m9 12 2 2 4-4", key: "dzmm74" }],
 ])
-/**
- * @license lucide-vue-next v0.303.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */ const uv = rt("ShowerHeadIcon", [
+const uv = rt("ShowerHeadIcon", [
   ["path", { d: "m4 4 2.5 2.5", key: "uv2vmf" }],
   ["path", { d: "M13.5 6.5a4.95 4.95 0 0 0-7 7", key: "frdkwv" }],
   ["path", { d: "M15 5 5 15", key: "1ag8rq" }],
@@ -5409,12 +5306,7 @@ let fa = Symbol("TabsSSRContext"),
   ["path", { d: "M17 14v.01", key: "11cswd" }],
   ["path", { d: "M20 11v.01", key: "19e0od" }],
 ])
-/**
- * @license lucide-vue-next v0.303.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */ const cv = rt("SunIcon", [
+const cv = rt("SunIcon", [
   ["circle", { cx: "12", cy: "12", r: "4", key: "4exip2" }],
   ["path", { d: "M12 2v2", key: "tus03m" }],
   ["path", { d: "M12 20v2", key: "1lh1kg" }],
@@ -5425,21 +5317,11 @@ let fa = Symbol("TabsSSRContext"),
   ["path", { d: "m6.34 17.66-1.41 1.41", key: "1m8zz5" }],
   ["path", { d: "m19.07 4.93-1.41 1.41", key: "1shlcs" }],
 ])
-/**
- * @license lucide-vue-next v0.303.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */ const ml = rt("TerminalIcon", [
+const ml = rt("TerminalIcon", [
   ["polyline", { points: "4 17 10 11 4 5", key: "akl6gq" }],
   ["line", { x1: "12", x2: "20", y1: "19", y2: "19", key: "q2wloq" }],
 ])
-/**
- * @license lucide-vue-next v0.303.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */ const fv = rt("TurtleIcon", [
+const fv = rt("TurtleIcon", [
   [
     "path",
     {
@@ -5451,12 +5333,7 @@ let fa = Symbol("TabsSSRContext"),
   ["path", { d: "M15.18 7.9 12 10", key: "p8dp2u" }],
   ["path", { d: "M16.93 10H20a2 2 0 0 1 0 4H2", key: "12nsm7" }],
 ])
-/**
- * @license lucide-vue-next v0.303.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */ const Bl = rt("XIcon", [
+const Bl = rt("XIcon", [
     ["path", { d: "M18 6 6 18", key: "1bl5f8" }],
     ["path", { d: "m6 6 12 12", key: "d8bk6v" }],
   ]),
@@ -6268,62 +6145,7 @@ function Vv(e) {
     : e
 }
 var qu = { exports: {} }
-/**
- * chroma.js - JavaScript library for color conversions
- *
- * Copyright (c) 2011-2019, Gregor Aisch
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- * 1. Redistributions of source code must retain the above copyright notice, this
- * list of conditions and the following disclaimer.
- *
- * 2. Redistributions in binary form must reproduce the above copyright notice,
- * this list of conditions and the following disclaimer in the documentation
- * and/or other materials provided with the distribution.
- *
- * 3. The name Gregor Aisch may not be used to endorse or promote products
- * derived from this software without specific prior written permission.
- *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
- * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
- * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
- * DISCLAIMED. IN NO EVENT SHALL GREGOR AISCH OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT,
- * INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
- * BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
- * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY
- * OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
- * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- *
- * -------------------------------------------------------
- *
- * chroma.js includes colors from colorbrewer2.org, which are released under
- * the following license:
- *
- * Copyright (c) 2002 Cynthia Brewer, Mark Harrower,
- * and The Pennsylvania State University.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
- * either express or implied. See the License for the specific
- * language governing permissions and limitations under the License.
- *
- * ------------------------------------------------------
- *
- * Named colors are taken from X11 Color Names.
- * http://www.w3.org/TR/css3-color/#svg-color
- *
- * @preserve
- */ ;(function (e, t) {
+;(function (e, t) {
   ;(function (n, r) {
     e.exports = r()
   })(Wv, function () {
@@ -12456,11 +12278,7 @@ const Je = Vv(Gv),
     },
   },
   Xb = Dr(Yb, [["__scopeId", "data-v-2729bdc0"]])
-/*!
- * vue-router v4.2.5
- * (c) 2023 Eduardo San Martin Morote
- * @license MIT
- */ const nr = typeof window < "u"
+const nr = typeof window < "u"
 function Jb(e) {
   return e.__esModule || e[Symbol.toStringTag] === "Module"
 }
