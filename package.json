@@ -21,6 +21,7 @@
     "date-fns": "^3.0.6",
     "lucide-vue-next": "^0.303.0",
     "pdfvuer": "^2.0.1",
+    "simple-icons": "^11.2.0",
     "sitemap": "^7.1.1",
     "swiper": "^11.0.5",
     "vue": "^3.3.11",
