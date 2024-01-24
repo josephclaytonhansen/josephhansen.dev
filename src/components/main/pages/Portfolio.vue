@@ -123,8 +123,9 @@
             class="bg-slate-200 object-contain w-full rounded-t-xl" />
         </div>
         <div>
-          <div
-          class="p-4 flex justify-between items-center rounded-b-xl"
+          <div>
+            <div
+              class="p-4 flex justify-between items-center"
               :class="{
                 'bg-slate-300': brightness == 5,
                 'bg-slate-200': brightness == 4,
@@ -132,7 +133,6 @@
                 'bg-slate-500': brightness == 2,
                 'bg-slate-600': brightness == 1,
               }">
-            <div>
               <div>
                 <h5
                   class="text-xl m-0 p-0"
@@ -164,9 +164,26 @@
                 </div>
               </div>
             </div>
-            <p class="text-slate-500" :class="pClass(props.brightness)">
-            {{ cards.excerpt }}
-          </p>
+            <div
+              class="p-4 flex "
+              :class="{
+                'bg-slate-300': brightness == 5,
+                'bg-slate-200': brightness == 4,
+                'bg-slate-300': brightness == 3,
+                'bg-slate-500': brightness == 2,
+                'bg-slate-600': brightness == 1,
+              }">
+              <p
+                class="text-slate-800 rounded-b-xl"
+                :class="{
+                  'text-slate-800': brightness == 5,
+                  'text-slate-800': brightness == 4,
+                  'text-slate-800': brightness == 3,
+                  'text-slate-200': brightness == 2,
+                  'text-slate-200': brightness == 1,
+                }">
+                {{ cards.excerpt }}</p>
+              </div>
           </div>
           
         </div>
