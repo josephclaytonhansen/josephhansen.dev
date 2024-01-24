@@ -1234,9 +1234,6 @@ select {
 .w-1\/12 {
   width: 8.333333%;
 }
-.w-1\/3 {
-  width: 33.333333%;
-}
 .w-20 {
   width: 5rem;
 }
@@ -1870,8 +1867,14 @@ a {
   .lg\:w-6\/12 {
     width: 50%;
   }
+  .lg\:w-9\/12 {
+    width: 75%;
+  }
   .lg\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .lg\:px-3 {
     padding-left: 0.75rem;
@@ -1914,6 +1917,9 @@ a {
   max-width: 100% !important;
   padding-left: 2rem;
   padding-right: 2rem;
+}
+.portfolioCard[data-v-f01495fb] {
+  transition: all 0.2s ease-in-out;
 }
 @media (max-width: 768px) {
   main[data-v-2729bdc0] {
