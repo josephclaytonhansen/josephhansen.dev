@@ -108,8 +108,7 @@
     <div class="grid lg:grid-cols-2 md:grid-cols-none gap-4 w-full">
       <div
         class="flex flex-col justify-end rounded-xl"
-        v-for="cards in fullWidthcards"
-       >
+        v-for="cards in fullWidthcards">
         <div>
           <img
             :src="cards.image"

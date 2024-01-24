@@ -8,7 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "prepare": "husky install",
-    "precommit": "rm -rf ../built-josephhansen-dev/built-josephhansen-dev/assets && cp -r dist/* ../built-josephhansen-dev/built-josephhansen-dev && node sitemap.js"
+    "precommit": "bash minify.sh && rm -rf ../built-josephhansen-dev/built-josephhansen-dev/assets && cp -r dist/* ../built-josephhansen-dev/built-josephhansen-dev && node sitemap.js"
   },
   "dependencies": {
     "@headlessui/tailwindcss": "^0.2.0",
@@ -31,12 +31,14 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.5.2",
     "autoprefixer": "^10.4.16",
-    "cssnano": "^6.0.2",
+    "cssnano": "^6.0.3",
     "husky": "^8.0.3",
     "lint-staged": "^15.2.0",
     "postcss": "^8.4.32",
+    "postcss-cli": "^11.0.0",
     "prettier": "3.2.4",
     "tailwindcss": "^3.4.0",
+    "uglify-js": "^3.17.4",
     "vite": "^5.0.8"
   },
   "lint-staged": {
