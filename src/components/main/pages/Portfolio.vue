@@ -122,50 +122,53 @@
             :alt="cards.title"
             class="bg-slate-200 object-contain w-full rounded-t-xl" />
         </div>
-        <div><div>
+        <div>
           <div
-            class="p-4 flex justify-between items-center rounded-b-xl"
-            :class="{
-              'bg-slate-300': brightness == 5,
-              'bg-slate-200': brightness == 4,
-              'bg-slate-300': brightness == 3,
-              'bg-slate-500': brightness == 2,
-              'bg-slate-600': brightness == 1,
-            }">
+          class="p-4 flex justify-between items-center rounded-b-xl"
+              :class="{
+                'bg-slate-300': brightness == 5,
+                'bg-slate-200': brightness == 4,
+                'bg-slate-300': brightness == 3,
+                'bg-slate-500': brightness == 2,
+                'bg-slate-600': brightness == 1,
+              }">
             <div>
-              <h5
-                class="text-xl m-0 p-0"
-                :class="{
-                  'text-slate-800': brightness == 5,
-                  'text-slate-800': brightness == 4,
-                  'text-slate-800': brightness == 3,
-                  'text-slate-200': brightness == 2,
-                  'text-slate-200': brightness == 1,
-                }">
-                {{ cards.title }}
-              </h5>
-            </div>
-
-            <div class="flex gap-2 items-center">
-              <div
-                v-for="(icon, index) in cards.icons"
-                :key="index"
-                class="block"
-                :class="pClass(props.brightness)">
-                <svg
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  width="24px"
-                  height="24px">
-                  <path :d="icon.path" />
-                </svg>
+              <div>
+                <h5
+                  class="text-xl m-0 p-0"
+                  :class="{
+                    'text-slate-800': brightness == 5,
+                    'text-slate-800': brightness == 4,
+                    'text-slate-800': brightness == 3,
+                    'text-slate-200': brightness == 2,
+                    'text-slate-200': brightness == 1,
+                  }">
+                  {{ cards.title }}
+                </h5>
               </div>
-            </div></div>
-          </div>
-          <p class="text-slate-500" :class="pClass(props.brightness)">
+
+              <div class="flex gap-2 items-center">
+                <div
+                  v-for="(icon, index) in cards.icons"
+                  :key="index"
+                  class="block"
+                  :class="pClass(props.brightness)">
+                  <svg
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    width="24px"
+                    height="24px">
+                    <path :d="icon.path" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <p class="text-slate-500" :class="pClass(props.brightness)">
             {{ cards.excerpt }}
           </p>
+          </div>
+          
         </div>
       </div>
     </div>

@@ -12044,22 +12044,22 @@ const Je = Vv(Gv),
                           ),
                         ]),
                         v("div", null, [
-                          v("div", null, [
-                            v(
-                              "div",
-                              {
-                                class: M([
-                                  "p-4 flex justify-between items-center rounded-b-xl",
-                                  {
-                                    "bg-slate-300": e.brightness == 5,
-                                    "bg-slate-200": e.brightness == 4,
-                                    "bg-slate-300": e.brightness == 3,
-                                    "bg-slate-500": e.brightness == 2,
-                                    "bg-slate-600": e.brightness == 1,
-                                  },
-                                ]),
-                              },
-                              [
+                          v(
+                            "div",
+                            {
+                              class: M([
+                                "p-4 flex justify-between items-center rounded-b-xl",
+                                {
+                                  "bg-slate-300": e.brightness == 5,
+                                  "bg-slate-200": e.brightness == 4,
+                                  "bg-slate-300": e.brightness == 3,
+                                  "bg-slate-500": e.brightness == 2,
+                                  "bg-slate-600": e.brightness == 1,
+                                },
+                              ]),
+                            },
+                            [
+                              v("div", null, [
                                 v("div", null, [
                                   v(
                                     "h5",
@@ -12116,15 +12116,17 @@ const Je = Vv(Gv),
                                     128,
                                   )),
                                 ]),
-                              ],
-                              2,
-                            ),
-                          ]),
-                          v(
-                            "p",
-                            { class: M(["text-slate-500", n(t.brightness)]) },
-                            St(i.excerpt),
-                            3,
+                              ]),
+                              v(
+                                "p",
+                                {
+                                  class: M(["text-slate-500", n(t.brightness)]),
+                                },
+                                St(i.excerpt),
+                                3,
+                              ),
+                            ],
+                            2,
                           ),
                         ]),
                       ],
