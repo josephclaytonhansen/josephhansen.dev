@@ -12044,77 +12044,82 @@ const Je = Vv(Gv),
                           ),
                         ]),
                         v("div", null, [
-                          v(
-                            "div",
-                            {
-                              class: M([
-                                "p-4 flex justify-between items-center rounded-b-xl",
-                                {
-                                  "bg-slate-300": e.brightness == 5,
-                                  "bg-slate-200": e.brightness == 4,
-                                  "bg-slate-300": e.brightness == 3,
-                                  "bg-slate-500": e.brightness == 2,
-                                  "bg-slate-600": e.brightness == 1,
-                                },
-                              ]),
-                            },
-                            [
-                              v("div", null, [
-                                v(
-                                  "h5",
+                          v("div", null, [
+                            v(
+                              "div",
+                              {
+                                class: M([
+                                  "p-4 flex justify-between items-center rounded-b-xl",
                                   {
-                                    class: M([
-                                      "text-xl m-0 p-0",
-                                      {
-                                        "text-slate-800": e.brightness == 5,
-                                        "text-slate-800": e.brightness == 4,
-                                        "text-slate-800": e.brightness == 3,
-                                        "text-slate-200": e.brightness == 2,
-                                        "text-slate-200": e.brightness == 1,
-                                      },
-                                    ]),
+                                    "bg-slate-300": e.brightness == 5,
+                                    "bg-slate-200": e.brightness == 4,
+                                    "bg-slate-300": e.brightness == 3,
+                                    "bg-slate-500": e.brightness == 2,
+                                    "bg-slate-600": e.brightness == 1,
                                   },
-                                  St(i.title),
-                                  3,
-                                ),
-                              ]),
-                              v("div", zb, [
-                                (ce(!0),
-                                Pe(
-                                  Ue,
-                                  null,
-                                  Rr(
-                                    i.icons,
-                                    (u, f) => (
-                                      ce(),
-                                      Pe(
-                                        "div",
+                                ]),
+                              },
+                              [
+                                v("div", null, [
+                                  v(
+                                    "h5",
+                                    {
+                                      class: M([
+                                        "text-xl m-0 p-0",
                                         {
-                                          key: f,
-                                          class: M(["block", n(t.brightness)]),
+                                          "text-slate-800": e.brightness == 5,
+                                          "text-slate-800": e.brightness == 4,
+                                          "text-slate-800": e.brightness == 3,
+                                          "text-slate-200": e.brightness == 2,
+                                          "text-slate-200": e.brightness == 1,
                                         },
-                                        [
-                                          (ce(),
-                                          Pe("svg", qb, [
-                                            v(
-                                              "path",
-                                              { d: u.path },
-                                              null,
-                                              8,
-                                              Wb,
-                                            ),
-                                          ])),
-                                        ],
-                                        2,
-                                      )
-                                    ),
+                                      ]),
+                                    },
+                                    St(i.title),
+                                    3,
                                   ),
-                                  128,
-                                )),
-                              ]),
-                            ],
-                            2,
-                          ),
+                                ]),
+                                v("div", zb, [
+                                  (ce(!0),
+                                  Pe(
+                                    Ue,
+                                    null,
+                                    Rr(
+                                      i.icons,
+                                      (u, f) => (
+                                        ce(),
+                                        Pe(
+                                          "div",
+                                          {
+                                            key: f,
+                                            class: M([
+                                              "block",
+                                              n(t.brightness),
+                                            ]),
+                                          },
+                                          [
+                                            (ce(),
+                                            Pe("svg", qb, [
+                                              v(
+                                                "path",
+                                                { d: u.path },
+                                                null,
+                                                8,
+                                                Wb,
+                                              ),
+                                            ])),
+                                          ],
+                                          2,
+                                        )
+                                      ),
+                                    ),
+                                    128,
+                                  )),
+                                ]),
+                              ],
+                              2,
+                            ),
+                          ]),
                           v(
                             "p",
                             { class: M(["text-slate-500", n(t.brightness)]) },
