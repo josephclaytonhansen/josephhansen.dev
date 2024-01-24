@@ -146,7 +146,7 @@
         @mouseleave="hoveredCard = null"
         :style="{
           opacity:
-            hoveredCard === cards.title || hoveredCard === null ? 1 : 0.5,
+            hoveredCard === cards.title || hoveredCard === null ? 1 : 0.7,
         }">
         <div>
           <img
@@ -269,6 +269,6 @@
 
 <style scoped>
   .portfolioCard {
-    transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-out;
   }
 </style>

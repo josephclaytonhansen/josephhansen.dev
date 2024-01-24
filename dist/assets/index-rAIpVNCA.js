@@ -12103,7 +12103,7 @@ const Je = Kg(Yg),
                       onMouseleave: f[0] || (f[0] = (d) => (i.value = null)),
                       style: Ar({
                         opacity:
-                          i.value === h.title || i.value === null ? 1 : 0.5,
+                          i.value === h.title || i.value === null ? 1 : 0.7,
                       }),
                     },
                     [
@@ -12346,7 +12346,7 @@ const Je = Kg(Yg),
       )
     },
   },
-  rb = gr(nb, [["__scopeId", "data-v-385c64c7"]]),
+  rb = gr(nb, [["__scopeId", "data-v-9f9acc26"]]),
   sb = { class: "flex justify-center w-full md:px-10 sm:px-5 mt-5" },
   lb = { class: "flex justify-center w-full md:px-10 sm:px-5 pt-10" },
   ab = {
