@@ -33,7 +33,6 @@
     siVuedotjs,
     siPhp,
     siFigma,
-    siCss3,
     siJavascript,
     siNginx,
     siCloudflare,
@@ -48,68 +47,58 @@
       title: "BlenderNation Bazaar",
       image:
         "https://images.josephhansen.dev/uploads/fileIMG_3533.png-1705724032543.webp",
-      excerpt:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       link: "",
-      width: "w-full",
     },
     {
       icons: [siVuedotjs, siNginx, siCloudflare],
       title: "OKC South Stake",
       image:
         "https://images.josephhansen.dev/uploads/fileIMG_3533.png-1705724032543.webp",
-      excerpt: "Excerpt",
       link: "",
     },
   ])
 
   const thirdCards = ref([
     {
-      icons: [siWordpress, siPhp, siJavascript],
+      icons: [siWordpress, siJavascript],
       title: "Build On Your Land",
       image:
         "https://images.josephhansen.dev/uploads/fileIMG_3533.png-1705724032543.webp",
-      excerpt: "",
       link: "",
     },
     {
-      icons: [siWordpress, siPhp, siCss3],
+      icons: [siWordpress, siPhp],
       title: "Stuart Pipe and Hose",
       image:
         "https://images.josephhansen.dev/uploads/fileIMG_3533.png-1705724032543.webp",
-      excerpt: "",
       link: "",
     },
     {
-      icons: [siWordpress, siBootstrap, siCss3],
+      icons: [siWordpress, siBootstrap],
       title: "Atlanta Floor One",
       image:
         "https://images.josephhansen.dev/uploads/fileIMG_3533.png-1705724032543.webp",
-      excerpt: "",
       link: "",
     },
     {
-      icons: [siWordpress, siBootstrap, siCss3],
+      icons: [siWordpress, siBootstrap],
       title: "Swim State Pool",
       image:
         "https://images.josephhansen.dev/uploads/fileIMG_3533.png-1705724032543.webp",
-      excerpt: "",
       link: "",
     },
     {
       title: "josephhansen.dev",
-      icons: [siVuedotjs, siTailwindcss, siNginx],
+      icons: [siVuedotjs, siTailwindcss],
       image:
         "https://images.josephhansen.dev/uploads/fileIMG_3533.png-1705724032543.webp",
-      excerpt: "",
       link: "",
     },
     {
       title: "Nonsense Free Recipes",
-      icons: [siReact, siBootstrap, siNginx],
+      icons: [siReact, siBootstrap],
       image:
         "https://images.josephhansen.dev/uploads/fileIMG_3533.png-1705724032543.webp",
-      excerpt: "",
       link: "",
     },
   ])
@@ -137,81 +126,23 @@
       </span>
     </div>
 
-    <div class="grid lg:grid-cols-2 md:grid-cols-none gap-4 w-full">
+    <div class="grid md:grid-cols-none gap-4 w-full" v-for = "w in [fullWidthcards, thirdCards]"
+    :class = "{
+      'lg:grid-cols-2': w == fullWidthcards,
+      'lg:grid-cols-3 mt-4': w == thirdCards,
+    }"
+    >
       <div
         class="flex flex-col justify-end rounded-xl portfolioCard"
-        v-for="cards in fullWidthcards"
+        v-for="cards in w"
         :key="cards.title"
         @mouseover="hoveredCard = cards.title"
         @mouseleave="hoveredCard = null"
         :style="{
           opacity:
             hoveredCard === cards.title || hoveredCard === null ? 1 : 0.7,
+            
         }">
-        <div>
-          <img
-            :src="cards.image"
-            :alt="cards.title"
-            class="bg-slate-200 object-contain w-full rounded-t-xl" />
-        </div>
-        <div>
-          <div>
-            <div
-              class="p-4 flex justify-between items-center rounded-b-xl"
-              :class="{
-                'bg-slate-300': brightness == 5,
-                'bg-slate-200': brightness == 4,
-                'bg-slate-300': brightness == 3,
-                'bg-slate-500': brightness == 2,
-                'bg-slate-600': brightness == 1,
-              }">
-              <div>
-                <h5
-                  class="text-xl m-0 p-0"
-                  :class="iconClass(props.brightness)">
-                  {{ cards.title }}
-                </h5>
-              </div>
-
-              <div class="flex gap-2 items-center">
-                <div
-                  v-for="(icon, index) in cards.icons"
-                  :key="index"
-                  class="block"
-                  :class="{
-                    'text-slate-800': brightness == 5,
-                    'text-slate-800': brightness == 4,
-                    'text-slate-800': brightness == 3,
-                    'text-slate-200': brightness == 2,
-                    'text-slate-200': brightness == 1,
-                  }">
-                  <svg
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="currentColor"
-                    width="24px"
-                    height="24px">
-                    <path :d="icon.path" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="grid lg:grid-cols-3 md:grids-col-1 gap-4 w-full mt-4">
-      <div
-        class="flex flex-col justify-end rounded-xl portfolioCard"
-        @mouseover="hoveredCard = cards.title"
-        @mouseleave="hoveredCard = null"
-        :style="{
-          opacity:
-            hoveredCard === cards.title || hoveredCard === null ? 1 : 0.5,
-        }"
-        v-for="cards in thirdCards"
-        :key="cards.title">
         <div>
           <img
             :src="cards.image"
