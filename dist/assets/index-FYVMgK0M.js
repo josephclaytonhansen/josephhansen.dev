@@ -12123,7 +12123,7 @@ const Je = Vv(Gv),
                               "div",
                               {
                                 class: M([
-                                  "p-4 flex",
+                                  "p-4 flex rounded-b-xl",
                                   {
                                     "bg-slate-300": e.brightness == 5,
                                     "bg-slate-200": e.brightness == 4,
@@ -12138,7 +12138,7 @@ const Je = Vv(Gv),
                                   "p",
                                   {
                                     class: M([
-                                      "text-slate-800 rounded-b-xl",
+                                      "text-slate-800",
                                       {
                                         "text-slate-800": e.brightness == 5,
                                         "text-slate-800": e.brightness == 4,

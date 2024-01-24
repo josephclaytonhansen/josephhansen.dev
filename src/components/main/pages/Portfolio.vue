@@ -165,7 +165,7 @@
               </div>
             </div>
             <div
-              class="p-4 flex "
+              class="p-4 flex rounded-b-xl"
               :class="{
                 'bg-slate-300': brightness == 5,
                 'bg-slate-200': brightness == 4,
@@ -174,7 +174,7 @@
                 'bg-slate-600': brightness == 1,
               }">
               <p
-                class="text-slate-800 rounded-b-xl"
+                class="text-slate-800"
                 :class="{
                   'text-slate-800': brightness == 5,
                   'text-slate-800': brightness == 4,
@@ -182,10 +182,10 @@
                   'text-slate-200': brightness == 2,
                   'text-slate-200': brightness == 1,
                 }">
-                {{ cards.excerpt }}</p>
-              </div>
+                {{ cards.excerpt }}
+              </p>
+            </div>
           </div>
-          
         </div>
       </div>
     </div>
