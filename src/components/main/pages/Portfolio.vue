@@ -1,4 +1,15 @@
 <script setup>
+import {
+    bazaarHome,
+    okcssHome,
+    boylHome,
+    stuartHome,
+    atlantaHome,
+    swimHome,
+    josephhansenHome,
+    tubHome
+} from "../../images/imageLinks.js"
+
   const props = defineProps({
     brightness: Number,
   })
@@ -45,15 +56,13 @@
     {
       icons: [siWordpress, siPhp, siFigma],
       title: "BlenderNation Bazaar",
-      image:
-        "https://images.josephhansen.dev/uploads/file2024-01-2621-1706326995802.webp",
+      image: bazaarHome,
       link: "",
     },
     {
       icons: [siVuedotjs, siNginx, siCloudflare],
       title: "OKC South Stake",
-      image:
-        "https://images.josephhansen.dev/uploads/file2024-01-2621-1706327228231.webp",
+      image: okcssHome,
       link: "",
     },
   ])
@@ -62,43 +71,37 @@
     {
       icons: [siWordpress, siJavascript],
       title: "Build On Your Land",
-      image:
-        "https://images.josephhansen.dev/uploads/file2024-01-2621-1706327309879.webp",
+      image: boylHome,
       link: "",
     },
     {
       icons: [siWordpress, siPhp],
       title: "Stuart Pipe and Hose",
-      image:
-        "https://images.josephhansen.dev/uploads/file2024-01-2621-1706327408619.webp",
+      image: stuartHome,
       link: "",
     },
     {
       icons: [siWordpress, siBootstrap],
       title: "Atlanta Floor One",
-      image:
-        "https://images.josephhansen.dev/uploads/file2024-01-2621-1706327469595.webp",
+      image: atlantaHome,
       link: "",
     },
     {
       icons: [siWordpress, siBootstrap],
       title: "Swim State Pool",
-      image:
-        "https://images.josephhansen.dev/uploads/file2024-01-2621-1706327599394.webp",
+      image: swimHome,
       link: "",
     },
     {
       title: "josephhansen.dev",
       icons: [siVuedotjs, siTailwindcss],
-      image:
-        "https://images.josephhansen.dev/uploads/file2024-01-2621-1706327789450.webp",
+      image: josephhansenHome,
       link: "",
     },
     {
       title: "Tub Boys",
       icons: [siWordpress, siBootstrap],
-      image:
-        "https://images.josephhansen.dev/uploads/file2024-01-2621-1706327660749.webp",
+      image: tubHome,
       link: "",
     },
   ])
