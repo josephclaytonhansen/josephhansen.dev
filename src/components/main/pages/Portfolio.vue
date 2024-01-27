@@ -46,14 +46,14 @@
       icons: [siWordpress, siPhp, siFigma],
       title: "BlenderNation Bazaar",
       image:
-        "https://images.josephhansen.dev/uploads/fileIMG_3533.png-1705724032543.webp",
+        "https://images.josephhansen.dev/uploads/file2024-01-2621-1706326995802.webp",
       link: "",
     },
     {
       icons: [siVuedotjs, siNginx, siCloudflare],
       title: "OKC South Stake",
       image:
-        "https://images.josephhansen.dev/uploads/fileIMG_3533.png-1705724032543.webp",
+        "https://images.josephhansen.dev/uploads/file2024-01-2621-1706327228231.webp",
       link: "",
     },
   ])
@@ -63,42 +63,42 @@
       icons: [siWordpress, siJavascript],
       title: "Build On Your Land",
       image:
-        "https://images.josephhansen.dev/uploads/fileIMG_3533.png-1705724032543.webp",
+        "https://images.josephhansen.dev/uploads/file2024-01-2621-1706327309879.webp",
       link: "",
     },
     {
       icons: [siWordpress, siPhp],
       title: "Stuart Pipe and Hose",
       image:
-        "https://images.josephhansen.dev/uploads/fileIMG_3533.png-1705724032543.webp",
+        "https://images.josephhansen.dev/uploads/file2024-01-2621-1706327408619.webp",
       link: "",
     },
     {
       icons: [siWordpress, siBootstrap],
       title: "Atlanta Floor One",
       image:
-        "https://images.josephhansen.dev/uploads/fileIMG_3533.png-1705724032543.webp",
+        "https://images.josephhansen.dev/uploads/file2024-01-2621-1706327469595.webp",
       link: "",
     },
     {
       icons: [siWordpress, siBootstrap],
       title: "Swim State Pool",
       image:
-        "https://images.josephhansen.dev/uploads/fileIMG_3533.png-1705724032543.webp",
+        "https://images.josephhansen.dev/uploads/file2024-01-2621-1706327599394.webp",
       link: "",
     },
     {
       title: "josephhansen.dev",
       icons: [siVuedotjs, siTailwindcss],
       image:
-        "https://images.josephhansen.dev/uploads/fileIMG_3533.png-1705724032543.webp",
+        "https://images.josephhansen.dev/uploads/file2024-01-2621-1706327789450.webp",
       link: "",
     },
     {
-      title: "Nonsense Free Recipes",
-      icons: [siReact, siBootstrap],
+      title: "Tub Boys",
+      icons: [siWordpress, siBootstrap],
       image:
-        "https://images.josephhansen.dev/uploads/fileIMG_3533.png-1705724032543.webp",
+        "https://images.josephhansen.dev/uploads/file2024-01-2621-1706327660749.webp",
       link: "",
     },
   ])
@@ -126,12 +126,13 @@
       </span>
     </div>
 
-    <div class="grid md:grid-cols-none gap-4 w-full" v-for = "w in [fullWidthcards, thirdCards]"
-    :class = "{
-      'lg:grid-cols-2': w == fullWidthcards,
-      'lg:grid-cols-3 mt-4': w == thirdCards,
-    }"
-    >
+    <div
+      class="grid md:grid-cols-none gap-4 w-full"
+      v-for="w in [fullWidthcards, thirdCards]"
+      :class="{
+        'lg:grid-cols-2': w == fullWidthcards,
+        'lg:grid-cols-3 mt-4': w == thirdCards,
+      }">
       <div
         class="flex flex-col justify-end rounded-xl portfolioCard"
         v-for="cards in w"
@@ -141,7 +142,6 @@
         :style="{
           opacity:
             hoveredCard === cards.title || hoveredCard === null ? 1 : 0.7,
-            
         }">
         <div>
           <img
