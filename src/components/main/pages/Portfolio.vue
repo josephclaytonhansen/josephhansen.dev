@@ -1,5 +1,5 @@
 <script setup>
-import {
+  import {
     bazaarHome,
     okcssHome,
     boylHome,
@@ -7,8 +7,8 @@ import {
     atlantaHome,
     swimHome,
     josephhansenHome,
-    tubHome
-} from "../../images/imageLinks.js"
+    tubHome,
+  } from "../../images/imageLinks.js"
 
   const props = defineProps({
     brightness: Number,
@@ -146,7 +146,7 @@ import {
           opacity:
             hoveredCard === cards.title || hoveredCard === null ? 1 : 0.7,
         }">
-        <div>
+        <div class="image-container">
           <img
             :src="cards.image"
             :alt="cards.title"
@@ -205,4 +205,18 @@ import {
   .portfolioCard {
     transition: all 0.2s ease-out;
   }
+  .image-container {
+  position: relative;
+  width: 100%;
+  padding-top: 58%;
+}
+
+.image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 </style>

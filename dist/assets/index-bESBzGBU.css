@@ -1925,8 +1925,22 @@ a {
   padding-left: 2rem;
   padding-right: 2rem;
 }
-.portfolioCard[data-v-268cd6df] {
+.portfolioCard[data-v-dff2b21c] {
   transition: all 0.2s ease-out;
+}
+.image-container[data-v-dff2b21c] {
+  padding-top: 58%;
+  position: relative;
+  width: 100%;
+}
+.image-container img[data-v-dff2b21c] {
+  height: 100%;
+  left: 0;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 @media (max-width: 768px) {
   main[data-v-dfc61dd8] {
