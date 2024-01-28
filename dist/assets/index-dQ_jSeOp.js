@@ -12185,7 +12185,7 @@ const Je = Gv(Uv),
       )
     },
   },
-  rm = gr(nm, [["__scopeId", "data-v-dff2b21c"]]),
+  rm = gr(nm, [["__scopeId", "data-v-b964e3f4"]]),
   sm = { class: "flex justify-center w-full md:px-10 sm:px-5 mt-5" },
   am = { class: "flex justify-center w-full md:px-10 sm:px-5 pt-10" },
   lm = {
@@ -12221,38 +12221,38 @@ const Je = Gv(Uv),
           : i.setItem("brightness", t.value),
           n.component == "pricing"
             ? ((a.title =
-                "josephhansen.dev | | web developer/designer | pricing"),
+                "josephhansen.dev | web developer/designer | pricing"),
               (a.meta[1].content =
-                "josephhansen.dev | | web developer/designer | pricing"),
+                "josephhansen.dev | web developer/designer | pricing"),
               (a.meta[6].content =
-                "josephhansen.dev | | web developer/designer | pricing"),
+                "josephhansen.dev | web developer/designer | pricing"),
               (a.meta[4].content = "https://josephhansen.dev/pricing"),
               (a.meta[9].content = "https://josephhansen.dev/pricing"))
             : n.component == "contact"
               ? ((a.title =
-                  "josephhansen.dev | | web developer/designer | contact"),
+                  "josephhansen.dev | web developer/designer | contact"),
                 (a.meta[1].content =
-                  "josephhansen.dev | | web developer/designer | contact"),
+                  "josephhansen.dev | web developer/designer | contact"),
                 (a.meta[6].content =
-                  "josephhansen.dev | | web developer/designer | contact"),
+                  "josephhansen.dev | web developer/designer | contact"),
                 (a.meta[4].content = "https://josephhansen.dev/contact"),
                 (a.meta[9].content = "https://josephhansen.dev/contact"))
               : n.component == "about"
                 ? ((a.title =
-                    "josephhansen.dev | | web developer/designer | about"),
+                    "josephhansen.dev | web developer/designer | about"),
                   (a.meta[1].content =
-                    "josephhansen.dev | | web developer/designer | about"),
+                    "josephhansen.dev | web developer/designer | about"),
                   (a.meta[6].content =
-                    "josephhansen.dev | | web developer/designer | about"),
+                    "josephhansen.dev | web developer/designer | about"),
                   (a.meta[4].content = "https://josephhansen.dev/about"),
                   (a.meta[9].content = "https://josephhansen.dev/about"))
                 : n.component == "portfolio" &&
                   ((a.title =
-                    "josephhansen.dev | | web developer/designer | portfolio"),
+                    "josephhansen.dev | web developer/designer | portfolio"),
                   (a.meta[1].content =
-                    "josephhansen.dev | | web developer/designer | portfolio"),
+                    "josephhansen.dev | web developer/designer | portfolio"),
                   (a.meta[6].content =
-                    "josephhansen.dev | | web developer/designer | portfolio"),
+                    "josephhansen.dev | web developer/designer | portfolio"),
                   (a.meta[4].content = "https://josephhansen.dev/portfolio"),
                   (a.meta[9].content = "https://josephhansen.dev/portfolio"))
       })
@@ -12490,7 +12490,7 @@ const Je = Gv(Uv),
       )
     },
   },
-  om = gr(lm, [["__scopeId", "data-v-dfc61dd8"]])
+  om = gr(lm, [["__scopeId", "data-v-2b0cc173"]])
 /*!
  * vue-router v4.2.5
  * (c) 2023 Eduardo San Martin Morote

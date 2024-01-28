@@ -48,35 +48,35 @@
     }
 
     if (props.component == "pricing") {
-      meta.title = "josephhansen.dev | | web developer/designer | pricing"
+      meta.title = "josephhansen.dev | web developer/designer | pricing"
       meta.meta[1].content =
-        "josephhansen.dev | | web developer/designer | pricing"
+        "josephhansen.dev | web developer/designer | pricing"
       meta.meta[6].content =
-        "josephhansen.dev | | web developer/designer | pricing"
+        "josephhansen.dev | web developer/designer | pricing"
       meta.meta[4].content = "https://josephhansen.dev/pricing"
       meta.meta[9].content = "https://josephhansen.dev/pricing"
     } else if (props.component == "contact") {
-      meta.title = "josephhansen.dev | | web developer/designer | contact"
+      meta.title = "josephhansen.dev | web developer/designer | contact"
       meta.meta[1].content =
-        "josephhansen.dev | | web developer/designer | contact"
+        "josephhansen.dev | web developer/designer | contact"
       meta.meta[6].content =
-        "josephhansen.dev | | web developer/designer | contact"
+        "josephhansen.dev | web developer/designer | contact"
       meta.meta[4].content = "https://josephhansen.dev/contact"
       meta.meta[9].content = "https://josephhansen.dev/contact"
     } else if (props.component == "about") {
-      meta.title = "josephhansen.dev | | web developer/designer | about"
+      meta.title = "josephhansen.dev | web developer/designer | about"
       meta.meta[1].content =
-        "josephhansen.dev | | web developer/designer | about"
+        "josephhansen.dev | web developer/designer | about"
       meta.meta[6].content =
-        "josephhansen.dev | | web developer/designer | about"
+        "josephhansen.dev | web developer/designer | about"
       meta.meta[4].content = "https://josephhansen.dev/about"
       meta.meta[9].content = "https://josephhansen.dev/about"
     } else if (props.component == "portfolio") {
-      meta.title = "josephhansen.dev | | web developer/designer | portfolio"
+      meta.title = "josephhansen.dev | web developer/designer | portfolio"
       meta.meta[1].content =
-        "josephhansen.dev | | web developer/designer | portfolio"
+        "josephhansen.dev | web developer/designer | portfolio"
       meta.meta[6].content =
-        "josephhansen.dev | | web developer/designer | portfolio"
+        "josephhansen.dev | web developer/designer | portfolio"
       meta.meta[4].content = "https://josephhansen.dev/portfolio"
       meta.meta[9].content = "https://josephhansen.dev/portfolio"
     }
