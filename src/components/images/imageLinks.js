@@ -14,6 +14,10 @@ const josephhansenHome =
   "https://images.josephhansen.dev/uploads/file2024-01-2621-1706327789450.webp"
 const tubHome =
   "https://images.josephhansen.dev/uploads/file2024-01-2621-1706327660749.webp"
+const stehlHome =
+  "https://images.josephhansen.dev/uploads/file2024-02-0113-1706814766447.webp"
+const arrisHome =
+  "https://images.josephhansen.dev/uploads/file2024-02-0113-1706814805492.webp"
 
 export {
   bazaarHome,
@@ -24,4 +28,6 @@ export {
   swimHome,
   josephhansenHome,
   tubHome,
+  stehlHome,
+  arrisHome,
 }

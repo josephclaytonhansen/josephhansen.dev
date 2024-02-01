@@ -8,6 +8,8 @@
     swimHome,
     josephhansenHome,
     tubHome,
+    stehlHome,
+    arrisHome
   } from "../../images/imageLinks.js"
 
   const props = defineProps({
@@ -102,6 +104,18 @@
       title: "Tub Boys",
       icons: [siWordpress, siBootstrap],
       image: tubHome,
+      link: "",
+    },
+    {
+      title: "Stehl Family Dental",
+      icons: [siWordpress, siBootstrap],
+      image: stehlHome,
+      link: "",
+    },
+    {
+      title: "Arris",
+      icons: [siWordpress, siBootstrap],
+      image: arrisHome,
       link: "",
     },
   ])

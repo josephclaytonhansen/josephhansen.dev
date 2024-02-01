@@ -65,10 +65,8 @@
       meta.meta[9].content = "https://josephhansen.dev/contact"
     } else if (props.component == "about") {
       meta.title = "josephhansen.dev | web developer/designer | about"
-      meta.meta[1].content =
-        "josephhansen.dev | web developer/designer | about"
-      meta.meta[6].content =
-        "josephhansen.dev | web developer/designer | about"
+      meta.meta[1].content = "josephhansen.dev | web developer/designer | about"
+      meta.meta[6].content = "josephhansen.dev | web developer/designer | about"
       meta.meta[4].content = "https://josephhansen.dev/about"
       meta.meta[9].content = "https://josephhansen.dev/about"
     } else if (props.component == "portfolio") {
