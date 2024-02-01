@@ -155,7 +155,7 @@
         :key="cards.title"
         @mouseover="hoveredCard = cards.title"
         @mouseleave="hoveredCard = null"
-        @click="window.location.pathname = cards.link"
+        @click="$router.push(cards.link)"
         :style="{
           opacity:
             hoveredCard === cards.title || hoveredCard === null ? 1 : 0.7,

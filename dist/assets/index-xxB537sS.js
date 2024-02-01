@@ -12102,8 +12102,7 @@ const Je = Gv(Uv),
                               onMouseover: (b) => (i.value = d.title),
                               onMouseleave:
                                 f[0] || (f[0] = (b) => (i.value = null)),
-                              onClick: (b) =>
-                                (u.window.location.pathname = d.link),
+                              onClick: (b) => u.$router.push(d.link),
                               style: $s({
                                 opacity:
                                   i.value === d.title || i.value === null
@@ -12228,7 +12227,7 @@ const Je = Gv(Uv),
       )
     },
   },
-  lm = gr(sm, [["__scopeId", "data-v-747f0042"]]),
+  lm = gr(sm, [["__scopeId", "data-v-2bda4711"]]),
   am = { class: "flex justify-center w-full md:px-10 sm:px-5 mt-5" },
   om = { class: "flex justify-center w-full md:px-10 sm:px-5 pt-10" },
   im = {
