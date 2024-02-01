@@ -16,6 +16,4 @@
   }
 </script>
 
-<template>
-  Bazaar
-</template>
+<template>Bazaar</template>

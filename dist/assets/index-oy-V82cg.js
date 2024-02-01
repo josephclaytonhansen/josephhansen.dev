@@ -12235,7 +12235,7 @@ const Ze = Uv(Kv),
     __name: "Bazaar",
     props: { brightness: Number },
     setup(e) {
-      return (t, n) => " Bazaar "
+      return (t, n) => "Bazaar"
     },
   },
   im = {
@@ -12306,17 +12306,17 @@ const Ze = Uv(Kv),
           ;(t.value = Number(u)),
             window.localStorage.setItem("brightness", t.value)
         },
-        s = [
-          { bazaar: om },
-          { "okc-south-stake": im },
-          { "aris-search": um },
-          { "atlanta-floor-one": cm },
-          { "build-on-your-land": fm },
-          { "stehl-family-dental": dm },
-          { "tub-boys": hm },
-          { "stuart-pipe": pm },
-          { "swim-state-pool": vm },
-        ],
+        s = {
+          "okc-south-stake": im,
+          "aris-search": um,
+          "atlanta-floor-one": cm,
+          "build-on-your-land": fm,
+          "stehl-family-dental": dm,
+          "tub-boys": hm,
+          "stuart-pipe": pm,
+          "swim-state-pool": vm,
+          bazaar: om,
+        },
         a = ue(() => {
           switch (t.value) {
             case 5:
@@ -12380,8 +12380,8 @@ const Ze = Uv(Kv),
                         ;(i.title = `josephhansen.dev | web developer/designer | ${d}`),
                           (i.meta[1].content = `josephhansen.dev | web developer/designer | ${d}`),
                           (i.meta[6].content = `josephhansen.dev | web developer/designer | ${d}`),
-                          (i.meta[4].content = `https://josephhansen.dev/portfolio/${d}`),
-                          (i.meta[9].content = `https://josephhansen.dev/portfolio/${d}`)
+                          (i.meta[4].content = `https://josephhansen.dev/portfolio/${n.component}`),
+                          (i.meta[9].content = `https://josephhansen.dev/portfolio/${n.component}`)
                       }
                     })
       })
@@ -12649,7 +12649,7 @@ const Ze = Uv(Kv),
       )
     },
   },
-  ym = gr(mm, [["__scopeId", "data-v-d027f43b"]])
+  ym = gr(mm, [["__scopeId", "data-v-eb293dbb"]])
 /*!
  * vue-router v4.2.5
  * (c) 2023 Eduardo San Martin Morote
