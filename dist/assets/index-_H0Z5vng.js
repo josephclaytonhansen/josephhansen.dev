@@ -13986,7 +13986,7 @@ const va = [
   { path: "/about-me", component: null, props: { component: "about-me" } },
   { path: "/portfolio", component: null, props: { component: "portfolio" } },
   {
-    path: "/portfolio/blendernation-bazaar",
+    path: "/portfolio/bazaar",
     component: null,
     props: { component: "bazaar" },
   },
