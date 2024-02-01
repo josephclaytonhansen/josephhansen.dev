@@ -9,7 +9,7 @@
     josephhansenHome,
     tubHome,
     stehlHome,
-    arrisHome
+    arrisHome,
   } from "../../images/imageLinks.js"
 
   const props = defineProps({
@@ -50,7 +50,6 @@
     siNginx,
     siCloudflare,
     siTailwindcss,
-    siReact,
     siBootstrap,
   } from "simple-icons"
 
@@ -59,13 +58,13 @@
       icons: [siWordpress, siPhp, siFigma],
       title: "BlenderNation Bazaar",
       image: bazaarHome,
-      link: "",
+      link: "/portfolio/bazaar",
     },
     {
       icons: [siVuedotjs, siNginx, siCloudflare],
       title: "OKC South Stake",
       image: okcssHome,
-      link: "",
+      link: "/portfolio/okc-south-stake",
     },
   ])
 
@@ -74,49 +73,49 @@
       icons: [siWordpress, siJavascript],
       title: "Build On Your Land",
       image: boylHome,
-      link: "",
+      link: "/portfolio/build-on-your-land",
     },
     {
       icons: [siWordpress, siPhp],
       title: "Stuart Pipe and Hose",
       image: stuartHome,
-      link: "",
+      link: "/portfolio/stuart-pipe",
     },
     {
       icons: [siWordpress, siBootstrap],
       title: "Atlanta Floor One",
       image: atlantaHome,
-      link: "",
+      link: "/portfolio/atlanta-floor-one",
     },
     {
       icons: [siWordpress, siBootstrap],
       title: "Swim State Pool",
       image: swimHome,
-      link: "",
+      link: "/portfolio/swim-state-pool",
     },
     {
       title: "josephhansen.dev",
       icons: [siVuedotjs, siTailwindcss],
       image: josephhansenHome,
-      link: "",
+      link: "/portfolio/josephhansen-dev",
     },
     {
       title: "Tub Boys",
       icons: [siWordpress, siBootstrap],
       image: tubHome,
-      link: "",
+      link: "/portfolio/tub-boys",
     },
     {
       title: "Stehl Family Dental",
       icons: [siWordpress, siBootstrap],
       image: stehlHome,
-      link: "",
+      link: "/portfolio/stehl-family-dental",
     },
     {
-      title: "Arris",
+      title: "Aris",
       icons: [siWordpress, siBootstrap],
       image: arrisHome,
-      link: "",
+      link: "/portfolio/aris-search",
     },
   ])
 
@@ -156,6 +155,7 @@
         :key="cards.title"
         @mouseover="hoveredCard = cards.title"
         @mouseleave="hoveredCard = null"
+        @click="window.location.pathname = cards.link"
         :style="{
           opacity:
             hoveredCard === cards.title || hoveredCard === null ? 1 : 0.7,

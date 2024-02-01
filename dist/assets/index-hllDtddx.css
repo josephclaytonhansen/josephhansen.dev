@@ -1925,15 +1925,15 @@ a {
   padding-left: 2rem;
   padding-right: 2rem;
 }
-.portfolioCard[data-v-ddbd9939] {
+.portfolioCard[data-v-747f0042] {
   transition: all 0.2s ease-out;
 }
-.image-container[data-v-ddbd9939] {
+.image-container[data-v-747f0042] {
   padding-top: 58%;
   position: relative;
   width: 100%;
 }
-.image-container img[data-v-ddbd9939] {
+.image-container img[data-v-747f0042] {
   height: 100%;
   left: 0;
   -o-object-fit: cover;

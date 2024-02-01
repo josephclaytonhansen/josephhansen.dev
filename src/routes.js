@@ -22,9 +22,9 @@ const routes = [
     props: { component: "build-on-your-land" },
   },
   {
-    path: "/portfolio/hiawatha",
+    path: "/portfolio/aris-search",
     component: null,
-    props: { component: "hiawatha" },
+    props: { component: "aris-search" },
   },
   {
     path: "/portfolio/swim-state-pool",
@@ -35,6 +35,21 @@ const routes = [
     path: "/portfolio/atlanta-floor-one",
     component: null,
     props: { component: "atlanta-floor-one" },
+  },
+  {
+    path: "/portfolio/stehl-family-dental",
+    component: null,
+    props: { component: "stehl-family-dental" },
+  },
+  {
+    path: "/portfolio/stuart-pipe",
+    component: null,
+    props: { component: "stuart-pipe" },
+  },
+  {
+    path: "/portfolio/tub-boys",
+    component: null,
+    props: { component: "tub-boys" },
   },
 ]
 
