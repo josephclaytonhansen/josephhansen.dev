@@ -63,6 +63,11 @@
       mobileMenu.classList.add("hidden")
     }
   }
+
+  const navigate = (link) => {
+    toggleMobileMenu()
+    $router.push(link)
+  }
 </script>
 
 <template>
@@ -384,13 +389,22 @@
         'text-slate-200': brightness == 2,
         'text-slate-400': brightness == 1,
       }">
-      <a @click="$router.push('/contact')"
+      <a
+        @click="
+          navigate('/contact')
+        "
         ><li class="py-2 px-3 rounded">Contact</li></a
       >
-      <a @click="$router.push('/portfolio')"
+      <a
+        @click="
+          navigate('/portfolio')
+        "
         ><li class="py-2 px-3 rounded">Web Portfolio</li></a
       >
-      <a @click="$router.push('/')"
+      <a
+        @click="
+          navigate('/')
+        "
         ><li class="py-2 px-3 rounded">Web Services</li></a
       >
       <li class="py-2 px-3 rounded opacity-75">Creative Projects</li>
@@ -401,7 +415,12 @@
         <li class="py-2 px-3 rounded">Cooking and Recipes</li>
       </ul>
 
-      <a href="/about-me"><li class="py-2 px-3 rounded">About Me</li></a>
+      <a
+        @click="
+          navigate('/about-me')
+        "
+        ><li class="py-2 px-3 rounded">About Me</li></a
+      >
     </ul>
   </div>
 </template>
