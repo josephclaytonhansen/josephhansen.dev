@@ -104,7 +104,7 @@
         </div>
 
         <div class="flex gap-5 p-2 relative">
-          <a href="/portfolio"
+          <a @click="$router.push('/portfolio')" class="cursor-pointer"
             ><h6
               class="font-semibold"
               :class="{
@@ -118,7 +118,7 @@
             </h6></a
           >
 
-          <a href="/"
+          <a @click="$router.push('/')"
             ><h6
               class="font-semibold"
               :class="{
@@ -215,7 +215,7 @@
             </PopoverPanel>
           </Popover>
 
-          <a href="/about-me">
+          <a @click="$router.push('/about-me')">
             <h6
               class="font-semibold flex"
               :class="{
@@ -231,7 +231,7 @@
         </div>
 
         <div class="flex gap-5 content-center">
-          <a href="/contact"
+          <a @click="$router.push('/contact')"
             ><button
               :class="{
                 'bg-emerald-600': brightness >= 4,
@@ -384,9 +384,15 @@
         'text-slate-200': brightness == 2,
         'text-slate-400': brightness == 1,
       }">
-      <a href="/contact"><li class="py-2 px-3 rounded">Contact</li></a>
-      <a href="/portfolio"><li class="py-2 px-3 rounded">Web Portfolio</li></a>
-      <a href="/"><li class="py-2 px-3 rounded">Web Services</li></a>
+      <a @click="$router.push('/contact')"
+        ><li class="py-2 px-3 rounded">Contact</li></a
+      >
+      <a @click="$router.push('/portfolio')"
+        ><li class="py-2 px-3 rounded">Web Portfolio</li></a
+      >
+      <a @click="$router.push('/')"
+        ><li class="py-2 px-3 rounded">Web Services</li></a
+      >
       <li class="py-2 px-3 rounded opacity-75">Creative Projects</li>
       <ul class="ml-5">
         <li class="py-2 px-3 rounded">Art and Animation</li>

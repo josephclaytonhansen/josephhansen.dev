@@ -26,6 +26,12 @@ const bazaar3 =
   "https://images.josephhansen.dev/uploads/file2024-02-0121-1706843718572.webp"
 const bazaar4 =
   "https://images.josephhansen.dev/uploads/file2024-02-0121-1706843702718.webp"
+const atlanta1 =
+  "https://images.josephhansen.dev/uploads/file2024-02-0212-1706898383454.webp"
+const atlanta2 =
+  "https://images.josephhansen.dev/uploads/file2024-02-0212-1706898390608.webp"
+const atlanta3 =
+  "https://images.josephhansen.dev/uploads/file2024-02-0212-1706898397404.webp"
 
 export {
   bazaarHome,
@@ -42,4 +48,7 @@ export {
   bazaar2,
   bazaar3,
   bazaar4,
+  atlanta1,
+  atlanta2,
+  atlanta3,
 }
