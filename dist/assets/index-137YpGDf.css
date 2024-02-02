@@ -2418,12 +2418,12 @@ button.swiper-pagination-bullet {
 .swiper-rtl .swiper-button-prev:after {
   content: "next";
 }
-.image-container[data-v-8415be3e] {
+.image-container[data-v-379e6afb] {
   padding-top: 58%;
   position: relative;
   width: 100%;
 }
-.image-container img[data-v-8415be3e] {
+.image-container img[data-v-379e6afb] {
   height: 100%;
   left: 0;
   -o-object-fit: cover;

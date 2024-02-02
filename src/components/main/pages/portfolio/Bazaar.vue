@@ -12,7 +12,7 @@
     bazaar1,
     bazaar2,
     bazaar3,
-    bazaar4
+    bazaar4,
   } from "../../../images/imageLinks.js"
 
   const modules = [Autoplay, Pagination, Navigation]
@@ -61,7 +61,7 @@
       :centeredSlides="true"
       :autoplay="{
         delay: 2500,
-        disableOnInteraction: false,
+        disableOnInteraction: true,
       }"
       :pagination="{
         clickable: true,
@@ -70,7 +70,6 @@
       :modules="modules"
       :loop="true"
       class="mt-5">
-
       <swiper-slide class="image-container">
         <a href="https://bazaar.blendernation.com">
           <img
@@ -84,7 +83,7 @@
         <a href="https://bazaar.blendernation.com">
           <img
             :src="bazaar1"
-            :alt="'Bazaar\'s home page'"
+            :alt="'Bazaar collection page'"
             class="bg-slate-200 object-contain w-full rounded-xl" />
         </a>
       </swiper-slide>
@@ -93,33 +92,28 @@
         <a href="https://bazaar.blendernation.com">
           <img
             :src="bazaar2"
-            :alt="'Bazaar\'s home page'"
+            :alt="'Bazaar user profile page'"
             class="bg-slate-200 object-contain w-full rounded-xl" />
         </a>
-
       </swiper-slide>
 
       <swiper-slide class="image-container">
         <a href="https://bazaar.blendernation.com">
           <img
             :src="bazaar3"
-            :alt="'Bazaar\'s home page'"
+            :alt="'Bazaar search page'"
             class="bg-slate-200 object-contain w-full rounded-xl" />
         </a>
-
       </swiper-slide>
 
       <swiper-slide class="image-container">
         <a href="https://bazaar.blendernation.com">
           <img
             :src="bazaar4"
-            :alt="'Bazaar\'s home page'"
+            :alt="'Bazaar product page'"
             class="bg-slate-200 object-contain w-full rounded-xl" />
         </a>
-
       </swiper-slide>
-
-      
     </swiper>
   </div>
 </template>

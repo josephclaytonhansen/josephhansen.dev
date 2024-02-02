@@ -17233,7 +17233,7 @@ const Ay = { class: "flex-col w-11/12 sm:w-10/12 md:w-8/12 py-4" },
             {
               spaceBetween: 30,
               centeredSlides: !0,
-              autoplay: { delay: 2500, disableOnInteraction: !1 },
+              autoplay: { delay: 2500, disableOnInteraction: !0 },
               pagination: { clickable: !0 },
               navigation: !0,
               modules: t,
@@ -17275,7 +17275,7 @@ const Ay = { class: "flex-col w-11/12 sm:w-10/12 md:w-8/12 py-4" },
                           "img",
                           {
                             src: pe(zb),
-                            alt: "Bazaar's home page",
+                            alt: "Bazaar collection page",
                             class:
                               "bg-slate-200 object-contain w-full rounded-xl",
                           },
@@ -17298,7 +17298,7 @@ const Ay = { class: "flex-col w-11/12 sm:w-10/12 md:w-8/12 py-4" },
                           "img",
                           {
                             src: pe(jb),
-                            alt: "Bazaar's home page",
+                            alt: "Bazaar user profile page",
                             class:
                               "bg-slate-200 object-contain w-full rounded-xl",
                           },
@@ -17321,7 +17321,7 @@ const Ay = { class: "flex-col w-11/12 sm:w-10/12 md:w-8/12 py-4" },
                           "img",
                           {
                             src: pe(Fb),
-                            alt: "Bazaar's home page",
+                            alt: "Bazaar search page",
                             class:
                               "bg-slate-200 object-contain w-full rounded-xl",
                           },
@@ -17344,7 +17344,7 @@ const Ay = { class: "flex-col w-11/12 sm:w-10/12 md:w-8/12 py-4" },
                           "img",
                           {
                             src: pe(Db),
-                            alt: "Bazaar's home page",
+                            alt: "Bazaar product page",
                             class:
                               "bg-slate-200 object-contain w-full rounded-xl",
                           },
@@ -17365,7 +17365,7 @@ const Ay = { class: "flex-col w-11/12 sm:w-10/12 md:w-8/12 py-4" },
       )
     },
   },
-  Uy = Xn(qy, [["__scopeId", "data-v-8415be3e"]]),
+  Uy = Xn(qy, [["__scopeId", "data-v-379e6afb"]]),
   Yy = {
     __name: "OkcSouthStake",
     props: { brightness: Number },
