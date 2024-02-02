@@ -1,7 +1,19 @@
 <script setup>
-  const props = defineProps({
-    brightness: Number,
-  })
+  import { ref } from "vue"
+
+  import sliderAndGallery from "../../blocks/sliderAndGallery/sliderAndGallery.vue"
+  const bazaarLink = "https://tub-boys.com/"
+  const bazaarTitle = "Tub Boys"
+
+  import {
+    tubHome
+  } from "../../../images/imageLinks.js"
+
+  const bazaarImages = ref([tubHome])
+
+  const bazaarCaptions = ref([
+    "Tub Boys homepage",
+  ])
 
   const pClass = (brightness) => {
     if (brightness >= 4) {
@@ -16,4 +28,22 @@
   }
 </script>
 
-<template></template>
+<template>
+  <sliderAndGallery
+    :images="bazaarImages"
+    :captions="bazaarCaptions"
+    :link="bazaarLink"
+    :title="bazaarTitle"
+    :brightness="brightness"
+    ><slot>
+      <h3 class="text-2xl font-bold text-inherit">
+        Using design to present minimal text in a compelling way
+      </h3>
+      <p>Lorem ipsum</p>
+      <h3 class="text-2xl font-bold text-inherit">
+        Image comparison sliders
+      </h3>
+      <p>Lorem ipsum</p>
+    </slot></sliderAndGallery
+  >
+</template>

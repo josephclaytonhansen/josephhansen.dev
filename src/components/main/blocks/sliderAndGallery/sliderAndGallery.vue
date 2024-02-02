@@ -72,7 +72,7 @@
 <template>
   <div class="flex-col w-11/12 sm:w-10/12 md:w-8/12 py-4">
     <div
-      class="flex w-full justify-center gap-8 items-center flex-wrap sm:flex-wrap md:flex-nowrap">
+      class="flex w-full justify-between gap-8 items-center flex-wrap sm:flex-wrap md:flex-nowrap">
       <h2
         class="text-5xl text-center text-semibold"
         :class="pClass(props.brightness)">
@@ -151,7 +151,7 @@
         </div>
       </div>
     </div>
-    <div :class="pClass(props.brightness)" class="prose pt-6">
+    <div :class="pClass(props.brightness)" class="prose pt-6 w-11/12 sm:w-10/12 md:w-8/12">
       <slot></slot>
     </div>
     <hr
@@ -181,5 +181,9 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  .prose{
+    max-width: 100%;
   }
 </style>

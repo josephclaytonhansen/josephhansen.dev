@@ -1,6 +1,6 @@
 <script setup>
   import { Popover, PopoverButton, PopoverPanel } from "@headlessui/vue"
-  import {useRouter } from "vue-router"
+  import { useRouter } from "vue-router"
   import {
     Menu,
     ChevronDown,
@@ -128,7 +128,7 @@
 
           <a @click="$router.push('/')"
             ><h6
-              class="font-semibold"
+              class="font-semibold cursor-pointer"
               :class="{
                 'text-slate-900': brightness == 5,
                 'text-slate-800': brightness == 4,
@@ -225,7 +225,7 @@
 
           <a @click="$router.push('/about-me')">
             <h6
-              class="font-semibold flex"
+              class="font-semibold flex cursor-pointer"
               :class="{
                 'text-slate-900': brightness == 5,
                 'text-slate-800': brightness == 4,
@@ -392,22 +392,13 @@
         'text-slate-200': brightness == 2,
         'text-slate-400': brightness == 1,
       }">
-      <a
-        @click="
-          navigate('/contact')
-        "
+      <a @click="navigate('/contact')"
         ><li class="py-2 px-3 rounded">Contact</li></a
       >
-      <a
-        @click="
-          navigate('/portfolio')
-        "
+      <a @click="navigate('/portfolio')"
         ><li class="py-2 px-3 rounded">Web Portfolio</li></a
       >
-      <a
-        @click="
-          navigate('/')
-        "
+      <a @click="navigate('/')"
         ><li class="py-2 px-3 rounded">Web Services</li></a
       >
       <li class="py-2 px-3 rounded opacity-75">Creative Projects</li>
@@ -418,10 +409,7 @@
         <li class="py-2 px-3 rounded">Cooking and Recipes</li>
       </ul>
 
-      <a
-        @click="
-          navigate('/about-me')
-        "
+      <a @click="navigate('/about-me')"
         ><li class="py-2 px-3 rounded">About Me</li></a
       >
     </ul>
