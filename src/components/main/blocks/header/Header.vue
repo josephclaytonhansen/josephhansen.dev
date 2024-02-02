@@ -1,5 +1,6 @@
 <script setup>
   import { Popover, PopoverButton, PopoverPanel } from "@headlessui/vue"
+  import {useRouter } from "vue-router"
   import {
     Menu,
     ChevronDown,
@@ -16,6 +17,8 @@
   const brightness = ref(5)
 
   const emit = defineEmits(["update:brightness"])
+
+  const router = useRouter()
 
   const updateBrightness = (event) => {
     brightness.value = event.target.value
@@ -66,7 +69,7 @@
 
   const navigate = (link) => {
     toggleMobileMenu()
-    $router.push(link)
+    router.push(link)
   }
 </script>
 
