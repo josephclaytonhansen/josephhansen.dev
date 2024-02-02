@@ -8,10 +8,7 @@
 
   import { Autoplay, Pagination, Navigation } from "swiper/modules"
 
-
-  const lightboxCaptions = ref([
-
-  ])
+  const lightboxCaptions = ref([])
 
   const modules = [Autoplay, Pagination, Navigation]
 
@@ -48,7 +45,7 @@
     const lighboxCaption = document.getElementById("lightbox-caption")
 
     lightboxImages.forEach((image) => {
-        console.log(image)
+      console.log(image)
       image.addEventListener("click", () => {
         lightboxImg.src = image.src
         lighboxCaption.textContent = image.alt
@@ -69,9 +66,6 @@
     nextTick(() => {
       lightbox()
     })
-
-
-
   })
 </script>
 
@@ -108,12 +102,11 @@
         :modules="modules"
         :loop="true"
         class="mt-5">
-
         <swiper-slide
           class="image-container"
           v-for="(image, index) in images"
           :key="index">
-          <a :href = "link">
+          <a :href="link">
             <img
               :src="image"
               :alt="lightboxCaptions[index]"
