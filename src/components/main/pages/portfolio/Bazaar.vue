@@ -1,4 +1,5 @@
 <script setup>
+import { onMounted } from "vue"
   import { Swiper, SwiperSlide } from "swiper/vue"
   import "swiper/css"
 
@@ -14,6 +15,14 @@
     bazaar3,
     bazaar4,
   } from "../../../images/imageLinks.js"
+
+  const lightboxCaptions = [
+    "Bazaar's home page",
+    "Bazaar collection page",
+    "Bazaar user page",
+    "Bazaar search results",
+    "Bazaar product listing page",
+  ]
 
   const modules = [Autoplay, Pagination, Navigation]
 
@@ -32,6 +41,31 @@
       return "text-slate-300"
     }
   }
+
+const lightbox = () => {
+  const lightbox = document.getElementById("lightbox")
+  const lightboxImg = document.getElementById("lightbox-img")
+  const lightboxClose = document.getElementById("lightbox-close")
+  const lightboxImages = document.querySelectorAll(".lightbox")
+  const lighboxCaption = document.getElementById("lightbox-caption")
+
+  lightboxImages.forEach((image) => {
+    image.addEventListener("click", () => {
+      lightboxImg.src = image.src
+      lighboxCaption.textContent = image.alt
+      lightbox.classList.remove("hidden")
+    })
+  })
+
+  lightboxClose.addEventListener("click", () => {
+    lightbox.classList.add("hidden")
+  })
+}
+
+onMounted(() => {
+  lightbox()
+})
+
 </script>
 
 <template>
@@ -72,36 +106,58 @@
           <a href="https://bazaar.blendernation.com">
             <img
               :src="bazaarHome"
-              :alt="'Bazaar\'s home page'"
+              :alt="lightboxCaptions[index]"
               class="bg-slate-200 object-contain w-full rounded-xl" />
           </a>
         </swiper-slide>
 
-        <swiper-slide class="image-container" v-for = "
-          (image, index) in [bazaar1, bazaar2, bazaar3, bazaar4]" :key="index">
+        <swiper-slide
+          class="image-container"
+          v-for="(image, index) in [bazaar1, bazaar2, bazaar3, bazaar4]"
+          :key="index">
           <a href="https://bazaar.blendernation.com">
             <img
               :src="image"
-              :alt="'Bazaar screenshot ' + index"
+              :alt="lightboxCaptions[index]"
               class="bg-slate-200 object-contain w-full rounded-xl" />
           </a>
         </swiper-slide>
-        
       </swiper>
     </div>
 
-    <div class = "block md:block lg:hidden py-6">
+
+    <div id="lightbox" class="fixed inset-0 flex items-center justify-center z-50 hidden" style = "background-color:rgba(0,0,0,.3)">
+  <div class="bg-white p-5 rounded shadow-lg">
+    <img id="lightbox-img" src="" alt="Lightbox Image" class="w-full h-auto">
+    <div class="flex justify-center">
+      <p class="text-sm text-gray-500 mt-2" id = "lightbox-caption">
+      
+      </p>
+    </div>
+    <button id="lightbox-close" style = "top:30%;" class="absolute right-0 m-2 text-3xl text-orange-400">&times;</button>
+  </div>
+</div>
+
+
+    <div class="block md:block lg:hidden py-6">
       <div class="grid grid-cols-2 gap-4">
-        <div class="image-container" v-for="
-          (image, index) in [bazaarHome, bazaar1, bazaar2, bazaar3, bazaar4]" :key="index">
-            <img
-              :src="image"
-              :alt="'Bazaar screenshot ' + index"
-              class="bg-slate-200 object-contain w-full rounded" />
+        <div
+          class="image-container"
+          v-for="(image, index) in [
+            bazaarHome,
+            bazaar1,
+            bazaar2,
+            bazaar3,
+            bazaar4,
+          ]"
+          :key="index">
+          <img
+            :src="image"
+            :alt="lightboxCaptions[index]"
+            class="bg-slate-200 object-contain w-full rounded lightbox" />
         </div>
       </div>
     </div>
-    
   </div>
 </template>
 
