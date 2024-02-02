@@ -1958,7 +1958,7 @@ a {
     padding-top: 0.75rem;
   }
 }
-#logoText[data-v-2233d378] {
+#logoText[data-v-9c112527] {
   transition: all 0.2s ease-in-out;
 }
 #perfChart[data-v-8a92440e] {
@@ -2469,12 +2469,12 @@ button.swiper-pagination-bullet {
 .swiper-rtl .swiper-button-prev:after {
   content: "next";
 }
-.image-container[data-v-ef85e1ba] {
+.image-container[data-v-60e07cf6] {
   padding-top: 58%;
   position: relative;
   width: 100%;
 }
-.image-container img[data-v-ef85e1ba] {
+.image-container img[data-v-60e07cf6] {
   height: 100%;
   left: 0;
   -o-object-fit: cover;

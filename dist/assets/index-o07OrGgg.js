@@ -5466,7 +5466,7 @@ let Vi = Symbol("TabsSSRContext"),
     ["path", { d: "M18 6 6 18", key: "1bl5f8" }],
     ["path", { d: "m6 6 12 12", key: "d8bk6v" }],
   ]),
-  Wi = (e) => (Ii("data-v-2233d378"), (e = e()), Oi(), e),
+  Wi = (e) => (Ii("data-v-9c112527"), (e = e()), Oi(), e),
   fm = { class: "flex justify-center p-5 gap-5 content-center" },
   pm = Wi(() => S("div", { class: "w-1/12" }, null, -1)),
   hm = { class: "flex justify-between gap-2 w-full content-center" },
@@ -5493,7 +5493,7 @@ let Vi = Symbol("TabsSSRContext"),
   $m = { class: "flex justify-between items-center" },
   Im = { class: "flex gap-1 p-2" },
   Om = bc(
-    '<a href="/contact" data-v-2233d378><li class="py-2 px-3 rounded" data-v-2233d378>Contact</li></a><a href="/portfolio" data-v-2233d378><li class="py-2 px-3 rounded" data-v-2233d378>Web Portfolio</li></a><a href="/" data-v-2233d378><li class="py-2 px-3 rounded" data-v-2233d378>Web Services</li></a><li class="py-2 px-3 rounded opacity-75" data-v-2233d378>Creative Projects</li><ul class="ml-5" data-v-2233d378><li class="py-2 px-3 rounded" data-v-2233d378>Art and Animation</li><li class="py-2 px-3 rounded" data-v-2233d378>Blog / Non-Fiction Writings</li><li class="py-2 px-3 rounded" data-v-2233d378>Custom Software</li><li class="py-2 px-3 rounded" data-v-2233d378>Cooking and Recipes</li></ul><a href="/about-me" data-v-2233d378><li class="py-2 px-3 rounded" data-v-2233d378>About Me</li></a>',
+    '<a href="/contact" data-v-9c112527><li class="py-2 px-3 rounded" data-v-9c112527>Contact</li></a><a href="/portfolio" data-v-9c112527><li class="py-2 px-3 rounded" data-v-9c112527>Web Portfolio</li></a><a href="/" data-v-9c112527><li class="py-2 px-3 rounded" data-v-9c112527>Web Services</li></a><li class="py-2 px-3 rounded opacity-75" data-v-9c112527>Creative Projects</li><ul class="ml-5" data-v-9c112527><li class="py-2 px-3 rounded" data-v-9c112527>Art and Animation</li><li class="py-2 px-3 rounded" data-v-9c112527>Blog / Non-Fiction Writings</li><li class="py-2 px-3 rounded" data-v-9c112527>Custom Software</li><li class="py-2 px-3 rounded" data-v-9c112527>Cooking and Recipes</li></ul><a href="/about-me" data-v-9c112527><li class="py-2 px-3 rounded" data-v-9c112527>About Me</li></a>',
     6,
   ),
   Am = [Om],
@@ -5506,28 +5506,32 @@ let Vi = Symbol("TabsSSRContext"),
         s = (l) => {
           ;(n.value = l.target.value), r("update:brightness", n.value)
           let o = "--swiper-navigation-color",
-            f = {
+            f = "--swiper-pagination-color",
+            c = {
               1: "#FB923C",
               2: "#F97316",
               3: "#D97706",
               4: "#10B981",
               5: "#047857",
             }[n.value]
-          document.documentElement.style.setProperty(o, f)
+          document.documentElement.style.setProperty(o, c),
+            document.documentElement.style.setProperty(f, c)
         }
       dt(() => {
         let l = window.localStorage
         if (l.getItem("brightness")) {
           n.value = Number(l.getItem("brightness"))
           let o = "--swiper-navigation-color",
-            f = {
+            f = "--swiper-pagination-color",
+            c = {
               1: "#FB923C",
               2: "#F97316",
               3: "#D97706",
               4: "#10B981",
               5: "#047857",
             }[n.value]
-          document.documentElement.style.setProperty(o, f)
+          document.documentElement.style.setProperty(o, c),
+            document.documentElement.style.setProperty(f, c)
         }
       })
       const a = () => {
@@ -6088,7 +6092,7 @@ let Vi = Symbol("TabsSSRContext"),
       )
     },
   },
-  Bm = Zn(Lm, [["__scopeId", "data-v-2233d378"]]),
+  Bm = Zn(Lm, [["__scopeId", "data-v-9c112527"]]),
   Nm = { class: "flex justify-center py-5 flex-col" },
   Rm = { class: "inline-block relative" },
   zm = { class: "font-semibold text-center px-1" },
@@ -17201,7 +17205,7 @@ const Ay = { class: "flex-col w-11/12 sm:w-10/12 md:w-8/12 py-4" },
   Fy = { href: "https://bazaar.blendernation.com" },
   jy = ["src", "alt"],
   Dy = bc(
-    '<div id="lightbox" class="fixed inset-0 flex items-center justify-center z-50 hidden" style="background-color:rgba(0, 0, 0, 0.3);" data-v-ef85e1ba><div class="bg-white p-5 rounded shadow-lg" data-v-ef85e1ba><img id="lightbox-img" src="" alt="Lightbox Image" class="w-full h-auto" data-v-ef85e1ba><div class="flex justify-center" data-v-ef85e1ba><p class="text-sm text-gray-500 mt-2" id="lightbox-caption" data-v-ef85e1ba></p></div><button id="lightbox-close" style="top:30%;" class="absolute right-0 m-2 text-3xl text-orange-400" data-v-ef85e1ba> × </button></div></div>',
+    '<div id="lightbox" class="fixed inset-0 flex items-center justify-center z-50 hidden" style="background-color:rgba(0, 0, 0, 0.3);" data-v-60e07cf6><div class="bg-white p-5 rounded shadow-lg" data-v-60e07cf6><img id="lightbox-img" src="" alt="Lightbox Image" class="w-full h-auto" data-v-60e07cf6><div class="flex justify-center" data-v-60e07cf6><p class="text-sm text-gray-500 mt-2" id="lightbox-caption" data-v-60e07cf6></p></div><button id="lightbox-close" style="top:30%;" class="absolute right-0 m-2 text-3xl text-orange-400" data-v-60e07cf6> × </button></div></div>',
     1,
   ),
   Hy = { class: "block md:block lg:hidden py-6" },
@@ -17395,7 +17399,7 @@ const Ay = { class: "flex-col w-11/12 sm:w-10/12 md:w-8/12 py-4" },
       )
     },
   },
-  qy = Zn(Wy, [["__scopeId", "data-v-ef85e1ba"]]),
+  qy = Zn(Wy, [["__scopeId", "data-v-60e07cf6"]]),
   Uy = {
     __name: "OkcSouthStake",
     props: { brightness: Number },
