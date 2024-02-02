@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "prepare": "husky install",
     "precommit": "npm run build && bash minify.sh && rm -rf ../built-josephhansen-dev/built-josephhansen-dev/assets && cp -r dist/* ../built-josephhansen-dev/built-josephhansen-dev && node sitemap.js",
-    "buildbot": "git commit -m 'buildbot' && git add . && git push && cd ../built-josephhansen-dev/built-josephhansen-dev/ && git commit -m 'buildbot' && git add . && git push"
+    "buildbot": "git add . && git commit --allow-empty -m 'buildbot' && git push && cd ../built-josephhansen-dev/built-josephhansen-dev/ && git add . && git commit --allow-empty -m 'buildbot' && git push"
   },
   "dependencies": {
     "@headlessui/tailwindcss": "^0.2.0",
