@@ -1,12 +1,19 @@
 <script setup>
+  import { Swiper, SwiperSlide } from "swiper/vue"
+  import "swiper/css"
 
-import { Swiper, SwiperSlide } from 'swiper/vue'
-import 'swiper/css'
+  import "swiper/css/pagination"
+  import "swiper/css/navigation"
 
-  import 'swiper/css/pagination'
-  import 'swiper/css/navigation'
+  import { Autoplay, Pagination, Navigation } from "swiper/modules"
 
-  import { Autoplay, Pagination, Navigation } from 'swiper/modules'
+  import {
+    bazaarHome,
+    bazaar1,
+    bazaar2,
+    bazaar3,
+    bazaar4
+  } from "../../../images/imageLinks.js"
 
   const modules = [Autoplay, Pagination, Navigation]
 
@@ -28,16 +35,15 @@ import 'swiper/css'
 </script>
 
 <template>
-  <div class = "flex-col w-11/12 sm:w-10/12 md:w-8/12 py-4">
-  <div class="flex w-full justify-center gap-8 items-center">
-    
+  <div class="flex-col w-11/12 sm:w-10/12 md:w-8/12 py-4">
+    <div class="flex w-full justify-center gap-8 items-center">
       <h2
         class="text-5xl text-center text-semibold"
         :class="pClass(props.brightness)">
         BlenderNation's Bazaar
       </h2>
-      <a href = "https://bazaar.blendernation.com">
-      <button
+      <a href="https://bazaar.blendernation.com">
+        <button
           aria-label="Visit the Bazaar website"
           class="rounded px-5 py-2 text-white font-semibold"
           :class="{
@@ -48,42 +54,73 @@ import 'swiper/css'
           Visit Site
         </button>
       </a>
+    </div>
+
+    <swiper
+      :spaceBetween="30"
+      :centeredSlides="true"
+      :autoplay="{
+        delay: 2500,
+        disableOnInteraction: false,
+      }"
+      :pagination="{
+        clickable: true,
+      }"
+      :navigation="true"
+      :modules="modules"
+      :loop="true"
+      class="mt-5">
+
+      <swiper-slide class="image-container">
+        <a href="https://bazaar.blendernation.com">
+          <img
+            :src="bazaarHome"
+            :alt="'Bazaar\'s home page'"
+            class="bg-slate-200 object-contain w-full rounded-xl" />
+        </a>
+      </swiper-slide>
+
+      <swiper-slide class="image-container">
+        <a href="https://bazaar.blendernation.com">
+          <img
+            :src="bazaar1"
+            :alt="'Bazaar\'s home page'"
+            class="bg-slate-200 object-contain w-full rounded-xl" />
+        </a>
+      </swiper-slide>
+
+      <swiper-slide class="image-container">
+        <a href="https://bazaar.blendernation.com">
+          <img
+            :src="bazaar2"
+            :alt="'Bazaar\'s home page'"
+            class="bg-slate-200 object-contain w-full rounded-xl" />
+        </a>
+
+      </swiper-slide>
+
+      <swiper-slide class="image-container">
+        <a href="https://bazaar.blendernation.com">
+          <img
+            :src="bazaar3"
+            :alt="'Bazaar\'s home page'"
+            class="bg-slate-200 object-contain w-full rounded-xl" />
+        </a>
+
+      </swiper-slide>
+
+      <swiper-slide class="image-container">
+        <a href="https://bazaar.blendernation.com">
+          <img
+            :src="bazaar4"
+            :alt="'Bazaar\'s home page'"
+            class="bg-slate-200 object-contain w-full rounded-xl" />
+        </a>
+
+      </swiper-slide>
 
       
-</div>
-
-<swiper
-    :spaceBetween="30"
-    :centeredSlides="true"
-    :autoplay="{
-      delay: 2500,
-      disableOnInteraction: false,
-    }"
-    :pagination="{
-      clickable: true,
-    }"
-    :navigation="true"
-    :modules="modules"
-    :loop="true"
-    class="mt-5"
-  >
-
-
-
-  <swiper-slide class="image-container">
-    <a href = "https://bazaar.blendernation.com">
-      <img
-        :src="'https://images.josephhansen.dev/uploads/file2024-01-2621-1706326995802.webp'"
-        :alt="'Bazaar\'s home page'"
-        class="bg-slate-200 object-contain w-full rounded-xl" />
-        </a>
-  </swiper-slide>
-
-  <swiper-slide>Slide 2</swiper-slide><swiper-slide>Slide 3</swiper-slide>
-    <swiper-slide>Slide 4</swiper-slide><swiper-slide>Slide 5</swiper-slide>
-    <swiper-slide>Slide 6</swiper-slide><swiper-slide>Slide 7</swiper-slide>
-    <swiper-slide>Slide 8</swiper-slide><swiper-slide>Slide 9</swiper-slide>
-  </swiper>
+    </swiper>
   </div>
 </template>
 

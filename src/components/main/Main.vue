@@ -100,15 +100,15 @@
       meta.meta[4].content = "https://josephhansen.dev/portfolio"
       meta.meta[9].content = "https://josephhansen.dev/portfolio"
     } else {
-  if (props.component in portfolioSubpages) {
-    let deSlugged = props.component.replace(/-/g, " ")
-    meta.title = `josephhansen.dev | web developer/designer | ${deSlugged}`
-    meta.meta[1].content = `josephhansen.dev | web developer/designer | ${deSlugged}`
-    meta.meta[6].content = `josephhansen.dev | web developer/designer | ${deSlugged}`
-    meta.meta[4].content = `https://josephhansen.dev/portfolio/${props.component}`
-    meta.meta[9].content = `https://josephhansen.dev/portfolio/${props.component}`
-  }
-}
+      if (props.component in portfolioSubpages) {
+        let deSlugged = props.component.replace(/-/g, " ")
+        meta.title = `josephhansen.dev | web developer/designer | ${deSlugged}`
+        meta.meta[1].content = `josephhansen.dev | web developer/designer | ${deSlugged}`
+        meta.meta[6].content = `josephhansen.dev | web developer/designer | ${deSlugged}`
+        meta.meta[4].content = `https://josephhansen.dev/portfolio/${props.component}`
+        meta.meta[9].content = `https://josephhansen.dev/portfolio/${props.component}`
+      }
+    }
   })
 
   const meta = reactive({

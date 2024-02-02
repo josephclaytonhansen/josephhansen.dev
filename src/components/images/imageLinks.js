@@ -18,6 +18,14 @@ const stehlHome =
   "https://images.josephhansen.dev/uploads/file2024-02-0113-1706814766447.webp"
 const arrisHome =
   "https://images.josephhansen.dev/uploads/file2024-02-0113-1706814805492.webp"
+const bazaar1 =
+  "https://images.josephhansen.dev/uploads/file2024-02-0121-1706843749607.webp"
+const bazaar2 =
+  "https://images.josephhansen.dev/uploads/file2024-02-0121-1706843736104.webp"
+const bazaar3 =
+  "https://images.josephhansen.dev/uploads/file2024-02-0121-1706843718572.webp"
+const bazaar4 =
+  "https://images.josephhansen.dev/uploads/file2024-02-0121-1706843702718.webp"
 
 export {
   bazaarHome,
@@ -30,4 +38,8 @@ export {
   tubHome,
   stehlHome,
   arrisHome,
+  bazaar1,
+  bazaar2,
+  bazaar3,
+  bazaar4,
 }
