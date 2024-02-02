@@ -32,6 +32,8 @@ const atlanta2 =
   "https://images.josephhansen.dev/uploads/file2024-02-0212-1706898390608.webp"
 const atlanta3 =
   "https://images.josephhansen.dev/uploads/file2024-02-0212-1706898397404.webp"
+const aris1 =
+  "https://images.josephhansen.dev/uploads/file2024-02-0212-1706899554221.webp"
 
 export {
   bazaarHome,
@@ -51,4 +53,5 @@ export {
   atlanta1,
   atlanta2,
   atlanta3,
+  aris1,
 }
