@@ -8,6 +8,8 @@
 
   import { Autoplay, Pagination, Navigation } from "swiper/modules"
 
+  import ctaForm from "../../blocks/ctaForm/ctaForm.vue"
+
   const lightboxCaptions = ref([])
 
   const modules = [Autoplay, Pagination, Navigation]
@@ -37,7 +39,6 @@
   }
 
   const lightbox = () => {
-    console.log("lightbox")
     const lightbox = document.getElementById("lightbox")
     const lightboxImg = document.getElementById("lightbox-img")
     const lightboxClose = document.getElementById("lightbox-close")
@@ -45,7 +46,6 @@
     const lighboxCaption = document.getElementById("lightbox-caption")
 
     lightboxImages.forEach((image) => {
-      console.log(image)
       image.addEventListener("click", () => {
         lightboxImg.src = image.src
         lighboxCaption.textContent = image.alt
@@ -150,6 +150,17 @@
             class="bg-slate-200 object-contain w-full rounded lightbox" />
         </div>
       </div>
+    </div>
+    <slot></slot>
+    <hr
+      class="my-12"
+      :class="{
+        'border-slate-300': brightness >= 4,
+        'border-slate-200': brightness == 3,
+        'border-slate-100': brightness <= 2,
+      }" />
+    <div class="flex justify-center pt-6">
+      <ctaForm :brightness="brightness" />
     </div>
   </div>
 </template>
