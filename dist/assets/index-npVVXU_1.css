@@ -1544,6 +1544,10 @@ select {
   padding-bottom: 1.25rem;
   padding-top: 1.25rem;
 }
+.py-6 {
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+}
 .pb-3 {
   padding-bottom: 0.75rem;
 }
@@ -1850,6 +1854,9 @@ a {
   }
 }
 @media (min-width: 768px) {
+  .md\:block {
+    display: block;
+  }
   .md\:hidden {
     display: none;
   }
@@ -2430,12 +2437,12 @@ button.swiper-pagination-bullet {
 .swiper-rtl .swiper-button-prev:after {
   content: "next";
 }
-.image-container[data-v-c58906e3] {
+.image-container[data-v-33617eb4] {
   padding-top: 58%;
   position: relative;
   width: 100%;
 }
-.image-container img[data-v-c58906e3] {
+.image-container img[data-v-33617eb4] {
   height: 100%;
   left: 0;
   -o-object-fit: cover;

@@ -36,7 +36,8 @@
 
 <template>
   <div class="flex-col w-11/12 sm:w-10/12 md:w-8/12 py-4">
-    <div class="flex w-full justify-center gap-8 items-center flex-wrap sm:flex-wrap md:flex-nowrap">
+    <div
+      class="flex w-full justify-center gap-8 items-center flex-wrap sm:flex-wrap md:flex-nowrap">
       <h2
         class="text-5xl text-center text-semibold"
         :class="pClass(props.brightness)">
@@ -56,63 +57,51 @@
       </a>
     </div>
 
-    <div class = "hidden md:hidden lg:block">
-    <swiper
-      :spaceBetween="30"
-      :centeredSlides="true"
+    <div class="hidden md:hidden lg:block">
+      <swiper
+        :spaceBetween="30"
+        :centeredSlides="true"
+        :pagination="{
+          clickable: true,
+        }"
+        :navigation="true"
+        :modules="modules"
+        :loop="true"
+        class="mt-5">
+        <swiper-slide class="image-container">
+          <a href="https://bazaar.blendernation.com">
+            <img
+              :src="bazaarHome"
+              :alt="'Bazaar\'s home page'"
+              class="bg-slate-200 object-contain w-full rounded-xl" />
+          </a>
+        </swiper-slide>
 
-      :pagination="{
-        clickable: true,
-      }"
-      :navigation="true"
-      :modules="modules"
-      :loop="true"
-      class="mt-5 ">
-      <swiper-slide class="image-container">
-        <a href="https://bazaar.blendernation.com">
-          <img
-            :src="bazaarHome"
-            :alt="'Bazaar\'s home page'"
-            class="bg-slate-200 object-contain w-full rounded-xl" />
-        </a>
-      </swiper-slide>
+        <swiper-slide class="image-container" v-for = "
+          (image, index) in [bazaar1, bazaar2, bazaar3, bazaar4]" :key="index">
+          <a href="https://bazaar.blendernation.com">
+            <img
+              :src="image"
+              :alt="'Bazaar screenshot ' + index"
+              class="bg-slate-200 object-contain w-full rounded-xl" />
+          </a>
+        </swiper-slide>
+        
+      </swiper>
+    </div>
 
-      <swiper-slide class="image-container">
-        <a href="https://bazaar.blendernation.com">
-          <img
-            :src="bazaar1"
-            :alt="'Bazaar collection page'"
-            class="bg-slate-200 object-contain w-full rounded-xl" />
-        </a>
-      </swiper-slide>
-
-      <swiper-slide class="image-container">
-        <a href="https://bazaar.blendernation.com">
-          <img
-            :src="bazaar2"
-            :alt="'Bazaar user profile page'"
-            class="bg-slate-200 object-contain w-full rounded-xl" />
-        </a>
-      </swiper-slide>
-
-      <swiper-slide class="image-container">
-        <a href="https://bazaar.blendernation.com">
-          <img
-            :src="bazaar3"
-            :alt="'Bazaar search page'"
-            class="bg-slate-200 object-contain w-full rounded-xl" />
-        </a>
-      </swiper-slide>
-
-      <swiper-slide class="image-container">
-        <a href="https://bazaar.blendernation.com">
-          <img
-            :src="bazaar4"
-            :alt="'Bazaar product page'"
-            class="bg-slate-200 object-contain w-full rounded-xl" />
-        </a>
-      </swiper-slide>
-    </swiper></div>
+    <div class = "block md:block lg:hidden py-6">
+      <div class="grid grid-cols-2 gap-4">
+        <div class="image-container" v-for="
+          (image, index) in [bazaarHome, bazaar1, bazaar2, bazaar3, bazaar4]" :key="index">
+            <img
+              :src="image"
+              :alt="'Bazaar screenshot ' + index"
+              class="bg-slate-200 object-contain w-full rounded" />
+        </div>
+      </div>
+    </div>
+    
   </div>
 </template>
 
