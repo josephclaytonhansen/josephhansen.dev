@@ -36,7 +36,7 @@
 
 <template>
   <div class="flex-col w-11/12 sm:w-10/12 md:w-8/12 py-4">
-    <div class="flex w-full justify-center gap-8 items-center">
+    <div class="flex w-full justify-center gap-8 items-center flex-wrap sm:flex-wrap md:flex-nowrap">
       <h2
         class="text-5xl text-center text-semibold"
         :class="pClass(props.brightness)">
@@ -56,20 +56,18 @@
       </a>
     </div>
 
+    <div class = "hidden md:hidden lg:block">
     <swiper
       :spaceBetween="30"
       :centeredSlides="true"
-      :autoplay="{
-        delay: 2500,
-        disableOnInteraction: false,
-      }"
+
       :pagination="{
         clickable: true,
       }"
       :navigation="true"
       :modules="modules"
       :loop="true"
-      class="mt-5">
+      class="mt-5 ">
       <swiper-slide class="image-container">
         <a href="https://bazaar.blendernation.com">
           <img
@@ -114,7 +112,7 @@
             class="bg-slate-200 object-contain w-full rounded-xl" />
         </a>
       </swiper-slide>
-    </swiper>
+    </swiper></div>
   </div>
 </template>
 

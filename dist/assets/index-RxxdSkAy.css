@@ -1828,6 +1828,9 @@ a {
   .sm\:w-10\/12 {
     width: 83.333333%;
   }
+  .sm\:flex-wrap {
+    flex-wrap: wrap;
+  }
   .sm\:gap-1 {
     gap: 0.25rem;
   }
@@ -1847,6 +1850,9 @@ a {
   }
 }
 @media (min-width: 768px) {
+  .md\:hidden {
+    display: none;
+  }
   .md\:w-10\/12 {
     width: 83.333333%;
   }
@@ -1855,6 +1861,9 @@ a {
   }
   .md\:grid-cols-none {
     grid-template-columns: none;
+  }
+  .md\:flex-nowrap {
+    flex-wrap: nowrap;
   }
   .md\:gap-5 {
     gap: 1.25rem;
@@ -1877,6 +1886,9 @@ a {
 @media (min-width: 1024px) {
   .lg\:mt-0 {
     margin-top: 0;
+  }
+  .lg\:block {
+    display: block;
   }
   .lg\:flex {
     display: flex;
@@ -2418,12 +2430,12 @@ button.swiper-pagination-bullet {
 .swiper-rtl .swiper-button-prev:after {
   content: "next";
 }
-.image-container[data-v-1f22470a] {
+.image-container[data-v-c58906e3] {
   padding-top: 58%;
   position: relative;
   width: 100%;
 }
-.image-container img[data-v-1f22470a] {
+.image-container img[data-v-c58906e3] {
   height: 100%;
   left: 0;
   -o-object-fit: cover;
