@@ -9,7 +9,7 @@
   import Portfolio from "./pages/Portfolio.vue"
 
   import { ref, computed, onMounted, watchEffect, reactive } from "vue"
-  
+
   import Bazaar from "./pages/portfolio/Bazaar.vue"
   import OkcSouthStake from "./pages/portfolio/OkcSouthStake.vue"
   import ArisSearch from "./pages/portfolio/ArisSearch.vue"
@@ -33,15 +33,15 @@
   }
 
   const portfolioSubpages = {
-  "okc-south-stake": OkcSouthStake,
-        "aris-search": ArisSearch,
-        "atlanta-floor-one": AtlantaFloorOne,
-        "build-on-your-land": BuildOnYourLand,
-        "stehl-family-dental": StehlFamilyDental,
-        "tub-boys": TubBoys,
-        "stuart-pipe": StuartPipeAndHose,
-        "swim-state-pool": SwimStatePool,
-        "bazaar": Bazaar,
+    "okc-south-stake": OkcSouthStake,
+    "aris-search": ArisSearch,
+    "atlanta-floor-one": AtlantaFloorOne,
+    "build-on-your-land": BuildOnYourLand,
+    "stehl-family-dental": StehlFamilyDental,
+    "tub-boys": TubBoys,
+    "stuart-pipe": StuartPipeAndHose,
+    "swim-state-pool": SwimStatePool,
+    bazaar: Bazaar,
   }
 
   const brightnessClass = computed(() => {
@@ -99,19 +99,16 @@
         "josephhansen.dev | web developer/designer | portfolio"
       meta.meta[4].content = "https://josephhansen.dev/portfolio"
       meta.meta[9].content = "https://josephhansen.dev/portfolio"
-    }  else {
-      let options = portfolioSubpages
-      options.forEach((option) => {
-        if (Object.keys(option)[0] == props.component) {
-          let deSlugged = props.component.replace(/-/g, " ")
-          meta.title = `josephhansen.dev | web developer/designer | ${deSlugged}`
-          meta.meta[1].content = `josephhansen.dev | web developer/designer | ${deSlugged}`
-          meta.meta[6].content = `josephhansen.dev | web developer/designer | ${deSlugged}`
-          meta.meta[4].content = `https://josephhansen.dev/portfolio/${props.component}`
-          meta.meta[9].content = `https://josephhansen.dev/portfolio/${props.component}`
-        }
-      })
-    }
+    } else {
+  if (props.component in portfolioSubpages) {
+    let deSlugged = props.component.replace(/-/g, " ")
+    meta.title = `josephhansen.dev | web developer/designer | ${deSlugged}`
+    meta.meta[1].content = `josephhansen.dev | web developer/designer | ${deSlugged}`
+    meta.meta[6].content = `josephhansen.dev | web developer/designer | ${deSlugged}`
+    meta.meta[4].content = `https://josephhansen.dev/portfolio/${props.component}`
+    meta.meta[9].content = `https://josephhansen.dev/portfolio/${props.component}`
+  }
+}
   })
 
   const meta = reactive({
@@ -265,9 +262,9 @@
           'bg-slate-900': brightness == 1,
         }"
         v-if="component in portfolioSubpages">
-    <component
-      :is="portfolioSubpages[component]"
-      :brightness="brightness" />
+        <component
+          :is="portfolioSubpages[component]"
+          :brightness="brightness" />
       </div>
 
       <div
