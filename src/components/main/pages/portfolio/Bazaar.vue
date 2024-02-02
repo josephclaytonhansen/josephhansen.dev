@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted } from "vue"
+  import { onMounted } from "vue"
   import { Swiper, SwiperSlide } from "swiper/vue"
   import "swiper/css"
 
@@ -42,30 +42,29 @@ import { onMounted } from "vue"
     }
   }
 
-const lightbox = () => {
-  const lightbox = document.getElementById("lightbox")
-  const lightboxImg = document.getElementById("lightbox-img")
-  const lightboxClose = document.getElementById("lightbox-close")
-  const lightboxImages = document.querySelectorAll(".lightbox")
-  const lighboxCaption = document.getElementById("lightbox-caption")
+  const lightbox = () => {
+    const lightbox = document.getElementById("lightbox")
+    const lightboxImg = document.getElementById("lightbox-img")
+    const lightboxClose = document.getElementById("lightbox-close")
+    const lightboxImages = document.querySelectorAll(".lightbox")
+    const lighboxCaption = document.getElementById("lightbox-caption")
 
-  lightboxImages.forEach((image) => {
-    image.addEventListener("click", () => {
-      lightboxImg.src = image.src
-      lighboxCaption.textContent = image.alt
-      lightbox.classList.remove("hidden")
+    lightboxImages.forEach((image) => {
+      image.addEventListener("click", () => {
+        lightboxImg.src = image.src
+        lighboxCaption.textContent = image.alt
+        lightbox.classList.remove("hidden")
+      })
     })
+
+    lightboxClose.addEventListener("click", () => {
+      lightbox.classList.add("hidden")
+    })
+  }
+
+  onMounted(() => {
+    lightbox()
   })
-
-  lightboxClose.addEventListener("click", () => {
-    lightbox.classList.add("hidden")
-  })
-}
-
-onMounted(() => {
-  lightbox()
-})
-
 </script>
 
 <template>
@@ -125,19 +124,27 @@ onMounted(() => {
       </swiper>
     </div>
 
-
-    <div id="lightbox" class="fixed inset-0 flex items-center justify-center z-50 hidden" style = "background-color:rgba(0,0,0,.3)">
-  <div class="bg-white p-5 rounded shadow-lg">
-    <img id="lightbox-img" src="" alt="Lightbox Image" class="w-full h-auto">
-    <div class="flex justify-center">
-      <p class="text-sm text-gray-500 mt-2" id = "lightbox-caption">
-      
-      </p>
+    <div
+      id="lightbox"
+      class="fixed inset-0 flex items-center justify-center z-50 hidden"
+      style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="bg-white p-5 rounded shadow-lg">
+        <img
+          id="lightbox-img"
+          src=""
+          alt="Lightbox Image"
+          class="w-full h-auto" />
+        <div class="flex justify-center">
+          <p class="text-sm text-gray-500 mt-2" id="lightbox-caption"></p>
+        </div>
+        <button
+          id="lightbox-close"
+          style="top: 30%"
+          class="absolute right-0 m-2 text-3xl text-orange-400">
+          &times;
+        </button>
+      </div>
     </div>
-    <button id="lightbox-close" style = "top:30%;" class="absolute right-0 m-2 text-3xl text-orange-400">&times;</button>
-  </div>
-</div>
-
 
     <div class="block md:block lg:hidden py-6">
       <div class="grid grid-cols-2 gap-4">
@@ -176,4 +183,5 @@ onMounted(() => {
     height: 100%;
     object-fit: cover;
   }
+
 </style>

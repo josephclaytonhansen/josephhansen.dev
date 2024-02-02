@@ -20,12 +20,32 @@
   const updateBrightness = (event) => {
     brightness.value = event.target.value
     emit("update:brightness", brightness.value)
+    let cssVar = "--swiper-navigation-color"
+    let hexColor = {
+      1: "#FB923C",
+      2: "#F97316",
+      3: "#D97706",
+      4: "#10B981",
+      5: "#047857",
+    }[brightness.value]
+    document.documentElement.style.setProperty(cssVar, hexColor)
   }
+
+
 
   onMounted(() => {
     let localStorage = window.localStorage
     if (localStorage.getItem("brightness")) {
       brightness.value = Number(localStorage.getItem("brightness"))
+      let cssVar = "--swiper-navigation-color"
+    let hexColor = {
+      1: "#FB923C",
+      2: "#F97316",
+      3: "#D97706",
+      4: "#10B981",
+      5: "#047857",
+    }[brightness.value]
+    document.documentElement.style.setProperty(cssVar, hexColor)
     }
   })
 
