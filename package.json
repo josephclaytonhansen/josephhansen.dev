@@ -8,7 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "prepare": "husky install",
-    "precommit": "npm run build && bash minify.sh && rm -rf ../built-josephhansen-dev/built-josephhansen-dev/assets && cp -r dist/* ../built-josephhansen-dev/built-josephhansen-dev && node sitemap.js"
+    "precommit": "npm run build && bash minify.sh && rm -rf ../built-josephhansen-dev/built-josephhansen-dev/assets && cp -r dist/* ../built-josephhansen-dev/built-josephhansen-dev && node sitemap.js",
+    "buildbot": "git commit -m 'buildbot' && git add . && git push"
   },
   "dependencies": {
     "@headlessui/tailwindcss": "^0.2.0",
