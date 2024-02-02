@@ -21,7 +21,7 @@
     brightness.value = event.target.value
     emit("update:brightness", brightness.value)
     let navVar = "--swiper-navigation-color"
-      let paginationVar = "--swiper-pagination-color"
+    let paginationVar = "--swiper-pagination-color"
     let hexColor = {
       1: "#FB923C",
       2: "#F97316",
