@@ -151,7 +151,9 @@
         </div>
       </div>
     </div>
-    <div :class="pClass(props.brightness)" class="prose pt-6 w-11/12 sm:w-10/12 md:w-8/12">
+    <div
+      :class="pClass(props.brightness)"
+      class="prose pt-6 w-11/12 sm:w-10/12 md:w-8/12">
       <slot></slot>
     </div>
     <hr
@@ -183,7 +185,7 @@
     object-fit: cover;
   }
 
-  .prose{
+  .prose {
     max-width: 100%;
   }
 </style>

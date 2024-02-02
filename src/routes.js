@@ -51,6 +51,11 @@ const routes = [
     component: null,
     props: { component: "tub-boys" },
   },
+  {
+    path: "/portfolio/josephhansen-dev",
+    component: null,
+    props: { component: "josephhansen-dev" },
+  },
 ]
 
 const routePaths = routes.map((route) => route.path)

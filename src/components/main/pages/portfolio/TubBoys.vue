@@ -5,15 +5,11 @@
   const bazaarLink = "https://tub-boys.com/"
   const bazaarTitle = "Tub Boys"
 
-  import {
-    tubHome
-  } from "../../../images/imageLinks.js"
+  import { tubHome } from "../../../images/imageLinks.js"
 
   const bazaarImages = ref([tubHome])
 
-  const bazaarCaptions = ref([
-    "Tub Boys homepage",
-  ])
+  const bazaarCaptions = ref(["Tub Boys homepage"])
 
   const pClass = (brightness) => {
     if (brightness >= 4) {
@@ -40,9 +36,7 @@
         Using design to present minimal text in a compelling way
       </h3>
       <p>Lorem ipsum</p>
-      <h3 class="text-2xl font-bold text-inherit">
-        Image comparison sliders
-      </h3>
+      <h3 class="text-2xl font-bold text-inherit">Image comparison sliders</h3>
       <p>Lorem ipsum</p>
     </slot></sliderAndGallery
   >

@@ -5,15 +5,11 @@
   const bazaarLink = "https://stuarthose.com/"
   const bazaarTitle = "Stuart Hose and Pipe"
 
-  import {
-    stuartHome
-  } from "../../../images/imageLinks.js"
+  import { stuartHome } from "../../../images/imageLinks.js"
 
   const bazaarImages = ref([stuartHome])
 
-  const bazaarCaptions = ref([
-    "Stuart Hose and Pipe homepage",
-  ])
+  const bazaarCaptions = ref(["Stuart Hose and Pipe homepage"])
 
   const pClass = (brightness) => {
     if (brightness >= 4) {

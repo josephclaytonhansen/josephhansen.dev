@@ -5,15 +5,11 @@
   const bazaarLink = "https://stehlfamilydental.com/"
   const bazaarTitle = "Stuart Hose and Pipe"
 
-  import {
-    stehlHome
-  } from "../../../images/imageLinks.js"
+  import { stehlHome } from "../../../images/imageLinks.js"
 
   const bazaarImages = ref([stehlHome])
 
-  const bazaarCaptions = ref([
-    "Stehl Family Dental homepage",
-  ])
+  const bazaarCaptions = ref(["Stehl Family Dental homepage"])
 
   const pClass = (brightness) => {
     if (brightness >= 4) {
@@ -40,9 +36,7 @@
         Priority: make services and pricing clear and accessible
       </h3>
       <p>Lorem ipsum</p>
-      <h3 class="text-2xl font-bold text-inherit">
-        Working with a round logo
-      </h3>
+      <h3 class="text-2xl font-bold text-inherit">Working with a round logo</h3>
       <p>Lorem ipsum</p>
     </slot></sliderAndGallery
   >

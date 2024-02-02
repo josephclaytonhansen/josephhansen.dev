@@ -1,7 +1,15 @@
 <script setup>
-  const props = defineProps({
-    brightness: Number,
-  })
+  import { ref } from "vue"
+
+  import sliderAndGallery from "../../blocks/sliderAndGallery/sliderAndGallery.vue"
+  const bazaarLink = "https://swimstatepoolservice.com/"
+  const bazaarTitle = "Swim State Pool"
+
+  import { swimHome } from "../../../images/imageLinks.js"
+
+  const bazaarImages = ref([swimHome])
+
+  const bazaarCaptions = ref(["Swim State Pool Services homepage"])
 
   const pClass = (brightness) => {
     if (brightness >= 4) {
@@ -16,4 +24,18 @@
   }
 </script>
 
-<template></template>
+<template>
+  <sliderAndGallery
+    :images="bazaarImages"
+    :captions="bazaarCaptions"
+    :link="bazaarLink"
+    :title="bazaarTitle"
+    :brightness="brightness"
+    ><slot>
+      <h3 class="text-2xl font-bold text-inherit">
+        Iterative design
+      </h3>
+      <p>Lorem ipsum</p>
+    </slot></sliderAndGallery
+  >
+</template>

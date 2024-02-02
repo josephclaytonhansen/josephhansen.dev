@@ -2,17 +2,14 @@
   import { ref } from "vue"
 
   import sliderAndGallery from "../../blocks/sliderAndGallery/sliderAndGallery.vue"
-  const bazaarLink = "https://arissearch.com//"
-  const bazaarTitle = "Aris Search"
+  const bazaarLink = "/"
+  const bazaarTitle = "josephhansen.dev"
 
-  import { arrisHome, aris1 } from "../../../images/imageLinks.js"
+  import { josephhansenHome } from "../../../images/imageLinks.js"
 
-  const bazaarImages = ref([arrisHome, aris1])
+  const bazaarImages = ref([josephhansenHome])
 
-  const bazaarCaptions = ref([
-    "Aris Search homepage",
-    "Aris Search image effects",
-  ])
+  const bazaarCaptions = ref(["This site's homepage"])
 
   const pClass = (brightness) => {
     if (brightness >= 4) {
@@ -28,7 +25,7 @@
 </script>
 
 <template>
-  <sliderAndGallerya
+  <sliderAndGallery
     :images="bazaarImages"
     :captions="bazaarCaptions"
     :link="bazaarLink"
@@ -36,11 +33,9 @@
     :brightness="brightness"
     ><slot>
       <h3 class="text-2xl font-bold text-inherit">
-        Stark colors + clean white and transparency
+        Lorem ipsum
       </h3>
       <p>Lorem ipsum</p>
-      <h3 class="text-2xl font-bold text-inherit">Geometric effects</h3>
-      <p>Lorem ipsum</p>
-    </slot></sliderAndGallerya
+    </slot></sliderAndGallery
   >
 </template>

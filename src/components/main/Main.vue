@@ -19,6 +19,7 @@
   import TubBoys from "./pages/portfolio/TubBoys.vue"
   import StuartPipeAndHose from "./pages/portfolio/StuartPipeAndHose.vue"
   import SwimStatePool from "./pages/portfolio/SwimStatePool.vue"
+  import JosephHansenDev from "./pages/portfolio/JosephHansenDev.vue"
 
   const brightness = ref(1)
 
@@ -41,6 +42,7 @@
     "tub-boys": TubBoys,
     "stuart-pipe": StuartPipeAndHose,
     "swim-state-pool": SwimStatePool,
+    "josephhansen-dev": JosephHansenDev,
     bazaar: Bazaar,
   }
 
