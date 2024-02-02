@@ -44,24 +44,24 @@
     :title="bazaarTitle"
     :brightness="brightness"
     ><slot>
-      <div class="prose pt-6">
-        <h3 :class="pClass(brightness)" class="text-2xl font-bold">
+
+        <h3 class="text-2xl font-bold text-inherit">
           The vision: a one-stop shop for Blender users
         </h3>
         <p>Lorem ipsum</p>
-        <h3 :class="pClass(brightness)" class="text-2xl font-bold">
+        <h3 class="text-2xl font-bold text-inherit">
           Tight deadlines and high stakes
         </h3>
         <p>Lorem ipsum</p>
-        <h3 :class="pClass(brightness)" class="text-2xl font-bold">
+        <h3 class="text-2xl font-bold text-inherit">
           From concept to results
         </h3>
         <p>Lorem ipsum</p>
-        <h3 :class="pClass(brightness)" class="text-2xl font-bold">
+        <h3 class="text-2xl font-bold text-inherit">
           Security- keeping the Bazaar safe
         </h3>
         <p>Lorem ipsum</p>
-      </div>
+
     </slot></sliderAndGallery
   >
 </template>

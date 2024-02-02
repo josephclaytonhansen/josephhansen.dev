@@ -151,7 +151,7 @@
         </div>
       </div>
     </div>
-    <slot></slot>
+    <div :class = "pClass(props.brightness)" class = "prose pt-6"><slot></slot></div>
     <hr
       class="my-12"
       :class="{
