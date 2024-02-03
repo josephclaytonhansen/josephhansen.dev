@@ -7652,7 +7652,7 @@ const yi = ct("XIcon", [
                       },
                     ]),
                   },
-                  " Portfolio ",
+                  " Pricing ",
                   2,
                 ),
               ]),

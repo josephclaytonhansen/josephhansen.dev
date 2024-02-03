@@ -121,7 +121,7 @@
             'bg-orange-600': brightness == 2,
             'bg-orange-500': brightness == 1,
           }">
-          Pricing
+          Portfolio
         </button></a
       >
       <a href="/pricing"
@@ -133,7 +133,7 @@
             'bg-slate-500': brightness == 3,
             'bg-slate-400': brightness <= 2,
           }">
-          Get a Quote
+          Pricing
         </button></a
       >
     </div>
