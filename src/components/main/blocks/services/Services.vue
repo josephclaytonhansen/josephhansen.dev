@@ -16,7 +16,6 @@
   import PanelDevelopment from "./PanelDevelopment.vue"
   import PanelSpeed from "./PanelSpeed.vue"
   import PanelSecurity from "./PanelSecurity.vue"
-  import PanelDesignOverhaul from "./PanelDesignOverhaul.vue"
   import PanelAccessibility from "./PanelAccessibility.vue"
 
   const tabs = ref([
@@ -26,12 +25,6 @@
       icon: "GaugeCircle",
     },
     { id: 0, title: "Security Overhaul", icon: "ShieldCheck" },
-
-    {
-      id: 2,
-      title: "Design Overhaul",
-      icon: "ShowerHead",
-    },
     {
       id: 3,
       title: "Web Development",
@@ -176,9 +169,6 @@
       </TabPanel>
       <TabPanel class="flex justify-center gap-5 w-full">
         <PanelSecurity :brightness="brightness" />
-      </TabPanel>
-      <TabPanel class="flex justify-center gap-5 w-full">
-        <PanelDesignOverhaul :brightness="brightness" />
       </TabPanel>
       <TabPanel class="flex justify-center gap-5 w-full">
         <PanelDevelopment :brightness="brightness" />

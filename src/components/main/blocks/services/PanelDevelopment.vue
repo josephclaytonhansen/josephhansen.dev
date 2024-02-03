@@ -122,7 +122,7 @@
       </p>
     </div>
 
-    <hr :class ="pClass(brightness)" class="my-8" />
+    <hr :class="pClass(brightness)" class="my-8" />
 
     <ctaForm :brightness="brightness" />
   </div>
