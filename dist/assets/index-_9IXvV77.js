@@ -19515,8 +19515,6 @@ const Uw = { class: "flex-col w-11/12 sm:w-10/12 md:w-8/12 py-4" },
     { path: "/", component: null, props: { component: "home" } },
     { path: "/pricing", component: null, props: { component: "pricing" } },
     { path: "/contact", component: null, props: { component: "contact" } },
-    { path: "/contact-me", component: null, props: { component: "contact" } },
-    { path: "/about", component: null, props: { component: "about-me" } },
     { path: "/about-me", component: null, props: { component: "about-me" } },
     { path: "/portfolio", component: null, props: { component: "portfolio" } },
     {
