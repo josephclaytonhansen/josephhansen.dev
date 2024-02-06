@@ -82,7 +82,7 @@
           my word for it though, here's what a UX professional has to say:
         </p>
         <div
-          class="rounded p-8 flex"
+          class="rounded p-8 flex-col"
           :class="{
             'bg-slate-100': brightness == 5,
             'bg-slate-400': brightness == 4,
@@ -95,13 +95,12 @@
             many projects with both pursuing degrees in design. He can design
             anything. This is not an exaggeration. I personally struggled to
             learn new design tools and manipulate pixels the way I wanted them
-            to be. Joseph just... did it. He is incredible. He is also
-            incredibly passionate about non-profit organizations and helping
-            people who have had challenging lives or have troubles that they
-            cannot overcome themselves. He is as compassionate as they come. I
+            to be. Joseph just did it. He is incredible. ...I
             would recommend him to anyone with utmost confidence that he will
             surpass all expectations.
           </p>
+          <p class="text-right italic text-sm mb-0 pb-0"><b><a :class="pClass(brightness)" class="font-bold" href = "https://www.linkedin.com/in/nathanwesjones/">Nathan Jones</a></b></p>
+          <p class="text-right italic text-sm mt-0 pt-0">Senior Product Designer at nCino</p>
         </div>
       </div>
     </slot>
