@@ -67,18 +67,24 @@
       lightbox()
     })
   })
+
+  const textIsCentered = ((brightness) => {
+    let t = link.value == "" ? "text-center w-full " : ""
+    t = t + pClass(brightness)
+    return t
+  })
 </script>
 
 <template>
-  <div class="flex-col w-11/12 sm:w-10/12 md:w-8/12 py-4">
+  <div class="flex-col w-11/12 sm:w-10/12 md:w-8/12 py-4" :class = "'text-center' ? link=='' : ''">
     <div
-      class="flex w-full justify-between gap-8 items-center flex-wrap sm:flex-wrap md:flex-nowrap">
+      class="flex w-full gap-8 items-center flex-wrap sm:flex-wrap md:flex-nowrap justify-between">
       <h2
         class="text-5xl text-center text-semibold"
-        :class="pClass(props.brightness)">
+        :class="textIsCentered(props.brightness)">
         {{ title }}
       </h2>
-      <a :href="link">
+      <a :href="link" v-if="link!=''">
         <button
           class="rounded px-5 py-2 text-white font-semibold"
           :class="{
@@ -106,12 +112,16 @@
           class="image-container"
           v-for="(image, index) in images"
           :key="index">
-          <a :href="link">
+          <a :href="link" v-if="link!=''">
             <img
               :src="image"
               :alt="lightboxCaptions[index]"
               class="bg-slate-200 object-contain w-full rounded-xl" />
           </a>
+          <img v-if = "link==''"
+              :src="image"
+              :alt="lightboxCaptions[index]"
+              class="bg-slate-200 object-contain w-full rounded-xl" />
         </swiper-slide>
       </swiper>
     </div>
@@ -152,8 +162,8 @@
       </div>
     </div>
     <div
-      :class="pClass(props.brightness)"
-      class="prose pt-6 w-11/12 sm:w-10/12 md:w-8/12">
+    :class="textIsCentered(props.brightness)"
+      class="prose pt-6">
       <slot></slot>
     </div>
     <hr

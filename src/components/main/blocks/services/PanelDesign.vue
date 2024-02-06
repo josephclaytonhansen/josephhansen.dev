@@ -4,19 +4,7 @@
     brightness: Number,
   })
 
-  import chroma from "chroma-js"
-
-  const iconClass = (brightness) => {
-    if (brightness >= 4) {
-      return "text-emerald-500"
-    } else if (brightness == 3) {
-      return "text-orange-200"
-    } else if (brightness == 2) {
-      return "text-orange-500"
-    } else if (brightness == 1) {
-      return "text-orange-400"
-    }
-  }
+  import sliderAndGallery from "../../blocks/sliderAndGallery/sliderAndGallery.vue"
 
   const pClass = (brightness) => {
     if (brightness >= 4) {
@@ -30,40 +18,54 @@
     }
   }
 
-  const alternateTableRowColors = (brightness) => {
-    let rows = document.querySelectorAll("tr")
+  const bazaarLink = ""
 
-    let currentBackground
-    if (brightness == 5) {
-      currentBackground = chroma("#e2e8f0")
-    } else if (brightness == 4) {
-      currentBackground = chroma("#cbd5e1")
-    } else if (brightness == 3) {
-      currentBackground = chroma("#475569")
-    } else if (brightness == 2) {
-      currentBackground = chroma("#1e293b")
-    } else if (brightness == 1) {
-      currentBackground = chroma("#0f172a")
-    }
-    for (let i = 1; i < rows.length; i++) {
-      if (i % 2 == 0) {
-        rows[i].style.backgroundColor = currentBackground.brighten(0.0)
-      } else {
-        rows[i].style.backgroundColor = currentBackground.brighten(0.2)
-      }
-    }
-  }
+  import {bazaarHome, swimHome, stehlHome, stuartHome, boylHome, tubHome, josephhansenHome, atlantaHome, okcssHome, arrisHome} from "../../../images/imageLinks.js"
 
-  onMounted(() => {
-    alternateTableRowColors(props.brightness)
-  })
+  const bazaarImages = ref([bazaarHome, swimHome, stehlHome, stuartHome, boylHome, tubHome, josephhansenHome, atlantaHome, okcssHome, arrisHome])
 
-  watch(
-    () => props.brightness,
-    (newValue, oldValue) => {
-      alternateTableRowColors(newValue)
-    },
-  )
+  const bazaarCaptions = ref([
+    "BlenderNation Bazaar",
+    "Swimstate Pool Services",
+    "Stehl Family Dental",
+    "Stuart Hose and Pipe",
+    "Build on Your Land",
+    "Tub Boys",
+    "josephhansen.dev",
+    "Atlanta Floors One",
+    "OKC South Stake",
+    "Aris Search",
+  ])
+
+  const bazaarTitle = "Web Design"
 </script>
 
-<template></template>
+<template>
+  <sliderAndGallery
+    :images="bazaarImages"
+    :captions="bazaarCaptions"
+    :link="bazaarLink"
+    :title="bazaarTitle"
+    :brightness="brightness"
+    ><slot>
+      <h2 class="text-3xl mb-1" :class="pClass(brightness)">
+       I've designed dozens of websites.
+      </h2>
+      <div class = "px-3 text-center">
+        <p>Whether you need a design overhaul, a modernization, a rebranding, or a new website design completely, I'm your guy! I have extensive graphic design and UI/UX experience. I minored in Visual Communication, and I love making websites beautiful. Don't just take my word for it though, here's what a UX professional has to say:</p>
+        <div
+        class="rounded p-8 flex"
+        :class="{
+          'bg-slate-100': brightness == 5,
+          'bg-slate-400': brightness == 4,
+          'bg-slate-500': brightness == 3,
+          'bg-slate-700': brightness == 2,
+          'bg-slate-800': brightness == 1,
+        }">
+        <p>Joseph is a good friend of mine from school. We worked closely on many projects with both pursuing degrees in design. He can design anything. This is not an exaggeration. I personally struggled to learn new design tools and manipulate pixels the way I wanted them to be. Joseph just... did it. He is incredible. He is also incredibly passionate about non-profit organizations and helping people who have had challenging lives or have troubles that they cannot overcome themselves. He is as compassionate as they come. I would recommend him to anyone with utmost confidence that he will surpass all expectations.</p>
+        </div>
+      </div>
+      </slot>
+      </sliderAndGallery>
+
+</template>
