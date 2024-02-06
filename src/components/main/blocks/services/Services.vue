@@ -7,12 +7,11 @@
   import {
     ShieldCheck,
     GaugeCircle,
-    ShowerHead,
     PencilRuler,
     Frame,
     EyeOff,
   } from "lucide-vue-next"
-  import PanelDesign from "./PanelDesign.vue"
+  import PanelDesign from "./PanelWebDesign.vue"
   import PanelDevelopment from "./PanelDevelopment.vue"
   import PanelSpeed from "./PanelSpeed.vue"
   import PanelSecurity from "./PanelSecurity.vue"
@@ -130,21 +129,15 @@
             style="transition: all 0.2s"
             :class="iconClass(brightness, selected)" />
 
-          <ShowerHead
+          <Frame
             size="3rem"
-            v-if="tab.id == 2"
+            v-if="tab.id == 4"
             style="transition: all 0.2s"
             :class="iconClass(brightness, selected)" />
 
           <PencilRuler
             size="3rem"
             v-if="tab.id == 3"
-            style="transition: all 0.2s"
-            :class="iconClass(brightness, selected)" />
-
-          <Frame
-            size="3rem"
-            v-if="tab.id == 4"
             style="transition: all 0.2s"
             :class="iconClass(brightness, selected)" />
 
