@@ -26,20 +26,12 @@
       return "text-orange-400"
     }
   }
- 
-  import { siLinkedin, siGithub, siTwitter, siInstagram } from "simple-icons"
 
-  const icons = [
-    siLinkedin,
-    siGithub,
-    siTwitter,
-    siInstagram,
-  ]
+  import { siLinkedin, siGithub, siInstagram, siBlender } from "simple-icons"
 
-  const iconLinks = [
-  'https://www.linkedin.com/in/josephclaytonhansen/',
+  const icons = [siLinkedin, siGithub, siBlender, siInstagram]
 
-  ]
+  const iconLinks = ["https://www.linkedin.com/in/josephclaytonhansen/", "https://www.github.com/josephclaytonhansen", 'https://blenderartists.org/u/joseph/summary', 'https://www.instagram.com/jhansen_art/']
 </script>
 
 <template>
@@ -55,23 +47,25 @@
           </div>
           <div class="flex gap-2 mt-4 justify-center items-center">
             <div class="flex gap-2 mt-4 justify-center items-center">
-  <div
-    v-for="(icon, index) in icons"
-    :key="index"
-    class="flex-1"
-    :class="iconClass(props.brightness)">
-    <svg
-      viewBox="0 0 32 32"
-      xmlns="http://www.w3.org/2000/svg"
-      fill="currentColor"
-      width="100%"
-      height="100%">
-      <path :d="icon.path" />
-    </svg>
-  </div>
-</div>
-</div>
-</div>
+              <div
+                v-for="(icon, index) in icons"
+                :key="index"
+                class="flex-1"
+                :class="iconClass(props.brightness)">
+                <a :href="iconLinks[index]">
+                <svg
+                  viewBox="0 0 32 32"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  width="100%"
+                  height="100%">
+                  <path :d="icon.path" />
+                </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="col-span-4 sm:col-span-4 md:col-span-5 prose">
           <h1 class="text-5xl font-bold mb-0" :class="pClass(props.brightness)">
             Joseph Hansen

@@ -34,7 +34,7 @@ function _i(e, t) {
 }
 const et = {},
   gr = [],
-  jt = () => {},
+  Ht = () => {},
   d0 = () => !1,
   Gs = (e) =>
     e.charCodeAt(0) === 111 &&
@@ -70,7 +70,7 @@ const et = {},
     return (n) => t[n] || (t[n] = e(n))
   },
   h0 = /-(\w)/g,
-  en = Ws((e) => e.replace(h0, (t, n) => (n ? n.toUpperCase() : ""))),
+  rn = Ws((e) => e.replace(h0, (t, n) => (n ? n.toUpperCase() : ""))),
   g0 = /\B([A-Z])/g,
   Tr = Ws((e) => e.replace(g0, "-$1").toLowerCase()),
   qs = Ws((e) => e.charAt(0).toUpperCase() + e.slice(1)),
@@ -174,34 +174,34 @@ const Pt = (e) =>
     var n
     return Cr(e) ? `Symbol(${(n = e.description) != null ? n : t})` : e
   }
-let Vt
+let Ut
 class S0 {
   constructor(t = !1) {
     ;(this.detached = t),
       (this._active = !0),
       (this.effects = []),
       (this.cleanups = []),
-      (this.parent = Vt),
-      !t && Vt && (this.index = (Vt.scopes || (Vt.scopes = [])).push(this) - 1)
+      (this.parent = Ut),
+      !t && Ut && (this.index = (Ut.scopes || (Ut.scopes = [])).push(this) - 1)
   }
   get active() {
     return this._active
   }
   run(t) {
     if (this._active) {
-      const n = Vt
+      const n = Ut
       try {
-        return (Vt = this), t()
+        return (Ut = this), t()
       } finally {
-        Vt = n
+        Ut = n
       }
     }
   }
   on() {
-    Vt = this
+    Ut = this
   }
   off() {
-    Vt = this.parent
+    Ut = this.parent
   }
   stop(t) {
     if (this._active) {
@@ -220,11 +220,11 @@ class S0 {
     }
   }
 }
-function E0(e, t = Vt) {
+function E0(e, t = Ut) {
   t && t.active && t.effects.push(e)
 }
 function _0() {
-  return Vt
+  return Ut
 }
 let Yn
 class Pi {
@@ -257,12 +257,12 @@ class Pi {
   }
   run() {
     if (((this._dirtyLevel = 0), !this.active)) return this.fn()
-    let t = An,
+    let t = Ln,
       n = Yn
     try {
-      return (An = !0), (Yn = this), this._runnings++, So(this), this.fn()
+      return (Ln = !0), (Yn = this), this._runnings++, So(this), this.fn()
     } finally {
-      Eo(this), this._runnings--, (Yn = n), (An = t)
+      Eo(this), this._runnings--, (Yn = n), (Ln = t)
     }
   }
   stop() {
@@ -290,15 +290,15 @@ function Bu(e, t) {
   const n = e.get(t)
   n !== void 0 && t._trackId !== n && (e.delete(t), e.size === 0 && e.cleanup())
 }
-let An = !0,
+let Ln = !0,
   ni = 0
 const Nu = []
 function Qn() {
-  Nu.push(An), (An = !1)
+  Nu.push(Ln), (Ln = !1)
 }
 function er() {
   const e = Nu.pop()
-  An = e === void 0 ? !0 : e
+  Ln = e === void 0 ? !0 : e
 }
 function $i() {
   ni++
@@ -339,7 +339,7 @@ const Du = (e, t) => {
   Kn = Symbol(""),
   ai = Symbol("")
 function $t(e, t, n) {
-  if (An && Yn) {
+  if (Ln && Yn) {
     let r = si.get(e)
     r || si.set(e, (r = new Map()))
     let s = r.get(n)
@@ -583,7 +583,7 @@ function bs(e, t, n) {
     )
   }
 }
-function _n(e) {
+function Cn(e) {
   return function (...t) {
     return e === "delete" ? !1 : e === "clear" ? void 0 : this
   }
@@ -627,10 +627,10 @@ function A0() {
       has(a) {
         return gs.call(this, a, !0)
       },
-      add: _n("add"),
-      set: _n("set"),
-      delete: _n("delete"),
-      clear: _n("clear"),
+      add: Cn("add"),
+      set: Cn("set"),
+      delete: Cn("delete"),
+      clear: Cn("clear"),
       forEach: ms(!0, !1),
     },
     r = {
@@ -643,10 +643,10 @@ function A0() {
       has(a) {
         return gs.call(this, a, !0)
       },
-      add: _n("add"),
-      set: _n("set"),
-      delete: _n("delete"),
-      clear: _n("clear"),
+      add: Cn("add"),
+      set: Cn("set"),
+      delete: Cn("delete"),
+      clear: Cn("clear"),
       forEach: ms(!0, !0),
     }
   return (
@@ -774,12 +774,12 @@ function V0(e, t, n = !1) {
   let r, s
   const a = Te(e)
   return (
-    a ? ((r = e), (s = jt)) : ((r = e.get), (s = e.set)),
+    a ? ((r = e), (s = Ht)) : ((r = e.get), (s = e.set)),
     new Zu(r, s, a || !s, n)
   )
 }
 function Qu(e) {
-  An &&
+  Ln &&
     Yn &&
     ((e = He(e)),
     Ru(
@@ -796,7 +796,7 @@ function Ts(e, t = 2, n) {
 function St(e) {
   return !!(e && e.__v_isRef === !0)
 }
-function te(e) {
+function ne(e) {
   return ec(e, !1)
 }
 function W0(e) {
@@ -823,11 +823,11 @@ class q0 {
         ((this._rawValue = t), (this._value = n ? t : Wr(t)), Ts(this, 2))
   }
 }
-function ye(e) {
+function we(e) {
   return St(e) ? e.value : e
 }
 const U0 = {
-  get: (e, t, n) => ye(Reflect.get(e, t, n)),
+  get: (e, t, n) => we(Reflect.get(e, t, n)),
   set: (e, t, n, r) => {
     const s = e[t]
     return St(s) && !St(n) ? ((s.value = n), !0) : Reflect.set(e, t, n, r)
@@ -836,7 +836,7 @@ const U0 = {
 function tc(e) {
   return mr(e) ? e : new Proxy(e, U0)
 }
-function Ln(e, t, n, r) {
+function zn(e, t, n, r) {
   let s
   try {
     s = r ? e(...r) : e()
@@ -845,9 +845,9 @@ function Ln(e, t, n, r) {
   }
   return s
 }
-function qt(e, t, n, r) {
+function Kt(e, t, n, r) {
   if (Te(e)) {
-    const a = Ln(e, t, n, r)
+    const a = zn(e, t, n, r)
     return (
       a &&
         Mu(a) &&
@@ -858,7 +858,7 @@ function qt(e, t, n, r) {
     )
   }
   const s = []
-  for (let a = 0; a < e.length; a++) s.push(qt(e[a], t, n, r))
+  for (let a = 0; a < e.length; a++) s.push(Kt(e[a], t, n, r))
   return s
 }
 function Ks(e, t, n, r = !0) {
@@ -876,7 +876,7 @@ function Ks(e, t, n, r = !0) {
     }
     const o = t.appContext.config.errorHandler
     if (o) {
-      Ln(o, null, 10, [e, i, l])
+      zn(o, null, 10, [e, i, l])
       return
     }
   }
@@ -888,9 +888,9 @@ function Y0(e, t, n, r = !0) {
 let qr = !1,
   ii = !1
 const wt = []
-let Jt = 0
+let en = 0
 const br = []
-let kn = null,
+let Pn = null,
   qn = 0
 const nc = Promise.resolve()
 let zi = null
@@ -899,7 +899,7 @@ function Xs(e) {
   return e ? t.then(this ? e.bind(this) : e) : t
 }
 function K0(e) {
-  let t = Jt + 1,
+  let t = en + 1,
     n = wt.length
   for (; t < n; ) {
     const r = (t + n) >>> 1,
@@ -910,7 +910,7 @@ function K0(e) {
   return t
 }
 function Bi(e) {
-  ;(!wt.length || !wt.includes(e, qr && e.allowRecurse ? Jt + 1 : Jt)) &&
+  ;(!wt.length || !wt.includes(e, qr && e.allowRecurse ? en + 1 : en)) &&
     (e.id == null ? wt.push(e) : wt.splice(K0(e.id), 0, e), rc())
 }
 function rc() {
@@ -918,15 +918,15 @@ function rc() {
 }
 function X0(e) {
   const t = wt.indexOf(e)
-  t > Jt && wt.splice(t, 1)
+  t > en && wt.splice(t, 1)
 }
 function J0(e) {
   _e(e)
     ? br.push(...e)
-    : (!kn || !kn.includes(e, e.allowRecurse ? qn + 1 : qn)) && br.push(e),
+    : (!Pn || !Pn.includes(e, e.allowRecurse ? qn + 1 : qn)) && br.push(e),
     rc()
 }
-function $o(e, t, n = qr ? Jt + 1 : 0) {
+function $o(e, t, n = qr ? en + 1 : 0) {
   for (; n < wt.length; n++) {
     const r = wt[n]
     if (r && r.pre) {
@@ -938,12 +938,12 @@ function $o(e, t, n = qr ? Jt + 1 : 0) {
 function sc(e) {
   if (br.length) {
     const t = [...new Set(br)].sort((n, r) => Ur(n) - Ur(r))
-    if (((br.length = 0), kn)) {
-      kn.push(...t)
+    if (((br.length = 0), Pn)) {
+      Pn.push(...t)
       return
     }
-    for (kn = t, qn = 0; qn < kn.length; qn++) kn[qn]()
-    ;(kn = null), (qn = 0)
+    for (Pn = t, qn = 0; qn < Pn.length; qn++) Pn[qn]()
+    ;(Pn = null), (qn = 0)
   }
 }
 const Ur = (e) => (e.id == null ? 1 / 0 : e.id),
@@ -958,12 +958,12 @@ const Ur = (e) => (e.id == null ? 1 / 0 : e.id),
 function ac(e) {
   ;(ii = !1), (qr = !0), wt.sort(Z0)
   try {
-    for (Jt = 0; Jt < wt.length; Jt++) {
-      const t = wt[Jt]
-      t && t.active !== !1 && Ln(t, null, 14)
+    for (en = 0; en < wt.length; en++) {
+      const t = wt[en]
+      t && t.active !== !1 && zn(t, null, 14)
     }
   } finally {
-    ;(Jt = 0),
+    ;(en = 0),
       (wt.length = 0),
       sc(),
       (qr = !1),
@@ -983,13 +983,13 @@ function Q0(e, t, ...n) {
     v && (s = n.map((b) => (ot(b) ? b.trim() : b))), p && (s = n.map(ti))
   }
   let l,
-    o = r[(l = za(t))] || r[(l = za(en(t)))]
-  !o && a && (o = r[(l = za(Tr(t)))]), o && qt(o, e, 6, s)
+    o = r[(l = za(t))] || r[(l = za(rn(t)))]
+  !o && a && (o = r[(l = za(Tr(t)))]), o && Kt(o, e, 6, s)
   const f = r[l + "Once"]
   if (f) {
     if (!e.emitted) e.emitted = {}
     else if (e.emitted[l]) return
-    ;(e.emitted[l] = !0), qt(f, e, 6, s)
+    ;(e.emitted[l] = !0), Kt(f, e, 6, s)
   }
 }
 function ic(e, t, n = !1) {
@@ -1071,10 +1071,10 @@ function Na(e) {
     if (n.shapeFlag & 4) {
       const M = s || r,
         z = M
-      ;(E = Xt(c.call(z, M, p, a, b, v, P))), (T = o)
+      ;(E = Qt(c.call(z, M, p, a, b, v, P))), (T = o)
     } else {
       const M = t
-      ;(E = Xt(
+      ;(E = Qt(
         M.length > 1 ? M(a, { attrs: o, slots: l, emit: f }) : M(a, null),
       )),
         (T = t.props ? o : eg(o))
@@ -1169,14 +1169,14 @@ function Ri(e, t, n = !0, r = !1) {
     const a = s.type
     if (e === Ni) {
       const l = Xg(a, !1)
-      if (l && (l === t || l === en(t) || l === qs(en(t)))) return a
+      if (l && (l === t || l === rn(t) || l === qs(rn(t)))) return a
     }
     const i = Io(s[e] || a[e], t) || Io(s.appContext[e], t)
     return !i && r ? a : i
   }
 }
 function Io(e, t) {
-  return e && (e[t] || e[en(t)] || e[qs(en(t))])
+  return e && (e[t] || e[rn(t)] || e[qs(rn(t))])
 }
 const og = (e) => e.__isSuspense
 function ug(e, t) {
@@ -1188,11 +1188,11 @@ function ug(e, t) {
 }
 const cg = Symbol.for("v-scx"),
   dg = () => ht(cg)
-function pn(e, t) {
+function hn(e, t) {
   return ji(e, null, t)
 }
 const ys = {}
-function zn(e, t, n) {
+function Bn(e, t, n) {
   return ji(e, t, n)
 }
 function ji(
@@ -1223,13 +1223,13 @@ function ji(
               e.map((I) => {
                 if (St(I)) return I.value
                 if (mr(I)) return f(I)
-                if (Te(I)) return Ln(I, o, 2)
+                if (Te(I)) return zn(I, o, 2)
               })))
           : Te(e)
             ? t
-              ? (c = () => Ln(e, o, 2))
-              : (c = () => (b && b(), qt(e, o, 3, [P])))
-            : (c = jt),
+              ? (c = () => zn(e, o, 2))
+              : (c = () => (b && b(), Kt(e, o, 3, [P])))
+            : (c = Ht),
     t && r)
   ) {
     const I = c
@@ -1238,19 +1238,19 @@ function ji(
   let b,
     P = (I) => {
       b = w.onStop = () => {
-        Ln(I, o, 4), (b = w.onStop = void 0)
+        zn(I, o, 4), (b = w.onStop = void 0)
       }
     },
     m
   if (na)
     if (
-      ((P = jt),
-      t ? n && qt(t, o, 3, [c(), v ? [] : void 0, P]) : c(),
+      ((P = Ht),
+      t ? n && Kt(t, o, 3, [c(), v ? [] : void 0, P]) : c(),
       s === "sync")
     ) {
       const I = dg()
       m = I.__watcherHandles || (I.__watcherHandles = [])
-    } else return jt
+    } else return Ht
   let E = v ? new Array(e.length).fill(ys) : ys
   const T = () => {
     if (!(!w.active || !w.dirty))
@@ -1258,7 +1258,7 @@ function ji(
         const I = w.run()
         ;(r || p || (v ? I.some((se, q) => Nn(se, E[q])) : Nn(I, E))) &&
           (b && b(),
-          qt(t, o, 3, [I, E === ys ? void 0 : v && E[0] === ys ? [] : E, P]),
+          Kt(t, o, 3, [I, E === ys ? void 0 : v && E[0] === ys ? [] : E, P]),
           (E = I))
       } else w.run()
   }
@@ -1269,7 +1269,7 @@ function ji(
     : s === "post"
       ? (x = () => kt(T, o && o.suspense))
       : ((T.pre = !0), o && (T.id = o.uid), (x = () => Bi(T)))
-  const w = new Pi(c, jt, x),
+  const w = new Pi(c, Ht, x),
     M = _0(),
     z = () => {
       w.stop(), M && Ti(M.effects, w)
@@ -1346,7 +1346,7 @@ function Vn(e, t, n, r) {
     const l = s[i]
     a && (l.oldValue = a[i].value)
     let o = l.dir[r]
-    o && (Qn(), qt(o, n, 8, [e.el, l, e, t]), er())
+    o && (Qn(), Kt(o, n, 8, [e.el, l, e, t]), er())
   }
 }
 function Bt(e, t) {
@@ -1391,29 +1391,29 @@ function Qs(e, t, n = xt, r = !1) {
           if (n.isUnmounted) return
           Qn()
           const l = ts(n),
-            o = qt(t, n, e, i)
+            o = Kt(t, n, e, i)
           return l(), er(), o
         })
     return r ? s.unshift(a) : s.push(a), a
   }
 }
-const hn =
+const gn =
     (e) =>
     (t, n = xt) =>
       (!na || e === "sp") && Qs(e, (...r) => t(...r), n),
-  vg = hn("bm"),
-  yt = hn("m"),
-  Fi = hn("bu"),
-  Di = hn("u"),
-  Hi = hn("bum"),
-  jn = hn("um"),
-  mg = hn("sp"),
-  bg = hn("rtg"),
-  yg = hn("rtc")
+  vg = gn("bm"),
+  yt = gn("m"),
+  Fi = gn("bu"),
+  Di = gn("u"),
+  Hi = gn("bum"),
+  jn = gn("um"),
+  mg = gn("sp"),
+  bg = gn("rtg"),
+  yg = gn("rtc")
 function wg(e, t = xt) {
   Qs("ec", e, t)
 }
-function Bn(e, t, n, r) {
+function fn(e, t, n, r) {
   let s
   const a = n && n[r]
   if (_e(e) || ot(e)) {
@@ -1437,14 +1437,14 @@ function Bn(e, t, n, r) {
   else s = []
   return n && (n[r] = s), s
 }
-function tn(e, t, n = {}, r, s) {
+function sn(e, t, n = {}, r, s) {
   if (pt.isCE || (pt.parent && Fr(pt.parent) && pt.parent.isCE))
     return t !== "default" && (n.name = t), he("slot", n, r && r())
   let a = e[t]
-  a && a._c && (a._d = !1), ne()
+  a && a._c && (a._d = !1), te()
   const i = a && fc(a(n)),
     l = De(
-      Qe,
+      Je,
       { key: n.key || (i && i.key) || `_${t}` },
       i || (r ? r() : []),
       i && e._ === 1 ? 64 : -2,
@@ -1457,7 +1457,7 @@ function tn(e, t, n = {}, r, s) {
 }
 function fc(e) {
   return e.some((t) =>
-    Bs(t) ? !(t.type === Rn || (t.type === Qe && !fc(t.children))) : !0,
+    Bs(t) ? !(t.type === Rn || (t.type === Je && !fc(t.children))) : !0,
   )
     ? e
     : null
@@ -1603,7 +1603,7 @@ function Sg(e) {
     inheritAttrs: Q,
     components: ge,
     directives: X,
-    filters: xe,
+    filters: Se,
   } = t
   if ((f && Eg(f, r, null), i))
     for (const oe in i) {
@@ -1617,8 +1617,8 @@ function Sg(e) {
   if (((oi = !0), a))
     for (const oe in a) {
       const V = a[oe],
-        Ye = Te(V) ? V.bind(n, n) : Te(V.get) ? V.get.bind(n, n) : jt,
-        ke = !Te(V) && Te(V.set) ? V.set.bind(n) : jt,
+        Ye = Te(V) ? V.bind(n, n) : Te(V.get) ? V.get.bind(n, n) : Ht,
+        ke = !Te(V) && Te(V.set) ? V.set.bind(n) : Ht,
         tt = me({ get: Ye, set: ke })
       Object.defineProperty(r, oe, {
         enumerable: !0,
@@ -1631,7 +1631,7 @@ function Sg(e) {
   if (o) {
     const oe = Te(o) ? o.call(n) : o
     Reflect.ownKeys(oe).forEach((V) => {
-      Ft(V, oe[V])
+      Gt(V, oe[V])
     })
   }
   c && Ao(c, e, "c")
@@ -1662,12 +1662,12 @@ function Sg(e) {
         })
       })
     } else e.exposed || (e.exposed = {})
-  z && e.render === jt && (e.render = z),
+  z && e.render === Ht && (e.render = z),
     Q != null && (e.inheritAttrs = Q),
     ge && (e.components = ge),
     X && (e.directives = X)
 }
-function Eg(e, t, n = jt) {
+function Eg(e, t, n = Ht) {
   _e(e) && (e = ui(e))
   for (const r in e) {
     const s = e[r]
@@ -1688,19 +1688,19 @@ function Eg(e, t, n = jt) {
   }
 }
 function Ao(e, t, n) {
-  qt(_e(e) ? e.map((r) => r.bind(t.proxy)) : e.bind(t.proxy), t, n)
+  Kt(_e(e) ? e.map((r) => r.bind(t.proxy)) : e.bind(t.proxy), t, n)
 }
 function pc(e, t, n, r) {
   const s = r.includes(".") ? oc(n, r) : () => n[r]
   if (ot(e)) {
     const a = t[e]
-    Te(a) && zn(s, a)
-  } else if (Te(e)) zn(s, e.bind(n))
+    Te(a) && Bn(s, a)
+  } else if (Te(e)) Bn(s, e.bind(n))
   else if (rt(e))
     if (_e(e)) e.forEach((a) => pc(a, t, n, r))
     else {
       const a = Te(e.handler) ? e.handler.bind(n) : t[e.handler]
-      Te(a) && zn(s, a, e)
+      Te(a) && Bn(s, a, e)
     }
 }
 function Gi(e) {
@@ -1895,7 +1895,7 @@ function Pg(e, t) {
   }
 }
 let zs = null
-function Ft(e, t) {
+function Gt(e, t) {
   if (xt) {
     let n = xt.provides
     const r = xt.parent && xt.parent.provides
@@ -1941,7 +1941,7 @@ function Mg(e, t, n, r) {
         if (o)
           if (Ne(a, v)) b !== a[v] && ((a[v] = b), (f = !0))
           else {
-            const P = en(v)
+            const P = rn(v)
             s[P] = ci(o, l, P, b, e, !1)
           }
         else b !== a[v] && ((a[v] = b), (f = !0))
@@ -1970,7 +1970,7 @@ function gc(e, t, n, r) {
       if (_s(o)) continue
       const f = t[o]
       let c
-      s && Ne(s, (c = en(o)))
+      s && Ne(s, (c = rn(o)))
         ? !a || !a.includes(c)
           ? (n[c] = f)
           : ((l || (l = {}))[c] = f)
@@ -2027,12 +2027,12 @@ function vc(e, t, n = !1) {
   if (!a && !o) return rt(e) && r.set(e, gr), gr
   if (_e(a))
     for (let c = 0; c < a.length; c++) {
-      const p = en(a[c])
+      const p = rn(a[c])
       Bo(p) && (i[p] = et)
     }
   else if (a)
     for (const c in a) {
-      const p = en(c)
+      const p = rn(c)
       if (Bo(p)) {
         const v = a[c],
           b = (i[p] = _e(v) || Te(v) ? { type: v } : bt({}, v))
@@ -2062,7 +2062,7 @@ function jo(e, t) {
   return _e(t) ? t.findIndex((n) => Ro(n, e)) : Te(t) && Ro(t, e) ? 0 : -1
 }
 const mc = (e) => e[0] === "_" || e === "$stable",
-  Vi = (e) => (_e(e) ? e.map(Xt) : [Xt(e)]),
+  Vi = (e) => (_e(e) ? e.map(Qt) : [Qt(e)]),
   Ig = (e, t, n) => {
     if (t._n) return t
     const r = Xe((...s) => Vi(t(...s)), n)
@@ -2126,7 +2126,7 @@ function di(e, t, n, r, s = !1) {
         : St(f) && (f.value = null)),
     Te(o))
   )
-    Ln(o, l, 12, [i, c])
+    zn(o, l, 12, [i, c])
   else {
     const v = ot(o),
       b = St(o),
@@ -2169,7 +2169,7 @@ function zg(e, t) {
       setElementText: c,
       parentNode: p,
       nextSibling: v,
-      setScopeId: b = jt,
+      setScopeId: b = Ht,
       insertStaticContent: P,
     } = e,
     m = (
@@ -2197,7 +2197,7 @@ function zg(e, t) {
         case ks:
           S == null && x(C, B, H, ae)
           break
-        case Qe:
+        case Je:
           ge(S, C, B, H, j, Z, ae, J, ee)
           break
         default:
@@ -2239,13 +2239,13 @@ function zg(e, t) {
     },
     I = (S, C, B, H, j, Z, ae, J) => {
       let ee, U
-      const { props: ue, shapeFlag: be, transition: ve, dirs: Se } = S
+      const { props: ue, shapeFlag: be, transition: ve, dirs: Ee } = S
       if (
         ((ee = S.el = i(S.type, Z, ue && ue.is, ue)),
         be & 8
           ? c(ee, S.children)
           : be & 16 && q(S.children, ee, null, H, j, ja(S, Z), ae, J),
-        Se && Vn(S, null, H, "created"),
+        Ee && Vn(S, null, H, "created"),
         se(ee, S, S.scopeId, ae, H),
         ue)
       ) {
@@ -2254,17 +2254,17 @@ function zg(e, t) {
             !_s(je) &&
             a(ee, je, null, ue[je], Z, S.children, H, j, it)
         "value" in ue && a(ee, "value", null, ue.value, Z),
-          (U = ue.onVnodeBeforeMount) && Kt(U, H, S)
+          (U = ue.onVnodeBeforeMount) && Zt(U, H, S)
       }
-      Se && Vn(S, null, H, "beforeMount")
+      Ee && Vn(S, null, H, "beforeMount")
       const Pe = Bg(j, ve)
       Pe && ve.beforeEnter(ee),
         r(ee, C, B),
-        ((U = ue && ue.onVnodeMounted) || Pe || Se) &&
+        ((U = ue && ue.onVnodeMounted) || Pe || Ee) &&
           kt(() => {
-            U && Kt(U, H, S),
+            U && Zt(U, H, S),
               Pe && ve.enter(ee),
-              Se && Vn(S, null, H, "mounted")
+              Ee && Vn(S, null, H, "mounted")
           }, j)
     },
     se = (S, C, B, H, j) => {
@@ -2279,7 +2279,7 @@ function zg(e, t) {
     },
     q = (S, C, B, H, j, Z, ae, J, ee = 0) => {
       for (let U = ee; U < S.length; U++) {
-        const ue = (S[U] = J ? Pn(S[U]) : Xt(S[U]))
+        const ue = (S[U] = J ? $n(S[U]) : Qt(S[U]))
         m(null, ue, C, B, H, j, Z, ae, J)
       }
     },
@@ -2289,10 +2289,10 @@ function zg(e, t) {
       ee |= S.patchFlag & 16
       const be = S.props || et,
         ve = C.props || et
-      let Se
+      let Ee
       if (
         (B && Wn(B, !1),
-        (Se = ve.onVnodeBeforeUpdate) && Kt(Se, B, C, S),
+        (Ee = ve.onVnodeBeforeUpdate) && Zt(Ee, B, C, S),
         ue && Vn(C, S, B, "beforeUpdate"),
         B && Wn(B, !0),
         U
@@ -2317,9 +2317,9 @@ function zg(e, t) {
         }
         ee & 1 && S.children !== C.children && c(J, C.children)
       } else !ae && U == null && Q(J, C, be, ve, B, H, j)
-      ;((Se = ve.onVnodeUpdated) || ue) &&
+      ;((Ee = ve.onVnodeUpdated) || ue) &&
         kt(() => {
-          Se && Kt(Se, B, C, S), ue && Vn(C, S, B, "updated")
+          Ee && Zt(Ee, B, C, S), ue && Vn(C, S, B, "updated")
         }, H)
     },
     D = (S, C, B, H, j, Z, ae) => {
@@ -2327,7 +2327,7 @@ function zg(e, t) {
         const ee = S[J],
           U = C[J],
           ue =
-            ee.el && (ee.type === Qe || !Lr(ee, U) || ee.shapeFlag & 70)
+            ee.el && (ee.type === Je || !Lr(ee, U) || ee.shapeFlag & 70)
               ? p(ee.el)
               : B
         m(ee, U, ue, null, H, j, Z, ae, !0)
@@ -2350,8 +2350,8 @@ function zg(e, t) {
     ge = (S, C, B, H, j, Z, ae, J, ee) => {
       const U = (C.el = S ? S.el : l("")),
         ue = (C.anchor = S ? S.anchor : l(""))
-      let { patchFlag: be, dynamicChildren: ve, slotScopeIds: Se } = C
-      Se && (J = J ? J.concat(Se) : Se),
+      let { patchFlag: be, dynamicChildren: ve, slotScopeIds: Ee } = C
+      Ee && (J = J ? J.concat(Ee) : Ee),
         S == null
           ? (r(U, B, H),
             r(ue, B, H),
@@ -2366,10 +2366,10 @@ function zg(e, t) {
         S == null
           ? C.shapeFlag & 512
             ? j.ctx.activate(C, B, H, ae, ee)
-            : xe(C, B, H, j, Z, ae, ee)
+            : Se(C, B, H, j, Z, ae, ee)
           : Ce(S, C, ee)
     },
-    xe = (S, C, B, H, j, Z, ae) => {
+    Se = (S, C, B, H, j, Z, ae) => {
       const J = (S.component = Wg(S, H, j))
       if ((cc(S) && (J.ctx.renderer = pe), qg(J), J.asyncDep)) {
         if ((j && j.registerDep(J, F), !S.el)) {
@@ -2390,12 +2390,12 @@ function zg(e, t) {
     F = (S, C, B, H, j, Z, ae) => {
       const J = () => {
           if (S.isMounted) {
-            let { next: ue, bu: be, u: ve, parent: Se, vnode: Pe } = S
+            let { next: ue, bu: be, u: ve, parent: Ee, vnode: Pe } = S
             {
-              const bn = xc(S)
-              if (bn) {
+              const yn = xc(S)
+              if (yn) {
                 ue && ((ue.el = Pe.el), oe(S, ue, ae)),
-                  bn.asyncDep.then(() => {
+                  yn.asyncDep.then(() => {
                     S.isUnmounted || J()
                   })
                 return
@@ -2407,7 +2407,7 @@ function zg(e, t) {
               ue ? ((ue.el = Pe.el), oe(S, ue, ae)) : (ue = Pe),
               be && Cs(be),
               (Ke = ue.props && ue.props.onVnodeBeforeUpdate) &&
-                Kt(Ke, Se, ue, Pe),
+                Zt(Ke, Ee, ue, Pe),
               Wn(S, !0)
             const at = Na(S),
               Mt = S.subTree
@@ -2417,21 +2417,21 @@ function zg(e, t) {
               je === null && rg(S, at.el),
               ve && kt(ve, j),
               (Ke = ue.props && ue.props.onVnodeUpdated) &&
-                kt(() => Kt(Ke, Se, ue, Pe), j)
+                kt(() => Zt(Ke, Ee, ue, Pe), j)
           } else {
             let ue
             const { el: be, props: ve } = C,
-              { bm: Se, m: Pe, parent: je } = S,
+              { bm: Ee, m: Pe, parent: je } = S,
               Ke = Fr(C)
             if (
               (Wn(S, !1),
-              Se && Cs(Se),
-              !Ke && (ue = ve && ve.onVnodeBeforeMount) && Kt(ue, je, C),
+              Ee && Cs(Ee),
+              !Ke && (ue = ve && ve.onVnodeBeforeMount) && Zt(ue, je, C),
               Wn(S, !0),
-              be && Je)
+              be && Ze)
             ) {
               const at = () => {
-                ;(S.subTree = Na(S)), Je(be, S.subTree, S, j, null)
+                ;(S.subTree = Na(S)), Ze(be, S.subTree, S, j, null)
               }
               Ke
                 ? C.type.__asyncLoader().then(() => !S.isUnmounted && at())
@@ -2442,7 +2442,7 @@ function zg(e, t) {
             }
             if ((Pe && kt(Pe, j), !Ke && (ue = ve && ve.onVnodeMounted))) {
               const at = C
-              kt(() => Kt(ue, je, at), j)
+              kt(() => Zt(ue, je, at), j)
             }
             ;(C.shapeFlag & 256 ||
               (je && Fr(je.vnode) && je.vnode.shapeFlag & 256)) &&
@@ -2452,7 +2452,7 @@ function zg(e, t) {
               (C = B = H = null)
           }
         },
-        ee = (S.effect = new Pi(J, jt, () => Bi(U), S.scope)),
+        ee = (S.effect = new Pi(J, Ht, () => Bi(U), S.scope)),
         U = (S.update = () => {
           ee.dirty && ee.run()
         })
@@ -2473,7 +2473,7 @@ function zg(e, t) {
       const U = S && S.children,
         ue = S ? S.shapeFlag : 0,
         be = C.children,
-        { patchFlag: ve, shapeFlag: Se } = C
+        { patchFlag: ve, shapeFlag: Ee } = C
       if (ve > 0) {
         if (ve & 128) {
           ke(U, be, B, H, j, Z, ae, J, ee)
@@ -2483,13 +2483,13 @@ function zg(e, t) {
           return
         }
       }
-      Se & 8
+      Ee & 8
         ? (ue & 16 && it(U, j, Z), be !== U && c(B, be))
         : ue & 16
-          ? Se & 16
+          ? Ee & 16
             ? ke(U, be, B, H, j, Z, ae, J, ee)
             : it(U, j, Z, !0)
-          : (ue & 8 && c(B, ""), Se & 16 && q(be, B, H, j, Z, ae, J, ee))
+          : (ue & 8 && c(B, ""), Ee & 16 && q(be, B, H, j, Z, ae, J, ee))
     },
     Ye = (S, C, B, H, j, Z, ae, J, ee) => {
       ;(S = S || gr), (C = C || gr)
@@ -2498,8 +2498,8 @@ function zg(e, t) {
         be = Math.min(U, ue)
       let ve
       for (ve = 0; ve < be; ve++) {
-        const Se = (C[ve] = ee ? Pn(C[ve]) : Xt(C[ve]))
-        m(S[ve], Se, B, null, j, Z, ae, J, ee)
+        const Ee = (C[ve] = ee ? $n(C[ve]) : Qt(C[ve]))
+        m(S[ve], Ee, B, null, j, Z, ae, J, ee)
       }
       U > ue ? it(S, j, Z, !0, !1, be) : q(C, B, H, j, Z, ae, J, ee, be)
     },
@@ -2509,44 +2509,44 @@ function zg(e, t) {
       let be = S.length - 1,
         ve = ue - 1
       for (; U <= be && U <= ve; ) {
-        const Se = S[U],
-          Pe = (C[U] = ee ? Pn(C[U]) : Xt(C[U]))
-        if (Lr(Se, Pe)) m(Se, Pe, B, null, j, Z, ae, J, ee)
+        const Ee = S[U],
+          Pe = (C[U] = ee ? $n(C[U]) : Qt(C[U]))
+        if (Lr(Ee, Pe)) m(Ee, Pe, B, null, j, Z, ae, J, ee)
         else break
         U++
       }
       for (; U <= be && U <= ve; ) {
-        const Se = S[be],
-          Pe = (C[ve] = ee ? Pn(C[ve]) : Xt(C[ve]))
-        if (Lr(Se, Pe)) m(Se, Pe, B, null, j, Z, ae, J, ee)
+        const Ee = S[be],
+          Pe = (C[ve] = ee ? $n(C[ve]) : Qt(C[ve]))
+        if (Lr(Ee, Pe)) m(Ee, Pe, B, null, j, Z, ae, J, ee)
         else break
         be--, ve--
       }
       if (U > be) {
         if (U <= ve) {
-          const Se = ve + 1,
-            Pe = Se < ue ? C[Se].el : H
+          const Ee = ve + 1,
+            Pe = Ee < ue ? C[Ee].el : H
           for (; U <= ve; )
-            m(null, (C[U] = ee ? Pn(C[U]) : Xt(C[U])), B, Pe, j, Z, ae, J, ee),
+            m(null, (C[U] = ee ? $n(C[U]) : Qt(C[U])), B, Pe, j, Z, ae, J, ee),
               U++
         }
       } else if (U > ve) for (; U <= be; ) nt(S[U], j, Z, !0), U++
       else {
-        const Se = U,
+        const Ee = U,
           Pe = U,
           je = new Map()
         for (U = Pe; U <= ve; U++) {
-          const Et = (C[U] = ee ? Pn(C[U]) : Xt(C[U]))
+          const Et = (C[U] = ee ? $n(C[U]) : Qt(C[U]))
           Et.key != null && je.set(Et.key, U)
         }
         let Ke,
           at = 0
         const Mt = ve - Pe + 1
-        let bn = !1,
+        let yn = !1,
           $r = 0
-        const yn = new Array(Mt)
-        for (U = 0; U < Mt; U++) yn[U] = 0
-        for (U = Se; U <= be; U++) {
+        const wn = new Array(Mt)
+        for (U = 0; U < Mt; U++) wn[U] = 0
+        for (U = Ee; U <= be; U++) {
           const Et = S[U]
           if (at >= Mt) {
             nt(Et, j, Z, !0)
@@ -2556,25 +2556,25 @@ function zg(e, t) {
           if (Et.key != null) It = je.get(Et.key)
           else
             for (Ke = Pe; Ke <= ve; Ke++)
-              if (yn[Ke - Pe] === 0 && Lr(Et, C[Ke])) {
+              if (wn[Ke - Pe] === 0 && Lr(Et, C[Ke])) {
                 It = Ke
                 break
               }
           It === void 0
             ? nt(Et, j, Z, !0)
-            : ((yn[It - Pe] = U + 1),
-              It >= $r ? ($r = It) : (bn = !0),
+            : ((wn[It - Pe] = U + 1),
+              It >= $r ? ($r = It) : (yn = !0),
               m(Et, C[It], B, null, j, Z, ae, J, ee),
               at++)
         }
-        const ss = bn ? Ng(yn) : gr
+        const ss = yn ? Ng(wn) : gr
         for (Ke = ss.length - 1, U = Mt - 1; U >= 0; U--) {
           const Et = Pe + U,
             It = C[Et],
             Mr = Et + 1 < ue ? C[Et + 1].el : H
-          yn[U] === 0
+          wn[U] === 0
             ? m(null, It, B, Mr, j, Z, ae, J, ee)
-            : bn && (Ke < 0 || U !== ss[Ke] ? tt(It, B, Mr, 2) : Ke--)
+            : yn && (Ke < 0 || U !== ss[Ke] ? tt(It, B, Mr, 2) : Ke--)
         }
       }
     },
@@ -2592,7 +2592,7 @@ function zg(e, t) {
         ae.move(S, C, B, pe)
         return
       }
-      if (ae === Qe) {
+      if (ae === Je) {
         r(Z, C, B)
         for (let be = 0; be < ee.length; be++) tt(ee[be], C, B, H)
         r(S.anchor, C, B)
@@ -2605,11 +2605,11 @@ function zg(e, t) {
       if (H !== 2 && U & 1 && J)
         if (H === 0) J.beforeEnter(Z), r(Z, C, B), kt(() => J.enter(Z), j)
         else {
-          const { leave: be, delayLeave: ve, afterLeave: Se } = J,
+          const { leave: be, delayLeave: ve, afterLeave: Ee } = J,
             Pe = () => r(Z, C, B),
             je = () => {
               be(Z, () => {
-                Pe(), Se && Se()
+                Pe(), Ee && Ee()
               })
             }
           ve ? ve(Z, Pe, je) : je()
@@ -2631,33 +2631,33 @@ function zg(e, t) {
         C.ctx.deactivate(S)
         return
       }
-      const Se = ue & 1 && ve,
+      const Ee = ue & 1 && ve,
         Pe = !Fr(S)
       let je
-      if ((Pe && (je = ae && ae.onVnodeBeforeUnmount) && Kt(je, C, S), ue & 6))
+      if ((Pe && (je = ae && ae.onVnodeBeforeUnmount) && Zt(je, C, S), ue & 6))
         Ct(S.component, B, H)
       else {
         if (ue & 128) {
           S.suspense.unmount(B, H)
           return
         }
-        Se && Vn(S, null, C, "beforeUnmount"),
+        Ee && Vn(S, null, C, "beforeUnmount"),
           ue & 64
             ? S.type.remove(S, C, B, j, pe, H)
-            : U && (Z !== Qe || (be > 0 && be & 64))
+            : U && (Z !== Je || (be > 0 && be & 64))
               ? it(U, C, B, !1, !0)
-              : ((Z === Qe && be & 384) || (!j && ue & 16)) && it(ee, C, B),
-          H && Yt(S)
+              : ((Z === Je && be & 384) || (!j && ue & 16)) && it(ee, C, B),
+          H && Jt(S)
       }
-      ;((Pe && (je = ae && ae.onVnodeUnmounted)) || Se) &&
+      ;((Pe && (je = ae && ae.onVnodeUnmounted)) || Ee) &&
         kt(() => {
-          je && Kt(je, C, S), Se && Vn(S, null, C, "unmounted")
+          je && Zt(je, C, S), Ee && Vn(S, null, C, "unmounted")
         }, B)
     },
-    Yt = (S) => {
+    Jt = (S) => {
       const { type: C, el: B, anchor: H, transition: j } = S
-      if (C === Qe) {
-        Rt(B, H)
+      if (C === Je) {
+        Dt(B, H)
         return
       }
       if (C === ks) {
@@ -2673,7 +2673,7 @@ function zg(e, t) {
         J ? J(S.el, Z, ee) : ee()
       } else Z()
     },
-    Rt = (S, C) => {
+    Dt = (S, C) => {
       let B
       for (; S !== C; ) (B = v(S)), s(S), (S = B)
       s(C)
@@ -2716,17 +2716,17 @@ function zg(e, t) {
       p: m,
       um: nt,
       m: tt,
-      r: Yt,
-      mt: xe,
+      r: Jt,
+      mt: Se,
       mc: q,
       pc: V,
       pbc: D,
       n: R,
       o: e,
     }
-  let Re, Je
+  let Re, Ze
   return (
-    t && ([Re, Je] = t(pe)), { render: re, hydrate: Re, createApp: Pg(re, Re) }
+    t && ([Re, Ze] = t(pe)), { render: re, hydrate: Re, createApp: Pg(re, Re) }
   )
 }
 function ja({ type: e, props: t }, n) {
@@ -2755,7 +2755,7 @@ function wc(e, t, n = !1) {
       l.shapeFlag & 1 &&
         !l.dynamicChildren &&
         ((l.patchFlag <= 0 || l.patchFlag === 32) &&
-          ((l = s[a] = Pn(s[a])), (l.el = i.el)),
+          ((l = s[a] = $n(s[a])), (l.el = i.el)),
         n || wc(i, l)),
         l.type === ea && (l.el = i.el)
     }
@@ -2785,17 +2785,17 @@ function xc(e) {
   if (t) return t.asyncDep && !t.asyncResolved ? t : xc(t)
 }
 const Rg = (e) => e.__isTeleport,
-  Qe = Symbol.for("v-fgt"),
+  Je = Symbol.for("v-fgt"),
   ea = Symbol.for("v-txt"),
   Rn = Symbol.for("v-cmt"),
   ks = Symbol.for("v-stc"),
   Hr = []
-let Wt = null
-function ne(e = !1) {
-  Hr.push((Wt = e ? null : []))
+let Yt = null
+function te(e = !1) {
+  Hr.push((Yt = e ? null : []))
 }
 function jg() {
-  Hr.pop(), (Wt = Hr[Hr.length - 1] || null)
+  Hr.pop(), (Yt = Hr[Hr.length - 1] || null)
 }
 let Yr = 1
 function Fo(e) {
@@ -2803,13 +2803,13 @@ function Fo(e) {
 }
 function Sc(e) {
   return (
-    (e.dynamicChildren = Yr > 0 ? Wt || gr : null),
+    (e.dynamicChildren = Yr > 0 ? Yt || gr : null),
     jg(),
-    Yr > 0 && Wt && Wt.push(e),
+    Yr > 0 && Yt && Yt.push(e),
     e
   )
 }
-function Ee(e, t, n, r, s, a) {
+function xe(e, t, n, r, s, a) {
   return Sc(g(e, t, n, r, s, a, !0))
 }
 function De(e, t, n, r, s) {
@@ -2837,7 +2837,7 @@ function g(
   n = null,
   r = 0,
   s = null,
-  a = e === Qe ? 0 : 1,
+  a = e === Je ? 0 : 1,
   i = !1,
   l = !1,
 ) {
@@ -2875,10 +2875,10 @@ function g(
       : n && (o.shapeFlag |= ot(n) ? 8 : 16),
     Yr > 0 &&
       !i &&
-      Wt &&
+      Yt &&
       (o.patchFlag > 0 || a & 6) &&
       o.patchFlag !== 32 &&
-      Wt.push(o),
+      Yt.push(o),
     o
   )
 }
@@ -2890,8 +2890,8 @@ function Fg(e, t = null, n = null, r = 0, s = null, a = !1) {
       n && Wi(l, n),
       Yr > 0 &&
         !a &&
-        Wt &&
-        (l.shapeFlag & 6 ? (Wt[Wt.indexOf(e)] = l) : Wt.push(l)),
+        Yt &&
+        (l.shapeFlag & 6 ? (Yt[Yt.indexOf(e)] = l) : Yt.push(l)),
       (l.patchFlag |= -2),
       l
     )
@@ -2932,7 +2932,7 @@ function Jn(e, t, n = !1) {
     targetAnchor: e.targetAnchor,
     staticCount: e.staticCount,
     shapeFlag: e.shapeFlag,
-    patchFlag: t && e.type !== Qe ? (a === -1 ? 16 : a | 16) : a,
+    patchFlag: t && e.type !== Je ? (a === -1 ? 16 : a | 16) : a,
     dynamicProps: e.dynamicProps,
     dynamicChildren: e.dynamicChildren,
     appContext: e.appContext,
@@ -2956,18 +2956,18 @@ function _c(e, t) {
   return (n.staticCount = t), n
 }
 function st(e = "", t = !1) {
-  return t ? (ne(), De(Rn, null, e)) : he(Rn, null, e)
+  return t ? (te(), De(Rn, null, e)) : he(Rn, null, e)
 }
-function Xt(e) {
+function Qt(e) {
   return e == null || typeof e == "boolean"
     ? he(Rn)
     : _e(e)
-      ? he(Qe, null, e.slice())
+      ? he(Je, null, e.slice())
       : typeof e == "object"
-        ? Pn(e)
+        ? $n(e)
         : he(ea, null, String(e))
 }
-function Pn(e) {
+function $n(e) {
   return (e.el === null && e.patchFlag !== -1) || e.memo ? e : Jn(e)
 }
 function Wi(e, t) {
@@ -3014,8 +3014,8 @@ function Hg(...e) {
   }
   return t
 }
-function Kt(e, t, n, r = null) {
-  qt(e, t, 7, [n, r])
+function Zt(e, t, n, r = null) {
+  Kt(e, t, 7, [n, r])
 }
 const Gg = hc()
 let Vg = 0
@@ -3141,7 +3141,7 @@ function Ug(e, t) {
     const s = (e.setupContext = r.length > 1 ? Kg(e) : null),
       a = ts(e)
     Qn()
-    const i = Ln(r, e, 0, [e.props, s])
+    const i = zn(r, e, 0, [e.props, s])
     if ((er(), a(), Mu(i))) {
       if ((i.then(Do, Do), t))
         return i
@@ -3176,7 +3176,7 @@ function Tc(e, t, n) {
         r.render = Go(s, f)
       }
     }
-    e.render = r.render || jt
+    e.render = r.render || Ht
   }
   {
     const s = ts(e)
@@ -3249,8 +3249,8 @@ function Ue(e, t, n) {
 const Zg = "3.4.15"
 const Qg = "http://www.w3.org/2000/svg",
   ev = "http://www.w3.org/1998/Math/MathML",
-  $n = typeof document < "u" ? document : null,
-  Vo = $n && $n.createElement("template"),
+  Mn = typeof document < "u" ? document : null,
+  Vo = Mn && Mn.createElement("template"),
   tv = {
     insert: (e, t, n) => {
       t.insertBefore(e, n || null)
@@ -3262,10 +3262,10 @@ const Qg = "http://www.w3.org/2000/svg",
     createElement: (e, t, n, r) => {
       const s =
         t === "svg"
-          ? $n.createElementNS(Qg, e)
+          ? Mn.createElementNS(Qg, e)
           : t === "mathml"
-            ? $n.createElementNS(ev, e)
-            : $n.createElement(e, n ? { is: n } : void 0)
+            ? Mn.createElementNS(ev, e)
+            : Mn.createElement(e, n ? { is: n } : void 0)
       return (
         e === "select" &&
           r &&
@@ -3274,8 +3274,8 @@ const Qg = "http://www.w3.org/2000/svg",
         s
       )
     },
-    createText: (e) => $n.createTextNode(e),
-    createComment: (e) => $n.createComment(e),
+    createText: (e) => Mn.createTextNode(e),
+    createComment: (e) => Mn.createComment(e),
     setText: (e, t) => {
       e.nodeValue = t
     },
@@ -3284,7 +3284,7 @@ const Qg = "http://www.w3.org/2000/svg",
     },
     parentNode: (e) => e.parentNode,
     nextSibling: (e) => e.nextSibling,
-    querySelector: (e) => $n.querySelector(e),
+    querySelector: (e) => Mn.querySelector(e),
     setScopeId(e, t) {
       e.setAttribute(t, "")
     },
@@ -3361,7 +3361,7 @@ const qo = ["Webkit", "Moz", "ms"],
 function lv(e, t) {
   const n = Fa[t]
   if (n) return n
-  let r = en(t)
+  let r = rn(t)
   if (r !== "filter" && r in e) return (Fa[t] = r)
   r = qs(r)
   for (let s = 0; s < qo.length; s++) {
@@ -3447,7 +3447,7 @@ function gv(e, t) {
   const n = (r) => {
     if (!r._vts) r._vts = Date.now()
     else if (r._vts <= n.attached) return
-    qt(vv(r, n.value), t, 5, [r])
+    Kt(vv(r, n.value), t, 5, [r])
   }
   return (n.value = e), (n.attached = hv()), n
 }
@@ -3592,7 +3592,7 @@ function _v(e) {
 function Cv(e) {
   return ot(e) ? document.querySelector(e) : e
 }
-const gn = (e, t) => {
+const vn = (e, t) => {
     const n = e.__vccOpts || e
     for (const [r, s] of t) n[r] = s
     return n
@@ -3600,9 +3600,9 @@ const gn = (e, t) => {
   Tv = {}
 function kv(e, t) {
   const n = ag("router-view")
-  return ne(), De(n)
+  return te(), De(n)
 }
-const Pv = gn(Tv, [["render", kv]])
+const Pv = vn(Tv, [["render", kv]])
 let $v = 0
 function Mv() {
   return ++$v
@@ -3691,13 +3691,13 @@ var ut = ((e) => (
     (e[(e.NoScroll = 32)] = "NoScroll"),
     e
   ))(ut || {}),
-  In = ((e) => (
+  On = ((e) => (
     (e[(e.Error = 0)] = "Error"),
     (e[(e.Overflow = 1)] = "Overflow"),
     (e[(e.Success = 2)] = "Success"),
     (e[(e.Underflow = 3)] = "Underflow"),
     e
-  ))(In || {}),
+  ))(On || {}),
   Lv = ((e) => (
     (e[(e.Previous = -1)] = "Previous"), (e[(e.Next = 1)] = "Next"), e
   ))(Lv || {})
@@ -3845,14 +3845,14 @@ function Fv() {
 }
 function ws(e, t, n) {
   sa.isServer ||
-    pn((r) => {
+    hn((r) => {
       document.addEventListener(e, t, n),
         r(() => document.removeEventListener(e, t, n))
     })
 }
 function Pc(e, t, n) {
   sa.isServer ||
-    pn((r) => {
+    hn((r) => {
       window.addEventListener(e, t, n),
         r(() => window.removeEventListener(e, t, n))
     })
@@ -3880,7 +3880,7 @@ function Dv(e, t, n = me(() => !0)) {
     }
     return !kc(l, qi.Loose) && l.tabIndex !== -1 && a.preventDefault(), t(a, l)
   }
-  let s = te(null)
+  let s = ne(null)
   ws(
     "pointerdown",
     (a) => {
@@ -3934,12 +3934,12 @@ function tu(e, t) {
   if (typeof n == "string" && n.toLowerCase() === "button") return "button"
 }
 function $c(e, t) {
-  let n = te(tu(e.value.type, e.value.as))
+  let n = ne(tu(e.value.type, e.value.as))
   return (
     yt(() => {
       n.value = tu(e.value.type, e.value.as)
     }),
-    pn(() => {
+    hn(() => {
       var r
       n.value ||
         (fe(t) &&
@@ -3959,7 +3959,7 @@ var Kr = ((e) => (
   Hv = ((e) => (
     (e[(e.Unmount = 0)] = "Unmount"), (e[(e.Hidden = 1)] = "Hidden"), e
   ))(Hv || {})
-function vn({
+function mn({
   visible: e = !0,
   features: t = 0,
   ourProps: n,
@@ -4039,7 +4039,7 @@ function Ga({ props: e, attrs: t, slots: n, slot: r, name: s }) {
   return Ue(l, Object.assign({}, o, c), { default: () => f })
 }
 function Mc(e) {
-  return e.flatMap((t) => (t.type === Qe ? Mc(t.children) : [t]))
+  return e.flatMap((t) => (t.type === Je ? Mc(t.children) : [t]))
 }
 function Ic(...e) {
   if (e.length === 0) return {}
@@ -4114,7 +4114,7 @@ let Sr = Bt({
               ...((s & 4) === 4 && (s & 2) !== 2 && { display: "none" }),
             },
           }
-        return vn({
+        return mn({
           ourProps: i,
           theirProps: a,
           slot: {},
@@ -4137,7 +4137,7 @@ function Vv() {
   return ht(Ac, null)
 }
 function Wv(e) {
-  Ft(Ac, e)
+  Gt(Ac, e)
 }
 var ft = ((e) => (
   (e.Space = " "),
@@ -4169,7 +4169,7 @@ function qv(e) {
 }
 function Uv(e, t, n, r) {
   sa.isServer ||
-    pn((s) => {
+    hn((s) => {
       ;(e = e ?? window),
         e.addEventListener(t, n, r),
         s(() => e.removeEventListener(t, n, r))
@@ -4179,7 +4179,7 @@ var cn = ((e) => (
   (e[(e.Forwards = 0)] = "Forwards"), (e[(e.Backwards = 1)] = "Backwards"), e
 ))(cn || {})
 function Lc() {
-  let e = te(0)
+  let e = ne(0)
   return (
     Pc("keydown", (t) => {
       t.key === "Tab" && (e.value = t.shiftKey ? 1 : 0)
@@ -4192,7 +4192,7 @@ function Yv({
   portals: t,
   mainTreeNodeRef: n,
 } = {}) {
-  let r = te(null),
+  let r = ne(null),
     s = kr(r)
   function a() {
     var i, l, o
@@ -4235,7 +4235,7 @@ function Yv({
 let nu = Symbol("PortalParentContext")
 function Kv() {
   let e = ht(nu, null),
-    t = te([])
+    t = ne([])
   function n(a) {
     return t.value.push(a), e && e.register(a), () => r(a)
   }
@@ -4250,7 +4250,7 @@ function Kv() {
       name: "PortalWrapper",
       setup(a, { slots: i }) {
         return (
-          Ft(nu, s),
+          Gt(nu, s),
           () => {
             var l
             return (l = i.default) == null ? void 0 : l.call(i)
@@ -4286,13 +4286,13 @@ let gi = Bt({
     props: { as: { type: [Object, String], default: "div" } },
     setup(e, { slots: t, attrs: n, expose: r }) {
       var s
-      let a = te(null)
+      let a = ne(null)
       r({ el: a, $el: a })
-      let i = te(1),
-        l = te(null),
-        o = te(null),
-        f = te(null),
-        c = te(null),
+      let i = ne(1),
+        l = ne(null),
+        o = ne(null),
+        f = ne(null),
+        c = ne(null),
         p = me(() => kr(a)),
         v = me(() => {
           var z, I
@@ -4316,8 +4316,8 @@ let gi = Bt({
         }),
         b = {
           popoverState: i,
-          buttonId: te(null),
-          panelId: te(null),
+          buttonId: ne(null),
+          panelId: ne(null),
           panel: c,
           button: l,
           isPortalled: v,
@@ -4341,7 +4341,7 @@ let gi = Bt({
             I == null || I.focus()
           },
         }
-      Ft(zc, b), Wv(me(() => zt(i.value, { 0: Xr.Open, 1: Xr.Closed })))
+      Gt(zc, b), Wv(me(() => zt(i.value, { 0: Xr.Open, 1: Xr.Closed })))
       let P = {
           buttonId: b.buttonId,
           panelId: b.panelId,
@@ -4370,7 +4370,7 @@ let gi = Bt({
                   : se.contains(p.value.activeElement)))
       }
       return (
-        pn(() => (E == null ? void 0 : E(P))),
+        hn(() => (E == null ? void 0 : E(P))),
         Uv(
           (s = p.value) == null ? void 0 : s.defaultView,
           "focus",
@@ -4403,9 +4403,9 @@ let gi = Bt({
         ),
         () => {
           let z = { open: i.value === 0, close: b.close }
-          return Ue(Qe, [
+          return Ue(Je, [
             Ue(x, {}, () =>
-              vn({
+              mn({
                 theirProps: { ...e, ...n },
                 ourProps: { ref: a },
                 slot: z,
@@ -4442,10 +4442,10 @@ let gi = Bt({
         l = i == null ? void 0 : i.closeOthers,
         o = Zv(),
         f = me(() => (o === null ? !1 : o.value === s.panelId.value)),
-        c = te(null),
+        c = ne(null),
         p = `headlessui-focus-sentinel-${Xn()}`
       f.value ||
-        pn(() => {
+        hn(() => {
           s.button.value = fe(c)
         })
       let v = $c(
@@ -4517,7 +4517,7 @@ let gi = Bt({
           zt(T.value, {
             [cn.Forwards]: () => Lt(w, ut.First),
             [cn.Backwards]: () => Lt(w, ut.Last),
-          }) === In.Error &&
+          }) === On.Error &&
             Lt(
               aa().filter((z) => z.dataset.headlessuiFocusGuard !== "true"),
               zt(T.value, {
@@ -4547,8 +4547,8 @@ let gi = Bt({
                 onClick: m,
                 onMousedown: E,
               }
-        return Ue(Qe, [
-          vn({
+        return Ue(Je, [
+          mn({
             ourProps: se,
             theirProps: { ...t, ...I },
             slot: M,
@@ -4594,8 +4594,8 @@ let gi = Bt({
         jn(() => {
           a.panelId.value = null
         }),
-        Ft(Nc, a.panelId),
-        pn(() => {
+        Gt(Nc, a.panelId),
+        hn(() => {
           var E, T
           if (!s || a.popoverState.value !== 0 || !a.panel) return
           let x = (E = i.value) == null ? void 0 : E.activeElement
@@ -4653,7 +4653,7 @@ let gi = Bt({
           zt(b.value, {
             [cn.Forwards]: () => {
               var x
-              Lt(E, ut.First) === In.Error &&
+              Lt(E, ut.First) === On.Error &&
                 ((x = fe(a.afterPanelSentinel)) == null || x.focus())
             },
             [cn.Backwards]: () => {
@@ -4689,7 +4689,7 @@ let gi = Bt({
             },
             [cn.Backwards]: () => {
               var x
-              Lt(E, ut.Previous) === In.Error &&
+              Lt(E, ut.Previous) === On.Error &&
                 ((x = fe(a.button)) == null || x.focus())
             },
           })
@@ -4706,7 +4706,7 @@ let gi = Bt({
             onFocusout: s && a.popoverState.value === 0 ? v : void 0,
             tabIndex: -1,
           }
-        return vn({
+        return mn({
           ourProps: M,
           theirProps: { ...t, ...w },
           attrs: t,
@@ -4716,7 +4716,7 @@ let gi = Bt({
             default: (...z) => {
               var I
               return [
-                Ue(Qe, [
+                Ue(Je, [
                   c.value &&
                     a.isPortalled.value &&
                     Ue(Sr, {
@@ -4754,7 +4754,7 @@ let gi = Bt({
   Qv = Bt({
     props: { onFocus: { type: Function, required: !0 } },
     setup(e) {
-      let t = te(!0)
+      let t = ne(!0)
       return () =>
         t.value
           ? Ue(Sr, {
@@ -4815,9 +4815,9 @@ let Yi = Symbol("TabsSSRContext"),
     inheritAttrs: !1,
     setup(e, { slots: t, attrs: n, emit: r }) {
       var s
-      let a = te((s = e.selectedIndex) != null ? s : e.defaultIndex),
-        i = te([]),
-        l = te([]),
+      let a = ne((s = e.selectedIndex) != null ? s : e.defaultIndex),
+        i = ne([]),
+        l = ne([]),
         o = me(() => e.selectedIndex !== null),
         f = me(() => (o.value ? e.selectedIndex : a.value))
       function c(m) {
@@ -4885,20 +4885,20 @@ let Yi = Symbol("TabsSSRContext"),
           E !== -1 && l.value.splice(E, 1)
         },
       }
-      Ft(Rc, p)
-      let v = te({ tabs: [], panels: [] }),
-        b = te(!1)
+      Gt(Rc, p)
+      let v = ne({ tabs: [], panels: [] }),
+        b = ne(!1)
       yt(() => {
         b.value = !0
       }),
-        Ft(
+        Gt(
           Yi,
           me(() => (b.value ? null : v.value)),
         )
       let P = me(() => e.selectedIndex)
       return (
         yt(() => {
-          zn(
+          Bn(
             [P],
             () => {
               var m
@@ -4907,7 +4907,7 @@ let Yi = Symbol("TabsSSRContext"),
             { immediate: !0 },
           )
         }),
-        pn(() => {
+        hn(() => {
           if (!o.value || f.value == null || p.tabs.value.length <= 0) return
           let m = pr(p.tabs.value, fe)
           m.some((E, T) => fe(p.tabs.value[T]) !== fe(E)) &&
@@ -4917,7 +4917,7 @@ let Yi = Symbol("TabsSSRContext"),
         }),
         () => {
           let m = { selectedIndex: a.value }
-          return Ue(Qe, [
+          return Ue(Je, [
             i.value.length <= 0 &&
               Ue(Qv, {
                 onFocus: () => {
@@ -4929,7 +4929,7 @@ let Yi = Symbol("TabsSSRContext"),
                   return !1
                 },
               }),
-            vn({
+            mn({
               theirProps: {
                 ...n,
                 ...Oc(e, [
@@ -4959,7 +4959,7 @@ let Yi = Symbol("TabsSSRContext"),
       return () => {
         let s = { selectedIndex: r.selectedIndex.value },
           a = { role: "tablist", "aria-orientation": r.orientation.value }
-        return vn({
+        return mn({
           ourProps: a,
           theirProps: e,
           slot: s,
@@ -4979,7 +4979,7 @@ let Yi = Symbol("TabsSSRContext"),
     },
     setup(e, { attrs: t, slots: n, expose: r }) {
       let s = ns("Tab"),
-        a = te(null)
+        a = ne(null)
       r({ el: a, $el: a }),
         yt(() => s.registerTab(a)),
         jn(() => s.unregisterTab(a))
@@ -4999,7 +4999,7 @@ let Yi = Symbol("TabsSSRContext"),
       function c(E) {
         var T
         let x = E()
-        if (x === In.Success && s.activation.value === "auto") {
+        if (x === On.Success && s.activation.value === "auto") {
           let w = (T = kr(a)) == null ? void 0 : T.activeElement,
             M = s.tabs.value.findIndex((z) => fe(z) === w)
           M !== -1 && s.setSelectedIndex(M)
@@ -5032,21 +5032,21 @@ let Yi = Symbol("TabsSSRContext"),
                   ? Lt(T, ut.Previous | ut.WrapAround)
                   : E.key === ft.ArrowDown
                     ? Lt(T, ut.Next | ut.WrapAround)
-                    : In.Error
+                    : On.Error
               },
               horizontal() {
                 return E.key === ft.ArrowLeft
                   ? Lt(T, ut.Previous | ut.WrapAround)
                   : E.key === ft.ArrowRight
                     ? Lt(T, ut.Next | ut.WrapAround)
-                    : In.Error
+                    : On.Error
               },
             }),
-          ) === In.Success
+          ) === On.Success
         )
           return E.preventDefault()
       }
-      let v = te(!1)
+      let v = ne(!1)
       function b() {
         var E
         v.value ||
@@ -5083,7 +5083,7 @@ let Yi = Symbol("TabsSSRContext"),
             tabIndex: f.value ? 0 : -1,
             disabled: e.disabled ? !0 : void 0,
           }
-        return vn({
+        return mn({
           ourProps: M,
           theirProps: w,
           slot: T,
@@ -5101,7 +5101,7 @@ let Yi = Symbol("TabsSSRContext"),
       let r = ns("TabPanels")
       return () => {
         let s = { selectedIndex: r.selectedIndex.value }
-        return vn({
+        return mn({
           theirProps: e,
           ourProps: {},
           slot: s,
@@ -5123,7 +5123,7 @@ let Yi = Symbol("TabsSSRContext"),
     },
     setup(e, { attrs: t, slots: n, expose: r }) {
       let s = ns("TabPanel"),
-        a = te(null)
+        a = ne(null)
       r({ el: a, $el: a }),
         yt(() => s.registerPanel(a)),
         jn(() => s.unregisterPanel(a))
@@ -5154,7 +5154,7 @@ let Yi = Symbol("TabsSSRContext"),
           }
         return !f.value && e.unmount && !e.static
           ? Ue(Sr, { as: "span", "aria-hidden": !0, ...m })
-          : vn({
+          : mn({
               ourProps: m,
               theirProps: P,
               slot: p,
@@ -5176,12 +5176,12 @@ function Va(e, t) {
   const n = {}
   for (const r in t) {
     const s = t[r]
-    n[r] = Ut(s) ? s.map(e) : e(s)
+    n[r] = Xt(s) ? s.map(e) : e(s)
   }
   return n
 }
 const Gr = () => {},
-  Ut = Array.isArray,
+  Xt = Array.isArray,
   lm = /\/$/,
   om = (e) => e.replace(lm, "")
 function Wa(e, t, n = "/") {
@@ -5232,10 +5232,10 @@ function jc(e, t) {
   return !0
 }
 function dm(e, t) {
-  return Ut(e) ? iu(e, t) : Ut(t) ? iu(t, e) : e === t
+  return Xt(e) ? iu(e, t) : Xt(t) ? iu(t, e) : e === t
 }
 function iu(e, t) {
-  return Ut(t)
+  return Xt(t)
     ? e.length === t.length && e.every((n, r) => n === t[r])
     : e.length === 1 && e[0] === t
 }
@@ -5467,7 +5467,7 @@ function _m(e) {
 function Dc(e) {
   return typeof e == "string" || typeof e == "symbol"
 }
-const Cn = {
+const Tn = {
     path: "/",
     name: void 0,
     params: {},
@@ -5561,11 +5561,11 @@ function km(e, t) {
         else if (b.type === 1) {
           const { value: P, repeatable: m, optional: E } = b,
             T = P in f ? f[P] : ""
-          if (Ut(T) && !m)
+          if (Xt(T) && !m)
             throw new Error(
               `Provided param "${P}" is an array but it is not repeatable (* or + modifiers)`,
             )
-          const x = Ut(T) ? T.join("/") : T
+          const x = Xt(T) ? T.join("/") : T
           if (!x)
             if (E)
               v.length < 2 &&
@@ -5943,7 +5943,7 @@ function Jm(e) {
       o = i < 0 ? null : Rs(a.slice(i + 1))
     if (l in t) {
       let f = t[l]
-      Ut(f) || (f = t[l] = [f]), f.push(o)
+      Xt(f) || (f = t[l] = [f]), f.push(o)
     } else t[l] = o
   }
   return t
@@ -5956,7 +5956,7 @@ function gu(e) {
       r !== void 0 && (t += (t.length ? "&" : "") + n)
       continue
     }
-    ;(Ut(r) ? r.map((a) => a && mi(a)) : [r && mi(r)]).forEach((a) => {
+    ;(Xt(r) ? r.map((a) => a && mi(a)) : [r && mi(r)]).forEach((a) => {
       a !== void 0 &&
         ((t += (t.length ? "&" : "") + n), a != null && (t += "=" + a))
     })
@@ -5968,7 +5968,7 @@ function Zm(e) {
   for (const n in e) {
     const r = e[n]
     r !== void 0 &&
-      (t[n] = Ut(r)
+      (t[n] = Xt(r)
         ? r.map((s) => (s == null ? null : "" + s))
         : r == null
           ? r
@@ -5997,7 +5997,7 @@ function Br() {
   }
   return { add: t, list: () => e.slice(), reset: n }
 }
-function Mn(e, t, n, r, s) {
+function In(e, t, n, r, s) {
   const a = r && (r.enterCallbacks[s] = r.enterCallbacks[s] || [])
   return () =>
     new Promise((i, l) => {
@@ -6027,7 +6027,7 @@ function qa(e, t, n, r) {
       if (!(t !== "beforeRouteEnter" && !a.instances[i]))
         if (e1(l)) {
           const f = (l.__vccOpts || l)[t]
-          f && s.push(Mn(f, n, r, a, i))
+          f && s.push(In(f, n, r, a, i))
         } else {
           let o = l()
           s.push(() =>
@@ -6039,7 +6039,7 @@ function qa(e, t, n, r) {
               const c = im(f) ? f.default : f
               a.components[i] = c
               const v = (c.__vccOpts || c)[t]
-              return v && Mn(v, n, r, a, i)()
+              return v && In(v, n, r, a, i)()
             }),
           )
         }
@@ -6057,7 +6057,7 @@ function e1(e) {
 function mu(e) {
   const t = ht(la),
     n = ht(Kc),
-    r = me(() => t.resolve(ye(e.to))),
+    r = me(() => t.resolve(we(e.to))),
     s = me(() => {
       const { matched: o } = r.value,
         { length: f } = o,
@@ -6080,7 +6080,7 @@ function mu(e) {
     )
   function l(o = {}) {
     return r1(o)
-      ? t[ye(e.replace) ? "replace" : "push"](ye(e.to)).catch(Gr)
+      ? t[we(e.replace) ? "replace" : "push"](we(e.to)).catch(Gr)
       : Promise.resolve()
   }
   return {
@@ -6152,7 +6152,7 @@ function s1(e, t) {
       s = e[n]
     if (typeof r == "string") {
       if (r !== s) return !1
-    } else if (!Ut(s) || s.length !== r.length || r.some((a, i) => a !== s[i]))
+    } else if (!Xt(s) || s.length !== r.length || r.some((a, i) => a !== s[i]))
       return !1
   }
   return !0
@@ -6171,22 +6171,22 @@ const yu = (e, t, n) => e ?? t ?? n,
         s = me(() => e.route || r.value),
         a = ht(vu, 0),
         i = me(() => {
-          let f = ye(a)
+          let f = we(a)
           const { matched: c } = s.value
           let p
           for (; (p = c[f]) && !p.components; ) f++
           return f
         }),
         l = me(() => s.value.matched[i.value])
-      Ft(
+      Gt(
         vu,
         me(() => i.value + 1),
       ),
-        Ft(Qm, l),
-        Ft(bi, s)
-      const o = te()
+        Gt(Qm, l),
+        Gt(bi, s)
+      const o = ne()
       return (
-        zn(
+        Bn(
           () => [o.value, l.value, e.name],
           ([f, c, p], [v, b, P]) => {
             c &&
@@ -6246,8 +6246,8 @@ function l1(e) {
     a = Br(),
     i = Br(),
     l = Br(),
-    o = W0(Cn)
-  let f = Cn
+    o = W0(Tn)
+  let f = Tn
   hr &&
     e.scrollBehavior &&
     "scrollRestoration" in history &&
@@ -6294,10 +6294,10 @@ function l1(e) {
     const pe = t.resolve(re, le),
       Re = R.hash || ""
     pe.params = c(v(pe.params))
-    const Je = um(r, qe({}, R, { hash: Um(Re), path: pe.path })),
-      S = s.createHref(Je)
+    const Ze = um(r, qe({}, R, { hash: Um(Re), path: pe.path })),
+      S = s.createHref(Ze)
     return qe(
-      { fullPath: Je, hash: Re, query: r === gu ? Zm(R.query) : R.query || {} },
+      { fullPath: Ze, hash: Re, query: r === gu ? Zm(R.query) : R.query || {} },
       pe,
       { redirectedFrom: void 0, href: S },
     )
@@ -6339,14 +6339,14 @@ function l1(e) {
     const re = (f = T(R)),
       pe = o.value,
       Re = R.state,
-      Je = R.force,
+      Ze = R.force,
       S = R.replace === !0,
       C = I(re)
     if (C)
       return se(
         qe(x(C), {
           state: typeof C == "object" ? qe({}, Re, C.state) : Re,
-          force: Je,
+          force: Ze,
           replace: S,
         }),
         le || re,
@@ -6355,7 +6355,7 @@ function l1(e) {
     B.redirectedFrom = le
     let H
     return (
-      !Je &&
+      !Ze &&
         cm(r, pe, re) &&
         ((H = _r(16, { to: B, from: pe })), tt(pe, pe, !0, !1)),
       (H ? Promise.resolve(H) : D(B, pe))
@@ -6366,7 +6366,7 @@ function l1(e) {
               return se(
                 qe({ replace: S }, x(j.to), {
                   state: typeof j.to == "object" ? qe({}, Re, j.to.state) : Re,
-                  force: Je,
+                  force: Ze,
                 }),
                 le || B,
               )
@@ -6380,18 +6380,18 @@ function l1(e) {
     return re ? Promise.reject(re) : Promise.resolve()
   }
   function G(R) {
-    const le = Rt.values().next().value
+    const le = Dt.values().next().value
     return le && typeof le.runWithContext == "function"
       ? le.runWithContext(R)
       : R()
   }
   function D(R, le) {
     let re
-    const [pe, Re, Je] = o1(R, le)
+    const [pe, Re, Ze] = o1(R, le)
     re = qa(pe.reverse(), "beforeRouteLeave", R, le)
     for (const C of pe)
       C.leaveGuards.forEach((B) => {
-        re.push(Mn(B, R, le))
+        re.push(In(B, R, le))
       })
     const S = q.bind(null, R, le)
     return (
@@ -6399,37 +6399,37 @@ function l1(e) {
       it(re)
         .then(() => {
           re = []
-          for (const C of a.list()) re.push(Mn(C, R, le))
+          for (const C of a.list()) re.push(In(C, R, le))
           return re.push(S), it(re)
         })
         .then(() => {
           re = qa(Re, "beforeRouteUpdate", R, le)
           for (const C of Re)
             C.updateGuards.forEach((B) => {
-              re.push(Mn(B, R, le))
+              re.push(In(B, R, le))
             })
           return re.push(S), it(re)
         })
         .then(() => {
           re = []
-          for (const C of Je)
+          for (const C of Ze)
             if (C.beforeEnter)
-              if (Ut(C.beforeEnter))
-                for (const B of C.beforeEnter) re.push(Mn(B, R, le))
-              else re.push(Mn(C.beforeEnter, R, le))
+              if (Xt(C.beforeEnter))
+                for (const B of C.beforeEnter) re.push(In(B, R, le))
+              else re.push(In(C.beforeEnter, R, le))
           return re.push(S), it(re)
         })
         .then(
           () => (
             R.matched.forEach((C) => (C.enterCallbacks = {})),
-            (re = qa(Je, "beforeRouteEnter", R, le)),
+            (re = qa(Ze, "beforeRouteEnter", R, le)),
             re.push(S),
             it(re)
           ),
         )
         .then(() => {
           re = []
-          for (const C of i.list()) re.push(Mn(C, R, le))
+          for (const C of i.list()) re.push(In(C, R, le))
           return re.push(S), it(re)
         })
         .catch((C) => (on(C, 8) ? C : Promise.reject(C)))
@@ -6439,9 +6439,9 @@ function l1(e) {
     l.list().forEach((pe) => G(() => pe(R, le, re)))
   }
   function ge(R, le, re, pe, Re) {
-    const Je = w(R, le)
-    if (Je) return Je
-    const S = le === Cn,
+    const Ze = w(R, le)
+    if (Ze) return Ze
+    const S = le === Tn,
       C = hr ? history.state : {}
     re &&
       (pe || S
@@ -6452,7 +6452,7 @@ function l1(e) {
       ke()
   }
   let X
-  function xe() {
+  function Se() {
     X ||
       (X = s.listen((R, le, re) => {
         if (!Ct.listening) return
@@ -6463,9 +6463,9 @@ function l1(e) {
           return
         }
         f = pe
-        const Je = o.value
-        hr && bm(lu(Je.fullPath, re.delta), ia()),
-          D(pe, Je)
+        const Ze = o.value
+        hr && bm(lu(Ze.fullPath, re.delta), ia()),
+          D(pe, Ze)
             .catch((S) =>
               on(S, 12)
                 ? S
@@ -6479,15 +6479,15 @@ function l1(e) {
                       })
                       .catch(Gr),
                     Promise.reject())
-                  : (re.delta && s.go(-re.delta, !1), V(S, pe, Je)),
+                  : (re.delta && s.go(-re.delta, !1), V(S, pe, Ze)),
             )
             .then((S) => {
-              ;(S = S || ge(pe, Je, !1)),
+              ;(S = S || ge(pe, Ze, !1)),
                 S &&
                   (re.delta && !on(S, 8)
                     ? s.go(-re.delta, !1)
                     : re.type === Jr.pop && on(S, 20) && s.go(-1, !1)),
-                Q(pe, Je, S)
+                Q(pe, Ze, S)
             })
             .catch(Gr)
       }))
@@ -6504,7 +6504,7 @@ function l1(e) {
     )
   }
   function Ye() {
-    return oe && o.value !== Cn
+    return oe && o.value !== Tn
       ? Promise.resolve()
       : new Promise((R, le) => {
           Ce.add([R, le])
@@ -6514,7 +6514,7 @@ function l1(e) {
     return (
       oe ||
         ((oe = !R),
-        xe(),
+        Se(),
         Ce.list().forEach(([le, re]) => (R ? re(R) : le())),
         Ce.reset()),
       R
@@ -6523,18 +6523,18 @@ function l1(e) {
   function tt(R, le, re, pe) {
     const { scrollBehavior: Re } = e
     if (!hr || !Re) return Promise.resolve()
-    const Je =
+    const Ze =
       (!re && ym(lu(R.fullPath, 0))) ||
       ((pe || !re) && history.state && history.state.scroll) ||
       null
     return Xs()
-      .then(() => Re(R, le, Je))
+      .then(() => Re(R, le, Ze))
       .then((S) => S && mm(S))
       .catch((S) => V(S, R, le))
   }
   const nt = (R) => s.go(R)
-  let Yt
-  const Rt = new Set(),
+  let Jt
+  const Dt = new Set(),
     Ct = {
       currentRoute: o,
       listening: !0,
@@ -6561,29 +6561,29 @@ function l1(e) {
           (R.config.globalProperties.$router = le),
           Object.defineProperty(R.config.globalProperties, "$route", {
             enumerable: !0,
-            get: () => ye(o),
+            get: () => we(o),
           }),
           hr &&
-            !Yt &&
-            o.value === Cn &&
-            ((Yt = !0), M(s.location).catch((Re) => {}))
+            !Jt &&
+            o.value === Tn &&
+            ((Jt = !0), M(s.location).catch((Re) => {}))
         const re = {}
-        for (const Re in Cn)
+        for (const Re in Tn)
           Object.defineProperty(re, Re, {
             get: () => o.value[Re],
             enumerable: !0,
           })
         R.provide(la, le), R.provide(Kc, Yu(re)), R.provide(bi, o)
         const pe = R.unmount
-        Rt.add(R),
+        Dt.add(R),
           (R.unmount = function () {
-            Rt.delete(R),
-              Rt.size < 1 &&
-                ((f = Cn),
+            Dt.delete(R),
+              Dt.size < 1 &&
+                ((f = Tn),
                 X && X(),
                 (X = null),
-                (o.value = Cn),
-                (Yt = !1),
+                (o.value = Tn),
+                (Jt = !1),
                 (oe = !1)),
               pe()
           })
@@ -6837,7 +6837,7 @@ const yi = gt("XIcon", [
     __name: "Header",
     emits: ["update:brightness"],
     setup(e, { emit: t }) {
-      const n = te(5),
+      const n = ne(5),
         r = t,
         s = u1(),
         a = (f) => {
@@ -6884,9 +6884,9 @@ const yi = gt("XIcon", [
           l(), s.push(f)
         }
       return (f, c) => (
-        ne(),
-        Ee(
-          Qe,
+        te(),
+        xe(
+          Je,
           null,
           [
             g("div", _1, [
@@ -6909,7 +6909,7 @@ const yi = gt("XIcon", [
                   g("div", T1, [
                     g("div", k1, [
                       he(
-                        ye(Ua),
+                        we(Ua),
                         {
                           class: O({
                             "text-emerald-500": n.value >= 4,
@@ -7001,12 +7001,12 @@ const yi = gt("XIcon", [
                         ],
                       ),
                       he(
-                        ye(gi),
+                        we(gi),
                         { class: "relative inline-block text-left" },
                         {
                           default: Xe(() => [
                             he(
-                              ye(ru),
+                              we(ru),
                               {
                                 "aria-label": "Creative projects dropdown menu",
                                 class: O([
@@ -7023,7 +7023,7 @@ const yi = gt("XIcon", [
                               {
                                 default: Xe(() => [
                                   Ie(" Creative Projects"),
-                                  he(ye(d1)),
+                                  he(we(d1)),
                                 ]),
                                 _: 1,
                               },
@@ -7031,7 +7031,7 @@ const yi = gt("XIcon", [
                               ["class"],
                             ),
                             he(
-                              ye(su),
+                              we(su),
                               {
                                 class: O([
                                   "absolute z-10 mt-1 w-56 rounded",
@@ -7211,7 +7211,7 @@ const yi = gt("XIcon", [
                   g("div", A1, [
                     g("div", L1, [
                       he(
-                        ye(Ua),
+                        we(Ua),
                         {
                           class: O({
                             "text-emerald-500": n.value >= 4,
@@ -7250,7 +7250,7 @@ const yi = gt("XIcon", [
                     ]),
                   ]),
                   he(
-                    ye(m1),
+                    we(m1),
                     {
                       class: O([
                         "block lg:hidden",
@@ -7269,10 +7269,10 @@ const yi = gt("XIcon", [
                     8,
                     ["class"],
                   ),
-                  he(ye(gi), null, {
+                  he(we(gi), null, {
                     default: Xe(() => [
                       he(
-                        ye(ru),
+                        we(ru),
                         {
                           "aria-label": "Toggle brightness dropdown menu",
                           class: O([
@@ -7289,28 +7289,28 @@ const yi = gt("XIcon", [
                         {
                           default: Xe(() => [
                             n.value == 5
-                              ? (ne(),
-                                De(ye(S1), { key: 0, class: "text-slate-900" }))
+                              ? (te(),
+                                De(we(S1), { key: 0, class: "text-slate-900" }))
                               : n.value == 4
-                                ? (ne(),
-                                  De(ye(p1), {
+                                ? (te(),
+                                  De(we(p1), {
                                     key: 1,
                                     class: "text-slate-800",
                                   }))
                                 : n.value == 3
-                                  ? (ne(),
-                                    De(ye(f1), {
+                                  ? (te(),
+                                    De(we(f1), {
                                       key: 2,
                                       class: "text-slate-300",
                                     }))
                                   : n.value == 2
-                                    ? (ne(),
-                                      De(ye(y1), {
+                                    ? (te(),
+                                      De(we(y1), {
                                         key: 3,
                                         class: "text-slate-200",
                                       }))
-                                    : (ne(),
-                                      De(ye(b1), {
+                                    : (te(),
+                                      De(we(b1), {
                                         key: 4,
                                         class: "text-slate-400",
                                       })),
@@ -7321,7 +7321,7 @@ const yi = gt("XIcon", [
                         ["class"],
                       ),
                       he(
-                        ye(su),
+                        we(su),
                         {
                           class:
                             "absolute w-full right-4 mt-2 origin-top-right",
@@ -7381,7 +7381,7 @@ const yi = gt("XIcon", [
                 g("div", R1, [
                   g("div", j1, [
                     he(
-                      ye(Ua),
+                      we(Ua),
                       {
                         class: O({
                           "text-emerald-500": n.value >= 4,
@@ -7419,7 +7419,7 @@ const yi = gt("XIcon", [
                     ),
                   ]),
                   he(
-                    ye(yi),
+                    we(yi),
                     {
                       class: O({
                         "text-emerald-500 hover:text-emerald-400": n.value >= 4,
@@ -7479,7 +7479,7 @@ const yi = gt("XIcon", [
       )
     },
   },
-  X1 = gn(K1, [["__scopeId", "data-v-e6afc4f6"]]),
+  X1 = vn(K1, [["__scopeId", "data-v-e6afc4f6"]]),
   J1 = { class: "flex justify-center py-5 flex-col" },
   Z1 = { class: "inline-block relative" },
   Q1 = { class: "font-semibold text-center px-1" },
@@ -7508,7 +7508,7 @@ const yi = gt("XIcon", [
     __name: "Hero",
     props: { brightness: Number },
     setup(e) {
-      const t = te([
+      const t = ne([
         "super fast",
         "responsive",
         "beautiful",
@@ -7536,8 +7536,8 @@ const yi = gt("XIcon", [
         "your ideal",
         "your projects'",
       ])
-      let n = te(0),
-        r = te(!1)
+      let n = ne(0),
+        r = ne(!1)
       yt(() => {
         ;(t.value = t.value.sort(() => Math.random() - 0.5)),
           setInterval(() => {
@@ -7564,8 +7564,8 @@ const yi = gt("XIcon", [
       return (a, i) => {
         const l = lg("typewriter")
         return (
-          ne(),
-          Ee("div", J1, [
+          te(),
+          xe("div", J1, [
             g(
               "h1",
               {
@@ -7583,7 +7583,7 @@ const yi = gt("XIcon", [
               [
                 Ie(" I make "),
                 g("div", Z1, [
-                  uc((ne(), Ee("span", Q1, [Ie(Pt(s.value), 1)])), [
+                  uc((te(), xe("span", Q1, [Ie(Pt(s.value), 1)])), [
                     [l, s.value],
                   ]),
                   g(
@@ -7731,7 +7731,7 @@ const Jc = {
     search: "",
   },
 }
-function fn() {
+function pn() {
   const e = typeof document < "u" ? document : {}
   return Xi(e, Jc), e
 }
@@ -7924,7 +7924,7 @@ function Zc(e) {
     }
   p()
 }
-function Qt(e, t) {
+function nn(e, t) {
   return t === void 0 && (t = ""), [...e.children].filter((n) => n.matches(t))
 }
 function Fs(e) {
@@ -7954,7 +7954,7 @@ function fb(e, t) {
   }
   return n
 }
-function On(e, t) {
+function An(e, t) {
   return Nt().getComputedStyle(e, null).getPropertyValue(t)
 }
 function Hs(e) {
@@ -7990,7 +7990,7 @@ function xi(e, t, n) {
 let Ya
 function pb() {
   const e = Nt(),
-    t = fn()
+    t = pn()
   return {
     smoothScroll:
       t.documentElement &&
@@ -8274,12 +8274,12 @@ function xb() {
     !((t === 0 && e.isHorizontal()) || (n === 0 && e.isVertical())) &&
       ((t =
         t -
-        parseInt(On(r, "padding-left") || 0, 10) -
-        parseInt(On(r, "padding-right") || 0, 10)),
+        parseInt(An(r, "padding-left") || 0, 10) -
+        parseInt(An(r, "padding-right") || 0, 10)),
       (n =
         n -
-        parseInt(On(r, "padding-top") || 0, 10) -
-        parseInt(On(r, "padding-bottom") || 0, 10)),
+        parseInt(An(r, "padding-top") || 0, 10) -
+        parseInt(An(r, "padding-bottom") || 0, 10)),
       Number.isNaN(t) && (t = 0),
       Number.isNaN(n) && (n = 0),
       Object.assign(e, { width: t, height: n, size: e.isHorizontal() ? t : n }))
@@ -8293,7 +8293,7 @@ function Sb() {
     { wrapperEl: r, slidesEl: s, size: a, rtlTranslate: i, wrongRTL: l } = e,
     o = e.virtual && n.virtual.enabled,
     f = o ? e.virtual.slides.length : e.slides.length,
-    c = Qt(s, `.${e.params.slideClass}, swiper-slide`),
+    c = nn(s, `.${e.params.slideClass}, swiper-slide`),
     p = o ? e.virtual.slides.length : c.length
   let v = []
   const b = [],
@@ -8337,16 +8337,16 @@ function Sb() {
     if (
       (c[D] && (Q = c[D]),
       se && e.grid.updateSlide(D, Q, c),
-      !(c[D] && On(Q, "display") === "none"))
+      !(c[D] && An(Q, "display") === "none"))
     ) {
       if (n.slidesPerView === "auto") {
         G && (c[D].style[e.getDirectionLabel("width")] = "")
         const ge = getComputedStyle(Q),
           X = Q.style.transform,
-          xe = Q.style.webkitTransform
+          Se = Q.style.webkitTransform
         if (
           (X && (Q.style.transform = "none"),
-          xe && (Q.style.webkitTransform = "none"),
+          Se && (Q.style.webkitTransform = "none"),
           n.roundLengths)
         )
           q = e.isHorizontal() ? xi(Q, "width", !0) : xi(Q, "height", !0)
@@ -8364,7 +8364,7 @@ function Sb() {
           }
         }
         X && (Q.style.transform = X),
-          xe && (Q.style.webkitTransform = xe),
+          Se && (Q.style.webkitTransform = Se),
           n.roundLengths && (q = Math.floor(q))
       } else
         (q = (a - (n.slidesPerView - 1) * w) / n.slidesPerView),
@@ -8624,7 +8624,7 @@ function kb() {
     { slides: t, params: n, slidesEl: r, activeIndex: s } = e,
     a = e.virtual && n.virtual.enabled,
     i = e.grid && n.grid && n.grid.rows > 1,
-    l = (p) => Qt(r, `.${n.slideClass}${p}, swiper-slide${p}`)[0]
+    l = (p) => nn(r, `.${n.slideClass}${p}, swiper-slide${p}`)[0]
   t.forEach((p) => {
     p.classList.remove(n.slideActiveClass, n.slideNextClass, n.slidePrevClass)
   })
@@ -9280,7 +9280,7 @@ function Yb() {
           s > e.slides.length - e.loopedSlides + r / 2
           ? (e.loopFix(),
             (s = e.getSlideIndex(
-              Qt(n, `${i}[data-swiper-slide-index="${a}"]`)[0],
+              nn(n, `${i}[data-swiper-slide-index="${a}"]`)[0],
             )),
             wi(() => {
               e.slideTo(s)
@@ -9289,7 +9289,7 @@ function Yb() {
         : s > e.slides.length - r
           ? (e.loopFix(),
             (s = e.getSlideIndex(
-              Qt(n, `${i}[data-swiper-slide-index="${a}"]`)[0],
+              nn(n, `${i}[data-swiper-slide-index="${a}"]`)[0],
             )),
             wi(() => {
               e.slideTo(s)
@@ -9311,7 +9311,7 @@ function Xb(e) {
     { params: n, slidesEl: r } = t
   if (!n.loop || (t.virtual && t.params.virtual.enabled)) return
   const s = () => {
-      Qt(r, `.${n.slideClass}, swiper-slide`).forEach((p, v) => {
+      nn(r, `.${n.slideClass}, swiper-slide`).forEach((p, v) => {
         p.setAttribute("data-swiper-slide-index", v)
       })
     },
@@ -9426,22 +9426,22 @@ function Jb(e) {
   if (ge < T) {
     q = Math.max(T - ge, E)
     for (let X = 0; X < T - ge; X += 1) {
-      const xe = X - Math.floor(X / D) * D
+      const Se = X - Math.floor(X / D) * D
       if (x) {
-        const Ce = D - xe - 1
+        const Ce = D - Se - 1
         for (let F = f.length - 1; F >= 0; F -= 1)
           f[F].column === Ce && w.push(F)
-      } else w.push(D - xe - 1)
+      } else w.push(D - Se - 1)
     }
   } else if (ge + m > D - T) {
     G = Math.max(ge - (D - T * 2), E)
     for (let X = 0; X < G; X += 1) {
-      const xe = X - Math.floor(X / D) * D
+      const Se = X - Math.floor(X / D) * D
       x
         ? f.forEach((Ce, F) => {
-            Ce.column === xe && M.push(F)
+            Ce.column === Se && M.push(F)
           })
-        : M.push(xe)
+        : M.push(Se)
     }
   }
   if (
@@ -9466,8 +9466,8 @@ function Jb(e) {
       ? o.updateSlides()
       : x &&
         ((w.length > 0 && se) || (M.length > 0 && I)) &&
-        o.slides.forEach((X, xe) => {
-          o.grid.updateSlide(xe, X, o.slides)
+        o.slides.forEach((X, Se) => {
+          o.grid.updateSlide(Se, X, o.slides)
         }),
     b.watchSlidesProgress && o.updateSlidesOffset(),
     n)
@@ -9519,12 +9519,12 @@ function Jb(e) {
       byController: !0,
     }
     Array.isArray(o.controller.control)
-      ? o.controller.control.forEach((xe) => {
-          !xe.destroyed &&
-            xe.params.loop &&
-            xe.loopFix({
+      ? o.controller.control.forEach((Se) => {
+          !Se.destroyed &&
+            Se.params.loop &&
+            Se.loopFix({
               ...X,
-              slideTo: xe.params.slidesPerView === b.slidesPerView ? n : !1,
+              slideTo: Se.params.slidesPerView === b.slidesPerView ? n : !1,
             })
         })
       : o.controller.control instanceof o.constructor &&
@@ -9596,7 +9596,7 @@ var n2 = { setGrabCursor: e2, unsetGrabCursor: t2 }
 function r2(e, t) {
   t === void 0 && (t = this)
   function n(r) {
-    if (!r || r === fn() || r === Nt()) return null
+    if (!r || r === pn() || r === Nt()) return null
     r.assignedSlot && (r = r.assignedSlot)
     const s = r.closest(e)
     return !s && !r.getRootNode ? null : s || n(r.getRootNode().host)
@@ -9616,7 +9616,7 @@ function Eu(e, t, n) {
 }
 function s2(e) {
   const t = this,
-    n = fn()
+    n = pn()
   let r = e
   r.originalEvent && (r = r.originalEvent)
   const s = t.touchEventsData
@@ -9695,7 +9695,7 @@ function s2(e) {
     t.emit("touchStart", r)
 }
 function a2(e) {
-  const t = fn(),
+  const t = pn(),
     n = this,
     r = n.touchEventsData,
     { params: s, touches: a, rtlTranslate: i, enabled: l } = n
@@ -10150,7 +10150,7 @@ function c2() {
     e.params.touchReleaseOnEdges && (e.el.style.touchAction = "auto"))
 }
 const nd = (e, t) => {
-  const n = fn(),
+  const n = pn(),
     { params: r, el: s, wrapperEl: a, device: i } = e,
     l = !!r.nested,
     o = t === "on" ? "addEventListener" : "removeEventListener",
@@ -10479,7 +10479,7 @@ let Ji = class un {
       n || (n = {}),
       (n = At({}, n)),
       t && !n.el && (n.el = t)
-    const i = fn()
+    const i = pn()
     if (
       n.el &&
       typeof n.el == "string" &&
@@ -10599,7 +10599,7 @@ let Ji = class un {
   }
   getSlideIndex(t) {
     const { slidesEl: n, params: r } = this,
-      s = Qt(n, `.${r.slideClass}, swiper-slide`),
+      s = nn(n, `.${r.slideClass}, swiper-slide`),
       a = Hs(s[0])
     return Hs(t) - a
   }
@@ -10613,7 +10613,7 @@ let Ji = class un {
   recalcSlides() {
     const t = this,
       { slidesEl: n, params: r } = t
-    t.slides = Qt(n, `.${r.slideClass}, swiper-slide`)
+    t.slides = nn(n, `.${r.slideClass}, swiper-slide`)
   }
   enable() {
     const t = this
@@ -10780,13 +10780,13 @@ let Ji = class un {
     let i =
       r && r.shadowRoot && r.shadowRoot.querySelector
         ? r.shadowRoot.querySelector(s())
-        : Qt(r, s())[0]
+        : nn(r, s())[0]
     return (
       !i &&
         n.params.createElements &&
         ((i = Ds("div", n.params.wrapperClass)),
         r.append(i),
-        Qt(r, `.${n.params.slideClass}`).forEach((l) => {
+        nn(r, `.${n.params.slideClass}`).forEach((l) => {
           i.append(l)
         })),
       Object.assign(n, {
@@ -10796,11 +10796,11 @@ let Ji = class un {
           n.isElement && !r.parentNode.host.slideSlots ? r.parentNode.host : i,
         hostEl: n.isElement ? r.parentNode.host : r,
         mounted: !0,
-        rtl: r.dir.toLowerCase() === "rtl" || On(r, "direction") === "rtl",
+        rtl: r.dir.toLowerCase() === "rtl" || An(r, "direction") === "rtl",
         rtlTranslate:
           n.params.direction === "horizontal" &&
-          (r.dir.toLowerCase() === "rtl" || On(r, "direction") === "rtl"),
-        wrongRTL: On(i, "display") === "-webkit-box",
+          (r.dir.toLowerCase() === "rtl" || An(r, "direction") === "rtl"),
+        wrongRTL: An(i, "display") === "-webkit-box",
       }),
       !0
     )
@@ -11607,19 +11607,19 @@ const M2 = {
     setup(e, t) {
       let { slots: n, emit: r } = t
       const { tag: s, wrapperTag: a } = e,
-        i = te("swiper"),
-        l = te(null),
-        o = te(!1),
-        f = te(!1),
-        c = te(null),
-        p = te(null),
-        v = te(null),
+        i = ne("swiper"),
+        l = ne(null),
+        o = ne(!1),
+        f = ne(!1),
+        c = ne(null),
+        p = ne(null),
+        v = ne(null),
         b = { value: [] },
         P = { value: [] },
-        m = te(null),
-        E = te(null),
-        T = te(null),
-        x = te(null),
+        m = ne(null),
+        E = ne(null),
+        T = ne(null),
+        x = ne(null),
         { params: w, passedParams: M } = Tu(e, !1)
       ei(n, b, P), (v.value = M), (P.value = b.value)
       const z = () => {
@@ -11677,8 +11677,8 @@ const M2 = {
             }),
           (o.value = !1)
       }),
-        Ft("swiper", p),
-        zn(l, () => {
+        Gt("swiper", p),
+        Bn(l, () => {
           Xs(() => {
             P2(p.value)
           })
@@ -11745,9 +11745,9 @@ const M2 = {
       let { slots: n } = t,
         r = !1
       const { swiperRef: s } = e,
-        a = te(null),
-        i = te("swiper-slide"),
-        l = te(!1)
+        a = ne(null),
+        i = ne("swiper-slide"),
+        l = ne(!1)
       function o(p, v, b) {
         v === a.value && (i.value = b)
       }
@@ -11776,7 +11776,7 @@ const M2 = {
         isPrev: i.value.indexOf("swiper-slide-prev") >= 0,
         isNext: i.value.indexOf("swiper-slide-next") >= 0,
       }))
-      Ft("swiperSlide", f)
+      Gt("swiperSlide", f)
       const c = () => {
         l.value = !0
       }
@@ -11821,7 +11821,7 @@ function od(e, t, n, r) {
     e.params.createElements &&
       Object.keys(r).forEach((s) => {
         if (!n[s] && n.auto === !0) {
-          let a = Qt(e.el, `.${r[s]}`)[0]
+          let a = nn(e.el, `.${r[s]}`)[0]
           a || ((a = Ds("div", r[s])), (a.className = r[s]), e.el.append(a)),
             (n[s] = a),
             (t[s] = a)
@@ -12106,7 +12106,7 @@ function A2(e) {
           (Q = D + (Math.min(G.length, w.dynamicMainBullets) - 1)),
           (ge = (Q + D) / 2)),
         G.forEach((X) => {
-          const xe = [
+          const Se = [
             ...["", "-next", "-next-next", "-prev", "-prev-prev", "-main"].map(
               (Ce) => `${w.bulletActiveClass}${Ce}`,
             ),
@@ -12115,46 +12115,46 @@ function A2(e) {
               typeof Ce == "string" && Ce.includes(" ") ? Ce.split(" ") : Ce,
             )
             .flat()
-          X.classList.remove(...xe)
+          X.classList.remove(...Se)
         }),
         M.length > 1)
       )
         G.forEach((X) => {
-          const xe = Hs(X)
-          xe === z
+          const Se = Hs(X)
+          Se === z
             ? X.classList.add(...w.bulletActiveClass.split(" "))
             : t.isElement && X.setAttribute("part", "bullet"),
             w.dynamicBullets &&
-              (xe >= D &&
-                xe <= Q &&
+              (Se >= D &&
+                Se <= Q &&
                 X.classList.add(...`${w.bulletActiveClass}-main`.split(" ")),
-              xe === D && c(X, "prev"),
-              xe === Q && c(X, "next"))
+              Se === D && c(X, "prev"),
+              Se === Q && c(X, "next"))
         })
       else {
         const X = G[z]
         if (
           (X && X.classList.add(...w.bulletActiveClass.split(" ")),
           t.isElement &&
-            G.forEach((xe, Ce) => {
-              xe.setAttribute("part", Ce === z ? "bullet-active" : "bullet")
+            G.forEach((Se, Ce) => {
+              Se.setAttribute("part", Ce === z ? "bullet-active" : "bullet")
             }),
           w.dynamicBullets)
         ) {
-          const xe = G[D],
+          const Se = G[D],
             Ce = G[Q]
           for (let F = D; F <= Q; F += 1)
             G[F] &&
               G[F].classList.add(...`${w.bulletActiveClass}-main`.split(" "))
-          c(xe, "prev"), c(Ce, "next")
+          c(Se, "prev"), c(Ce, "next")
         }
       }
       if (w.dynamicBullets) {
         const X = Math.min(G.length, w.dynamicMainBullets + 4),
-          xe = (i * X - i) / 2 - ge * i,
+          Se = (i * X - i) / 2 - ge * i,
           Ce = x ? "right" : "left"
         G.forEach((F) => {
-          F.style[t.isHorizontal() ? Ce : "top"] = `${xe}px`
+          F.style[t.isHorizontal() ? Ce : "top"] = `${Se}px`
         })
       }
     }
@@ -12175,10 +12175,10 @@ function A2(e) {
           : (Q = t.isHorizontal() ? "horizontal" : "vertical")
         const ge = (z + 1) / q
         let X = 1,
-          xe = 1
-        Q === "horizontal" ? (X = ge) : (xe = ge),
+          Se = 1
+        Q === "horizontal" ? (X = ge) : (Se = ge),
           G.querySelectorAll(Nr(w.progressbarFillClass)).forEach((Ce) => {
-            ;(Ce.style.transform = `translate3d(0,0,0) scaleX(${X}) scaleY(${xe})`),
+            ;(Ce.style.transform = `translate3d(0,0,0) scaleX(${X}) scaleY(${Se})`),
               (Ce.style.transitionDuration = `${t.params.speed}ms`)
           })
       }
@@ -12526,7 +12526,7 @@ function L2(e) {
     },
     Q = () => {
       if (t.destroyed || !t.autoplay.running) return
-      const V = fn()
+      const V = pn()
       V.visibilityState === "hidden" && ((T = !0), G(!0)),
         V.visibilityState === "visible" && D()
     },
@@ -12537,7 +12537,7 @@ function L2(e) {
     X = (V) => {
       V.pointerType === "mouse" && ((x = !1), t.autoplay.paused && D())
     },
-    xe = () => {
+    Se = () => {
       t.params.autoplay.pauseOnMouseEnter &&
         (t.el.addEventListener("pointerenter", ge),
         t.el.addEventListener("pointerleave", X))
@@ -12547,13 +12547,13 @@ function L2(e) {
         t.el.removeEventListener("pointerleave", X)
     },
     F = () => {
-      fn().addEventListener("visibilitychange", Q)
+      pn().addEventListener("visibilitychange", Q)
     },
     oe = () => {
-      fn().removeEventListener("visibilitychange", Q)
+      pn().removeEventListener("visibilitychange", Q)
     }
   r("init", () => {
-    t.params.autoplay.enabled && (xe(), F(), se())
+    t.params.autoplay.enabled && (Se(), F(), se())
   }),
     r("destroy", () => {
       Ce(), oe(), t.autoplay.running && q()
@@ -12673,8 +12673,8 @@ const z2 = { class: "prose text-center" },
             })
         }
       return (s, a) => (
-        ne(),
-        Ee(
+        te(),
+        xe(
           "div",
           {
             class: O([
@@ -12800,12 +12800,12 @@ const z2 = { class: "prose text-center" },
       title: String,
     },
     setup(e) {
-      const t = te([]),
+      const t = ne([]),
         n = [L2, A2, O2],
         r = e,
-        s = te(""),
-        a = te(""),
-        i = te([]),
+        s = ne(""),
+        a = ne(""),
+        i = ne([]),
         l = (c) => {
           if (c >= 4) return "text-slate-800"
           if (c == 3) return "text-slate-200"
@@ -12843,8 +12843,8 @@ const z2 = { class: "prose text-center" },
         return (p = p + l(c)), p
       }
       return (c, p) => (
-        ne(),
-        Ee(
+        te(),
+        xe(
           "div",
           {
             class: O([
@@ -12866,8 +12866,8 @@ const z2 = { class: "prose text-center" },
                 3,
               ),
               s.value != ""
-                ? (ne(),
-                  Ee(
+                ? (te(),
+                  xe(
                     "a",
                     { key: 0, href: s.value },
                     [
@@ -12894,7 +12894,7 @@ const z2 = { class: "prose text-center" },
             ]),
             g("div", D2, [
               he(
-                ye(M2),
+                we(M2),
                 {
                   spaceBetween: 30,
                   centeredSlides: !0,
@@ -12906,22 +12906,22 @@ const z2 = { class: "prose text-center" },
                 },
                 {
                   default: Xe(() => [
-                    (ne(!0),
-                    Ee(
-                      Qe,
+                    (te(!0),
+                    xe(
+                      Je,
                       null,
-                      Bn(
+                      fn(
                         i.value,
                         (v, b) => (
-                          ne(),
+                          te(),
                           De(
-                            ye(I2),
+                            we(I2),
                             { class: "image-container", key: b },
                             {
                               default: Xe(() => [
                                 s.value != ""
-                                  ? (ne(),
-                                    Ee(
+                                  ? (te(),
+                                    xe(
                                       "a",
                                       { key: 0, href: s.value },
                                       [
@@ -12943,8 +12943,8 @@ const z2 = { class: "prose text-center" },
                                     ))
                                   : st("", !0),
                                 s.value == ""
-                                  ? (ne(),
-                                    Ee(
+                                  ? (te(),
+                                    xe(
                                       "img",
                                       {
                                         key: 1,
@@ -12975,15 +12975,15 @@ const z2 = { class: "prose text-center" },
             W2,
             g("div", q2, [
               g("div", U2, [
-                (ne(!0),
-                Ee(
-                  Qe,
+                (te(!0),
+                xe(
+                  Je,
                   null,
-                  Bn(
+                  fn(
                     i.value,
                     (v, b) => (
-                      ne(),
-                      Ee("div", { class: "image-container", key: b }, [
+                      te(),
+                      xe("div", { class: "image-container", key: b }, [
                         g(
                           "img",
                           {
@@ -13006,7 +13006,7 @@ const z2 = { class: "prose text-center" },
             g(
               "div",
               { class: O([f(r.brightness), "prose pt-6"]) },
-              [tn(c.$slots, "default", {}, void 0, !0)],
+              [sn(c.$slots, "default", {}, void 0, !0)],
               2,
             ),
             g(
@@ -13033,7 +13033,7 @@ const z2 = { class: "prose text-center" },
       )
     },
   },
-  mn = gn(X2, [["__scopeId", "data-v-4d27a375"]]),
+  bn = vn(X2, [["__scopeId", "data-v-4d27a375"]]),
   Zi =
     "https://images.josephhansen.dev/uploads/file2024-01-2621-1706326995802.webp",
   ud =
@@ -13102,8 +13102,8 @@ const z2 = { class: "prose text-center" },
           if (s == 2) return "text-slate-300"
           if (s == 1) return "text-slate-300"
         },
-        n = te([Zi, tl, sl, Qi, cd, rl, nl, el, ud, al]),
-        r = te([
+        n = ne([Zi, tl, sl, Qi, cd, rl, nl, el, ud, al]),
+        r = ne([
           "BlenderNation Bazaar",
           "Swimstate Pool Services",
           "Stehl Family Dental",
@@ -13116,9 +13116,9 @@ const z2 = { class: "prose text-center" },
           "Aris Search",
         ])
       return (s, a) => (
-        ne(),
+        te(),
         De(
-          mn,
+          bn,
           {
             images: n.value,
             captions: r.value,
@@ -13128,7 +13128,7 @@ const z2 = { class: "prose text-center" },
           },
           {
             default: Xe(() => [
-              tn(s.$slots, "default", {}, () => [
+              sn(s.$slots, "default", {}, () => [
                 g(
                   "h2",
                   { class: O(["text-3xl mb-1", t(e.brightness)]) },
@@ -13258,8 +13258,8 @@ const z2 = { class: "prose text-center" },
         if (n == 1) return "text-slate-300"
       }
       return (n, r) => (
-        ne(),
-        Ee("div", py, [
+        te(),
+        xe("div", py, [
           g("div", hy, [
             g(
               "h2",
@@ -13376,7 +13376,7 @@ const z2 = { class: "prose text-center" },
       )
     },
   },
-  Cy = gn(_y, [["__scopeId", "data-v-a259bda2"]])
+  Cy = vn(_y, [["__scopeId", "data-v-a259bda2"]])
 var Ty =
   typeof globalThis < "u"
     ? globalThis
@@ -13538,7 +13538,7 @@ var dd = { exports: {} }
       },
       ge = Q,
       X = m.unpack,
-      xe = function () {
+      Se = function () {
         for (var u = [], d = arguments.length; d--; ) u[d] = arguments[d]
         u = X(u, "cmyk")
         var h = u[0],
@@ -13555,7 +13555,7 @@ var dd = { exports: {} }
               _,
             ]
       },
-      Ce = xe,
+      Ce = Se,
       F = q,
       oe = I,
       V = E,
@@ -13582,18 +13582,18 @@ var dd = { exports: {} }
         },
       })
     var nt = m.unpack,
-      Yt = m.last,
-      Rt = function (u) {
+      Jt = m.last,
+      Dt = function (u) {
         return Math.round(u * 100) / 100
       },
       Ct = function () {
         for (var u = [], d = arguments.length; d--; ) u[d] = arguments[d]
         var h = nt(u, "hsla"),
-          y = Yt(u) || "lsa"
+          y = Jt(u) || "lsa"
         return (
-          (h[0] = Rt(h[0] || 0)),
-          (h[1] = Rt(h[1] * 100) + "%"),
-          (h[2] = Rt(h[2] * 100) + "%"),
+          (h[0] = Dt(h[0] || 0)),
+          (h[1] = Dt(h[1] * 100) + "%"),
+          (h[2] = Dt(h[2] * 100) + "%"),
           y === "hsla" || (h.length > 3 && h[3] < 1)
             ? ((h[3] = h.length > 3 ? h[3] : 1), (y = "hsla"))
             : (h.length = 3),
@@ -13631,7 +13631,7 @@ var dd = { exports: {} }
       re = le,
       pe = m.unpack,
       Re = m.last,
-      Je = it,
+      Ze = it,
       S = re,
       C = Math.round,
       B = function () {
@@ -13639,7 +13639,7 @@ var dd = { exports: {} }
         var h = pe(u, "rgba"),
           y = Re(u) || "rgb"
         return y.substr(0, 3) == "hsl"
-          ? Je(S(h), y)
+          ? Ze(S(h), y)
           : ((h[0] = C(h[0])),
             (h[1] = C(h[1])),
             (h[2] = C(h[2])),
@@ -13692,7 +13692,7 @@ var dd = { exports: {} }
         /^rgba\(\s*(-?\d+),\s*(-?\d+)\s*,\s*(-?\d+)\s*,\s*([01]|[01]?\.\d+)\)$/,
       ve =
         /^rgb\(\s*(-?\d+(?:\.\d+)?)%,\s*(-?\d+(?:\.\d+)?)%\s*,\s*(-?\d+(?:\.\d+)?)%\s*\)$/,
-      Se =
+      Ee =
         /^rgba\(\s*(-?\d+(?:\.\d+)?)%,\s*(-?\d+(?:\.\d+)?)%\s*,\s*(-?\d+(?:\.\d+)?)%\s*,\s*([01]|[01]?\.\d+)\)$/,
       Pe =
         /^hsl\(\s*(-?\d+(?:\.\d+)?),\s*(-?\d+(?:\.\d+)?)%\s*,\s*(-?\d+(?:\.\d+)?)%\s*\)$/,
@@ -13718,7 +13718,7 @@ var dd = { exports: {} }
           for (var _ = d.slice(1, 4), A = 0; A < 3; A++) _[A] = Ke(_[A] * 2.55)
           return (_[3] = 1), _
         }
-        if ((d = u.match(Se))) {
+        if ((d = u.match(Ee))) {
           for (var L = d.slice(1, 5), N = 0; N < 3; N++) L[N] = Ke(L[N] * 2.55)
           return (L[3] = +L[3]), L
         }
@@ -13740,30 +13740,30 @@ var dd = { exports: {} }
         ue.test(u) ||
         be.test(u) ||
         ve.test(u) ||
-        Se.test(u) ||
+        Ee.test(u) ||
         Pe.test(u) ||
         je.test(u)
       )
     }
     var Mt = at,
-      bn = q,
+      yn = q,
       $r = I,
-      yn = E,
+      wn = E,
       ss = m.type,
       Et = H,
       It = Mt
     ;($r.prototype.css = function (u) {
       return Et(this._rgb, u)
     }),
-      (bn.css = function () {
+      (yn.css = function () {
         for (var u = [], d = arguments.length; d--; ) u[d] = arguments[d]
         return new (Function.prototype.bind.apply(
           $r,
           [null].concat(u, ["css"]),
         ))()
       }),
-      (yn.format.css = It),
-      yn.autodetect.push({
+      (wn.format.css = It),
+      wn.autodetect.push({
         p: 5,
         test: function (u) {
           for (var d = [], h = arguments.length - 1; h-- > 0; )
@@ -15296,12 +15296,12 @@ var dd = { exports: {} }
           new _a(xh(y))
         )
       },
-      Dt = q,
+      Vt = q,
       ur = m.type,
       Ch = Math.pow,
       Pa = function (u) {
         var d = "rgb",
-          h = Dt("#ccc"),
+          h = Vt("#ccc"),
           y = 0,
           k = [0, 1],
           $ = [],
@@ -15320,13 +15320,13 @@ var dd = { exports: {} }
               ((K = K || ["#fff", "#000"]),
               K &&
                 ur(K) === "string" &&
-                Dt.brewer &&
-                Dt.brewer[K.toLowerCase()] &&
-                (K = Dt.brewer[K.toLowerCase()]),
+                Vt.brewer &&
+                Vt.brewer[K.toLowerCase()] &&
+                (K = Vt.brewer[K.toLowerCase()]),
               ur(K) === "array")
             ) {
               K.length === 1 && (K = [K[0], K[0]]), (K = K.slice(0))
-              for (var we = 0; we < K.length; we++) K[we] = Dt(K[we])
+              for (var ye = 0; ye < K.length; ye++) K[ye] = Vt(K[ye])
               $.length = 0
               for (var Oe = 0; Oe < K.length; Oe++) $.push(Oe / (K.length - 1))
             }
@@ -15334,7 +15334,7 @@ var dd = { exports: {} }
           },
           ze = function (K) {
             if (A != null) {
-              for (var we = A.length - 1, Oe = 0; Oe < we && K >= A[Oe]; ) Oe++
+              for (var ye = A.length - 1, Oe = 0; Oe < ye && K >= A[Oe]; ) Oe++
               return Oe - 1
             }
             return 0
@@ -15345,21 +15345,21 @@ var dd = { exports: {} }
           vt = function (K) {
             return K
           },
-          dt = function (K, we) {
+          dt = function (K, ye) {
             var Oe, Me
-            if ((we == null && (we = !1), isNaN(K) || K === null)) return h
-            if (we) Me = K
+            if ((ye == null && (ye = !1), isNaN(K) || K === null)) return h
+            if (ye) Me = K
             else if (A && A.length > 2) {
               var mt = ze(K)
               Me = mt / (A.length - 2)
             } else ie !== W ? (Me = (K - W) / (ie - W)) : (Me = 1)
             ;(Me = vt(Me)),
-              we || (Me = Fe(Me)),
+              ye || (Me = Fe(Me)),
               $e !== 1 && (Me = Ch(Me, $e)),
               (Me = _[0] + Me * (1 - _[0] - _[1])),
               (Me = Math.min(1, Math.max(0, Me)))
-            var Ze = Math.floor(Me * 1e4)
-            if (ce && de[Ze]) Oe = de[Ze]
+            var Qe = Math.floor(Me * 1e4)
+            if (ce && de[Qe]) Oe = de[Qe]
             else {
               if (ur(L) === "array")
                 for (var Be = 0; Be < $.length; Be++) {
@@ -15374,12 +15374,12 @@ var dd = { exports: {} }
                   }
                   if (Me > Ge && Me < $[Be + 1]) {
                     ;(Me = (Me - Ge) / ($[Be + 1] - Ge)),
-                      (Oe = Dt.interpolate(L[Be], L[Be + 1], Me, d))
+                      (Oe = Vt.interpolate(L[Be], L[Be + 1], Me, d))
                     break
                   }
                 }
               else ur(L) === "function" && (Oe = L(Me))
-              ce && (de[Ze] = Oe)
+              ce && (de[Qe] = Oe)
             }
             return Oe
           },
@@ -15388,16 +15388,16 @@ var dd = { exports: {} }
           }
         Ae(u)
         var Le = function (K) {
-          var we = Dt(dt(K))
-          return N && we[N] ? we[N]() : we
+          var ye = Vt(dt(K))
+          return N && ye[N] ? ye[N]() : ye
         }
         return (
           (Le.classes = function (K) {
             if (K != null) {
               if (ur(K) === "array") (A = K), (k = [K[0], K[K.length - 1]])
               else {
-                var we = Dt.analyze(k)
-                K === 0 ? (A = [we.min, we.max]) : (A = Dt.limits(we, "e", K))
+                var ye = Vt.analyze(k)
+                K === 0 ? (A = [ye.min, ye.max]) : (A = Vt.limits(ye, "e", K))
               }
               return Le
             }
@@ -15406,14 +15406,14 @@ var dd = { exports: {} }
           (Le.domain = function (K) {
             if (!arguments.length) return k
             ;(W = K[0]), (ie = K[K.length - 1]), ($ = [])
-            var we = L.length
-            if (K.length === we && W !== ie)
+            var ye = L.length
+            if (K.length === ye && W !== ie)
               for (var Oe = 0, Me = Array.from(K); Oe < Me.length; Oe += 1) {
                 var mt = Me[Oe]
                 $.push((mt - W) / (ie - W))
               }
             else {
-              for (var Ze = 0; Ze < we; Ze++) $.push(Ze / (we - 1))
+              for (var Qe = 0; Qe < ye; Qe++) $.push(Qe / (ye - 1))
               if (K.length > 2) {
                 var Be = K.map(function (Ve, We) {
                     return We / (K.length - 1)
@@ -15427,9 +15427,9 @@ var dd = { exports: {} }
                   (vt = function (Ve) {
                     if (Ve <= 0 || Ve >= 1) return Ve
                     for (var We = 0; Ve >= Ge[We + 1]; ) We++
-                    var Gt = (Ve - Ge[We]) / (Ge[We + 1] - Ge[We]),
-                      Sn = Be[We] + Gt * (Be[We + 1] - Be[We])
-                    return Sn
+                    var qt = (Ve - Ge[We]) / (Ge[We + 1] - Ge[We]),
+                      En = Be[We] + qt * (Be[We + 1] - Be[We])
+                    return En
                   })
               }
             }
@@ -15438,7 +15438,7 @@ var dd = { exports: {} }
           (Le.mode = function (K) {
             return arguments.length ? ((d = K), Tt(), Le) : d
           }),
-          (Le.range = function (K, we) {
+          (Le.range = function (K, ye) {
             return Ae(K), Le
           }),
           (Le.out = function (K) {
@@ -15453,34 +15453,34 @@ var dd = { exports: {} }
               (Y = K),
               Tt(),
               Y
-                ? (Fe = function (we) {
+                ? (Fe = function (ye) {
                     for (
                       var Oe = dt(0, !0).lab()[0],
                         Me = dt(1, !0).lab()[0],
                         mt = Oe > Me,
-                        Ze = dt(we, !0).lab()[0],
-                        Be = Oe + (Me - Oe) * we,
-                        Ge = Ze - Be,
+                        Qe = dt(ye, !0).lab()[0],
+                        Be = Oe + (Me - Oe) * ye,
+                        Ge = Qe - Be,
                         Ve = 0,
                         We = 1,
-                        Gt = 20;
-                      Math.abs(Ge) > 0.01 && Gt-- > 0;
+                        qt = 20;
+                      Math.abs(Ge) > 0.01 && qt-- > 0;
 
                     )
                       (function () {
                         return (
                           mt && (Ge *= -1),
                           Ge < 0
-                            ? ((Ve = we), (we += (We - we) * 0.5))
-                            : ((We = we), (we += (Ve - we) * 0.5)),
-                          (Ze = dt(we, !0).lab()[0]),
-                          (Ge = Ze - Be)
+                            ? ((Ve = ye), (ye += (We - ye) * 0.5))
+                            : ((We = ye), (ye += (Ve - ye) * 0.5)),
+                          (Qe = dt(ye, !0).lab()[0]),
+                          (Ge = Qe - Be)
                         )
                       })()
-                    return we
+                    return ye
                   })
-                : (Fe = function (we) {
-                    return we
+                : (Fe = function (ye) {
+                    return ye
                   }),
               Le
             )
@@ -15490,8 +15490,8 @@ var dd = { exports: {} }
               ? (ur(K) === "number" && (K = [K, K]), (_ = K), Le)
               : _
           }),
-          (Le.colors = function (K, we) {
-            arguments.length < 2 && (we = "hex")
+          (Le.colors = function (K, ye) {
+            arguments.length < 2 && (ye = "hex")
             var Oe = []
             if (arguments.length === 0) Oe = L.slice(0)
             else if (K === 1) Oe = [Le(0.5)]
@@ -15503,23 +15503,23 @@ var dd = { exports: {} }
               })
             } else {
               u = []
-              var Ze = []
+              var Qe = []
               if (A && A.length > 2)
                 for (
                   var Be = 1, Ge = A.length, Ve = 1 <= Ge;
                   Ve ? Be < Ge : Be > Ge;
                   Ve ? Be++ : Be--
                 )
-                  Ze.push((A[Be - 1] + A[Be]) * 0.5)
-              else Ze = k
-              Oe = Ze.map(function (We) {
+                  Qe.push((A[Be - 1] + A[Be]) * 0.5)
+              else Qe = k
+              Oe = Qe.map(function (We) {
                 return Le(We)
               })
             }
             return (
-              Dt[we] &&
+              Vt[ye] &&
                 (Oe = Oe.map(function (We) {
-                  return We[we]()
+                  return We[ye]()
                 })),
               Oe
             )
@@ -15531,7 +15531,7 @@ var dd = { exports: {} }
             return K != null ? (($e = K), Le) : $e
           }),
           (Le.nodata = function (K) {
-            return K != null ? ((h = Dt(K)), Le) : h
+            return K != null ? ((h = Vt(K)), Le) : h
           }),
           Le
         )
@@ -15646,18 +15646,18 @@ var dd = { exports: {} }
         )
       },
       $a = q,
-      Ht = function (u, d, h) {
-        if (!Ht[h]) throw new Error("unknown blend mode " + h)
-        return Ht[h](u, d)
+      Wt = function (u, d, h) {
+        if (!Wt[h]) throw new Error("unknown blend mode " + h)
+        return Wt[h](u, d)
       },
-      wn = function (u) {
+      xn = function (u) {
         return function (d, h) {
           var y = $a(h).rgb(),
             k = $a(d).rgb()
           return $a.rgb(u(y, k))
         }
       },
-      xn = function (u) {
+      Sn = function (u) {
         return function (d, h) {
           var y = []
           return (
@@ -15696,16 +15696,16 @@ var dd = { exports: {} }
           ? 255
           : ((u = (255 * (d / 255)) / (1 - u / 255)), u > 255 ? 255 : u)
       }
-    ;(Ht.normal = wn(xn(Ih))),
-      (Ht.multiply = wn(xn(Oh))),
-      (Ht.screen = wn(xn(zh))),
-      (Ht.overlay = wn(xn(Bh))),
-      (Ht.darken = wn(xn(Ah))),
-      (Ht.lighten = wn(xn(Lh))),
-      (Ht.dodge = wn(xn(Rh))),
-      (Ht.burn = wn(xn(Nh)))
+    ;(Wt.normal = xn(Sn(Ih))),
+      (Wt.multiply = xn(Sn(Oh))),
+      (Wt.screen = xn(Sn(zh))),
+      (Wt.overlay = xn(Sn(Bh))),
+      (Wt.darken = xn(Sn(Ah))),
+      (Wt.lighten = xn(Sn(Lh))),
+      (Wt.dodge = xn(Sn(Rh))),
+      (Wt.burn = xn(Sn(Nh)))
     for (
-      var jh = Ht,
+      var jh = Wt,
         Ma = m.type,
         Fh = m.clip_rgb,
         Dh = m.TWOPI,
@@ -15861,32 +15861,32 @@ var dd = { exports: {} }
             for (var Le = 1; Le < h; Le++) Tt.push(y + (Le / h) * (k - y))
             for (Tt.push(k); vt; ) {
               for (var K = 0; K < h; K++) Fe[K] = 0
-              for (var we = 0; we < Ae; we++)
+              for (var ye = 0; ye < Ae; ye++)
                 for (
-                  var Oe = $[we], Me = Number.MAX_VALUE, mt = void 0, Ze = 0;
-                  Ze < h;
-                  Ze++
+                  var Oe = $[ye], Me = Number.MAX_VALUE, mt = void 0, Qe = 0;
+                  Qe < h;
+                  Qe++
                 ) {
-                  var Be = Qh(Tt[Ze] - Oe)
-                  Be < Me && ((Me = Be), (mt = Ze)), Fe[mt]++, (ze[we] = mt)
+                  var Be = Qh(Tt[Qe] - Oe)
+                  Be < Me && ((Me = Be), (mt = Qe)), Fe[mt]++, (ze[ye] = mt)
                 }
               for (var Ge = new Array(h), Ve = 0; Ve < h; Ve++) Ge[Ve] = null
               for (var We = 0; We < Ae; We++)
                 ($e = ze[We]),
                   Ge[$e] === null ? (Ge[$e] = $[We]) : (Ge[$e] += $[We])
-              for (var Gt = 0; Gt < h; Gt++) Ge[Gt] *= 1 / Fe[Gt]
+              for (var qt = 0; qt < h; qt++) Ge[qt] *= 1 / Fe[qt]
               vt = !1
-              for (var Sn = 0; Sn < h; Sn++)
-                if (Ge[Sn] !== Tt[Sn]) {
+              for (var En = 0; En < h; En++)
+                if (Ge[En] !== Tt[En]) {
                   vt = !0
                   break
                 }
               ;(Tt = Ge), dt++, dt > 200 && (vt = !1)
             }
-            for (var En = {}, cr = 0; cr < h; cr++) En[cr] = []
-            for (var dr = 0; dr < Ae; dr++) ($e = ze[dr]), En[$e].push($[dr])
+            for (var _n = {}, cr = 0; cr < h; cr++) _n[cr] = []
+            for (var dr = 0; dr < Ae; dr++) ($e = ze[dr]), _n[$e].push($[dr])
             for (var ln = [], Hn = 0; Hn < h; Hn++)
-              ln.push(En[Hn][0]), ln.push(En[Hn][En[Hn].length - 1])
+              ln.push(_n[Hn][0]), ln.push(_n[Hn][_n[Hn].length - 1])
             ;(ln = ln.sort(function (Aa, La) {
               return Aa - La
             })),
@@ -15945,34 +15945,34 @@ var dd = { exports: {} }
             Tt = de * (1 + vt),
             Le = an(lt(dt, 2) + lt(W, 2)),
             K = an(lt(Tt, 2) + lt(ce, 2)),
-            we = (Le + K) / 2,
+            ye = (Le + K) / 2,
             Oe = $(fo(W, dt)),
             Me = $(fo(ce, Tt)),
             mt = Oe >= 0 ? Oe : Oe + 360,
-            Ze = Me >= 0 ? Me : Me + 360,
-            Be = po(mt - Ze) > 180 ? (mt + Ze + 360) / 2 : (mt + Ze) / 2,
+            Qe = Me >= 0 ? Me : Me + 360,
+            Be = po(mt - Qe) > 180 ? (mt + Qe + 360) / 2 : (mt + Qe) / 2,
             Ge =
               1 -
               0.17 * fs(_(Be - 30)) +
               0.24 * fs(_(2 * Be)) +
               0.32 * fs(_(3 * Be + 6)) -
               0.2 * fs(_(4 * Be - 63)),
-            Ve = Ze - mt
-          ;(Ve = po(Ve) <= 180 ? Ve : Ze <= mt ? Ve + 360 : Ve - 360),
+            Ve = Qe - mt
+          ;(Ve = po(Ve) <= 180 ? Ve : Qe <= mt ? Ve + 360 : Ve - 360),
             (Ve = 2 * an(Le * K) * ho(_(Ve) / 2))
           var We = Y - L,
-            Gt = K - Le,
-            Sn = 1 + (0.015 * lt($e - 50, 2)) / an(20 + lt($e - 50, 2)),
-            En = 1 + 0.045 * we,
-            cr = 1 + 0.015 * we * Ge,
+            qt = K - Le,
+            En = 1 + (0.015 * lt($e - 50, 2)) / an(20 + lt($e - 50, 2)),
+            _n = 1 + 0.045 * ye,
+            cr = 1 + 0.015 * ye * Ge,
             dr = 30 * r0(-lt((Be - 275) / 25, 2)),
-            ln = 2 * an(lt(we, 7) / (lt(we, 7) + lt(25, 7))),
+            ln = 2 * an(lt(ye, 7) / (lt(ye, 7) + lt(25, 7))),
             Hn = -ln * ho(2 * _(dr)),
             Ar = an(
-              lt(We / (h * Sn), 2) +
-                lt(Gt / (y * En), 2) +
+              lt(We / (h * En), 2) +
+                lt(qt / (y * _n), 2) +
                 lt(Ve / (k * cr), 2) +
-                Hn * (Gt / (y * En)) * (Ve / (k * cr)),
+                Hn * (qt / (y * _n)) * (Ve / (k * cr)),
             )
           return n0(0, t0(100, Ar))
         },
@@ -16458,7 +16458,7 @@ var dd = { exports: {} }
   })
 })(dd)
 var Py = dd.exports
-const Zt = ky(Py),
+const tn = ky(Py),
   Fn = (e) => (Qr("data-v-3350a51b"), (e = e()), es(), e),
   $y = {
     class: "flex w-full gap-4 md:p-8 sm:p-4 items-center justify-center",
@@ -16659,14 +16659,14 @@ const Zt = ky(Py),
           let f = document.querySelectorAll("tr"),
             c
           o == 5
-            ? (c = Zt("#e2e8f0"))
+            ? (c = tn("#e2e8f0"))
             : o == 4
-              ? (c = Zt("#cbd5e1"))
+              ? (c = tn("#cbd5e1"))
               : o == 3
-                ? (c = Zt("#475569"))
+                ? (c = tn("#475569"))
                 : o == 2
-                  ? (c = Zt("#1e293b"))
-                  : o == 1 && (c = Zt("#0f172a"))
+                  ? (c = tn("#1e293b"))
+                  : o == 1 && (c = tn("#0f172a"))
           for (let p = 1; p < f.length; p++)
             p % 2 == 0
               ? (f[p].style.backgroundColor = c.brighten(0))
@@ -16676,23 +16676,23 @@ const Zt = ky(Py),
         yt(() => {
           l(t.brightness)
         }),
-        zn(
+        Bn(
           () => t.brightness,
           (o, f) => {
             l(o)
           },
         ),
         (o, f) => (
-          ne(),
-          Ee("div", $y, [
+          te(),
+          xe("div", $y, [
             g("div", My, [
               g("div", Iy, [
                 g(
                   "div",
                   { id: "perfChart", class: O(r(e.brightness)) },
                   [
-                    (ne(),
-                    Ee("svg", Oy, [
+                    (te(),
+                    xe("svg", Oy, [
                       Ay,
                       g(
                         "path",
@@ -16758,8 +16758,8 @@ const Zt = ky(Py),
                     class: O([r(e.brightness), "hidden sm:hidden md:block"]),
                   },
                   [
-                    (ne(),
-                    Ee("svg", zy, [
+                    (te(),
+                    xe("svg", zy, [
                       By,
                       g(
                         "path",
@@ -16844,7 +16844,7 @@ const Zt = ky(Py),
                               [
                                 Ie(" Problem "),
                                 he(
-                                  ye(E1),
+                                  we(E1),
                                   {
                                     size: "3rem",
                                     class: O([n(e.brightness), "inline mb-1"]),
@@ -16866,7 +16866,7 @@ const Zt = ky(Py),
                               [
                                 Ie(" What I can do "),
                                 he(
-                                  ye(x1),
+                                  we(x1),
                                   {
                                     size: "3rem",
                                     class: O([n(e.brightness), "inline mb-1"]),
@@ -16895,7 +16895,7 @@ const Zt = ky(Py),
       )
     },
   }),
-  Ky = gn(Yy, [["__scopeId", "data-v-3350a51b"]]),
+  Ky = vn(Yy, [["__scopeId", "data-v-3350a51b"]]),
   Xy = {
     class:
       "flex w-full gap-4 md:p-8 sm:p-4 items-center justify-center flex-wrap",
@@ -16961,10 +16961,10 @@ const Zt = ky(Py),
     __name: "PanelSecurity",
     props: { brightness: Number },
     setup(e) {
-      te(9274)
-      const t = te(4709),
-        n = te(new Date("2023-10-01")),
-        r = te(new Date()),
+      ne(9274)
+      const t = ne(4709),
+        n = ne(new Date("2023-10-01")),
+        r = ne(new Date()),
         s = me(
           () =>
             ((r.value.getFullYear() - n.value.getFullYear()) * 12 +
@@ -16985,8 +16985,8 @@ const Zt = ky(Py),
           if (o == 1) return "text-slate-300"
         }
       return (o, f) => (
-        ne(),
-        Ee("div", Xy, [
+        te(),
+        xe("div", Xy, [
           g("div", Jy, [
             g(
               "h2",
@@ -17046,7 +17046,7 @@ const Zt = ky(Py),
                   [
                     g("div", tw, [
                       he(
-                        ye($s),
+                        we($s),
                         { class: O(["mr-2", i(e.brightness)]), size: "2rem" },
                         null,
                         8,
@@ -17081,7 +17081,7 @@ const Zt = ky(Py),
                   [
                     g("div", sw, [
                       he(
-                        ye($s),
+                        we($s),
                         { size: "2rem", class: O(["mr-2", i(e.brightness)]) },
                         null,
                         8,
@@ -17116,7 +17116,7 @@ const Zt = ky(Py),
                   [
                     g("div", lw, [
                       he(
-                        ye($s),
+                        we($s),
                         { class: O(["mr-2", i(e.brightness)]), size: "2rem" },
                         null,
                         8,
@@ -17247,7 +17247,7 @@ const Zt = ky(Py),
           if (f == 2) return "text-orange-500"
           if (f == 1) return "text-orange-400"
         },
-        r = te(!1),
+        r = ne(!1),
         s = me(() =>
           r.value
             ? "bg-emerald-500 hover:bg-emerald-600"
@@ -17268,14 +17268,14 @@ const Zt = ky(Py),
           let c = document.querySelectorAll("tr"),
             p
           f == 5
-            ? (p = Zt("#e2e8f0"))
+            ? (p = tn("#e2e8f0"))
             : f == 4
-              ? (p = Zt("#cbd5e1"))
+              ? (p = tn("#cbd5e1"))
               : f == 3
-                ? (p = Zt("#475569"))
+                ? (p = tn("#475569"))
                 : f == 2
-                  ? (p = Zt("#1e293b"))
-                  : f == 1 && (p = Zt("#0f172a"))
+                  ? (p = tn("#1e293b"))
+                  : f == 1 && (p = tn("#0f172a"))
           for (let v = 1; v < c.length; v++)
             v % 2 == 0
               ? (c[v].style.backgroundColor = p.brighten(0))
@@ -17288,15 +17288,15 @@ const Zt = ky(Py),
         yt(() => {
           l(t.brightness)
         }),
-        zn(
+        Bn(
           () => t.brightness,
           (f, c) => {
             l(f)
           },
         ),
         (f, c) => (
-          ne(),
-          Ee("div", hw, [
+          te(),
+          xe("div", hw, [
             g("div", gw, [
               g(
                 "h2",
@@ -17373,8 +17373,8 @@ const Zt = ky(Py),
                     onClick: o,
                   },
                   [
-                    r.value ? (ne(), De(ye(Xc), { key: 0 })) : st("", !0),
-                    r.value ? st("", !0) : (ne(), De(ye(h1), { key: 1 })),
+                    r.value ? (te(), De(we(Xc), { key: 0 })) : st("", !0),
+                    r.value ? st("", !0) : (te(), De(we(h1), { key: 1 })),
                     Ie(" Toggle red/green color blind/screen reader mode "),
                   ],
                   2,
@@ -17385,7 +17385,7 @@ const Zt = ky(Py),
                   g(
                     "button",
                     { class: O(["rounded px-5 py-2 w-full", s.value]) },
-                    [r.value ? (ne(), De(ye(xu), { key: 0 })) : st("", !0)],
+                    [r.value ? (te(), De(we(xu), { key: 0 })) : st("", !0)],
                     2,
                   ),
                 ]),
@@ -17393,7 +17393,7 @@ const Zt = ky(Py),
                   g(
                     "button",
                     { class: O(["rounded px-5 py-2 w-full", a.value]) },
-                    [r.value ? (ne(), De(ye(yi), { key: 0 })) : st("", !0)],
+                    [r.value ? (te(), De(we(yi), { key: 0 })) : st("", !0)],
                     2,
                   ),
                 ]),
@@ -17420,7 +17420,7 @@ const Zt = ky(Py),
                       ]),
                       "aria-label": "Submit",
                     },
-                    [Ie(" Submit "), he(ye(xu))],
+                    [Ie(" Submit "), he(we(xu))],
                     2,
                   ),
                 ]),
@@ -17439,7 +17439,7 @@ const Zt = ky(Py),
                       ]),
                       "aria-label": "Cancel",
                     },
-                    [Ie(" Cancel "), he(ye(yi))],
+                    [Ie(" Cancel "), he(we(yi))],
                     2,
                   ),
                 ]),
@@ -17475,14 +17475,14 @@ const Zt = ky(Py),
     __name: "Services",
     props: { brightness: Number },
     setup(e) {
-      const t = te([
+      const t = ne([
         { id: 1, title: "Speed Optimization", icon: "GaugeCircle" },
         { id: 0, title: "Security Overhaul", icon: "ShieldCheck" },
         { id: 3, title: "Web Development", icon: "PencilRuler" },
         { id: 4, title: "Web Design", icon: "Frame" },
         { id: 5, title: "Accessibility", icon: "EyeOff" },
       ])
-      let n = te(0)
+      let n = ne(0)
       const r = (a, i, l, o) => {
           if (i) {
             if (a == 5) return l === o ? "bg-emerald-600" : "bg-emerald-500"
@@ -17512,24 +17512,24 @@ const Zt = ky(Py),
           if (a == 1) return "text-orange-400"
         }
       return (a, i) => (
-        ne(),
-        De(ye(nm), null, {
+        te(),
+        De(we(nm), null, {
           default: Xe(() => [
             he(
-              ye(rm),
+              we(rm),
               { class: "flex justify-center md:gap-5 sm:gap-1 py-5 flex-wrap" },
               {
                 default: Xe(() => [
-                  (ne(!0),
-                  Ee(
-                    Qe,
+                  (te(!0),
+                  xe(
+                    Je,
                     null,
-                    Bn(
+                    fn(
                       t.value,
                       (l) => (
-                        ne(),
+                        te(),
                         De(
-                          ye(sm),
+                          we(sm),
                           {
                             key: l.id,
                             class:
@@ -17543,7 +17543,7 @@ const Zt = ky(Py),
                                 {
                                   class: O([
                                     "flex flex-col justify-center gap-1 align-middle items-center rounded focus:outline-none active:outline-none outline-none p-3",
-                                    r(e.brightness, o, ye(n), l.id),
+                                    r(e.brightness, o, we(n), l.id),
                                   ]),
                                   style: { transition: "all 0.2s" },
                                   onMouseover: (f) =>
@@ -17555,9 +17555,9 @@ const Zt = ky(Py),
                                 },
                                 [
                                   l.id == 0
-                                    ? (ne(),
+                                    ? (te(),
                                       De(
-                                        ye($s),
+                                        we($s),
                                         {
                                           key: 0,
                                           size: "3rem",
@@ -17570,9 +17570,9 @@ const Zt = ky(Py),
                                       ))
                                     : st("", !0),
                                   l.id == 1
-                                    ? (ne(),
+                                    ? (te(),
                                       De(
-                                        ye(v1),
+                                        we(v1),
                                         {
                                           key: 1,
                                           size: "3rem",
@@ -17585,9 +17585,9 @@ const Zt = ky(Py),
                                       ))
                                     : st("", !0),
                                   l.id == 4
-                                    ? (ne(),
+                                    ? (te(),
                                       De(
-                                        ye(g1),
+                                        we(g1),
                                         {
                                           key: 2,
                                           size: "3rem",
@@ -17600,9 +17600,9 @@ const Zt = ky(Py),
                                       ))
                                     : st("", !0),
                                   l.id == 3
-                                    ? (ne(),
+                                    ? (te(),
                                       De(
-                                        ye(w1),
+                                        we(w1),
                                         {
                                           key: 3,
                                           size: "3rem",
@@ -17615,9 +17615,9 @@ const Zt = ky(Py),
                                       ))
                                     : st("", !0),
                                   l.id == 5
-                                    ? (ne(),
+                                    ? (te(),
                                       De(
-                                        ye(Xc),
+                                        we(Xc),
                                         {
                                           key: 4,
                                           size: "3rem",
@@ -17659,12 +17659,12 @@ const Zt = ky(Py),
               },
             ),
             he(
-              ye(am),
+              we(am),
               { class: "flex justify-center gap-5 w-full" },
               {
                 default: Xe(() => [
                   he(
-                    ye(zr),
+                    we(zr),
                     { class: "flex justify-center gap-5 w-full" },
                     {
                       default: Xe(() => [
@@ -17676,7 +17676,7 @@ const Zt = ky(Py),
                     },
                   ),
                   he(
-                    ye(zr),
+                    we(zr),
                     { class: "flex justify-center gap-5 w-full" },
                     {
                       default: Xe(() => [
@@ -17688,7 +17688,7 @@ const Zt = ky(Py),
                     },
                   ),
                   he(
-                    ye(zr),
+                    we(zr),
                     { class: "flex justify-center gap-5 w-full" },
                     {
                       default: Xe(() => [
@@ -17700,7 +17700,7 @@ const Zt = ky(Py),
                     },
                   ),
                   he(
-                    ye(zr),
+                    we(zr),
                     { class: "flex justify-center gap-5 w-full" },
                     {
                       default: Xe(() => [
@@ -17712,7 +17712,7 @@ const Zt = ky(Py),
                     },
                   ),
                   he(
-                    ye(zr),
+                    we(zr),
                     { class: "flex justify-center gap-5 w-full" },
                     {
                       default: Xe(() => [
@@ -17738,7 +17738,7 @@ const Zt = ky(Py),
     __name: "messageBanner",
     props: { brightness: Number },
     setup(e) {
-      const t = te(!1)
+      const t = ne(!1)
       yt(() => {
         const r = () => {
           ;(t.value = window.scrollY > 200),
@@ -17756,8 +17756,8 @@ const Zt = ky(Py),
         if (r == 1) return "text-slate-300"
       }
       return (r, s) => (
-        ne(),
-        Ee(
+        te(),
+        xe(
           "div",
           {
             style: { transition: "opacity 0.5s ease-in-out" },
@@ -17848,8 +17848,8 @@ const Zt = ky(Py),
             ke = document.getElementsByName("website")[0].value,
             tt = document.getElementsByName("notes")[0].value,
             nt = document.getElementsByName("services")[0].value,
-            Yt = document.getElementsByName("total")[0].value,
-            Rt = window.location.href,
+            Jt = document.getElementsByName("total")[0].value,
+            Dt = window.location.href,
             Ct = new XMLHttpRequest()
           Ct.open(
             "POST",
@@ -17865,8 +17865,8 @@ const Zt = ky(Py),
                 website: ke,
                 notes: tt,
                 services: nt,
-                total: Yt,
-                referrer: Rt,
+                total: Jt,
+                referrer: Dt,
               }),
             ),
             (Ct.onloadend = function () {
@@ -17921,7 +17921,7 @@ const Zt = ky(Py),
           if (F == 2) return "text-slate-300"
           if (F == 1) return "text-slate-300"
         },
-        l = te({
+        l = ne({
           speed: {
             audit: {
               price: 0,
@@ -18112,7 +18112,7 @@ const Zt = ky(Py),
                 : F.title == "Design Overhaul" && se()
         },
         G = (F) => Object.values(F.services).some((oe) => oe.enabled),
-        D = te([
+        D = ne([
           {
             title: "Speed",
             services: l.value.speed,
@@ -18153,7 +18153,7 @@ const Zt = ky(Py),
         X = me(
           () => Q(D.value[0]) + Q(D.value[1]) + Q(D.value[2]) + Q(D.value[3]),
         ),
-        xe = me(() => {
+        Se = me(() => {
           let F = []
           for (const [oe, V] of Object.entries(l.value.speed))
             V.enabled && F.push(V.title)
@@ -18182,8 +18182,8 @@ const Zt = ky(Py),
           )
         }
       return (F, oe) => (
-        ne(),
-        Ee("div", Mw, [
+        te(),
+        xe("div", Mw, [
           g("div", Iw, [
             g(
               "h2",
@@ -18222,15 +18222,15 @@ const Zt = ky(Py),
               2,
             ),
           ]),
-          (ne(!0),
-          Ee(
-            Qe,
+          (te(!0),
+          xe(
+            Je,
             null,
-            Bn(
+            fn(
               D.value,
               (V, Ye) => (
-                ne(),
-                Ee(
+                te(),
+                xe(
                   "div",
                   {
                     key: Ye,
@@ -18283,7 +18283,7 @@ const Zt = ky(Py),
                           },
                           [
                             ge(V) != Math.floor(Q(V))
-                              ? (ne(), Ee("span", Rw, "$" + Pt(ge(V)), 1))
+                              ? (te(), xe("span", Rw, "$" + Pt(ge(V)), 1))
                               : st("", !0),
                             Ie("$" + Pt(Q(V)), 1),
                           ],
@@ -18298,15 +18298,15 @@ const Zt = ky(Py),
                       2,
                     ),
                     g("div", jw, [
-                      (ne(!0),
-                      Ee(
-                        Qe,
+                      (te(!0),
+                      xe(
+                        Je,
                         null,
-                        Bn(
+                        fn(
                           V.services,
                           (ke, tt) => (
-                            ne(),
-                            Ee(
+                            te(),
+                            xe(
                               "div",
                               {
                                 key: tt,
@@ -18338,12 +18338,12 @@ const Zt = ky(Py),
                                     [
                                       ke.title ==
                                       "Detailed speed audit (100% free)"
-                                        ? (ne(),
-                                          Ee("b", Hw, [
+                                        ? (te(),
+                                          xe("b", Hw, [
                                             g("em", null, Pt(ke.title), 1),
                                           ]))
-                                        : (ne(),
-                                          Ee("span", Gw, Pt(ke.title), 1)),
+                                        : (te(),
+                                          xe("span", Gw, Pt(ke.title), 1)),
                                     ],
                                     2,
                                   ),
@@ -18360,8 +18360,8 @@ const Zt = ky(Py),
                                     [
                                       ke.price !=
                                       Math.floor(ke.price * V.discount)
-                                        ? (ne(),
-                                          Ee("span", Ww, "$" + Pt(ke.price), 1))
+                                        ? (te(),
+                                          xe("span", Ww, "$" + Pt(ke.price), 1))
                                         : st("", !0),
                                       Ie("$" + Pt(ke.price * V.discount), 1),
                                     ],
@@ -18396,7 +18396,7 @@ const Zt = ky(Py),
                 { class: O(["text-4xl text-bold", r(n.brightness)]) },
                 [
                   X.value != Math.floor(X.value)
-                    ? (ne(), Ee("span", Yw, "$" + Pt(X.value), 1))
+                    ? (te(), xe("span", Yw, "$" + Pt(X.value), 1))
                     : st("", !0),
                   Ie("$" + Pt(X.value), 1),
                 ],
@@ -18407,7 +18407,7 @@ const Zt = ky(Py),
           g("form", Kw, [
             g(
               "input",
-              { type: "hidden", name: "services", value: xe.value },
+              { type: "hidden", name: "services", value: Se.value },
               null,
               8,
               Xw,
@@ -18530,13 +18530,13 @@ const Zt = ky(Py),
       )
     },
   },
-  ax = gn(sx, [["__scopeId", "data-v-e20b9d11"]]),
+  ax = vn(sx, [["__scopeId", "data-v-e20b9d11"]]),
   ix = {
     __name: "Pricing",
     props: { brightness: Number },
     setup(e) {
       return (t, n) => (
-        ne(), De(ax, { brightness: e.brightness }, null, 8, ["brightness"])
+        te(), De(ax, { brightness: e.brightness }, null, 8, ["brightness"])
       )
     },
   },
@@ -18606,8 +18606,8 @@ const Zt = ky(Py),
             })
         }
       return (s, a) => (
-        ne(),
-        Ee("div", lx, [
+        te(),
+        xe("div", lx, [
           g("div", ox, [
             g(
               "h2",
@@ -18679,15 +18679,15 @@ const Zt = ky(Py),
       )
     },
   },
-  nn =
+  Rt =
     '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>',
-  rn = '</title><path d="',
-  sn = '"/></svg>',
+  jt = '</title><path d="',
+  Ft = '"/></svg>',
   Rr = {
     title: "Bootstrap",
     slug: "bootstrap",
     get svg() {
-      return nn + "Bootstrap" + rn + this.path + sn
+      return Rt + "Bootstrap" + jt + this.path + Ft
     },
     path: "M11.77 11.24H9.956V8.202h2.152c1.17 0 1.834.522 1.834 1.466 0 1.008-.773 1.572-2.174 1.572zm.324 1.206H9.957v3.348h2.231c1.459 0 2.232-.585 2.232-1.685s-.795-1.663-2.326-1.663zM24 11.39v1.218c-1.128.108-1.817.944-2.226 2.268-.407 1.319-.463 2.937-.42 4.186.045 1.3-.968 2.5-2.337 2.5H4.985c-1.37 0-2.383-1.2-2.337-2.5.043-1.249-.013-2.867-.42-4.186-.41-1.324-1.1-2.16-2.228-2.268V11.39c1.128-.108 1.819-.944 2.227-2.268.408-1.319.464-2.937.42-4.186-.045-1.3.968-2.5 2.338-2.5h14.032c1.37 0 2.382 1.2 2.337 2.5-.043 1.249.013 2.867.42 4.186.409 1.324 1.098 2.16 2.226 2.268zm-7.927 2.817c0-1.354-.953-2.333-2.368-2.488v-.057c1.04-.169 1.856-1.135 1.856-2.213 0-1.537-1.213-2.538-3.062-2.538h-4.16v10.172h4.181c2.218 0 3.553-1.086 3.553-2.876z",
     source: "https://getbootstrap.com/docs/5.3/about/brand",
@@ -18699,7 +18699,7 @@ const Zt = ky(Py),
     title: "Cloudflare",
     slug: "cloudflare",
     get svg() {
-      return nn + "Cloudflare" + rn + this.path + sn
+      return Rt + "Cloudflare" + jt + this.path + Ft
     },
     path: "M16.5088 16.8447c.1475-.5068.0908-.9707-.1553-1.3154-.2246-.3164-.6045-.499-1.0615-.5205l-8.6592-.1123a.1559.1559 0 0 1-.1333-.0713c-.0283-.042-.0351-.0986-.021-.1553.0278-.084.1123-.1484.2036-.1562l8.7359-.1123c1.0351-.0489 2.1601-.8868 2.5537-1.9136l.499-1.3013c.0215-.0561.0293-.1128.0147-.168-.5625-2.5463-2.835-4.4453-5.5499-4.4453-2.5039 0-4.6284 1.6177-5.3876 3.8614-.4927-.3658-1.1187-.5625-1.794-.499-1.2026.119-2.1665 1.083-2.2861 2.2856-.0283.31-.0069.6128.0635.894C1.5683 13.171 0 14.7754 0 16.752c0 .1748.0142.3515.0352.5273.0141.083.0844.1475.1689.1475h15.9814c.0909 0 .1758-.0645.2032-.1553l.12-.4268zm2.7568-5.5634c-.0771 0-.1611 0-.2383.0112-.0566 0-.1054.0415-.127.0976l-.3378 1.1744c-.1475.5068-.0918.9707.1543 1.3164.2256.3164.6055.498 1.0625.5195l1.8437.1133c.0557 0 .1055.0263.1329.0703.0283.043.0351.1074.0214.1562-.0283.084-.1132.1485-.204.1553l-1.921.1123c-1.041.0488-2.1582.8867-2.5527 1.914l-.1406.3585c-.0283.0713.0215.1416.0986.1416h6.5977c.0771 0 .1474-.0489.169-.126.1122-.4082.1757-.837.1757-1.2803 0-2.6025-2.125-4.727-4.7344-4.727",
     source: "https://www.cloudflare.com/logo/",
@@ -18710,7 +18710,7 @@ const Zt = ky(Py),
     title: "Figma",
     slug: "figma",
     get svg() {
-      return nn + "Figma" + rn + this.path + sn
+      return Rt + "Figma" + jt + this.path + Ft
     },
     path: "M15.852 8.981h-4.588V0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.491-4.49 4.491zM12.735 7.51h3.117c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-3.117V7.51zm0 1.471H8.148c-2.476 0-4.49-2.014-4.49-4.49S5.672 0 8.148 0h4.588v8.981zm-4.587-7.51c-1.665 0-3.019 1.355-3.019 3.019s1.354 3.02 3.019 3.02h3.117V1.471H8.148zm4.587 15.019H8.148c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h4.588v8.98zM8.148 8.981c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h3.117V8.981H8.148zM8.172 24c-2.489 0-4.515-2.014-4.515-4.49s2.014-4.49 4.49-4.49h4.588v4.441c0 2.503-2.047 4.539-4.563 4.539zm-.024-7.51a3.023 3.023 0 0 0-3.019 3.019c0 1.665 1.365 3.019 3.044 3.019 1.705 0 3.093-1.376 3.093-3.068v-2.97H8.148zm7.704 0h-.098c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h.098c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.49-4.49 4.49zm-.097-7.509c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h.098c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-.098z",
     source: "https://www.figma.com/using-the-figma-brand/",
@@ -18718,10 +18718,32 @@ const Zt = ky(Py),
     guidelines: "https://www.figma.com/using-the-figma-brand/",
   },
   px = {
+    title: "GitHub",
+    slug: "github",
+    get svg() {
+      return Rt + "GitHub" + jt + this.path + Ft
+    },
+    path: "M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12",
+    source: "https://github.com/logos",
+    hex: "181717",
+    guidelines: "https://github.com/logos",
+  },
+  hx = {
+    title: "Instagram",
+    slug: "instagram",
+    get svg() {
+      return Rt + "Instagram" + jt + this.path + Ft
+    },
+    path: "M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077",
+    source: "https://about.meta.com/brand/resources/instagram",
+    hex: "E4405F",
+    guidelines: "https://about.meta.com/brand/resources/instagram",
+  },
+  gx = {
     title: "JavaScript",
     slug: "javascript",
     get svg() {
-      return nn + "JavaScript" + rn + this.path + sn
+      return Rt + "JavaScript" + jt + this.path + Ft
     },
     path: "M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z",
     source:
@@ -18729,22 +18751,22 @@ const Zt = ky(Py),
     hex: "F7DF1E",
     license: { type: "MIT", url: "https://spdx.org/licenses/MIT" },
   },
-  hx = {
+  vx = {
     title: "LinkedIn",
     slug: "linkedin",
     get svg() {
-      return nn + "LinkedIn" + rn + this.path + sn
+      return Rt + "LinkedIn" + jt + this.path + Ft
     },
     path: "M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z",
     source: "https://brand.linkedin.com",
     hex: "0A66C2",
     guidelines: "https://brand.linkedin.com/policies",
   },
-  gx = {
+  mx = {
     title: "NGINX",
     slug: "nginx",
     get svg() {
-      return nn + "NGINX" + rn + this.path + sn
+      return Rt + "NGINX" + jt + this.path + Ft
     },
     path: "M12 0L1.605 6v12L12 24l10.395-6V6L12 0zm6 16.59c0 .705-.646 1.29-1.529 1.29-.631 0-1.351-.255-1.801-.81l-6-7.141v6.66c0 .721-.57 1.29-1.274 1.29H7.32c-.721 0-1.29-.6-1.29-1.29V7.41c0-.705.63-1.29 1.5-1.29.646 0 1.38.255 1.83.81l5.97 7.141V7.41c0-.721.6-1.29 1.29-1.29h.075c.72 0 1.29.6 1.29 1.29v9.18H18z",
     source: "https://www.nginx.com/press/",
@@ -18755,7 +18777,7 @@ const Zt = ky(Py),
     title: "PHP",
     slug: "php",
     get svg() {
-      return nn + "PHP" + rn + this.path + sn
+      return Rt + "PHP" + jt + this.path + Ft
     },
     path: "M7.01 10.207h-.944l-.515 2.648h.838c.556 0 .97-.105 1.242-.314.272-.21.455-.559.55-1.049.092-.47.05-.802-.124-.995-.175-.193-.523-.29-1.047-.29zM12 5.688C5.373 5.688 0 8.514 0 12s5.373 6.313 12 6.313S24 15.486 24 12c0-3.486-5.373-6.312-12-6.312zm-3.26 7.451c-.261.25-.575.438-.917.551-.336.108-.765.164-1.285.164H5.357l-.327 1.681H3.652l1.23-6.326h2.65c.797 0 1.378.209 1.744.628.366.418.476 1.002.33 1.752a2.836 2.836 0 0 1-.305.847c-.143.255-.33.49-.561.703zm4.024.715l.543-2.799c.063-.318.039-.536-.068-.651-.107-.116-.336-.174-.687-.174H11.46l-.704 3.625H9.388l1.23-6.327h1.367l-.327 1.682h1.218c.767 0 1.295.134 1.586.401s.378.7.263 1.299l-.572 2.944h-1.389zm7.597-2.265a2.782 2.782 0 0 1-.305.847c-.143.255-.33.49-.561.703a2.44 2.44 0 0 1-.917.551c-.336.108-.765.164-1.286.164h-1.18l-.327 1.682h-1.378l1.23-6.326h2.649c.797 0 1.378.209 1.744.628.366.417.477 1.001.331 1.751zM17.766 10.207h-.943l-.516 2.648h.838c.557 0 .971-.105 1.242-.314.272-.21.455-.559.551-1.049.092-.47.049-.802-.125-.995s-.524-.29-1.047-.29z",
     source: "https://php.net/download-logos.php",
@@ -18765,22 +18787,33 @@ const Zt = ky(Py),
       url: "https://spdx.org/licenses/CC-BY-SA-4.0",
     },
   },
-  vx = {
+  bx = {
     title: "Tailwind CSS",
     slug: "tailwindcss",
     get svg() {
-      return nn + "Tailwind CSS" + rn + this.path + sn
+      return Rt + "Tailwind CSS" + jt + this.path + Ft
     },
     path: "M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z",
     source: "https://tailwindcss.com/brand",
     hex: "06B6D4",
     guidelines: "https://tailwindcss.com/brand",
   },
+  yx = {
+    title: "Twitter",
+    slug: "twitter",
+    get svg() {
+      return Rt + "Twitter" + jt + this.path + Ft
+    },
+    path: "M21.543 7.104c.015.211.015.423.015.636 0 6.507-4.954 14.01-14.01 14.01v-.003A13.94 13.94 0 0 1 0 19.539a9.88 9.88 0 0 0 7.287-2.041 4.93 4.93 0 0 1-4.6-3.42 4.916 4.916 0 0 0 2.223-.084A4.926 4.926 0 0 1 .96 9.167v-.062a4.887 4.887 0 0 0 2.235.616A4.928 4.928 0 0 1 1.67 3.148 13.98 13.98 0 0 0 11.82 8.292a4.929 4.929 0 0 1 8.39-4.49 9.868 9.868 0 0 0 3.128-1.196 4.941 4.941 0 0 1-2.165 2.724A9.828 9.828 0 0 0 24 4.555a10.019 10.019 0 0 1-2.457 2.549z",
+    source: "https://brand.twitter.com",
+    hex: "1D9BF0",
+    guidelines: "https://about.twitter.com/en/who-we-are/brand-toolkit",
+  },
   Pu = {
     title: "Vue.js",
     slug: "vuedotjs",
     get svg() {
-      return nn + "Vue.js" + rn + this.path + sn
+      return Rt + "Vue.js" + jt + this.path + Ft
     },
     path: "M24,1.61H14.06L12,5.16,9.94,1.61H0L12,22.39ZM12,14.08,5.16,2.23H9.59L12,6.41l2.41-4.18h4.43Z",
     source:
@@ -18793,23 +18826,23 @@ const Zt = ky(Py),
       url: "https://spdx.org/licenses/CC-BY-NC-SA-4.0",
     },
   },
-  Tn = {
+  kn = {
     title: "WordPress",
     slug: "wordpress",
     get svg() {
-      return nn + "WordPress" + rn + this.path + sn
+      return Rt + "WordPress" + jt + this.path + Ft
     },
     path: "M21.469 6.825c.84 1.537 1.318 3.3 1.318 5.175 0 3.979-2.156 7.456-5.363 9.325l3.295-9.527c.615-1.54.82-2.771.82-3.864 0-.405-.026-.78-.07-1.11m-7.981.105c.647-.03 1.232-.105 1.232-.105.582-.075.514-.93-.067-.899 0 0-1.755.135-2.88.135-1.064 0-2.85-.15-2.85-.15-.585-.03-.661.855-.075.885 0 0 .54.061 1.125.09l1.68 4.605-2.37 7.08L5.354 6.9c.649-.03 1.234-.1 1.234-.1.585-.075.516-.93-.065-.896 0 0-1.746.138-2.874.138-.2 0-.438-.008-.69-.015C4.911 3.15 8.235 1.215 12 1.215c2.809 0 5.365 1.072 7.286 2.833-.046-.003-.091-.009-.141-.009-1.06 0-1.812.923-1.812 1.914 0 .89.513 1.643 1.06 2.531.411.72.89 1.643.89 2.977 0 .915-.354 1.994-.821 3.479l-1.075 3.585-3.9-11.61.001.014zM12 22.784c-1.059 0-2.081-.153-3.048-.437l3.237-9.406 3.315 9.087c.024.053.05.101.078.149-1.12.393-2.325.609-3.582.609M1.211 12c0-1.564.336-3.05.935-4.39L7.29 21.709C3.694 19.96 1.212 16.271 1.211 12M12 0C5.385 0 0 5.385 0 12s5.385 12 12 12 12-5.385 12-12S18.615 0 12 0",
     source: "https://wordpress.org/about/logos",
     hex: "21759B",
     guidelines: "https://wordpressfoundation.org/trademark-policy",
   },
-  fd = (e) => (Qr("data-v-159fa305"), (e = e()), es(), e),
-  mx = { class: "flex-col w-full" },
-  bx = { class: "p-5 flex-col w-full" },
-  yx = { class: "grid grid-cols-6" },
-  wx = { class: "col-span-2 sm:col-span-2 md:col-span-1" },
-  xx = fd(() =>
+  fd = (e) => (Qr("data-v-691479d8"), (e = e()), es(), e),
+  wx = { class: "flex-col w-full" },
+  xx = { class: "p-5 flex-col w-full" },
+  Sx = { class: "grid grid-cols-6" },
+  Ex = { class: "col-span-2 sm:col-span-2 md:col-span-1" },
+  _x = fd(() =>
     g(
       "div",
       { class: "square-image-container" },
@@ -18823,56 +18856,76 @@ const Zt = ky(Py),
       -1,
     ),
   ),
-  Sx = { class: "flex" },
-  Ex = { class: "col-span-4 sm:col-span-4 md:col-span-5 prose" },
-  _x = fd(() => g("em", null, "About me", -1)),
-  Cx = [_x],
-  Tx = {
+  Cx = { class: "flex gap-2 mt-4 justify-center items-center" },
+  Tx = { class: "flex gap-2 mt-4 justify-center items-center" },
+  kx = {
+    viewBox: "0 0 32 32",
+    xmlns: "http://www.w3.org/2000/svg",
+    fill: "currentColor",
+    width: "100%",
+    height: "100%",
+  },
+  Px = ["d"],
+  $x = { class: "col-span-4 sm:col-span-4 md:col-span-5 prose" },
+  Mx = fd(() => g("em", null, "About me", -1)),
+  Ix = [Mx],
+  Ox = {
     __name: "AboutMe",
     props: { brightness: Number },
     setup(e) {
       const t = e,
-        n = (s) => {
-          if (s >= 4) return "text-slate-800"
-          if (s == 3) return "text-slate-200"
-          if (s == 2) return "text-slate-300"
-          if (s == 1) return "text-slate-300"
+        n = (a) => {
+          if (a >= 4) return "text-slate-800"
+          if (a == 3) return "text-slate-200"
+          if (a == 2) return "text-slate-300"
+          if (a == 1) return "text-slate-300"
         },
-        r = (s) => {
-          if (s >= 4) return "text-emerald-500"
-          if (s == 3) return "text-orange-600"
-          if (s == 2) return "text-orange-500"
-          if (s == 1) return "text-orange-400"
-        }
-      return (s, a) => (
-        ne(),
-        Ee("div", mx, [
-          g("div", bx, [
-            g("div", yx, [
-              g("div", wx, [
-                xx,
-                g("div", Sx, [
-                  g(
-                    "a",
-                    {
-                      href: "https://www.linkedin.com/in/josephclaytonhansen/",
-                      target: "_blank",
-                      rel: "noopener noreferrer",
-                      class: O(r(t.brightness)),
-                    },
-                    [he(ye(hx), { class: "w-8 h-8" })],
-                    2,
-                  ),
+        r = (a) => {
+          if (a >= 4) return "text-emerald-500"
+          if (a == 3) return "text-orange-600"
+          if (a == 2) return "text-orange-500"
+          if (a == 1) return "text-orange-400"
+        },
+        s = [vx, px, yx, hx]
+      return (a, i) => (
+        te(),
+        xe("div", wx, [
+          g("div", xx, [
+            g("div", Sx, [
+              g("div", Ex, [
+                _x,
+                g("div", Cx, [
+                  g("div", Tx, [
+                    (te(),
+                    xe(
+                      Je,
+                      null,
+                      fn(s, (l, o) =>
+                        g(
+                          "div",
+                          { key: o, class: O(["flex-1", r(t.brightness)]) },
+                          [
+                            (te(),
+                            xe("svg", kx, [
+                              g("path", { d: l.path }, null, 8, Px),
+                            ])),
+                          ],
+                          2,
+                        ),
+                      ),
+                      64,
+                    )),
+                  ]),
                 ]),
               ]),
-              g("div", Ex, [
+              g("div", $x, [
                 g(
                   "h1",
                   { class: O(["text-5xl font-bold mb-0", n(t.brightness)]) },
                   " Joseph Hansen ",
                   2,
                 ),
-                g("h2", { class: O(["text-xl mt-2", n(t.brightness)]) }, Cx, 2),
+                g("h2", { class: O(["text-xl mt-2", n(t.brightness)]) }, Ix, 2),
                 g("p", { class: O(n(t.brightness)) }, null, 2),
               ]),
             ]),
@@ -18881,23 +18934,23 @@ const Zt = ky(Py),
       )
     },
   },
-  kx = gn(Tx, [["__scopeId", "data-v-159fa305"]]),
-  Px = { class: "flex-col w-full lg:w-9/12 md:w-10/12 sm:wd-11/12" },
-  $x = { class: "py-5 flex-col w-full" },
-  Mx = { class: "prose" },
-  Ix = ["onMouseover", "onClick"],
-  Ox = { class: "image-container" },
-  Ax = ["src", "alt"],
-  Lx = { class: "flex gap-2 items-center" },
-  zx = {
+  Ax = vn(Ox, [["__scopeId", "data-v-691479d8"]]),
+  Lx = { class: "flex-col w-full lg:w-9/12 md:w-10/12 sm:wd-11/12" },
+  zx = { class: "py-5 flex-col w-full" },
+  Bx = { class: "prose" },
+  Nx = ["onMouseover", "onClick"],
+  Rx = { class: "image-container" },
+  jx = ["src", "alt"],
+  Fx = { class: "flex gap-2 items-center" },
+  Dx = {
     viewBox: "0 0 24 24",
     xmlns: "http://www.w3.org/2000/svg",
     fill: "currentColor",
     width: "24px",
     height: "24px",
   },
-  Bx = ["d"],
-  Nx = {
+  Hx = ["d"],
+  Gx = {
     __name: "Portfolio",
     props: { brightness: Number },
     setup(e) {
@@ -18914,76 +18967,76 @@ const Zt = ky(Py),
           if (l == 2) return "text-orange-500"
           if (l == 1) return "text-orange-400"
         },
-        s = te([
+        s = ne([
           {
-            icons: [Tn, ku, fx],
+            icons: [kn, ku, fx],
             title: "BlenderNation Bazaar",
             image: Zi,
             link: "/portfolio/bazaar",
           },
           {
-            icons: [Pu, gx, dx],
+            icons: [Pu, mx, dx],
             title: "OKC South Stake",
             image: ud,
             link: "/portfolio/okc-south-stake",
           },
         ]),
-        a = te([
+        a = ne([
           {
-            icons: [Tn, px],
+            icons: [kn, gx],
             title: "Build On Your Land",
             image: cd,
             link: "/portfolio/build-on-your-land",
           },
           {
-            icons: [Tn, ku],
+            icons: [kn, ku],
             title: "Stuart Pipe and Hose",
             image: Qi,
             link: "/portfolio/stuart-pipe",
           },
           {
-            icons: [Tn, Rr],
+            icons: [kn, Rr],
             title: "Atlanta Floor One",
             image: el,
             link: "/portfolio/atlanta-floor-one",
           },
           {
-            icons: [Tn, Rr],
+            icons: [kn, Rr],
             title: "Swim State Pool",
             image: tl,
             link: "/portfolio/swim-state-pool",
           },
           {
             title: "josephhansen.dev",
-            icons: [Pu, vx],
+            icons: [Pu, bx],
             image: nl,
             link: "/portfolio/josephhansen-dev",
           },
           {
             title: "Tub Boys",
-            icons: [Tn, Rr],
+            icons: [kn, Rr],
             image: rl,
             link: "/portfolio/tub-boys",
           },
           {
             title: "Stehl Family Dental",
-            icons: [Tn, Rr],
+            icons: [kn, Rr],
             image: sl,
             link: "/portfolio/stehl-family-dental",
           },
           {
             title: "Aris",
-            icons: [Tn, Rr],
+            icons: [kn, Rr],
             image: al,
             link: "/portfolio/aris-search",
           },
         ]),
-        i = te(null)
+        i = ne(null)
       return (l, o) => (
-        ne(),
-        Ee("div", Px, [
-          g("div", $x, [
-            g("span", Mx, [
+        te(),
+        xe("div", Lx, [
+          g("div", zx, [
+            g("span", Bx, [
               g(
                 "h2",
                 {
@@ -19009,15 +19062,15 @@ const Zt = ky(Py),
               ),
             ]),
           ]),
-          (ne(!0),
-          Ee(
-            Qe,
+          (te(!0),
+          xe(
+            Je,
             null,
-            Bn(
+            fn(
               [s.value, a.value],
               (f) => (
-                ne(),
-                Ee(
+                te(),
+                xe(
                   "div",
                   {
                     class: O([
@@ -19029,15 +19082,15 @@ const Zt = ky(Py),
                     ]),
                   },
                   [
-                    (ne(!0),
-                    Ee(
-                      Qe,
+                    (te(!0),
+                    xe(
+                      Je,
                       null,
-                      Bn(
+                      fn(
                         f,
                         (c) => (
-                          ne(),
-                          Ee(
+                          te(),
+                          xe(
                             "div",
                             {
                               class:
@@ -19055,7 +19108,7 @@ const Zt = ky(Py),
                               }),
                             },
                             [
-                              g("div", Ox, [
+                              g("div", Rx, [
                                 g(
                                   "img",
                                   {
@@ -19066,7 +19119,7 @@ const Zt = ky(Py),
                                   },
                                   null,
                                   8,
-                                  Ax,
+                                  jx,
                                 ),
                               ]),
                               g("div", null, [
@@ -19099,16 +19152,16 @@ const Zt = ky(Py),
                                           3,
                                         ),
                                       ]),
-                                      g("div", Lx, [
-                                        (ne(!0),
-                                        Ee(
-                                          Qe,
+                                      g("div", Fx, [
+                                        (te(!0),
+                                        xe(
+                                          Je,
                                           null,
-                                          Bn(
+                                          fn(
                                             c.icons,
                                             (p, v) => (
-                                              ne(),
-                                              Ee(
+                                              te(),
+                                              xe(
                                                 "div",
                                                 {
                                                   key: v,
@@ -19129,14 +19182,14 @@ const Zt = ky(Py),
                                                   ]),
                                                 },
                                                 [
-                                                  (ne(),
-                                                  Ee("svg", zx, [
+                                                  (te(),
+                                                  xe("svg", Dx, [
                                                     g(
                                                       "path",
                                                       { d: p.path },
                                                       null,
                                                       8,
-                                                      Bx,
+                                                      Hx,
                                                     ),
                                                   ])),
                                                 ],
@@ -19154,7 +19207,7 @@ const Zt = ky(Py),
                               ]),
                             ],
                             44,
-                            Ix,
+                            Nx,
                           )
                         ),
                       ),
@@ -19171,42 +19224,42 @@ const Zt = ky(Py),
       )
     },
   },
-  Rx = gn(Nx, [["__scopeId", "data-v-2bda4711"]]),
-  jx = g(
+  Vx = vn(Gx, [["__scopeId", "data-v-2bda4711"]]),
+  Wx = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     " The vision: a one-stop shop for Blender users ",
     -1,
   ),
-  Fx = g("p", null, "Lorem ipsum", -1),
-  Dx = g(
+  qx = g("p", null, "Lorem ipsum", -1),
+  Ux = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     " Tight deadlines and high stakes ",
     -1,
   ),
-  Hx = g("p", null, "Lorem ipsum", -1),
-  Gx = g(
+  Yx = g("p", null, "Lorem ipsum", -1),
+  Kx = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     "From concept to results",
     -1,
   ),
-  Vx = g("p", null, "Lorem ipsum", -1),
-  Wx = g(
+  Xx = g("p", null, "Lorem ipsum", -1),
+  Jx = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     " Security- keeping the Bazaar safe ",
     -1,
   ),
-  qx = g("p", null, "Lorem ipsum", -1),
-  Ux = "https://bazaar.blendernation.com",
-  Yx = "BlenderNation Bazaar",
-  Kx = {
+  Zx = g("p", null, "Lorem ipsum", -1),
+  Qx = "https://bazaar.blendernation.com",
+  e3 = "BlenderNation Bazaar",
+  t3 = {
     __name: "Bazaar",
     setup(e) {
-      const t = te([Zi, J2, Z2, Q2, ey]),
-        n = te([
+      const t = ne([Zi, J2, Z2, Q2, ey]),
+        n = ne([
           "Bazaar homepage",
           "Bazaar collection page",
           "Bazaar user page",
@@ -19214,27 +19267,27 @@ const Zt = ky(Py),
           "Bazaar product listing",
         ])
       return (r, s) => (
-        ne(),
+        te(),
         De(
-          mn,
+          bn,
           {
             images: t.value,
             captions: n.value,
-            link: Ux,
-            title: Yx,
+            link: Qx,
+            title: e3,
             brightness: r.brightness,
           },
           {
             default: Xe(() => [
-              tn(r.$slots, "default", {}, () => [
-                jx,
-                Fx,
-                Dx,
-                Hx,
-                Gx,
-                Vx,
+              sn(r.$slots, "default", {}, () => [
                 Wx,
                 qx,
+                Ux,
+                Yx,
+                Kx,
+                Xx,
+                Jx,
+                Zx,
               ]),
             ]),
             _: 3,
@@ -19245,48 +19298,48 @@ const Zt = ky(Py),
       )
     },
   },
-  Xx = {
+  n3 = {
     __name: "OkcSouthStake",
     props: { brightness: Number },
     setup(e) {
       return (t, n) => null
     },
   },
-  Jx = g(
+  r3 = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     " Stark colors + clean white and transparency ",
     -1,
   ),
-  Zx = g("p", null, "Lorem ipsum", -1),
-  Qx = g(
+  s3 = g("p", null, "Lorem ipsum", -1),
+  a3 = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     "Geometric effects",
     -1,
   ),
-  e5 = g("p", null, "Lorem ipsum", -1),
-  t5 = "https://arissearch.com//",
-  n5 = "Aris Search",
-  r5 = {
+  i3 = g("p", null, "Lorem ipsum", -1),
+  l3 = "https://arissearch.com//",
+  o3 = "Aris Search",
+  u3 = {
     __name: "ArisSearch",
     setup(e) {
-      const t = te([al, sy]),
-        n = te(["Aris Search homepage", "Aris Search image effects"])
+      const t = ne([al, sy]),
+        n = ne(["Aris Search homepage", "Aris Search image effects"])
       return (r, s) => (
-        ne(),
+        te(),
         De(
-          mn,
+          bn,
           {
             images: t.value,
             captions: n.value,
-            link: t5,
-            title: n5,
+            link: l3,
+            title: o3,
             brightness: r.brightness,
           },
           {
             default: Xe(() => [
-              tn(r.$slots, "default", {}, () => [Jx, Zx, Qx, e5]),
+              sn(r.$slots, "default", {}, () => [r3, s3, a3, i3]),
             ]),
             _: 3,
           },
@@ -19296,46 +19349,46 @@ const Zt = ky(Py),
       )
     },
   },
-  s5 = g(
+  c3 = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     " Clean and professional with an unusual color palette ",
     -1,
   ),
-  a5 = g("p", null, "Lorem ipsum", -1),
-  i5 = g(
+  d3 = g("p", null, "Lorem ipsum", -1),
+  f3 = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     " Parallax architectural sketch backgrounds ",
     -1,
   ),
-  l5 = g("p", null, "Lorem ipsum", -1),
-  o5 = "https://floorsfloors.com/",
-  u5 = "Atlanta Floor One",
-  c5 = {
+  p3 = g("p", null, "Lorem ipsum", -1),
+  h3 = "https://floorsfloors.com/",
+  g3 = "Atlanta Floor One",
+  v3 = {
     __name: "AtlantaFloorOne",
     setup(e) {
-      const t = te([el, ty, ny, ry]),
-        n = te([
+      const t = ne([el, ty, ny, ry]),
+        n = ne([
           "Atlanta Floors One homepage",
           "Atlanta Floors One testimonial section",
           "Contact page (featuring parallax architectural sketch background)",
           "Atlanta Floors One image section",
         ])
       return (r, s) => (
-        ne(),
+        te(),
         De(
-          mn,
+          bn,
           {
             images: t.value,
             captions: n.value,
-            link: o5,
-            title: u5,
+            link: h3,
+            title: g3,
             brightness: r.brightness,
           },
           {
             default: Xe(() => [
-              tn(r.$slots, "default", {}, () => [s5, a5, i5, l5]),
+              sn(r.$slots, "default", {}, () => [c3, d3, f3, p3]),
             ]),
             _: 3,
           },
@@ -19345,48 +19398,48 @@ const Zt = ky(Py),
       )
     },
   },
-  d5 = {
+  m3 = {
     __name: "BuildOnYourLand",
     props: { brightness: Number },
     setup(e) {
       return (t, n) => null
     },
   },
-  f5 = g(
+  b3 = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     " Priority: make services and pricing clear and accessible ",
     -1,
   ),
-  p5 = g("p", null, "Lorem ipsum", -1),
-  h5 = g(
+  y3 = g("p", null, "Lorem ipsum", -1),
+  w3 = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     "Working with a round logo",
     -1,
   ),
-  g5 = g("p", null, "Lorem ipsum", -1),
-  v5 = "https://stehlfamilydental.com/",
-  m5 = "Stuart Hose and Pipe",
-  b5 = {
+  x3 = g("p", null, "Lorem ipsum", -1),
+  S3 = "https://stehlfamilydental.com/",
+  E3 = "Stuart Hose and Pipe",
+  _3 = {
     __name: "StehlFamilyDental",
     setup(e) {
-      const t = te([sl]),
-        n = te(["Stehl Family Dental homepage"])
+      const t = ne([sl]),
+        n = ne(["Stehl Family Dental homepage"])
       return (r, s) => (
-        ne(),
+        te(),
         De(
-          mn,
+          bn,
           {
             images: t.value,
             captions: n.value,
-            link: v5,
-            title: m5,
+            link: S3,
+            title: E3,
             brightness: r.brightness,
           },
           {
             default: Xe(() => [
-              tn(r.$slots, "default", {}, () => [f5, p5, h5, g5]),
+              sn(r.$slots, "default", {}, () => [b3, y3, w3, x3]),
             ]),
             _: 3,
           },
@@ -19396,41 +19449,41 @@ const Zt = ky(Py),
       )
     },
   },
-  y5 = g(
+  C3 = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     " Using design to present minimal text in a compelling way ",
     -1,
   ),
-  w5 = g("p", null, "Lorem ipsum", -1),
-  x5 = g(
+  T3 = g("p", null, "Lorem ipsum", -1),
+  k3 = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     "Image comparison sliders",
     -1,
   ),
-  S5 = g("p", null, "Lorem ipsum", -1),
-  E5 = "https://tub-boys.com/",
-  _5 = "Tub Boys",
-  C5 = {
+  P3 = g("p", null, "Lorem ipsum", -1),
+  $3 = "https://tub-boys.com/",
+  M3 = "Tub Boys",
+  I3 = {
     __name: "TubBoys",
     setup(e) {
-      const t = te([rl]),
-        n = te(["Tub Boys homepage"])
+      const t = ne([rl]),
+        n = ne(["Tub Boys homepage"])
       return (r, s) => (
-        ne(),
+        te(),
         De(
-          mn,
+          bn,
           {
             images: t.value,
             captions: n.value,
-            link: E5,
-            title: _5,
+            link: $3,
+            title: M3,
             brightness: r.brightness,
           },
           {
             default: Xe(() => [
-              tn(r.$slots, "default", {}, () => [y5, w5, x5, S5]),
+              sn(r.$slots, "default", {}, () => [C3, T3, k3, P3]),
             ]),
             _: 3,
           },
@@ -19440,41 +19493,41 @@ const Zt = ky(Py),
       )
     },
   },
-  T5 = g(
+  O3 = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     " Extremely precise design requirements ",
     -1,
   ),
-  k5 = g("p", null, "Lorem ipsum", -1),
-  P5 = g(
+  A3 = g("p", null, "Lorem ipsum", -1),
+  L3 = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     " Maximizing information while avoiding clutter ",
     -1,
   ),
-  $5 = g("p", null, "Lorem ipsum", -1),
-  M5 = "https://stuarthose.com/",
-  I5 = "Stuart Hose and Pipe",
-  O5 = {
+  z3 = g("p", null, "Lorem ipsum", -1),
+  B3 = "https://stuarthose.com/",
+  N3 = "Stuart Hose and Pipe",
+  R3 = {
     __name: "StuartPipeAndHose",
     setup(e) {
-      const t = te([Qi]),
-        n = te(["Stuart Hose and Pipe homepage"])
+      const t = ne([Qi]),
+        n = ne(["Stuart Hose and Pipe homepage"])
       return (r, s) => (
-        ne(),
+        te(),
         De(
-          mn,
+          bn,
           {
             images: t.value,
             captions: n.value,
-            link: M5,
-            title: I5,
+            link: B3,
+            title: N3,
             brightness: r.brightness,
           },
           {
             default: Xe(() => [
-              tn(r.$slots, "default", {}, () => [T5, k5, P5, $5]),
+              sn(r.$slots, "default", {}, () => [O3, A3, L3, z3]),
             ]),
             _: 3,
           },
@@ -19484,33 +19537,33 @@ const Zt = ky(Py),
       )
     },
   },
-  A5 = g(
+  j3 = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     "Iterative design",
     -1,
   ),
-  L5 = g("p", null, "Lorem ipsum", -1),
-  z5 = "https://swimstatepoolservice.com/",
-  B5 = "Swim State Pool",
-  N5 = {
+  F3 = g("p", null, "Lorem ipsum", -1),
+  D3 = "https://swimstatepoolservice.com/",
+  H3 = "Swim State Pool",
+  G3 = {
     __name: "SwimStatePool",
     setup(e) {
-      const t = te([tl]),
-        n = te(["Swim State Pool Services homepage"])
+      const t = ne([tl]),
+        n = ne(["Swim State Pool Services homepage"])
       return (r, s) => (
-        ne(),
+        te(),
         De(
-          mn,
+          bn,
           {
             images: t.value,
             captions: n.value,
-            link: z5,
-            title: B5,
+            link: D3,
+            title: H3,
             brightness: r.brightness,
           },
           {
-            default: Xe(() => [tn(r.$slots, "default", {}, () => [A5, L5])]),
+            default: Xe(() => [sn(r.$slots, "default", {}, () => [j3, F3])]),
             _: 3,
           },
           8,
@@ -19519,28 +19572,28 @@ const Zt = ky(Py),
       )
     },
   },
-  R5 = g("h3", { class: "text-2xl font-bold text-inherit" }, "Lorem ipsum", -1),
-  j5 = g("p", null, "Lorem ipsum", -1),
-  F5 = "/",
-  D5 = "josephhansen.dev",
-  H5 = {
+  V3 = g("h3", { class: "text-2xl font-bold text-inherit" }, "Lorem ipsum", -1),
+  W3 = g("p", null, "Lorem ipsum", -1),
+  q3 = "/",
+  U3 = "josephhansen.dev",
+  Y3 = {
     __name: "JosephHansenDev",
     setup(e) {
-      const t = te([nl]),
-        n = te(["This site's homepage"])
+      const t = ne([nl]),
+        n = ne(["This site's homepage"])
       return (r, s) => (
-        ne(),
+        te(),
         De(
-          mn,
+          bn,
           {
             images: t.value,
             captions: n.value,
-            link: F5,
-            title: D5,
+            link: q3,
+            title: U3,
             brightness: r.brightness,
           },
           {
-            default: Xe(() => [tn(r.$slots, "default", {}, () => [R5, j5])]),
+            default: Xe(() => [sn(r.$slots, "default", {}, () => [V3, W3])]),
             _: 3,
           },
           8,
@@ -19549,29 +19602,29 @@ const Zt = ky(Py),
       )
     },
   },
-  G5 = { class: "flex justify-center w-full md:px-10 sm:px-5 mt-5" },
-  V5 = { class: "flex justify-center w-full md:px-10 sm:px-5 pt-10" },
-  W5 = {
+  K3 = { class: "flex justify-center w-full md:px-10 sm:px-5 mt-5" },
+  X3 = { class: "flex justify-center w-full md:px-10 sm:px-5 pt-10" },
+  J3 = {
     __name: "Main",
     props: { component: String },
     setup(e) {
-      const t = te(1),
+      const t = ne(1),
         n = e,
         r = (l) => {
           ;(t.value = Number(l)),
             window.localStorage.setItem("brightness", t.value)
         },
         s = {
-          "okc-south-stake": Xx,
-          "aris-search": r5,
-          "atlanta-floor-one": c5,
-          "build-on-your-land": d5,
-          "stehl-family-dental": b5,
-          "tub-boys": C5,
-          "stuart-pipe": O5,
-          "swim-state-pool": N5,
-          "josephhansen-dev": H5,
-          bazaar: Kx,
+          "okc-south-stake": n3,
+          "aris-search": u3,
+          "atlanta-floor-one": v3,
+          "build-on-your-land": m3,
+          "stehl-family-dental": _3,
+          "tub-boys": I3,
+          "stuart-pipe": R3,
+          "swim-state-pool": G3,
+          "josephhansen-dev": Y3,
+          bazaar: t3,
         },
         a = me(() => {
           switch (t.value) {
@@ -19677,7 +19730,7 @@ const Zt = ky(Py),
         ],
       })
       return (
-        pn(() => {
+        hn(() => {
           ;(document.title = i.title),
             i.meta.forEach((l) => {
               let o = document.querySelector(
@@ -19693,9 +19746,9 @@ const Zt = ky(Py),
             })
         }),
         (l, o) => (
-          ne(),
-          Ee(
-            Qe,
+          te(),
+          xe(
+            Je,
             null,
             [
               g(
@@ -19706,10 +19759,10 @@ const Zt = ky(Py),
                 },
                 [
                   he(X1, { "onUpdate:brightness": r }),
-                  g("div", G5, [
+                  g("div", K3, [
                     e.component == "pricing"
-                      ? (ne(),
-                        Ee(
+                      ? (te(),
+                        xe(
                           "div",
                           {
                             key: 0,
@@ -19733,8 +19786,8 @@ const Zt = ky(Py),
                         ))
                       : st("", !0),
                     e.component == "contact"
-                      ? (ne(),
-                        Ee(
+                      ? (te(),
+                        xe(
                           "div",
                           {
                             key: 1,
@@ -19758,8 +19811,8 @@ const Zt = ky(Py),
                         ))
                       : st("", !0),
                     e.component == "portfolio"
-                      ? (ne(),
-                        Ee(
+                      ? (te(),
+                        xe(
                           "div",
                           {
                             key: 2,
@@ -19775,7 +19828,7 @@ const Zt = ky(Py),
                             ]),
                           },
                           [
-                            he(Rx, { brightness: t.value }, null, 8, [
+                            he(Vx, { brightness: t.value }, null, 8, [
                               "brightness",
                             ]),
                           ],
@@ -19783,8 +19836,8 @@ const Zt = ky(Py),
                         ))
                       : st("", !0),
                     e.component == "about-me"
-                      ? (ne(),
-                        Ee(
+                      ? (te(),
+                        xe(
                           "div",
                           {
                             key: 3,
@@ -19800,7 +19853,7 @@ const Zt = ky(Py),
                             ]),
                           },
                           [
-                            he(kx, { brightness: t.value }, null, 8, [
+                            he(Ax, { brightness: t.value }, null, 8, [
                               "brightness",
                             ]),
                           ],
@@ -19808,8 +19861,8 @@ const Zt = ky(Py),
                         ))
                       : st("", !0),
                     e.component in s
-                      ? (ne(),
-                        Ee(
+                      ? (te(),
+                        xe(
                           "div",
                           {
                             key: 4,
@@ -19825,7 +19878,7 @@ const Zt = ky(Py),
                             ]),
                           },
                           [
-                            (ne(),
+                            (te(),
                             De(
                               ig(s[e.component]),
                               { brightness: t.value },
@@ -19838,8 +19891,8 @@ const Zt = ky(Py),
                         ))
                       : st("", !0),
                     e.component == "home"
-                      ? (ne(),
-                        Ee(
+                      ? (te(),
+                        xe(
                           "div",
                           {
                             key: 5,
@@ -19863,10 +19916,10 @@ const Zt = ky(Py),
                         ))
                       : st("", !0),
                   ]),
-                  g("div", V5, [
+                  g("div", X3, [
                     e.component == "home"
-                      ? (ne(),
-                        Ee(
+                      ? (te(),
+                        xe(
                           "div",
                           {
                             key: 0,
@@ -19901,7 +19954,7 @@ const Zt = ky(Py),
       )
     },
   },
-  q5 = gn(W5, [["__scopeId", "data-v-7c607880"]]),
+  Z3 = vn(J3, [["__scopeId", "data-v-7c607880"]]),
   ll = [
     { path: "/", component: null, props: { component: "home" } },
     { path: "/pricing", component: null, props: { component: "pricing" } },
@@ -19961,9 +20014,9 @@ const Zt = ky(Py),
   ]
 ll.map((e) => e.path)
 ll.forEach((e) => {
-  e.component = q5
+  e.component = Z3
 })
-const U5 = l1({ history: Em(), routes: ll }),
+const Q3 = l1({ history: Em(), routes: ll }),
   pd = Ev(Pv)
-pd.use(U5)
+pd.use(Q3)
 pd.mount("#app")
