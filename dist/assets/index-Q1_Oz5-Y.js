@@ -19557,7 +19557,7 @@ const nn = Py($y),
   C5 = g(
     "p",
     { class: "text-inherit" },
-    " Build On Your Land is one of my favorite sites I've ever built. From dynamic showroom hours I developed in JavaScript, to parallax home design backgrounds, the site is full of my best work. The client needed a beautiful, responsive, site, and tey loved what they got. ",
+    " Build On Your Land is one of my favorite sites I've ever built. From dynamic showroom hours I developed in JavaScript, to parallax home design backgrounds, the site is full of my best work. The client needed a beautiful, responsive, site, and they loved what I built for them. ",
     -1,
   ),
   T5 = g(

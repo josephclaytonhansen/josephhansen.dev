@@ -32,8 +32,11 @@
     :title="bazaarTitle"
     :brightness="brightness"
     ><slot>
-      <h3 class="text-2xl font-bold text-inherit">Lorem ipsum</h3>
-      <p>Lorem ipsum</p>
+      <h3 class="text-2xl font-bold text-inherit">A lightning-fast, responsive, accessible site</h3>
+      <p class = "text-inherit">I built this site with care and pride- it's showcasing my abilities, after all. To that end, I've optimized it for speed to the max- this site scores 99/100 on Google's Page Speed test, a score so rare as to be essentially mythical. This site is also highly responsive and features five distinct color themes for perfect user satisfication (check out the header to change them!)</p>
+      <p class = "text-inherit">
+        I've built, designed, and developed every part of this site. I use Vue as the JavaScript framework, with Vite, Node.js, Express, MongoDB, and other technologies to make it not just work, but excel. All the images are served in blazing-fast, modern, formats like WebP, and the site is fully accessible, with ARIA roles and other accessibility features. Looking for a site that will blow your customer's minds? I make those. Let me build yours.
+      </p>
     </slot></sliderAndGallery
   >
 </template>
