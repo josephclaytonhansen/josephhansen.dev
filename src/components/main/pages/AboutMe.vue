@@ -46,7 +46,7 @@
     <div class="p-5 flex-col w-full">
       <div class="grid grid-cols-6">
         <div class="col-span-2 sm:col-span-2 md:col-span-1">
-          <div class="square-image-container">
+          <div class="square-image-container rounded">
             <img
               class="rounded pr-4"
               src="https://images.josephhansen.dev/uploads/fileDSC01942-3.j-1707265732742.webp"
