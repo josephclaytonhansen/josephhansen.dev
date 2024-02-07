@@ -44,7 +44,7 @@
       </h3>
       <p class="text-inherit">
         When Bart from BlenderNation approached me with the idea for Bazaar, I
-        was pumped. Nothing quite like Bazaar existed at the time- one central
+        was pumped. Nothing quite like Bazaar existed at the time: one central
         hub for Blender users to find tutorials, resources, assets, and add-ons.
         I was heavily involved with every step of the process of making the
         Bazaar come to life, and the end result is fantastic.
@@ -57,7 +57,7 @@
         With the above Figma document as a guide from Bart, I dove into both
         design and figuring out the backend details for managing the complex
         data the site would be handling. Bart wanted to do this through
-        WordPress, and I was able to use my WordPress expertise to recommend
+        WordPress, and I was able to use my expertise to recommend
         AdvancedCustomFields to do a lot of the major data-wrangling. I also
         built the theme from scratch, to make sure it was as simplifie and
         lightweight as possible while still providing beautiful, responsive, and
