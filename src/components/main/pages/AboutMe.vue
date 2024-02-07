@@ -26,13 +26,20 @@
       return "text-orange-400"
     }
   }
+ 
+  import { siLinkedin, siGithub, siTwitter, siInstagram } from "simple-icons"
 
-  import {
+  const icons = [
     siLinkedin,
     siGithub,
     siTwitter,
     siInstagram,
-  } from "simple-icons"
+  ]
+
+  const iconLinks = [
+  'https://www.linkedin.com/in/josephclaytonhansen/',
+
+  ]
 </script>
 
 <template>
@@ -46,17 +53,25 @@
               src="https://images.josephhansen.dev/uploads/fileDSC01942-3.j-1707265732742.webp"
               alt="Joseph Hansen" />
           </div>
-          <div class = "flex">
-            <a
-              href="https://www.linkedin.com/in/josephclaytonhansen/"
-              target="_blank"
-              rel="noopener noreferrer"
-              :class="iconClass(props.brightness)">
-              <siLinkedin class="w-8 h-8" />
-            </a>
-
+          <div class="flex gap-2 mt-4 justify-center items-center">
+            <div class="flex gap-2 mt-4 justify-center items-center">
+  <div
+    v-for="(icon, index) in icons"
+    :key="index"
+    class="flex-1"
+    :class="iconClass(props.brightness)">
+    <svg
+      viewBox="0 0 32 32"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="currentColor"
+      width="100%"
+      height="100%">
+      <path :d="icon.path" />
+    </svg>
+  </div>
 </div>
-        </div>
+</div>
+</div>
         <div class="col-span-4 sm:col-span-4 md:col-span-5 prose">
           <h1 class="text-5xl font-bold mb-0" :class="pClass(props.brightness)">
             Joseph Hansen
@@ -65,7 +80,6 @@
             <em>About me</em>
           </h2>
           <p :class="pClass(props.brightness)"></p>
-          
         </div>
       </div>
     </div>
