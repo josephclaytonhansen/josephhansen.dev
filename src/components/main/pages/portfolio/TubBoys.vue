@@ -7,7 +7,12 @@
 
   import { tubHome } from "../../../images/imageLinks.js"
 
-  const bazaarImages = ref([tubHome, "https://images.josephhansen.dev/uploads/file2024-02-0620-1707273750624.webp", "https://images.josephhansen.dev/uploads/file2024-02-0620-1707274374594.webp", "https://images.josephhansen.dev/uploads/file2024-02-0620-1707274402279.webp"])
+  const bazaarImages = ref([
+    tubHome,
+    "https://images.josephhansen.dev/uploads/file2024-02-0620-1707273750624.webp",
+    "https://images.josephhansen.dev/uploads/file2024-02-0620-1707274374594.webp",
+    "https://images.josephhansen.dev/uploads/file2024-02-0620-1707274402279.webp",
+  ])
 
   const bazaarCaptions = ref(["Tub Boys homepage"])
 
@@ -35,12 +40,22 @@
       <h3 class="text-2xl font-bold text-inherit">
         Using design to present minimal text in a compelling way
       </h3>
-      <p class = "text-inherit">
-        This client had very little copy, so it was my task to make their site engaging and feel full with what I had to work with. I took the opporunity to use large, engaging, typography as well as swooshing lines that invoke a sense of movement. The result feels professional, while still invoking the "fun" energy the client requested.
+      <p class="text-inherit">
+        This client had very little copy, so it was my task to make their site
+        engaging and feel full with what I had to work with. I took the
+        opporunity to use large, engaging, typography as well as swooshing lines
+        that invoke a sense of movement. The result feels professional, while
+        still invoking the "fun" energy the client requested.
       </p>
       <h3 class="text-2xl font-bold text-inherit">Image comparison sliders</h3>
-      <img src = "https://images.josephhansen.dev/uploads/file2024-02-0620-1707273750624.webp" class = "rounded">
-      <p class = "text-inherit">The client wanted to be able to showcase their work with before and after images. I devloped a custom JavaScript solution for interactive image sliders that integrated nicely with their WordPress platform.</p>
+      <img
+        src="https://images.josephhansen.dev/uploads/file2024-02-0620-1707273750624.webp"
+        class="rounded" />
+      <p class="text-inherit">
+        The client wanted to be able to showcase their work with before and
+        after images. I devloped a custom JavaScript solution for interactive
+        image sliders that integrated nicely with their WordPress platform.
+      </p>
     </slot></sliderAndGallery
   >
 </template>

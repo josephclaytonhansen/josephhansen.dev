@@ -19421,7 +19421,7 @@ const tn = Py($y),
                 ]),
                 g("p", n3, [
                   Pe(
-                    " With the above Figma document as a guide from Bart, I dove into both design and figuring out the backend details for managing the complex data the site would be handling. Bart wanted to do this through WordPress, and I was able to use my expertise to recommend AdvancedCustomFields to do a lot of the major data-wrangling. I also built the theme from scratch, to make sure it was as simplifie and lightweight as possible while still providing beautiful, responsive, and functional results. ",
+                    " With the above Figma document as a guide from Bart, I dove into both design and figuring out the backend details for managing the complex data the site would be handling. Bart wanted to do this through WordPress, and I was able to use my expertise to recommend AdvancedCustomFields to do a lot of the major data-wrangling. I also built the theme from scratch, to make sure it was as simplified and lightweight as possible while still providing beautiful, responsive, and functional results. ",
                   ),
                   g("figure", null, [
                     g(
@@ -19505,14 +19505,24 @@ const tn = Py($y),
     " Clean and professional with an unusual color palette ",
     -1,
   ),
-  x3 = g("p", null, "Lorem ipsum", -1),
+  x3 = g(
+    "p",
+    { class: "text-inherit" },
+    " This site was challenging from a design perspective. Atlanta Floor One's logo colors (light green and very dark brown) look great at a small scale, but initial drafts of their site proved overwhelming. Eventually, I added a lighter brown that was more neutral and used the green as an accent color. I also relied heavily on whitespace, giving the colors room to breathe. The result is a site that is both professional and unique. ",
+    -1,
+  ),
   S3 = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     " Parallax architectural sketch backgrounds ",
     -1,
   ),
-  _3 = g("p", null, "Lorem ipsum", -1),
+  _3 = g(
+    "p",
+    { class: "text-inherit" },
+    ' With large spans of whitespace, the site ran the risk of veering into "boring" territory. To combat this, I decided to use architectural sketches as subtle background overlays. Adding a parallax effect to these sketches gave the site a sense of depth and movement, without overwhelming the user. The client was delighted with the final result. ',
+    -1,
+  ),
   E3 = "https://floorsfloors.com/",
   C3 = "Atlanta Floor One",
   T3 = {
@@ -19605,20 +19615,44 @@ const tn = Py($y),
     " Using design to present minimal text in a compelling way ",
     -1,
   ),
-  z3 = g("p", null, "Lorem ipsum", -1),
+  z3 = g(
+    "p",
+    { class: "text-inherit" },
+    ' This client had very little copy, so it was my task to make their site engaging and feel full with what I had to work with. I took the opporunity to use large, engaging, typography as well as swooshing lines that invoke a sense of movement. The result feels professional, while still invoking the "fun" energy the client requested. ',
+    -1,
+  ),
   N3 = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     "Image comparison sliders",
     -1,
   ),
-  R3 = g("p", null, "Lorem ipsum", -1),
-  j3 = "https://tub-boys.com/",
-  F3 = "Tub Boys",
-  D3 = {
+  R3 = g(
+    "img",
+    {
+      src: "https://images.josephhansen.dev/uploads/file2024-02-0620-1707273750624.webp",
+      class: "rounded",
+    },
+    null,
+    -1,
+  ),
+  j3 = g(
+    "p",
+    { class: "text-inherit" },
+    " The client wanted to be able to showcase their work with before and after images. I devloped a custom JavaScript solution for interactive image sliders that integrated nicely with their WordPress platform. ",
+    -1,
+  ),
+  F3 = "https://tub-boys.com/",
+  D3 = "Tub Boys",
+  H3 = {
     __name: "TubBoys",
     setup(e) {
-      const t = ne([sl]),
+      const t = ne([
+          sl,
+          "https://images.josephhansen.dev/uploads/file2024-02-0620-1707273750624.webp",
+          "https://images.josephhansen.dev/uploads/file2024-02-0620-1707274374594.webp",
+          "https://images.josephhansen.dev/uploads/file2024-02-0620-1707274402279.webp",
+        ]),
         n = ne(["Tub Boys homepage"])
       return (r, s) => (
         te(),
@@ -19627,13 +19661,13 @@ const tn = Py($y),
           {
             images: t.value,
             captions: n.value,
-            link: j3,
-            title: F3,
+            link: F3,
+            title: D3,
             brightness: r.brightness,
           },
           {
             default: Xe(() => [
-              sn(r.$slots, "default", {}, () => [B3, z3, N3, R3]),
+              sn(r.$slots, "default", {}, () => [B3, z3, N3, R3, j3]),
             ]),
             _: 3,
           },
@@ -19643,23 +19677,23 @@ const tn = Py($y),
       )
     },
   },
-  H3 = g(
+  G3 = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     " Extremely precise design requirements ",
     -1,
   ),
-  G3 = g("p", null, "Lorem ipsum", -1),
-  V3 = g(
+  V3 = g("p", null, "Lorem ipsum", -1),
+  W3 = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     " Maximizing information while avoiding clutter ",
     -1,
   ),
-  W3 = g("p", null, "Lorem ipsum", -1),
-  q3 = "https://stuarthose.com/",
-  U3 = "Stuart Hose and Pipe",
-  Y3 = {
+  q3 = g("p", null, "Lorem ipsum", -1),
+  U3 = "https://stuarthose.com/",
+  Y3 = "Stuart Hose and Pipe",
+  K3 = {
     __name: "StuartPipeAndHose",
     setup(e) {
       const t = ne([el]),
@@ -19671,13 +19705,13 @@ const tn = Py($y),
           {
             images: t.value,
             captions: n.value,
-            link: q3,
-            title: U3,
+            link: U3,
+            title: Y3,
             brightness: r.brightness,
           },
           {
             default: Xe(() => [
-              sn(r.$slots, "default", {}, () => [H3, G3, V3, W3]),
+              sn(r.$slots, "default", {}, () => [G3, V3, W3, q3]),
             ]),
             _: 3,
           },
@@ -19687,16 +19721,16 @@ const tn = Py($y),
       )
     },
   },
-  K3 = g(
+  X3 = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     "Iterative design",
     -1,
   ),
-  X3 = g("p", null, "Lorem ipsum", -1),
-  J3 = "https://swimstatepoolservice.com/",
-  Z3 = "Swim State Pool",
-  Q3 = {
+  J3 = g("p", null, "Lorem ipsum", -1),
+  Z3 = "https://swimstatepoolservice.com/",
+  Q3 = "Swim State Pool",
+  e5 = {
     __name: "SwimStatePool",
     setup(e) {
       const t = ne([nl]),
@@ -19708,12 +19742,12 @@ const tn = Py($y),
           {
             images: t.value,
             captions: n.value,
-            link: J3,
-            title: Z3,
+            link: Z3,
+            title: Q3,
             brightness: r.brightness,
           },
           {
-            default: Xe(() => [sn(r.$slots, "default", {}, () => [K3, X3])]),
+            default: Xe(() => [sn(r.$slots, "default", {}, () => [X3, J3])]),
             _: 3,
           },
           8,
@@ -19722,11 +19756,11 @@ const tn = Py($y),
       )
     },
   },
-  e5 = g("h3", { class: "text-2xl font-bold text-inherit" }, "Lorem ipsum", -1),
-  t5 = g("p", null, "Lorem ipsum", -1),
-  n5 = "/",
-  r5 = "josephhansen.dev",
-  s5 = {
+  t5 = g("h3", { class: "text-2xl font-bold text-inherit" }, "Lorem ipsum", -1),
+  n5 = g("p", null, "Lorem ipsum", -1),
+  r5 = "/",
+  s5 = "josephhansen.dev",
+  a5 = {
     __name: "JosephHansenDev",
     setup(e) {
       const t = ne([rl]),
@@ -19738,12 +19772,12 @@ const tn = Py($y),
           {
             images: t.value,
             captions: n.value,
-            link: n5,
-            title: r5,
+            link: r5,
+            title: s5,
             brightness: r.brightness,
           },
           {
-            default: Xe(() => [sn(r.$slots, "default", {}, () => [e5, t5])]),
+            default: Xe(() => [sn(r.$slots, "default", {}, () => [t5, n5])]),
             _: 3,
           },
           8,
@@ -19752,9 +19786,9 @@ const tn = Py($y),
       )
     },
   },
-  a5 = { class: "flex justify-center w-full md:px-10 sm:px-5 mt-5" },
-  i5 = { class: "flex justify-center w-full md:px-10 sm:px-5 pt-10" },
-  l5 = {
+  i5 = { class: "flex justify-center w-full md:px-10 sm:px-5 mt-5" },
+  l5 = { class: "flex justify-center w-full md:px-10 sm:px-5 pt-10" },
+  o5 = {
     __name: "Main",
     props: { component: String },
     setup(e) {
@@ -19770,10 +19804,10 @@ const tn = Py($y),
           "atlanta-floor-one": T3,
           "build-on-your-land": k3,
           "stehl-family-dental": L3,
-          "tub-boys": D3,
-          "stuart-pipe": Y3,
-          "swim-state-pool": Q3,
-          "josephhansen-dev": s5,
+          "tub-boys": H3,
+          "stuart-pipe": K3,
+          "swim-state-pool": e5,
+          "josephhansen-dev": a5,
           bazaar: d3,
         },
         a = me(() => {
@@ -19909,7 +19943,7 @@ const tn = Py($y),
                 },
                 [
                   he(J1, { "onUpdate:brightness": r }),
-                  g("div", a5, [
+                  g("div", i5, [
                     e.component == "pricing"
                       ? (te(),
                         xe(
@@ -20066,7 +20100,7 @@ const tn = Py($y),
                         ))
                       : st("", !0),
                   ]),
-                  g("div", i5, [
+                  g("div", l5, [
                     e.component == "home"
                       ? (te(),
                         xe(
@@ -20104,7 +20138,7 @@ const tn = Py($y),
       )
     },
   },
-  o5 = vn(l5, [["__scopeId", "data-v-7c607880"]]),
+  u5 = vn(o5, [["__scopeId", "data-v-7c607880"]]),
   ol = [
     { path: "/", component: null, props: { component: "home" } },
     { path: "/pricing", component: null, props: { component: "pricing" } },
@@ -20164,9 +20198,9 @@ const tn = Py($y),
   ]
 ol.map((e) => e.path)
 ol.forEach((e) => {
-  e.component = o5
+  e.component = u5
 })
-const u5 = o1({ history: Em(), routes: ol }),
+const c5 = o1({ history: Em(), routes: ol }),
   hd = Ev($v)
-hd.use(u5)
+hd.use(c5)
 hd.mount("#app")

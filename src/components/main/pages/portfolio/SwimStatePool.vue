@@ -32,8 +32,6 @@
     :title="bazaarTitle"
     :brightness="brightness"
     ><slot>
-      <h3 class="text-2xl font-bold text-inherit">Iterative design</h3>
-      <p>Lorem ipsum</p>
     </slot></sliderAndGallery
   >
 </template>
