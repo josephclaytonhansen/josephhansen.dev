@@ -19816,11 +19816,27 @@ const nn = Py($y),
       )
     },
   },
-  n3 = g("h3", { class: "text-2xl font-bold text-inherit" }, "Lorem ipsum", -1),
-  s3 = g("p", null, "Lorem ipsum", -1),
-  r3 = "/",
-  a3 = "josephhansen.dev",
-  i3 = {
+  n3 = g(
+    "h3",
+    { class: "text-2xl font-bold text-inherit" },
+    " A lightning-fast, responsive, accessible site ",
+    -1,
+  ),
+  s3 = g(
+    "p",
+    { class: "text-inherit" },
+    " I built this site with care and pride- it's showcasing my abilities, after all. To that end, I've optimized it for speed to the max- this site scores 99/100 on Google's Page Speed test, a score so rare as to be essentially mythical. This site is also highly responsive and features five distinct color themes for perfect user satisfication (check out the header to change them!) ",
+    -1,
+  ),
+  r3 = g(
+    "p",
+    { class: "text-inherit" },
+    " I've built, designed, and developed every part of this site. I use Vue as the JavaScript framework, with Vite, Node.js, Express, MongoDB, and other technologies to make it not just work, but excel. All the images are served in blazing-fast, modern, formats like WebP, and the site is fully accessible, with ARIA roles and other accessibility features. Looking for a site that will blow your customer's minds? I make those. Let me build yours. ",
+    -1,
+  ),
+  a3 = "/",
+  i3 = "josephhansen.dev",
+  l3 = {
     __name: "JosephHansenDev",
     setup(e) {
       const t = ne([rl]),
@@ -19832,12 +19848,14 @@ const nn = Py($y),
           {
             images: t.value,
             captions: n.value,
-            link: r3,
-            title: a3,
+            link: a3,
+            title: i3,
             brightness: s.brightness,
           },
           {
-            default: Ke(() => [Jt(s.$slots, "default", {}, () => [n3, s3])]),
+            default: Ke(() => [
+              Jt(s.$slots, "default", {}, () => [n3, s3, r3]),
+            ]),
             _: 3,
           },
           8,
@@ -19846,9 +19864,9 @@ const nn = Py($y),
       )
     },
   },
-  l3 = { class: "flex justify-center w-full md:px-10 sm:px-5 mt-5" },
-  o3 = { class: "flex justify-center w-full md:px-10 sm:px-5 pt-10" },
-  u3 = {
+  o3 = { class: "flex justify-center w-full md:px-10 sm:px-5 mt-5" },
+  u3 = { class: "flex justify-center w-full md:px-10 sm:px-5 pt-10" },
+  c3 = {
     __name: "Main",
     props: { component: String },
     setup(e) {
@@ -19867,7 +19885,7 @@ const nn = Py($y),
           "tub-boys": U5,
           "stuart-pipe": J5,
           "swim-state-pool": t3,
-          "josephhansen-dev": i3,
+          "josephhansen-dev": l3,
           bazaar: d5,
         },
         a = me(() => {
@@ -20003,7 +20021,7 @@ const nn = Py($y),
                 },
                 [
                   he(J1, { "onUpdate:brightness": s }),
-                  g("div", l3, [
+                  g("div", o3, [
                     e.component == "pricing"
                       ? (te(),
                         xe(
@@ -20160,7 +20178,7 @@ const nn = Py($y),
                         ))
                       : rt("", !0),
                   ]),
-                  g("div", o3, [
+                  g("div", u3, [
                     e.component == "home"
                       ? (te(),
                         xe(
@@ -20198,7 +20216,7 @@ const nn = Py($y),
       )
     },
   },
-  c3 = mn(u3, [["__scopeId", "data-v-7c607880"]]),
+  d3 = mn(c3, [["__scopeId", "data-v-7c607880"]]),
   ul = [
     { path: "/", component: null, props: { component: "home" } },
     { path: "/pricing", component: null, props: { component: "pricing" } },
@@ -20258,9 +20276,9 @@ const nn = Py($y),
   ]
 ul.map((e) => e.path)
 ul.forEach((e) => {
-  e.component = c3
+  e.component = d3
 })
-const d3 = o1({ history: _m(), routes: ul }),
+const f3 = o1({ history: _m(), routes: ul }),
   hd = _v($v)
-hd.use(d3)
+hd.use(f3)
 hd.mount("#app")
