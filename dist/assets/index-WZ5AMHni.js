@@ -13080,13 +13080,19 @@ const L2 = { class: "prose text-center" },
   iy = v(
     "p",
     null,
-    " Joseph is a good friend of mine from school. We worked closely on many projects with both pursuing degrees in design. He can design anything. This is not an exaggeration. I personally struggled to learn new design tools and manipulate pixels the way I wanted them to be. Joseph just... did it. He is incredible. He is also incredibly passionate about non-profit organizations and helping people who have had challenging lives or have troubles that they cannot overcome themselves. He is as compassionate as they come. I would recommend him to anyone with utmost confidence that he will surpass all expectations. ",
+    " Joseph is a good friend of mine from school. We worked closely on many projects with both pursuing degrees in design. He can design anything. This is not an exaggeration. I personally struggled to learn new design tools and manipulate pixels the way I wanted them to be. Joseph just did it. He is incredible. ...I would recommend him to anyone with utmost confidence that he will surpass all expectations. ",
     -1,
   ),
-  ly = [iy],
-  oy = "",
-  uy = "Web Design",
-  cy = {
+  ly = { class: "text-right italic text-sm mb-0 pb-0" },
+  oy = v(
+    "p",
+    { class: "text-right italic text-sm mt-0 pt-0" },
+    " Senior Product Designer at nCino ",
+    -1,
+  ),
+  uy = "",
+  cy = "Web Design",
+  dy = {
     __name: "PanelWebDesign",
     props: { brightness: Number },
     setup(e) {
@@ -13116,8 +13122,8 @@ const L2 = { class: "prose text-center" },
           {
             images: n.value,
             captions: r.value,
-            link: oy,
-            title: uy,
+            link: uy,
+            title: cy,
             brightness: e.brightness,
           },
           {
@@ -13135,7 +13141,7 @@ const L2 = { class: "prose text-center" },
                     "div",
                     {
                       class: A([
-                        "rounded p-8 flex",
+                        "rounded p-8 flex-col",
                         {
                           "bg-slate-100": e.brightness == 5,
                           "bg-slate-400": e.brightness == 4,
@@ -13145,7 +13151,23 @@ const L2 = { class: "prose text-center" },
                         },
                       ]),
                     },
-                    ly,
+                    [
+                      iy,
+                      v("p", ly, [
+                        v("b", null, [
+                          v(
+                            "a",
+                            {
+                              class: A([t(e.brightness), "font-bold"]),
+                              href: "https://www.linkedin.com/in/nathanwesjones/",
+                            },
+                            "Nathan Jones",
+                            2,
+                          ),
+                        ]),
+                      ]),
+                      oy,
+                    ],
                     2,
                   ),
                 ]),
@@ -13160,15 +13182,15 @@ const L2 = { class: "prose text-center" },
     },
   },
   il = (e) => (Js("data-v-a259bda2"), (e = e()), Zs(), e),
-  dy = {
+  fy = {
     class:
       "flex w-full gap-4 md:p-8 sm:p-4 items-center justify-center flex-col",
   },
-  fy = {
+  py = {
     class: "prose md:w-10/12 sm:w-12/12 mt-8",
     style: { "max-width": "84ch !important" },
   },
-  py = il(() =>
+  hy = il(() =>
     v(
       "div",
       { class: "image-container" },
@@ -13182,12 +13204,12 @@ const L2 = { class: "prose text-center" },
       -1,
     ),
   ),
-  hy = {
+  gy = {
     class:
       "flex w-full items-center justify-between flex-wrap sm:flex-wrap md:flex-nowrap mt-12",
   },
-  gy = { href: "https://galaxyit.com/savings-calculator/" },
-  vy = il(() =>
+  vy = { href: "https://galaxyit.com/savings-calculator/" },
+  my = il(() =>
     v(
       "div",
       { class: "image-container" },
@@ -13201,12 +13223,12 @@ const L2 = { class: "prose text-center" },
       -1,
     ),
   ),
-  my = {
+  by = {
     class:
       "flex w-full items-center justify-between flex-wrap sm:flex-wrap md:flex-nowrap mt-12",
   },
-  by = { href: "https://www.buildonyourlandllc.com/" },
-  yy = il(() =>
+  yy = { href: "https://www.buildonyourlandllc.com/" },
+  wy = il(() =>
     v(
       "div",
       { class: "image-container" },
@@ -13220,12 +13242,12 @@ const L2 = { class: "prose text-center" },
       -1,
     ),
   ),
-  wy = {
+  xy = {
     class:
       "flex w-full items-center justify-between flex-wrap sm:flex-wrap md:flex-nowrap mt-12",
   },
-  xy = { href: "https://bazaar.blendernation.com" },
-  Sy = {
+  Sy = { href: "https://bazaar.blendernation.com" },
+  Ey = {
     __name: "PanelDevelopment",
     props: { brightness: Number },
     setup(e) {
@@ -13237,23 +13259,23 @@ const L2 = { class: "prose text-center" },
       }
       return (n, r) => (
         se(),
-        Ee("div", dy, [
-          v("div", fy, [
+        Ee("div", fy, [
+          v("div", py, [
             v(
               "h2",
               { class: A(["text-3xl mb-1", t(e.brightness)]) },
               " Need a custom pricing calculator? ",
               2,
             ),
-            py,
-            v("div", hy, [
+            hy,
+            v("div", gy, [
               v(
                 "h3",
                 { class: A(["text-xl m-0", t(e.brightness)]) },
                 " I can do that! Check out this one I made for GalaxyIT: ",
                 2,
               ),
-              v("a", gy, [
+              v("a", vy, [
                 v(
                   "button",
                   {
@@ -13277,15 +13299,15 @@ const L2 = { class: "prose text-center" },
               " What about dynamic hours? ",
               2,
             ),
-            vy,
-            v("div", my, [
+            my,
+            v("div", by, [
               v(
                 "h3",
                 { class: A(["text-xl m-0", t(e.brightness)]) },
                 " Been there, done that: ",
                 2,
               ),
-              v("a", by, [
+              v("a", yy, [
                 v(
                   "button",
                   {
@@ -13309,15 +13331,15 @@ const L2 = { class: "prose text-center" },
               " Maybe you need a complex WordPress theme built from scratch? ",
               2,
             ),
-            yy,
-            v("div", wy, [
+            wy,
+            v("div", xy, [
               v(
                 "h3",
                 { class: A(["text-xl m-0", t(e.brightness)]) },
                 " No sweat - let's make it happen! ",
                 2,
               ),
-              v("a", xy, [
+              v("a", Sy, [
                 v(
                   "button",
                   {
@@ -13354,8 +13376,8 @@ const L2 = { class: "prose text-center" },
       )
     },
   },
-  Ey = Rn(Sy, [["__scopeId", "data-v-a259bda2"]])
-var _y =
+  _y = Rn(Ey, [["__scopeId", "data-v-a259bda2"]])
+var Cy =
   typeof globalThis < "u"
     ? globalThis
     : typeof window < "u"
@@ -13365,7 +13387,7 @@ var _y =
         : typeof self < "u"
           ? self
           : {}
-function Cy(e) {
+function Ty(e) {
   return e && e.__esModule && Object.prototype.hasOwnProperty.call(e, "default")
     ? e.default
     : e
@@ -13374,7 +13396,7 @@ var fd = { exports: {} }
 ;(function (e, t) {
   ;(function (n, r) {
     e.exports = r()
-  })(_y, function () {
+  })(Cy, function () {
     for (
       var n = function (u, d, h) {
           return (
@@ -16435,16 +16457,16 @@ var fd = { exports: {} }
     return c0
   })
 })(fd)
-var Ty = fd.exports
-const Zt = Cy(Ty),
+var Py = fd.exports
+const Zt = Ty(Py),
   tr = (e) => (Js("data-v-8a92440e"), (e = e()), Zs(), e),
-  Py = {
+  ky = {
     class: "flex w-full gap-4 md:p-8 sm:p-4 items-center justify-center",
     id: "panelSpeed",
   },
-  ky = { class: "flex flex-col items-center justify-center w-full" },
-  $y = { viewBox: "0 0 36 36", class: "chart" },
-  My = tr(() =>
+  $y = { class: "flex flex-col items-center justify-center w-full" },
+  My = { viewBox: "0 0 36 36", class: "chart" },
+  Iy = tr(() =>
     v(
       "path",
       {
@@ -16461,8 +16483,8 @@ const Zt = Cy(Ty),
       -1,
     ),
   ),
-  Iy = ["stroke", "stroke-dasharray", "stroke-dashoffset"],
-  Oy = tr(() =>
+  Oy = ["stroke", "stroke-dasharray", "stroke-dashoffset"],
+  Ay = tr(() =>
     v(
       "p",
       null,
@@ -16470,7 +16492,7 @@ const Zt = Cy(Ty),
       -1,
     ),
   ),
-  Ay = tr(() =>
+  Ly = tr(() =>
     v(
       "p",
       null,
@@ -16486,9 +16508,9 @@ const Zt = Cy(Ty),
       -1,
     ),
   ),
-  Ly = tr(() => v("p", null, "You want fast? Let's make it happen.", -1)),
-  zy = { id: "speedTable" },
-  By = tr(() =>
+  zy = tr(() => v("p", null, "You want fast? Let's make it happen.", -1)),
+  By = { id: "speedTable" },
+  Ny = tr(() =>
     v(
       "colgroup",
       null,
@@ -16499,9 +16521,9 @@ const Zt = Cy(Ty),
       -1,
     ),
   ),
-  Ny = { class: "flex" },
   Ry = { class: "flex" },
-  jy = tr(() =>
+  jy = { class: "flex" },
+  Fy = tr(() =>
     v(
       "tbody",
       null,
@@ -16544,8 +16566,8 @@ const Zt = Cy(Ty),
       -1,
     ),
   ),
-  Fy = tr(() => v("div", { class: "h-6" }, null, -1)),
-  Dy = {
+  Dy = tr(() => v("div", { class: "h-6" }, null, -1)),
+  Hy = {
     data() {
       return { radius: 16, circumference: 2 * Math.PI * 16, percentage: 97 }
     },
@@ -16556,7 +16578,7 @@ const Zt = Cy(Ty),
       },
     },
   },
-  Hy = Object.assign(Dy, {
+  Gy = Object.assign(Hy, {
     __name: "PanelSpeed",
     props: { brightness: Number },
     setup(e) {
@@ -16630,15 +16652,15 @@ const Zt = Cy(Ty),
         ),
         (o, f) => (
           se(),
-          Ee("div", Py, [
-            v("div", ky, [
+          Ee("div", ky, [
+            v("div", $y, [
               v(
                 "div",
                 { id: "perfChart", class: A(r(e.brightness)) },
                 [
                   (se(),
-                  Ee("svg", $y, [
-                    My,
+                  Ee("svg", My, [
+                    Iy,
                     v(
                       "path",
                       {
@@ -16656,7 +16678,7 @@ const Zt = Cy(Ty),
                       },
                       null,
                       10,
-                      Iy,
+                      Oy,
                     ),
                   ])),
                   v(
@@ -16711,16 +16733,16 @@ const Zt = Cy(Ty),
                     " faster, smaller, and lighter. ",
                     2,
                   ),
-                  Oy,
                   Ay,
                   Ly,
+                  zy,
                   v("h3", { class: A(a(e.brightness)) }, "How I help", 2),
-                  v("table", zy, [
-                    By,
+                  v("table", By, [
+                    Ny,
                     v("thead", null, [
                       v("tr", null, [
                         v("th", null, [
-                          v("div", Ny, [
+                          v("div", Ry, [
                             v(
                               "h4",
                               { class: A([a(e.brightness), "text-lg m-0"]) },
@@ -16742,7 +16764,7 @@ const Zt = Cy(Ty),
                           ]),
                         ]),
                         v("th", null, [
-                          v("div", Ry, [
+                          v("div", jy, [
                             v(
                               "h4",
                               { class: A([a(e.brightness), "text-lg m-0"]) },
@@ -16765,12 +16787,12 @@ const Zt = Cy(Ty),
                         ]),
                       ]),
                     ]),
-                    jy,
+                    Fy,
                   ]),
                 ],
                 2,
               ),
-              Fy,
+              Dy,
               he(ts, { brightness: e.brightness }, null, 8, ["brightness"]),
             ]),
           ])
@@ -16778,27 +16800,27 @@ const Zt = Cy(Ty),
       )
     },
   }),
-  Gy = Rn(Hy, [["__scopeId", "data-v-8a92440e"]]),
-  Vy = {
+  Vy = Rn(Gy, [["__scopeId", "data-v-8a92440e"]]),
+  Wy = {
     class:
       "flex w-full gap-4 md:p-8 sm:p-4 items-center justify-center flex-wrap",
   },
-  Wy = { class: "lg:w-6/12 sm:w-12/12" },
-  qy = v(
+  qy = { class: "lg:w-6/12 sm:w-12/12" },
+  Uy = v(
     "p",
     null,
     " The Internet is a (potentially) dangerous place- not just for users, but for websites as well. Botnets, DDoS attacks, ransomware, and other problems are common enough at this point that every site is vulnerable. ",
     -1,
   ),
-  Uy = v("p", null, [v("b", null, " Don't worry, I can help!")], -1),
-  Yy = v(
+  Yy = v("p", null, [v("b", null, " Don't worry, I can help!")], -1),
+  Ky = v(
     "p",
     null,
     "My web security specialities include (but aren't limited to):",
     -1,
   ),
-  Ky = { class: "flex items-center w-full" },
-  Xy = v(
+  Xy = { class: "flex items-center w-full" },
+  Jy = v(
     "p",
     null,
     [
@@ -16812,9 +16834,9 @@ const Zt = Cy(Ty),
     ],
     -1,
   ),
-  Jy = v("div", { class: "h-3" }, null, -1),
-  Zy = { class: "flex items-center w-full" },
-  Qy = v(
+  Zy = v("div", { class: "h-3" }, null, -1),
+  Qy = { class: "flex items-center w-full" },
+  ew = v(
     "p",
     null,
     [
@@ -16828,19 +16850,19 @@ const Zt = Cy(Ty),
     ],
     -1,
   ),
-  ew = v("div", { class: "h-3" }, null, -1),
-  tw = { class: "flex items-center w-full" },
-  nw = v(
+  tw = v("div", { class: "h-3" }, null, -1),
+  nw = { class: "flex items-center w-full" },
+  rw = v(
     "p",
     null,
     " If your site has any PHP or JavaScript running (it does), there's a good chance coding errors, outdated libraries, or other problems are imperiling your site. Trust me, I've seen it all- from passwords saved in plain text files to packages decades out of date with 384 critical-risk vulnerabilities... so, whatever nastiness is lurking beneath the surface, I can fix it. ",
     -1,
   ),
-  rw = { class: "flex flex-col gap-4 lg:w-4/12 md:w-12/12" },
-  sw = { class: "prose text-center" },
-  aw = v("div", { class: "h-3" }, null, -1),
+  sw = { class: "flex flex-col gap-4 lg:w-4/12 md:w-12/12" },
+  aw = { class: "prose text-center" },
   iw = v("div", { class: "h-3" }, null, -1),
-  lw = {
+  lw = v("div", { class: "h-3" }, null, -1),
+  ow = {
     __name: "PanelSecurity",
     props: { brightness: Number },
     setup(e) {
@@ -16869,8 +16891,8 @@ const Zt = Cy(Ty),
         }
       return (o, f) => (
         se(),
-        Ee("div", Vy, [
-          v("div", Wy, [
+        Ee("div", Wy, [
+          v("div", qy, [
             v(
               "h2",
               { class: A(["text-left text-5xl", l(e.brightness)]) },
@@ -16909,9 +16931,9 @@ const Zt = Cy(Ty),
               "div",
               { class: A(["prose", l(e.brightness)]) },
               [
-                qy,
                 Uy,
                 Yy,
+                Ky,
                 v(
                   "div",
                   {
@@ -16927,7 +16949,7 @@ const Zt = Cy(Ty),
                     ]),
                   },
                   [
-                    v("div", Ky, [
+                    v("div", Xy, [
                       he(
                         we(Ps),
                         { class: A(["mr-2", i(e.brightness)]), size: "2rem" },
@@ -16942,11 +16964,11 @@ const Zt = Cy(Ty),
                         2,
                       ),
                     ]),
-                    Xy,
+                    Jy,
                   ],
                   2,
                 ),
-                Jy,
+                Zy,
                 v(
                   "div",
                   {
@@ -16962,7 +16984,7 @@ const Zt = Cy(Ty),
                     ]),
                   },
                   [
-                    v("div", Zy, [
+                    v("div", Qy, [
                       he(
                         we(Ps),
                         { size: "2rem", class: A(["mr-2", i(e.brightness)]) },
@@ -16977,11 +16999,11 @@ const Zt = Cy(Ty),
                         2,
                       ),
                     ]),
-                    Qy,
+                    ew,
                   ],
                   2,
                 ),
-                ew,
+                tw,
                 v(
                   "div",
                   {
@@ -16997,7 +17019,7 @@ const Zt = Cy(Ty),
                     ]),
                   },
                   [
-                    v("div", tw, [
+                    v("div", nw, [
                       he(
                         we(Ps),
                         { class: A(["mr-2", i(e.brightness)]), size: "2rem" },
@@ -17012,7 +17034,7 @@ const Zt = Cy(Ty),
                         2,
                       ),
                     ]),
-                    nw,
+                    rw,
                   ],
                   2,
                 ),
@@ -17020,7 +17042,7 @@ const Zt = Cy(Ty),
               2,
             ),
           ]),
-          v("div", rw, [
+          v("div", sw, [
             v(
               "div",
               {
@@ -17036,7 +17058,7 @@ const Zt = Cy(Ty),
                 ]),
               },
               [
-                v("div", sw, [
+                v("div", aw, [
                   v(
                     "h3",
                     {
@@ -17093,33 +17115,33 @@ const Zt = Cy(Ty),
               ],
               2,
             ),
-            aw,
-            v("hr", { class: A(["opacity-50", l(e.brightness)]) }, null, 2),
             iw,
+            v("hr", { class: A(["opacity-50", l(e.brightness)]) }, null, 2),
+            lw,
             he(ts, { brightness: e.brightness }, null, 8, ["brightness"]),
           ]),
         ])
       )
     },
   },
-  ow = {
+  uw = {
     class:
       "flex w-full gap-4 md:p-8 sm:p-4 items-center justify-center flex-col",
   },
-  uw = {
+  cw = {
     class: "prose md:w-10/12 sm:w-12/12 mt-8",
     style: { "max-width": "84ch !important" },
   },
-  cw = { class: "flex w-full" },
-  dw = { class: "flex w-full pt-4 gap-2" },
-  fw = { class: "w-6/12" },
+  dw = { class: "flex w-full" },
+  fw = { class: "flex w-full pt-4 gap-2" },
   pw = { class: "w-6/12" },
-  hw = { class: "w-full flex" },
-  gw = { class: "w-6/12" },
-  vw = { class: "w-6/12 pb-3" },
-  mw = v("em", null, "huge", -1),
-  bw = v("div", { class: "h-6" }, null, -1),
-  yw = {
+  hw = { class: "w-6/12" },
+  gw = { class: "w-full flex" },
+  vw = { class: "w-6/12" },
+  mw = { class: "w-6/12 pb-3" },
+  bw = v("em", null, "huge", -1),
+  yw = v("div", { class: "h-6" }, null, -1),
+  ww = {
     __name: "PanelAccessibility",
     props: { brightness: Number },
     setup(e) {
@@ -17179,8 +17201,8 @@ const Zt = Cy(Ty),
         ),
         (f, c) => (
           se(),
-          Ee("div", ow, [
-            v("div", uw, [
+          Ee("div", uw, [
+            v("div", cw, [
               v(
                 "h2",
                 { class: A(["text-5xl", i(e.brightness)]) },
@@ -17240,7 +17262,7 @@ const Zt = Cy(Ty),
                 " It doesn't stop there, though- for users with color blindness, the green and red buttons are indistinguishable. ",
                 2,
               ),
-              v("div", cw, [
+              v("div", dw, [
                 v(
                   "button",
                   {
@@ -17263,8 +17285,8 @@ const Zt = Cy(Ty),
                   2,
                 ),
               ]),
-              v("div", dw, [
-                v("div", fw, [
+              v("div", fw, [
+                v("div", pw, [
                   v(
                     "button",
                     { class: A(["rounded px-5 py-2 w-full", s.value]) },
@@ -17272,7 +17294,7 @@ const Zt = Cy(Ty),
                     2,
                   ),
                 ]),
-                v("div", pw, [
+                v("div", hw, [
                   v(
                     "button",
                     { class: A(["rounded px-5 py-2 w-full", a.value]) },
@@ -17287,8 +17309,8 @@ const Zt = Cy(Ty),
                 " Here's a better version. ",
                 2,
               ),
-              v("div", hw, [
-                v("div", gw, [
+              v("div", gw, [
+                v("div", vw, [
                   v(
                     "button",
                     {
@@ -17307,7 +17329,7 @@ const Zt = Cy(Ty),
                     2,
                   ),
                 ]),
-                v("div", vw, [
+                v("div", mw, [
                   v(
                     "button",
                     {
@@ -17338,7 +17360,7 @@ const Zt = Cy(Ty),
                 { class: A(i(e.brightness)) },
                 [
                   Ie(" Changes like these may seem small, but they make a "),
-                  mw,
+                  bw,
                   Ie(
                     " difference for the usability of your site. Let me help you be in the 2%. ",
                   ),
@@ -17346,15 +17368,15 @@ const Zt = Cy(Ty),
                 2,
               ),
             ]),
-            bw,
+            yw,
             he(ts, { brightness: e.brightness }, null, 8, ["brightness"]),
           ])
         )
       )
     },
   },
-  ww = ["onMouseover"],
-  xw = {
+  xw = ["onMouseover"],
+  Sw = {
     __name: "Services",
     props: { brightness: Number },
     setup(e) {
@@ -17526,7 +17548,7 @@ const Zt = Cy(Ty),
                                   ),
                                 ],
                                 42,
-                                ww,
+                                xw,
                               ),
                             ]),
                             _: 2,
@@ -17551,7 +17573,7 @@ const Zt = Cy(Ty),
                     { class: "flex justify-center gap-5 w-full" },
                     {
                       default: Xe(() => [
-                        he(Gy, { brightness: e.brightness }, null, 8, [
+                        he(Vy, { brightness: e.brightness }, null, 8, [
                           "brightness",
                         ]),
                       ]),
@@ -17563,7 +17585,7 @@ const Zt = Cy(Ty),
                     { class: "flex justify-center gap-5 w-full" },
                     {
                       default: Xe(() => [
-                        he(lw, { brightness: e.brightness }, null, 8, [
+                        he(ow, { brightness: e.brightness }, null, 8, [
                           "brightness",
                         ]),
                       ]),
@@ -17575,7 +17597,7 @@ const Zt = Cy(Ty),
                     { class: "flex justify-center gap-5 w-full" },
                     {
                       default: Xe(() => [
-                        he(Ey, { brightness: e.brightness }, null, 8, [
+                        he(_y, { brightness: e.brightness }, null, 8, [
                           "brightness",
                         ]),
                       ]),
@@ -17587,7 +17609,7 @@ const Zt = Cy(Ty),
                     { class: "flex justify-center gap-5 w-full" },
                     {
                       default: Xe(() => [
-                        he(cy, { brightness: e.brightness }, null, 8, [
+                        he(dy, { brightness: e.brightness }, null, 8, [
                           "brightness",
                         ]),
                       ]),
@@ -17599,7 +17621,7 @@ const Zt = Cy(Ty),
                     { class: "flex justify-center gap-5 w-full" },
                     {
                       default: Xe(() => [
-                        he(yw, { brightness: e.brightness }, null, 8, [
+                        he(ww, { brightness: e.brightness }, null, 8, [
                           "brightness",
                         ]),
                       ]),
@@ -17616,8 +17638,8 @@ const Zt = Cy(Ty),
       )
     },
   },
-  Sw = { href: "/pricing" },
-  Ew = {
+  Ew = { href: "/pricing" },
+  _w = {
     __name: "messageBanner",
     props: { brightness: Number },
     setup(e) {
@@ -17664,7 +17686,7 @@ const Zt = Cy(Ty),
               " Get a free site speed audit with recommendations for optimizing. My gift to you. ",
               2,
             ),
-            v("a", Sw, [
+            v("a", Ew, [
               v(
                 "button",
                 {
@@ -17691,35 +17713,35 @@ const Zt = Cy(Ty),
     },
   },
   kr = (e) => (Js("data-v-e20b9d11"), (e = e()), Zs(), e),
-  _w = { class: "flex-col" },
-  Cw = { class: "prose py-5 flex-col w-full" },
-  Tw = kr(() => v("br", null, null, -1)),
+  Cw = { class: "flex-col" },
+  Tw = { class: "prose py-5 flex-col w-full" },
   Pw = kr(() => v("br", null, null, -1)),
-  kw = { class: "flex" },
-  $w = { class: "w-6/12" },
-  Mw = ["name", "checked", "onClick"],
-  Iw = { class: "w-6/12" },
-  Ow = { key: 0, class: "text-slate-50 opacity-25 line-through pr-2" },
-  Aw = { class: "flex-col gap-4" },
-  Lw = { class: "flex items-center" },
-  zw = ["name", "checked", "onClick"],
-  Bw = { key: 0 },
-  Nw = { key: 1 },
-  Rw = { class: "" },
-  jw = { key: 0, class: "text-slate-50 opacity-25 line-through pr-2" },
-  Fw = { class: "flex-col" },
-  Dw = { class: "flex justify-between" },
-  Hw = { key: 0, class: "text-slate-50 opacity-25 line-through pr-2" },
-  Gw = { class: "gap-4 mt-4", name: "pricing" },
-  Vw = ["value"],
+  kw = kr(() => v("br", null, null, -1)),
+  $w = { class: "flex" },
+  Mw = { class: "w-6/12" },
+  Iw = ["name", "checked", "onClick"],
+  Ow = { class: "w-6/12" },
+  Aw = { key: 0, class: "text-slate-50 opacity-25 line-through pr-2" },
+  Lw = { class: "flex-col gap-4" },
+  zw = { class: "flex items-center" },
+  Bw = ["name", "checked", "onClick"],
+  Nw = { key: 0 },
+  Rw = { key: 1 },
+  jw = { class: "" },
+  Fw = { key: 0, class: "text-slate-50 opacity-25 line-through pr-2" },
+  Dw = { class: "flex-col" },
+  Hw = { class: "flex justify-between" },
+  Gw = { key: 0, class: "text-slate-50 opacity-25 line-through pr-2" },
+  Vw = { class: "gap-4 mt-4", name: "pricing" },
   Ww = ["value"],
-  qw = { class: "flex gap-4", id: "leftInputs" },
-  Uw = { class: "flex gap-4", id: "rightInputs" },
-  Yw = kr(() => v("br", null, null, -1)),
+  qw = ["value"],
+  Uw = { class: "flex gap-4", id: "leftInputs" },
+  Yw = { class: "flex gap-4", id: "rightInputs" },
   Kw = kr(() => v("br", null, null, -1)),
   Xw = kr(() => v("br", null, null, -1)),
   Jw = kr(() => v("br", null, null, -1)),
-  Zw = {
+  Zw = kr(() => v("br", null, null, -1)),
+  Qw = {
     __name: "servicesCalculator",
     props: { brightness: Number },
     setup(e) {
@@ -18066,8 +18088,8 @@ const Zt = Cy(Ty),
         }
       return (F, oe) => (
         se(),
-        Ee("div", _w, [
-          v("div", Cw, [
+        Ee("div", Cw, [
+          v("div", Tw, [
             v(
               "h2",
               {
@@ -18086,8 +18108,8 @@ const Zt = Cy(Ty),
                 Ie(
                   " Faster, simpler, and cheaper than an agency. No need to spend hours on the phone haggling. Pick what you want, I make it happen. That's it!",
                 ),
-                Tw,
                 Pw,
+                kw,
                 Ie(
                   " These services are for your existing website- if you're looking for a new site, ",
                 ),
@@ -18123,8 +18145,8 @@ const Zt = Cy(Ty),
                     ]),
                   },
                   [
-                    v("div", kw, [
-                      v("div", $w, [
+                    v("div", $w, [
+                      v("div", Mw, [
                         v(
                           "div",
                           {
@@ -18148,14 +18170,14 @@ const Zt = Cy(Ty),
                               },
                               null,
                               10,
-                              Mw,
+                              Iw,
                             ),
                             v("h3", null, kt(V.title), 1),
                           ],
                           2,
                         ),
                       ]),
-                      v("div", Iw, [
+                      v("div", Ow, [
                         v(
                           "h3",
                           {
@@ -18166,7 +18188,7 @@ const Zt = Cy(Ty),
                           },
                           [
                             ge(V) != Math.floor(Q(V))
-                              ? (se(), Ee("span", Ow, "$" + kt(ge(V)), 1))
+                              ? (se(), Ee("span", Aw, "$" + kt(ge(V)), 1))
                               : st("", !0),
                             Ie("$" + kt(Q(V)), 1),
                           ],
@@ -18180,7 +18202,7 @@ const Zt = Cy(Ty),
                       null,
                       2,
                     ),
-                    v("div", Aw, [
+                    v("div", Lw, [
                       (se(!0),
                       Ee(
                         Qe,
@@ -18197,7 +18219,7 @@ const Zt = Cy(Ty),
                                   "flex w-full items-center justify-between pb-4",
                               },
                               [
-                                v("div", Lw, [
+                                v("div", zw, [
                                   v(
                                     "input",
                                     {
@@ -18213,7 +18235,7 @@ const Zt = Cy(Ty),
                                     },
                                     null,
                                     10,
-                                    zw,
+                                    Bw,
                                   ),
                                   v(
                                     "p",
@@ -18222,16 +18244,16 @@ const Zt = Cy(Ty),
                                       Pe.title ==
                                       "Detailed speed audit (100% free)"
                                         ? (se(),
-                                          Ee("b", Bw, [
+                                          Ee("b", Nw, [
                                             v("em", null, kt(Pe.title), 1),
                                           ]))
                                         : (se(),
-                                          Ee("span", Nw, kt(Pe.title), 1)),
+                                          Ee("span", Rw, kt(Pe.title), 1)),
                                     ],
                                     2,
                                   ),
                                 ]),
-                                v("div", Rw, [
+                                v("div", jw, [
                                   v(
                                     "h3",
                                     {
@@ -18244,7 +18266,7 @@ const Zt = Cy(Ty),
                                       Pe.price !=
                                       Math.floor(Pe.price * V.discount)
                                         ? (se(),
-                                          Ee("span", jw, "$" + kt(Pe.price), 1))
+                                          Ee("span", Fw, "$" + kt(Pe.price), 1))
                                         : st("", !0),
                                       Ie("$" + kt(Pe.price * V.discount), 1),
                                     ],
@@ -18266,8 +18288,8 @@ const Zt = Cy(Ty),
             128,
           )),
           v("hr", { class: A(["my-4 w-full", r(n.brightness)]) }, null, 2),
-          v("div", Fw, [
-            v("div", Dw, [
+          v("div", Dw, [
+            v("div", Hw, [
               v(
                 "h3",
                 { class: A(["text-4xl text-bold", r(n.brightness)]) },
@@ -18279,7 +18301,7 @@ const Zt = Cy(Ty),
                 { class: A(["text-4xl text-bold", r(n.brightness)]) },
                 [
                   X.value != Math.floor(X.value)
-                    ? (se(), Ee("span", Hw, "$" + kt(X.value), 1))
+                    ? (se(), Ee("span", Gw, "$" + kt(X.value), 1))
                     : st("", !0),
                   Ie("$" + kt(X.value), 1),
                 ],
@@ -18287,22 +18309,22 @@ const Zt = Cy(Ty),
               ),
             ]),
           ]),
-          v("form", Gw, [
+          v("form", Vw, [
             v(
               "input",
               { type: "hidden", name: "services", value: xe.value },
               null,
               8,
-              Vw,
+              Ww,
             ),
             v(
               "input",
               { type: "hidden", name: "total", value: X.value },
               null,
               8,
-              Ww,
+              qw,
             ),
-            v("div", qw, [
+            v("div", Uw, [
               v(
                 "input",
                 {
@@ -18333,7 +18355,7 @@ const Zt = Cy(Ty),
                 2,
               ),
             ]),
-            v("div", Uw, [
+            v("div", Yw, [
               v(
                 "input",
                 {
@@ -18391,8 +18413,8 @@ const Zt = Cy(Ty),
               Ie(
                 " I'll get back to you within 48 hours. This form is not a contract, please note that work can't begin until we've connected and signed a contract.",
               ),
-              Yw,
               Kw,
+              Xw,
               Ie(
                 "These are one-time services; for ongoing maintenance, please ",
               ),
@@ -18403,8 +18425,8 @@ const Zt = Cy(Ty),
                 2,
               ),
               Ie(" and we can get that figured out."),
-              Xw,
               Jw,
+              Zw,
               Ie("I look forward to working with you! "),
             ],
             2,
@@ -18413,20 +18435,20 @@ const Zt = Cy(Ty),
       )
     },
   },
-  Qw = Rn(Zw, [["__scopeId", "data-v-e20b9d11"]]),
-  ex = {
+  ex = Rn(Qw, [["__scopeId", "data-v-e20b9d11"]]),
+  tx = {
     __name: "Pricing",
     props: { brightness: Number },
     setup(e) {
       return (t, n) => (
-        se(), De(Qw, { brightness: e.brightness }, null, 8, ["brightness"])
+        se(), De(ex, { brightness: e.brightness }, null, 8, ["brightness"])
       )
     },
   },
-  tx = { class: "flex-col" },
-  nx = { class: "py-5 flex-col w-full" },
-  rx = { id: "cta" },
-  sx = {
+  nx = { class: "flex-col" },
+  rx = { class: "py-5 flex-col w-full" },
+  sx = { id: "cta" },
+  ax = {
     __name: "Contact",
     props: { brightness: Number },
     setup(e) {
@@ -18490,8 +18512,8 @@ const Zt = Cy(Ty),
         }
       return (s, a) => (
         se(),
-        Ee("div", tx, [
-          v("div", nx, [
+        Ee("div", nx, [
+          v("div", rx, [
             v(
               "h2",
               {
@@ -18504,7 +18526,7 @@ const Zt = Cy(Ty),
               2,
             ),
           ]),
-          v("form", rx, [
+          v("form", sx, [
             v(
               "input",
               {
@@ -18562,7 +18584,7 @@ const Zt = Cy(Ty),
       )
     },
   },
-  ax = {
+  ix = {
     __name: "AboutMe",
     props: { brightness: Number },
     setup(e) {
@@ -18585,7 +18607,7 @@ const Zt = Cy(Ty),
     guidelines: "https://getbootstrap.com/docs/5.3/about/brand",
     license: { type: "MIT", url: "https://spdx.org/licenses/MIT" },
   },
-  ix = {
+  lx = {
     title: "Cloudflare",
     slug: "cloudflare",
     get svg() {
@@ -18596,7 +18618,7 @@ const Zt = Cy(Ty),
     hex: "F38020",
     guidelines: "https://www.cloudflare.com/trademark/",
   },
-  lx = {
+  ox = {
     title: "Figma",
     slug: "figma",
     get svg() {
@@ -18607,7 +18629,7 @@ const Zt = Cy(Ty),
     hex: "F24E1E",
     guidelines: "https://www.figma.com/using-the-figma-brand/",
   },
-  ox = {
+  ux = {
     title: "JavaScript",
     slug: "javascript",
     get svg() {
@@ -18619,7 +18641,7 @@ const Zt = Cy(Ty),
     hex: "F7DF1E",
     license: { type: "MIT", url: "https://spdx.org/licenses/MIT" },
   },
-  ux = {
+  cx = {
     title: "NGINX",
     slug: "nginx",
     get svg() {
@@ -18644,7 +18666,7 @@ const Zt = Cy(Ty),
       url: "https://spdx.org/licenses/CC-BY-SA-4.0",
     },
   },
-  cx = {
+  dx = {
     title: "Tailwind CSS",
     slug: "tailwindcss",
     get svg() {
@@ -18683,22 +18705,22 @@ const Zt = Cy(Ty),
     hex: "21759B",
     guidelines: "https://wordpressfoundation.org/trademark-policy",
   },
-  dx = { class: "flex-col w-full lg:w-9/12 md:w-10/12 sm:wd-11/12" },
-  fx = { class: "py-5 flex-col w-full" },
-  px = { class: "prose" },
-  hx = ["onMouseover", "onClick"],
-  gx = { class: "image-container" },
-  vx = ["src", "alt"],
-  mx = { class: "flex gap-2 items-center" },
-  bx = {
+  fx = { class: "flex-col w-full lg:w-9/12 md:w-10/12 sm:wd-11/12" },
+  px = { class: "py-5 flex-col w-full" },
+  hx = { class: "prose" },
+  gx = ["onMouseover", "onClick"],
+  vx = { class: "image-container" },
+  mx = ["src", "alt"],
+  bx = { class: "flex gap-2 items-center" },
+  yx = {
     viewBox: "0 0 24 24",
     xmlns: "http://www.w3.org/2000/svg",
     fill: "currentColor",
     width: "24px",
     height: "24px",
   },
-  yx = ["d"],
-  wx = {
+  wx = ["d"],
+  xx = {
     __name: "Portfolio",
     props: { brightness: Number },
     setup(e) {
@@ -18717,13 +18739,13 @@ const Zt = Cy(Ty),
         },
         s = te([
           {
-            icons: [_n, Pu, lx],
+            icons: [_n, Pu, ox],
             title: "BlenderNation Bazaar",
             image: Zi,
             link: "/portfolio/bazaar",
           },
           {
-            icons: [ku, ux, ix],
+            icons: [ku, cx, lx],
             title: "OKC South Stake",
             image: cd,
             link: "/portfolio/okc-south-stake",
@@ -18731,7 +18753,7 @@ const Zt = Cy(Ty),
         ]),
         a = te([
           {
-            icons: [_n, ox],
+            icons: [_n, ux],
             title: "Build On Your Land",
             image: dd,
             link: "/portfolio/build-on-your-land",
@@ -18756,7 +18778,7 @@ const Zt = Cy(Ty),
           },
           {
             title: "josephhansen.dev",
-            icons: [ku, cx],
+            icons: [ku, dx],
             image: nl,
             link: "/portfolio/josephhansen-dev",
           },
@@ -18782,9 +18804,9 @@ const Zt = Cy(Ty),
         i = te(null)
       return (l, o) => (
         se(),
-        Ee("div", dx, [
-          v("div", fx, [
-            v("span", px, [
+        Ee("div", fx, [
+          v("div", px, [
+            v("span", hx, [
               v(
                 "h2",
                 {
@@ -18856,7 +18878,7 @@ const Zt = Cy(Ty),
                               }),
                             },
                             [
-                              v("div", gx, [
+                              v("div", vx, [
                                 v(
                                   "img",
                                   {
@@ -18867,7 +18889,7 @@ const Zt = Cy(Ty),
                                   },
                                   null,
                                   8,
-                                  vx,
+                                  mx,
                                 ),
                               ]),
                               v("div", null, [
@@ -18900,7 +18922,7 @@ const Zt = Cy(Ty),
                                           3,
                                         ),
                                       ]),
-                                      v("div", mx, [
+                                      v("div", bx, [
                                         (se(!0),
                                         Ee(
                                           Qe,
@@ -18931,13 +18953,13 @@ const Zt = Cy(Ty),
                                                 },
                                                 [
                                                   (se(),
-                                                  Ee("svg", bx, [
+                                                  Ee("svg", yx, [
                                                     v(
                                                       "path",
                                                       { d: p.path },
                                                       null,
                                                       8,
-                                                      yx,
+                                                      wx,
                                                     ),
                                                   ])),
                                                 ],
@@ -18955,7 +18977,7 @@ const Zt = Cy(Ty),
                               ]),
                             ],
                             44,
-                            hx,
+                            gx,
                           )
                         ),
                       ),
@@ -18972,38 +18994,38 @@ const Zt = Cy(Ty),
       )
     },
   },
-  xx = Rn(wx, [["__scopeId", "data-v-2bda4711"]]),
-  Sx = v(
+  Sx = Rn(xx, [["__scopeId", "data-v-2bda4711"]]),
+  Ex = v(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     " The vision: a one-stop shop for Blender users ",
     -1,
   ),
-  Ex = v("p", null, "Lorem ipsum", -1),
-  _x = v(
+  _x = v("p", null, "Lorem ipsum", -1),
+  Cx = v(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     " Tight deadlines and high stakes ",
     -1,
   ),
-  Cx = v("p", null, "Lorem ipsum", -1),
-  Tx = v(
+  Tx = v("p", null, "Lorem ipsum", -1),
+  Px = v(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     "From concept to results",
     -1,
   ),
-  Px = v("p", null, "Lorem ipsum", -1),
-  kx = v(
+  kx = v("p", null, "Lorem ipsum", -1),
+  $x = v(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     " Security- keeping the Bazaar safe ",
     -1,
   ),
-  $x = v("p", null, "Lorem ipsum", -1),
-  Mx = "https://bazaar.blendernation.com",
-  Ix = "BlenderNation Bazaar",
-  Ox = {
+  Mx = v("p", null, "Lorem ipsum", -1),
+  Ix = "https://bazaar.blendernation.com",
+  Ox = "BlenderNation Bazaar",
+  Ax = {
     __name: "Bazaar",
     setup(e) {
       const t = te([Zi, X2, J2, Z2, Q2]),
@@ -19021,14 +19043,13 @@ const Zt = Cy(Ty),
           {
             images: t.value,
             captions: n.value,
-            link: Mx,
-            title: Ix,
+            link: Ix,
+            title: Ox,
             brightness: r.brightness,
           },
           {
             default: Xe(() => [
               tn(r.$slots, "default", {}, () => [
-                Sx,
                 Ex,
                 _x,
                 Cx,
@@ -19036,6 +19057,7 @@ const Zt = Cy(Ty),
                 Px,
                 kx,
                 $x,
+                Mx,
               ]),
             ]),
             _: 3,
@@ -19046,30 +19068,30 @@ const Zt = Cy(Ty),
       )
     },
   },
-  Ax = {
+  Lx = {
     __name: "OkcSouthStake",
     props: { brightness: Number },
     setup(e) {
       return (t, n) => null
     },
   },
-  Lx = v(
+  zx = v(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     " Stark colors + clean white and transparency ",
     -1,
   ),
-  zx = v("p", null, "Lorem ipsum", -1),
-  Bx = v(
+  Bx = v("p", null, "Lorem ipsum", -1),
+  Nx = v(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     "Geometric effects",
     -1,
   ),
-  Nx = v("p", null, "Lorem ipsum", -1),
-  Rx = "https://arissearch.com//",
-  jx = "Aris Search",
-  Fx = {
+  Rx = v("p", null, "Lorem ipsum", -1),
+  jx = "https://arissearch.com//",
+  Fx = "Aris Search",
+  Dx = {
     __name: "ArisSearch",
     setup(e) {
       const t = te([al, ry]),
@@ -19083,13 +19105,13 @@ const Zt = Cy(Ty),
             {
               images: t.value,
               captions: n.value,
-              link: Rx,
-              title: jx,
+              link: jx,
+              title: Fx,
               brightness: r.brightness,
             },
             {
               default: Xe(() => [
-                tn(r.$slots, "default", {}, () => [Lx, zx, Bx, Nx]),
+                tn(r.$slots, "default", {}, () => [zx, Bx, Nx, Rx]),
               ]),
               _: 3,
             },
@@ -19100,23 +19122,23 @@ const Zt = Cy(Ty),
       }
     },
   },
-  Dx = v(
+  Hx = v(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     " Clean and professional with an unusual color palette ",
     -1,
   ),
-  Hx = v("p", null, "Lorem ipsum", -1),
-  Gx = v(
+  Gx = v("p", null, "Lorem ipsum", -1),
+  Vx = v(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     " Parallax architectural sketch backgrounds ",
     -1,
   ),
-  Vx = v("p", null, "Lorem ipsum", -1),
-  Wx = "https://floorsfloors.com/",
-  qx = "Atlanta Floor One",
-  Ux = {
+  Wx = v("p", null, "Lorem ipsum", -1),
+  qx = "https://floorsfloors.com/",
+  Ux = "Atlanta Floor One",
+  Yx = {
     __name: "AtlantaFloorOne",
     setup(e) {
       const t = te([el, ey, ty, ny]),
@@ -19133,13 +19155,13 @@ const Zt = Cy(Ty),
           {
             images: t.value,
             captions: n.value,
-            link: Wx,
-            title: qx,
+            link: qx,
+            title: Ux,
             brightness: r.brightness,
           },
           {
             default: Xe(() => [
-              tn(r.$slots, "default", {}, () => [Dx, Hx, Gx, Vx]),
+              tn(r.$slots, "default", {}, () => [Hx, Gx, Vx, Wx]),
             ]),
             _: 3,
           },
@@ -19149,30 +19171,30 @@ const Zt = Cy(Ty),
       )
     },
   },
-  Yx = {
+  Kx = {
     __name: "BuildOnYourLand",
     props: { brightness: Number },
     setup(e) {
       return (t, n) => null
     },
   },
-  Kx = v(
+  Xx = v(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     " Priority: make services and pricing clear and accessible ",
     -1,
   ),
-  Xx = v("p", null, "Lorem ipsum", -1),
-  Jx = v(
+  Jx = v("p", null, "Lorem ipsum", -1),
+  Zx = v(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     "Working with a round logo",
     -1,
   ),
-  Zx = v("p", null, "Lorem ipsum", -1),
-  Qx = "https://stehlfamilydental.com/",
-  e3 = "Stuart Hose and Pipe",
-  t3 = {
+  Qx = v("p", null, "Lorem ipsum", -1),
+  e3 = "https://stehlfamilydental.com/",
+  t3 = "Stuart Hose and Pipe",
+  n3 = {
     __name: "StehlFamilyDental",
     setup(e) {
       const t = te([sl]),
@@ -19184,13 +19206,13 @@ const Zt = Cy(Ty),
           {
             images: t.value,
             captions: n.value,
-            link: Qx,
-            title: e3,
+            link: e3,
+            title: t3,
             brightness: r.brightness,
           },
           {
             default: Xe(() => [
-              tn(r.$slots, "default", {}, () => [Kx, Xx, Jx, Zx]),
+              tn(r.$slots, "default", {}, () => [Xx, Jx, Zx, Qx]),
             ]),
             _: 3,
           },
@@ -19200,23 +19222,23 @@ const Zt = Cy(Ty),
       )
     },
   },
-  n3 = v(
+  r3 = v(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     " Using design to present minimal text in a compelling way ",
     -1,
   ),
-  r3 = v("p", null, "Lorem ipsum", -1),
-  s3 = v(
+  s3 = v("p", null, "Lorem ipsum", -1),
+  a3 = v(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     "Image comparison sliders",
     -1,
   ),
-  a3 = v("p", null, "Lorem ipsum", -1),
-  i3 = "https://tub-boys.com/",
-  l3 = "Tub Boys",
-  o3 = {
+  i3 = v("p", null, "Lorem ipsum", -1),
+  l3 = "https://tub-boys.com/",
+  o3 = "Tub Boys",
+  u3 = {
     __name: "TubBoys",
     setup(e) {
       const t = te([rl]),
@@ -19228,13 +19250,13 @@ const Zt = Cy(Ty),
           {
             images: t.value,
             captions: n.value,
-            link: i3,
-            title: l3,
+            link: l3,
+            title: o3,
             brightness: r.brightness,
           },
           {
             default: Xe(() => [
-              tn(r.$slots, "default", {}, () => [n3, r3, s3, a3]),
+              tn(r.$slots, "default", {}, () => [r3, s3, a3, i3]),
             ]),
             _: 3,
           },
@@ -19244,23 +19266,23 @@ const Zt = Cy(Ty),
       )
     },
   },
-  u3 = v(
+  c3 = v(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     " Extremely precise design requirements ",
     -1,
   ),
-  c3 = v("p", null, "Lorem ipsum", -1),
-  d3 = v(
+  d3 = v("p", null, "Lorem ipsum", -1),
+  f3 = v(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     " Maximizing information while avoiding clutter ",
     -1,
   ),
-  f3 = v("p", null, "Lorem ipsum", -1),
-  p3 = "https://stuarthose.com/",
-  h3 = "Stuart Hose and Pipe",
-  g3 = {
+  p3 = v("p", null, "Lorem ipsum", -1),
+  h3 = "https://stuarthose.com/",
+  g3 = "Stuart Hose and Pipe",
+  v3 = {
     __name: "StuartPipeAndHose",
     setup(e) {
       const t = te([Qi]),
@@ -19272,13 +19294,13 @@ const Zt = Cy(Ty),
           {
             images: t.value,
             captions: n.value,
-            link: p3,
-            title: h3,
+            link: h3,
+            title: g3,
             brightness: r.brightness,
           },
           {
             default: Xe(() => [
-              tn(r.$slots, "default", {}, () => [u3, c3, d3, f3]),
+              tn(r.$slots, "default", {}, () => [c3, d3, f3, p3]),
             ]),
             _: 3,
           },
@@ -19288,16 +19310,16 @@ const Zt = Cy(Ty),
       )
     },
   },
-  v3 = v(
+  m3 = v(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     "Iterative design",
     -1,
   ),
-  m3 = v("p", null, "Lorem ipsum", -1),
-  b3 = "https://swimstatepoolservice.com/",
-  y3 = "Swim State Pool",
-  w3 = {
+  b3 = v("p", null, "Lorem ipsum", -1),
+  y3 = "https://swimstatepoolservice.com/",
+  w3 = "Swim State Pool",
+  x3 = {
     __name: "SwimStatePool",
     setup(e) {
       const t = te([tl]),
@@ -19309,12 +19331,12 @@ const Zt = Cy(Ty),
           {
             images: t.value,
             captions: n.value,
-            link: b3,
-            title: y3,
+            link: y3,
+            title: w3,
             brightness: r.brightness,
           },
           {
-            default: Xe(() => [tn(r.$slots, "default", {}, () => [v3, m3])]),
+            default: Xe(() => [tn(r.$slots, "default", {}, () => [m3, b3])]),
             _: 3,
           },
           8,
@@ -19323,11 +19345,11 @@ const Zt = Cy(Ty),
       )
     },
   },
-  x3 = v("h3", { class: "text-2xl font-bold text-inherit" }, "Lorem ipsum", -1),
-  S3 = v("p", null, "Lorem ipsum", -1),
-  E3 = "/",
-  _3 = "josephhansen.dev",
-  C3 = {
+  S3 = v("h3", { class: "text-2xl font-bold text-inherit" }, "Lorem ipsum", -1),
+  E3 = v("p", null, "Lorem ipsum", -1),
+  _3 = "/",
+  C3 = "josephhansen.dev",
+  T3 = {
     __name: "JosephHansenDev",
     setup(e) {
       const t = te([nl]),
@@ -19339,12 +19361,12 @@ const Zt = Cy(Ty),
           {
             images: t.value,
             captions: n.value,
-            link: E3,
-            title: _3,
+            link: _3,
+            title: C3,
             brightness: r.brightness,
           },
           {
-            default: Xe(() => [tn(r.$slots, "default", {}, () => [x3, S3])]),
+            default: Xe(() => [tn(r.$slots, "default", {}, () => [S3, E3])]),
             _: 3,
           },
           8,
@@ -19353,9 +19375,9 @@ const Zt = Cy(Ty),
       )
     },
   },
-  T3 = { class: "flex justify-center w-full md:px-10 sm:px-5 mt-5" },
-  P3 = { class: "flex justify-center w-full md:px-10 sm:px-5 pt-10" },
-  k3 = {
+  P3 = { class: "flex justify-center w-full md:px-10 sm:px-5 mt-5" },
+  k3 = { class: "flex justify-center w-full md:px-10 sm:px-5 pt-10" },
+  $3 = {
     __name: "Main",
     props: { component: String },
     setup(e) {
@@ -19366,16 +19388,16 @@ const Zt = Cy(Ty),
             window.localStorage.setItem("brightness", t.value)
         },
         s = {
-          "okc-south-stake": Ax,
-          "aris-search": Fx,
-          "atlanta-floor-one": Ux,
-          "build-on-your-land": Yx,
-          "stehl-family-dental": t3,
-          "tub-boys": o3,
-          "stuart-pipe": g3,
-          "swim-state-pool": w3,
-          "josephhansen-dev": C3,
-          bazaar: Ox,
+          "okc-south-stake": Lx,
+          "aris-search": Dx,
+          "atlanta-floor-one": Yx,
+          "build-on-your-land": Kx,
+          "stehl-family-dental": n3,
+          "tub-boys": u3,
+          "stuart-pipe": v3,
+          "swim-state-pool": x3,
+          "josephhansen-dev": T3,
+          bazaar: Ax,
         },
         a = me(() => {
           switch (t.value) {
@@ -19510,7 +19532,7 @@ const Zt = Cy(Ty),
                 },
                 [
                   he(K1, { "onUpdate:brightness": r }),
-                  v("div", T3, [
+                  v("div", P3, [
                     e.component == "pricing"
                       ? (se(),
                         Ee(
@@ -19529,7 +19551,7 @@ const Zt = Cy(Ty),
                             ]),
                           },
                           [
-                            he(ex, { brightness: t.value }, null, 8, [
+                            he(tx, { brightness: t.value }, null, 8, [
                               "brightness",
                             ]),
                           ],
@@ -19554,7 +19576,7 @@ const Zt = Cy(Ty),
                             ]),
                           },
                           [
-                            he(sx, { brightness: t.value }, null, 8, [
+                            he(ax, { brightness: t.value }, null, 8, [
                               "brightness",
                             ]),
                           ],
@@ -19579,7 +19601,7 @@ const Zt = Cy(Ty),
                             ]),
                           },
                           [
-                            he(xx, { brightness: t.value }, null, 8, [
+                            he(Sx, { brightness: t.value }, null, 8, [
                               "brightness",
                             ]),
                           ],
@@ -19604,7 +19626,7 @@ const Zt = Cy(Ty),
                             ]),
                           },
                           [
-                            he(ax, { brightness: t.value }, null, 8, [
+                            he(ix, { brightness: t.value }, null, 8, [
                               "brightness",
                             ]),
                           ],
@@ -19667,7 +19689,7 @@ const Zt = Cy(Ty),
                         ))
                       : st("", !0),
                   ]),
-                  v("div", P3, [
+                  v("div", k3, [
                     e.component == "home"
                       ? (se(),
                         Ee(
@@ -19686,7 +19708,7 @@ const Zt = Cy(Ty),
                             ]),
                           },
                           [
-                            he(xw, { brightness: t.value }, null, 8, [
+                            he(Sw, { brightness: t.value }, null, 8, [
                               "brightness",
                             ]),
                           ],
@@ -19697,7 +19719,7 @@ const Zt = Cy(Ty),
                 ],
                 2,
               ),
-              he(Ew, { brightness: t.value }, null, 8, ["brightness"]),
+              he(_w, { brightness: t.value }, null, 8, ["brightness"]),
             ],
             64,
           )
@@ -19705,7 +19727,7 @@ const Zt = Cy(Ty),
       )
     },
   },
-  $3 = Rn(k3, [["__scopeId", "data-v-f15944f1"]]),
+  M3 = Rn($3, [["__scopeId", "data-v-f15944f1"]]),
   ll = [
     { path: "/", component: null, props: { component: "home" } },
     { path: "/pricing", component: null, props: { component: "pricing" } },
@@ -19765,9 +19787,9 @@ const Zt = Cy(Ty),
   ]
 ll.map((e) => e.path)
 ll.forEach((e) => {
-  e.component = $3
+  e.component = M3
 })
-const M3 = i1({ history: Sm(), routes: ll }),
+const I3 = i1({ history: Sm(), routes: ll }),
   pd = Sv(Pv)
-pd.use(M3)
+pd.use(I3)
 pd.mount("#app")

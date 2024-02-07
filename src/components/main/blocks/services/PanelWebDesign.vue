@@ -71,7 +71,7 @@
     :brightness="brightness"
     ><slot>
       <h2 class="text-3xl mb-1" :class="pClass(brightness)">
-        I've designed dozens of websites.
+        I've designed dozens of websites. I can design yours too!
       </h2>
       <div class="px-3 text-center">
         <p>
@@ -95,12 +95,23 @@
             many projects with both pursuing degrees in design. He can design
             anything. This is not an exaggeration. I personally struggled to
             learn new design tools and manipulate pixels the way I wanted them
-            to be. Joseph just did it. He is incredible. ...I
-            would recommend him to anyone with utmost confidence that he will
-            surpass all expectations.
+            to be. Joseph just did it. He is incredible. ...I would recommend
+            him to anyone with utmost confidence that he will surpass all
+            expectations.
           </p>
-          <p class="text-right italic text-sm mb-0 pb-0"><b><a :class="pClass(brightness)" class="font-bold" href = "https://www.linkedin.com/in/nathanwesjones/">Nathan Jones</a></b></p>
-          <p class="text-right italic text-sm mt-0 pt-0">Senior Product Designer at nCino</p>
+          <p class="text-right italic text-sm mb-0 pb-0">
+            <b
+              ><a
+                :class="pClass(brightness)"
+                class="font-bold"
+                href="https://www.linkedin.com/in/nathanwesjones/"
+                >Nathan Jones</a
+              ></b
+            >
+          </p>
+          <p class="text-right italic text-sm mt-0 pt-0">
+            Senior Product Designer at nCino
+          </p>
         </div>
       </div>
     </slot>
