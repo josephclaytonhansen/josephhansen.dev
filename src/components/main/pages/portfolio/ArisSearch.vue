@@ -36,8 +36,12 @@
     :brightness="brightness"
     ><slot>
       <p class="text-inherit">
-        Aris Search needed a powerful, functional, site to connect recruiters and job applicants. In addition to a clean, professional design with excellent SEO, I developed everything they needed on the backend to handle their data. The result is a site that's fast, functional, and easy to use.
-        </p>
+        Aris Search needed a powerful, functional, site to connect recruiters
+        and job applicants. In addition to a clean, professional design with
+        excellent SEO, I developed everything they needed on the backend to
+        handle their data. The result is a site that's fast, functional, and
+        easy to use.
+      </p>
     </slot></sliderAndGallery
   >
 </template>

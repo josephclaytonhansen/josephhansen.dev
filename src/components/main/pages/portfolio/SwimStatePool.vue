@@ -31,6 +31,11 @@
     :link="bazaarLink"
     :title="bazaarTitle"
     :brightness="brightness"
-    ><slot> </slot
+    ><slot> 
+      <p class="text-inherit">
+        Swim State Pool Services needed a website that would help them grow their
+        business. I built them a site that was both professional and engaging,
+        helping them to attract new customers and grow their business. They loved the results, which were a massive upgrade from their existing site.</p>
+      </slot
   ></sliderAndGallery>
 </template>
