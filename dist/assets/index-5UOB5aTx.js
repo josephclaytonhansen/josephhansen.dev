@@ -19335,7 +19335,7 @@ const tn = Py($y),
   Jx = vn(Xx, [["__scopeId", "data-v-21dbf9f7"]]),
   Zx = g(
     "h3",
-    { class: "text-2xl font-bold text-inherit" },
+    { class: "text-2xl font-semibold text-inherit" },
     " The vision: a one-stop shop for Blender users ",
     -1,
   ),
@@ -19365,7 +19365,7 @@ const tn = Py($y),
   l3 = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
-    " Security- keeping the Bazaar safe ",
+    " Security: keeping the Bazaar safe ",
     -1,
   ),
   o3 = g(

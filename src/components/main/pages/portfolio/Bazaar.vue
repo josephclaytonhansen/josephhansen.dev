@@ -59,7 +59,7 @@
         data the site would be handling. Bart wanted to do this through
         WordPress, and I was able to use my expertise to recommend
         AdvancedCustomFields to do a lot of the major data-wrangling. I also
-        built the theme from scratch, to make sure it was as simplifie and
+        built the theme from scratch, to make sure it was as simplified and
         lightweight as possible while still providing beautiful, responsive, and
         functional results.
         <figure>

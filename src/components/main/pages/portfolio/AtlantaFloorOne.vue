@@ -45,11 +45,15 @@
       <h3 class="text-2xl font-bold text-inherit">
         Clean and professional with an unusual color palette
       </h3>
-      <p>Lorem ipsum</p>
+      <p class = "text-inherit">
+        This site was challenging from a design perspective. Atlanta Floor One's logo colors (light green and very dark brown) look great at a small scale, but initial drafts of their site proved overwhelming. Eventually, I added a lighter brown that was more neutral and used the green as an accent color. I also relied heavily on whitespace, giving the colors room to breathe. The result is a site that is both professional and unique. 
+      </p>
       <h3 class="text-2xl font-bold text-inherit">
         Parallax architectural sketch backgrounds
       </h3>
-      <p>Lorem ipsum</p>
+      <p class = "text-inherit">
+        With large spans of whitespace, the site ran the risk of veering into "boring" territory. To combat this, I decided to use architectural sketches as subtle background overlays. Adding a parallax effect to these sketches gave the site a sense of depth and movement, without overwhelming the user. The client was delighted with the final result.
+      </p>
     </slot></sliderAndGallery
   >
 </template>
