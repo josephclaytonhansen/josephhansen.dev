@@ -16,4 +16,46 @@
   }
 </script>
 
-<template></template>
+<template>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="square-image-container">
+      <img src="https://images.josephhansen.dev/uploads/fileDSC01942-3.j-1707265732742.webp" alt="Joseph Hansen" />
+    </div>
+    </div>
+
+</template>
+
+<style scoped>
+
+.square-image-container {
+    position: relative;
+    width: 100%;
+    padding-top: 50%;
+  }
+
+  .square-image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .image-container {
+    position: relative;
+    width: 100%;
+    padding-top: 58%;
+  }
+
+  .image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+</style>

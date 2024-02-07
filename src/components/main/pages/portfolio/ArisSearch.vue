@@ -28,7 +28,7 @@
 </script>
 
 <template>
-  <sliderAndGallerya
+  <sliderAndGallery
     :images="bazaarImages"
     :captions="bazaarCaptions"
     :link="bazaarLink"
@@ -41,6 +41,6 @@
       <p>Lorem ipsum</p>
       <h3 class="text-2xl font-bold text-inherit">Geometric effects</h3>
       <p>Lorem ipsum</p>
-    </slot></sliderAndGallerya
+    </slot></sliderAndGallery
   >
 </template>

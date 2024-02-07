@@ -114,78 +114,89 @@
     class="flex w-full gap-4 md:p-8 sm:p-4 items-center justify-center"
     id="panelSpeed">
     <div class="flex flex-col items-center justify-center w-full">
-      <div class = "flex flex-row mb-12 flex-wrap sm:flex-wrap md:flex-nowrap" style = "gap:5rem">
-      <div id="perfChart" :class="chartClass(brightness)">
-        <svg viewBox="0 0 36 36" class="chart">
-          <path
-            class="circle-bg"
-            d="M18 2.0845
+      <div
+        class="flex flex-row mb-12 flex-wrap sm:flex-wrap md:flex-nowrap"
+        style="gap: 5rem">
+        <div id="perfChart" :class="chartClass(brightness)">
+          <svg viewBox="0 0 36 36" class="chart">
+            <path
+              class="circle-bg"
+              d="M18 2.0845
                          a 15.9155 15.9155 0 0 1 0 31.831
                          a 15.9155 15.9155 0 0 1 0 -31.831"
-            fill="none"
-            stroke="none"
-            stroke-width="0"
-            stroke-linecap="round" />
+              fill="none"
+              stroke="none"
+              stroke-width="0"
+              stroke-linecap="round" />
 
-          <path
-            class="circle"
-            :class="ringClass(brightness)"
-            d="M18 2.0845
+            <path
+              class="circle"
+              :class="ringClass(brightness)"
+              d="M18 2.0845
                          a 15.9155 15.9155 0 0 1 0 31.831
                          a 15.9155 15.9155 0 0 1 0 -31.831"
-            fill="none"
-            :stroke="strokeColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            :stroke-dasharray="circumference + ' ' + circumference"
-            :stroke-dashoffset="dashoffset" />
-        </svg>
-        <div
-          id="chartInner"
-          class="font-monospace text-6xl"
-          :class="iconClass(brightness)">
-          96
+              fill="none"
+              :stroke="strokeColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              :stroke-dasharray="circumference + ' ' + circumference"
+              :stroke-dashoffset="dashoffset" />
+          </svg>
+          <div
+            id="chartInner"
+            class="font-monospace text-6xl"
+            :class="iconClass(brightness)">
+            96
+          </div>
+          <p
+            class="text-sm italic opacity-50 mt-3"
+            :class="pClass(brightness)"
+            style="min-width: 250px">
+            Google Page Speed desktop performance score for the Bazaar
+            <a href="/portfolio/bazaar" :class="iconClass(brightness)">site</a>
+          </p>
         </div>
-        <p class="text-sm italic opacity-50 mt-3" :class="pClass(brightness)" style = "min-width:250px;">
-          Google Page Speed desktop performance score for the Bazaar
-        <a href="/portfolio/bazaar" :class="iconClass(brightness)">site</a>
-      </p>
-      </div>
-      <div id="perfChart" :class="chartClass(brightness)" class = "hidden sm:hidden md:block">
-        <svg viewBox="0 0 36 36" class="chart">
-          <path
-            class="circle-bg"
-            d="M18 2.0845
+        <div
+          id="perfChart"
+          :class="chartClass(brightness)"
+          class="hidden sm:hidden md:block">
+          <svg viewBox="0 0 36 36" class="chart">
+            <path
+              class="circle-bg"
+              d="M18 2.0845
                          a 15.9155 15.9155 0 0 1 0 31.831
                          a 15.9155 15.9155 0 0 1 0 -31.831"
-            fill="none"
-            stroke="none"
-            stroke-width="0"
-            stroke-linecap="round" />
+              fill="none"
+              stroke="none"
+              stroke-width="0"
+              stroke-linecap="round" />
 
-          <path
-            class="circle"
-            :class="ringClass(brightness)"
-            d="M18 2.0845
+            <path
+              class="circle"
+              :class="ringClass(brightness)"
+              d="M18 2.0845
                          a 15.9155 15.9155 0 0 1 0 31.831
                          a 15.9155 15.9155 0 0 1 0 -31.831"
-            fill="none"
-            :stroke="strokeColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            :stroke-dasharray="circumference + ' ' + circumference"
-            :stroke-dashoffset="dashoffset2" />
-        </svg>
-        <div
-          id="chartInner"
-          class="font-monospace text-6xl"
-          :class="iconClass(brightness)">
-          99
+              fill="none"
+              :stroke="strokeColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              :stroke-dasharray="circumference + ' ' + circumference"
+              :stroke-dashoffset="dashoffset2" />
+          </svg>
+          <div
+            id="chartInner"
+            class="font-monospace text-6xl"
+            :class="iconClass(brightness)">
+            99
+          </div>
+          <p
+            class="text-sm italic opacity-50 mt-3"
+            :class="pClass(brightness)"
+            style="min-width: 250px">
+            Google Page Speed desktop performance score for this site
+          </p>
         </div>
-        <p class="text-sm italic opacity-50 mt-3" :class="pClass(brightness)" style = "min-width:250px;">
-          Google Page Speed desktop performance score for this site
-      </p>
-      </div>
       </div>
 
       <div
@@ -306,8 +317,9 @@
       dashoffset2() {
         let percent = this.percentage2 / 100
         return this.circumference * (1 - percent)
+      },
     },
-  }}
+  }
 </script>
 
 <style scoped>
