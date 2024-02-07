@@ -19345,38 +19345,38 @@ const tn = Py($y),
     " When Bart from BlenderNation approached me with the idea for Bazaar, I was pumped. Nothing quite like Bazaar existed at the time: one central hub for Blender users to find tutorials, resources, assets, and add-ons. I was heavily involved with every step of the process of making the Bazaar come to life, and the end result is fantastic. ",
     -1,
   ),
-  e3 = ["src"],
-  t3 = g("figcaption", null, "Bazaar's planning board", -1),
-  n3 = { class: "text-inherit" },
-  s3 = ["src"],
-  r3 = g("figcaption", null, "My approved design for the Bazaar", -1),
-  a3 = g(
+  e5 = ["src"],
+  t5 = g("figcaption", null, "Bazaar's planning board", -1),
+  n5 = { class: "text-inherit" },
+  s5 = ["src"],
+  r5 = g("figcaption", null, "My approved design for the Bazaar", -1),
+  a5 = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     " Tight deadlines and high stakes ",
     -1,
   ),
-  i3 = g(
+  i5 = g(
     "p",
     null,
     " When Bart approached me, there was about a month until the next Blender Conference, a massive community event that he hoped to present Bazaar at. At this point, the Bazaar was just an idea- there wasn't even a logo yet. Long story short- Bazaar launched successfully with time to spare. I believe this project showed I can work well under pressure and with tight deadlines to achieve exactly what a client needs. ",
     -1,
   ),
-  l3 = g(
+  l5 = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     " Security: keeping the Bazaar safe ",
     -1,
   ),
-  o3 = g(
+  o5 = g(
     "p",
     null,
     " Among the other development, I've implemented powerful security guardrails across Bazaar, ranging from DDoS protection to a comprehensive firewall. I'm proud to report that my security measures are currently preventing around 4500 attacks a month, with that number growing larger all the time. ",
     -1,
   ),
-  u3 = "https://bazaar.blendernation.com",
-  c3 = "BlenderNation Bazaar",
-  d3 = {
+  u5 = "https://bazaar.blendernation.com",
+  c5 = "BlenderNation Bazaar",
+  d5 = {
     __name: "Bazaar",
     setup(e) {
       const t = ne([Qi, Z2, Q2, ey, ty]),
@@ -19400,8 +19400,8 @@ const tn = Py($y),
           {
             images: t.value,
             captions: n.value,
-            link: u3,
-            title: c3,
+            link: u5,
+            title: c5,
             brightness: r.brightness,
           },
           {
@@ -19415,11 +19415,11 @@ const tn = Py($y),
                     { src: s.planning, class: "rounded-xl" },
                     null,
                     8,
-                    e3,
+                    e5,
                   ),
-                  t3,
+                  t5,
                 ]),
-                g("p", n3, [
+                g("p", n5, [
                   Pe(
                     " With the above Figma document as a guide from Bart, I dove into both design and figuring out the backend details for managing the complex data the site would be handling. Bart wanted to do this through WordPress, and I was able to use my expertise to recommend AdvancedCustomFields to do a lot of the major data-wrangling. I also built the theme from scratch, to make sure it was as simplified and lightweight as possible while still providing beautiful, responsive, and functional results. ",
                   ),
@@ -19429,15 +19429,15 @@ const tn = Py($y),
                       { src: s.figma, class: "rounded-xl" },
                       null,
                       8,
-                      s3,
+                      s5,
                     ),
-                    r3,
+                    r5,
                   ]),
                 ]),
-                a3,
-                i3,
-                l3,
-                o3,
+                a5,
+                i5,
+                l5,
+                o5,
               ]),
             ]),
             _: 3,
@@ -19448,22 +19448,22 @@ const tn = Py($y),
       )
     },
   },
-  f3 = {
+  f5 = {
     __name: "OkcSouthStake",
     props: { brightness: Number },
     setup(e) {
       return (t, n) => null
     },
   },
-  p3 = g(
+  p5 = g(
     "p",
     { class: "text-inherit" },
     " Aris Search needed a powerful, functional, site to connect recruiters and job applicants. In addition to a clean, professional design with excellent SEO, I developed everything they needed on the backend to handle their data. The result is a site that's fast, functional, and easy to use. ",
     -1,
   ),
-  h3 = "https://arissearch.com//",
-  g3 = "Aris Search",
-  v3 = {
+  h5 = "https://arissearch.com//",
+  g5 = "Aris Search",
+  v5 = {
     __name: "ArisSearch",
     setup(e) {
       const t = ne([il, ay]),
@@ -19475,12 +19475,12 @@ const tn = Py($y),
           {
             images: t.value,
             captions: n.value,
-            link: h3,
-            title: g3,
+            link: h5,
+            title: g5,
             brightness: s.brightness,
           },
           {
-            default: Xe(() => [rn(s.$slots, "default", {}, () => [p3])]),
+            default: Xe(() => [rn(s.$slots, "default", {}, () => [p5])]),
             _: 3,
           },
           8,
@@ -19489,39 +19489,39 @@ const tn = Py($y),
       )
     },
   },
-  m3 = g(
+  m5 = g(
     "p",
     { class: "text-inherit" },
     " Atlanta Floor One needed a new website to replace their old, non-functional one. I built them a new site using WordPress that's fast, clean, and responsive. The client was extremely happy with the results. ",
     -1,
   ),
-  b3 = g(
+  b5 = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     " Clean and professional with an unusual color palette ",
     -1,
   ),
-  y3 = g(
+  y5 = g(
     "p",
     { class: "text-inherit" },
     " This site was challenging from a design perspective. Atlanta Floor One's logo colors (light green and very dark brown) look great at a small scale, but initial drafts of their site proved overwhelming. Eventually, I added a lighter brown that was more neutral and used the green as an accent color. I also relied heavily on whitespace, giving the colors room to breathe. The result is a site that is both professional and unique. ",
     -1,
   ),
-  w3 = g(
+  w5 = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     " Parallax architectural sketch backgrounds ",
     -1,
   ),
-  x3 = g(
+  x5 = g(
     "p",
     { class: "text-inherit" },
     ' With large spans of whitespace, the site ran the risk of veering into "boring" territory. To combat this, I decided to use architectural sketches as subtle background overlays. Adding a parallax effect to these sketches gave the site a sense of depth and movement, without overwhelming the user. The client was delighted with the final result. ',
     -1,
   ),
-  S3 = "https://floorsfloors.com/",
-  E3 = "Atlanta Floor One",
-  _3 = {
+  S5 = "https://floorsfloors.com/",
+  E5 = "Atlanta Floor One",
+  _5 = {
     __name: "AtlantaFloorOne",
     setup(e) {
       const t = ne([tl, ny, sy, ry]),
@@ -19538,13 +19538,13 @@ const tn = Py($y),
           {
             images: t.value,
             captions: n.value,
-            link: S3,
-            title: E3,
+            link: S5,
+            title: E5,
             brightness: s.brightness,
           },
           {
             default: Xe(() => [
-              rn(s.$slots, "default", {}, () => [m3, b3, y3, w3, x3]),
+              rn(s.$slots, "default", {}, () => [m5, b5, y5, w5, x5]),
             ]),
             _: 3,
           },
@@ -19554,22 +19554,22 @@ const tn = Py($y),
       )
     },
   },
-  C3 = {
+  C5 = {
     __name: "BuildOnYourLand",
     props: { brightness: Number },
     setup(e) {
       return (t, n) => null
     },
   },
-  T3 = g(
+  T5 = g(
     "p",
     { class: "text-inherit" },
     " I built a website for Stehl Family Dental, a small dental practice looking to expand their business. Their site needed to make it easy for potential customers to understand what was available and the benefits of choosing Stehl Family Dental. I built them a professional and engaging site, that presents all the important information in a well-designed, easy-to-navigate format. ",
     -1,
   ),
-  k3 = "https://stehlfamilydental.com/",
-  P3 = "Stuart Hose and Pipe",
-  $3 = {
+  k5 = "https://stehlfamilydental.com/",
+  P5 = "Stuart Hose and Pipe",
+  $5 = {
     __name: "StehlFamilyDental",
     setup(e) {
       const t = ne([al]),
@@ -19581,12 +19581,12 @@ const tn = Py($y),
           {
             images: t.value,
             captions: n.value,
-            link: k3,
-            title: P3,
+            link: k5,
+            title: P5,
             brightness: s.brightness,
           },
           {
-            default: Xe(() => [rn(s.$slots, "default", {}, () => [T3])]),
+            default: Xe(() => [rn(s.$slots, "default", {}, () => [T5])]),
             _: 3,
           },
           8,
@@ -19595,31 +19595,31 @@ const tn = Py($y),
       )
     },
   },
-  I3 = g(
+  I5 = g(
     "p",
     { class: "text-inherit" },
     " Tub Boys didn't have a website, and they were hoping to expand their business through a web presence. I built them a site that exceeded their expectations and helped them grow their business. ",
     -1,
   ),
-  M3 = g(
+  M5 = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     " Using design to present minimal text in a compelling way ",
     -1,
   ),
-  O3 = g(
+  O5 = g(
     "p",
     { class: "text-inherit" },
     ' This client had very little copy, so it was my task to make their site engaging and feel full with what I had to work with. I took the opporunity to use large, engaging, typography as well as swooshing lines that invoke a sense of movement. The result feels professional, while still invoking the "fun" energy the client requested. ',
     -1,
   ),
-  A3 = g(
+  A5 = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     "Image comparison sliders",
     -1,
   ),
-  L3 = g(
+  L5 = g(
     "img",
     {
       src: "https://images.josephhansen.dev/uploads/file2024-02-0620-1707273750624.webp",
@@ -19628,15 +19628,15 @@ const tn = Py($y),
     null,
     -1,
   ),
-  B3 = g(
+  B5 = g(
     "p",
     { class: "text-inherit" },
     " The client wanted to be able to showcase their work with before and after images. I devloped a custom JavaScript solution for interactive image sliders that integrated nicely with their WordPress platform. ",
     -1,
   ),
-  z3 = "https://tub-boys.com/",
-  N3 = "Tub Boys",
-  R3 = {
+  z5 = "https://tub-boys.com/",
+  N5 = "Tub Boys",
+  R5 = {
     __name: "TubBoys",
     setup(e) {
       const t = ne([
@@ -19653,13 +19653,13 @@ const tn = Py($y),
           {
             images: t.value,
             captions: n.value,
-            link: z3,
-            title: N3,
+            link: z5,
+            title: N5,
             brightness: s.brightness,
           },
           {
             default: Xe(() => [
-              rn(s.$slots, "default", {}, () => [I3, M3, O3, A3, L3, B3]),
+              rn(s.$slots, "default", {}, () => [I5, M5, O5, A5, L5, B5]),
             ]),
             _: 3,
           },
@@ -19669,26 +19669,22 @@ const tn = Py($y),
       )
     },
   },
-  j3 = g(
-    "h3",
-    { class: "text-2xl font-bold text-inherit" },
-    " Extremely precise design requirements ",
+  j5 = g(
+    "p",
+    { class: "text-inherit" },
+    " Stuart Pipe Co. presented a unique challenge: they needed a site that matched extremely precise branding requirements from their parent company, while still being clean, professional, and appealing. I built and designed a site that met all of their requirements, and they were extremely happy with the results. ",
     -1,
   ),
-  F3 = g("p", null, "Lorem ipsum", -1),
-  D3 = g(
-    "h3",
-    { class: "text-2xl font-bold text-inherit" },
-    " Maximizing information while avoiding clutter ",
-    -1,
-  ),
-  H3 = g("p", null, "Lorem ipsum", -1),
-  G3 = "https://stuarthose.com/",
-  V3 = "Stuart Hose and Pipe",
-  W3 = {
+  F5 = "https://stuarthose.com/",
+  D5 = "Stuart Hose and Pipe",
+  H5 = {
     __name: "StuartPipeAndHose",
     setup(e) {
-      const t = ne([el]),
+      const t = ne([
+          el,
+          "https://images.josephhansen.dev/uploads/file2024-02-0621-1707275652278.webp",
+          "https://images.josephhansen.dev/uploads/file2024-02-0621-1707275668557.webp",
+        ]),
         n = ne(["Stuart Hose and Pipe homepage"])
       return (s, r) => (
         te(),
@@ -19697,14 +19693,12 @@ const tn = Py($y),
           {
             images: t.value,
             captions: n.value,
-            link: G3,
-            title: V3,
+            link: F5,
+            title: D5,
             brightness: s.brightness,
           },
           {
-            default: Xe(() => [
-              rn(s.$slots, "default", {}, () => [j3, F3, D3, H3]),
-            ]),
+            default: Xe(() => [rn(s.$slots, "default", {}, () => [j5])]),
             _: 3,
           },
           8,
@@ -19713,15 +19707,15 @@ const tn = Py($y),
       )
     },
   },
-  q3 = g(
+  G5 = g(
     "p",
     { class: "text-inherit" },
     " Swim State Pool Services needed a website that would help them grow their business. I built them a site that was both professional and engaging, helping them to attract new customers and grow their business. They loved the results, which were a massive upgrade from their existing site. ",
     -1,
   ),
-  U3 = "https://swimstatepoolservice.com/",
-  Y3 = "Swim State Pool",
-  K3 = {
+  V5 = "https://swimstatepoolservice.com/",
+  W5 = "Swim State Pool",
+  q5 = {
     __name: "SwimStatePool",
     setup(e) {
       const t = ne([nl]),
@@ -19733,12 +19727,12 @@ const tn = Py($y),
           {
             images: t.value,
             captions: n.value,
-            link: U3,
-            title: Y3,
+            link: V5,
+            title: W5,
             brightness: s.brightness,
           },
           {
-            default: Xe(() => [rn(s.$slots, "default", {}, () => [q3])]),
+            default: Xe(() => [rn(s.$slots, "default", {}, () => [G5])]),
             _: 3,
           },
           8,
@@ -19747,11 +19741,11 @@ const tn = Py($y),
       )
     },
   },
-  X3 = g("h3", { class: "text-2xl font-bold text-inherit" }, "Lorem ipsum", -1),
-  J3 = g("p", null, "Lorem ipsum", -1),
-  Z3 = "/",
-  Q3 = "josephhansen.dev",
-  e5 = {
+  U5 = g("h3", { class: "text-2xl font-bold text-inherit" }, "Lorem ipsum", -1),
+  Y5 = g("p", null, "Lorem ipsum", -1),
+  K5 = "/",
+  X5 = "josephhansen.dev",
+  J5 = {
     __name: "JosephHansenDev",
     setup(e) {
       const t = ne([sl]),
@@ -19763,12 +19757,12 @@ const tn = Py($y),
           {
             images: t.value,
             captions: n.value,
-            link: Z3,
-            title: Q3,
+            link: K5,
+            title: X5,
             brightness: s.brightness,
           },
           {
-            default: Xe(() => [rn(s.$slots, "default", {}, () => [X3, J3])]),
+            default: Xe(() => [rn(s.$slots, "default", {}, () => [U5, Y5])]),
             _: 3,
           },
           8,
@@ -19777,9 +19771,9 @@ const tn = Py($y),
       )
     },
   },
-  t5 = { class: "flex justify-center w-full md:px-10 sm:px-5 mt-5" },
-  n5 = { class: "flex justify-center w-full md:px-10 sm:px-5 pt-10" },
-  s5 = {
+  Z5 = { class: "flex justify-center w-full md:px-10 sm:px-5 mt-5" },
+  Q5 = { class: "flex justify-center w-full md:px-10 sm:px-5 pt-10" },
+  e3 = {
     __name: "Main",
     props: { component: String },
     setup(e) {
@@ -19790,16 +19784,16 @@ const tn = Py($y),
             window.localStorage.setItem("brightness", t.value)
         },
         r = {
-          "okc-south-stake": f3,
-          "aris-search": v3,
-          "atlanta-floor-one": _3,
-          "build-on-your-land": C3,
-          "stehl-family-dental": $3,
-          "tub-boys": R3,
-          "stuart-pipe": W3,
-          "swim-state-pool": K3,
-          "josephhansen-dev": e5,
-          bazaar: d3,
+          "okc-south-stake": f5,
+          "aris-search": v5,
+          "atlanta-floor-one": _5,
+          "build-on-your-land": C5,
+          "stehl-family-dental": $5,
+          "tub-boys": R5,
+          "stuart-pipe": H5,
+          "swim-state-pool": q5,
+          "josephhansen-dev": J5,
+          bazaar: d5,
         },
         a = me(() => {
           switch (t.value) {
@@ -19934,7 +19928,7 @@ const tn = Py($y),
                 },
                 [
                   he(J1, { "onUpdate:brightness": s }),
-                  g("div", t5, [
+                  g("div", Z5, [
                     e.component == "pricing"
                       ? (te(),
                         xe(
@@ -20091,7 +20085,7 @@ const tn = Py($y),
                         ))
                       : rt("", !0),
                   ]),
-                  g("div", n5, [
+                  g("div", Q5, [
                     e.component == "home"
                       ? (te(),
                         xe(
@@ -20129,7 +20123,7 @@ const tn = Py($y),
       )
     },
   },
-  r5 = vn(s5, [["__scopeId", "data-v-7c607880"]]),
+  t3 = vn(e3, [["__scopeId", "data-v-7c607880"]]),
   ol = [
     { path: "/", component: null, props: { component: "home" } },
     { path: "/pricing", component: null, props: { component: "pricing" } },
@@ -20189,9 +20183,9 @@ const tn = Py($y),
   ]
 ol.map((e) => e.path)
 ol.forEach((e) => {
-  e.component = r5
+  e.component = t3
 })
-const a5 = o1({ history: _m(), routes: ol }),
+const n3 = o1({ history: _m(), routes: ol }),
   hd = _v($v)
-hd.use(a5)
+hd.use(n3)
 hd.mount("#app")

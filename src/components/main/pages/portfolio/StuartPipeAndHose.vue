@@ -7,7 +7,11 @@
 
   import { stuartHome } from "../../../images/imageLinks.js"
 
-  const bazaarImages = ref([stuartHome, "https://images.josephhansen.dev/uploads/file2024-02-0621-1707275652278.webp", "https://images.josephhansen.dev/uploads/file2024-02-0621-1707275668557.webp"])
+  const bazaarImages = ref([
+    stuartHome,
+    "https://images.josephhansen.dev/uploads/file2024-02-0621-1707275652278.webp",
+    "https://images.josephhansen.dev/uploads/file2024-02-0621-1707275668557.webp",
+  ])
 
   const bazaarCaptions = ref(["Stuart Hose and Pipe homepage"])
 
@@ -33,9 +37,12 @@
     :brightness="brightness"
     ><slot>
       <p class="text-inherit">
-        Stuart Pipe Co. presented a unique challenge: they needed a site that matched extremely precise branding requirements from their parent company, while still being clean, professional, and appealing. I built and designed a site that met all of their requirements, and they were extremely happy with the results.
+        Stuart Pipe Co. presented a unique challenge: they needed a site that
+        matched extremely precise branding requirements from their parent
+        company, while still being clean, professional, and appealing. I built
+        and designed a site that met all of their requirements, and they were
+        extremely happy with the results.
       </p>
-
     </slot></sliderAndGallery
   >
 </template>
