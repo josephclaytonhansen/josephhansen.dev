@@ -39,7 +39,7 @@
     :title="bazaarTitle"
     :brightness="brightness"
     ><slot>
-      <h3 class="text-2xl font-bold text-inherit">
+      <h3 class="text-2xl font-semibold text-inherit">
         The vision: a one-stop shop for Blender users
       </h3>
       <p class="text-inherit">
@@ -79,7 +79,7 @@
         tight deadlines to achieve exactly what a client needs.
       </p>
       <h3 class="text-2xl font-bold text-inherit">
-        Security- keeping the Bazaar safe
+        Security: keeping the Bazaar safe
       </h3>
       <p>
         Among the other development, I've implemented powerful security
