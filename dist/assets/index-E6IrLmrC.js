@@ -19702,7 +19702,7 @@ const sn = Py(Iy),
   D5 = g(
     "p",
     { class: "text-inherit" },
-    " Build On Your Land is one of my favorite sites I've ever built. From dynamic showroom hours I developed in JavaScript, to parallax home design backgrounds, the site is full of my best work. The client needed a beautiful, responsive, site, and they loved what I built for them. ",
+    " Build On Your Land is one of my favorite sites I've ever built. From dynamic showroom hours developed in JavaScript, to parallax home design backgrounds, the site is full of my best work. The client needed a beautiful, responsive site, and they loved what I built for them. ",
     -1,
   ),
   H5 = g(
@@ -19714,7 +19714,7 @@ const sn = Py(Iy),
   G5 = g(
     "p",
     { class: "text-inherit" },
-    ' The client wanted customers to be able to tell at a glance if the showroom was currently open. The JavaScript/PHP solution I built is simple- the hours show "Open" or "Closed" based on the current time and day- but extremely effective. The client was thrilled with the result. ',
+    ' Build on Your Land wanted customers to be able to tell at a glance if the showroom was currently open. The JavaScript/PHP solution I built is simple- the hours show "Open" or "Closed" based on the current time and day- but extremely effective. They were thrilled with the result. ',
     -1,
   ),
   V5 = g(
@@ -19726,7 +19726,7 @@ const sn = Py(Iy),
   W5 = g(
     "p",
     { class: "text-inherit" },
-    " The site is full of design elements that make it stand out. The parallax home design sketch backgrounds, for example, add a unique touch and make the site memorable. ",
+    " This site is full of design elements that make it stand out. The parallax home design sketch backgrounds add a unique touch and make the site memorable. ",
     -1,
   ),
   q5 = g(
@@ -19742,7 +19742,7 @@ const sn = Py(Iy),
   U5 = g(
     "p",
     { class: "text-inherit" },
-    " Every part of the site is packed with care and intention- this site shows my design abilities at their best. ",
+    " Every part of the site is packed with care and intention- it shows my design abilities at their best. ",
     -1,
   ),
   Y5 = "https://www.buildonyourlandllc.com/",
