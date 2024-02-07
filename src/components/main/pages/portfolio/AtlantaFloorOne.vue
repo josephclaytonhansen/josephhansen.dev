@@ -42,6 +42,9 @@
     :title="bazaarTitle"
     :brightness="brightness"
     ><slot>
+      <p class="text-inherit">
+        Atlanta Floor One needed a new website to replace their old, non-functional one. I built them a new site using WordPress, that's fast, clean, and responsive. The client was extremely happy with the results.
+      </p>
       <h3 class="text-2xl font-bold text-inherit">
         Clean and professional with an unusual color palette
       </h3>

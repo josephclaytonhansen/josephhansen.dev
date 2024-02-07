@@ -31,7 +31,6 @@
     :link="bazaarLink"
     :title="bazaarTitle"
     :brightness="brightness"
-    ><slot>
-    </slot></sliderAndGallery
-  >
+    ><slot> </slot
+  ></sliderAndGallery>
 </template>
