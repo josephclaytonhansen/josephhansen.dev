@@ -231,15 +231,10 @@
             'bg-slate-700': brightness == 2,
             'bg-slate-800': brightness == 1,
           }">
-          <p>
-            DAMN your sites load fast...
-          </p>
+          <p>DAMN your sites load fast...</p>
           <p class="text-right italic text-sm mb-0 pb-0">
-            <b
-              >- T. N., one of my clients</b
-            >
+            <b>- T. N., one of my clients</b>
           </p>
-          
         </div>
 
         <h3 :class="pClass(brightness)">How I help</h3>
