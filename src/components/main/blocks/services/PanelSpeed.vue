@@ -221,6 +221,27 @@
           bandwidth it takes just to open Instagram.
         </p>
         <p>You want fast? Let's make it happen.</p>
+
+        <div
+          class="rounded px-8 py-3 flex-col"
+          :class="{
+            'bg-slate-100': brightness == 5,
+            'bg-slate-400': brightness == 4,
+            'bg-slate-500': brightness == 3,
+            'bg-slate-700': brightness == 2,
+            'bg-slate-800': brightness == 1,
+          }">
+          <p>
+            DAMN your sites load fast...
+          </p>
+          <p class="text-right italic text-sm mb-0 pb-0">
+            <b
+              >- T. N., one of my clients</b
+            >
+          </p>
+          
+        </div>
+
         <h3 :class="pClass(brightness)">How I help</h3>
         <table id="speedTable">
           <colgroup>
