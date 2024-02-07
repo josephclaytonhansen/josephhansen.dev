@@ -133,11 +133,10 @@
         </h2>
         <p class="text-center" :class="pClass(props.brightness)">
           I've been working on websites for over a decade. I love the creativity
-          and problem solving that goes into a hiqh-quality website. Check out
-          some of my work below!
+          and problem solving that goes into a hiqh-quality website.
         </p>
         <h3 class="text-2xl text-center" :class="pClass(props.brightness)">
-          Full Sites (I designed and developed)
+          Check out these full sites I designed and developed
         </h3>
       </span>
     </div>

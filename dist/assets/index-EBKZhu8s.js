@@ -18837,7 +18837,7 @@ const tn = Py($y),
     hex: "21759B",
     guidelines: "https://wordpressfoundation.org/trademark-policy",
   },
-  Dn = (e) => (es("data-v-280843f2"), (e = e()), ts(), e),
+  Dn = (e) => (es("data-v-c3b156da"), (e = e()), ts(), e),
   wx = { class: "flex-col w-full" },
   xx = { class: "p-5 flex-col w-full" },
   Sx = { class: "grid grid-cols-6" },
@@ -18845,7 +18845,7 @@ const tn = Py($y),
   Ex = Dn(() =>
     g(
       "div",
-      { class: "square-image-container" },
+      { class: "square-image-container rounded" },
       [
         g("img", {
           class: "rounded pr-4",
@@ -19042,7 +19042,7 @@ const tn = Py($y),
       )
     },
   },
-  Fx = vn(jx, [["__scopeId", "data-v-280843f2"]]),
+  Fx = vn(jx, [["__scopeId", "data-v-c3b156da"]]),
   Dx = { class: "flex-col w-full lg:w-9/12 md:w-10/12 sm:wd-11/12" },
   Hx = { class: "py-5 flex-col w-full" },
   Gx = { class: "prose" },
