@@ -13074,25 +13074,31 @@ const B2 = { class: "prose text-center" },
   ly = g(
     "p",
     null,
-    " Whether you need a design overhaul, a modernization, a rebranding, or a new website design completely, I'm your guy! I have extensive graphic design and UI/UX experience. I minored in Visual Communication, and I love making websites beautiful. Don't just take my word for it though, here's what a UX professional has to say: ",
+    " Whether you need a design overhaul, a modernization, a rebranding, or a new website design completely, I'm your guy! I have extensive graphic design and UI/UX experience. I minored in Visual Communication, and I love making websites beautiful. ",
     -1,
   ),
   oy = g(
     "p",
     null,
+    " Don't just take my word for it though, here's what a UX professional has to say: ",
+    -1,
+  ),
+  uy = g(
+    "p",
+    null,
     " Joseph is a good friend of mine from school. We worked closely on many projects with both pursuing degrees in design. He can design anything. This is not an exaggeration. I personally struggled to learn new design tools and manipulate pixels the way I wanted them to be. Joseph just did it. He is incredible. ...I would recommend him to anyone with utmost confidence that he will surpass all expectations. ",
     -1,
   ),
-  uy = { class: "text-right italic text-sm mb-0 pb-0" },
-  cy = g(
+  cy = { class: "text-right italic text-sm mb-0 pb-0" },
+  dy = g(
     "p",
     { class: "text-right italic text-sm mt-0 pt-0" },
     " Senior Product Designer at nCino ",
     -1,
   ),
-  dy = "",
-  fy = "Web Design",
-  py = {
+  fy = "",
+  py = "Web Design",
+  hy = {
     __name: "PanelWebDesign",
     props: { brightness: Number },
     setup(e) {
@@ -13122,8 +13128,8 @@ const B2 = { class: "prose text-center" },
           {
             images: n.value,
             captions: s.value,
-            link: dy,
-            title: fy,
+            link: fy,
+            title: py,
             brightness: e.brightness,
           },
           {
@@ -13132,11 +13138,12 @@ const B2 = { class: "prose text-center" },
                 g(
                   "h2",
                   { class: M(["text-3xl mb-1", t(e.brightness)]) },
-                  " I've designed dozens of websites. I can design yours too! ",
+                  " I've designed dozens of websites. I'll design yours too! ",
                   2,
                 ),
                 g("div", iy, [
                   ly,
+                  oy,
                   g(
                     "div",
                     {
@@ -13152,8 +13159,8 @@ const B2 = { class: "prose text-center" },
                       ]),
                     },
                     [
-                      oy,
-                      g("p", uy, [
+                      uy,
+                      g("p", cy, [
                         g("b", null, [
                           g(
                             "a",
@@ -13166,7 +13173,7 @@ const B2 = { class: "prose text-center" },
                           ),
                         ]),
                       ]),
-                      cy,
+                      dy,
                     ],
                     2,
                   ),
@@ -13181,16 +13188,16 @@ const B2 = { class: "prose text-center" },
       )
     },
   },
-  ul = (e) => (er("data-v-a259bda2"), (e = e()), tr(), e),
-  hy = {
+  ul = (e) => (er("data-v-c1141d27"), (e = e()), tr(), e),
+  gy = {
     class:
       "flex w-full gap-4 md:p-8 sm:p-4 items-center justify-center flex-col",
   },
-  gy = {
+  vy = {
     class: "prose md:w-10/12 sm:w-12/12 mt-8",
     style: { "max-width": "84ch !important" },
   },
-  vy = ul(() =>
+  my = ul(() =>
     g(
       "div",
       { class: "image-container" },
@@ -13204,12 +13211,12 @@ const B2 = { class: "prose text-center" },
       -1,
     ),
   ),
-  my = {
+  by = {
     class:
       "flex w-full items-center justify-between flex-wrap sm:flex-wrap md:flex-nowrap mt-12",
   },
-  by = { href: "https://galaxyit.com/savings-calculator/" },
-  yy = ul(() =>
+  yy = { href: "https://galaxyit.com/savings-calculator/" },
+  wy = ul(() =>
     g(
       "div",
       { class: "image-container" },
@@ -13223,12 +13230,12 @@ const B2 = { class: "prose text-center" },
       -1,
     ),
   ),
-  wy = {
+  xy = {
     class:
       "flex w-full items-center justify-between flex-wrap sm:flex-wrap md:flex-nowrap mt-12",
   },
-  xy = { href: "https://www.buildonyourlandllc.com/" },
-  Sy = ul(() =>
+  Sy = { href: "https://www.buildonyourlandllc.com/" },
+  _y = ul(() =>
     g(
       "div",
       { class: "image-container" },
@@ -13242,12 +13249,12 @@ const B2 = { class: "prose text-center" },
       -1,
     ),
   ),
-  _y = {
+  Ey = {
     class:
       "flex w-full items-center justify-between flex-wrap sm:flex-wrap md:flex-nowrap mt-12",
   },
-  Ey = { href: "https://bazaar.blendernation.com" },
-  Cy = {
+  Cy = { href: "https://bazaar.blendernation.com" },
+  Ty = {
     __name: "PanelDevelopment",
     props: { brightness: Number },
     setup(e) {
@@ -13259,23 +13266,23 @@ const B2 = { class: "prose text-center" },
       }
       return (n, s) => (
         te(),
-        xe("div", hy, [
-          g("div", gy, [
+        xe("div", gy, [
+          g("div", vy, [
             g(
               "h2",
               { class: M(["text-3xl mb-1", t(e.brightness)]) },
               " Need a custom pricing calculator? ",
               2,
             ),
-            vy,
-            g("div", my, [
+            my,
+            g("div", by, [
               g(
                 "h3",
                 { class: M(["text-xl m-0", t(e.brightness)]) },
-                " I can do that! Check out this one I made for GalaxyIT: ",
+                " I can do that! Check out this one I made for GalaxyIT ",
                 2,
               ),
-              g("a", by, [
+              g("a", yy, [
                 g(
                   "button",
                   {
@@ -13299,15 +13306,15 @@ const B2 = { class: "prose text-center" },
               " What about dynamic hours? ",
               2,
             ),
-            yy,
-            g("div", wy, [
+            wy,
+            g("div", xy, [
               g(
                 "h3",
                 { class: M(["text-xl m-0", t(e.brightness)]) },
-                " Been there, done that: ",
+                " Been there, done that ",
                 2,
               ),
-              g("a", xy, [
+              g("a", Sy, [
                 g(
                   "button",
                   {
@@ -13331,15 +13338,15 @@ const B2 = { class: "prose text-center" },
               " Maybe you need a complex WordPress theme built from scratch? ",
               2,
             ),
-            Sy,
-            g("div", _y, [
+            _y,
+            g("div", Ey, [
               g(
                 "h3",
                 { class: M(["text-xl m-0", t(e.brightness)]) },
                 " No sweat - let's make it happen! ",
                 2,
               ),
-              g("a", Ey, [
+              g("a", Cy, [
                 g(
                   "button",
                   {
@@ -13365,8 +13372,8 @@ const B2 = { class: "prose text-center" },
             ),
             g(
               "p",
-              { class: M(t(e.brightness)) },
-              " I've been working on websites for over a decade, and I can do custom development for you in pretty much any language you can throw my way. Let me worry about automations, algorithims, integrations, and all that other stuff that is distracting you from your business. I'll take your problems off your plate and develop a solution. ",
+              { class: M([t(e.brightness), "mt-2"]) },
+              " I've been working on websites for over a decade, and I can do custom development for you in pretty much any language you can throw my way. Let me worry about automations, algorithims, integrations, and all that other stuff distracting you from your business. I'll take your problems off your plate and develop a solution. ",
               2,
             ),
           ]),
@@ -13376,8 +13383,8 @@ const B2 = { class: "prose text-center" },
       )
     },
   },
-  Ty = bn(Cy, [["__scopeId", "data-v-a259bda2"]])
-var ky =
+  ky = bn(Ty, [["__scopeId", "data-v-c1141d27"]])
+var $y =
   typeof globalThis < "u"
     ? globalThis
     : typeof window < "u"
@@ -13387,7 +13394,7 @@ var ky =
         : typeof self < "u"
           ? self
           : {}
-function $y(e) {
+function Py(e) {
   return e && e.__esModule && Object.prototype.hasOwnProperty.call(e, "default")
     ? e.default
     : e
@@ -13396,7 +13403,7 @@ var fd = { exports: {} }
 ;(function (e, t) {
   ;(function (n, s) {
     e.exports = s()
-  })(ky, function () {
+  })($y, function () {
     for (
       var n = function (u, d, h) {
           return (
@@ -16457,20 +16464,20 @@ var fd = { exports: {} }
     return d0
   })
 })(fd)
-var Py = fd.exports
-const sn = $y(Py),
+var Iy = fd.exports
+const sn = Py(Iy),
   ln = (e) => (er("data-v-a139c5c2"), (e = e()), tr(), e),
-  Iy = {
+  My = {
     class: "flex w-full gap-4 md:p-8 sm:p-4 items-center justify-center",
     id: "panelSpeed",
   },
-  My = { class: "flex flex-col items-center justify-center w-full" },
-  Oy = {
+  Oy = { class: "flex flex-col items-center justify-center w-full" },
+  Ay = {
     class: "flex flex-row mb-12 flex-wrap sm:flex-wrap md:flex-nowrap",
     style: { gap: "5rem" },
   },
-  Ay = { viewBox: "0 0 36 36", class: "chart" },
-  Ly = ln(() =>
+  Ly = { viewBox: "0 0 36 36", class: "chart" },
+  zy = ln(() =>
     g(
       "path",
       {
@@ -16487,9 +16494,9 @@ const sn = $y(Py),
       -1,
     ),
   ),
-  zy = ["stroke", "stroke-dasharray", "stroke-dashoffset"],
-  By = { viewBox: "0 0 36 36", class: "chart" },
-  jy = ln(() =>
+  By = ["stroke", "stroke-dasharray", "stroke-dashoffset"],
+  jy = { viewBox: "0 0 36 36", class: "chart" },
+  Ny = ln(() =>
     g(
       "path",
       {
@@ -16506,8 +16513,8 @@ const sn = $y(Py),
       -1,
     ),
   ),
-  Ny = ["stroke", "stroke-dasharray", "stroke-dashoffset"],
-  Ry = ln(() =>
+  Ry = ["stroke", "stroke-dasharray", "stroke-dashoffset"],
+  Fy = ln(() =>
     g(
       "p",
       null,
@@ -16515,7 +16522,7 @@ const sn = $y(Py),
       -1,
     ),
   ),
-  Fy = ln(() =>
+  Dy = ln(() =>
     g(
       "p",
       null,
@@ -16531,9 +16538,9 @@ const sn = $y(Py),
       -1,
     ),
   ),
-  Dy = ln(() => g("p", null, "You want fast? Let's make it happen.", -1)),
-  Hy = ln(() => g("p", null, "DAMN your sites load fast...", -1)),
-  Gy = ln(() =>
+  Hy = ln(() => g("p", null, "You want fast? Let's make it happen.", -1)),
+  Gy = ln(() => g("p", null, "DAMN your sites load fast...", -1)),
+  Vy = ln(() =>
     g(
       "p",
       { class: "text-right italic text-sm mb-0 pb-0" },
@@ -16541,9 +16548,9 @@ const sn = $y(Py),
       -1,
     ),
   ),
-  Vy = [Hy, Gy],
-  Wy = { id: "speedTable" },
-  qy = ln(() =>
+  Wy = [Gy, Vy],
+  qy = { id: "speedTable" },
+  Uy = ln(() =>
     g(
       "colgroup",
       null,
@@ -16554,9 +16561,9 @@ const sn = $y(Py),
       -1,
     ),
   ),
-  Uy = { class: "flex" },
   Yy = { class: "flex" },
-  Ky = ln(() =>
+  Ky = { class: "flex" },
+  Xy = ln(() =>
     g(
       "tbody",
       null,
@@ -16599,8 +16606,8 @@ const sn = $y(Py),
       -1,
     ),
   ),
-  Xy = ln(() => g("div", { class: "h-6" }, null, -1)),
-  Jy = {
+  Jy = ln(() => g("div", { class: "h-6" }, null, -1)),
+  Zy = {
     data() {
       return {
         radius: 16,
@@ -16620,7 +16627,7 @@ const sn = $y(Py),
       },
     },
   },
-  Zy = Object.assign(Jy, {
+  Qy = Object.assign(Zy, {
     __name: "PanelSpeed",
     props: { brightness: Number },
     setup(e) {
@@ -16694,16 +16701,16 @@ const sn = $y(Py),
         ),
         (o, f) => (
           te(),
-          xe("div", Iy, [
-            g("div", My, [
-              g("div", Oy, [
+          xe("div", My, [
+            g("div", Oy, [
+              g("div", Ay, [
                 g(
                   "div",
                   { id: "perfChart", class: M(s(e.brightness)) },
                   [
                     (te(),
-                    xe("svg", Ay, [
-                      Ly,
+                    xe("svg", Ly, [
+                      zy,
                       g(
                         "path",
                         {
@@ -16721,7 +16728,7 @@ const sn = $y(Py),
                         },
                         null,
                         10,
-                        zy,
+                        By,
                       ),
                     ])),
                     g(
@@ -16769,8 +16776,8 @@ const sn = $y(Py),
                   },
                   [
                     (te(),
-                    xe("svg", By, [
-                      jy,
+                    xe("svg", jy, [
+                      Ny,
                       g(
                         "path",
                         {
@@ -16788,7 +16795,7 @@ const sn = $y(Py),
                         },
                         null,
                         10,
-                        Ny,
+                        Ry,
                       ),
                     ])),
                     g(
@@ -16838,9 +16845,9 @@ const sn = $y(Py),
                     " faster, smaller, and lighter. ",
                     2,
                   ),
-                  Ry,
                   Fy,
                   Dy,
+                  Hy,
                   g(
                     "div",
                     {
@@ -16855,16 +16862,16 @@ const sn = $y(Py),
                         },
                       ]),
                     },
-                    Vy,
+                    Wy,
                     2,
                   ),
                   g("h3", { class: M(a(e.brightness)) }, "How I help", 2),
-                  g("table", Wy, [
-                    qy,
+                  g("table", qy, [
+                    Uy,
                     g("thead", null, [
                       g("tr", null, [
                         g("th", null, [
-                          g("div", Uy, [
+                          g("div", Yy, [
                             g(
                               "h4",
                               { class: M([a(e.brightness), "text-lg m-0"]) },
@@ -16886,7 +16893,7 @@ const sn = $y(Py),
                           ]),
                         ]),
                         g("th", null, [
-                          g("div", Yy, [
+                          g("div", Ky, [
                             g(
                               "h4",
                               { class: M([a(e.brightness), "text-lg m-0"]) },
@@ -16909,12 +16916,12 @@ const sn = $y(Py),
                         ]),
                       ]),
                     ]),
-                    Ky,
+                    Xy,
                   ]),
                 ],
                 2,
               ),
-              Xy,
+              Jy,
               he(rr, { brightness: e.brightness }, null, 8, ["brightness"]),
             ]),
           ])
@@ -16922,27 +16929,27 @@ const sn = $y(Py),
       )
     },
   }),
-  Qy = bn(Zy, [["__scopeId", "data-v-a139c5c2"]]),
-  ew = {
+  ew = bn(Qy, [["__scopeId", "data-v-a139c5c2"]]),
+  tw = {
     class:
       "flex w-full gap-4 md:p-8 sm:p-4 items-center justify-center flex-wrap",
   },
-  tw = { class: "lg:w-6/12 sm:w-12/12" },
-  nw = g(
+  nw = { class: "lg:w-6/12 sm:w-12/12" },
+  sw = g(
     "p",
     null,
     " The Internet is a (potentially) dangerous place- not just for users, but for websites as well. Botnets, DDoS attacks, ransomware, and other problems are common enough at this point that every site is vulnerable. ",
     -1,
   ),
-  sw = g("p", null, [g("b", null, " Don't worry, I can help!")], -1),
-  rw = g(
+  rw = g("p", null, [g("b", null, " Don't worry, I can help!")], -1),
+  aw = g(
     "p",
     null,
     "My web security specialities include (but aren't limited to):",
     -1,
   ),
-  aw = { class: "flex items-center w-full" },
-  iw = g(
+  iw = { class: "flex items-center w-full" },
+  lw = g(
     "p",
     null,
     [
@@ -16956,9 +16963,9 @@ const sn = $y(Py),
     ],
     -1,
   ),
-  lw = g("div", { class: "h-3" }, null, -1),
-  ow = { class: "flex items-center w-full" },
-  uw = g(
+  ow = g("div", { class: "h-3" }, null, -1),
+  uw = { class: "flex items-center w-full" },
+  cw = g(
     "p",
     null,
     [
@@ -16972,19 +16979,19 @@ const sn = $y(Py),
     ],
     -1,
   ),
-  cw = g("div", { class: "h-3" }, null, -1),
-  dw = { class: "flex items-center w-full" },
-  fw = g(
+  dw = g("div", { class: "h-3" }, null, -1),
+  fw = { class: "flex items-center w-full" },
+  pw = g(
     "p",
     null,
     " If your site has any PHP or JavaScript running (it does), there's a good chance coding errors, outdated libraries, or other problems are imperiling your site. Trust me, I've seen it all- from passwords saved in plain text files to packages decades out of date with 384 critical-risk vulnerabilities... so, whatever nastiness is lurking beneath the surface, I can fix it. ",
     -1,
   ),
-  pw = { class: "flex flex-col gap-4 lg:w-4/12 md:w-12/12" },
-  hw = { class: "prose text-center" },
-  gw = g("div", { class: "h-3" }, null, -1),
+  hw = { class: "flex flex-col gap-4 lg:w-4/12 md:w-12/12" },
+  gw = { class: "prose text-center" },
   vw = g("div", { class: "h-3" }, null, -1),
-  mw = {
+  mw = g("div", { class: "h-3" }, null, -1),
+  bw = {
     __name: "PanelSecurity",
     props: { brightness: Number },
     setup(e) {
@@ -17013,8 +17020,8 @@ const sn = $y(Py),
         }
       return (o, f) => (
         te(),
-        xe("div", ew, [
-          g("div", tw, [
+        xe("div", tw, [
+          g("div", nw, [
             g(
               "h2",
               { class: M(["text-left text-5xl", l(e.brightness)]) },
@@ -17053,9 +17060,9 @@ const sn = $y(Py),
               "div",
               { class: M(["prose", l(e.brightness)]) },
               [
-                nw,
                 sw,
                 rw,
+                aw,
                 g(
                   "div",
                   {
@@ -17071,7 +17078,7 @@ const sn = $y(Py),
                     ]),
                   },
                   [
-                    g("div", aw, [
+                    g("div", iw, [
                       he(
                         we(Ir),
                         { class: M(["mr-2", i(e.brightness)]), size: "2rem" },
@@ -17086,11 +17093,11 @@ const sn = $y(Py),
                         2,
                       ),
                     ]),
-                    iw,
+                    lw,
                   ],
                   2,
                 ),
-                lw,
+                ow,
                 g(
                   "div",
                   {
@@ -17106,7 +17113,7 @@ const sn = $y(Py),
                     ]),
                   },
                   [
-                    g("div", ow, [
+                    g("div", uw, [
                       he(
                         we(Ir),
                         { size: "2rem", class: M(["mr-2", i(e.brightness)]) },
@@ -17121,11 +17128,11 @@ const sn = $y(Py),
                         2,
                       ),
                     ]),
-                    uw,
+                    cw,
                   ],
                   2,
                 ),
-                cw,
+                dw,
                 g(
                   "div",
                   {
@@ -17141,7 +17148,7 @@ const sn = $y(Py),
                     ]),
                   },
                   [
-                    g("div", dw, [
+                    g("div", fw, [
                       he(
                         we(Ir),
                         { class: M(["mr-2", i(e.brightness)]), size: "2rem" },
@@ -17156,7 +17163,7 @@ const sn = $y(Py),
                         2,
                       ),
                     ]),
-                    fw,
+                    pw,
                   ],
                   2,
                 ),
@@ -17164,7 +17171,7 @@ const sn = $y(Py),
               2,
             ),
           ]),
-          g("div", pw, [
+          g("div", hw, [
             g(
               "div",
               {
@@ -17180,7 +17187,7 @@ const sn = $y(Py),
                 ]),
               },
               [
-                g("div", hw, [
+                g("div", gw, [
                   g(
                     "h3",
                     {
@@ -17237,33 +17244,33 @@ const sn = $y(Py),
               ],
               2,
             ),
-            gw,
-            g("hr", { class: M(["opacity-50", l(e.brightness)]) }, null, 2),
             vw,
+            g("hr", { class: M(["opacity-50", l(e.brightness)]) }, null, 2),
+            mw,
             he(rr, { brightness: e.brightness }, null, 8, ["brightness"]),
           ]),
         ])
       )
     },
   },
-  bw = {
+  yw = {
     class:
       "flex w-full gap-4 md:p-8 sm:p-4 items-center justify-center flex-col",
   },
-  yw = {
+  ww = {
     class: "prose md:w-10/12 sm:w-12/12 mt-8",
     style: { "max-width": "84ch !important" },
   },
-  ww = { class: "flex w-full" },
-  xw = { class: "flex w-full pt-4 gap-2" },
-  Sw = { class: "w-6/12" },
+  xw = { class: "flex w-full" },
+  Sw = { class: "flex w-full pt-4 gap-2" },
   _w = { class: "w-6/12" },
-  Ew = { class: "w-full flex" },
-  Cw = { class: "w-6/12" },
-  Tw = { class: "w-6/12 pb-3" },
-  kw = g("em", null, "huge", -1),
-  $w = g("div", { class: "h-6" }, null, -1),
-  Pw = {
+  Ew = { class: "w-6/12" },
+  Cw = { class: "w-full flex" },
+  Tw = { class: "w-6/12" },
+  kw = { class: "w-6/12 pb-3" },
+  $w = g("em", null, "huge", -1),
+  Pw = g("div", { class: "h-6" }, null, -1),
+  Iw = {
     __name: "PanelAccessibility",
     props: { brightness: Number },
     setup(e) {
@@ -17323,8 +17330,8 @@ const sn = $y(Py),
         ),
         (f, c) => (
           te(),
-          xe("div", bw, [
-            g("div", yw, [
+          xe("div", yw, [
+            g("div", ww, [
               g(
                 "h2",
                 { class: M(["text-5xl", i(e.brightness)]) },
@@ -17384,7 +17391,7 @@ const sn = $y(Py),
                 " It doesn't stop there, though- for users with color blindness, the green and red buttons are indistinguishable. ",
                 2,
               ),
-              g("div", ww, [
+              g("div", xw, [
                 g(
                   "button",
                   {
@@ -17407,8 +17414,8 @@ const sn = $y(Py),
                   2,
                 ),
               ]),
-              g("div", xw, [
-                g("div", Sw, [
+              g("div", Sw, [
+                g("div", _w, [
                   g(
                     "button",
                     { class: M(["rounded px-5 py-2 w-full", r.value]) },
@@ -17416,7 +17423,7 @@ const sn = $y(Py),
                     2,
                   ),
                 ]),
-                g("div", _w, [
+                g("div", Ew, [
                   g(
                     "button",
                     { class: M(["rounded px-5 py-2 w-full", a.value]) },
@@ -17431,8 +17438,8 @@ const sn = $y(Py),
                 " Here's a better version. ",
                 2,
               ),
-              g("div", Ew, [
-                g("div", Cw, [
+              g("div", Cw, [
+                g("div", Tw, [
                   g(
                     "button",
                     {
@@ -17451,7 +17458,7 @@ const sn = $y(Py),
                     2,
                   ),
                 ]),
-                g("div", Tw, [
+                g("div", kw, [
                   g(
                     "button",
                     {
@@ -17482,7 +17489,7 @@ const sn = $y(Py),
                 { class: M(i(e.brightness)) },
                 [
                   $e(" Changes like these may seem small, but they make a "),
-                  kw,
+                  $w,
                   $e(
                     " difference for the usability of your site. Let me help you be in the 2%. ",
                   ),
@@ -17490,15 +17497,15 @@ const sn = $y(Py),
                 2,
               ),
             ]),
-            $w,
+            Pw,
             he(rr, { brightness: e.brightness }, null, 8, ["brightness"]),
           ])
         )
       )
     },
   },
-  Iw = ["onMouseover"],
-  Mw = {
+  Mw = ["onMouseover"],
+  Ow = {
     __name: "Services",
     props: { brightness: Number },
     setup(e) {
@@ -17670,7 +17677,7 @@ const sn = $y(Py),
                                   ),
                                 ],
                                 42,
-                                Iw,
+                                Mw,
                               ),
                             ]),
                             _: 2,
@@ -17695,7 +17702,7 @@ const sn = $y(Py),
                     { class: "flex justify-center gap-5 w-full" },
                     {
                       default: Ue(() => [
-                        he(Qy, { brightness: e.brightness }, null, 8, [
+                        he(ew, { brightness: e.brightness }, null, 8, [
                           "brightness",
                         ]),
                       ]),
@@ -17707,7 +17714,7 @@ const sn = $y(Py),
                     { class: "flex justify-center gap-5 w-full" },
                     {
                       default: Ue(() => [
-                        he(mw, { brightness: e.brightness }, null, 8, [
+                        he(bw, { brightness: e.brightness }, null, 8, [
                           "brightness",
                         ]),
                       ]),
@@ -17719,7 +17726,7 @@ const sn = $y(Py),
                     { class: "flex justify-center gap-5 w-full" },
                     {
                       default: Ue(() => [
-                        he(Ty, { brightness: e.brightness }, null, 8, [
+                        he(ky, { brightness: e.brightness }, null, 8, [
                           "brightness",
                         ]),
                       ]),
@@ -17731,7 +17738,7 @@ const sn = $y(Py),
                     { class: "flex justify-center gap-5 w-full" },
                     {
                       default: Ue(() => [
-                        he(py, { brightness: e.brightness }, null, 8, [
+                        he(hy, { brightness: e.brightness }, null, 8, [
                           "brightness",
                         ]),
                       ]),
@@ -17743,7 +17750,7 @@ const sn = $y(Py),
                     { class: "flex justify-center gap-5 w-full" },
                     {
                       default: Ue(() => [
-                        he(Pw, { brightness: e.brightness }, null, 8, [
+                        he(Iw, { brightness: e.brightness }, null, 8, [
                           "brightness",
                         ]),
                       ]),
@@ -17760,8 +17767,8 @@ const sn = $y(Py),
       )
     },
   },
-  Ow = { href: "/pricing" },
-  Aw = {
+  Aw = { href: "/pricing" },
+  Lw = {
     __name: "messageBanner",
     props: { brightness: Number },
     setup(e) {
@@ -17808,7 +17815,7 @@ const sn = $y(Py),
               " Get a free site speed audit with recommendations for optimizing. My gift to you. ",
               2,
             ),
-            g("a", Ow, [
+            g("a", Aw, [
               g(
                 "button",
                 {
@@ -17835,35 +17842,35 @@ const sn = $y(Py),
     },
   },
   Ps = (e) => (er("data-v-e20b9d11"), (e = e()), tr(), e),
-  Lw = { class: "flex-col" },
-  zw = { class: "prose py-5 flex-col w-full" },
-  Bw = Ps(() => g("br", null, null, -1)),
+  zw = { class: "flex-col" },
+  Bw = { class: "prose py-5 flex-col w-full" },
   jw = Ps(() => g("br", null, null, -1)),
-  Nw = { class: "flex" },
-  Rw = { class: "w-6/12" },
-  Fw = ["name", "checked", "onClick"],
-  Dw = { class: "w-6/12" },
-  Hw = { key: 0, class: "text-slate-50 opacity-25 line-through pr-2" },
-  Gw = { class: "flex-col gap-4" },
-  Vw = { class: "flex items-center" },
-  Ww = ["name", "checked", "onClick"],
-  qw = { key: 0 },
-  Uw = { key: 1 },
-  Yw = { class: "" },
-  Kw = { key: 0, class: "text-slate-50 opacity-25 line-through pr-2" },
-  Xw = { class: "flex-col" },
-  Jw = { class: "flex justify-between" },
-  Zw = { key: 0, class: "text-slate-50 opacity-25 line-through pr-2" },
-  Qw = { class: "gap-4 mt-4", name: "pricing" },
-  ex = ["value"],
+  Nw = Ps(() => g("br", null, null, -1)),
+  Rw = { class: "flex" },
+  Fw = { class: "w-6/12" },
+  Dw = ["name", "checked", "onClick"],
+  Hw = { class: "w-6/12" },
+  Gw = { key: 0, class: "text-slate-50 opacity-25 line-through pr-2" },
+  Vw = { class: "flex-col gap-4" },
+  Ww = { class: "flex items-center" },
+  qw = ["name", "checked", "onClick"],
+  Uw = { key: 0 },
+  Yw = { key: 1 },
+  Kw = { class: "" },
+  Xw = { key: 0, class: "text-slate-50 opacity-25 line-through pr-2" },
+  Jw = { class: "flex-col" },
+  Zw = { class: "flex justify-between" },
+  Qw = { key: 0, class: "text-slate-50 opacity-25 line-through pr-2" },
+  ex = { class: "gap-4 mt-4", name: "pricing" },
   tx = ["value"],
-  nx = { class: "flex gap-4", id: "leftInputs" },
-  sx = { class: "flex gap-4", id: "rightInputs" },
-  rx = Ps(() => g("br", null, null, -1)),
+  nx = ["value"],
+  sx = { class: "flex gap-4", id: "leftInputs" },
+  rx = { class: "flex gap-4", id: "rightInputs" },
   ax = Ps(() => g("br", null, null, -1)),
   ix = Ps(() => g("br", null, null, -1)),
   lx = Ps(() => g("br", null, null, -1)),
-  ox = {
+  ox = Ps(() => g("br", null, null, -1)),
+  ux = {
     __name: "servicesCalculator",
     props: { brightness: Number },
     setup(e) {
@@ -18210,8 +18217,8 @@ const sn = $y(Py),
         }
       return (F, oe) => (
         te(),
-        xe("div", Lw, [
-          g("div", zw, [
+        xe("div", zw, [
+          g("div", Bw, [
             g(
               "h2",
               {
@@ -18230,8 +18237,8 @@ const sn = $y(Py),
                 $e(
                   " Faster, simpler, and cheaper than an agency. No need to spend hours on the phone haggling. Pick what you want, I make it happen. That's it!",
                 ),
-                Bw,
                 jw,
+                Nw,
                 $e(
                   " These services are for your existing website- if you're looking for a new site, ",
                 ),
@@ -18267,8 +18274,8 @@ const sn = $y(Py),
                     ]),
                   },
                   [
-                    g("div", Nw, [
-                      g("div", Rw, [
+                    g("div", Rw, [
+                      g("div", Fw, [
                         g(
                           "div",
                           {
@@ -18292,14 +18299,14 @@ const sn = $y(Py),
                               },
                               null,
                               10,
-                              Fw,
+                              Dw,
                             ),
                             g("h3", null, $t(V.title), 1),
                           ],
                           2,
                         ),
                       ]),
-                      g("div", Dw, [
+                      g("div", Hw, [
                         g(
                           "h3",
                           {
@@ -18310,7 +18317,7 @@ const sn = $y(Py),
                           },
                           [
                             ge(V) != Math.floor(Q(V))
-                              ? (te(), xe("span", Hw, "$" + $t(ge(V)), 1))
+                              ? (te(), xe("span", Gw, "$" + $t(ge(V)), 1))
                               : rt("", !0),
                             $e("$" + $t(Q(V)), 1),
                           ],
@@ -18324,7 +18331,7 @@ const sn = $y(Py),
                       null,
                       2,
                     ),
-                    g("div", Gw, [
+                    g("div", Vw, [
                       (te(!0),
                       xe(
                         Je,
@@ -18341,7 +18348,7 @@ const sn = $y(Py),
                                   "flex w-full items-center justify-between pb-4",
                               },
                               [
-                                g("div", Vw, [
+                                g("div", Ww, [
                                   g(
                                     "input",
                                     {
@@ -18357,7 +18364,7 @@ const sn = $y(Py),
                                     },
                                     null,
                                     10,
-                                    Ww,
+                                    qw,
                                   ),
                                   g(
                                     "p",
@@ -18366,16 +18373,16 @@ const sn = $y(Py),
                                       ke.title ==
                                       "Detailed speed audit (100% free)"
                                         ? (te(),
-                                          xe("b", qw, [
+                                          xe("b", Uw, [
                                             g("em", null, $t(ke.title), 1),
                                           ]))
                                         : (te(),
-                                          xe("span", Uw, $t(ke.title), 1)),
+                                          xe("span", Yw, $t(ke.title), 1)),
                                     ],
                                     2,
                                   ),
                                 ]),
-                                g("div", Yw, [
+                                g("div", Kw, [
                                   g(
                                     "h3",
                                     {
@@ -18388,7 +18395,7 @@ const sn = $y(Py),
                                       ke.price !=
                                       Math.floor(ke.price * V.discount)
                                         ? (te(),
-                                          xe("span", Kw, "$" + $t(ke.price), 1))
+                                          xe("span", Xw, "$" + $t(ke.price), 1))
                                         : rt("", !0),
                                       $e("$" + $t(ke.price * V.discount), 1),
                                     ],
@@ -18410,8 +18417,8 @@ const sn = $y(Py),
             128,
           )),
           g("hr", { class: M(["my-4 w-full", s(n.brightness)]) }, null, 2),
-          g("div", Xw, [
-            g("div", Jw, [
+          g("div", Jw, [
+            g("div", Zw, [
               g(
                 "h3",
                 { class: M(["text-4xl text-bold", s(n.brightness)]) },
@@ -18423,7 +18430,7 @@ const sn = $y(Py),
                 { class: M(["text-4xl text-bold", s(n.brightness)]) },
                 [
                   X.value != Math.floor(X.value)
-                    ? (te(), xe("span", Zw, "$" + $t(X.value), 1))
+                    ? (te(), xe("span", Qw, "$" + $t(X.value), 1))
                     : rt("", !0),
                   $e("$" + $t(X.value), 1),
                 ],
@@ -18431,22 +18438,22 @@ const sn = $y(Py),
               ),
             ]),
           ]),
-          g("form", Qw, [
+          g("form", ex, [
             g(
               "input",
               { type: "hidden", name: "services", value: Se.value },
               null,
               8,
-              ex,
+              tx,
             ),
             g(
               "input",
               { type: "hidden", name: "total", value: X.value },
               null,
               8,
-              tx,
+              nx,
             ),
-            g("div", nx, [
+            g("div", sx, [
               g(
                 "input",
                 {
@@ -18477,7 +18484,7 @@ const sn = $y(Py),
                 2,
               ),
             ]),
-            g("div", sx, [
+            g("div", rx, [
               g(
                 "input",
                 {
@@ -18535,8 +18542,8 @@ const sn = $y(Py),
               $e(
                 " I'll get back to you within 48 hours. This form is not a contract, please note that work can't begin until we've connected and signed a contract.",
               ),
-              rx,
               ax,
+              ix,
               $e(
                 "These are one-time services; for ongoing maintenance, please ",
               ),
@@ -18547,8 +18554,8 @@ const sn = $y(Py),
                 2,
               ),
               $e(" and we can get that figured out."),
-              ix,
               lx,
+              ox,
               $e("I look forward to working with you! "),
             ],
             2,
@@ -18557,19 +18564,19 @@ const sn = $y(Py),
       )
     },
   },
-  ux = bn(ox, [["__scopeId", "data-v-e20b9d11"]]),
-  cx = {
+  cx = bn(ux, [["__scopeId", "data-v-e20b9d11"]]),
+  dx = {
     __name: "Pricing",
     props: { brightness: Number },
     setup(e) {
       return (t, n) => (
-        te(), Ne(ux, { brightness: e.brightness }, null, 8, ["brightness"])
+        te(), Ne(cx, { brightness: e.brightness }, null, 8, ["brightness"])
       )
     },
   },
-  dx = { class: "flex-col" },
-  fx = { class: "py-5 flex-col w-full" },
-  px = { id: "cta" },
+  fx = { class: "flex-col" },
+  px = { class: "py-5 flex-col w-full" },
+  hx = { id: "cta" },
   pd = {
     __name: "Contact",
     props: { brightness: Number },
@@ -18634,8 +18641,8 @@ const sn = $y(Py),
         }
       return (r, a) => (
         te(),
-        xe("div", dx, [
-          g("div", fx, [
+        xe("div", fx, [
+          g("div", px, [
             g(
               "h2",
               {
@@ -18648,7 +18655,7 @@ const sn = $y(Py),
               2,
             ),
           ]),
-          g("form", px, [
+          g("form", hx, [
             g(
               "input",
               {
@@ -18710,7 +18717,7 @@ const sn = $y(Py),
     '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>',
   Rt = '</title><path d="',
   Ft = '"/></svg>',
-  hx = {
+  gx = {
     title: "Blender",
     slug: "blender",
     get svg() {
@@ -18733,7 +18740,7 @@ const sn = $y(Py),
     guidelines: "https://getbootstrap.com/docs/5.3/about/brand",
     license: { type: "MIT", url: "https://spdx.org/licenses/MIT" },
   },
-  gx = {
+  vx = {
     title: "Cloudflare",
     slug: "cloudflare",
     get svg() {
@@ -18744,7 +18751,7 @@ const sn = $y(Py),
     hex: "F38020",
     guidelines: "https://www.cloudflare.com/trademark/",
   },
-  vx = {
+  mx = {
     title: "Figma",
     slug: "figma",
     get svg() {
@@ -18755,7 +18762,7 @@ const sn = $y(Py),
     hex: "F24E1E",
     guidelines: "https://www.figma.com/using-the-figma-brand/",
   },
-  mx = {
+  bx = {
     title: "GitHub",
     slug: "github",
     get svg() {
@@ -18766,7 +18773,7 @@ const sn = $y(Py),
     hex: "181717",
     guidelines: "https://github.com/logos",
   },
-  bx = {
+  yx = {
     title: "Instagram",
     slug: "instagram",
     get svg() {
@@ -18777,7 +18784,7 @@ const sn = $y(Py),
     hex: "E4405F",
     guidelines: "https://about.meta.com/brand/resources/instagram",
   },
-  yx = {
+  wx = {
     title: "JavaScript",
     slug: "javascript",
     get svg() {
@@ -18789,7 +18796,7 @@ const sn = $y(Py),
     hex: "F7DF1E",
     license: { type: "MIT", url: "https://spdx.org/licenses/MIT" },
   },
-  wx = {
+  xx = {
     title: "LinkedIn",
     slug: "linkedin",
     get svg() {
@@ -18800,7 +18807,7 @@ const sn = $y(Py),
     hex: "0A66C2",
     guidelines: "https://brand.linkedin.com/policies",
   },
-  xx = {
+  Sx = {
     title: "NGINX",
     slug: "nginx",
     get svg() {
@@ -18825,7 +18832,7 @@ const sn = $y(Py),
       url: "https://spdx.org/licenses/CC-BY-SA-4.0",
     },
   },
-  Sx = {
+  _x = {
     title: "Tailwind CSS",
     slug: "tailwindcss",
     get svg() {
@@ -18865,11 +18872,11 @@ const sn = $y(Py),
     guidelines: "https://wordpressfoundation.org/trademark-policy",
   },
   wn = (e) => (er("data-v-5d7643ca"), (e = e()), tr(), e),
-  _x = { class: "flex-col w-full" },
-  Ex = { class: "p-5 flex-col w-full" },
-  Cx = { class: "grid grid-cols-6" },
-  Tx = { class: "col-span-2 sm:col-span-2 md:col-span-1" },
-  kx = wn(() =>
+  Ex = { class: "flex-col w-full" },
+  Cx = { class: "p-5 flex-col w-full" },
+  Tx = { class: "grid grid-cols-6" },
+  kx = { class: "col-span-2 sm:col-span-2 md:col-span-1" },
+  $x = wn(() =>
     g(
       "div",
       { class: "square-image-container rounded" },
@@ -18883,24 +18890,24 @@ const sn = $y(Py),
       -1,
     ),
   ),
-  $x = { class: "flex gap-2 mt-4 justify-center items-center" },
   Px = { class: "flex gap-2 mt-4 justify-center items-center" },
-  Ix = ["href"],
-  Mx = {
+  Ix = { class: "flex gap-2 mt-4 justify-center items-center" },
+  Mx = ["href"],
+  Ox = {
     viewBox: "0 0 32 32",
     xmlns: "http://www.w3.org/2000/svg",
     fill: "currentColor",
     width: "100%",
     height: "100%",
   },
-  Ox = ["d"],
-  Ax = {
+  Ax = ["d"],
+  Lx = {
     class: "col-span-4 sm:col-span-4 md:col-span-5 prose pl-5",
     style: { "max-width": "100vw !important" },
   },
-  Lx = wn(() => g("li", null, "a 3D artist and animator", -1)),
-  zx = wn(() => g("li", null, "a digital and traditional painter", -1)),
-  Bx = wn(() =>
+  zx = wn(() => g("li", null, "a 3D artist and animator", -1)),
+  Bx = wn(() => g("li", null, "a digital and traditional painter", -1)),
+  jx = wn(() =>
     g(
       "li",
       null,
@@ -18908,7 +18915,7 @@ const sn = $y(Py),
       -1,
     ),
   ),
-  jx = wn(() =>
+  Nx = wn(() =>
     g(
       "li",
       null,
@@ -18916,7 +18923,7 @@ const sn = $y(Py),
       -1,
     ),
   ),
-  Nx = wn(() =>
+  Rx = wn(() =>
     g(
       "li",
       null,
@@ -18924,10 +18931,10 @@ const sn = $y(Py),
       -1,
     ),
   ),
-  Rx = wn(() => g("li", null, "a woodworker and electronic tinkerer", -1)),
-  Fx = wn(() => g("li", null, "and so much more!", -1)),
-  Dx = [Lx, zx, Bx, jx, Nx, Rx, Fx],
-  Hx = wn(() =>
+  Fx = wn(() => g("li", null, "a woodworker and electronic tinkerer", -1)),
+  Dx = wn(() => g("li", null, "and so much more!", -1)),
+  Hx = [zx, Bx, jx, Nx, Rx, Fx, Dx],
+  Gx = wn(() =>
     g(
       "img",
       {
@@ -18938,7 +18945,7 @@ const sn = $y(Py),
       -1,
     ),
   ),
-  Gx = {
+  Vx = {
     __name: "AboutMe",
     props: { brightness: Number },
     setup(e) {
@@ -18955,7 +18962,7 @@ const sn = $y(Py),
           if (i == 2) return "text-orange-500"
           if (i == 1) return "text-orange-400"
         },
-        r = [wx, mx, hx, bx],
+        r = [xx, bx, gx, yx],
         a = [
           "https://www.linkedin.com/in/josephclaytonhansen/",
           "https://www.github.com/josephclaytonhansen",
@@ -18964,13 +18971,13 @@ const sn = $y(Py),
         ]
       return (i, l) => (
         te(),
-        xe("div", _x, [
-          g("div", Ex, [
-            g("div", Cx, [
-              g("div", Tx, [
-                kx,
-                g("div", $x, [
-                  g("div", Px, [
+        xe("div", Ex, [
+          g("div", Cx, [
+            g("div", Tx, [
+              g("div", kx, [
+                $x,
+                g("div", Px, [
+                  g("div", Ix, [
                     (te(),
                     xe(
                       Je,
@@ -18985,12 +18992,12 @@ const sn = $y(Py),
                               { href: a[f] },
                               [
                                 (te(),
-                                xe("svg", Mx, [
-                                  g("path", { d: o.path }, null, 8, Ox),
+                                xe("svg", Ox, [
+                                  g("path", { d: o.path }, null, 8, Ax),
                                 ])),
                               ],
                               8,
-                              Ix,
+                              Mx,
                             ),
                           ],
                           2,
@@ -19001,7 +19008,7 @@ const sn = $y(Py),
                   ]),
                 ]),
               ]),
-              g("div", Ax, [
+              g("div", Lx, [
                 g(
                   "h1",
                   { class: M(["text-5xl font-bold mb-0", n(t.brightness)]) },
@@ -19050,7 +19057,7 @@ const sn = $y(Py),
                   " If that section above bored you, me too. Luckily, there's a lot more to me than what I do for work. I'd call myself an artist, and that covers a lot of things I'm passionate about and love to do. I'm: ",
                   2,
                 ),
-                g("ul", { class: M(n(t.brightness)) }, Dx, 2),
+                g("ul", { class: M(n(t.brightness)) }, Hx, 2),
                 g(
                   "p",
                   { class: M(n(t.brightness)) },
@@ -19073,7 +19080,7 @@ const sn = $y(Py),
                   8,
                   ["brightness"],
                 ),
-                Hx,
+                Gx,
               ]),
             ]),
           ]),
@@ -19081,23 +19088,23 @@ const sn = $y(Py),
       )
     },
   },
-  Vx = bn(Gx, [["__scopeId", "data-v-5d7643ca"]]),
-  Wx = { class: "flex-col w-full lg:w-9/12 md:w-10/12 sm:wd-11/12" },
-  qx = { class: "py-5 flex-col w-full" },
-  Ux = { class: "prose" },
-  Yx = ["onMouseover", "onClick"],
-  Kx = { class: "image-container" },
-  Xx = ["src", "alt"],
-  Jx = { class: "flex gap-2 items-center" },
-  Zx = {
+  Wx = bn(Vx, [["__scopeId", "data-v-5d7643ca"]]),
+  qx = { class: "flex-col w-full lg:w-9/12 md:w-10/12 sm:wd-11/12" },
+  Ux = { class: "py-5 flex-col w-full" },
+  Yx = { class: "prose" },
+  Kx = ["onMouseover", "onClick"],
+  Xx = { class: "image-container" },
+  Jx = ["src", "alt"],
+  Zx = { class: "flex gap-2 items-center" },
+  Qx = {
     viewBox: "0 0 24 24",
     xmlns: "http://www.w3.org/2000/svg",
     fill: "currentColor",
     width: "24px",
     height: "24px",
   },
-  Qx = ["d"],
-  e5 = {
+  e5 = ["d"],
+  t5 = {
     __name: "Portfolio",
     props: { brightness: Number },
     setup(e) {
@@ -19116,13 +19123,13 @@ const sn = $y(Py),
         },
         r = ee([
           {
-            icons: [Pn, Iu, vx],
+            icons: [Pn, Iu, mx],
             title: "BlenderNation Bazaar",
             image: Qi,
             link: "/portfolio/bazaar",
           },
           {
-            icons: [Mu, xx, gx],
+            icons: [Mu, Sx, vx],
             title: "OKC South Stake",
             image: el,
             link: "/portfolio/okc-south-stake",
@@ -19130,7 +19137,7 @@ const sn = $y(Py),
         ]),
         a = ee([
           {
-            icons: [Pn, yx],
+            icons: [Pn, wx],
             title: "Build On Your Land",
             image: tl,
             link: "/portfolio/build-on-your-land",
@@ -19155,7 +19162,7 @@ const sn = $y(Py),
           },
           {
             title: "josephhansen.dev",
-            icons: [Mu, Sx],
+            icons: [Mu, _x],
             image: al,
             link: "/portfolio/josephhansen-dev",
           },
@@ -19181,9 +19188,9 @@ const sn = $y(Py),
         i = ee(null)
       return (l, o) => (
         te(),
-        xe("div", Wx, [
-          g("div", qx, [
-            g("span", Ux, [
+        xe("div", qx, [
+          g("div", Ux, [
+            g("span", Yx, [
               g(
                 "h2",
                 {
@@ -19255,7 +19262,7 @@ const sn = $y(Py),
                               }),
                             },
                             [
-                              g("div", Kx, [
+                              g("div", Xx, [
                                 g(
                                   "img",
                                   {
@@ -19266,7 +19273,7 @@ const sn = $y(Py),
                                   },
                                   null,
                                   8,
-                                  Xx,
+                                  Jx,
                                 ),
                               ]),
                               g("div", null, [
@@ -19299,7 +19306,7 @@ const sn = $y(Py),
                                           3,
                                         ),
                                       ]),
-                                      g("div", Jx, [
+                                      g("div", Zx, [
                                         (te(!0),
                                         xe(
                                           Je,
@@ -19330,13 +19337,13 @@ const sn = $y(Py),
                                                 },
                                                 [
                                                   (te(),
-                                                  xe("svg", Zx, [
+                                                  xe("svg", Qx, [
                                                     g(
                                                       "path",
                                                       { d: p.path },
                                                       null,
                                                       8,
-                                                      Qx,
+                                                      e5,
                                                     ),
                                                   ])),
                                                 ],
@@ -19354,7 +19361,7 @@ const sn = $y(Py),
                               ]),
                             ],
                             44,
-                            Yx,
+                            Kx,
                           )
                         ),
                       ),
@@ -19371,51 +19378,51 @@ const sn = $y(Py),
       )
     },
   },
-  t5 = bn(e5, [["__scopeId", "data-v-21dbf9f7"]]),
-  n5 = g(
+  n5 = bn(t5, [["__scopeId", "data-v-21dbf9f7"]]),
+  s5 = g(
     "h3",
     { class: "text-2xl font-semibold text-inherit" },
     " The vision: a one-stop shop for Blender users ",
     -1,
   ),
-  s5 = g(
+  r5 = g(
     "p",
     { class: "text-inherit" },
     " When Bart from BlenderNation approached me with the idea for Bazaar, I was pumped. Nothing quite like Bazaar existed at the time: one central hub for Blender users to find tutorials, resources, assets, and add-ons. I was heavily involved with every step of the process of making the Bazaar come to life, and the end result is fantastic. ",
     -1,
   ),
-  r5 = ["src"],
-  a5 = g("figcaption", null, "Bazaar's planning board", -1),
-  i5 = { class: "text-inherit" },
-  l5 = ["src"],
-  o5 = g("figcaption", null, "My approved design for the Bazaar", -1),
-  u5 = g(
+  a5 = ["src"],
+  i5 = g("figcaption", null, "Bazaar's planning board", -1),
+  l5 = { class: "text-inherit" },
+  o5 = ["src"],
+  u5 = g("figcaption", null, "My approved design for the Bazaar", -1),
+  c5 = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     " Tight deadlines and high stakes ",
     -1,
   ),
-  c5 = g(
+  d5 = g(
     "p",
     null,
-    " When Bart approached me, there was about a month until the next Blender Conference, a massive community event that he hoped to present Bazaar at. At this point, the Bazaar was just an idea- there wasn't even a logo yet. Long story short- Bazaar launched successfully with time to spare. I believe this project showed I can work well under pressure and with tight deadlines to achieve exactly what a client needs. ",
+    " When Bart approached me, there was about a month until the next Blender Conference, a massive community event that he hoped to present Bazaar at. At this point, the Bazaar was just an idea- there wasn't even a logo yet. Long story short, Bazaar launched successfully with time to spare. This project shows I can work well under pressure and with tight deadlines to achieve exactly what a client needs. ",
     -1,
   ),
-  d5 = g(
+  f5 = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     " Security: keeping the Bazaar safe ",
     -1,
   ),
-  f5 = g(
+  p5 = g(
     "p",
     null,
-    " Among the other development, I've implemented powerful security guardrails across Bazaar, ranging from DDoS protection to a comprehensive firewall. I'm proud to report that my security measures are currently preventing around 4500 attacks a month, with that number growing larger all the time. ",
+    " I've implemented powerful security guardrails across Bazaar, ranging from DDoS protection to a comprehensive firewall. I'm proud to report that my security measures are currently preventing around 4500 attacks a month, with that number growing larger all the time. ",
     -1,
   ),
-  p5 = "https://bazaar.blendernation.com",
-  h5 = "BlenderNation Bazaar",
-  g5 = {
+  h5 = "https://bazaar.blendernation.com",
+  g5 = "BlenderNation Bazaar",
+  v5 = {
     __name: "Bazaar",
     setup(e) {
       const t = ee([Qi, Z2, Q2, ey, ty]),
@@ -19439,28 +19446,28 @@ const sn = $y(Py),
           {
             images: t.value,
             captions: n.value,
-            link: p5,
-            title: h5,
+            link: h5,
+            title: g5,
             brightness: r.brightness,
           },
           {
             default: Ue(() => [
               Vt(r.$slots, "default", {}, () => [
-                n5,
                 s5,
+                r5,
                 g("figure", null, [
                   g(
                     "img",
                     { src: s.planning, class: "rounded-xl" },
                     null,
                     8,
-                    r5,
+                    a5,
                   ),
-                  a5,
+                  i5,
                 ]),
-                g("p", i5, [
+                g("p", l5, [
                   $e(
-                    " With the above Figma document as a guide from Bart, I dove into both design and figuring out the backend details for managing the complex data the site would be handling. Bart wanted to do this through WordPress, and I was able to use my expertise to recommend AdvancedCustomFields to do a lot of the major data-wrangling. I also built the theme from scratch, to make sure it was as simplified and lightweight as possible while still providing beautiful, responsive, and functional results. ",
+                    " With the above Figma document as a guide from Bart, I dove into both design and the backend details for managing the complex data the site would be handling. Bart wanted to do this through WordPress, and I was able to use my expertise to recommend AdvancedCustomFields to do a lot of the major data-wrangling. I also built the theme from scratch, to make sure it was as simplified and lightweight as possible while still providing beautiful, responsive, and functional results. ",
                   ),
                   g("figure", null, [
                     g(
@@ -19468,15 +19475,15 @@ const sn = $y(Py),
                       { src: s.figma, class: "rounded-xl" },
                       null,
                       8,
-                      l5,
+                      o5,
                     ),
-                    o5,
+                    u5,
                   ]),
                 ]),
-                u5,
                 c5,
                 d5,
                 f5,
+                p5,
               ]),
             ]),
             _: 3,
@@ -19487,25 +19494,25 @@ const sn = $y(Py),
       )
     },
   },
-  v5 = g(
+  m5 = g(
     "p",
     { class: "text-inherit" },
     ' To describe this project as "massive" would be an understatement. What at first glance appears to be a simple informational website is in fact a massive hub of information, resources, and tools for the members of a regional church. This site is a massive, sprawling, and complex project with dozens of custom tools, subdomains, features, and more. ',
     -1,
   ),
-  m5 = g(
+  b5 = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     " Everything in a single web app ",
     -1,
   ),
-  b5 = g(
+  y5 = g(
     "p",
     { class: "text-inherit" },
     " I've designed, built, and developed everything on this site. And I do mean everything. This site has congregation subpages with fully functional, collaborative, calendars: ",
     -1,
   ),
-  y5 = g(
+  w5 = g(
     "img",
     {
       src: "https://images.josephhansen.dev/uploads/file2024-02-0621-1707277670567.webp",
@@ -19515,39 +19522,39 @@ const sn = $y(Py),
     null,
     -1,
   ),
-  w5 = g(
+  x5 = g(
     "p",
     { class: "text-inherit" },
     " This web application also has a fully functional CMS and blog system, scheduling systems, complex communication tools, an internal email system, user roles and restricted access, and more. The scope of this site is frankly staggering. If you can imagine a tool an organization might need, it's somewhere on this site. And it's all built with the same care, attention to detail, and quality that I put into every project I work on. ",
     -1,
   ),
-  x5 = g(
+  S5 = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     "Built to take a beating",
     -1,
   ),
-  S5 = g(
+  _5 = g(
     "p",
     { class: "text-inherit" },
     " This site is built to handle a massive amount of traffic, and it's built to be as fast as possible. I've optimized it for speed, and it's fully responsive, accessible, and built with the latest technologies. It's a site that's built to last, and to be a valuable resource for the members of the church it serves. ",
     -1,
   ),
-  _5 = g(
+  E5 = g(
     "p",
     { class: "text-inherit" },
     " Additionally, this site has advanced security guardrails, DDoS protection, bot monitoring and filtering, extremely strong database encryption, MFA/TFA protection, and other essential security features for a large organizational website. I've extensively tested the security of this site, and I'm proud to say it's rock-solid. ",
     -1,
   ),
-  E5 = g(
+  C5 = g(
     "p",
     { class: "text-inherit" },
     " If you need a web application that's built to last, and built to be a valuable resource for your organization, I'm the developer you need. Let me build your site. ",
     -1,
   ),
-  C5 = "https://okcsouthstake.org",
-  T5 = "OKC South Stake",
-  k5 = {
+  T5 = "https://okcsouthstake.org",
+  k5 = "OKC South Stake",
+  $5 = {
     __name: "OkcSouthStake",
     setup(e) {
       const t = ee([
@@ -19567,14 +19574,13 @@ const sn = $y(Py),
           {
             images: t.value,
             captions: n.value,
-            link: C5,
-            title: T5,
+            link: T5,
+            title: k5,
             brightness: s.brightness,
           },
           {
             default: Ue(() => [
               Vt(s.$slots, "default", {}, () => [
-                v5,
                 m5,
                 b5,
                 y5,
@@ -19583,6 +19589,7 @@ const sn = $y(Py),
                 S5,
                 _5,
                 E5,
+                C5,
               ]),
             ]),
             _: 3,
@@ -19593,15 +19600,15 @@ const sn = $y(Py),
       )
     },
   },
-  $5 = g(
+  P5 = g(
     "p",
     { class: "text-inherit" },
     " Aris Search needed a powerful, functional, site to connect recruiters and job applicants. In addition to a clean, professional design with excellent SEO, I developed everything they needed on the backend to handle their data. The result is a site that's fast, functional, and easy to use. ",
     -1,
   ),
-  P5 = "https://arissearch.com//",
-  I5 = "Aris Search",
-  M5 = {
+  I5 = "https://arissearch.com//",
+  M5 = "Aris Search",
+  O5 = {
     __name: "ArisSearch",
     setup(e) {
       const t = ee([ol, ay]),
@@ -19613,12 +19620,12 @@ const sn = $y(Py),
           {
             images: t.value,
             captions: n.value,
-            link: P5,
-            title: I5,
+            link: I5,
+            title: M5,
             brightness: s.brightness,
           },
           {
-            default: Ue(() => [Vt(s.$slots, "default", {}, () => [$5])]),
+            default: Ue(() => [Vt(s.$slots, "default", {}, () => [P5])]),
             _: 3,
           },
           8,
@@ -19627,39 +19634,39 @@ const sn = $y(Py),
       )
     },
   },
-  O5 = g(
+  A5 = g(
     "p",
     { class: "text-inherit" },
     " Atlanta Floor One needed a new website to replace their old, non-functional one. I built them a new site using WordPress that's fast, clean, and responsive. The client was extremely happy with the results. ",
     -1,
   ),
-  A5 = g(
+  L5 = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     " Clean and professional with an unusual color palette ",
     -1,
   ),
-  L5 = g(
+  z5 = g(
     "p",
     { class: "text-inherit" },
     " This site was challenging from a design perspective. Atlanta Floor One's logo colors (light green and very dark brown) look great at a small scale, but initial drafts of their site proved overwhelming. Eventually, I added a lighter brown that was more neutral and used the green as an accent color. I also relied heavily on whitespace, giving the colors room to breathe. The result is a site that is both professional and unique. ",
     -1,
   ),
-  z5 = g(
+  B5 = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     " Parallax architectural sketch backgrounds ",
     -1,
   ),
-  B5 = g(
+  j5 = g(
     "p",
     { class: "text-inherit" },
     ' With large spans of whitespace, the site ran the risk of veering into "boring" territory. To combat this, I decided to use architectural sketches as subtle background overlays. Adding a parallax effect to these sketches gave the site a sense of depth and movement, without overwhelming the user. The client was delighted with the final result. ',
     -1,
   ),
-  j5 = "https://floorsfloors.com/",
-  N5 = "Atlanta Floor One",
-  R5 = {
+  N5 = "https://floorsfloors.com/",
+  R5 = "Atlanta Floor One",
+  F5 = {
     __name: "AtlantaFloorOne",
     setup(e) {
       const t = ee([sl, ny, sy, ry]),
@@ -19676,13 +19683,13 @@ const sn = $y(Py),
           {
             images: t.value,
             captions: n.value,
-            link: j5,
-            title: N5,
+            link: N5,
+            title: R5,
             brightness: s.brightness,
           },
           {
             default: Ue(() => [
-              Vt(s.$slots, "default", {}, () => [O5, A5, L5, z5, B5]),
+              Vt(s.$slots, "default", {}, () => [A5, L5, z5, B5, j5]),
             ]),
             _: 3,
           },
@@ -19692,37 +19699,37 @@ const sn = $y(Py),
       )
     },
   },
-  F5 = g(
+  D5 = g(
     "p",
     { class: "text-inherit" },
     " Build On Your Land is one of my favorite sites I've ever built. From dynamic showroom hours I developed in JavaScript, to parallax home design backgrounds, the site is full of my best work. The client needed a beautiful, responsive, site, and they loved what I built for them. ",
     -1,
   ),
-  D5 = g(
+  H5 = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     "Dynamic showroom hours",
     -1,
   ),
-  H5 = g(
+  G5 = g(
     "p",
     { class: "text-inherit" },
     ' The client wanted customers to be able to tell at a glance if the showroom was currently open. The JavaScript/PHP solution I built is simple- the hours show "Open" or "Closed" based on the current time and day- but extremely effective. The client was thrilled with the result. ',
     -1,
   ),
-  G5 = g(
+  V5 = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     "Design elements",
     -1,
   ),
-  V5 = g(
+  W5 = g(
     "p",
     { class: "text-inherit" },
     " The site is full of design elements that make it stand out. The parallax home design sketch backgrounds, for example, add a unique touch and make the site memorable. ",
     -1,
   ),
-  W5 = g(
+  q5 = g(
     "img",
     {
       src: "https://images.josephhansen.dev/uploads/file2024-02-0621-1707275970184.webp",
@@ -19732,15 +19739,15 @@ const sn = $y(Py),
     null,
     -1,
   ),
-  q5 = g(
+  U5 = g(
     "p",
     { class: "text-inherit" },
     " Every part of the site is packed with care and intention- this site shows my design abilities at their best. ",
     -1,
   ),
-  U5 = "https://www.buildonyourlandllc.com/",
-  Y5 = "Build on Your Land",
-  K5 = {
+  Y5 = "https://www.buildonyourlandllc.com/",
+  K5 = "Build on Your Land",
+  X5 = {
     __name: "BuildOnYourLand",
     setup(e) {
       const t = ee([
@@ -19758,13 +19765,13 @@ const sn = $y(Py),
           {
             images: t.value,
             captions: n.value,
-            link: U5,
-            title: Y5,
+            link: Y5,
+            title: K5,
             brightness: s.brightness,
           },
           {
             default: Ue(() => [
-              Vt(s.$slots, "default", {}, () => [F5, D5, H5, G5, V5, W5, q5]),
+              Vt(s.$slots, "default", {}, () => [D5, H5, G5, V5, W5, q5, U5]),
             ]),
             _: 3,
           },
@@ -19774,15 +19781,15 @@ const sn = $y(Py),
       )
     },
   },
-  X5 = g(
+  J5 = g(
     "p",
     { class: "text-inherit" },
     " I built a website for Stehl Family Dental, a small dental practice looking to expand their business. Their site needed to make it easy for potential customers to understand what was available and the benefits of choosing Stehl Family Dental. I built them a professional and engaging site, that presents all the important information in a well-designed, easy-to-navigate format. ",
     -1,
   ),
-  J5 = "https://stehlfamilydental.com/",
-  Z5 = "Stuart Hose and Pipe",
-  Q5 = {
+  Z5 = "https://stehlfamilydental.com/",
+  Q5 = "Stuart Hose and Pipe",
+  e3 = {
     __name: "StehlFamilyDental",
     setup(e) {
       const t = ee([ll]),
@@ -19794,12 +19801,12 @@ const sn = $y(Py),
           {
             images: t.value,
             captions: n.value,
-            link: J5,
-            title: Z5,
+            link: Z5,
+            title: Q5,
             brightness: s.brightness,
           },
           {
-            default: Ue(() => [Vt(s.$slots, "default", {}, () => [X5])]),
+            default: Ue(() => [Vt(s.$slots, "default", {}, () => [J5])]),
             _: 3,
           },
           8,
@@ -19808,31 +19815,31 @@ const sn = $y(Py),
       )
     },
   },
-  e3 = g(
+  t3 = g(
     "p",
     { class: "text-inherit" },
     " Tub Boys didn't have a website, and they were hoping to expand their business through a web presence. I built them a site that exceeded their expectations and helped them grow their business. ",
     -1,
   ),
-  t3 = g(
+  n3 = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     " Using design to present minimal text in a compelling way ",
     -1,
   ),
-  n3 = g(
+  s3 = g(
     "p",
     { class: "text-inherit" },
     ' This client had very little copy, so it was my task to make their site engaging and feel full with what I had to work with. I took the opporunity to use large, engaging, typography as well as swooshing lines that invoke a sense of movement. The result feels professional, while still invoking the "fun" energy the client requested. ',
     -1,
   ),
-  s3 = g(
+  r3 = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     "Image comparison sliders",
     -1,
   ),
-  r3 = g(
+  a3 = g(
     "img",
     {
       src: "https://images.josephhansen.dev/uploads/file2024-02-0620-1707273750624.webp",
@@ -19841,15 +19848,15 @@ const sn = $y(Py),
     null,
     -1,
   ),
-  a3 = g(
+  i3 = g(
     "p",
     { class: "text-inherit" },
     " The client wanted to be able to showcase their work with before and after images. I devloped a custom JavaScript solution for interactive image sliders that integrated nicely with their WordPress platform. ",
     -1,
   ),
-  i3 = "https://tub-boys.com/",
-  l3 = "Tub Boys",
-  o3 = {
+  l3 = "https://tub-boys.com/",
+  o3 = "Tub Boys",
+  u3 = {
     __name: "TubBoys",
     setup(e) {
       const t = ee([
@@ -19866,13 +19873,13 @@ const sn = $y(Py),
           {
             images: t.value,
             captions: n.value,
-            link: i3,
-            title: l3,
+            link: l3,
+            title: o3,
             brightness: s.brightness,
           },
           {
             default: Ue(() => [
-              Vt(s.$slots, "default", {}, () => [e3, t3, n3, s3, r3, a3]),
+              Vt(s.$slots, "default", {}, () => [t3, n3, s3, r3, a3, i3]),
             ]),
             _: 3,
           },
@@ -19882,15 +19889,15 @@ const sn = $y(Py),
       )
     },
   },
-  u3 = g(
+  c3 = g(
     "p",
     { class: "text-inherit" },
     " Stuart Pipe Co. presented a unique challenge: they needed a site that matched extremely precise branding requirements from their parent company, while still being clean, professional, and appealing. I built and designed a site that met all of their requirements, and they were extremely happy with the results. ",
     -1,
   ),
-  c3 = "https://stuarthose.com/",
-  d3 = "Stuart Hose and Pipe",
-  f3 = {
+  d3 = "https://stuarthose.com/",
+  f3 = "Stuart Hose and Pipe",
+  p3 = {
     __name: "StuartPipeAndHose",
     setup(e) {
       const t = ee([
@@ -19906,12 +19913,12 @@ const sn = $y(Py),
           {
             images: t.value,
             captions: n.value,
-            link: c3,
-            title: d3,
+            link: d3,
+            title: f3,
             brightness: s.brightness,
           },
           {
-            default: Ue(() => [Vt(s.$slots, "default", {}, () => [u3])]),
+            default: Ue(() => [Vt(s.$slots, "default", {}, () => [c3])]),
             _: 3,
           },
           8,
@@ -19920,15 +19927,15 @@ const sn = $y(Py),
       )
     },
   },
-  p3 = g(
+  h3 = g(
     "p",
     { class: "text-inherit" },
     " Swim State Pool Services needed a website that would help them grow their business. I built them a site that was both professional and engaging, helping them to attract new customers and grow their business. They loved the results, which were a massive upgrade from their existing site. ",
     -1,
   ),
-  h3 = "https://swimstatepoolservice.com/",
-  g3 = "Swim State Pool",
-  v3 = {
+  g3 = "https://swimstatepoolservice.com/",
+  v3 = "Swim State Pool",
+  m3 = {
     __name: "SwimStatePool",
     setup(e) {
       const t = ee([rl]),
@@ -19940,12 +19947,12 @@ const sn = $y(Py),
           {
             images: t.value,
             captions: n.value,
-            link: h3,
-            title: g3,
+            link: g3,
+            title: v3,
             brightness: s.brightness,
           },
           {
-            default: Ue(() => [Vt(s.$slots, "default", {}, () => [p3])]),
+            default: Ue(() => [Vt(s.$slots, "default", {}, () => [h3])]),
             _: 3,
           },
           8,
@@ -19954,27 +19961,27 @@ const sn = $y(Py),
       )
     },
   },
-  m3 = g(
+  b3 = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     " A lightning-fast, responsive, accessible site ",
     -1,
   ),
-  b3 = g(
+  y3 = g(
     "p",
     { class: "text-inherit" },
     " I built this site with care and pride- it's showcasing my abilities, after all. To that end, I've optimized it for speed to the max- this site scores 99/100 on Google's Page Speed test, a score so rare as to be essentially mythical. This site is also highly responsive and features five distinct color themes for perfect user satisfication (check out the header to change them!) ",
     -1,
   ),
-  y3 = g(
+  w3 = g(
     "p",
     { class: "text-inherit" },
     " I've built, designed, and developed every part of this site. I use Vue as the JavaScript framework, with Vite, Node.js, Express, MongoDB, and other technologies to make it not just work, but excel. All the images are served in blazing-fast, modern, formats like WebP, and the site is fully accessible, with ARIA roles and other accessibility features. Looking for a site that will blow your customer's minds? I make those. Let me build yours. ",
     -1,
   ),
-  w3 = "/",
-  x3 = "josephhansen.dev",
-  S3 = {
+  x3 = "/",
+  S3 = "josephhansen.dev",
+  _3 = {
     __name: "JosephHansenDev",
     setup(e) {
       const t = ee([al]),
@@ -19986,13 +19993,13 @@ const sn = $y(Py),
           {
             images: t.value,
             captions: n.value,
-            link: w3,
-            title: x3,
+            link: x3,
+            title: S3,
             brightness: s.brightness,
           },
           {
             default: Ue(() => [
-              Vt(s.$slots, "default", {}, () => [m3, b3, y3]),
+              Vt(s.$slots, "default", {}, () => [b3, y3, w3]),
             ]),
             _: 3,
           },
@@ -20002,9 +20009,9 @@ const sn = $y(Py),
       )
     },
   },
-  _3 = { class: "flex justify-center w-full md:px-10 sm:px-5 mt-5" },
-  E3 = { class: "flex justify-center w-full md:px-10 sm:px-5 pt-10" },
-  C3 = {
+  E3 = { class: "flex justify-center w-full md:px-10 sm:px-5 mt-5" },
+  C3 = { class: "flex justify-center w-full md:px-10 sm:px-5 pt-10" },
+  T3 = {
     __name: "Main",
     props: { component: String },
     setup(e) {
@@ -20015,16 +20022,16 @@ const sn = $y(Py),
             window.localStorage.setItem("brightness", t.value)
         },
         r = {
-          "okc-south-stake": k5,
-          "aris-search": M5,
-          "atlanta-floor-one": R5,
-          "build-on-your-land": K5,
-          "stehl-family-dental": Q5,
-          "tub-boys": o3,
-          "stuart-pipe": f3,
-          "swim-state-pool": v3,
-          "josephhansen-dev": S3,
-          bazaar: g5,
+          "okc-south-stake": $5,
+          "aris-search": O5,
+          "atlanta-floor-one": F5,
+          "build-on-your-land": X5,
+          "stehl-family-dental": e3,
+          "tub-boys": u3,
+          "stuart-pipe": p3,
+          "swim-state-pool": m3,
+          "josephhansen-dev": _3,
+          bazaar: v5,
         },
         a = me(() => {
           switch (t.value) {
@@ -20159,7 +20166,7 @@ const sn = $y(Py),
                 },
                 [
                   he(J1, { "onUpdate:brightness": s }),
-                  g("div", _3, [
+                  g("div", E3, [
                     e.component == "pricing"
                       ? (te(),
                         xe(
@@ -20178,7 +20185,7 @@ const sn = $y(Py),
                             ]),
                           },
                           [
-                            he(cx, { brightness: t.value }, null, 8, [
+                            he(dx, { brightness: t.value }, null, 8, [
                               "brightness",
                             ]),
                           ],
@@ -20228,7 +20235,7 @@ const sn = $y(Py),
                             ]),
                           },
                           [
-                            he(t5, { brightness: t.value }, null, 8, [
+                            he(n5, { brightness: t.value }, null, 8, [
                               "brightness",
                             ]),
                           ],
@@ -20253,7 +20260,7 @@ const sn = $y(Py),
                             ]),
                           },
                           [
-                            he(Vx, { brightness: t.value }, null, 8, [
+                            he(Wx, { brightness: t.value }, null, 8, [
                               "brightness",
                             ]),
                           ],
@@ -20316,7 +20323,7 @@ const sn = $y(Py),
                         ))
                       : rt("", !0),
                   ]),
-                  g("div", E3, [
+                  g("div", C3, [
                     e.component == "home"
                       ? (te(),
                         xe(
@@ -20335,7 +20342,7 @@ const sn = $y(Py),
                             ]),
                           },
                           [
-                            he(Mw, { brightness: t.value }, null, 8, [
+                            he(Ow, { brightness: t.value }, null, 8, [
                               "brightness",
                             ]),
                           ],
@@ -20346,7 +20353,7 @@ const sn = $y(Py),
                 ],
                 2,
               ),
-              he(Aw, { brightness: t.value }, null, 8, ["brightness"]),
+              he(Lw, { brightness: t.value }, null, 8, ["brightness"]),
             ],
             64,
           )
@@ -20354,7 +20361,7 @@ const sn = $y(Py),
       )
     },
   },
-  T3 = bn(C3, [["__scopeId", "data-v-7c607880"]]),
+  k3 = bn(T3, [["__scopeId", "data-v-7c607880"]]),
   cl = [
     { path: "/", component: null, props: { component: "home" } },
     { path: "/pricing", component: null, props: { component: "pricing" } },
@@ -20414,9 +20421,9 @@ const sn = $y(Py),
   ]
 cl.map((e) => e.path)
 cl.forEach((e) => {
-  e.component = T3
+  e.component = k3
 })
-const k3 = o1({ history: Em(), routes: cl }),
+const $3 = o1({ history: Em(), routes: cl }),
   hd = Ev(Pv)
-hd.use(k3)
+hd.use($3)
 hd.mount("#app")

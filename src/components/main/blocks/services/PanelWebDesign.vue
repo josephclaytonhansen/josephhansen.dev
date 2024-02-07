@@ -78,8 +78,12 @@
           Whether you need a design overhaul, a modernization, a rebranding, or
           a new website design completely, I'm your guy! I have extensive
           graphic design and UI/UX experience. I minored in Visual
-          Communication, and I love making websites beautiful. </p><p>Don't just take
-          my word for it though, here's what a UX professional has to say:</p>
+          Communication, and I love making websites beautiful.
+        </p>
+        <p>
+          Don't just take my word for it though, here's what a UX professional
+          has to say:
+        </p>
         <div
           class="rounded p-8 flex-col"
           :class="{

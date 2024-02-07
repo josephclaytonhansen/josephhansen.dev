@@ -43,8 +43,8 @@
       <p class="text-inherit">
         To describe this project as "massive" would be an understatement. What
         at first glance appears to be a simple informational website is in fact
-        a massive hub of information, resources, and tools for the members of a
-        regional church. This site is a massive, sprawling, and complex project
+        a comprehensive hub of information, resources, and tools for the members of a
+        regional church. This site is a gigantic, sprawling, and complex project
         with dozens of custom tools, subdomains, features, and more.
       </p>
       <h3 class="text-2xl font-bold text-inherit">
@@ -53,7 +53,7 @@
       <p class="text-inherit">
         I've designed, built, and developed everything on this site. And I do
         mean everything. This site has congregation subpages with fully
-        functional, collaborative, calendars:
+        functional and collaborative calendars:
       </p>
       <img
         src="https://images.josephhansen.dev/uploads/file2024-02-0621-1707277670567.webp"
@@ -70,8 +70,8 @@
       </p>
       <h3 class="text-2xl font-bold text-inherit">Built to take a beating</h3>
       <p class="text-inherit">
-        This site is built to handle a massive amount of traffic, and it's built
-        to be as fast as possible. I've optimized it for speed, and it's fully
+        This site is built to handle a massive amount of traffic and
+        to be as fast as possible. I've optimized it for speed. It's fully
         responsive, accessible, and built with the latest technologies. It's a
         site that's built to last, and to be a valuable resource for the members
         of the church it serves.

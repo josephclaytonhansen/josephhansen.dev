@@ -117,8 +117,8 @@
         I've been working on websites for over a decade, and I can do custom
         development for you in pretty much any language you can throw my way.
         Let me worry about automations, algorithims, integrations, and all that
-        other stuff distracting you from your business. I'll take your
-        problems off your plate and develop a solution.
+        other stuff distracting you from your business. I'll take your problems
+        off your plate and develop a solution.
       </p>
     </div>
 
