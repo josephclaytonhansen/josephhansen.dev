@@ -28,21 +28,21 @@
     ><slot>
       <p class="text-inherit">
         Build On Your Land is one of my favorite sites I've ever built. From
-        dynamic showroom hours I developed in JavaScript, to parallax home
+        dynamic showroom hours developed in JavaScript, to parallax home
         design backgrounds, the site is full of my best work. The client needed
-        a beautiful, responsive, site, and they loved what I built for them.
+        a beautiful, responsive site, and they loved what I built for them.
       </p>
       <h3 class="text-2xl font-bold text-inherit">Dynamic showroom hours</h3>
       <p class="text-inherit">
-        The client wanted customers to be able to tell at a glance if the
+        Build on Your Land wanted customers to be able to tell at a glance if the
         showroom was currently open. The JavaScript/PHP solution I built is
         simple- the hours show "Open" or "Closed" based on the current time and
-        day- but extremely effective. The client was thrilled with the result.
+        day- but extremely effective. They were thrilled with the result.
       </p>
       <h3 class="text-2xl font-bold text-inherit">Design elements</h3>
       <p class="text-inherit">
-        The site is full of design elements that make it stand out. The parallax
-        home design sketch backgrounds, for example, add a unique touch and make
+        This site is full of design elements that make it stand out. The parallax
+        home design sketch backgrounds add a unique touch and make
         the site memorable.
       </p>
       <img
@@ -50,7 +50,7 @@
         alt="Parallax home design sketch backgrounds"
         class="rounded" />
       <p class="text-inherit">
-        Every part of the site is packed with care and intention- this site
+        Every part of the site is packed with care and intention- it
         shows my design abilities at their best.
       </p>
     </slot></sliderAndGallery

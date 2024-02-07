@@ -43,9 +43,9 @@
       <p class="text-inherit">
         To describe this project as "massive" would be an understatement. What
         at first glance appears to be a simple informational website is in fact
-        a comprehensive hub of information, resources, and tools for the members of a
-        regional church. This site is a gigantic, sprawling, and complex project
-        with dozens of custom tools, subdomains, features, and more.
+        a comprehensive hub of information, resources, and tools for the members
+        of a regional church. This site is a gigantic, sprawling, and complex
+        project with dozens of custom tools, subdomains, features, and more.
       </p>
       <h3 class="text-2xl font-bold text-inherit">
         Everything in a single web app
@@ -70,11 +70,11 @@
       </p>
       <h3 class="text-2xl font-bold text-inherit">Built to take a beating</h3>
       <p class="text-inherit">
-        This site is built to handle a massive amount of traffic and
-        to be as fast as possible. I've optimized it for speed. It's fully
-        responsive, accessible, and built with the latest technologies. It's a
-        site that's built to last, and to be a valuable resource for the members
-        of the church it serves.
+        This site is built to handle a massive amount of traffic and to be as
+        fast as possible. I've optimized it for speed. It's fully responsive,
+        accessible, and built with the latest technologies. It's a site that's
+        built to last, and to be a valuable resource for the members of the
+        church it serves.
       </p>
       <p class="text-inherit">
         Additionally, this site has advanced security guardrails, DDoS
