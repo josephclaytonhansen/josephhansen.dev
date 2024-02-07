@@ -93,11 +93,12 @@
             and others.)
           </p>
           <p :class="pClass(props.brightness)">
-            Have a WordPress site with an obscure theme? Not to worry, I've worked with every WordPress theme or builder under the sun:
-            Divi, Flatsome, Avada, WP Bakery, Gutenburg, Elementor, and more.
-            I'm experienced in JavaScript, HTML, CSS, PHP, Python, C++, Ruby,
-            and other languages, and I'm passionate about problem-solving
-            through code.
+            Have a WordPress site with an obscure theme? Not to worry, I've
+            worked with every WordPress theme or builder under the sun: Divi,
+            Flatsome, Avada, WP Bakery, Gutenburg, Elementor, and more. I'm
+            experienced in JavaScript, HTML, CSS, PHP, Python, C++, Ruby, and
+            other languages, and I'm passionate about problem-solving through
+            code.
           </p>
           <p :class="pClass(props.brightness)">
             I've been working for marketing agencies for 5 years, and I have
@@ -117,7 +118,7 @@
           <p :class="pClass(props.brightness)">
             If that section above bored you, me too. Luckily, there's a lot more
             to me than what I do for work. I'd call myself an artist, and that
-            covers a lot of things I'm passionate about and love to do. I'm:
+            covers a lot of things I love to do. I'm:
           </p>
           <ul :class="pClass(props.brightness)">
             <li>a 3D artist and animator</li>
