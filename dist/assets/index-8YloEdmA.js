@@ -13132,7 +13132,7 @@ const L2 = { class: "prose text-center" },
                 v(
                   "h2",
                   { class: A(["text-3xl mb-1", t(e.brightness)]) },
-                  " I've designed dozens of websites. ",
+                  " I've designed dozens of websites. I can design yours too! ",
                   2,
                 ),
                 v("div", sy, [

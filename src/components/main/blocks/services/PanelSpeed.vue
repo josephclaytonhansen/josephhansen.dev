@@ -114,6 +114,7 @@
     class="flex w-full gap-4 md:p-8 sm:p-4 items-center justify-center"
     id="panelSpeed">
     <div class="flex flex-col items-center justify-center w-full">
+      <div class = "flex flex-row mb-12 flex-wrap sm:flex-wrap md:flex-nowrap" style = "gap:5rem">
       <div id="perfChart" :class="chartClass(brightness)">
         <svg viewBox="0 0 36 36" class="chart">
           <path
@@ -143,13 +144,49 @@
           id="chartInner"
           class="font-monospace text-6xl"
           :class="iconClass(brightness)">
-          98
+          96
         </div>
-      </div>
-      <p class="text-sm italic opacity-50 mt-3" :class="pClass(brightness)">
-        Desktop performance score (using Google Page Speed) for the
-        <a href="" :class="iconClass(brightness)">OKC South Stake Project</a>
+        <p class="text-sm italic opacity-50 mt-3" :class="pClass(brightness)" style = "min-width:250px;">
+          Google Page Speed desktop performance score for the Bazaar
+        <a href="/portfolio/bazaar" :class="iconClass(brightness)">site</a>
       </p>
+      </div>
+      <div id="perfChart" :class="chartClass(brightness)" class = "hidden sm:hidden md:block">
+        <svg viewBox="0 0 36 36" class="chart">
+          <path
+            class="circle-bg"
+            d="M18 2.0845
+                         a 15.9155 15.9155 0 0 1 0 31.831
+                         a 15.9155 15.9155 0 0 1 0 -31.831"
+            fill="none"
+            stroke="none"
+            stroke-width="0"
+            stroke-linecap="round" />
+
+          <path
+            class="circle"
+            :class="ringClass(brightness)"
+            d="M18 2.0845
+                         a 15.9155 15.9155 0 0 1 0 31.831
+                         a 15.9155 15.9155 0 0 1 0 -31.831"
+            fill="none"
+            :stroke="strokeColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            :stroke-dasharray="circumference + ' ' + circumference"
+            :stroke-dashoffset="dashoffset2" />
+        </svg>
+        <div
+          id="chartInner"
+          class="font-monospace text-6xl"
+          :class="iconClass(brightness)">
+          99
+        </div>
+        <p class="text-sm italic opacity-50 mt-3" :class="pClass(brightness)" style = "min-width:250px;">
+          Google Page Speed desktop performance score for this site
+      </p>
+      </div>
+      </div>
 
       <div
         class="prose md:w-10/12 sm:w-12/12 mt-8"
@@ -257,7 +294,8 @@
       return {
         radius: 16,
         circumference: 2 * Math.PI * 16,
-        percentage: 97,
+        percentage: 96,
+        percentage2: 97.5,
       }
     },
     computed: {
@@ -265,8 +303,11 @@
         let percent = this.percentage / 100
         return this.circumference * (1 - percent)
       },
+      dashoffset2() {
+        let percent = this.percentage2 / 100
+        return this.circumference * (1 - percent)
     },
-  }
+  }}
 </script>
 
 <style scoped>
