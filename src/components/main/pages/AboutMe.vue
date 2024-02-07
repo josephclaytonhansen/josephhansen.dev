@@ -18,27 +18,23 @@
 
 <template>
   <div class="flex-col w-full">
-    <div class="py-5 flex-col w-full">
-
-      <div class = "grid grid-cols-6">
-        <div class = "col-span-2 sm:col-span-2 md:col-span-1">
-
+    <div class="p-5 flex-col w-full">
+      <div class="grid grid-cols-6">
+        <div class="col-span-2 sm:col-span-2 md:col-span-1">
           <div class="square-image-container">
-      <img
-      class="rounded"
-        src="https://images.josephhansen.dev/uploads/fileDSC01942-3.j-1707265732742.webp"
-        alt="Joseph Hansen" />
-    </div>
-
+            <img
+              class="rounded"
+              src="https://images.josephhansen.dev/uploads/fileDSC01942-3.j-1707265732742.webp"
+              alt="Joseph Hansen" />
+          </div>
         </div>
-
+        <div class="col-span-4 sm:col-span-4 md:col-span-5">
+          <h1 class="pl-4 text-5xl font-bold" :class="pClass(props.brightness)">Joseph Hansen</h1>
+          <h2 class="pl-4 text-2xl" :class="pClass(props.brightness)">About Me</h2>
+          </div>
       </div>
-
-    
+    </div>
   </div>
-
-      </div>
-  
 </template>
 
 <style scoped>
@@ -48,7 +44,8 @@
     padding-top: 100%;
   }
 
-  .square-image-container img, .image-container img{
+  .square-image-container img,
+  .image-container img {
     position: absolute;
     top: 0;
     left: 0;
@@ -62,5 +59,4 @@
     width: 100%;
     padding-top: 58%;
   }
-
 </style>
