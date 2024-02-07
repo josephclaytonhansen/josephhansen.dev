@@ -48,7 +48,9 @@
         as the JavaScript framework, with Vite, Node.js, Express, MongoDB, and
         other technologies to make it not just work, but excel. All the images
         are served in blazing-fast, modern, formats like WebP, and the site is
-        fully accessible, with ARIA roles and other accessibility features.</p><p class="text-inherit">
+        fully accessible, with ARIA roles and other accessibility features.
+      </p>
+      <p class="text-inherit">
         Looking for a site that will blow your customer's minds? I make those.
         Let me build yours.
       </p>

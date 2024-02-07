@@ -44,7 +44,8 @@
     ><slot>
       <p class="text-inherit">
         Atlanta Floor One needed a new website to replace their old,
-        non-functional one. I built them a fast, clean, responsive new site using WordPress. They  was extremely happy with the results.
+        non-functional one. I built them a fast, clean, responsive new site
+        using WordPress. They was extremely happy with the results.
       </p>
       <h3 class="text-2xl font-bold text-inherit">
         Clean and professional with an unusual color palette
@@ -65,7 +66,8 @@
         "boring" territory. To combat this, I decided to use architectural
         sketches as subtle background overlays. Adding a parallax effect to
         these sketches gave the site a sense of depth and movement, without
-        overwhelming the user. Atlanta Floor One was delighted with the final result.
+        overwhelming the user. Atlanta Floor One was delighted with the final
+        result.
       </p>
     </slot></sliderAndGallery
   >

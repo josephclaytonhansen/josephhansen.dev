@@ -19637,7 +19637,7 @@ const sn = Py(Iy),
   A5 = g(
     "p",
     { class: "text-inherit" },
-    " Atlanta Floor One needed a new website to replace their old, non-functional one. I built them a new site using WordPress that's fast, clean, and responsive. The client was extremely happy with the results. ",
+    " Atlanta Floor One needed a new website to replace their old, non-functional one. I built them a fast, clean, responsive new site using WordPress. They was extremely happy with the results. ",
     -1,
   ),
   L5 = g(
@@ -19649,7 +19649,7 @@ const sn = Py(Iy),
   z5 = g(
     "p",
     { class: "text-inherit" },
-    " This site was challenging from a design perspective. Atlanta Floor One's logo colors (light green and very dark brown) look great at a small scale, but initial drafts of their site proved overwhelming. Eventually, I added a lighter brown that was more neutral and used the green as an accent color. I also relied heavily on whitespace, giving the colors room to breathe. The result is a site that is both professional and unique. ",
+    " This site was challenging from a design perspective. Atlanta Floor One's logo colors (light green and very dark brown) look great at a small scale, but initial drafts of their site proved overwhelming. Eventually, I added a lighter brown that was more neutral and used the green as an accent color. I also relied heavily on whitespace, giving the colors room to breathe. The result is a professional and unique site. ",
     -1,
   ),
   B5 = g(
@@ -19661,7 +19661,7 @@ const sn = Py(Iy),
   j5 = g(
     "p",
     { class: "text-inherit" },
-    ' With large spans of whitespace, the site ran the risk of veering into "boring" territory. To combat this, I decided to use architectural sketches as subtle background overlays. Adding a parallax effect to these sketches gave the site a sense of depth and movement, without overwhelming the user. The client was delighted with the final result. ',
+    ' With large spans of whitespace, the site ran the risk of veering into "boring" territory. To combat this, I decided to use architectural sketches as subtle background overlays. Adding a parallax effect to these sketches gave the site a sense of depth and movement, without overwhelming the user. Atlanta Floor One was delighted with the final result. ',
     -1,
   ),
   N5 = "https://floorsfloors.com/",
@@ -19930,7 +19930,7 @@ const sn = Py(Iy),
   h3 = g(
     "p",
     { class: "text-inherit" },
-    " Swim State Pool Services needed a website that would help them grow their business. I built them a site that was both professional and engaging, helping them to attract new customers and grow their business. They loved the results, which were a massive upgrade from their existing site. ",
+    " Swim State Pool Services needed a website to help them grow their business. I built them a site that was both professional and engaging, helping them to attract new customers and grow their business. They loved the results, which were a massive upgrade from their existing site. ",
     -1,
   ),
   g3 = "https://swimstatepoolservice.com/",
@@ -19970,18 +19970,24 @@ const sn = Py(Iy),
   y3 = g(
     "p",
     { class: "text-inherit" },
-    " I built this site with care and pride- it's showcasing my abilities, after all. To that end, I've optimized it for speed to the max- this site scores 99/100 on Google's Page Speed test, a score so rare as to be essentially mythical. This site is also highly responsive and features five distinct color themes for perfect user satisfication (check out the header to change them!) ",
+    " I built this site with care and pride- it's showcasing my abilities, after all. To that end, I've optimized it for speed to the max. This site scores 99/100 on Google's Page Speed test, a score so rare it's essentially mythical. This site is also highly responsive and features five distinct color themes for perfect user satisfication (check out the header to change them!). ",
     -1,
   ),
   w3 = g(
     "p",
     { class: "text-inherit" },
-    " I've built, designed, and developed every part of this site. I use Vue as the JavaScript framework, with Vite, Node.js, Express, MongoDB, and other technologies to make it not just work, but excel. All the images are served in blazing-fast, modern, formats like WebP, and the site is fully accessible, with ARIA roles and other accessibility features. Looking for a site that will blow your customer's minds? I make those. Let me build yours. ",
+    " I've built, designed, and developed every part of this site. I use Vue as the JavaScript framework, with Vite, Node.js, Express, MongoDB, and other technologies to make it not just work, but excel. All the images are served in blazing-fast, modern, formats like WebP, and the site is fully accessible, with ARIA roles and other accessibility features. ",
     -1,
   ),
-  x3 = "/",
-  S3 = "josephhansen.dev",
-  _3 = {
+  x3 = g(
+    "p",
+    { class: "text-inherit" },
+    " Looking for a site that will blow your customer's minds? I make those. Let me build yours. ",
+    -1,
+  ),
+  S3 = "/",
+  _3 = "josephhansen.dev",
+  E3 = {
     __name: "JosephHansenDev",
     setup(e) {
       const t = ee([al]),
@@ -19993,13 +19999,13 @@ const sn = Py(Iy),
           {
             images: t.value,
             captions: n.value,
-            link: x3,
-            title: S3,
+            link: S3,
+            title: _3,
             brightness: s.brightness,
           },
           {
             default: Ue(() => [
-              Vt(s.$slots, "default", {}, () => [b3, y3, w3]),
+              Vt(s.$slots, "default", {}, () => [b3, y3, w3, x3]),
             ]),
             _: 3,
           },
@@ -20009,9 +20015,9 @@ const sn = Py(Iy),
       )
     },
   },
-  E3 = { class: "flex justify-center w-full md:px-10 sm:px-5 mt-5" },
-  C3 = { class: "flex justify-center w-full md:px-10 sm:px-5 pt-10" },
-  T3 = {
+  C3 = { class: "flex justify-center w-full md:px-10 sm:px-5 mt-5" },
+  T3 = { class: "flex justify-center w-full md:px-10 sm:px-5 pt-10" },
+  k3 = {
     __name: "Main",
     props: { component: String },
     setup(e) {
@@ -20030,7 +20036,7 @@ const sn = Py(Iy),
           "tub-boys": u3,
           "stuart-pipe": p3,
           "swim-state-pool": m3,
-          "josephhansen-dev": _3,
+          "josephhansen-dev": E3,
           bazaar: v5,
         },
         a = me(() => {
@@ -20166,7 +20172,7 @@ const sn = Py(Iy),
                 },
                 [
                   he(J1, { "onUpdate:brightness": s }),
-                  g("div", E3, [
+                  g("div", C3, [
                     e.component == "pricing"
                       ? (te(),
                         xe(
@@ -20323,7 +20329,7 @@ const sn = Py(Iy),
                         ))
                       : rt("", !0),
                   ]),
-                  g("div", C3, [
+                  g("div", T3, [
                     e.component == "home"
                       ? (te(),
                         xe(
@@ -20361,7 +20367,7 @@ const sn = Py(Iy),
       )
     },
   },
-  k3 = bn(T3, [["__scopeId", "data-v-7c607880"]]),
+  $3 = bn(k3, [["__scopeId", "data-v-7c607880"]]),
   cl = [
     { path: "/", component: null, props: { component: "home" } },
     { path: "/pricing", component: null, props: { component: "pricing" } },
@@ -20421,9 +20427,9 @@ const sn = Py(Iy),
   ]
 cl.map((e) => e.path)
 cl.forEach((e) => {
-  e.component = k3
+  e.component = $3
 })
-const $3 = o1({ history: Em(), routes: cl }),
+const P3 = o1({ history: Em(), routes: cl }),
   hd = Ev(Pv)
-hd.use($3)
+hd.use(P3)
 hd.mount("#app")
