@@ -149,7 +149,9 @@
             That's me! So... what can I do for you?
           </h3>
           <Contact :brightness="brightness" style="margin-top: -7rem" />
-          <img src="https://boardgamegeek.com/jswidget.php?username=josephhansen&numitems=10&header=1&text=none&images=medium&show=recentplays&imagesonly=1&imagepos=left&inline=1&showplaydate=1&domains%5B%5D=boardgame&imagewidget=1" border="0"/>
+          <img
+            src="https://boardgamegeek.com/jswidget.php?username=josephhansen&numitems=10&header=1&text=none&images=medium&show=recentplays&imagesonly=1&imagepos=left&inline=1&showplaydate=1&domains%5B%5D=boardgame&imagewidget=1"
+            border="0" />
         </div>
       </div>
     </div>

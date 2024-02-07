@@ -71,16 +71,15 @@
     :brightness="brightness"
     ><slot>
       <h2 class="text-3xl mb-1" :class="pClass(brightness)">
-        I've designed dozens of websites. I can design yours too!
+        I've designed dozens of websites. I'll design yours too!
       </h2>
       <div class="px-3 text-center">
         <p>
           Whether you need a design overhaul, a modernization, a rebranding, or
           a new website design completely, I'm your guy! I have extensive
           graphic design and UI/UX experience. I minored in Visual
-          Communication, and I love making websites beautiful. Don't just take
-          my word for it though, here's what a UX professional has to say:
-        </p>
+          Communication, and I love making websites beautiful. </p><p>Don't just take
+          my word for it though, here's what a UX professional has to say:</p>
         <div
           class="rounded p-8 flex-col"
           :class="{

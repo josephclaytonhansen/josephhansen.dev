@@ -37,7 +37,7 @@
       <div
         class="flex w-full items-center justify-between flex-wrap sm:flex-wrap md:flex-nowrap mt-12">
         <h3 class="text-xl m-0" :class="pClass(brightness)">
-          I can do that! Check out this one I made for GalaxyIT:
+          I can do that! Check out this one I made for GalaxyIT
         </h3>
         <a href="https://galaxyit.com/savings-calculator/">
           <button
@@ -66,7 +66,7 @@
       <div
         class="flex w-full items-center justify-between flex-wrap sm:flex-wrap md:flex-nowrap mt-12">
         <h3 class="text-xl m-0" :class="pClass(brightness)">
-          Been there, done that:
+          Been there, done that
         </h3>
         <a href="https://www.buildonyourlandllc.com/">
           <button
@@ -113,11 +113,11 @@
       <h2 class="text-5xl mb-1" :class="pClass(brightness)">
         No matter how complex your problem may be, I can fix it.
       </h2>
-      <p :class="pClass(brightness)">
+      <p :class="pClass(brightness)" class="mt-2">
         I've been working on websites for over a decade, and I can do custom
         development for you in pretty much any language you can throw my way.
         Let me worry about automations, algorithims, integrations, and all that
-        other stuff that is distracting you from your business. I'll take your
+        other stuff distracting you from your business. I'll take your
         problems off your plate and develop a solution.
       </p>
     </div>

@@ -55,7 +55,7 @@
       </figure>
       <p class="text-inherit">
         With the above Figma document as a guide from Bart, I dove into both
-        design and figuring out the backend details for managing the complex
+        design and the backend details for managing the complex
         data the site would be handling. Bart wanted to do this through
         WordPress, and I was able to use my expertise to recommend
         AdvancedCustomFields to do a lot of the major data-wrangling. I also
@@ -74,16 +74,15 @@
         When Bart approached me, there was about a month until the next Blender
         Conference, a massive community event that he hoped to present Bazaar
         at. At this point, the Bazaar was just an idea- there wasn't even a logo
-        yet. Long story short- Bazaar launched successfully with time to spare.
-        I believe this project showed I can work well under pressure and with
+        yet. Long story short, Bazaar launched successfully with time to spare.
+        This project shows I can work well under pressure and with
         tight deadlines to achieve exactly what a client needs.
       </p>
       <h3 class="text-2xl font-bold text-inherit">
         Security: keeping the Bazaar safe
       </h3>
       <p>
-        Among the other development, I've implemented powerful security
-        guardrails across Bazaar, ranging from DDoS protection to a
+        I've implemented powerful security guardrails across Bazaar, ranging from DDoS protection to a
         comprehensive firewall. I'm proud to report that my security measures
         are currently preventing around 4500 attacks a month, with that number
         growing larger all the time.
