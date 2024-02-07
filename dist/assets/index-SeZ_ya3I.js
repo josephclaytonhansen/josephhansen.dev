@@ -19784,7 +19784,7 @@ const sn = Py(Iy),
   J5 = g(
     "p",
     { class: "text-inherit" },
-    " I built a website for Stehl Family Dental, a small dental practice looking to expand their business. Their site needed to make it easy for potential customers to understand what was available and the benefits of choosing Stehl Family Dental. I built them a professional and engaging site, that presents all the important information in a well-designed, easy-to-navigate format. ",
+    " I built a website for Stehl Family Dental, a small dental practice looking to expand their business. Their site needed to make it easy for potential customers to understand what was available and the benefits of choosing them. I built them a professional and engaging site that presents all the important information in a well-designed, easy-to-navigate format. ",
     -1,
   ),
   Z5 = "https://stehlfamilydental.com/",

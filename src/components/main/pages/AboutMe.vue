@@ -93,7 +93,7 @@
             and others.)
           </p>
           <p :class="pClass(props.brightness)">
-            I've worked with every WordPress theme or builder under the sun-
+            Have a WordPress site with an obscure theme? Not to worry, I've worked with every WordPress theme or builder under the sun:
             Divi, Flatsome, Avada, WP Bakery, Gutenburg, Elementor, and more.
             I'm experienced in JavaScript, HTML, CSS, PHP, Python, C++, Ruby,
             and other languages, and I'm passionate about problem-solving
