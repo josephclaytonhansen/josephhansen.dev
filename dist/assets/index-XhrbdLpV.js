@@ -19502,7 +19502,7 @@ const tn = Py($y),
   w3 = g(
     "p",
     { class: "text-inherit" },
-    " Atlanta Floor One needed a new website to replace their old, non-functional one. I built them a new site using WordPress, that's fast, clean, and responsive. The client was extremely happy with the results. ",
+    " Atlanta Floor One needed a new website to replace their old, non-functional one. I built them a new site using WordPress that's fast, clean, and responsive. The client was extremely happy with the results. ",
     -1,
   ),
   x3 = g(

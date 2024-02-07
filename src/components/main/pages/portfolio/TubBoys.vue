@@ -37,6 +37,9 @@
     :title="bazaarTitle"
     :brightness="brightness"
     ><slot>
+      <p class="text-inherit">
+        Tub Boys didn't have a website, and they were hoping to expand their business through a web presence. I built them a site that exceeded their expectations and helped them grow their business.
+      </p>
       <h3 class="text-2xl font-bold text-inherit">
         Using design to present minimal text in a compelling way
       </h3>

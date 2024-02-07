@@ -35,12 +35,9 @@
     :title="bazaarTitle"
     :brightness="brightness"
     ><slot>
-      <h3 class="text-2xl font-bold text-inherit">
-        Stark colors + clean white and transparency
-      </h3>
-      <p>Lorem ipsum</p>
-      <h3 class="text-2xl font-bold text-inherit">Geometric effects</h3>
-      <p>Lorem ipsum</p>
+      <p class="text-inherit">
+        Aris Search needed a powerful, functional, site to connect recruiters and job applicants. In addition to a clean, professional design with excellent SEO, I developed everything they needed on the backend to handle their data. The result is a site that's fast, functional, and easy to use.
+        </p>
     </slot></sliderAndGallery
   >
 </template>
