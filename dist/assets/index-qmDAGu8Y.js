@@ -17832,11 +17832,11 @@ const tn = ky(Py),
   Jw = ["value"],
   Zw = { class: "flex gap-4", id: "leftInputs" },
   Qw = { class: "flex gap-4", id: "rightInputs" },
-  ex = Pr(() => g("br", null, null, -1)),
-  tx = Pr(() => g("br", null, null, -1)),
-  nx = Pr(() => g("br", null, null, -1)),
-  rx = Pr(() => g("br", null, null, -1)),
-  sx = {
+  e3 = Pr(() => g("br", null, null, -1)),
+  t3 = Pr(() => g("br", null, null, -1)),
+  n3 = Pr(() => g("br", null, null, -1)),
+  r3 = Pr(() => g("br", null, null, -1)),
+  s3 = {
     __name: "servicesCalculator",
     props: { brightness: Number },
     setup(e) {
@@ -18508,8 +18508,8 @@ const tn = ky(Py),
               Ie(
                 " I'll get back to you within 48 hours. This form is not a contract, please note that work can't begin until we've connected and signed a contract.",
               ),
-              ex,
-              tx,
+              e3,
+              t3,
               Ie(
                 "These are one-time services; for ongoing maintenance, please ",
               ),
@@ -18520,8 +18520,8 @@ const tn = ky(Py),
                 2,
               ),
               Ie(" and we can get that figured out."),
-              nx,
-              rx,
+              n3,
+              r3,
               Ie("I look forward to working with you! "),
             ],
             2,
@@ -18530,20 +18530,20 @@ const tn = ky(Py),
       )
     },
   },
-  ax = vn(sx, [["__scopeId", "data-v-e20b9d11"]]),
-  ix = {
+  a3 = vn(s3, [["__scopeId", "data-v-e20b9d11"]]),
+  i3 = {
     __name: "Pricing",
     props: { brightness: Number },
     setup(e) {
       return (t, n) => (
-        te(), De(ax, { brightness: e.brightness }, null, 8, ["brightness"])
+        te(), De(a3, { brightness: e.brightness }, null, 8, ["brightness"])
       )
     },
   },
-  lx = { class: "flex-col" },
-  ox = { class: "py-5 flex-col w-full" },
-  ux = { id: "cta" },
-  cx = {
+  l3 = { class: "flex-col" },
+  o3 = { class: "py-5 flex-col w-full" },
+  u3 = { id: "cta" },
+  c3 = {
     __name: "Contact",
     props: { brightness: Number },
     setup(e) {
@@ -18607,8 +18607,8 @@ const tn = ky(Py),
         }
       return (s, a) => (
         te(),
-        xe("div", lx, [
-          g("div", ox, [
+        xe("div", l3, [
+          g("div", o3, [
             g(
               "h2",
               {
@@ -18621,7 +18621,7 @@ const tn = ky(Py),
               2,
             ),
           ]),
-          g("form", ux, [
+          g("form", u3, [
             g(
               "input",
               {
@@ -18683,6 +18683,17 @@ const tn = ky(Py),
     '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>',
   jt = '</title><path d="',
   Ft = '"/></svg>',
+  d3 = {
+    title: "Blender",
+    slug: "blender",
+    get svg() {
+      return Rt + "Blender" + jt + this.path + Ft
+    },
+    path: "M12.51 13.214c.046-.8.438-1.506 1.03-2.006a3.424 3.424 0 0 1 2.212-.79c.85 0 1.631.3 2.211.79.592.5.983 1.206 1.028 2.005.045.823-.285 1.586-.865 2.153a3.389 3.389 0 0 1-2.374.938 3.393 3.393 0 0 1-2.376-.938c-.58-.567-.91-1.33-.865-2.152M7.35 14.831c.006.314.106.922.256 1.398a7.372 7.372 0 0 0 1.593 2.757 8.227 8.227 0 0 0 2.787 2.001 8.947 8.947 0 0 0 3.66.76 8.964 8.964 0 0 0 3.657-.772 8.285 8.285 0 0 0 2.785-2.01 7.428 7.428 0 0 0 1.592-2.762 6.964 6.964 0 0 0 .25-3.074 7.123 7.123 0 0 0-1.016-2.779 7.764 7.764 0 0 0-1.852-2.043h.002L13.566 2.55l-.02-.015c-.492-.378-1.319-.376-1.86.002-.547.382-.609 1.015-.123 1.415l-.001.001 3.126 2.543-9.53.01h-.013c-.788.001-1.545.518-1.695 1.172-.154.665.38 1.217 1.2 1.22V8.9l4.83-.01-8.62 6.617-.034.025c-.813.622-1.075 1.658-.563 2.313.52.667 1.625.668 2.447.004L7.414 14s-.069.52-.063.831zm12.09 1.741c-.97.988-2.326 1.548-3.795 1.55-1.47.004-2.827-.552-3.797-1.538a4.51 4.51 0 0 1-1.036-1.622 4.282 4.282 0 0 1 .282-3.519 4.702 4.702 0 0 1 1.153-1.371c.942-.768 2.141-1.183 3.396-1.185 1.256-.002 2.455.41 3.398 1.175.48.391.87.854 1.152 1.367a4.28 4.28 0 0 1 .522 1.706 4.236 4.236 0 0 1-.239 1.811 4.54 4.54 0 0 1-1.035 1.626",
+    source: "https://www.blender.org/about/logo",
+    hex: "E87D0D",
+    guidelines: "https://www.blender.org/about/logo",
+  },
   Rr = {
     title: "Bootstrap",
     slug: "bootstrap",
@@ -18695,7 +18706,7 @@ const tn = ky(Py),
     guidelines: "https://getbootstrap.com/docs/5.3/about/brand",
     license: { type: "MIT", url: "https://spdx.org/licenses/MIT" },
   },
-  dx = {
+  f3 = {
     title: "Cloudflare",
     slug: "cloudflare",
     get svg() {
@@ -18706,7 +18717,7 @@ const tn = ky(Py),
     hex: "F38020",
     guidelines: "https://www.cloudflare.com/trademark/",
   },
-  fx = {
+  p3 = {
     title: "Figma",
     slug: "figma",
     get svg() {
@@ -18717,7 +18728,7 @@ const tn = ky(Py),
     hex: "F24E1E",
     guidelines: "https://www.figma.com/using-the-figma-brand/",
   },
-  px = {
+  h3 = {
     title: "GitHub",
     slug: "github",
     get svg() {
@@ -18728,7 +18739,7 @@ const tn = ky(Py),
     hex: "181717",
     guidelines: "https://github.com/logos",
   },
-  hx = {
+  g3 = {
     title: "Instagram",
     slug: "instagram",
     get svg() {
@@ -18739,7 +18750,7 @@ const tn = ky(Py),
     hex: "E4405F",
     guidelines: "https://about.meta.com/brand/resources/instagram",
   },
-  gx = {
+  v3 = {
     title: "JavaScript",
     slug: "javascript",
     get svg() {
@@ -18751,7 +18762,7 @@ const tn = ky(Py),
     hex: "F7DF1E",
     license: { type: "MIT", url: "https://spdx.org/licenses/MIT" },
   },
-  vx = {
+  m3 = {
     title: "LinkedIn",
     slug: "linkedin",
     get svg() {
@@ -18762,7 +18773,7 @@ const tn = ky(Py),
     hex: "0A66C2",
     guidelines: "https://brand.linkedin.com/policies",
   },
-  mx = {
+  b3 = {
     title: "NGINX",
     slug: "nginx",
     get svg() {
@@ -18787,7 +18798,7 @@ const tn = ky(Py),
       url: "https://spdx.org/licenses/CC-BY-SA-4.0",
     },
   },
-  bx = {
+  y3 = {
     title: "Tailwind CSS",
     slug: "tailwindcss",
     get svg() {
@@ -18797,17 +18808,6 @@ const tn = ky(Py),
     source: "https://tailwindcss.com/brand",
     hex: "06B6D4",
     guidelines: "https://tailwindcss.com/brand",
-  },
-  yx = {
-    title: "Twitter",
-    slug: "twitter",
-    get svg() {
-      return Rt + "Twitter" + jt + this.path + Ft
-    },
-    path: "M21.543 7.104c.015.211.015.423.015.636 0 6.507-4.954 14.01-14.01 14.01v-.003A13.94 13.94 0 0 1 0 19.539a9.88 9.88 0 0 0 7.287-2.041 4.93 4.93 0 0 1-4.6-3.42 4.916 4.916 0 0 0 2.223-.084A4.926 4.926 0 0 1 .96 9.167v-.062a4.887 4.887 0 0 0 2.235.616A4.928 4.928 0 0 1 1.67 3.148 13.98 13.98 0 0 0 11.82 8.292a4.929 4.929 0 0 1 8.39-4.49 9.868 9.868 0 0 0 3.128-1.196 4.941 4.941 0 0 1-2.165 2.724A9.828 9.828 0 0 0 24 4.555a10.019 10.019 0 0 1-2.457 2.549z",
-    source: "https://brand.twitter.com",
-    hex: "1D9BF0",
-    guidelines: "https://about.twitter.com/en/who-we-are/brand-toolkit",
   },
   Pu = {
     title: "Vue.js",
@@ -18837,12 +18837,12 @@ const tn = ky(Py),
     hex: "21759B",
     guidelines: "https://wordpressfoundation.org/trademark-policy",
   },
-  fd = (e) => (Qr("data-v-691479d8"), (e = e()), es(), e),
-  wx = { class: "flex-col w-full" },
-  xx = { class: "p-5 flex-col w-full" },
-  Sx = { class: "grid grid-cols-6" },
-  Ex = { class: "col-span-2 sm:col-span-2 md:col-span-1" },
-  _x = fd(() =>
+  fd = (e) => (Qr("data-v-f3566425"), (e = e()), es(), e),
+  w3 = { class: "flex-col w-full" },
+  x3 = { class: "p-5 flex-col w-full" },
+  S3 = { class: "grid grid-cols-6" },
+  E3 = { class: "col-span-2 sm:col-span-2 md:col-span-1" },
+  _3 = fd(() =>
     g(
       "div",
       { class: "square-image-container" },
@@ -18856,59 +18856,74 @@ const tn = ky(Py),
       -1,
     ),
   ),
-  Cx = { class: "flex gap-2 mt-4 justify-center items-center" },
-  Tx = { class: "flex gap-2 mt-4 justify-center items-center" },
-  kx = {
+  C3 = { class: "flex gap-2 mt-4 justify-center items-center" },
+  T3 = { class: "flex gap-2 mt-4 justify-center items-center" },
+  k3 = ["href"],
+  P3 = {
     viewBox: "0 0 32 32",
     xmlns: "http://www.w3.org/2000/svg",
     fill: "currentColor",
     width: "100%",
     height: "100%",
   },
-  Px = ["d"],
-  $x = { class: "col-span-4 sm:col-span-4 md:col-span-5 prose" },
-  Mx = fd(() => g("em", null, "About me", -1)),
-  Ix = [Mx],
-  Ox = {
+  $3 = ["d"],
+  M3 = { class: "col-span-4 sm:col-span-4 md:col-span-5 prose" },
+  I3 = fd(() => g("em", null, "About me", -1)),
+  O3 = [I3],
+  A3 = {
     __name: "AboutMe",
     props: { brightness: Number },
     setup(e) {
       const t = e,
-        n = (a) => {
-          if (a >= 4) return "text-slate-800"
-          if (a == 3) return "text-slate-200"
-          if (a == 2) return "text-slate-300"
-          if (a == 1) return "text-slate-300"
+        n = (i) => {
+          if (i >= 4) return "text-slate-800"
+          if (i == 3) return "text-slate-200"
+          if (i == 2) return "text-slate-300"
+          if (i == 1) return "text-slate-300"
         },
-        r = (a) => {
-          if (a >= 4) return "text-emerald-500"
-          if (a == 3) return "text-orange-600"
-          if (a == 2) return "text-orange-500"
-          if (a == 1) return "text-orange-400"
+        r = (i) => {
+          if (i >= 4) return "text-emerald-500"
+          if (i == 3) return "text-orange-600"
+          if (i == 2) return "text-orange-500"
+          if (i == 1) return "text-orange-400"
         },
-        s = [vx, px, yx, hx]
-      return (a, i) => (
+        s = [m3, h3, d3, g3],
+        a = [
+          "https://www.linkedin.com/in/josephclaytonhansen/",
+          "https://www.github.com/josephclaytonhansen",
+          "https://blenderartists.org/u/joseph/summary",
+          "https://www.instagram.com/jhansen_art/",
+        ]
+      return (i, l) => (
         te(),
-        xe("div", wx, [
-          g("div", xx, [
-            g("div", Sx, [
-              g("div", Ex, [
-                _x,
-                g("div", Cx, [
-                  g("div", Tx, [
+        xe("div", w3, [
+          g("div", x3, [
+            g("div", S3, [
+              g("div", E3, [
+                _3,
+                g("div", C3, [
+                  g("div", T3, [
                     (te(),
                     xe(
                       Je,
                       null,
-                      fn(s, (l, o) =>
+                      fn(s, (o, f) =>
                         g(
                           "div",
-                          { key: o, class: O(["flex-1", r(t.brightness)]) },
+                          { key: f, class: O(["flex-1", r(t.brightness)]) },
                           [
-                            (te(),
-                            xe("svg", kx, [
-                              g("path", { d: l.path }, null, 8, Px),
-                            ])),
+                            g(
+                              "a",
+                              { href: a[f] },
+                              [
+                                (te(),
+                                xe("svg", P3, [
+                                  g("path", { d: o.path }, null, 8, $3),
+                                ])),
+                              ],
+                              8,
+                              k3,
+                            ),
                           ],
                           2,
                         ),
@@ -18918,14 +18933,14 @@ const tn = ky(Py),
                   ]),
                 ]),
               ]),
-              g("div", $x, [
+              g("div", M3, [
                 g(
                   "h1",
                   { class: O(["text-5xl font-bold mb-0", n(t.brightness)]) },
                   " Joseph Hansen ",
                   2,
                 ),
-                g("h2", { class: O(["text-xl mt-2", n(t.brightness)]) }, Ix, 2),
+                g("h2", { class: O(["text-xl mt-2", n(t.brightness)]) }, O3, 2),
                 g("p", { class: O(n(t.brightness)) }, null, 2),
               ]),
             ]),
@@ -18934,23 +18949,23 @@ const tn = ky(Py),
       )
     },
   },
-  Ax = vn(Ox, [["__scopeId", "data-v-691479d8"]]),
-  Lx = { class: "flex-col w-full lg:w-9/12 md:w-10/12 sm:wd-11/12" },
-  zx = { class: "py-5 flex-col w-full" },
-  Bx = { class: "prose" },
-  Nx = ["onMouseover", "onClick"],
-  Rx = { class: "image-container" },
-  jx = ["src", "alt"],
-  Fx = { class: "flex gap-2 items-center" },
-  Dx = {
+  L3 = vn(A3, [["__scopeId", "data-v-f3566425"]]),
+  z3 = { class: "flex-col w-full lg:w-9/12 md:w-10/12 sm:wd-11/12" },
+  B3 = { class: "py-5 flex-col w-full" },
+  N3 = { class: "prose" },
+  R3 = ["onMouseover", "onClick"],
+  j3 = { class: "image-container" },
+  F3 = ["src", "alt"],
+  D3 = { class: "flex gap-2 items-center" },
+  H3 = {
     viewBox: "0 0 24 24",
     xmlns: "http://www.w3.org/2000/svg",
     fill: "currentColor",
     width: "24px",
     height: "24px",
   },
-  Hx = ["d"],
-  Gx = {
+  G3 = ["d"],
+  V3 = {
     __name: "Portfolio",
     props: { brightness: Number },
     setup(e) {
@@ -18969,13 +18984,13 @@ const tn = ky(Py),
         },
         s = ne([
           {
-            icons: [kn, ku, fx],
+            icons: [kn, ku, p3],
             title: "BlenderNation Bazaar",
             image: Zi,
             link: "/portfolio/bazaar",
           },
           {
-            icons: [Pu, mx, dx],
+            icons: [Pu, b3, f3],
             title: "OKC South Stake",
             image: ud,
             link: "/portfolio/okc-south-stake",
@@ -18983,7 +18998,7 @@ const tn = ky(Py),
         ]),
         a = ne([
           {
-            icons: [kn, gx],
+            icons: [kn, v3],
             title: "Build On Your Land",
             image: cd,
             link: "/portfolio/build-on-your-land",
@@ -19008,7 +19023,7 @@ const tn = ky(Py),
           },
           {
             title: "josephhansen.dev",
-            icons: [Pu, bx],
+            icons: [Pu, y3],
             image: nl,
             link: "/portfolio/josephhansen-dev",
           },
@@ -19034,9 +19049,9 @@ const tn = ky(Py),
         i = ne(null)
       return (l, o) => (
         te(),
-        xe("div", Lx, [
-          g("div", zx, [
-            g("span", Bx, [
+        xe("div", z3, [
+          g("div", B3, [
+            g("span", N3, [
               g(
                 "h2",
                 {
@@ -19108,7 +19123,7 @@ const tn = ky(Py),
                               }),
                             },
                             [
-                              g("div", Rx, [
+                              g("div", j3, [
                                 g(
                                   "img",
                                   {
@@ -19119,7 +19134,7 @@ const tn = ky(Py),
                                   },
                                   null,
                                   8,
-                                  jx,
+                                  F3,
                                 ),
                               ]),
                               g("div", null, [
@@ -19152,7 +19167,7 @@ const tn = ky(Py),
                                           3,
                                         ),
                                       ]),
-                                      g("div", Fx, [
+                                      g("div", D3, [
                                         (te(!0),
                                         xe(
                                           Je,
@@ -19183,13 +19198,13 @@ const tn = ky(Py),
                                                 },
                                                 [
                                                   (te(),
-                                                  xe("svg", Dx, [
+                                                  xe("svg", H3, [
                                                     g(
                                                       "path",
                                                       { d: p.path },
                                                       null,
                                                       8,
-                                                      Hx,
+                                                      G3,
                                                     ),
                                                   ])),
                                                 ],
@@ -19207,7 +19222,7 @@ const tn = ky(Py),
                               ]),
                             ],
                             44,
-                            Nx,
+                            R3,
                           )
                         ),
                       ),
@@ -19224,38 +19239,38 @@ const tn = ky(Py),
       )
     },
   },
-  Vx = vn(Gx, [["__scopeId", "data-v-2bda4711"]]),
-  Wx = g(
+  W3 = vn(V3, [["__scopeId", "data-v-2bda4711"]]),
+  q3 = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     " The vision: a one-stop shop for Blender users ",
     -1,
   ),
-  qx = g("p", null, "Lorem ipsum", -1),
-  Ux = g(
+  U3 = g("p", null, "Lorem ipsum", -1),
+  Y3 = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     " Tight deadlines and high stakes ",
     -1,
   ),
-  Yx = g("p", null, "Lorem ipsum", -1),
-  Kx = g(
+  K3 = g("p", null, "Lorem ipsum", -1),
+  X3 = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     "From concept to results",
     -1,
   ),
-  Xx = g("p", null, "Lorem ipsum", -1),
-  Jx = g(
+  J3 = g("p", null, "Lorem ipsum", -1),
+  Z3 = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     " Security- keeping the Bazaar safe ",
     -1,
   ),
-  Zx = g("p", null, "Lorem ipsum", -1),
-  Qx = "https://bazaar.blendernation.com",
-  e3 = "BlenderNation Bazaar",
-  t3 = {
+  Q3 = g("p", null, "Lorem ipsum", -1),
+  ex = "https://bazaar.blendernation.com",
+  tx = "BlenderNation Bazaar",
+  nx = {
     __name: "Bazaar",
     setup(e) {
       const t = ne([Zi, J2, Z2, Q2, ey]),
@@ -19273,21 +19288,21 @@ const tn = ky(Py),
           {
             images: t.value,
             captions: n.value,
-            link: Qx,
-            title: e3,
+            link: ex,
+            title: tx,
             brightness: r.brightness,
           },
           {
             default: Xe(() => [
               sn(r.$slots, "default", {}, () => [
-                Wx,
-                qx,
-                Ux,
-                Yx,
-                Kx,
-                Xx,
-                Jx,
-                Zx,
+                q3,
+                U3,
+                Y3,
+                K3,
+                X3,
+                J3,
+                Z3,
+                Q3,
               ]),
             ]),
             _: 3,
@@ -19298,30 +19313,30 @@ const tn = ky(Py),
       )
     },
   },
-  n3 = {
+  rx = {
     __name: "OkcSouthStake",
     props: { brightness: Number },
     setup(e) {
       return (t, n) => null
     },
   },
-  r3 = g(
+  sx = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     " Stark colors + clean white and transparency ",
     -1,
   ),
-  s3 = g("p", null, "Lorem ipsum", -1),
-  a3 = g(
+  ax = g("p", null, "Lorem ipsum", -1),
+  ix = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     "Geometric effects",
     -1,
   ),
-  i3 = g("p", null, "Lorem ipsum", -1),
-  l3 = "https://arissearch.com//",
-  o3 = "Aris Search",
-  u3 = {
+  lx = g("p", null, "Lorem ipsum", -1),
+  ox = "https://arissearch.com//",
+  ux = "Aris Search",
+  cx = {
     __name: "ArisSearch",
     setup(e) {
       const t = ne([al, sy]),
@@ -19333,13 +19348,13 @@ const tn = ky(Py),
           {
             images: t.value,
             captions: n.value,
-            link: l3,
-            title: o3,
+            link: ox,
+            title: ux,
             brightness: r.brightness,
           },
           {
             default: Xe(() => [
-              sn(r.$slots, "default", {}, () => [r3, s3, a3, i3]),
+              sn(r.$slots, "default", {}, () => [sx, ax, ix, lx]),
             ]),
             _: 3,
           },
@@ -19349,23 +19364,23 @@ const tn = ky(Py),
       )
     },
   },
-  c3 = g(
+  dx = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     " Clean and professional with an unusual color palette ",
     -1,
   ),
-  d3 = g("p", null, "Lorem ipsum", -1),
-  f3 = g(
+  fx = g("p", null, "Lorem ipsum", -1),
+  px = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     " Parallax architectural sketch backgrounds ",
     -1,
   ),
-  p3 = g("p", null, "Lorem ipsum", -1),
-  h3 = "https://floorsfloors.com/",
-  g3 = "Atlanta Floor One",
-  v3 = {
+  hx = g("p", null, "Lorem ipsum", -1),
+  gx = "https://floorsfloors.com/",
+  vx = "Atlanta Floor One",
+  mx = {
     __name: "AtlantaFloorOne",
     setup(e) {
       const t = ne([el, ty, ny, ry]),
@@ -19382,13 +19397,13 @@ const tn = ky(Py),
           {
             images: t.value,
             captions: n.value,
-            link: h3,
-            title: g3,
+            link: gx,
+            title: vx,
             brightness: r.brightness,
           },
           {
             default: Xe(() => [
-              sn(r.$slots, "default", {}, () => [c3, d3, f3, p3]),
+              sn(r.$slots, "default", {}, () => [dx, fx, px, hx]),
             ]),
             _: 3,
           },
@@ -19398,30 +19413,30 @@ const tn = ky(Py),
       )
     },
   },
-  m3 = {
+  bx = {
     __name: "BuildOnYourLand",
     props: { brightness: Number },
     setup(e) {
       return (t, n) => null
     },
   },
-  b3 = g(
+  yx = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     " Priority: make services and pricing clear and accessible ",
     -1,
   ),
-  y3 = g("p", null, "Lorem ipsum", -1),
-  w3 = g(
+  wx = g("p", null, "Lorem ipsum", -1),
+  xx = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     "Working with a round logo",
     -1,
   ),
-  x3 = g("p", null, "Lorem ipsum", -1),
-  S3 = "https://stehlfamilydental.com/",
-  E3 = "Stuart Hose and Pipe",
-  _3 = {
+  Sx = g("p", null, "Lorem ipsum", -1),
+  Ex = "https://stehlfamilydental.com/",
+  _x = "Stuart Hose and Pipe",
+  Cx = {
     __name: "StehlFamilyDental",
     setup(e) {
       const t = ne([sl]),
@@ -19433,13 +19448,13 @@ const tn = ky(Py),
           {
             images: t.value,
             captions: n.value,
-            link: S3,
-            title: E3,
+            link: Ex,
+            title: _x,
             brightness: r.brightness,
           },
           {
             default: Xe(() => [
-              sn(r.$slots, "default", {}, () => [b3, y3, w3, x3]),
+              sn(r.$slots, "default", {}, () => [yx, wx, xx, Sx]),
             ]),
             _: 3,
           },
@@ -19449,23 +19464,23 @@ const tn = ky(Py),
       )
     },
   },
-  C3 = g(
+  Tx = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     " Using design to present minimal text in a compelling way ",
     -1,
   ),
-  T3 = g("p", null, "Lorem ipsum", -1),
-  k3 = g(
+  kx = g("p", null, "Lorem ipsum", -1),
+  Px = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     "Image comparison sliders",
     -1,
   ),
-  P3 = g("p", null, "Lorem ipsum", -1),
-  $3 = "https://tub-boys.com/",
-  M3 = "Tub Boys",
-  I3 = {
+  $x = g("p", null, "Lorem ipsum", -1),
+  Mx = "https://tub-boys.com/",
+  Ix = "Tub Boys",
+  Ox = {
     __name: "TubBoys",
     setup(e) {
       const t = ne([rl]),
@@ -19477,13 +19492,13 @@ const tn = ky(Py),
           {
             images: t.value,
             captions: n.value,
-            link: $3,
-            title: M3,
+            link: Mx,
+            title: Ix,
             brightness: r.brightness,
           },
           {
             default: Xe(() => [
-              sn(r.$slots, "default", {}, () => [C3, T3, k3, P3]),
+              sn(r.$slots, "default", {}, () => [Tx, kx, Px, $x]),
             ]),
             _: 3,
           },
@@ -19493,23 +19508,23 @@ const tn = ky(Py),
       )
     },
   },
-  O3 = g(
+  Ax = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     " Extremely precise design requirements ",
     -1,
   ),
-  A3 = g("p", null, "Lorem ipsum", -1),
-  L3 = g(
+  Lx = g("p", null, "Lorem ipsum", -1),
+  zx = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     " Maximizing information while avoiding clutter ",
     -1,
   ),
-  z3 = g("p", null, "Lorem ipsum", -1),
-  B3 = "https://stuarthose.com/",
-  N3 = "Stuart Hose and Pipe",
-  R3 = {
+  Bx = g("p", null, "Lorem ipsum", -1),
+  Nx = "https://stuarthose.com/",
+  Rx = "Stuart Hose and Pipe",
+  jx = {
     __name: "StuartPipeAndHose",
     setup(e) {
       const t = ne([Qi]),
@@ -19521,13 +19536,13 @@ const tn = ky(Py),
           {
             images: t.value,
             captions: n.value,
-            link: B3,
-            title: N3,
+            link: Nx,
+            title: Rx,
             brightness: r.brightness,
           },
           {
             default: Xe(() => [
-              sn(r.$slots, "default", {}, () => [O3, A3, L3, z3]),
+              sn(r.$slots, "default", {}, () => [Ax, Lx, zx, Bx]),
             ]),
             _: 3,
           },
@@ -19537,16 +19552,16 @@ const tn = ky(Py),
       )
     },
   },
-  j3 = g(
+  Fx = g(
     "h3",
     { class: "text-2xl font-bold text-inherit" },
     "Iterative design",
     -1,
   ),
-  F3 = g("p", null, "Lorem ipsum", -1),
-  D3 = "https://swimstatepoolservice.com/",
-  H3 = "Swim State Pool",
-  G3 = {
+  Dx = g("p", null, "Lorem ipsum", -1),
+  Hx = "https://swimstatepoolservice.com/",
+  Gx = "Swim State Pool",
+  Vx = {
     __name: "SwimStatePool",
     setup(e) {
       const t = ne([tl]),
@@ -19558,12 +19573,12 @@ const tn = ky(Py),
           {
             images: t.value,
             captions: n.value,
-            link: D3,
-            title: H3,
+            link: Hx,
+            title: Gx,
             brightness: r.brightness,
           },
           {
-            default: Xe(() => [sn(r.$slots, "default", {}, () => [j3, F3])]),
+            default: Xe(() => [sn(r.$slots, "default", {}, () => [Fx, Dx])]),
             _: 3,
           },
           8,
@@ -19572,11 +19587,11 @@ const tn = ky(Py),
       )
     },
   },
-  V3 = g("h3", { class: "text-2xl font-bold text-inherit" }, "Lorem ipsum", -1),
-  W3 = g("p", null, "Lorem ipsum", -1),
-  q3 = "/",
-  U3 = "josephhansen.dev",
-  Y3 = {
+  Wx = g("h3", { class: "text-2xl font-bold text-inherit" }, "Lorem ipsum", -1),
+  qx = g("p", null, "Lorem ipsum", -1),
+  Ux = "/",
+  Yx = "josephhansen.dev",
+  Kx = {
     __name: "JosephHansenDev",
     setup(e) {
       const t = ne([nl]),
@@ -19588,12 +19603,12 @@ const tn = ky(Py),
           {
             images: t.value,
             captions: n.value,
-            link: q3,
-            title: U3,
+            link: Ux,
+            title: Yx,
             brightness: r.brightness,
           },
           {
-            default: Xe(() => [sn(r.$slots, "default", {}, () => [V3, W3])]),
+            default: Xe(() => [sn(r.$slots, "default", {}, () => [Wx, qx])]),
             _: 3,
           },
           8,
@@ -19602,9 +19617,9 @@ const tn = ky(Py),
       )
     },
   },
-  K3 = { class: "flex justify-center w-full md:px-10 sm:px-5 mt-5" },
-  X3 = { class: "flex justify-center w-full md:px-10 sm:px-5 pt-10" },
-  J3 = {
+  Xx = { class: "flex justify-center w-full md:px-10 sm:px-5 mt-5" },
+  Jx = { class: "flex justify-center w-full md:px-10 sm:px-5 pt-10" },
+  Zx = {
     __name: "Main",
     props: { component: String },
     setup(e) {
@@ -19615,16 +19630,16 @@ const tn = ky(Py),
             window.localStorage.setItem("brightness", t.value)
         },
         s = {
-          "okc-south-stake": n3,
-          "aris-search": u3,
-          "atlanta-floor-one": v3,
-          "build-on-your-land": m3,
-          "stehl-family-dental": _3,
-          "tub-boys": I3,
-          "stuart-pipe": R3,
-          "swim-state-pool": G3,
-          "josephhansen-dev": Y3,
-          bazaar: t3,
+          "okc-south-stake": rx,
+          "aris-search": cx,
+          "atlanta-floor-one": mx,
+          "build-on-your-land": bx,
+          "stehl-family-dental": Cx,
+          "tub-boys": Ox,
+          "stuart-pipe": jx,
+          "swim-state-pool": Vx,
+          "josephhansen-dev": Kx,
+          bazaar: nx,
         },
         a = me(() => {
           switch (t.value) {
@@ -19759,7 +19774,7 @@ const tn = ky(Py),
                 },
                 [
                   he(X1, { "onUpdate:brightness": r }),
-                  g("div", K3, [
+                  g("div", Xx, [
                     e.component == "pricing"
                       ? (te(),
                         xe(
@@ -19778,7 +19793,7 @@ const tn = ky(Py),
                             ]),
                           },
                           [
-                            he(ix, { brightness: t.value }, null, 8, [
+                            he(i3, { brightness: t.value }, null, 8, [
                               "brightness",
                             ]),
                           ],
@@ -19803,7 +19818,7 @@ const tn = ky(Py),
                             ]),
                           },
                           [
-                            he(cx, { brightness: t.value }, null, 8, [
+                            he(c3, { brightness: t.value }, null, 8, [
                               "brightness",
                             ]),
                           ],
@@ -19828,7 +19843,7 @@ const tn = ky(Py),
                             ]),
                           },
                           [
-                            he(Vx, { brightness: t.value }, null, 8, [
+                            he(W3, { brightness: t.value }, null, 8, [
                               "brightness",
                             ]),
                           ],
@@ -19853,7 +19868,7 @@ const tn = ky(Py),
                             ]),
                           },
                           [
-                            he(Ax, { brightness: t.value }, null, 8, [
+                            he(L3, { brightness: t.value }, null, 8, [
                               "brightness",
                             ]),
                           ],
@@ -19916,7 +19931,7 @@ const tn = ky(Py),
                         ))
                       : st("", !0),
                   ]),
-                  g("div", X3, [
+                  g("div", Jx, [
                     e.component == "home"
                       ? (te(),
                         xe(
@@ -19954,7 +19969,7 @@ const tn = ky(Py),
       )
     },
   },
-  Z3 = vn(J3, [["__scopeId", "data-v-7c607880"]]),
+  Qx = vn(Zx, [["__scopeId", "data-v-7c607880"]]),
   ll = [
     { path: "/", component: null, props: { component: "home" } },
     { path: "/pricing", component: null, props: { component: "pricing" } },
@@ -20014,9 +20029,9 @@ const tn = ky(Py),
   ]
 ll.map((e) => e.path)
 ll.forEach((e) => {
-  e.component = Z3
+  e.component = Qx
 })
-const Q3 = l1({ history: Em(), routes: ll }),
+const e5 = l1({ history: Em(), routes: ll }),
   pd = Ev(Pv)
-pd.use(Q3)
+pd.use(e5)
 pd.mount("#app")
