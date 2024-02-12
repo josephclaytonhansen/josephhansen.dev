@@ -181,7 +181,7 @@
                   ><b>Art and Animation</b></a
                 >
                 <a
-                  @click="window.location.href = '/blog'"
+                  href="/blog"
                   class="block px-4 py-2"
                   role="menuitem"
                   :class="{

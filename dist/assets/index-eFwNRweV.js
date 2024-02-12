@@ -6799,7 +6799,7 @@ const wi = gt("XIcon", [
     ["path", { d: "M18 6 6 18", key: "1bl5f8" }],
     ["path", { d: "m6 6 12 12", key: "d8bk6v" }],
   ]),
-  Wt = (e) => (er("data-v-8d243ef7"), (e = e()), tr(), e),
+  Wt = (e) => (er("data-v-16805cab"), (e = e()), tr(), e),
   C1 = { class: "flex justify-center p-5 gap-5 content-center" },
   T1 = Wt(() => h("div", { class: "w-1/12" }, null, -1)),
   k1 = { class: "flex justify-between gap-2 w-full content-center" },
@@ -7083,7 +7083,7 @@ const wi = gt("XIcon", [
                                         onClick:
                                           c[2] ||
                                           (c[2] = (p) =>
-                                            f.$router.push("/blog")),
+                                            (f.window.location.href = "/blog")),
                                         class: M([
                                           "block px-4 py-2",
                                           {
@@ -7503,7 +7503,7 @@ const wi = gt("XIcon", [
       )
     },
   },
-  sb = yn(nb, [["__scopeId", "data-v-8d243ef7"]]),
+  sb = yn(nb, [["__scopeId", "data-v-16805cab"]]),
   rb = { class: "flex justify-center py-5 flex-col" },
   ab = { class: "inline-block relative" },
   ib = { class: "font-semibold text-center px-1" },
