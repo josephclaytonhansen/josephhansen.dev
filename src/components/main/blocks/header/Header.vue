@@ -181,7 +181,7 @@
                   ><b>Art and Animation</b></a
                 >
                 <a
-                @click="$router.push('/blog')"
+                  @click="$router.push('/blog')"
                   class="block px-4 py-2"
                   role="menuitem"
                   :class="{
@@ -404,7 +404,7 @@
       <li class="py-2 px-3 rounded opacity-75">Creative Projects</li>
       <ul class="ml-5">
         <li class="py-2 px-3 rounded">Art and Animation</li>
-        <li class="py-2 px-3 rounded">Blog / Non-Fiction Writings</li>
+        <a @click = "navigate('/blog')"><li class="py-2 px-3 rounded">Blog / Non-Fiction Writings</li></a>
         <li class="py-2 px-3 rounded">Custom Software</li>
         <li class="py-2 px-3 rounded">Cooking and Recipes</li>
       </ul>

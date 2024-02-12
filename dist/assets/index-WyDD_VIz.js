@@ -6799,7 +6799,7 @@ const wi = gt("XIcon", [
     ["path", { d: "M18 6 6 18", key: "1bl5f8" }],
     ["path", { d: "m6 6 12 12", key: "d8bk6v" }],
   ]),
-  ns = (e) => (er("data-v-e6afc4f6"), (e = e()), tr(), e),
+  ns = (e) => (er("data-v-c5bf178f"), (e = e()), tr(), e),
   C1 = { class: "flex justify-center p-5 gap-5 content-center" },
   T1 = ns(() => g("div", { class: "w-1/12" }, null, -1)),
   k1 = { class: "flex justify-between gap-2 w-full content-center" },
@@ -6828,7 +6828,7 @@ const wi = gt("XIcon", [
   W1 = ns(() => g("li", { class: "py-2 px-3 rounded" }, "Web Services", -1)),
   q1 = [W1],
   U1 = kc(
-    '<li class="py-2 px-3 rounded opacity-75" data-v-e6afc4f6>Creative Projects</li><ul class="ml-5" data-v-e6afc4f6><li class="py-2 px-3 rounded" data-v-e6afc4f6>Art and Animation</li><li class="py-2 px-3 rounded" data-v-e6afc4f6>Blog / Non-Fiction Writings</li><li class="py-2 px-3 rounded" data-v-e6afc4f6>Custom Software</li><li class="py-2 px-3 rounded" data-v-e6afc4f6>Cooking and Recipes</li></ul>',
+    '<li class="py-2 px-3 rounded opacity-75" data-v-c5bf178f>Creative Projects</li><ul class="ml-5" data-v-c5bf178f><li class="py-2 px-3 rounded" data-v-c5bf178f>Art and Animation</li><li class="py-2 px-3 rounded" data-v-c5bf178f>Blog / Non-Fiction Writings</li><li class="py-2 px-3 rounded" data-v-c5bf178f>Custom Software</li><li class="py-2 px-3 rounded" data-v-c5bf178f>Cooking and Recipes</li></ul>',
     2,
   ),
   Y1 = ns(() => g("li", { class: "py-2 px-3 rounded" }, "About Me", -1)),
@@ -7069,7 +7069,10 @@ const wi = gt("XIcon", [
                                     g(
                                       "a",
                                       {
-                                        href: "#",
+                                        onClick:
+                                          c[2] ||
+                                          (c[2] = (p) =>
+                                            f.$router.push("/blog")),
                                         class: M([
                                           "block px-4 py-2",
                                           {
@@ -7138,7 +7141,7 @@ const wi = gt("XIcon", [
                         "a",
                         {
                           onClick:
-                            c[2] || (c[2] = (p) => f.$router.push("/about-me")),
+                            c[3] || (c[3] = (p) => f.$router.push("/about-me")),
                         },
                         [
                           g(
@@ -7166,7 +7169,7 @@ const wi = gt("XIcon", [
                         "a",
                         {
                           onClick:
-                            c[3] || (c[3] = (p) => f.$router.push("/contact")),
+                            c[4] || (c[4] = (p) => f.$router.push("/contact")),
                         },
                         [
                           g(
@@ -7263,7 +7266,7 @@ const wi = gt("XIcon", [
                         },
                       ]),
                       "stroke-width": "2",
-                      onClick: c[4] || (c[4] = (p) => l()),
+                      onClick: c[5] || (c[5] = (p) => l()),
                     },
                     null,
                     8,
@@ -7338,7 +7341,7 @@ const wi = gt("XIcon", [
                                       min: "1",
                                       max: "5",
                                       "onUpdate:modelValue":
-                                        c[5] || (c[5] = (p) => (n.value = p)),
+                                        c[6] || (c[6] = (p) => (n.value = p)),
                                       onInput: a,
                                       class: "slider w-20 mx-auto",
                                       id: "myRange",
@@ -7427,7 +7430,7 @@ const wi = gt("XIcon", [
                         "text-orange-500 hover:text-orange-400": n.value == 2,
                         "text-orange-400 hover:text-orange-300": n.value == 1,
                       }),
-                      onClick: c[6] || (c[6] = (p) => l()),
+                      onClick: c[7] || (c[7] = (p) => l()),
                       "aria-label": "Close mobile menu",
                     },
                     null,
@@ -7452,19 +7455,19 @@ const wi = gt("XIcon", [
                   [
                     g(
                       "a",
-                      { onClick: c[7] || (c[7] = (p) => o("/contact")) },
+                      { onClick: c[8] || (c[8] = (p) => o("/contact")) },
                       H1,
                     ),
                     g(
                       "a",
-                      { onClick: c[8] || (c[8] = (p) => o("/portfolio")) },
+                      { onClick: c[9] || (c[9] = (p) => o("/portfolio")) },
                       V1,
                     ),
-                    g("a", { onClick: c[9] || (c[9] = (p) => o("/")) }, q1),
+                    g("a", { onClick: c[10] || (c[10] = (p) => o("/")) }, q1),
                     U1,
                     g(
                       "a",
-                      { onClick: c[10] || (c[10] = (p) => o("/about-me")) },
+                      { onClick: c[11] || (c[11] = (p) => o("/about-me")) },
                       K1,
                     ),
                   ],
@@ -7479,7 +7482,7 @@ const wi = gt("XIcon", [
       )
     },
   },
-  J1 = bn(X1, [["__scopeId", "data-v-e6afc4f6"]]),
+  J1 = bn(X1, [["__scopeId", "data-v-c5bf178f"]]),
   Z1 = { class: "flex justify-center py-5 flex-col" },
   Q1 = { class: "inline-block relative" },
   eb = { class: "font-semibold text-center px-1" },
