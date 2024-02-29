@@ -6799,7 +6799,7 @@ const wi = gt("XIcon", [
     ["path", { d: "M18 6 6 18", key: "1bl5f8" }],
     ["path", { d: "m6 6 12 12", key: "d8bk6v" }],
   ]),
-  Wt = (e) => (er("data-v-16805cab"), (e = e()), tr(), e),
+  Wt = (e) => (er("data-v-ca4b9e4e"), (e = e()), tr(), e),
   C1 = { class: "flex justify-center p-5 gap-5 content-center" },
   T1 = Wt(() => h("div", { class: "w-1/12" }, null, -1)),
   k1 = { class: "flex justify-between gap-2 w-full content-center" },
@@ -7080,10 +7080,7 @@ const wi = gt("XIcon", [
                                     h(
                                       "a",
                                       {
-                                        onClick:
-                                          c[2] ||
-                                          (c[2] = (p) =>
-                                            (f.window.location.href = "/blog")),
+                                        href: "/blog",
                                         class: M([
                                           "block px-4 py-2",
                                           {
@@ -7152,7 +7149,7 @@ const wi = gt("XIcon", [
                         "a",
                         {
                           onClick:
-                            c[3] || (c[3] = (p) => f.$router.push("/about-me")),
+                            c[2] || (c[2] = (p) => f.$router.push("/about-me")),
                         },
                         [
                           h(
@@ -7180,7 +7177,7 @@ const wi = gt("XIcon", [
                         "a",
                         {
                           onClick:
-                            c[4] || (c[4] = (p) => f.$router.push("/contact")),
+                            c[3] || (c[3] = (p) => f.$router.push("/contact")),
                         },
                         [
                           h(
@@ -7277,7 +7274,7 @@ const wi = gt("XIcon", [
                         },
                       ]),
                       "stroke-width": "2",
-                      onClick: c[5] || (c[5] = (p) => l()),
+                      onClick: c[4] || (c[4] = (p) => l()),
                     },
                     null,
                     8,
@@ -7352,7 +7349,7 @@ const wi = gt("XIcon", [
                                       min: "1",
                                       max: "5",
                                       "onUpdate:modelValue":
-                                        c[6] || (c[6] = (p) => (n.value = p)),
+                                        c[5] || (c[5] = (p) => (n.value = p)),
                                       onInput: a,
                                       class: "slider w-20 mx-auto",
                                       id: "myRange",
@@ -7441,7 +7438,7 @@ const wi = gt("XIcon", [
                         "text-orange-500 hover:text-orange-400": n.value == 2,
                         "text-orange-400 hover:text-orange-300": n.value == 1,
                       }),
-                      onClick: c[7] || (c[7] = (p) => l()),
+                      onClick: c[6] || (c[6] = (p) => l()),
                       "aria-label": "Close mobile menu",
                     },
                     null,
@@ -7466,21 +7463,21 @@ const wi = gt("XIcon", [
                   [
                     h(
                       "a",
-                      { onClick: c[8] || (c[8] = (p) => o("/contact")) },
+                      { onClick: c[7] || (c[7] = (p) => o("/contact")) },
                       H1,
                     ),
                     h(
                       "a",
-                      { onClick: c[9] || (c[9] = (p) => o("/portfolio")) },
+                      { onClick: c[8] || (c[8] = (p) => o("/portfolio")) },
                       V1,
                     ),
-                    h("a", { onClick: c[10] || (c[10] = (p) => o("/")) }, q1),
+                    h("a", { onClick: c[9] || (c[9] = (p) => o("/")) }, q1),
                     U1,
                     h("ul", Y1, [
                       K1,
                       h(
                         "a",
-                        { onClick: c[11] || (c[11] = (p) => o("/blog")) },
+                        { onClick: c[10] || (c[10] = (p) => o("/blog")) },
                         J1,
                       ),
                       Z1,
@@ -7488,7 +7485,7 @@ const wi = gt("XIcon", [
                     ]),
                     h(
                       "a",
-                      { onClick: c[12] || (c[12] = (p) => o("/about-me")) },
+                      { onClick: c[11] || (c[11] = (p) => o("/about-me")) },
                       tb,
                     ),
                   ],
@@ -7503,7 +7500,7 @@ const wi = gt("XIcon", [
       )
     },
   },
-  sb = yn(nb, [["__scopeId", "data-v-16805cab"]]),
+  sb = yn(nb, [["__scopeId", "data-v-ca4b9e4e"]]),
   rb = { class: "flex justify-center py-5 flex-col" },
   ab = { class: "inline-block relative" },
   ib = { class: "font-semibold text-center px-1" },
