@@ -7381,7 +7381,7 @@ const Sr = He("XIcon", [
                         {
                           onClick:
                             u[0] ||
-                            (u[0] = (d) => c.$router.push("/portfolio")),
+                            (u[0] = (d) => c.$router.push("/web-portfolio")),
                           class: "cursor-pointer",
                         },
                         [
@@ -7407,7 +7407,9 @@ const Sr = He("XIcon", [
                       p(
                         "a",
                         {
-                          onClick: u[1] || (u[1] = (d) => c.$router.push("/")),
+                          onClick:
+                            u[1] ||
+                            (u[1] = (d) => c.$router.push("/web-services")),
                         },
                         [
                           p(
@@ -7999,7 +8001,7 @@ const Sr = He("XIcon", [
       )
     },
   },
-  $h = Zt(Ah, [["__scopeId", "data-v-ca4b9e4e"]]),
+  $h = Zt(Ah, [["__scopeId", "data-v-77ac892c"]]),
   Lh = { class: "flex justify-center py-5 flex-col" },
   Bh = { class: "inline-block relative" },
   _h = { class: "font-semibold text-center px-1" },
@@ -19178,11 +19180,19 @@ const B1 = {
                                   {
                                     src: u.image,
                                     alt: u.title,
-                                    class:
-                                      "bg-slate-200 object-contain w-full rounded-t-xl",
+                                    class: P([
+                                      "object-contain w-full rounded-t-xl",
+                                      {
+                                        "bg-slate-100": e.brightness == 5,
+                                        "bg-slate-200": e.brightness == 4,
+                                        "bg-slate-300": e.brightness == 3,
+                                        "bg-slate-500": e.brightness == 2,
+                                        "bg-slate-600": e.brightness == 1,
+                                      },
+                                    ]),
                                   },
                                   null,
-                                  8,
+                                  10,
                                   hv,
                                 ),
                               ]),
@@ -19194,7 +19204,7 @@ const B1 = {
                                       class: P([
                                         "p-4 flex justify-between items-center rounded-b-xl",
                                         {
-                                          "bg-slate-300": e.brightness == 5,
+                                          "bg-slate-100": e.brightness == 5,
                                           "bg-slate-200": e.brightness == 4,
                                           "bg-slate-300": e.brightness == 3,
                                           "bg-slate-500": e.brightness == 2,
@@ -19288,7 +19298,7 @@ const B1 = {
       )
     },
   },
-  yv = Zt(vv, [["__scopeId", "data-v-8811226d"]]),
+  yv = Zt(vv, [["__scopeId", "data-v-4614d5aa"]]),
   wv = {
     __name: "Home",
     props: { brightness: Number },

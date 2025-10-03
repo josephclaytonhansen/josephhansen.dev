@@ -112,9 +112,10 @@
         </div>
 
         <div class="flex gap-5 p-2 relative">
-          <a @click="$router.push('/web-portfolio')" class="cursor-pointer"
-            ><h6
-              class="font-semibold"
+          <Popover class="relative inline-block text-left">
+            <PopoverButton
+              aria-label="Web dropdown menu"
+              class="font-semibold flex hover:outline-none focus:outline-none"
               :class="{
                 'text-slate-900': brightness == 5,
                 'text-slate-800': brightness == 4,
@@ -122,23 +123,51 @@
                 'text-slate-200': brightness == 2,
                 'text-slate-400': brightness == 1,
               }">
-              Web Portfolio
-            </h6></a
-          >
-
-          <a @click="$router.push('/web-services')"
-            ><h6
-              class="font-semibold cursor-pointer"
+              Web<ChevronDown />
+            </PopoverButton>
+            <PopoverPanel
+              class="absolute z-10 mt-1 w-56 rounded"
               :class="{
-                'text-slate-900': brightness == 5,
-                'text-slate-800': brightness == 4,
-                'text-slate-300': brightness == 3,
-                'text-slate-200': brightness == 2,
-                'text-slate-400': brightness == 1,
+                'bg-slate-100': brightness == 5,
+                'bg-slate-200': brightness == 4,
+                'bg-slate-500': brightness == 3,
+                'bg-slate-700': brightness == 2,
+                'bg-slate-800': brightness == 1,
               }">
-              Web Services
-            </h6></a
-          >
+              <div
+                class="py-1"
+                role="menu"
+                aria-orientation="vertical"
+                aria-labelledby="options-menu">
+                <a
+                  @click="$router.push('/web-portfolio')"
+                  class="block px-4 py-2 cursor-pointer"
+                  role="menuitem"
+                  :class="{
+                    'text-slate-900': brightness == 5,
+                    'text-slate-800': brightness == 4,
+                    'text-slate-300': brightness == 3,
+                    'text-slate-200': brightness == 2,
+                    'text-slate-400': brightness == 1,
+                  }"
+                  ><b>Web Portfolio</b></a
+                >
+                <a
+                  @click="$router.push('/web-services')"
+                  class="block px-4 py-2 cursor-pointer"
+                  role="menuitem"
+                  :class="{
+                    'text-slate-900': brightness == 5,
+                    'text-slate-800': brightness == 4,
+                    'text-slate-300': brightness == 3,
+                    'text-slate-200': brightness == 2,
+                    'text-slate-400': brightness == 1,
+                  }"
+                  >Web Services</a
+                >
+              </div>
+            </PopoverPanel>
+          </Popover>
 
           <Popover class="relative inline-block text-left">
             <PopoverButton
@@ -395,12 +424,15 @@
       <a @click="navigate('/contact')"
         ><li class="py-2 px-3 rounded">Contact</li></a
       >
-      <a @click="navigate('/portfolio')"
-        ><li class="py-2 px-3 rounded">Web Portfolio</li></a
-      >
-      <a @click="navigate('/')"
-        ><li class="py-2 px-3 rounded">Web Services</li></a
-      >
+      <li class="py-2 px-3 rounded opacity-75">Web</li>
+      <ul class="ml-5">
+        <a @click="navigate('/web-portfolio')"
+          ><li class="py-2 px-3 rounded">Web Portfolio</li></a
+        >
+        <a @click="navigate('/web-services')"
+          ><li class="py-2 px-3 rounded">Web Services</li></a
+        >
+      </ul>
       <li class="py-2 px-3 rounded opacity-75">Creative Projects</li>
       <ul class="ml-5">
         <li class="py-2 px-3 rounded">Art and Animation</li>
