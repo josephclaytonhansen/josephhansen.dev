@@ -168,14 +168,21 @@
           <img
             :src="cards.image"
             :alt="cards.title"
-            class="bg-slate-200 object-contain w-full rounded-t-xl" />
+            class="object-contain w-full rounded-t-xl"
+            :class="{
+              'bg-slate-100': brightness == 5,
+              'bg-slate-200': brightness == 4,
+              'bg-slate-300': brightness == 3,
+              'bg-slate-500': brightness == 2,
+              'bg-slate-600': brightness == 1,
+            }" />
         </div>
         <div>
           <div>
             <div
               class="p-4 flex justify-between items-center rounded-b-xl"
               :class="{
-                'bg-slate-300': brightness == 5,
+                'bg-slate-100': brightness == 5,
                 'bg-slate-200': brightness == 4,
                 'bg-slate-300': brightness == 3,
                 'bg-slate-500': brightness == 2,

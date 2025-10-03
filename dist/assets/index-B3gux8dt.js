@@ -2348,7 +2348,7 @@ function vd(e, t) {
       if (y === S) return
       y && !qn(y, S) && ((R = _(y)), Le(y, N, j, !0), (y = null)),
         S.patchFlag === -2 && ((q = !1), (S.dynamicChildren = null))
-      const { type: F, ref: ie, shapeFlag: X } = S
+      const { type: F, ref: re, shapeFlag: X } = S
       switch (F) {
         case fi:
           C(y, S, k, R)
@@ -2369,9 +2369,9 @@ function vd(e, t) {
               ? G(y, S, k, R, N, j, Y, U, q)
               : (X & 64 || X & 128) && F.process(y, S, k, R, N, j, Y, U, q, ee)
       }
-      ie != null && N
-        ? ts(ie, y && y.ref, j, S || y, !S)
-        : ie == null && y && y.ref != null && ts(y.ref, null, j, y, !0)
+      re != null && N
+        ? ts(re, y && y.ref, j, S || y, !S)
+        : re == null && y && y.ref != null && ts(y.ref, null, j, y, !0)
     },
     C = (y, S, k, R) => {
       if (y == null) s((S.el = a(S.children)), k, R)
@@ -2402,26 +2402,26 @@ function vd(e, t) {
     },
     O = (y, S, k, R, N, j, Y, U) => {
       let q, F
-      const { props: ie, shapeFlag: X, transition: ne, dirs: ae } = y
+      const { props: re, shapeFlag: X, transition: ne, dirs: ae } = y
       if (
-        ((q = y.el = l(y.type, j, ie && ie.is, ie)),
+        ((q = y.el = l(y.type, j, re && re.is, re)),
         X & 8
           ? u(q, y.children)
           : X & 16 && A(y.children, q, null, R, N, Pi(y, j), Y, U),
         ae && hn(y, null, R, "created"),
         E(q, y, y.scopeId, Y, R),
-        ie)
+        re)
       ) {
-        for (const Me in ie)
-          Me !== "value" && !Zn(Me) && r(q, Me, null, ie[Me], j, R)
-        "value" in ie && r(q, "value", null, ie.value, j),
-          (F = ie.onVnodeBeforeMount) && It(F, R, y)
+        for (const Me in re)
+          Me !== "value" && !Zn(Me) && r(q, Me, null, re[Me], j, R)
+        "value" in re && r(q, "value", null, re.value, j),
+          (F = re.onVnodeBeforeMount) && It(F, R, y)
       }
       ae && hn(y, null, R, "beforeMount")
       const ve = yd(N, ne)
       ve && ne.beforeEnter(q),
         s(q, S, k),
-        ((F = ie && ie.onVnodeMounted) || ve || ae) &&
+        ((F = re && re.onVnodeMounted) || ve || ae) &&
           lt(() => {
             F && It(F, R, y), ve && ne.enter(q), ae && hn(y, null, R, "mounted")
           }, N)
@@ -2441,13 +2441,13 @@ function vd(e, t) {
     },
     A = (y, S, k, R, N, j, Y, U, q = 0) => {
       for (let F = q; F < y.length; F++) {
-        const ie = (y[F] = U ? sn(y[F]) : At(y[F]))
-        b(null, ie, S, k, R, N, j, Y, U)
+        const re = (y[F] = U ? sn(y[F]) : At(y[F]))
+        b(null, re, S, k, R, N, j, Y, U)
       }
     },
     I = (y, S, k, R, N, j, Y) => {
       const U = (S.el = y.el)
-      let { patchFlag: q, dynamicChildren: F, dirs: ie } = S
+      let { patchFlag: q, dynamicChildren: F, dirs: re } = S
       q |= y.patchFlag & 16
       const X = y.props || Ie,
         ne = S.props || Ie
@@ -2455,7 +2455,7 @@ function vd(e, t) {
       if (
         (k && gn(k, !1),
         (ae = ne.onVnodeBeforeUpdate) && It(ae, k, S, y),
-        ie && hn(S, y, k, "beforeUpdate"),
+        re && hn(S, y, k, "beforeUpdate"),
         k && gn(k, !0),
         ((X.innerHTML && ne.innerHTML == null) ||
           (X.textContent && ne.textContent == null)) &&
@@ -2481,20 +2481,20 @@ function vd(e, t) {
         }
         q & 1 && y.children !== S.children && u(U, S.children)
       } else !Y && F == null && L(U, X, ne, k, N)
-      ;((ae = ne.onVnodeUpdated) || ie) &&
+      ;((ae = ne.onVnodeUpdated) || re) &&
         lt(() => {
-          ae && It(ae, k, S, y), ie && hn(S, y, k, "updated")
+          ae && It(ae, k, S, y), re && hn(S, y, k, "updated")
         }, R)
     },
     M = (y, S, k, R, N, j, Y) => {
       for (let U = 0; U < S.length; U++) {
         const q = y[U],
           F = S[U],
-          ie =
+          re =
             q.el && (q.type === Pe || !qn(q, F) || q.shapeFlag & 198)
               ? d(q.el)
               : k
-        b(q, F, ie, null, R, N, j, Y, !0)
+        b(q, F, re, null, R, N, j, Y, !0)
       }
     },
     L = (y, S, k, R, N) => {
@@ -2512,15 +2512,15 @@ function vd(e, t) {
     },
     D = (y, S, k, R, N, j, Y, U, q) => {
       const F = (S.el = y ? y.el : a("")),
-        ie = (S.anchor = y ? y.anchor : a(""))
+        re = (S.anchor = y ? y.anchor : a(""))
       let { patchFlag: X, dynamicChildren: ne, slotScopeIds: ae } = S
       ae && (U = U ? U.concat(ae) : ae),
         y == null
-          ? (s(F, k, R), s(ie, k, R), A(S.children || [], k, ie, N, j, Y, U, q))
+          ? (s(F, k, R), s(re, k, R), A(S.children || [], k, re, N, j, Y, U, q))
           : X > 0 && X & 64 && ne && y.dynamicChildren
             ? (M(y.dynamicChildren, ne, k, N, j, Y, U),
               (S.key != null || (N && S === N.subTree)) && Oo(y, S, !0))
-            : B(y, S, k, ie, N, j, Y, U, q)
+            : B(y, S, k, re, N, j, Y, U, q)
     },
     G = (y, S, k, R, N, j, Y, U, q) => {
       ;(S.slotScopeIds = U),
@@ -2608,8 +2608,8 @@ function vd(e, t) {
       const q = (y.effect = new Va(U))
       y.scope.off()
       const F = (y.update = q.run.bind(q)),
-        ie = (y.job = q.runIfDirty.bind(q))
-      ;(ie.i = y), (ie.id = y.uid), (q.scheduler = () => Rr(ie)), gn(y, !0), F()
+        re = (y.job = q.runIfDirty.bind(q))
+      ;(re.i = y), (re.id = y.uid), (q.scheduler = () => Rr(re)), gn(y, !0), F()
     },
     z = (y, S, k) => {
       S.component = y
@@ -2624,7 +2624,7 @@ function vd(e, t) {
     },
     B = (y, S, k, R, N, j, Y, U, q = !1) => {
       const F = y && y.children,
-        ie = y ? y.shapeFlag : 0,
+        re = y ? y.shapeFlag : 0,
         X = S.children,
         { patchFlag: ne, shapeFlag: ae } = S
       if (ne > 0) {
@@ -2637,30 +2637,30 @@ function vd(e, t) {
         }
       }
       ae & 8
-        ? (ie & 16 && et(F, N, j), X !== F && u(k, X))
-        : ie & 16
+        ? (re & 16 && et(F, N, j), X !== F && u(k, X))
+        : re & 16
           ? ae & 16
             ? pe(F, X, k, R, N, j, Y, U, q)
             : et(F, N, j, !0)
-          : (ie & 8 && u(k, ""), ae & 16 && A(X, k, R, N, j, Y, U, q))
+          : (re & 8 && u(k, ""), ae & 16 && A(X, k, R, N, j, Y, U, q))
     },
     be = (y, S, k, R, N, j, Y, U, q) => {
       ;(y = y || Mn), (S = S || Mn)
       const F = y.length,
-        ie = S.length,
-        X = Math.min(F, ie)
+        re = S.length,
+        X = Math.min(F, re)
       let ne
       for (ne = 0; ne < X; ne++) {
         const ae = (S[ne] = q ? sn(S[ne]) : At(S[ne]))
         b(y[ne], ae, k, null, N, j, Y, U, q)
       }
-      F > ie ? et(y, N, j, !0, !1, X) : A(S, k, R, N, j, Y, U, q, X)
+      F > re ? et(y, N, j, !0, !1, X) : A(S, k, R, N, j, Y, U, q, X)
     },
     pe = (y, S, k, R, N, j, Y, U, q) => {
       let F = 0
-      const ie = S.length
+      const re = S.length
       let X = y.length - 1,
-        ne = ie - 1
+        ne = re - 1
       for (; F <= X && F <= ne; ) {
         const ae = y[F],
           ve = (S[F] = q ? sn(S[F]) : At(S[F]))
@@ -2678,7 +2678,7 @@ function vd(e, t) {
       if (F > X) {
         if (F <= ne) {
           const ae = ne + 1,
-            ve = ae < ie ? S[ae].el : R
+            ve = ae < re ? S[ae].el : R
           for (; F <= ne; )
             b(null, (S[F] = q ? sn(S[F]) : At(S[F])), k, ve, N, j, Y, U, q), F++
         }
@@ -2724,7 +2724,7 @@ function vd(e, t) {
           const rt = ve + F,
             kt = S[rt],
             bl = S[rt + 1],
-            vl = rt + 1 < ie ? bl.el || bl.placeholder : R
+            vl = rt + 1 < re ? bl.el || bl.placeholder : R
           Vn[F] === 0
             ? b(null, kt, k, vl, N, j, Y, U, q)
             : Ct && (Te < 0 || F !== ml[Te] ? $e(kt, k, vl, 2) : Te--)
@@ -2779,7 +2779,7 @@ function vd(e, t) {
         ref: U,
         children: q,
         dynamicChildren: F,
-        shapeFlag: ie,
+        shapeFlag: re,
         patchFlag: X,
         dirs: ne,
         cacheIndex: ae,
@@ -2788,27 +2788,27 @@ function vd(e, t) {
         (X === -2 && (N = !1),
         U != null && (qt(), ts(U, null, k, y, !0), Ut()),
         ae != null && (S.renderCache[ae] = void 0),
-        ie & 256)
+        re & 256)
       ) {
         S.ctx.deactivate(y)
         return
       }
-      const ve = ie & 1 && ne,
+      const ve = re & 1 && ne,
         Me = !Ln(y)
       let Te
-      if ((Me && (Te = Y && Y.onVnodeBeforeUnmount) && It(Te, S, y), ie & 6))
+      if ((Me && (Te = Y && Y.onVnodeBeforeUnmount) && It(Te, S, y), re & 6))
         pt(y.component, k, R)
       else {
-        if (ie & 128) {
+        if (re & 128) {
           y.suspense.unmount(k, R)
           return
         }
         ve && hn(y, null, S, "beforeUnmount"),
-          ie & 64
+          re & 64
             ? y.type.remove(y, S, k, ee, R)
             : F && !F.hasOnce && (j !== Pe || (X > 0 && X & 64))
               ? et(F, S, k, !1, !0)
-              : ((j === Pe && X & 384) || (!N && ie & 16)) && et(q, S, k),
+              : ((j === Pe && X & 384) || (!N && re & 16)) && et(q, S, k),
           R && ft(y)
       }
       ;((Me && (Te = Y && Y.onVnodeUnmounted)) || ve) &&
@@ -3193,7 +3193,7 @@ function _o(e) {
     e
   )
 }
-function le(e, t, n, s, i, r) {
+function ie(e, t, n, s, i, r) {
   return _o(p(e, t, n, s, i, r, !0))
 }
 function ye(e, t, n, s, i) {
@@ -7314,7 +7314,7 @@ const Sr = He("XIcon", [
         }
       return (c, u) => (
         V(),
-        le(
+        ie(
           Pe,
           null,
           [
@@ -8085,7 +8085,7 @@ const Sr = He("XIcon", [
         const a = nd("typewriter")
         return (
           V(),
-          le("div", Lh, [
+          ie("div", Lh, [
             p(
               "h1",
               {
@@ -8103,7 +8103,7 @@ const Sr = He("XIcon", [
               [
                 l[0] || (l[0] = he(" I make ", -1)),
                 p("div", Bh, [
-                  po((V(), le("span", _h, [he(Je(i.value), 1)])), [
+                  po((V(), ie("span", _h, [he(Je(i.value), 1)])), [
                     [a, i.value],
                   ]),
                   p(
@@ -13349,7 +13349,7 @@ const bg = { class: "prose text-center" },
         }
       return (i, r) => (
         V(),
-        le(
+        ie(
           "div",
           {
             class: P([
@@ -13521,7 +13521,7 @@ const bg = { class: "prose text-center" },
       }
       return (u, d) => (
         V(),
-        le(
+        ie(
           "div",
           {
             class: P([
@@ -13544,7 +13544,7 @@ const bg = { class: "prose text-center" },
               ),
               i.value != ""
                 ? (V(),
-                  le(
+                  ie(
                     "a",
                     { key: 0, href: i.value },
                     [
@@ -13584,7 +13584,7 @@ const bg = { class: "prose text-center" },
                 {
                   default: Ce(() => [
                     (V(!0),
-                    le(
+                    ie(
                       Pe,
                       null,
                       Wt(
@@ -13598,7 +13598,7 @@ const bg = { class: "prose text-center" },
                               default: Ce(() => [
                                 i.value != ""
                                   ? (V(),
-                                    le(
+                                    ie(
                                       "a",
                                       { key: 0, href: i.value },
                                       [
@@ -13621,7 +13621,7 @@ const bg = { class: "prose text-center" },
                                   : Be("", !0),
                                 i.value == ""
                                   ? (V(),
-                                    le(
+                                    ie(
                                       "img",
                                       {
                                         key: 1,
@@ -13657,14 +13657,14 @@ const bg = { class: "prose text-center" },
             p("div", Pg, [
               p("div", kg, [
                 (V(!0),
-                le(
+                ie(
                   Pe,
                   null,
                   Wt(
                     l.value,
                     (f, h) => (
                       V(),
-                      le("div", { class: "image-container", key: h }, [
+                      ie("div", { class: "image-container", key: h }, [
                         p(
                           "img",
                           {
@@ -13904,7 +13904,7 @@ const bg = { class: "prose text-center" },
       }
       return (n, s) => (
         V(),
-        le("div", Vg, [
+        ie("div", Vg, [
           p("div", Wg, [
             p(
               "h2",
@@ -14133,9 +14133,9 @@ class H {
   }
 }
 const nm = "2.6.0",
-  re = (...e) => new re.Color(...e)
-re.Color = H
-re.version = nm
+  le = (...e) => new le.Color(...e)
+le.Color = H
+le.version = nm
 const sm = (...e) => {
     e = me(e, "cmyk")
     const [t, n, s, i] = e,
@@ -14163,7 +14163,7 @@ const sm = (...e) => {
 H.prototype.cmyk = function () {
   return im(this._rgb)
 }
-re.cmyk = (...e) => new H(...e, "cmyk")
+le.cmyk = (...e) => new H(...e, "cmyk")
 ce.format.cmyk = sm
 ce.autodetect.push({
   p: 2,
@@ -14309,7 +14309,7 @@ hl.test = (e) =>
 H.prototype.css = function (e) {
   return lm(this._rgb, e)
 }
-re.css = (...e) => new H(...e, "css")
+le.css = (...e) => new H(...e, "css")
 ce.format.css = hl
 ce.autodetect.push({
   p: 5,
@@ -14321,7 +14321,7 @@ ce.format.gl = (...e) => {
   const t = me(e, "rgba")
   return (t[0] *= 255), (t[1] *= 255), (t[2] *= 255), t
 }
-re.gl = (...e) => new H(...e, "gl")
+le.gl = (...e) => new H(...e, "gl")
 H.prototype.gl = function () {
   const e = this._rgb
   return [e[0] / 255, e[1] / 255, e[2] / 255, e[3]]
@@ -14392,7 +14392,7 @@ const { floor: am } = Math,
 H.prototype.hcg = function () {
   return um(this._rgb)
 }
-re.hcg = (...e) => new H(...e, "hcg")
+le.hcg = (...e) => new H(...e, "hcg")
 ce.format.hcg = om
 ce.autodetect.push({
   p: 1,
@@ -14451,7 +14451,7 @@ const cm = /^#?([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/,
 H.prototype.hex = function (e) {
   return zu(this._rgb, e)
 }
-re.hex = (...e) => new H(...e, "hex")
+le.hex = (...e) => new H(...e, "hex")
 ce.format.hex = ju
 ce.autodetect.push({
   p: 4,
@@ -14518,7 +14518,7 @@ const { cos: En } = Math,
 H.prototype.hsi = function () {
   return mm(this._rgb)
 }
-re.hsi = (...e) => new H(...e, "hsi")
+le.hsi = (...e) => new H(...e, "hsi")
 ce.format.hsi = fm
 ce.autodetect.push({
   p: 2,
@@ -14529,7 +14529,7 @@ ce.autodetect.push({
 H.prototype.hsl = function () {
   return Mu(this._rgb)
 }
-re.hsl = (...e) => new H(...e, "hsl")
+le.hsl = (...e) => new H(...e, "hsl")
 ce.format.hsl = Pr
 ce.autodetect.push({
   p: 2,
@@ -14602,7 +14602,7 @@ const { floor: bm } = Math,
 H.prototype.hsv = function () {
   return xm(this._rgb)
 }
-re.hsv = (...e) => new H(...e, "hsv")
+le.hsv = (...e) => new H(...e, "hsv")
 ce.format.hsv = vm
 ce.autodetect.push({
   p: 2,
@@ -14660,7 +14660,7 @@ const it = {
 H.prototype.lab = function () {
   return Du(this._rgb)
 }
-re.lab = (...e) => new H(...e, "lab")
+le.lab = (...e) => new H(...e, "lab")
 ce.format.lab = Ru
 ce.autodetect.push({
   p: 2,
@@ -14702,8 +14702,8 @@ H.prototype.lch = function () {
 H.prototype.hcl = function () {
   return Vu(this._rgb).reverse()
 }
-re.lch = (...e) => new H(...e, "lch")
-re.hcl = (...e) => new H(...e, "hcl")
+le.lch = (...e) => new H(...e, "lch")
+le.hcl = (...e) => new H(...e, "hcl")
 ce.format.lch = Hu
 ce.format.hcl = Pm
 ;["lch", "hcl"].forEach((e) =>
@@ -14901,7 +14901,7 @@ const Om = (e) => {
 H.prototype.num = function () {
   return Am(this._rgb)
 }
-re.num = (...e) => new H(...e, "num")
+le.num = (...e) => new H(...e, "num")
 ce.format.num = Om
 ce.autodetect.push({
   p: 5,
@@ -14924,7 +14924,7 @@ H.prototype.rgba = function (e = !0) {
     .slice(0, 4)
     .map((t, n) => (n < 3 ? (e === !1 ? t : Wu(t)) : t))
 }
-re.rgb = (...e) => new H(...e, "rgb")
+le.rgb = (...e) => new H(...e, "rgb")
 ce.format.rgb = (...e) => {
   const t = me(e, "rgba")
   return t[3] === void 0 && (t[3] = 1), t
@@ -14994,7 +14994,7 @@ H.prototype.temp =
     function () {
       return Lm(this._rgb)
     }
-re.temp = re.kelvin = re.temperature = (...e) => new H(...e, "temp")
+le.temp = le.kelvin = le.temperature = (...e) => new H(...e, "temp")
 ce.format.temp = ce.format.kelvin = ce.format.temperature = qu
 const { pow: Ns, sign: Bm } = Math,
   Uu = (...e) => {
@@ -15036,7 +15036,7 @@ function Qi(e) {
 H.prototype.oklab = function () {
   return Ku(this._rgb)
 }
-re.oklab = (...e) => new H(...e, "oklab")
+le.oklab = (...e) => new H(...e, "oklab")
 ce.format.oklab = Uu
 ce.autodetect.push({
   p: 3,
@@ -15060,7 +15060,7 @@ const zm = (...e) => {
 H.prototype.oklch = function () {
   return Rm(this._rgb)
 }
-re.oklch = (...e) => new H(...e, "oklch")
+le.oklch = (...e) => new H(...e, "oklch")
 ce.format.oklch = zm
 ce.autodetect.push({
   p: 3,
@@ -15369,7 +15369,7 @@ const { pow: nr, sqrt: sr, PI: ir, cos: ka, sin: Ia, atan2: Qm } = Math,
   { pow: n1 } = Math
 function ei(e) {
   let t = "rgb",
-    n = re("#ccc"),
+    n = le("#ccc"),
     s = 0,
     i = [0, 1],
     r = [],
@@ -15388,13 +15388,13 @@ function ei(e) {
         ((E = E || ["#fff", "#000"]),
         E &&
           ge(E) === "string" &&
-          re.brewer &&
-          re.brewer[E.toLowerCase()] &&
-          (E = re.brewer[E.toLowerCase()]),
+          le.brewer &&
+          le.brewer[E.toLowerCase()] &&
+          (E = le.brewer[E.toLowerCase()]),
         ge(E) === "array")
       ) {
         E.length === 1 && (E = [E[0], E[0]]), (E = E.slice(0))
-        for (let A = 0; A < E.length; A++) E[A] = re(E[A])
+        for (let A = 0; A < E.length; A++) E[A] = le(E[A])
         r.length = 0
         for (let A = 0; A < E.length; A++) r.push(A / (E.length - 1))
       }
@@ -15442,7 +15442,7 @@ function ei(e) {
           }
           if (M > G && M < r[D + 1]) {
             ;(M = (M - G) / (r[D + 1] - G)),
-              (I = re.interpolate(o[D], o[D + 1], M, t))
+              (I = le.interpolate(o[D], o[D + 1], M, t))
             break
           }
         }
@@ -15454,7 +15454,7 @@ function ei(e) {
   var T = () => (h = {})
   C(e)
   const O = function (E) {
-    const A = re(x(E))
+    const A = le(x(E))
     return c && A[c] ? A[c]() : A
   }
   return (
@@ -15462,8 +15462,8 @@ function ei(e) {
       if (E != null) {
         if (ge(E) === "array") (a = E), (i = [E[0], E[E.length - 1]])
         else {
-          const A = re.analyze(i)
-          E === 0 ? (a = [A.min, A.max]) : (a = re.limits(A, "e", E))
+          const A = le.analyze(i)
+          E === 0 ? (a = [A.min, A.max]) : (a = le.limits(A, "e", E))
         }
         return O
       }
@@ -15562,7 +15562,7 @@ function ei(e) {
         else M = i
         I = M.map((L) => O(L))
       }
-      return re[A] && (I = I.map((M) => M[A]())), I
+      return le[A] && (I = I.map((M) => M[A]())), I
     }),
     (O.cache = function (E) {
       return E != null ? ((m = E), O) : m
@@ -15571,7 +15571,7 @@ function ei(e) {
       return E != null ? ((b = E), O) : b
     }),
     (O.nodata = function (E) {
-      return E != null ? ((n = re(E)), O) : n
+      return E != null ? ((n = le(E)), O) : n
     }),
     O
   )
@@ -15647,9 +15647,9 @@ const i1 = function (e) {
     return Et[n](e, t)
   },
   fn = (e) => (t, n) => {
-    const s = re(n).rgb(),
-      i = re(t).rgb()
-    return re.rgb(e(s, i))
+    const s = le(n).rgb(),
+      i = le(t).rgb()
+    return le.rgb(e(s, i))
   },
   pn = (e) => (t, n) => {
     const s = []
@@ -15691,7 +15691,7 @@ function v1(e = 300, t = -1.5, n = 1, s = 1, i = [0, 1]) {
       b = u + f * (-0.14861 * h + 1.78277 * m),
       C = u + f * (-0.29227 * h - 0.90649 * m),
       w = u + f * (1.97294 * h)
-    return re(dl([b * 255, C * 255, w * 255, 1]))
+    return le(dl([b * 255, C * 255, w * 255, 1]))
   }
   return (
     (a.start = function (o) {
@@ -15720,7 +15720,7 @@ function v1(e = 300, t = -1.5, n = 1, s = 1, i = [0, 1]) {
             : ((i = [o, o]), (l = 0)),
           a)
     }),
-    (a.scale = () => re.scale(a)),
+    (a.scale = () => le.scale(a)),
     a.hue(n),
     a
   )
@@ -15924,7 +15924,7 @@ const $1 = (...e) => {
   },
   L1 = {
     cool() {
-      return ei([re.hsl(180, 1, 0.9), re.hsl(250, 0.7, 0.4)])
+      return ei([le.hsl(180, 1, 0.9), le.hsl(250, 0.7, 0.4)])
     },
     hot() {
       return ei(["#000", "#f00", "#ff0", "#fff"]).mode("rgb")
@@ -16349,7 +16349,7 @@ const $1 = (...e) => {
     ],
   }
 for (let e of Object.keys(Ds)) Ds[e.toLowerCase()] = Ds[e]
-Object.assign(re, {
+Object.assign(le, {
   average: e1,
   bezier: l1,
   blend: Et,
@@ -16454,14 +16454,14 @@ const B1 = {
           let c = document.querySelectorAll("tr"),
             u
           o == 5
-            ? (u = re("#e2e8f0"))
+            ? (u = le("#e2e8f0"))
             : o == 4
-              ? (u = re("#cbd5e1"))
+              ? (u = le("#cbd5e1"))
               : o == 3
-                ? (u = re("#475569"))
+                ? (u = le("#475569"))
                 : o == 2
-                  ? (u = re("#1e293b"))
-                  : o == 1 && (u = re("#0f172a"))
+                  ? (u = le("#1e293b"))
+                  : o == 1 && (u = le("#0f172a"))
           for (let d = 1; d < c.length; d++)
             d % 2 == 0
               ? (c[d].style.backgroundColor = u.brighten(0))
@@ -16479,7 +16479,7 @@ const B1 = {
         ),
         (o, c) => (
           V(),
-          le("div", B1, [
+          ie("div", B1, [
             p("div", _1, [
               p("div", j1, [
                 p(
@@ -16487,7 +16487,7 @@ const B1 = {
                   { id: "perfChart", class: P(s(e.brightness)) },
                   [
                     (V(),
-                    le("svg", z1, [
+                    ie("svg", z1, [
                       c[0] ||
                         (c[0] = p(
                           "path",
@@ -16571,7 +16571,7 @@ const B1 = {
                   },
                   [
                     (V(),
-                    le("svg", N1, [
+                    ie("svg", N1, [
                       c[2] ||
                         (c[2] = p(
                           "path",
@@ -16876,7 +16876,7 @@ const B1 = {
         }
       return (o, c) => (
         V(),
-        le("div", U1, [
+        ie("div", U1, [
           p("div", K1, [
             p(
               "h2",
@@ -17208,14 +17208,14 @@ const B1 = {
           let u = document.querySelectorAll("tr"),
             d
           c == 5
-            ? (d = re("#e2e8f0"))
+            ? (d = le("#e2e8f0"))
             : c == 4
-              ? (d = re("#cbd5e1"))
+              ? (d = le("#cbd5e1"))
               : c == 3
-                ? (d = re("#475569"))
+                ? (d = le("#475569"))
                 : c == 2
-                  ? (d = re("#1e293b"))
-                  : c == 1 && (d = re("#0f172a"))
+                  ? (d = le("#1e293b"))
+                  : c == 1 && (d = le("#0f172a"))
           for (let f = 1; f < u.length; f++)
             f % 2 == 0
               ? (u[f].style.backgroundColor = d.brighten(0))
@@ -17236,7 +17236,7 @@ const B1 = {
         ),
         (c, u) => (
           V(),
-          le("div", tb, [
+          ie("div", tb, [
             p("div", nb, [
               p(
                 "h2",
@@ -17472,7 +17472,7 @@ const B1 = {
               {
                 default: Ce(() => [
                   (V(!0),
-                  le(
+                  ie(
                     Pe,
                     null,
                     Wt(
@@ -17708,7 +17708,7 @@ const B1 = {
       }
       return (s, i) => (
         V(),
-        le(
+        ie(
           "div",
           {
             style: { transition: "opacity 0.5s ease-in-out" },
@@ -18127,7 +18127,7 @@ const B1 = {
         }
       return ($, z) => (
         V(),
-        le("div", gb, [
+        ie("div", gb, [
           p("div", mb, [
             p(
               "h2",
@@ -18171,14 +18171,14 @@ const B1 = {
             ),
           ]),
           (V(!0),
-          le(
+          ie(
             Pe,
             null,
             Wt(
               M.value,
               (B, be) => (
                 V(),
-                le(
+                ie(
                   "div",
                   {
                     key: be,
@@ -18231,7 +18231,7 @@ const B1 = {
                           },
                           [
                             D(B) != Math.floor(L(B))
-                              ? (V(), le("span", xb, "$" + Je(D(B)), 1))
+                              ? (V(), ie("span", xb, "$" + Je(D(B)), 1))
                               : Be("", !0),
                             he("$" + Je(L(B)), 1),
                           ],
@@ -18247,14 +18247,14 @@ const B1 = {
                     ),
                     p("div", Sb, [
                       (V(!0),
-                      le(
+                      ie(
                         Pe,
                         null,
                         Wt(
                           B.services,
                           (pe, $e) => (
                             V(),
-                            le(
+                            ie(
                               "div",
                               {
                                 key: $e,
@@ -18287,11 +18287,11 @@ const B1 = {
                                       pe.title ==
                                       "Detailed speed audit (100% free)"
                                         ? (V(),
-                                          le("b", Cb, [
+                                          ie("b", Cb, [
                                             p("em", null, Je(pe.title), 1),
                                           ]))
                                         : (V(),
-                                          le("span", Pb, Je(pe.title), 1)),
+                                          ie("span", Pb, Je(pe.title), 1)),
                                     ],
                                     2,
                                   ),
@@ -18309,7 +18309,7 @@ const B1 = {
                                       pe.price !=
                                       Math.floor(pe.price * B.discount)
                                         ? (V(),
-                                          le("span", Ib, "$" + Je(pe.price), 1))
+                                          ie("span", Ib, "$" + Je(pe.price), 1))
                                         : Be("", !0),
                                       he("$" + Je(pe.price * B.discount), 1),
                                     ],
@@ -18344,7 +18344,7 @@ const B1 = {
                 { class: P(["text-4xl text-bold", s(n.brightness)]) },
                 [
                   G.value != Math.floor(G.value)
-                    ? (V(), le("span", Ab, "$" + Je(G.value), 1))
+                    ? (V(), ie("span", Ab, "$" + Je(G.value), 1))
                     : Be("", !0),
                   he("$" + Je(G.value), 1),
                 ],
@@ -18559,7 +18559,7 @@ const B1 = {
         }
       return (i, r) => (
         V(),
-        le("div", Db, [
+        ie("div", Db, [
           p("div", Fb, [
             p(
               "h2",
@@ -18823,7 +18823,7 @@ const B1 = {
         ]
       return (l, a) => (
         V(),
-        le("div", Jb, [
+        ie("div", Jb, [
           p("div", Zb, [
             p("div", Qb, [
               p("div", ev, [
@@ -18843,7 +18843,7 @@ const B1 = {
                 p("div", tv, [
                   p("div", nv, [
                     (V(),
-                    le(
+                    ie(
                       Pe,
                       null,
                       Wt(i, (o, c) =>
@@ -18856,7 +18856,7 @@ const B1 = {
                               { href: r[c] },
                               [
                                 (V(),
-                                le("svg", iv, [
+                                ie("svg", iv, [
                                   p("path", { d: o.path }, null, 8, rv),
                                 ])),
                               ],
@@ -19098,7 +19098,7 @@ const B1 = {
         l = W(null)
       return (a, o) => (
         V(),
-        le("div", uv, [
+        ie("div", uv, [
           p("div", cv, [
             p("span", dv, [
               p(
@@ -19127,14 +19127,14 @@ const B1 = {
             ]),
           ]),
           (V(!0),
-          le(
+          ie(
             Pe,
             null,
             Wt(
               [i.value, r.value],
               (c) => (
                 V(),
-                le(
+                ie(
                   "div",
                   {
                     class: P([
@@ -19147,14 +19147,14 @@ const B1 = {
                   },
                   [
                     (V(!0),
-                    le(
+                    ie(
                       Pe,
                       null,
                       Wt(
                         c,
                         (u) => (
                           V(),
-                          le(
+                          ie(
                             "div",
                             {
                               class:
@@ -19218,14 +19218,14 @@ const B1 = {
                                       ]),
                                       p("div", gv, [
                                         (V(!0),
-                                        le(
+                                        ie(
                                           Pe,
                                           null,
                                           Wt(
                                             u.icons,
                                             (d, f) => (
                                               V(),
-                                              le(
+                                              ie(
                                                 "div",
                                                 {
                                                   key: f,
@@ -19247,7 +19247,7 @@ const B1 = {
                                                 },
                                                 [
                                                   (V(),
-                                                  le("svg", mv, [
+                                                  ie("svg", mv, [
                                                     p(
                                                       "path",
                                                       { d: d.path },
@@ -19289,12 +19289,51 @@ const B1 = {
     },
   },
   yv = Zt(vv, [["__scopeId", "data-v-8811226d"]]),
-  wv = ["src"],
-  xv = { class: "text-inherit" },
-  Sv = ["src"],
-  Ev = "https://bazaar.blendernation.com",
-  Tv = "BlenderNation Bazaar",
-  Cv = {
+  wv = {
+    __name: "Home",
+    props: { brightness: Number },
+    setup(e) {
+      return (t, n) => (
+        V(),
+        ie(
+          "div",
+          {
+            class: P([
+              "flex flex-col items-center justify-center w-full p-8",
+              {
+                "text-slate-900": e.brightness >= 4,
+                "text-slate-200": e.brightness <= 3,
+              },
+            ]),
+          },
+          [
+            ...(n[0] ||
+              (n[0] = [
+                p(
+                  "h1",
+                  { class: "text-4xl font-bold mb-6" },
+                  "Welcome to josephhansen.dev",
+                  -1,
+                ),
+                p(
+                  "p",
+                  { class: "text-lg mb-4 text-center max-w-2xl" },
+                  " This is the homepage skeleton. Add your content here. ",
+                  -1,
+                ),
+              ])),
+          ],
+          2,
+        )
+      )
+    },
+  },
+  xv = ["src"],
+  Sv = { class: "text-inherit" },
+  Ev = ["src"],
+  Tv = "https://bazaar.blendernation.com",
+  Cv = "BlenderNation Bazaar",
+  Pv = {
     __name: "Bazaar",
     setup(e) {
       const t = W([tl, Ag, $g, Lg, Bg]),
@@ -19318,8 +19357,8 @@ const B1 = {
           {
             images: t.value,
             captions: n.value,
-            link: Ev,
-            title: Tv,
+            link: Tv,
+            title: Cv,
             brightness: i.brightness,
           },
           {
@@ -19345,7 +19384,7 @@ const B1 = {
                     { src: s.planning, class: "rounded-xl" },
                     null,
                     8,
-                    wv,
+                    xv,
                   ),
                   r[0] ||
                     (r[0] = p(
@@ -19355,7 +19394,7 @@ const B1 = {
                       -1,
                     )),
                 ]),
-                p("p", xv, [
+                p("p", Sv, [
                   r[2] ||
                     (r[2] = he(
                       " With the above Figma document as a guide from Bart, I dove into both design and the backend details for managing the complex data the site would be handling. Bart wanted to do this through WordPress, and I was able to use my expertise to recommend AdvancedCustomFields to do a lot of the major data-wrangling. I also built the theme from scratch, to make sure it was as simplified and lightweight as possible while still providing beautiful, responsive, and functional results. ",
@@ -19367,7 +19406,7 @@ const B1 = {
                       { src: s.figma, class: "rounded-xl" },
                       null,
                       8,
-                      Sv,
+                      Ev,
                     ),
                     r[1] ||
                       (r[1] = p(
@@ -19416,9 +19455,9 @@ const B1 = {
       )
     },
   },
-  Pv = "https://okcsouthstake.org",
-  kv = "OKC South Stake",
-  Iv = {
+  kv = "https://okcsouthstake.org",
+  Iv = "OKC South Stake",
+  Mv = {
     __name: "OkcSouthStake",
     setup(e) {
       const t = W([
@@ -19438,8 +19477,8 @@ const B1 = {
           {
             images: t.value,
             captions: n.value,
-            link: Pv,
-            title: kv,
+            link: kv,
+            title: Iv,
             brightness: s.brightness,
           },
           {
@@ -19522,9 +19561,9 @@ const B1 = {
       )
     },
   },
-  Mv = "https://arissearch.com//",
-  Ov = "Aris Search",
-  Av = {
+  Ov = "https://arissearch.com//",
+  Av = "Aris Search",
+  $v = {
     __name: "ArisSearch",
     setup(e) {
       const t = W([cl, Rg]),
@@ -19536,8 +19575,8 @@ const B1 = {
           {
             images: t.value,
             captions: n.value,
-            link: Mv,
-            title: Ov,
+            link: Ov,
+            title: Av,
             brightness: s.brightness,
           },
           {
@@ -19560,9 +19599,9 @@ const B1 = {
       )
     },
   },
-  $v = "https://floorsfloors.com/",
-  Lv = "Atlanta Floor One",
-  Bv = {
+  Lv = "https://floorsfloors.com/",
+  Bv = "Atlanta Floor One",
+  _v = {
     __name: "AtlantaFloorOne",
     setup(e) {
       const t = W([rl, _g, jg, zg]),
@@ -19579,8 +19618,8 @@ const B1 = {
           {
             images: t.value,
             captions: n.value,
-            link: $v,
-            title: Lv,
+            link: Lv,
+            title: Bv,
             brightness: s.brightness,
           },
           {
@@ -19631,9 +19670,9 @@ const B1 = {
       )
     },
   },
-  _v = "https://www.buildonyourlandllc.com/",
-  jv = "Build on Your Land",
-  zv = {
+  jv = "https://www.buildonyourlandllc.com/",
+  zv = "Build on Your Land",
+  Rv = {
     __name: "BuildOnYourLand",
     setup(e) {
       const t = W([
@@ -19651,8 +19690,8 @@ const B1 = {
           {
             images: t.value,
             captions: n.value,
-            link: _v,
-            title: jv,
+            link: jv,
+            title: zv,
             brightness: s.brightness,
           },
           {
@@ -19721,9 +19760,9 @@ const B1 = {
       )
     },
   },
-  Rv = "https://stehlfamilydental.com/",
-  Nv = "Stuart Hose and Pipe",
-  Dv = {
+  Nv = "https://stehlfamilydental.com/",
+  Dv = "Stuart Hose and Pipe",
+  Fv = {
     __name: "StehlFamilyDental",
     setup(e) {
       const t = W([ul]),
@@ -19735,8 +19774,8 @@ const B1 = {
           {
             images: t.value,
             captions: n.value,
-            link: Rv,
-            title: Nv,
+            link: Nv,
+            title: Dv,
             brightness: s.brightness,
           },
           {
@@ -19759,9 +19798,9 @@ const B1 = {
       )
     },
   },
-  Fv = "https://tub-boys.com/",
-  Hv = "Tub Boys",
-  Gv = {
+  Hv = "https://tub-boys.com/",
+  Gv = "Tub Boys",
+  Vv = {
     __name: "TubBoys",
     setup(e) {
       const t = W([
@@ -19778,8 +19817,8 @@ const B1 = {
           {
             images: t.value,
             captions: n.value,
-            link: Fv,
-            title: Hv,
+            link: Hv,
+            title: Gv,
             brightness: s.brightness,
           },
           {
@@ -19840,9 +19879,9 @@ const B1 = {
       )
     },
   },
-  Vv = "https://stuarthose.com/",
-  Wv = "Stuart Hose and Pipe",
-  qv = {
+  Wv = "https://stuarthose.com/",
+  qv = "Stuart Hose and Pipe",
+  Uv = {
     __name: "StuartPipeAndHose",
     setup(e) {
       const t = W([
@@ -19858,8 +19897,8 @@ const B1 = {
           {
             images: t.value,
             captions: n.value,
-            link: Vv,
-            title: Wv,
+            link: Wv,
+            title: qv,
             brightness: s.brightness,
           },
           {
@@ -19882,9 +19921,9 @@ const B1 = {
       )
     },
   },
-  Uv = "https://swimstatepoolservice.com/",
-  Kv = "Swim State Pool",
-  Yv = {
+  Kv = "https://swimstatepoolservice.com/",
+  Yv = "Swim State Pool",
+  Xv = {
     __name: "SwimStatePool",
     setup(e) {
       const t = W([ll]),
@@ -19896,8 +19935,8 @@ const B1 = {
           {
             images: t.value,
             captions: n.value,
-            link: Uv,
-            title: Kv,
+            link: Kv,
+            title: Yv,
             brightness: s.brightness,
           },
           {
@@ -19920,9 +19959,9 @@ const B1 = {
       )
     },
   },
-  Xv = "/",
-  Jv = "josephhansen.dev",
-  Zv = {
+  Jv = "/",
+  Zv = "josephhansen.dev",
+  Qv = {
     __name: "JosephHansenDev",
     setup(e) {
       const t = W([al]),
@@ -19934,8 +19973,8 @@ const B1 = {
           {
             images: t.value,
             captions: n.value,
-            link: Xv,
-            title: Jv,
+            link: Jv,
+            title: Zv,
             brightness: s.brightness,
           },
           {
@@ -19979,9 +20018,9 @@ const B1 = {
       )
     },
   },
-  Qv = { class: "flex justify-center w-full md:px-10 sm:px-5 mt-5" },
-  e2 = { class: "flex justify-center w-full md:px-10 sm:px-5 pt-10" },
-  t2 = {
+  e2 = { class: "flex justify-center w-full md:px-10 sm:px-5 mt-5" },
+  t2 = { class: "flex justify-center w-full md:px-10 sm:px-5 pt-10" },
+  n2 = {
     __name: "Main",
     props: { component: String },
     setup(e) {
@@ -19992,16 +20031,16 @@ const B1 = {
             window.localStorage.setItem("brightness", t.value)
         },
         i = {
-          "okc-south-stake": Iv,
-          "aris-search": Av,
-          "atlanta-floor-one": Bv,
-          "build-on-your-land": zv,
-          "stehl-family-dental": Dv,
-          "tub-boys": Gv,
-          "stuart-pipe": qv,
-          "swim-state-pool": Yv,
-          "josephhansen-dev": Zv,
-          bazaar: Cv,
+          "okc-south-stake": Mv,
+          "aris-search": $v,
+          "atlanta-floor-one": _v,
+          "build-on-your-land": Rv,
+          "stehl-family-dental": Fv,
+          "tub-boys": Vv,
+          "stuart-pipe": Uv,
+          "swim-state-pool": Xv,
+          "josephhansen-dev": Qv,
+          bazaar: Pv,
         },
         r = te(() => {
           switch (t.value) {
@@ -20050,21 +20089,30 @@ const B1 = {
               "josephhansen.dev | web developer/designer | about"),
             (l.meta[4].content = "https://josephhansen.dev/about"),
             (l.meta[9].content = "https://josephhansen.dev/about")
-        else if (n.component == "portfolio")
-          (l.title = "josephhansen.dev | web developer/designer | portfolio"),
+        else if (n.component == "web-portfolio")
+          (l.title =
+            "josephhansen.dev | web developer/designer | web portfolio"),
             (l.meta[1].content =
-              "josephhansen.dev | web developer/designer | portfolio"),
+              "josephhansen.dev | web developer/designer | web portfolio"),
             (l.meta[6].content =
-              "josephhansen.dev | web developer/designer | portfolio"),
-            (l.meta[4].content = "https://josephhansen.dev/portfolio"),
-            (l.meta[9].content = "https://josephhansen.dev/portfolio")
+              "josephhansen.dev | web developer/designer | web portfolio"),
+            (l.meta[4].content = "https://josephhansen.dev/web-portfolio"),
+            (l.meta[9].content = "https://josephhansen.dev/web-portfolio")
+        else if (n.component == "web-services")
+          (l.title = "josephhansen.dev | web developer/designer | services"),
+            (l.meta[1].content =
+              "josephhansen.dev | web developer/designer | services"),
+            (l.meta[6].content =
+              "josephhansen.dev | web developer/designer | services"),
+            (l.meta[4].content = "https://josephhansen.dev/web-services"),
+            (l.meta[9].content = "https://josephhansen.dev/web-services")
         else if (n.component in i) {
           let o = n.component.replace(/-/g, " ")
           ;(l.title = `josephhansen.dev | web developer/designer | ${o}`),
             (l.meta[1].content = `josephhansen.dev | web developer/designer | ${o}`),
             (l.meta[6].content = `josephhansen.dev | web developer/designer | ${o}`),
-            (l.meta[4].content = `https://josephhansen.dev/portfolio/${n.component}`),
-            (l.meta[9].content = `https://josephhansen.dev/portfolio/${n.component}`)
+            (l.meta[4].content = `https://josephhansen.dev/web-portfolio/${n.component}`),
+            (l.meta[9].content = `https://josephhansen.dev/web-portfolio/${n.component}`)
         }
       })
       const l = bs({
@@ -20124,7 +20172,7 @@ const B1 = {
         }),
         (a, o) => (
           V(),
-          le(
+          ie(
             Pe,
             null,
             [
@@ -20136,10 +20184,10 @@ const B1 = {
                 },
                 [
                   Q($h, { "onUpdate:brightness": s }),
-                  p("div", Qv, [
+                  p("div", e2, [
                     e.component == "pricing"
                       ? (V(),
-                        le(
+                        ie(
                           "div",
                           {
                             key: 0,
@@ -20164,7 +20212,7 @@ const B1 = {
                       : Be("", !0),
                     e.component == "contact"
                       ? (V(),
-                        le(
+                        ie(
                           "div",
                           {
                             key: 1,
@@ -20187,9 +20235,9 @@ const B1 = {
                           2,
                         ))
                       : Be("", !0),
-                    e.component == "portfolio"
+                    e.component == "web-portfolio"
                       ? (V(),
-                        le(
+                        ie(
                           "div",
                           {
                             key: 2,
@@ -20214,7 +20262,7 @@ const B1 = {
                       : Be("", !0),
                     e.component == "about-me"
                       ? (V(),
-                        le(
+                        ie(
                           "div",
                           {
                             key: 3,
@@ -20239,7 +20287,7 @@ const B1 = {
                       : Be("", !0),
                     e.component in i
                       ? (V(),
-                        le(
+                        ie(
                           "div",
                           {
                             key: 4,
@@ -20269,10 +20317,35 @@ const B1 = {
                       : Be("", !0),
                     e.component == "home"
                       ? (V(),
-                        le(
+                        ie(
                           "div",
                           {
                             key: 5,
+                            class: P([
+                              "w-full md:w-10/12 sm:w-12/12 rounded p-3",
+                              {
+                                "bg-slate-200": t.value == 5,
+                                "bg-slate-300": t.value == 4,
+                                "bg-slate-600": t.value == 3,
+                                "bg-slate-800": t.value == 2,
+                                "bg-slate-900": t.value == 1,
+                              },
+                            ]),
+                          },
+                          [
+                            Q(wv, { brightness: t.value }, null, 8, [
+                              "brightness",
+                            ]),
+                          ],
+                          2,
+                        ))
+                      : Be("", !0),
+                    e.component == "web-services"
+                      ? (V(),
+                        ie(
+                          "div",
+                          {
+                            key: 6,
                             class: P([
                               "w-full md:w-10/12 sm:w-12/12 rounded p-3",
                               {
@@ -20293,10 +20366,10 @@ const B1 = {
                         ))
                       : Be("", !0),
                   ]),
-                  p("div", e2, [
-                    e.component == "home"
+                  p("div", t2, [
+                    e.component == "web-services"
                       ? (V(),
-                        le(
+                        ie(
                           "div",
                           {
                             key: 0,
@@ -20331,9 +20404,14 @@ const B1 = {
       )
     },
   },
-  n2 = Zt(t2, [["__scopeId", "data-v-d845e63f"]]),
+  s2 = Zt(n2, [["__scopeId", "data-v-6c2594e4"]]),
   gl = [
     { path: "/", component: null, props: { component: "home" } },
+    {
+      path: "/web-services",
+      component: null,
+      props: { component: "web-services" },
+    },
     { path: "/pricing", component: null, props: { component: "pricing" } },
     { path: "/contact", component: null, props: { component: "contact" } },
     { path: "/about-me", component: null, props: { component: "about-me" } },
@@ -20395,9 +20473,9 @@ const B1 = {
   ]
 gl.map((e) => e.path)
 gl.forEach((e) => {
-  e.component = n2
+  e.component = s2
 })
-const s2 = th({ history: Op(), routes: gl }),
+const i2 = th({ history: Op(), routes: gl }),
   Qu = bf(Sf)
-Qu.use(s2)
+Qu.use(i2)
 Qu.mount("#app")
