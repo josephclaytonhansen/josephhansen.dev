@@ -7,6 +7,7 @@
   import Contact from "./pages/Contact.vue"
   import AboutMe from "./pages/AboutMe.vue"
   import WebPortfolio from "./pages/WebPortfolio.vue"
+  import Home from "./pages/Home.vue"
 
   import { ref, computed, onMounted, watchEffect, reactive } from "vue"
 
@@ -93,22 +94,30 @@
       meta.meta[6].content = "josephhansen.dev | web developer/designer | about"
       meta.meta[4].content = "https://josephhansen.dev/about"
       meta.meta[9].content = "https://josephhansen.dev/about"
-    } else if (props.component == "portfolio") {
-      meta.title = "josephhansen.dev | web developer/designer | portfolio"
+    } else if (props.component == "web-portfolio") {
+      meta.title = "josephhansen.dev | web developer/designer | web portfolio"
       meta.meta[1].content =
-        "josephhansen.dev | web developer/designer | portfolio"
+        "josephhansen.dev | web developer/designer | web portfolio"
       meta.meta[6].content =
-        "josephhansen.dev | web developer/designer | portfolio"
-      meta.meta[4].content = "https://josephhansen.dev/portfolio"
-      meta.meta[9].content = "https://josephhansen.dev/portfolio"
+        "josephhansen.dev | web developer/designer | web portfolio"
+      meta.meta[4].content = "https://josephhansen.dev/web-portfolio"
+      meta.meta[9].content = "https://josephhansen.dev/web-portfolio"
+    } else if (props.component == "web-services") {
+      meta.title = "josephhansen.dev | web developer/designer | services"
+      meta.meta[1].content =
+        "josephhansen.dev | web developer/designer | services"
+      meta.meta[6].content =
+        "josephhansen.dev | web developer/designer | services"
+      meta.meta[4].content = "https://josephhansen.dev/web-services"
+      meta.meta[9].content = "https://josephhansen.dev/web-services"
     } else {
       if (props.component in webPortfolioSubpages) {
         let deSlugged = props.component.replace(/-/g, " ")
         meta.title = `josephhansen.dev | web developer/designer | ${deSlugged}`
         meta.meta[1].content = `josephhansen.dev | web developer/designer | ${deSlugged}`
         meta.meta[6].content = `josephhansen.dev | web developer/designer | ${deSlugged}`
-        meta.meta[4].content = `https://josephhansen.dev/portfolio/${props.component}`
-        meta.meta[9].content = `https://josephhansen.dev/portfolio/${props.component}`
+        meta.meta[4].content = `https://josephhansen.dev/web-portfolio/${props.component}`
+        meta.meta[9].content = `https://josephhansen.dev/web-portfolio/${props.component}`
       }
     }
   })
@@ -237,7 +246,7 @@
           'bg-slate-800': brightness == 2,
           'bg-slate-900': brightness == 1,
         }"
-        v-if="component == 'portfolio'">
+        v-if="component == 'web-portfolio'">
         <WebPortfolio :brightness="brightness" />
       </div>
 
@@ -279,6 +288,19 @@
           'bg-slate-900': brightness == 1,
         }"
         v-if="component == 'home'">
+        <Home :brightness="brightness" />
+      </div>
+
+      <div
+        class="w-full md:w-10/12 sm:w-12/12 rounded p-3"
+        :class="{
+          'bg-slate-200': brightness == 5,
+          'bg-slate-300': brightness == 4,
+          'bg-slate-600': brightness == 3,
+          'bg-slate-800': brightness == 2,
+          'bg-slate-900': brightness == 1,
+        }"
+        v-if="component == 'web-services'">
         <Hero :brightness="brightness" />
       </div>
     </div>
@@ -293,7 +315,7 @@
           'bg-slate-800': brightness == 2,
           'bg-slate-900': brightness == 1,
         }"
-        v-if="component == 'home'">
+        v-if="component == 'web-services'">
         <Services :brightness="brightness" />
       </div>
     </div>

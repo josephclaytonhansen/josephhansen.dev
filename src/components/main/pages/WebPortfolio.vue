@@ -70,7 +70,7 @@
       icons: [siWordpress, siCloudflare, siPhp],
       title: "CHAI",
       link: "/web-portfolio/chai",
-    }
+    },
   ])
 
   const thirdCards = ref([

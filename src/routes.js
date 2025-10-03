@@ -1,5 +1,10 @@
 const routes = [
   { path: "/", component: null, props: { component: "home" } },
+  {
+    path: "/web-services",
+    component: null,
+    props: { component: "web-services" },
+  },
   { path: "/pricing", component: null, props: { component: "pricing" } },
   { path: "/contact", component: null, props: { component: "contact" } },
   { path: "/about-me", component: null, props: { component: "about-me" } },
