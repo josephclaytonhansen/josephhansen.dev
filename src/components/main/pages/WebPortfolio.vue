@@ -58,13 +58,18 @@
       icons: [siWordpress, siPhp, siFigma],
       title: "BlenderNation Bazaar",
       image: bazaarHome,
-      link: "/portfolio/bazaar",
+      link: "/web-portfolio/bazaar",
     },
     {
-      icons: [siVuedotjs, siNginx, siCloudflare],
-      title: "OKC South Stake",
+      icons: [siWordpress, siPhp, siJavascript],
+      title: "Feed Council",
       image: okcssHome,
-      link: "/portfolio/okc-south-stake",
+      link: "/web-portfolio/feed-council",
+    },
+    {
+      icons: [siWordpress, siCloudflare, siPhp],
+      title: "CHAI",
+      link: "/web-portfolio/chai",
     },
   ])
 
@@ -73,49 +78,49 @@
       icons: [siWordpress, siJavascript],
       title: "Build On Your Land",
       image: boylHome,
-      link: "/portfolio/build-on-your-land",
+      link: "/web-portfolio/build-on-your-land",
     },
     {
       icons: [siWordpress, siPhp],
       title: "Stuart Pipe and Hose",
       image: stuartHome,
-      link: "/portfolio/stuart-pipe",
+      link: "/web-portfolio/stuart-pipe",
     },
     {
       icons: [siWordpress, siBootstrap],
       title: "Atlanta Floor One",
       image: atlantaHome,
-      link: "/portfolio/atlanta-floor-one",
+      link: "/web-portfolio/atlanta-floor-one",
     },
     {
       icons: [siWordpress, siBootstrap],
       title: "Swim State Pool",
       image: swimHome,
-      link: "/portfolio/swim-state-pool",
+      link: "/web-portfolio/swim-state-pool",
     },
     {
       title: "josephhansen.dev",
       icons: [siVuedotjs, siTailwindcss],
       image: josephhansenHome,
-      link: "/portfolio/josephhansen-dev",
+      link: "/web-portfolio/josephhansen-dev",
     },
     {
       title: "Tub Boys",
       icons: [siWordpress, siBootstrap],
       image: tubHome,
-      link: "/portfolio/tub-boys",
+      link: "/web-portfolio/tub-boys",
     },
     {
       title: "Stehl Family Dental",
       icons: [siWordpress, siBootstrap],
       image: stehlHome,
-      link: "/portfolio/stehl-family-dental",
+      link: "/web-portfolio/stehl-family-dental",
     },
     {
       title: "Aris",
       icons: [siWordpress, siBootstrap],
       image: arrisHome,
-      link: "/portfolio/aris-search",
+      link: "/web-portfolio/aris-search",
     },
   ])
 
@@ -163,14 +168,21 @@
           <img
             :src="cards.image"
             :alt="cards.title"
-            class="bg-slate-200 object-contain w-full rounded-t-xl" />
+            class="object-contain w-full rounded-t-xl"
+            :class="{
+              'bg-slate-100': brightness == 5,
+              'bg-slate-200': brightness == 4,
+              'bg-slate-300': brightness == 3,
+              'bg-slate-500': brightness == 2,
+              'bg-slate-600': brightness == 1,
+            }" />
         </div>
         <div>
           <div>
             <div
               class="p-4 flex justify-between items-center rounded-b-xl"
               :class="{
-                'bg-slate-300': brightness == 5,
+                'bg-slate-100': brightness == 5,
                 'bg-slate-200': brightness == 4,
                 'bg-slate-300': brightness == 3,
                 'bg-slate-500': brightness == 2,

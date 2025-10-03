@@ -6,20 +6,21 @@
   import Pricing from "./pages/Pricing.vue"
   import Contact from "./pages/Contact.vue"
   import AboutMe from "./pages/AboutMe.vue"
-  import Portfolio from "./pages/Portfolio.vue"
+  import WebPortfolio from "./pages/WebPortfolio.vue"
+  import Home from "./pages/Home.vue"
 
   import { ref, computed, onMounted, watchEffect, reactive } from "vue"
 
-  import Bazaar from "./pages/portfolio/Bazaar.vue"
-  import OkcSouthStake from "./pages/portfolio/OkcSouthStake.vue"
-  import ArisSearch from "./pages/portfolio/ArisSearch.vue"
-  import AtlantaFloorOne from "./pages/portfolio/AtlantaFloorOne.vue"
-  import BuildOnYourLand from "./pages/portfolio/BuildOnYourLand.vue"
-  import StehlFamilyDental from "./pages/portfolio/StehlFamilyDental.vue"
-  import TubBoys from "./pages/portfolio/TubBoys.vue"
-  import StuartPipeAndHose from "./pages/portfolio/StuartPipeAndHose.vue"
-  import SwimStatePool from "./pages/portfolio/SwimStatePool.vue"
-  import JosephHansenDev from "./pages/portfolio/JosephHansenDev.vue"
+  import Bazaar from "./pages/web-portfolio/Bazaar.vue"
+  import OkcSouthStake from "./pages/web-portfolio/OkcSouthStake.vue"
+  import ArisSearch from "./pages/web-portfolio/ArisSearch.vue"
+  import AtlantaFloorOne from "./pages/web-portfolio/AtlantaFloorOne.vue"
+  import BuildOnYourLand from "./pages/web-portfolio/BuildOnYourLand.vue"
+  import StehlFamilyDental from "./pages/web-portfolio/StehlFamilyDental.vue"
+  import TubBoys from "./pages/web-portfolio/TubBoys.vue"
+  import StuartPipeAndHose from "./pages/web-portfolio/StuartPipeAndHose.vue"
+  import SwimStatePool from "./pages/web-portfolio/SwimStatePool.vue"
+  import JosephHansenDev from "./pages/web-portfolio/JosephHansenDev.vue"
 
   const brightness = ref(1)
 
@@ -33,7 +34,7 @@
     localStorage.setItem("brightness", brightness.value)
   }
 
-  const portfolioSubpages = {
+  const webPortfolioSubpages = {
     "okc-south-stake": OkcSouthStake,
     "aris-search": ArisSearch,
     "atlanta-floor-one": AtlantaFloorOne,
@@ -93,22 +94,30 @@
       meta.meta[6].content = "josephhansen.dev | web developer/designer | about"
       meta.meta[4].content = "https://josephhansen.dev/about"
       meta.meta[9].content = "https://josephhansen.dev/about"
-    } else if (props.component == "portfolio") {
-      meta.title = "josephhansen.dev | web developer/designer | portfolio"
+    } else if (props.component == "web-portfolio") {
+      meta.title = "josephhansen.dev | web developer/designer | web portfolio"
       meta.meta[1].content =
-        "josephhansen.dev | web developer/designer | portfolio"
+        "josephhansen.dev | web developer/designer | web portfolio"
       meta.meta[6].content =
-        "josephhansen.dev | web developer/designer | portfolio"
-      meta.meta[4].content = "https://josephhansen.dev/portfolio"
-      meta.meta[9].content = "https://josephhansen.dev/portfolio"
+        "josephhansen.dev | web developer/designer | web portfolio"
+      meta.meta[4].content = "https://josephhansen.dev/web-portfolio"
+      meta.meta[9].content = "https://josephhansen.dev/web-portfolio"
+    } else if (props.component == "web-services") {
+      meta.title = "josephhansen.dev | web developer/designer | services"
+      meta.meta[1].content =
+        "josephhansen.dev | web developer/designer | services"
+      meta.meta[6].content =
+        "josephhansen.dev | web developer/designer | services"
+      meta.meta[4].content = "https://josephhansen.dev/web-services"
+      meta.meta[9].content = "https://josephhansen.dev/web-services"
     } else {
-      if (props.component in portfolioSubpages) {
+      if (props.component in webPortfolioSubpages) {
         let deSlugged = props.component.replace(/-/g, " ")
         meta.title = `josephhansen.dev | web developer/designer | ${deSlugged}`
         meta.meta[1].content = `josephhansen.dev | web developer/designer | ${deSlugged}`
         meta.meta[6].content = `josephhansen.dev | web developer/designer | ${deSlugged}`
-        meta.meta[4].content = `https://josephhansen.dev/portfolio/${props.component}`
-        meta.meta[9].content = `https://josephhansen.dev/portfolio/${props.component}`
+        meta.meta[4].content = `https://josephhansen.dev/web-portfolio/${props.component}`
+        meta.meta[9].content = `https://josephhansen.dev/web-portfolio/${props.component}`
       }
     }
   })
@@ -237,8 +246,8 @@
           'bg-slate-800': brightness == 2,
           'bg-slate-900': brightness == 1,
         }"
-        v-if="component == 'portfolio'">
-        <Portfolio :brightness="brightness" />
+        v-if="component == 'web-portfolio'">
+        <WebPortfolio :brightness="brightness" />
       </div>
 
       <div
@@ -263,9 +272,9 @@
           'bg-slate-800': brightness == 2,
           'bg-slate-900': brightness == 1,
         }"
-        v-if="component in portfolioSubpages">
+        v-if="component in webPortfolioSubpages">
         <component
-          :is="portfolioSubpages[component]"
+          :is="webPortfolioSubpages[component]"
           :brightness="brightness" />
       </div>
 
@@ -279,6 +288,19 @@
           'bg-slate-900': brightness == 1,
         }"
         v-if="component == 'home'">
+        <Home :brightness="brightness" />
+      </div>
+
+      <div
+        class="w-full md:w-10/12 sm:w-12/12 rounded p-3"
+        :class="{
+          'bg-slate-200': brightness == 5,
+          'bg-slate-300': brightness == 4,
+          'bg-slate-600': brightness == 3,
+          'bg-slate-800': brightness == 2,
+          'bg-slate-900': brightness == 1,
+        }"
+        v-if="component == 'web-services'">
         <Hero :brightness="brightness" />
       </div>
     </div>
@@ -293,7 +315,7 @@
           'bg-slate-800': brightness == 2,
           'bg-slate-900': brightness == 1,
         }"
-        v-if="component == 'home'">
+        v-if="component == 'web-services'">
         <Services :brightness="brightness" />
       </div>
     </div>

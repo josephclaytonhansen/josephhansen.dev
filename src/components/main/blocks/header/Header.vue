@@ -112,7 +112,7 @@
         </div>
 
         <div class="flex gap-5 p-2 relative">
-          <a @click="$router.push('/portfolio')" class="cursor-pointer"
+          <a @click="$router.push('/web-portfolio')" class="cursor-pointer"
             ><h6
               class="font-semibold"
               :class="{
@@ -126,7 +126,7 @@
             </h6></a
           >
 
-          <a @click="$router.push('/')"
+          <a @click="$router.push('/web-services')"
             ><h6
               class="font-semibold cursor-pointer"
               :class="{
