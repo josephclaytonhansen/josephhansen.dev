@@ -17,7 +17,7 @@
     "simple to use",
     "powerful",
     "optimized",
-    "SEO-optimized",
+    "SEO-ready",
     "lightning fast",
     "lightweight",
     "perfectly customized",
