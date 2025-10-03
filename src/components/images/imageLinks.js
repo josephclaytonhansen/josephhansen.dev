@@ -34,6 +34,8 @@ const atlanta3 =
   "https://images.josephhansen.dev/uploads/file2024-02-0212-1706898397404.webp"
 const aris1 =
   "https://images.josephhansen.dev/uploads/file2024-02-0212-1706899554221.webp"
+const chaiHome = ""
+const feedCouncilHome = ""
 
 export {
   bazaarHome,
@@ -46,6 +48,8 @@ export {
   tubHome,
   stehlHome,
   arrisHome,
+  chaiHome,
+  feedCouncilHome,
   bazaar1,
   bazaar2,
   bazaar3,

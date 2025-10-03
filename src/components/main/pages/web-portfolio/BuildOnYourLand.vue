@@ -2,12 +2,12 @@
   import { ref } from "vue"
 
   import sliderAndGallery from "../../blocks/sliderAndGallery/sliderAndGallery.vue"
-  const bazaarLink = "https://www.buildonyourlandllc.com/"
-  const bazaarTitle = "Build on Your Land"
+  const galleryLink = "https://www.buildonyourlandllc.com/"
+  const galleryTitle = "Build on Your Land"
 
   import { boylHome } from "../../../images/imageLinks.js"
 
-  const bazaarImages = ref([
+  const galleryImages = ref([
     boylHome,
     "https://images.josephhansen.dev/uploads/file2024-02-0621-1707275933220.webp",
     "https://images.josephhansen.dev/uploads/file2024-02-0621-1707275970184.webp",
@@ -15,15 +15,15 @@
     "https://images.josephhansen.dev/uploads/file2024-02-0621-1707275995615.webp",
   ])
 
-  const bazaarCaptions = ref([])
+  const galleryCaptions = ref([])
 </script>
 
 <template>
   <sliderAndGallery
-    :images="bazaarImages"
-    :captions="bazaarCaptions"
-    :link="bazaarLink"
-    :title="bazaarTitle"
+    :images="galleryImages"
+    :captions="galleryCaptions"
+    :link="galleryLink"
+    :title="galleryTitle"
     :brightness="brightness"
     ><slot>
       <p class="text-inherit">

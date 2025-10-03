@@ -21,6 +21,8 @@
   import StuartPipeAndHose from "./pages/web-portfolio/StuartPipeAndHose.vue"
   import SwimStatePool from "./pages/web-portfolio/SwimStatePool.vue"
   import JosephHansenDev from "./pages/web-portfolio/JosephHansenDev.vue"
+  import Chai from "./pages/web-portfolio/Chai.vue"
+  import FeedCouncil from "./pages/web-portfolio/FeedCouncil.vue"
 
   const brightness = ref(1)
 
@@ -45,6 +47,8 @@
     "swim-state-pool": SwimStatePool,
     "josephhansen-dev": JosephHansenDev,
     bazaar: Bazaar,
+    chai: Chai,
+    "feed-council": FeedCouncil,
   }
 
   const brightnessClass = computed(() => {

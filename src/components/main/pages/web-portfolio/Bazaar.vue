@@ -2,8 +2,8 @@
   import { ref } from "vue"
 
   import sliderAndGallery from "../../blocks/sliderAndGallery/sliderAndGallery.vue"
-  const bazaarLink = "https://bazaar.blendernation.com"
-  const bazaarTitle = "BlenderNation Bazaar"
+  const galleryLink = "https://bazaar.blendernation.com"
+  const galleryTitle = "BlenderNation Bazaar"
 
   import {
     bazaarHome,
@@ -13,9 +13,9 @@
     bazaar4,
   } from "../../../images/imageLinks.js"
 
-  const bazaarImages = ref([bazaarHome, bazaar1, bazaar2, bazaar3, bazaar4])
+  const galleryImages = ref([bazaarHome, bazaar1, bazaar2, bazaar3, bazaar4])
 
-  const bazaarCaptions = ref([
+  const galleryCaptions = ref([
     "Bazaar homepage",
     "Bazaar collection page",
     "Bazaar user page",
@@ -33,10 +33,10 @@
 
 <template>
   <sliderAndGallery
-    :images="bazaarImages"
-    :captions="bazaarCaptions"
-    :link="bazaarLink"
-    :title="bazaarTitle"
+    :images="galleryImages"
+    :captions="galleryCaptions"
+    :link="galleryLink"
+    :title="galleryTitle"
     :brightness="brightness"
     ><slot>
       <h3 class="text-2xl font-semibold text-inherit">

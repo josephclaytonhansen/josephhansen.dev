@@ -2,14 +2,14 @@
   import { ref } from "vue"
 
   import sliderAndGallery from "../../blocks/sliderAndGallery/sliderAndGallery.vue"
-  const bazaarLink = "https://arissearch.com//"
-  const bazaarTitle = "Aris Search"
+  const galleryLink = "https://arissearch.com//"
+  const galleryTitle = "Aris Search"
 
   import { arrisHome, aris1 } from "../../../images/imageLinks.js"
 
-  const bazaarImages = ref([arrisHome, aris1])
+  const galleryImages = ref([arrisHome, aris1])
 
-  const bazaarCaptions = ref([
+  const galleryCaptions = ref([
     "Aris Search homepage",
     "Aris Search image effects",
   ])
@@ -29,10 +29,10 @@
 
 <template>
   <sliderAndGallery
-    :images="bazaarImages"
-    :captions="bazaarCaptions"
-    :link="bazaarLink"
-    :title="bazaarTitle"
+    :images="galleryImages"
+    :captions="galleryCaptions"
+    :link="galleryLink"
+    :title="galleryTitle"
     :brightness="brightness"
     ><slot>
       <p class="text-inherit">

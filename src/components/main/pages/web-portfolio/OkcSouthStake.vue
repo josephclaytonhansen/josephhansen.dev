@@ -2,18 +2,18 @@
   import { ref } from "vue"
 
   import sliderAndGallery from "../../blocks/sliderAndGallery/sliderAndGallery.vue"
-  const bazaarLink = "https://okcsouthstake.org"
-  const bazaarTitle = "OKC South Stake"
+  const galleryLink = "https://okcsouthstake.org"
+  const galleryTitle = "OKC South Stake"
 
   import { okcssHome } from "../../../images/imageLinks.js"
 
-  const bazaarImages = ref([
+  const galleryImages = ref([
     okcssHome,
     "https://images.josephhansen.dev/uploads/file2024-02-0621-1707277285248.webp",
     "https://images.josephhansen.dev/uploads/file2024-02-0621-1707277310460.webp",
   ])
 
-  const bazaarCaptions = ref([
+  const galleryCaptions = ref([
     "OKC South Stake homepage (light)",
     "OKC South Stake congregation subpage",
     "OKC South Stake homepage (dark)",
@@ -34,10 +34,10 @@
 
 <template>
   <sliderAndGallery
-    :images="bazaarImages"
-    :captions="bazaarCaptions"
-    :link="bazaarLink"
-    :title="bazaarTitle"
+    :images="galleryImages"
+    :captions="galleryCaptions"
+    :link="galleryLink"
+    :title="galleryTitle"
     :brightness="brightness"
     ><slot>
       <p class="text-inherit">

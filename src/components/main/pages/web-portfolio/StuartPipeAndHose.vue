@@ -2,18 +2,18 @@
   import { ref } from "vue"
 
   import sliderAndGallery from "../../blocks/sliderAndGallery/sliderAndGallery.vue"
-  const bazaarLink = "https://stuarthose.com/"
-  const bazaarTitle = "Stuart Hose and Pipe"
+  const galleryLink = "https://stuarthose.com/"
+  const galleryTitle = "Stuart Hose and Pipe"
 
   import { stuartHome } from "../../../images/imageLinks.js"
 
-  const bazaarImages = ref([
+  const galleryImages = ref([
     stuartHome,
     "https://images.josephhansen.dev/uploads/file2024-02-0621-1707275652278.webp",
     "https://images.josephhansen.dev/uploads/file2024-02-0621-1707275668557.webp",
   ])
 
-  const bazaarCaptions = ref(["Stuart Hose and Pipe homepage"])
+  const galleryCaptions = ref(["Stuart Hose and Pipe homepage"])
 
   const pClass = (brightness) => {
     if (brightness >= 4) {
@@ -30,10 +30,10 @@
 
 <template>
   <sliderAndGallery
-    :images="bazaarImages"
-    :captions="bazaarCaptions"
-    :link="bazaarLink"
-    :title="bazaarTitle"
+    :images="galleryImages"
+    :captions="galleryCaptions"
+    :link="galleryLink"
+    :title="galleryTitle"
     :brightness="brightness"
     ><slot>
       <p class="text-inherit">

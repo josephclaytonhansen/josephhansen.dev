@@ -59,6 +59,16 @@ const routes = [
     props: { component: "tub-boys" },
   },
   {
+    path: "/web-portfolio/chai",
+    component: null,
+    props: { component: "chai" },
+  },
+  {
+    path: "/web-portfolio/feed-council",
+    component: null,
+    props: { component: "feed-council" },
+  },
+  {
     path: "/web-portfolio/josephhansen-dev",
     component: null,
     props: { component: "josephhansen-dev" },

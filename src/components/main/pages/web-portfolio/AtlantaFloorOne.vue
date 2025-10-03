@@ -2,8 +2,8 @@
   import { ref } from "vue"
 
   import sliderAndGallery from "../../blocks/sliderAndGallery/sliderAndGallery.vue"
-  const bazaarLink = "https://floorsfloors.com/"
-  const bazaarTitle = "Atlanta Floor One"
+  const galleryLink = "https://floorsfloors.com/"
+  const galleryTitle = "Atlanta Floor One"
 
   import {
     atlantaHome,
@@ -12,9 +12,9 @@
     atlanta3,
   } from "../../../images/imageLinks.js"
 
-  const bazaarImages = ref([atlantaHome, atlanta1, atlanta2, atlanta3])
+  const galleryImages = ref([atlantaHome, atlanta1, atlanta2, atlanta3])
 
-  const bazaarCaptions = ref([
+  const galleryCaptions = ref([
     "Atlanta Floors One homepage",
     "Atlanta Floors One testimonial section",
     "Contact page (featuring parallax architectural sketch background)",
@@ -36,10 +36,10 @@
 
 <template>
   <sliderAndGallery
-    :images="bazaarImages"
-    :captions="bazaarCaptions"
-    :link="bazaarLink"
-    :title="bazaarTitle"
+    :images="galleryImages"
+    :captions="galleryCaptions"
+    :link="galleryLink"
+    :title="galleryTitle"
     :brightness="brightness"
     ><slot>
       <p class="text-inherit">
