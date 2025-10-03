@@ -1,6 +1,6 @@
 <script setup>
   import Header from "./blocks/header/Header.vue"
-  import Hero from "./blocks/hero/Hero.vue"
+  import WebServicesHero from "./blocks/Hero/WebServicesHero.vue"
   import Services from "./blocks/services/Services.vue"
   import messageBanner from "./blocks/messageBanner/messageBanner.vue"
   import Pricing from "./pages/Pricing.vue"
@@ -305,7 +305,7 @@
           'bg-slate-900': brightness == 1,
         }"
         v-if="component == 'web-services'">
-        <Hero :brightness="brightness" />
+        <WebServicesHero :brightness="brightness" />
       </div>
     </div>
 

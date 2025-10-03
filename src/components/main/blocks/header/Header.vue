@@ -150,7 +150,9 @@
                     'text-slate-200': brightness == 2,
                     'text-slate-400': brightness == 1,
                   }"
-                  ><b>Web Portfolio</b></a
+                  ><b v-if="$route.path.startsWith('/web-portfolio')"
+                    >Web Portfolio</b
+                  ><span v-else>Web Portfolio</span></a
                 >
                 <a
                   @click="$router.push('/web-services')"
@@ -163,7 +165,8 @@
                     'text-slate-200': brightness == 2,
                     'text-slate-400': brightness == 1,
                   }"
-                  >Web Services</a
+                  ><b v-if="$route.path === '/web-services'">Web Services</b
+                  ><span v-else>Web Services</span></a
                 >
               </div>
             </PopoverPanel>
@@ -207,7 +210,7 @@
                     'text-slate-200': brightness == 2,
                     'text-slate-400': brightness == 1,
                   }"
-                  ><b>Art and Animation</b></a
+                  >Art and Animation</a
                 >
                 <a
                   href="/blog"

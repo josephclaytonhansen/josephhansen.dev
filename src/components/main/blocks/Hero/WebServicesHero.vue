@@ -111,7 +111,7 @@
       Hi, I'm Joseph. I'm a full-stack web developer. What can I do for you?
     </p>
     <div class="flex py-5 justify-center gap-3 w-full">
-      <a href="/portfolio"
+      <a href="/web-portfolio"
         ><button
           aria-label="View my portfolio"
           class="rounded px-5 py-2 text-white font-semibold"
@@ -124,7 +124,7 @@
           Portfolio
         </button></a
       >
-      <a href="/pricing"
+      <a href="/web-pricing"
         ><button
           aria-label="View service pricing for an existing website"
           class="rounded px-5 py-2 text-white font-semibold"

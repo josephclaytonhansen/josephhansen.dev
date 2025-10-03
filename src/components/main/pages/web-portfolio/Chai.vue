@@ -7,9 +7,7 @@
 
   import { chaiHome } from "../../../images/imageLinks.js"
 
-  const galleryImages = ref([
-    chaiHome,
-  ])
+  const galleryImages = ref([chaiHome])
 
   const galleryCaptions = ref([])
 </script>
@@ -21,8 +19,6 @@
     :link="galleryLink"
     :title="galleryTitle"
     :brightness="brightness"
-    ><slot>
-      
-    </slot></sliderAndGallery
-  >
+    ><slot> </slot
+  ></sliderAndGallery>
 </template>
