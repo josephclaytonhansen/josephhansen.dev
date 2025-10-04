@@ -54,7 +54,10 @@
   // About Me components
   import Resume from "./pages/about-me/Resume.vue"
 
-  const brightness = ref(1)
+  const brightness = ref(3)
+
+  /* -------------------------- Show message banner? -------------------------- */
+  const banner = ref(false)
 
   const props = defineProps({
     component: String,
@@ -507,7 +510,9 @@
       </div>
     </div>
   </main>
-  <messageBanner :brightness="brightness" />
+
+  <messageBanner :brightness="brightness" v-if="banner" />
+
 </template>
 
 <style scoped>

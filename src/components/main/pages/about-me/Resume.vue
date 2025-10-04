@@ -14,9 +14,7 @@
       'text-slate-200': brightness <= 3,
     }">
     <h1 class="text-4xl font-bold mb-6">Resume</h1>
-    <p class="text-lg mb-4 text-center max-w-2xl">
-      Resume content goes here.
-    </p>
+    <p class="text-lg mb-4 text-center max-w-2xl">Resume content goes here.</p>
   </div>
 </template>
 
