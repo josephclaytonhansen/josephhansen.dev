@@ -105,7 +105,7 @@
               'text-orange-500 hover:text-orange-400': brightness == 2,
               'text-orange-400 hover:text-orange-300': brightness == 1,
             }"
-            class="font-monospace font-bold cursor-pointer"
+            class="font-monospace font-bold cursor-pointer transition-colors duration-300"
             @click="goHome"
             id="logoText">
             josephhansen.dev
@@ -695,7 +695,7 @@
               'text-orange-500 hover:text-orange-400': brightness == 2,
               'text-orange-400 hover:text-orange-300': brightness == 1,
             }"
-            class="font-monospace font-bold cursor-pointer"
+            class="font-monospace font-bold cursor-pointer transition-colors duration-300"
             @click="goHome"
             id="logoText">
             josephhansen.dev
@@ -789,7 +789,7 @@
             'text-orange-500 hover:text-orange-400': brightness == 2,
             'text-orange-400 hover:text-orange-300': brightness == 1,
           }"
-          class="font-monospace font-bold cursor-pointer"
+          class="font-monospace font-bold cursor-pointer transition-colors duration-300"
           @click="goHome"
           id="logoText">
           josephhansen.dev
@@ -1146,9 +1146,3 @@
     </ul>
   </div>
 </template>
-
-<style scoped>
-  #logoText {
-    transition: all 0.25s ease-in-out;
-  }
-</style>

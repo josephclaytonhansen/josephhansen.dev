@@ -8786,11 +8786,11 @@ const kl = He("XIcon", [
                           class: x([
                             "rounded mt-2 lg:mt-0 px-2 transition-colors duration-300",
                             {
-                              "bg-slate-200 hover:bg-slate-300": n.value == 5,
-                              "bg-slate-300 hover:bg-slate-400": n.value == 4,
-                              "bg-slate-600 hover:bg-slate-700": n.value == 3,
-                              "bg-slate-800 hover:bg-slate-900": n.value == 2,
-                              "bg-slate-900 hover:bg-black": n.value == 1,
+                              "bg-slate-200": n.value == 5,
+                              "bg-slate-300": n.value == 4,
+                              "bg-slate-600": n.value == 3,
+                              "bg-slate-800": n.value == 2,
+                              "bg-slate-900": n.value == 1,
                             },
                           ]),
                         },
@@ -8798,29 +8798,37 @@ const kl = He("XIcon", [
                           default: oe(() => [
                             n.value == 5
                               ? (L(),
-                                he(Z(v0), { key: 0, class: "text-slate-900" }))
+                                he(Z(v0), {
+                                  key: 0,
+                                  class:
+                                    "text-slate-900 hover:text-emerald-500 transition-colors duration-300",
+                                }))
                               : n.value == 4
                                 ? (L(),
                                   he(Z(a0), {
                                     key: 1,
-                                    class: "text-slate-800",
+                                    class:
+                                      "text-slate-800 hover:text-emerald-500 transition-colors duration-300",
                                   }))
                                 : n.value == 3
                                   ? (L(),
                                     he(Z(o0), {
                                       key: 2,
-                                      class: "text-slate-300",
+                                      class:
+                                        "text-slate-300 hover:text-orange-200 transition-colors duration-300",
                                     }))
                                   : n.value == 2
                                     ? (L(),
                                       he(Z(h0), {
                                         key: 3,
-                                        class: "text-slate-200",
+                                        class:
+                                          "text-slate-200 hover:text-orange-500 transition-colors duration-300",
                                       }))
                                     : (L(),
                                       he(Z(p0), {
                                         key: 4,
-                                        class: "text-slate-400",
+                                        class:
+                                          "text-slate-400 hover:text-orange-400 transition-colors duration-300",
                                       })),
                           ]),
                           _: 1,
@@ -9640,7 +9648,7 @@ const kl = He("XIcon", [
       )
     },
   },
-  oh = Zt(ih, [["__scopeId", "data-v-c836c8c8"]]),
+  oh = Zt(ih, [["__scopeId", "data-v-2ba19576"]]),
   ah = { class: "flex justify-center py-5 flex-col" },
   uh = { class: "inline-block relative" },
   ch = { class: "font-semibold text-center px-1" },
