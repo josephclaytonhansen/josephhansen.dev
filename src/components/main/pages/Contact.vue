@@ -24,7 +24,7 @@
     let referrer = window.location.href
 
     let xhr = new XMLHttpRequest()
-    xhr.open("POST", "https://images.josephhansen.dev/api/forms/submit", true)
+    xhr.open("POST", "https://api.josephhansen.dev/forms/submit", true)
     xhr.setRequestHeader("Content-Type", "application/json")
     xhr.send(
       JSON.stringify({
