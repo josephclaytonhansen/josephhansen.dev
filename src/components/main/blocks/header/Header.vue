@@ -720,17 +720,27 @@
           aria-label="Toggle brightness dropdown menu"
           class="rounded mt-2 lg:mt-0 px-2 transition-colors duration-300"
           :class="{
-            'bg-slate-200 hover:bg-slate-300': brightness == 5,
-            'bg-slate-300 hover:bg-slate-400': brightness == 4,
-            'bg-slate-600 hover:bg-slate-700': brightness == 3,
-            'bg-slate-800 hover:bg-slate-900': brightness == 2,
-            'bg-slate-900 hover:bg-black': brightness == 1,
+            'bg-slate-200': brightness == 5,
+            'bg-slate-300': brightness == 4,
+            'bg-slate-600': brightness == 3,
+            'bg-slate-800': brightness == 2,
+            'bg-slate-900': brightness == 1,
           }">
-          <Sun v-if="brightness == 5" class="text-slate-900" />
-          <CloudSun v-else-if="brightness == 4" class="text-slate-800" />
-          <CloudDrizzle v-else-if="brightness == 3" class="text-slate-300" />
-          <Moon v-else-if="brightness == 2" class="text-slate-200" />
-          <MoonStar v-else class="text-slate-400" />
+          <Sun
+            v-if="brightness == 5"
+            class="text-slate-900 hover:text-emerald-500 transition-colors duration-300" />
+          <CloudSun
+            v-else-if="brightness == 4"
+            class="text-slate-800 hover:text-emerald-500 transition-colors duration-300" />
+          <CloudDrizzle
+            v-else-if="brightness == 3"
+            class="text-slate-300 hover:text-orange-200 transition-colors duration-300" />
+          <Moon
+            v-else-if="brightness == 2"
+            class="text-slate-200 hover:text-orange-500 transition-colors duration-300" />
+          <MoonStar
+            v-else
+            class="text-slate-400 hover:text-orange-400 transition-colors duration-300" />
         </PopoverButton>
         <PopoverPanel class="absolute w-full right-4 mt-2 origin-top-right">
           <div class="flex flex-col gap-2 p-2">
@@ -808,22 +818,26 @@
       <li class="py-2 px-3 rounded opacity-75 font-semibold">Web</li>
       <ul class="ml-5">
         <a @click="navigate('/web-portfolio')">
-          <li class="py-2 px-3 rounded transition-colors duration-300" :class="{
-            'hover:text-emerald-500': brightness >= 4,
-            'hover:text-orange-200': brightness == 3,
-            'hover:text-orange-500': brightness == 2,
-            'hover:text-orange-400': brightness == 1
-          }">
+          <li
+            class="py-2 px-3 rounded transition-colors duration-300"
+            :class="{
+              'hover:text-emerald-500': brightness >= 4,
+              'hover:text-orange-200': brightness == 3,
+              'hover:text-orange-500': brightness == 2,
+              'hover:text-orange-400': brightness == 1,
+            }">
             Web Portfolio
           </li>
         </a>
         <a @click="navigate('/web-services')">
-          <li class="py-2 px-3 rounded transition-colors duration-300" :class="{
-            'hover:text-emerald-500': brightness >= 4,
-            'hover:text-orange-200': brightness == 3,
-            'hover:text-orange-500': brightness == 2,
-            'hover:text-orange-400': brightness == 1
-          }">
+          <li
+            class="py-2 px-3 rounded transition-colors duration-300"
+            :class="{
+              'hover:text-emerald-500': brightness >= 4,
+              'hover:text-orange-200': brightness == 3,
+              'hover:text-orange-500': brightness == 2,
+              'hover:text-orange-400': brightness == 1,
+            }">
             Web Services
           </li>
         </a>
@@ -833,32 +847,38 @@
       <li class="py-2 px-3 rounded opacity-75 font-semibold">Unity</li>
       <ul class="ml-5">
         <a @click="navigate('/unity-editor-scripts')">
-          <li class="py-2 px-3 rounded transition-colors duration-300" :class="{
-            'hover:text-emerald-500': brightness >= 4,
-            'hover:text-orange-200': brightness == 3,
-            'hover:text-orange-500': brightness == 2,
-            'hover:text-orange-400': brightness == 1
-          }">
+          <li
+            class="py-2 px-3 rounded transition-colors duration-300"
+            :class="{
+              'hover:text-emerald-500': brightness >= 4,
+              'hover:text-orange-200': brightness == 3,
+              'hover:text-orange-500': brightness == 2,
+              'hover:text-orange-400': brightness == 1,
+            }">
             Helpful Editor Scripts
           </li>
         </a>
         <a @click="navigate('/unity-projects')">
-          <li class="py-2 px-3 rounded transition-colors duration-300" :class="{
-            'hover:text-emerald-500': brightness >= 4,
-            'hover:text-orange-200': brightness == 3,
-            'hover:text-orange-500': brightness == 2,
-            'hover:text-orange-400': brightness == 1
-          }">
+          <li
+            class="py-2 px-3 rounded transition-colors duration-300"
+            :class="{
+              'hover:text-emerald-500': brightness >= 4,
+              'hover:text-orange-200': brightness == 3,
+              'hover:text-orange-500': brightness == 2,
+              'hover:text-orange-400': brightness == 1,
+            }">
             Projects
           </li>
         </a>
         <a @click="navigate('/unity-shader-graph')">
-          <li class="py-2 px-3 rounded transition-colors duration-300" :class="{
-            'hover:text-emerald-500': brightness >= 4,
-            'hover:text-orange-200': brightness == 3,
-            'hover:text-orange-500': brightness == 2,
-            'hover:text-orange-400': brightness == 1
-          }">
+          <li
+            class="py-2 px-3 rounded transition-colors duration-300"
+            :class="{
+              'hover:text-emerald-500': brightness >= 4,
+              'hover:text-orange-200': brightness == 3,
+              'hover:text-orange-500': brightness == 2,
+              'hover:text-orange-400': brightness == 1,
+            }">
             Shader Graph
           </li>
         </a>
@@ -870,32 +890,38 @@
         <li class="py-1 px-3 rounded opacity-75 text-sm">PHP</li>
         <ul class="ml-5">
           <a @click="navigate('/figref')">
-            <li class="py-1 px-3 rounded text-sm transition-colors duration-300" :class="{
-              'hover:text-emerald-500': brightness >= 4,
-              'hover:text-orange-200': brightness == 3,
-              'hover:text-orange-500': brightness == 2,
-              'hover:text-orange-400': brightness == 1
-            }">
+            <li
+              class="py-1 px-3 rounded text-sm transition-colors duration-300"
+              :class="{
+                'hover:text-emerald-500': brightness >= 4,
+                'hover:text-orange-200': brightness == 3,
+                'hover:text-orange-500': brightness == 2,
+                'hover:text-orange-400': brightness == 1,
+              }">
               FigRef
             </li>
           </a>
           <a @click="navigate('/wordpress-themes')">
-            <li class="py-1 px-3 rounded text-sm transition-colors duration-300" :class="{
-              'hover:text-emerald-500': brightness >= 4,
-              'hover:text-orange-200': brightness == 3,
-              'hover:text-orange-500': brightness == 2,
-              'hover:text-orange-400': brightness == 1
-            }">
+            <li
+              class="py-1 px-3 rounded text-sm transition-colors duration-300"
+              :class="{
+                'hover:text-emerald-500': brightness >= 4,
+                'hover:text-orange-200': brightness == 3,
+                'hover:text-orange-500': brightness == 2,
+                'hover:text-orange-400': brightness == 1,
+              }">
               Custom WordPress Themes
             </li>
           </a>
           <a @click="navigate('/wordpress-plugins')">
-            <li class="py-1 px-3 rounded text-sm transition-colors duration-300" :class="{
-              'hover:text-emerald-500': brightness >= 4,
-              'hover:text-orange-200': brightness == 3,
-              'hover:text-orange-500': brightness == 2,
-              'hover:text-orange-400': brightness == 1
-            }">
+            <li
+              class="py-1 px-3 rounded text-sm transition-colors duration-300"
+              :class="{
+                'hover:text-emerald-500': brightness >= 4,
+                'hover:text-orange-200': brightness == 3,
+                'hover:text-orange-500': brightness == 2,
+                'hover:text-orange-400': brightness == 1,
+              }">
               WordPress Plugins
             </li>
           </a>
@@ -903,32 +929,38 @@
         <li class="py-1 px-3 rounded opacity-75 text-sm">JavaScript</li>
         <ul class="ml-5">
           <a @click="navigate('/discourse-image-comparison')">
-            <li class="py-1 px-3 rounded text-sm transition-colors duration-300" :class="{
-              'hover:text-emerald-500': brightness >= 4,
-              'hover:text-orange-200': brightness == 3,
-              'hover:text-orange-500': brightness == 2,
-              'hover:text-orange-400': brightness == 1
-            }">
+            <li
+              class="py-1 px-3 rounded text-sm transition-colors duration-300"
+              :class="{
+                'hover:text-emerald-500': brightness >= 4,
+                'hover:text-orange-200': brightness == 3,
+                'hover:text-orange-500': brightness == 2,
+                'hover:text-orange-400': brightness == 1,
+              }">
               Discourse Image Comparison Slider
             </li>
           </a>
           <a @click="navigate('/garden-tracker')">
-            <li class="py-1 px-3 rounded text-sm transition-colors duration-300" :class="{
-              'hover:text-emerald-500': brightness >= 4,
-              'hover:text-orange-200': brightness == 3,
-              'hover:text-orange-500': brightness == 2,
-              'hover:text-orange-400': brightness == 1
-            }">
+            <li
+              class="py-1 px-3 rounded text-sm transition-colors duration-300"
+              :class="{
+                'hover:text-emerald-500': brightness >= 4,
+                'hover:text-orange-200': brightness == 3,
+                'hover:text-orange-500': brightness == 2,
+                'hover:text-orange-400': brightness == 1,
+              }">
               Garden Tracker
             </li>
           </a>
           <a @click="navigate('/javascript-snippets')">
-            <li class="py-1 px-3 rounded text-sm transition-colors duration-300" :class="{
-              'hover:text-emerald-500': brightness >= 4,
-              'hover:text-orange-200': brightness == 3,
-              'hover:text-orange-500': brightness == 2,
-              'hover:text-orange-400': brightness == 1
-            }">
+            <li
+              class="py-1 px-3 rounded text-sm transition-colors duration-300"
+              :class="{
+                'hover:text-emerald-500': brightness >= 4,
+                'hover:text-orange-200': brightness == 3,
+                'hover:text-orange-500': brightness == 2,
+                'hover:text-orange-400': brightness == 1,
+              }">
               Javascript Snippets
             </li>
           </a>
@@ -936,22 +968,26 @@
         <li class="py-1 px-3 rounded opacity-75 text-sm">Arduino</li>
         <ul class="ml-5">
           <a @click="navigate('/blender-arduino-controller')">
-            <li class="py-1 px-3 rounded text-sm transition-colors duration-300" :class="{
-              'hover:text-emerald-500': brightness >= 4,
-              'hover:text-orange-200': brightness == 3,
-              'hover:text-orange-500': brightness == 2,
-              'hover:text-orange-400': brightness == 1
-            }">
+            <li
+              class="py-1 px-3 rounded text-sm transition-colors duration-300"
+              :class="{
+                'hover:text-emerald-500': brightness >= 4,
+                'hover:text-orange-200': brightness == 3,
+                'hover:text-orange-500': brightness == 2,
+                'hover:text-orange-400': brightness == 1,
+              }">
               Blender Arduino Controller
             </li>
           </a>
           <a @click="navigate('/arduino-leds')">
-            <li class="py-1 px-3 rounded text-sm transition-colors duration-300" :class="{
-              'hover:text-emerald-500': brightness >= 4,
-              'hover:text-orange-200': brightness == 3,
-              'hover:text-orange-500': brightness == 2,
-              'hover:text-orange-400': brightness == 1
-            }">
+            <li
+              class="py-1 px-3 rounded text-sm transition-colors duration-300"
+              :class="{
+                'hover:text-emerald-500': brightness >= 4,
+                'hover:text-orange-200': brightness == 3,
+                'hover:text-orange-500': brightness == 2,
+                'hover:text-orange-400': brightness == 1,
+              }">
               LEDs
             </li>
           </a>
@@ -959,12 +995,14 @@
         <li class="py-1 px-3 rounded opacity-75 text-sm">Python</li>
         <ul class="ml-5">
           <a @click="navigate('/instagram-scraper')">
-            <li class="py-1 px-3 rounded text-sm transition-colors duration-300" :class="{
-              'hover:text-emerald-500': brightness >= 4,
-              'hover:text-orange-200': brightness == 3,
-              'hover:text-orange-500': brightness == 2,
-              'hover:text-orange-400': brightness == 1
-            }">
+            <li
+              class="py-1 px-3 rounded text-sm transition-colors duration-300"
+              :class="{
+                'hover:text-emerald-500': brightness >= 4,
+                'hover:text-orange-200': brightness == 3,
+                'hover:text-orange-500': brightness == 2,
+                'hover:text-orange-400': brightness == 1,
+              }">
               Instagram Scraper
             </li>
           </a>
@@ -975,42 +1013,50 @@
       <li class="py-2 px-3 rounded opacity-75 font-semibold">Blender</li>
       <ul class="ml-5">
         <a @click="navigate('/blender-art')">
-          <li class="py-2 px-3 rounded transition-colors duration-300" :class="{
-            'hover:text-emerald-500': brightness >= 4,
-            'hover:text-orange-200': brightness == 3,
-            'hover:text-orange-500': brightness == 2,
-            'hover:text-orange-400': brightness == 1
-          }">
+          <li
+            class="py-2 px-3 rounded transition-colors duration-300"
+            :class="{
+              'hover:text-emerald-500': brightness >= 4,
+              'hover:text-orange-200': brightness == 3,
+              'hover:text-orange-500': brightness == 2,
+              'hover:text-orange-400': brightness == 1,
+            }">
             Art Portfolio
           </li>
         </a>
         <a @click="navigate('/fruitbat')">
-          <li class="py-2 px-3 rounded transition-colors duration-300" :class="{
-            'hover:text-emerald-500': brightness >= 4,
-            'hover:text-orange-200': brightness == 3,
-            'hover:text-orange-500': brightness == 2,
-            'hover:text-orange-400': brightness == 1
-          }">
+          <li
+            class="py-2 px-3 rounded transition-colors duration-300"
+            :class="{
+              'hover:text-emerald-500': brightness >= 4,
+              'hover:text-orange-200': brightness == 3,
+              'hover:text-orange-500': brightness == 2,
+              'hover:text-orange-400': brightness == 1,
+            }">
             Custom Build (Fruitbat)
           </li>
         </a>
         <a @click="navigate('/blender-addons')">
-          <li class="py-2 px-3 rounded transition-colors duration-300" :class="{
-            'hover:text-emerald-500': brightness >= 4,
-            'hover:text-orange-200': brightness == 3,
-            'hover:text-orange-500': brightness == 2,
-            'hover:text-orange-400': brightness == 1
-          }">
+          <li
+            class="py-2 px-3 rounded transition-colors duration-300"
+            :class="{
+              'hover:text-emerald-500': brightness >= 4,
+              'hover:text-orange-200': brightness == 3,
+              'hover:text-orange-500': brightness == 2,
+              'hover:text-orange-400': brightness == 1,
+            }">
             My Add-Ons
           </li>
         </a>
         <a @click="navigate('/shading-rig')">
-          <li class="py-2 px-3 rounded transition-colors duration-300" :class="{
-            'hover:text-emerald-500': brightness >= 4,
-            'hover:text-orange-200': brightness == 3,
-            'hover:text-orange-500': brightness == 2,
-            'hover:text-orange-400': brightness == 1
-          }">
+          <li
+            class="py-2 px-3 rounded transition-colors duration-300"
+            :class="{
+              'hover:text-emerald-500': brightness >= 4,
+              'hover:text-orange-200': brightness == 3,
+              'hover:text-orange-500': brightness == 2,
+              'hover:text-orange-400': brightness == 1,
+            }">
             Shading Rig + Cel Character Tools
           </li>
         </a>
@@ -1020,32 +1066,38 @@
       <li class="py-2 px-3 rounded opacity-75 font-semibold">Communications</li>
       <ul class="ml-5">
         <a @click="navigate('/devlog')">
-          <li class="py-2 px-3 rounded transition-colors duration-300" :class="{
-            'hover:text-emerald-500': brightness >= 4,
-            'hover:text-orange-200': brightness == 3,
-            'hover:text-orange-500': brightness == 2,
-            'hover:text-orange-400': brightness == 1
-          }">
+          <li
+            class="py-2 px-3 rounded transition-colors duration-300"
+            :class="{
+              'hover:text-emerald-500': brightness >= 4,
+              'hover:text-orange-200': brightness == 3,
+              'hover:text-orange-500': brightness == 2,
+              'hover:text-orange-400': brightness == 1,
+            }">
             Technical Blog
           </li>
         </a>
         <a @click="navigate('/blog')">
-          <li class="py-2 px-3 rounded transition-colors duration-300" :class="{
-            'hover:text-emerald-500': brightness >= 4,
-            'hover:text-orange-200': brightness == 3,
-            'hover:text-orange-500': brightness == 2,
-            'hover:text-orange-400': brightness == 1
-          }">
+          <li
+            class="py-2 px-3 rounded transition-colors duration-300"
+            :class="{
+              'hover:text-emerald-500': brightness >= 4,
+              'hover:text-orange-200': brightness == 3,
+              'hover:text-orange-500': brightness == 2,
+              'hover:text-orange-400': brightness == 1,
+            }">
             Personal Blog
           </li>
         </a>
         <a @click="navigate('/presentations')">
-          <li class="py-2 px-3 rounded transition-colors duration-300" :class="{
-            'hover:text-emerald-500': brightness >= 4,
-            'hover:text-orange-200': brightness == 3,
-            'hover:text-orange-500': brightness == 2,
-            'hover:text-orange-400': brightness == 1
-          }">
+          <li
+            class="py-2 px-3 rounded transition-colors duration-300"
+            :class="{
+              'hover:text-emerald-500': brightness >= 4,
+              'hover:text-orange-200': brightness == 3,
+              'hover:text-orange-500': brightness == 2,
+              'hover:text-orange-400': brightness == 1,
+            }">
             Presentations
           </li>
         </a>
@@ -1055,32 +1107,38 @@
       <li class="py-2 px-3 rounded opacity-75 font-semibold">About Me</li>
       <ul class="ml-5">
         <a @click="navigate('/about-me')">
-          <li class="py-2 px-3 rounded transition-colors duration-300" :class="{
-            'hover:text-emerald-500': brightness >= 4,
-            'hover:text-orange-200': brightness == 3,
-            'hover:text-orange-500': brightness == 2,
-            'hover:text-orange-400': brightness == 1
-          }">
+          <li
+            class="py-2 px-3 rounded transition-colors duration-300"
+            :class="{
+              'hover:text-emerald-500': brightness >= 4,
+              'hover:text-orange-200': brightness == 3,
+              'hover:text-orange-500': brightness == 2,
+              'hover:text-orange-400': brightness == 1,
+            }">
             About Me
           </li>
         </a>
         <a @click="navigate('/resume')">
-          <li class="py-2 px-3 rounded transition-colors duration-300" :class="{
-            'hover:text-emerald-500': brightness >= 4,
-            'hover:text-orange-200': brightness == 3,
-            'hover:text-orange-500': brightness == 2,
-            'hover:text-orange-400': brightness == 1
-          }">
+          <li
+            class="py-2 px-3 rounded transition-colors duration-300"
+            :class="{
+              'hover:text-emerald-500': brightness >= 4,
+              'hover:text-orange-200': brightness == 3,
+              'hover:text-orange-500': brightness == 2,
+              'hover:text-orange-400': brightness == 1,
+            }">
             Resume
           </li>
         </a>
         <a @click="navigate('/contact')">
-          <li class="py-2 px-3 rounded transition-colors duration-300" :class="{
-            'hover:text-emerald-500': brightness >= 4,
-            'hover:text-orange-200': brightness == 3,
-            'hover:text-orange-500': brightness == 2,
-            'hover:text-orange-400': brightness == 1
-          }">
+          <li
+            class="py-2 px-3 rounded transition-colors duration-300"
+            :class="{
+              'hover:text-emerald-500': brightness >= 4,
+              'hover:text-orange-200': brightness == 3,
+              'hover:text-orange-500': brightness == 2,
+              'hover:text-orange-400': brightness == 1,
+            }">
             Contact
           </li>
         </a>

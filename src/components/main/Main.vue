@@ -512,7 +512,6 @@
   </main>
 
   <messageBanner :brightness="brightness" v-if="banner" />
-
 </template>
 
 <style scoped>
