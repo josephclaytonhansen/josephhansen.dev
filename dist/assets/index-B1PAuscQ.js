@@ -20163,11 +20163,7 @@ const cv = {
             a = document.getElementsByName("message")[0].value,
             c = window.location.href,
             u = new XMLHttpRequest()
-          u.open(
-            "POST",
-            "https://images.josephhansen.dev/api/forms/submit",
-            !0,
-          ),
+          u.open("POST", "https://api.josephhansen.dev/forms/submit", !0),
             u.setRequestHeader("Content-Type", "application/json"),
             u.send(
               JSON.stringify({
