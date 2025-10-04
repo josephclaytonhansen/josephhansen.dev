@@ -718,7 +718,7 @@
       <Popover>
         <PopoverButton
           aria-label="Toggle brightness dropdown menu"
-          class="rounded mt-2 lg:mt-0 px-2 transition-all duration-300"
+          class="rounded mt-2 lg:mt-0 px-2"
           :class="{
             'bg-slate-200': brightness == 5,
             'bg-slate-300': brightness == 4,

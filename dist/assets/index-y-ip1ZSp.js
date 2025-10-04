@@ -8784,7 +8784,7 @@ const kl = He("XIcon", [
                         {
                           "aria-label": "Toggle brightness dropdown menu",
                           class: x([
-                            "rounded mt-2 lg:mt-0 px-2 transition-colors duration-300",
+                            "rounded mt-2 lg:mt-0 px-2 transition-all duration-300",
                             {
                               "bg-slate-200": n.value == 5,
                               "bg-slate-300": n.value == 4,
