@@ -73,6 +73,111 @@ const routes = [
     component: null,
     props: { component: "josephhansen-dev" },
   },
+  // Unity routes
+  {
+    path: "/unity-editor-scripts",
+    component: null,
+    props: { component: "helpful-editor-scripts" },
+  },
+  {
+    path: "/unity-projects",
+    component: null,
+    props: { component: "unity-projects" },
+  },
+  {
+    path: "/unity-shader-graph",
+    component: null,
+    props: { component: "shader-graph" },
+  },
+  // Programming routes
+  {
+    path: "/figref",
+    component: null,
+    props: { component: "figref" },
+  },
+  {
+    path: "/wordpress-themes",
+    component: null,
+    props: { component: "wordpress-themes" },
+  },
+  {
+    path: "/wordpress-plugins",
+    component: null,
+    props: { component: "wordpress-plugins" },
+  },
+  {
+    path: "/discourse-image-comparison",
+    component: null,
+    props: { component: "discourse-image-comparison" },
+  },
+  {
+    path: "/garden-tracker",
+    component: null,
+    props: { component: "garden-tracker" },
+  },
+  {
+    path: "/javascript-snippets",
+    component: null,
+    props: { component: "javascript-snippets" },
+  },
+  {
+    path: "/blender-arduino-controller",
+    component: null,
+    props: { component: "blender-arduino-controller" },
+  },
+  {
+    path: "/arduino-leds",
+    component: null,
+    props: { component: "arduino-leds" },
+  },
+  {
+    path: "/instagram-scraper",
+    component: null,
+    props: { component: "instagram-scraper" },
+  },
+  // Blender routes
+  {
+    path: "/blender-art",
+    component: null,
+    props: { component: "art-portfolio" },
+  },
+  {
+    path: "/fruitbat",
+    component: null,
+    props: { component: "fruitbat" },
+  },
+  {
+    path: "/blender-addons",
+    component: null,
+    props: { component: "addons" },
+  },
+  {
+    path: "/shading-rig",
+    component: null,
+    props: { component: "shading-rig" },
+  },
+  // Communications routes
+  {
+    path: "/devlog",
+    component: null,
+    props: { component: "devlog" },
+  },
+  {
+    path: "/blog",
+    component: null,
+    props: { component: "blog" },
+  },
+  {
+    path: "/presentations",
+    component: null,
+    props: { component: "presentations" },
+  },
+  // About Me routes
+  {
+    path: "/resume",
+    component: null,
+    props: { component: "resume" },
+  },
 ]
 
 const routePaths = routes.map((route) => route.path)

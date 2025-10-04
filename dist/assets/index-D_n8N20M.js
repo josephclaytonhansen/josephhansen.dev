@@ -4171,9 +4171,7 @@ typeof window < "u" &&
 let $f = ["textarea", "input"].join(",")
 function Lf(e) {
   var t, n
-  return (n =
-    (t = e == null ? void 0 : e.matches) == null ? void 0 : t.call(e, $f)) !=
-    null
+  return (n = (t = e?.matches) == null ? void 0 : t.call(e, $f)) != null
     ? n
     : !1
 }
@@ -4201,9 +4199,7 @@ function ut(
         ? e.length > 0
           ? e[0].ownerDocument
           : document
-        : e == null
-          ? void 0
-          : e.ownerDocument) != null
+        : e?.ownerDocument) != null
         ? r
         : document,
     a = Array.isArray(e) ? (n ? kn(e) : e) : mi(e)
@@ -4237,7 +4233,7 @@ function ut(
       if (m < 0) return 3
       if (m >= f) return 1
     }
-    ;(h = a[m]), h == null || h.focus(u), (d += o)
+    ;(h = a[m]), h?.focus(u), (d += o)
   } while (h !== l.activeElement)
   return t & 6 && Lf(h) && h.select(), 2
 }
@@ -4604,8 +4600,7 @@ function Gf({
           ? c.push(u)
           : "value" in u && u.value instanceof HTMLElement && c.push(u.value))
     if (t != null && t.value) for (let u of t.value) c.push(u)
-    for (let u of (l =
-      i == null ? void 0 : i.querySelectorAll("html > *, body > *")) != null
+    for (let u of (l = i?.querySelectorAll("html > *, body > *")) != null
       ? l
       : [])
       u !== document.body &&
@@ -4699,11 +4694,7 @@ let Rs = ft({
           var T, O
           if (!Q(a) || !Q(u)) return !1
           for (let W of document.querySelectorAll("body > *"))
-            if (
-              Number(W == null ? void 0 : W.contains(Q(a))) ^
-              Number(W == null ? void 0 : W.contains(Q(u)))
-            )
-              return !0
+            if (Number(W?.contains(Q(a))) ^ Number(W?.contains(Q(u)))) return !0
           let E = mi(),
             A = E.indexOf(Q(a)),
             I = (A + E.length - 1) % E.length,
@@ -4739,7 +4730,7 @@ let Rs = ft({
                   ? Q(T)
                   : Q(h.button)
               : Q(h.button)
-            O == null || O.focus()
+            O?.focus()
           },
         }
       bt(Xo, h), Ff(te(() => dt(l.value, { 0: ps.Open, 1: ps.Closed })))
@@ -4751,16 +4742,16 @@ let Rs = ft({
           },
         },
         b = Jo(),
-        C = b == null ? void 0 : b.registerPopover,
+        C = b?.registerPopover,
         [w, g] = Vf(),
         v = Gf({
-          mainTreeNodeRef: b == null ? void 0 : b.mainTreeNodeRef,
+          mainTreeNodeRef: b?.mainTreeNodeRef,
           portals: w,
           defaultContainers: [a, u],
         })
       function x() {
         var T, O, E, A
-        return (A = b == null ? void 0 : b.isFocusWithinPopoverGroup()) != null
+        return (A = b?.isFocusWithinPopoverGroup()) != null
           ? A
           : ((T = d.value) == null ? void 0 : T.activeElement) &&
               (((O = Q(a)) == null
@@ -4771,7 +4762,7 @@ let Rs = ft({
                   : E.contains(d.value.activeElement)))
       }
       return (
-        Jt(() => (C == null ? void 0 : C(m))),
+        Jt(() => C?.(m)),
         Hf(
           (i = d.value) == null ? void 0 : i.defaultView,
           "focus",
@@ -4842,7 +4833,7 @@ let Rs = ft({
           l.buttonId.value = null
         })
       let o = Jo(),
-        c = o == null ? void 0 : o.closeOthers,
+        c = o?.closeOthers,
         u = Uf(),
         d = te(() => (u === null ? !1 : u.value === l.panelId.value)),
         f = V(null),
@@ -4874,13 +4865,11 @@ let Rs = ft({
             case ze.Enter:
               T.preventDefault(),
                 T.stopPropagation(),
-                l.popoverState.value === 1 &&
-                  (c == null || c(l.buttonId.value)),
+                l.popoverState.value === 1 && c?.(l.buttonId.value),
                 l.togglePopover()
               break
             case ze.Escape:
-              if (l.popoverState.value !== 0)
-                return c == null ? void 0 : c(l.buttonId.value)
+              if (l.popoverState.value !== 0) return c?.(l.buttonId.value)
               if (
                 !Q(l.button) ||
                 ((I = a.value) != null &&
@@ -4905,7 +4894,7 @@ let Rs = ft({
             ? (l.closePopover(), (O = Q(l.button)) == null || O.focus())
             : (T.preventDefault(),
               T.stopPropagation(),
-              l.popoverState.value === 1 && (c == null || c(l.buttonId.value)),
+              l.popoverState.value === 1 && c?.(l.buttonId.value),
               l.togglePopover(),
               (E = Q(l.button)) == null || E.focus()))
       }
@@ -5329,8 +5318,7 @@ let Qr = Symbol("TabsSSRContext"),
                 onFocus: () => {
                   for (let C of l.value) {
                     let w = Q(C)
-                    if ((w == null ? void 0 : w.tabIndex) === 0)
-                      return w.focus(), !0
+                    if (w?.tabIndex === 0) return w.focus(), !0
                   }
                   return !1
                 },

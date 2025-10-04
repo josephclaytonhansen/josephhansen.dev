@@ -24,6 +24,36 @@
   import Chai from "./pages/web-portfolio/Chai.vue"
   import FeedCouncil from "./pages/web-portfolio/FeedCouncil.vue"
 
+  // Unity components
+  import HelpfulEditorScripts from "./pages/unity/HelpfulEditorScripts.vue"
+  import UnityProjects from "./pages/unity/Projects.vue"
+  import ShaderGraph from "./pages/unity/ShaderGraph.vue"
+
+  // Programming components
+  import FigRef from "./pages/programming/php/FigRef.vue"
+  import CustomWordPressThemes from "./pages/programming/php/CustomWordPressThemes.vue"
+  import WordPressPlugins from "./pages/programming/php/WordPressPlugins.vue"
+  import DiscourseImageComparison from "./pages/programming/javascript/DiscourseImageComparison.vue"
+  import GardenTracker from "./pages/programming/javascript/GardenTracker.vue"
+  import JavaScriptSnippets from "./pages/programming/javascript/JavaScriptSnippets.vue"
+  import BlenderArduinoController from "./pages/programming/arduino/BlenderArduinoController.vue"
+  import ArduinoLEDs from "./pages/programming/arduino/LEDs.vue"
+  import InstagramScraper from "./pages/programming/python/InstagramScraper.vue"
+
+  // Blender components
+  import ArtPortfolio from "./pages/blender/ArtPortfolio.vue"
+  import CustomBuild from "./pages/blender/CustomBuild.vue"
+  import MyAddOns from "./pages/blender/MyAddOns.vue"
+  import ShadingRig from "./pages/blender/ShadingRig.vue"
+
+  // Communications components
+  import TechnicalBlog from "./pages/communications/TechnicalBlog.vue"
+  import PersonalBlog from "./pages/communications/PersonalBlog.vue"
+  import Presentations from "./pages/communications/Presentations.vue"
+
+  // About Me components
+  import Resume from "./pages/about-me/Resume.vue"
+
   const brightness = ref(1)
 
   const props = defineProps({
@@ -49,6 +79,46 @@
     bazaar: Bazaar,
     chai: Chai,
     "feed-council": FeedCouncil,
+  }
+
+  // Unity component mappings
+  const unityComponents = {
+    "helpful-editor-scripts": HelpfulEditorScripts,
+    "unity-projects": UnityProjects,
+    "shader-graph": ShaderGraph,
+  }
+
+  // Programming component mappings
+  const programmingComponents = {
+    figref: FigRef,
+    "wordpress-themes": CustomWordPressThemes,
+    "wordpress-plugins": WordPressPlugins,
+    "discourse-image-comparison": DiscourseImageComparison,
+    "garden-tracker": GardenTracker,
+    "javascript-snippets": JavaScriptSnippets,
+    "blender-arduino-controller": BlenderArduinoController,
+    "arduino-leds": ArduinoLEDs,
+    "instagram-scraper": InstagramScraper,
+  }
+
+  // Blender component mappings
+  const blenderComponents = {
+    "art-portfolio": ArtPortfolio,
+    fruitbat: CustomBuild,
+    addons: MyAddOns,
+    "shading-rig": ShadingRig,
+  }
+
+  // Communications component mappings
+  const communicationsComponents = {
+    devlog: TechnicalBlog,
+    blog: PersonalBlog,
+    presentations: Presentations,
+  }
+
+  // About Me component mappings
+  const aboutMeComponents = {
+    resume: Resume,
   }
 
   const brightnessClass = computed(() => {
@@ -122,6 +192,41 @@
         meta.meta[6].content = `josephhansen.dev | web developer/designer | ${deSlugged}`
         meta.meta[4].content = `https://josephhansen.dev/web-portfolio/${props.component}`
         meta.meta[9].content = `https://josephhansen.dev/web-portfolio/${props.component}`
+      } else if (props.component in unityComponents) {
+        let deSlugged = props.component.replace(/-/g, " ")
+        meta.title = `josephhansen.dev | unity developer | ${deSlugged}`
+        meta.meta[1].content = `josephhansen.dev | unity developer | ${deSlugged}`
+        meta.meta[6].content = `josephhansen.dev | unity developer | ${deSlugged}`
+        meta.meta[4].content = `https://josephhansen.dev/${props.component}`
+        meta.meta[9].content = `https://josephhansen.dev/${props.component}`
+      } else if (props.component in programmingComponents) {
+        let deSlugged = props.component.replace(/-/g, " ")
+        meta.title = `josephhansen.dev | programmer | ${deSlugged}`
+        meta.meta[1].content = `josephhansen.dev | programmer | ${deSlugged}`
+        meta.meta[6].content = `josephhansen.dev | programmer | ${deSlugged}`
+        meta.meta[4].content = `https://josephhansen.dev/${props.component}`
+        meta.meta[9].content = `https://josephhansen.dev/${props.component}`
+      } else if (props.component in blenderComponents) {
+        let deSlugged = props.component.replace(/-/g, " ")
+        meta.title = `josephhansen.dev | blender artist | ${deSlugged}`
+        meta.meta[1].content = `josephhansen.dev | blender artist | ${deSlugged}`
+        meta.meta[6].content = `josephhansen.dev | blender artist | ${deSlugged}`
+        meta.meta[4].content = `https://josephhansen.dev/${props.component}`
+        meta.meta[9].content = `https://josephhansen.dev/${props.component}`
+      } else if (props.component in communicationsComponents) {
+        let deSlugged = props.component.replace(/-/g, " ")
+        meta.title = `josephhansen.dev | ${deSlugged}`
+        meta.meta[1].content = `josephhansen.dev | ${deSlugged}`
+        meta.meta[6].content = `josephhansen.dev | ${deSlugged}`
+        meta.meta[4].content = `https://josephhansen.dev/${props.component}`
+        meta.meta[9].content = `https://josephhansen.dev/${props.component}`
+      } else if (props.component in aboutMeComponents) {
+        let deSlugged = props.component.replace(/-/g, " ")
+        meta.title = `josephhansen.dev | ${deSlugged}`
+        meta.meta[1].content = `josephhansen.dev | ${deSlugged}`
+        meta.meta[6].content = `josephhansen.dev | ${deSlugged}`
+        meta.meta[4].content = `https://josephhansen.dev/${props.component}`
+        meta.meta[9].content = `https://josephhansen.dev/${props.component}`
       }
     }
   })
@@ -279,6 +384,84 @@
         v-if="component in webPortfolioSubpages">
         <component
           :is="webPortfolioSubpages[component]"
+          :brightness="brightness" />
+      </div>
+
+      <!-- Unity components -->
+      <div
+        class="w-full md:w-10/12 sm:w-12/12 rounded p-3 flex justify-center"
+        :class="{
+          'bg-slate-200': brightness == 5,
+          'bg-slate-300': brightness == 4,
+          'bg-slate-600': brightness == 3,
+          'bg-slate-800': brightness == 2,
+          'bg-slate-900': brightness == 1,
+        }"
+        v-if="component in unityComponents">
+        <component :is="unityComponents[component]" :brightness="brightness" />
+      </div>
+
+      <!-- Programming components -->
+      <div
+        class="w-full md:w-10/12 sm:w-12/12 rounded p-3 flex justify-center"
+        :class="{
+          'bg-slate-200': brightness == 5,
+          'bg-slate-300': brightness == 4,
+          'bg-slate-600': brightness == 3,
+          'bg-slate-800': brightness == 2,
+          'bg-slate-900': brightness == 1,
+        }"
+        v-if="component in programmingComponents">
+        <component
+          :is="programmingComponents[component]"
+          :brightness="brightness" />
+      </div>
+
+      <!-- Blender components -->
+      <div
+        class="w-full md:w-10/12 sm:w-12/12 rounded p-3 flex justify-center"
+        :class="{
+          'bg-slate-200': brightness == 5,
+          'bg-slate-300': brightness == 4,
+          'bg-slate-600': brightness == 3,
+          'bg-slate-800': brightness == 2,
+          'bg-slate-900': brightness == 1,
+        }"
+        v-if="component in blenderComponents">
+        <component
+          :is="blenderComponents[component]"
+          :brightness="brightness" />
+      </div>
+
+      <!-- Communications components -->
+      <div
+        class="w-full md:w-10/12 sm:w-12/12 rounded p-3 flex justify-center"
+        :class="{
+          'bg-slate-200': brightness == 5,
+          'bg-slate-300': brightness == 4,
+          'bg-slate-600': brightness == 3,
+          'bg-slate-800': brightness == 2,
+          'bg-slate-900': brightness == 1,
+        }"
+        v-if="component in communicationsComponents">
+        <component
+          :is="communicationsComponents[component]"
+          :brightness="brightness" />
+      </div>
+
+      <!-- About Me components -->
+      <div
+        class="w-full md:w-10/12 sm:w-12/12 rounded p-3 flex justify-center"
+        :class="{
+          'bg-slate-200': brightness == 5,
+          'bg-slate-300': brightness == 4,
+          'bg-slate-600': brightness == 3,
+          'bg-slate-800': brightness == 2,
+          'bg-slate-900': brightness == 1,
+        }"
+        v-if="component in aboutMeComponents">
+        <component
+          :is="aboutMeComponents[component]"
           :brightness="brightness" />
       </div>
 
