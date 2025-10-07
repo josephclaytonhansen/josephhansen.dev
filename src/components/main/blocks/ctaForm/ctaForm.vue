@@ -1,7 +1,13 @@
 <script setup>
+  import { ref } from "vue"
+
   const props = defineProps({
     brightness: Number,
   })
+
+  const isSubmitting = ref(false)
+  const submitSuccess = ref(false)
+  const errorMessage = ref("")
 
   const pClass = (brightness) => {
     if (brightness >= 4) {
@@ -17,67 +23,70 @@
 
   const inputClass = (brightness) => {
     if (brightness >= 4) {
-      return "text-emerald-500"
+      return "text-slate-900 bg-white border-emerald-300"
     } else if (brightness == 3) {
-      return "text-slate-800"
+      return "text-slate-900 bg-slate-200 border-slate-600"
     } else if (brightness == 2) {
-      return "text-orange-500"
+      return "text-slate-100 bg-slate-900 border-orange-500"
     } else if (brightness == 1) {
-      return "text-orange-400"
+      return "text-slate-100 bg-black border-orange-400"
     }
   }
 
   const submitForm = async (e) => {
     e.preventDefault()
-    const form = "contact"
-    let name = document.getElementsByName("name")[0].value
-    let email = document.getElementsByName("email")[0].value
-    let message = document.getElementsByName("message")[0].value
-    let referrer = window.location.href
 
-    let xhr = new XMLHttpRequest()
-    xhr.open("POST", "https://images.josephhansen.dev/api/forms/submit", true)
-    xhr.setRequestHeader("Content-Type", "application/json")
-    xhr.send(
-      JSON.stringify({
-        form,
-        name,
-        email,
-        message,
-        referrer,
-      }),
-    )
+    if (isSubmitting.value) return
 
-    xhr.onloadend = function () {
-      console.log(`Status: ${xhr.status}, Response: ${xhr.responseText}`)
-      if (xhr.status == 200) {
-        let formObj = document.getElementById("cta")
-        let success = document.createElement("div")
-        success.classList.add(
-          "text-center",
-          "flex",
-          "justify-center",
-          "items-center",
-          "w-100",
-        )
-        success.innerHTML =
-          "Thanks for your interest! Your submission has been processed."
-        formObj.appendChild(success)
+    const form = e.target
+    const name = form.name.value.trim()
+    const email = form.email.value.trim()
+    const message = form.message.value.trim()
+    const subject = "CTA Form: New Project Inquiry"
 
-        let inputs = formObj.getElementsByTagName("input")
+    // Basic validation
+    if (!name || !email || !message) {
+      errorMessage.value = "Please fill in all required fields"
+      return
+    }
 
-        for (let i = 0; i < inputs.length; i++) {
-          inputs[i].style.display = "none"
-        }
+    isSubmitting.value = true
+    errorMessage.value = ""
 
-        let textarea = formObj.getElementsByTagName("textarea")[0]
-        textarea.style.display = "none"
+    try {
+      const response = await fetch(
+        "https://api.josephhansen.dev/api/mail/send",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name,
+            email,
+            subject,
+            message,
+            referrer: window.location.href,
+            location: "CTA form",
+          }),
+        },
+      )
 
-        let button = document.getElementById("submitButton")
-        button.disabled = true
+      const data = await response.json()
+
+      if (response.ok) {
+        submitSuccess.value = true
+        form.reset()
       } else {
-        alert("Something went wrong. Please try again.")
+        errorMessage.value =
+          data.error || "Failed to send message. Please try again."
       }
+    } catch (error) {
+      console.error("Form submission error:", error)
+      errorMessage.value =
+        "Network error. Please check your connection and try again."
+    } finally {
+      isSubmitting.value = false
     }
   }
 </script>
@@ -92,7 +101,7 @@
       'bg-slate-700': brightness == 2,
       'bg-slate-800': brightness == 1,
     }">
-    <div class="prose text-center">
+    <div class="prose text-center w-full">
       <h4 class="text-2xl" :class="pClass(brightness)">
         Piqued your interest?<br />
         Check out the (incredibly simple) service pricing:
@@ -100,51 +109,74 @@
       <a href="/pricing"
         ><button
           aria-label="View service pricing for an existing website"
-          aria-
           class="rounded px-5 py-2 text-white font-semibold mt-4"
           :class="{
-            'bg-emerald-600': brightness >= 4,
-            'bg-orange-700': brightness == 3,
-            'bg-orange-600': brightness == 2,
-            'bg-orange-500': brightness == 1,
+            'bg-emerald-600 hover:bg-emerald-700': brightness >= 4,
+            'bg-orange-700 hover:bg-orange-800': brightness == 3,
+            'bg-orange-600 hover:bg-orange-700': brightness == 2,
+            'bg-orange-500 hover:bg-orange-600': brightness == 1,
           }">
           I already have a site
         </button></a
       >
+
       <h4 class="text-2xl mt-8" :class="pClass(brightness)">
         Looking for a new site or a custom quote? Hit me up
       </h4>
-      <form id="cta">
+
+      <div
+        v-if="submitSuccess"
+        class="p-4 rounded mt-4"
+        :class="{
+          'bg-emerald-200 text-emerald-900': brightness >= 4,
+          'bg-slate-700 text-slate-100': brightness == 3,
+          'bg-orange-900 text-orange-100': brightness <= 2,
+        }">
+        <p class="font-semibold">Thanks for your interest!</p>
+        <p class="mt-1">
+          Your submission has been processed. I'll be in touch soon!
+        </p>
+      </div>
+
+      <div v-if="errorMessage" class="p-4 rounded mt-4 bg-red-200 text-red-900">
+        {{ errorMessage }}
+      </div>
+
+      <form id="cta" @submit="submitForm" v-if="!submitSuccess" class="mt-4">
         <input
           type="text"
           name="name"
-          placeholder="Name"
-          class="rounded p-2 w-full"
-          :class="inputClass" />
+          placeholder="Name *"
+          required
+          class="rounded p-2 w-full border"
+          :class="inputClass(brightness)" />
         <input
           type="email"
           name="email"
-          placeholder="Email"
-          class="rounded p-2 w-full mt-3"
-          :class="inputClass" />
+          placeholder="Email *"
+          required
+          class="rounded p-2 w-full mt-3 border"
+          :class="inputClass(brightness)" />
         <textarea
-          placeholder="Message"
+          placeholder="Message *"
           name="message"
-          class="rounded p-2 w-full mt-3"
-          :class="inputClass"></textarea>
+          required
+          rows="4"
+          class="rounded p-2 w-full mt-3 border"
+          :class="inputClass(brightness)"></textarea>
         <button
           id="submitButton"
           type="submit"
-          aria-label="Submit a contact form"
-          @click="submitForm"
-          class="rounded px-5 py-2 text-white font-semibold w-full mt-2"
+          :disabled="isSubmitting"
+          aria-label="Submit contact form"
+          class="rounded px-5 py-2 text-white font-semibold w-full mt-2 disabled:opacity-50 disabled:cursor-not-allowed"
           :class="{
-            'bg-emerald-600': brightness >= 4,
-            'bg-slate-400': brightness == 3,
-            'bg-orange-600': brightness == 2,
-            'bg-orange-500': brightness == 1,
+            'bg-emerald-600 hover:bg-emerald-700': brightness >= 4,
+            'bg-slate-400 hover:bg-slate-500': brightness == 3,
+            'bg-orange-600 hover:bg-orange-700': brightness == 2,
+            'bg-orange-500 hover:bg-orange-600': brightness == 1,
           }">
-          Contact Me
+          {{ isSubmitting ? "Sending..." : "Contact Me" }}
         </button>
       </form>
     </div>
