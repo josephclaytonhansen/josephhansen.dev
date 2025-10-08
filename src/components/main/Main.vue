@@ -509,6 +509,7 @@
         <Services :brightness="brightness" />
       </div>
     </div>
+    <Footer :brightness="brightness" class="mt-10" />
   </main>
 
   <messageBanner :brightness="brightness" v-if="banner" />
