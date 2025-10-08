@@ -1,5 +1,6 @@
 <script setup>
   import Header from "./blocks/header/Header.vue"
+  import Footer from "./blocks/header/Footer.vue"
   import WebServicesHero from "./blocks/Hero/WebServicesHero.vue"
   import Services from "./blocks/services/Services.vue"
   import messageBanner from "./blocks/messageBanner/messageBanner.vue"
