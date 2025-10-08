@@ -28,7 +28,18 @@
           'text-slate-900': brightness >= 4,
           'text-slate-200': brightness <= 3,
         }">
-        <p class="text-sm text-center">© {{ year }} Joseph Hansen. All rights reserved. All writing is my own words, no generative AI used. This content, unless otherwise noted, is licensed as <a href = 'https://creativecommons.org/licenses/by-nc-sa/4.0/' aria-label="Creative Commons License- CC BY-NC-SA 4.0">CC BY-NC-SA 4.0</a>. Contact <a href="mailto:joseph@josephhansen.dev">joseph@josephhansen.dev</a> for inquiries.</p>
+        <p class="text-sm text-center">
+          © {{ year }} Joseph Hansen. All rights reserved. All writing is my
+          own words, no generative AI used. This content, unless otherwise
+          noted, is licensed as
+          <a
+            href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+            aria-label="Creative Commons License- CC BY-NC-SA 4.0"
+            >CC BY-NC-SA 4.0</a
+          >. Contact
+          <a href="mailto:joseph@josephhansen.dev">joseph@josephhansen.dev</a>
+          for inquiries.
+        </p>
       </div>
     </div>
   </footer>

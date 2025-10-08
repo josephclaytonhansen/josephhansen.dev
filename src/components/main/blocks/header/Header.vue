@@ -35,6 +35,27 @@
     }[brightness.value]
     document.documentElement.style.setProperty(navVar, hexColor)
     document.documentElement.style.setProperty(paginationVar, hexColor)
+
+    // Set link colors based on brightness
+    let linkColor = {
+      1: "#cbd5e1", // slate-400
+      2: "#e2e8f0", // slate-200
+      3: "#d1d5db", // slate-300
+      4: "#1e293b", // slate-800
+      5: "#0f172a", // slate-900
+    }[brightness.value]
+    let linkHoverColor = {
+      1: "#fb923c", // orange-400
+      2: "#f97316", // orange-500
+      3: "#fed7aa", // orange-200
+      4: "#10b981", // emerald-500
+      5: "#10b981", // emerald-500
+    }[brightness.value]
+    document.documentElement.style.setProperty("--link-color", linkColor)
+    document.documentElement.style.setProperty(
+      "--link-hover-color",
+      linkHoverColor,
+    )
   }
 
   onMounted(() => {
@@ -52,6 +73,27 @@
       }[brightness.value]
       document.documentElement.style.setProperty(navVar, hexColor)
       document.documentElement.style.setProperty(paginationVar, hexColor)
+
+      // Set link colors based on brightness
+      let linkColor = {
+        1: "#cbd5e1", // slate-400
+        2: "#e2e8f0", // slate-200
+        3: "#d1d5db", // slate-300
+        4: "#1e293b", // slate-800
+        5: "#0f172a", // slate-900
+      }[brightness.value]
+      let linkHoverColor = {
+        1: "#fb923c", // orange-400
+        2: "#f97316", // orange-500
+        3: "#fed7aa", // orange-200
+        4: "#10b981", // emerald-500
+        5: "#10b981", // emerald-500
+      }[brightness.value]
+      document.documentElement.style.setProperty("--link-color", linkColor)
+      document.documentElement.style.setProperty(
+        "--link-hover-color",
+        linkHoverColor,
+      )
     }
   })
 
