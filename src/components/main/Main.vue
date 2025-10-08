@@ -68,7 +68,7 @@
     brightness.value = Number(value)
     let localStorage = window.localStorage
     localStorage.setItem("brightness", brightness.value)
-    
+
     // Set link colors based on brightness
     let linkColor = {
       1: "#cbd5e1", // slate-400
@@ -85,7 +85,10 @@
       5: "#10b981", // emerald-500
     }[brightness.value]
     document.documentElement.style.setProperty("--link-color", linkColor)
-    document.documentElement.style.setProperty("--link-hover-color", linkHoverColor)
+    document.documentElement.style.setProperty(
+      "--link-hover-color",
+      linkHoverColor,
+    )
   }
 
   const webPortfolioSubpages = {
@@ -167,7 +170,7 @@
     } else {
       localStorage.setItem("brightness", brightness.value)
     }
-    
+
     // Set link colors based on brightness
     let linkColor = {
       1: "#cbd5e1", // slate-400
@@ -184,7 +187,10 @@
       5: "#10b981", // emerald-500
     }[brightness.value]
     document.documentElement.style.setProperty("--link-color", linkColor)
-    document.documentElement.style.setProperty("--link-hover-color", linkHoverColor)
+    document.documentElement.style.setProperty(
+      "--link-hover-color",
+      linkHoverColor,
+    )
 
     if (props.component == "pricing") {
       meta.title = "josephhansen.dev | web developer/designer | pricing"
