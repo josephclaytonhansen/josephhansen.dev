@@ -48,6 +48,7 @@ a {
   @apply no-underline transition-colors duration-300;
   text-decoration: none !important;
   color: var(--link-color, #1e293b) !important;
+  font-weight: 500;
 }
 
 a:hover {
