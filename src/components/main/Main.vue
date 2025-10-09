@@ -64,6 +64,17 @@
     component: String,
   })
 
+  // Computed background classes based on brightness
+  const contentBg = computed(() => {
+    return {
+      "bg-slate-200": brightness.value == 5,
+      "bg-slate-300": brightness.value == 4,
+      "bg-slate-600": brightness.value == 3,
+      "bg-slate-800": brightness.value == 2,
+      "bg-slate-900": brightness.value == 1,
+    }
+  })
+
   const handleBrightnessUpdate = (value) => {
     brightness.value = Number(value)
     let localStorage = window.localStorage
@@ -145,6 +156,56 @@
   const aboutMeComponents = {
     resume: Resume,
   }
+
+  // Consolidated component mappings for easier iteration
+  const componentCategories = [
+    {
+      name: "webPortfolioSubpages",
+      components: webPortfolioSubpages,
+      centered: true,
+      pathPrefix: "/web-portfolio/",
+    },
+    {
+      name: "unityComponents",
+      components: unityComponents,
+      centered: true,
+      pathPrefix: "/",
+    },
+    {
+      name: "programmingComponents",
+      components: programmingComponents,
+      centered: true,
+      pathPrefix: "/",
+    },
+    {
+      name: "blenderComponents",
+      components: blenderComponents,
+      centered: true,
+      pathPrefix: "/",
+    },
+    {
+      name: "communicationsComponents",
+      components: communicationsComponents,
+      centered: true,
+      pathPrefix: "/",
+    },
+    {
+      name: "aboutMeComponents",
+      components: aboutMeComponents,
+      centered: true,
+      pathPrefix: "/",
+    },
+  ]
+
+  // Special pages with custom layouts
+  const specialPages = [
+    { name: "pricing", component: Pricing, centered: true },
+    { name: "contact", component: Contact, centered: true },
+    { name: "web-portfolio", component: WebPortfolio, centered: true },
+    { name: "about-me", component: AboutMe, centered: true },
+    { name: "home", component: Home, centered: false },
+    { name: "web-services", component: WebServicesHero, centered: false },
+  ]
 
   const brightnessClass = computed(() => {
     switch (brightness.value) {
@@ -366,192 +427,38 @@
     <Header @update:brightness="handleBrightnessUpdate" />
 
     <div class="flex justify-center w-full md:px-10 sm:px-5 mt-5">
+      <!-- Special pages -->
       <div
-        class="w-full md:w-10/12 sm:w-12/12 rounded p-3 flex justify-center"
-        :class="{
-          'bg-slate-200': brightness == 5,
-          'bg-slate-300': brightness == 4,
-          'bg-slate-600': brightness == 3,
-          'bg-slate-800': brightness == 2,
-          'bg-slate-900': brightness == 1,
-        }"
-        v-if="component == 'pricing'">
-        <Pricing :brightness="brightness" />
-      </div>
-
-      <div
-        class="w-full md:w-10/12 sm:w-12/12 rounded p-3 flex justify-center"
-        :class="{
-          'bg-slate-200': brightness == 5,
-          'bg-slate-300': brightness == 4,
-          'bg-slate-600': brightness == 3,
-          'bg-slate-800': brightness == 2,
-          'bg-slate-900': brightness == 1,
-        }"
-        v-if="component == 'contact'">
-        <Contact :brightness="brightness" />
-      </div>
-
-      <div
-        class="w-full md:w-10/12 sm:w-12/12 rounded p-3 flex justify-center"
-        :class="{
-          'bg-slate-200': brightness == 5,
-          'bg-slate-300': brightness == 4,
-          'bg-slate-600': brightness == 3,
-          'bg-slate-800': brightness == 2,
-          'bg-slate-900': brightness == 1,
-        }"
-        v-if="component == 'web-portfolio'">
-        <WebPortfolio :brightness="brightness" />
-      </div>
-
-      <div
-        class="w-full md:w-10/12 sm:w-12/12 rounded p-3 flex justify-center"
-        :class="{
-          'bg-slate-200': brightness == 5,
-          'bg-slate-300': brightness == 4,
-          'bg-slate-600': brightness == 3,
-          'bg-slate-800': brightness == 2,
-          'bg-slate-900': brightness == 1,
-        }"
-        v-if="component == 'about-me'">
-        <AboutMe :brightness="brightness" />
-      </div>
-
-      <div
-        class="w-full md:w-10/12 sm:w-12/12 rounded p-3 flex justify-center"
-        :class="{
-          'bg-slate-200': brightness == 5,
-          'bg-slate-300': brightness == 4,
-          'bg-slate-600': brightness == 3,
-          'bg-slate-800': brightness == 2,
-          'bg-slate-900': brightness == 1,
-        }"
-        v-if="component in webPortfolioSubpages">
-        <component
-          :is="webPortfolioSubpages[component]"
-          :brightness="brightness" />
-      </div>
-
-      <!-- Unity components -->
-      <div
-        class="w-full md:w-10/12 sm:w-12/12 rounded p-3 flex justify-center"
-        :class="{
-          'bg-slate-200': brightness == 5,
-          'bg-slate-300': brightness == 4,
-          'bg-slate-600': brightness == 3,
-          'bg-slate-800': brightness == 2,
-          'bg-slate-900': brightness == 1,
-        }"
-        v-if="component in unityComponents">
-        <component :is="unityComponents[component]" :brightness="brightness" />
-      </div>
-
-      <!-- Programming components -->
-      <div
-        class="w-full md:w-10/12 sm:w-12/12 rounded p-3 flex justify-center"
-        :class="{
-          'bg-slate-200': brightness == 5,
-          'bg-slate-300': brightness == 4,
-          'bg-slate-600': brightness == 3,
-          'bg-slate-800': brightness == 2,
-          'bg-slate-900': brightness == 1,
-        }"
-        v-if="component in programmingComponents">
-        <component
-          :is="programmingComponents[component]"
-          :brightness="brightness" />
-      </div>
-
-      <!-- Blender components -->
-      <div
-        class="w-full md:w-10/12 sm:w-12/12 rounded p-3 flex justify-center"
-        :class="{
-          'bg-slate-200': brightness == 5,
-          'bg-slate-300': brightness == 4,
-          'bg-slate-600': brightness == 3,
-          'bg-slate-800': brightness == 2,
-          'bg-slate-900': brightness == 1,
-        }"
-        v-if="component in blenderComponents">
-        <component
-          :is="blenderComponents[component]"
-          :brightness="brightness" />
-      </div>
-
-      <!-- Communications components -->
-      <div
-        class="w-full md:w-10/12 sm:w-12/12 rounded p-3 flex justify-center"
-        :class="{
-          'bg-slate-200': brightness == 5,
-          'bg-slate-300': brightness == 4,
-          'bg-slate-600': brightness == 3,
-          'bg-slate-800': brightness == 2,
-          'bg-slate-900': brightness == 1,
-        }"
-        v-if="component in communicationsComponents">
-        <component
-          :is="communicationsComponents[component]"
-          :brightness="brightness" />
-      </div>
-
-      <!-- About Me components -->
-      <div
-        class="w-full md:w-10/12 sm:w-12/12 rounded p-3 flex justify-center"
-        :class="{
-          'bg-slate-200': brightness == 5,
-          'bg-slate-300': brightness == 4,
-          'bg-slate-600': brightness == 3,
-          'bg-slate-800': brightness == 2,
-          'bg-slate-900': brightness == 1,
-        }"
-        v-if="component in aboutMeComponents">
-        <component
-          :is="aboutMeComponents[component]"
-          :brightness="brightness" />
-      </div>
-
-      <div
+        v-for="page in specialPages"
+        :key="page.name"
+        v-show="component == page.name"
         class="w-full md:w-10/12 sm:w-12/12 rounded p-3"
-        :class="{
-          'bg-slate-200': brightness == 5,
-          'bg-slate-300': brightness == 4,
-          'bg-slate-600': brightness == 3,
-          'bg-slate-800': brightness == 2,
-          'bg-slate-900': brightness == 1,
-        }"
-        v-if="component == 'home'">
-        <Home :brightness="brightness" />
+        :class="[contentBg, page.centered ? 'flex justify-center' : '']">
+        <component :is="page.component" :brightness="brightness" />
       </div>
 
-      <div
-        class="w-full md:w-10/12 sm:w-12/12 rounded p-3"
-        :class="{
-          'bg-slate-200': brightness == 5,
-          'bg-slate-300': brightness == 4,
-          'bg-slate-600': brightness == 3,
-          'bg-slate-800': brightness == 2,
-          'bg-slate-900': brightness == 1,
-        }"
-        v-if="component == 'web-services'">
-        <WebServicesHero :brightness="brightness" />
-      </div>
+      <!-- Dynamic component categories -->
+      <template v-for="category in componentCategories" :key="category.name">
+        <div
+          v-if="component in category.components"
+          class="w-full md:w-10/12 sm:w-12/12 rounded p-3"
+          :class="[contentBg, category.centered ? 'flex justify-center' : '']">
+          <component
+            :is="category.components[component]"
+            :brightness="brightness" />
+        </div>
+      </template>
     </div>
 
-    <div class="flex justify-center w-full md:px-10 sm:px-5 pt-10">
-      <div
-        class="w-full md:w-10/12 sm:w-12/12 rounded p-3"
-        :class="{
-          'bg-slate-200': brightness == 5,
-          'bg-slate-300': brightness == 4,
-          'bg-slate-600': brightness == 3,
-          'bg-slate-800': brightness == 2,
-          'bg-slate-900': brightness == 1,
-        }"
-        v-if="component == 'web-services'">
+    <!-- Web services additional section -->
+    <div
+      v-if="component == 'web-services'"
+      class="flex justify-center w-full md:px-10 sm:px-5 pt-10">
+      <div class="w-full md:w-10/12 sm:w-12/12 rounded p-3" :class="contentBg">
         <Services :brightness="brightness" />
       </div>
     </div>
+
     <Footer :brightness="brightness" class="mt-10" />
   </main>
 

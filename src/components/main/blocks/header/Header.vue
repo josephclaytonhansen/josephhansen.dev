@@ -1,9 +1,5 @@
 <script setup>
-  import {
-    Popover,
-    PopoverButton,
-    PopoverPanel,
-  } from "@headlessui/vue"
+  import { Popover, PopoverButton, PopoverPanel } from "@headlessui/vue"
 
   import {
     CollapsibleContent,
@@ -553,9 +549,12 @@
           <!-- Web section with collapsible -->
           <CollapsibleRoot v-if="menu.id === 'web'">
             <CollapsibleTrigger
-              class="py-2 px-3 rounded opacity-75 font-semibold"
-              >{{ menu.label }}</CollapsibleTrigger
-            >
+                class="py-1 px-3 rounded opacity-75 text-sm flex justify-between items-center w-full"
+                v-slot="{ open }">
+                <span>{{ subsection.label }}</span>
+                <ChevronUp v-if="open" class="w-4 h-4" />
+                <ChevronDown v-else class="w-4 h-4" />
+              </CollapsibleTrigger>
             <CollapsibleContent>
               <ul class="ml-5">
                 <a
