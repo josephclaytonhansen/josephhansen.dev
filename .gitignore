@@ -21,12 +21,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-
-dist
-build
-package-lock.json
-husky
-.prettierrc
-.prettierignore
-.vscode
