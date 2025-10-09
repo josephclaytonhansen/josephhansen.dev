@@ -1,5 +1,5 @@
 <script setup>
-  import { Popover, PopoverButton, PopoverPanel } from "@headlessui/vue"
+  import { Popover, PopoverButton, PopoverPanel, Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/vue"
   import { useRouter } from "vue-router"
   import {
     Menu,
@@ -857,7 +857,9 @@
         'text-slate-400': brightness == 1,
       }">
       <!-- Web Section -->
-      <li class="py-2 px-3 rounded opacity-75 font-semibold">Web</li>
+      <Disclosure>
+        <DisclosureButton class="py-2 px-3 rounded opacity-75 font-semibold">Web</DisclosureButton>
+        <DisclosurePanel>
       <ul class="ml-5">
         <a @click="navigate('/web-portfolio')">
           <li
@@ -884,6 +886,8 @@
           </li>
         </a>
       </ul>
+        </DisclosurePanel>
+      </Disclosure>
 
       <!-- Unity Section -->
       <li class="py-2 px-3 rounded opacity-75 font-semibold">Unity</li>

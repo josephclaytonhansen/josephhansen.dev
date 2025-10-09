@@ -55,7 +55,7 @@
   // About Me components
   import Resume from "./pages/about-me/Resume.vue"
 
-  const brightness = ref(3)
+  const brightness = ref(5)
 
   /* -------------------------- Show message banner? -------------------------- */
   const banner = ref(false)
