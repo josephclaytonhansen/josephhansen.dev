@@ -67,7 +67,7 @@
             subject,
             message,
             referrer: window.location.href,
-            location: "CTA form",
+            location: "Web CTA form",
           }),
         },
       )
