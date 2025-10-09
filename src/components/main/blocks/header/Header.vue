@@ -522,10 +522,10 @@
           <ul class="ml-5">
             <CollapsibleRoot
               v-for="subsection in menu.subsections"
-              :key="subsection.id">
+              :key="subsection.id"
+              v-slot="{ open }">
               <CollapsibleTrigger
-                class="py-1 px-3 rounded opacity-75 text-sm flex justify-between items-center w-full"
-                v-slot="{ open }">
+                class="py-1 px-3 rounded opacity-75 text-sm flex justify-between items-center w-full">
                 <span>{{ subsection.label }}</span>
                 <ChevronUp v-if="open" class="w-4 h-4" />
                 <ChevronDown v-else class="w-4 h-4" />
@@ -547,10 +547,9 @@
         <!-- Menu without subsections (with collapsible for Web, regular list for others) -->
         <template v-else>
           <!-- Web section with collapsible -->
-          <CollapsibleRoot v-if="menu.id === 'web'">
+          <CollapsibleRoot v-if="menu.id === 'web'" v-slot="{ open }">
             <CollapsibleTrigger
-              class="py-2 px-3 rounded opacity-75 font-semibold flex justify-between items-center w-full"
-              v-slot="{ open }">
+              class="py-2 px-3 rounded opacity-75 font-semibold flex justify-between items-center w-full">
               <span>{{ menu.label }}</span>
               <ChevronUp v-if="open" class="w-4 h-4" />
               <ChevronDown v-else class="w-4 h-4" />

@@ -8913,7 +8913,7 @@ const Mi = Ge("XIcon", [
                                                   U(bo),
                                                   {
                                                     class:
-                                                      "py-1 px-3 rounded opacity-75 text-sm flex justify-between items-center w-full",
+                                                      "py-2 px-3 rounded opacity-75 font-semibold flex justify-between items-center w-full",
                                                   },
                                                   {
                                                     default: me(
@@ -8921,9 +8921,7 @@ const Mi = Ge("XIcon", [
                                                         f(
                                                           "span",
                                                           null,
-                                                          Ce(
-                                                            v.subsection.label,
-                                                          ),
+                                                          Ce(C.label),
                                                           1,
                                                         ),
                                                         k
@@ -8939,8 +8937,9 @@ const Mi = Ge("XIcon", [
                                                             })),
                                                       ],
                                                     ),
-                                                    _: 1,
+                                                    _: 2,
                                                   },
+                                                  1024,
                                                 ),
                                                 ne(
                                                   U(mo),
