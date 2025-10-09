@@ -466,7 +466,7 @@
 </template>
 
 <style scoped>
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
     main {
       padding-bottom: 15vh;
       padding-left: 3vw;
