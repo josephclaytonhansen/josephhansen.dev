@@ -3,9 +3,6 @@
     Popover,
     PopoverButton,
     PopoverPanel,
-    Disclosure,
-    DisclosureButton,
-    DisclosurePanel,
   } from "@headlessui/vue"
 
   import {
@@ -27,9 +24,9 @@
     MoonStar,
     X,
   } from "lucide-vue-next"
+
   import { siGithub } from "simple-icons"
   import { ref, onMounted, computed } from "vue"
-  import { Collapsible } from "reka-ui/namespaced"
 
   const brightness = ref(5)
 
@@ -527,21 +524,27 @@
             {{ menu.label }}
           </li>
           <ul class="ml-5">
-            <template
+            <CollapsibleRoot
               v-for="subsection in menu.subsections"
               :key="subsection.id">
-              <li class="py-1 px-3 rounded opacity-75 text-sm">
-                {{ subsection.label }}
-              </li>
-              <ul class="ml-5">
-                <a
-                  v-for="item in subsection.items"
-                  :key="item.path"
-                  @click="navigate(item.path)">
-                  <li class="py-1 px-3 rounded text-sm">{{ item.label }}</li>
-                </a>
-              </ul>
-            </template>
+              <CollapsibleTrigger
+                class="py-1 px-3 rounded opacity-75 text-sm flex justify-between items-center w-full"
+                v-slot="{ open }">
+                <span>{{ subsection.label }}</span>
+                <ChevronUp v-if="open" class="w-4 h-4" />
+                <ChevronDown v-else class="w-4 h-4" />
+              </CollapsibleTrigger>
+              <CollapsibleContent>
+                <ul class="ml-5">
+                  <a
+                    v-for="item in subsection.items"
+                    :key="item.path"
+                    @click="navigate(item.path)">
+                    <li class="py-1 px-3 rounded text-sm">{{ item.label }}</li>
+                  </a>
+                </ul>
+              </CollapsibleContent>
+            </CollapsibleRoot>
           </ul>
         </template>
 
