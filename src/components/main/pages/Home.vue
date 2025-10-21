@@ -15,7 +15,6 @@
     }">
     <h1 class="text-4xl font-bold mb-6">Welcome to josephhansen.dev</h1>
     <p class="text-lg mb-4 text-center max-w-2xl">
-      This is the homepage skeleton. Add your content here.
     </p>
   </div>
 </template>
